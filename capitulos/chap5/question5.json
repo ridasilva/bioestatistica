@@ -1,0 +1,8 @@
+[{"question":"10 - Este exemplo ilustra que z para um procedimento de média amostral",
+"type":"multiple_choice",
+"answers":[{"answer":"a. pode ser usado para identificar se é provável ou improvável que a discrepância entre uma média amostral e um média da população que seja devido a erro de amostragem.",
+           "correct":true, "feedback":"Correto!"},
+           {"answer":"b. só é útil em um ambiente de laboratório controlado.","correct":false, "feedback":"Incorreto!"},
+           {"answer":"c. Tanto a quanto b estão corretos.","correct":false, "feedback":"Incorreto!"}]
+}
+]

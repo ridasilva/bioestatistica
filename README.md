@@ -41,4 +41,11 @@ Build
 jupyter-book build bioestatistica/
 ```
 
-You can preview the result on `_build/html/index.html` 
+You can preview the result on `_build/html/index.html`.
+
+After the build, publish the notebook.
+
+```
+ghp-import -n -p -f _build/html
+```
+

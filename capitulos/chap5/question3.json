@@ -1,0 +1,12 @@
+[{"question":"6 - Qual das alternativas a seguir reduzirá o erro padrão da média?",
+"type":"multiple_choice",
+"answers":[{"answer": "a. Aumentar N.", "correct":true, "feedback":"Correto! O erro padrão da média é inversamente proporcional à raiz quadrada do tamanho da amostra."},
+           {"answer": "b. Diminuir N.", "correct":false, "feedback":"Incorreto. Diminuir o número de observações aumentará o erro padrão da média."},
+           {"answer": "c. Aumentar e diminuir N pode reduzir o erro padrão da média.", "correct":false, "feedback":"Incorreto. Leia o parágrafo anterior novamente."}],
+},
+{"question":"7 - De acordo com a lei dos grandes números, à medida que o tamanho da amostra aumenta, a média amostral tende a se aproximar da média da população.",
+"type":"multiple_choice",
+"answers":[{"answer": "a. Verdadeiro", "correct":true, "feedback":"Correto! A lei dos grandes números afirma que, à medida que o tamanho da amostra aumenta, a média amostral tende a se aproximar da média da população."},
+           {"answer": "b. Falso", "correct":false, "feedback":"Incorreto. Leia o parágrafo anterior novamente."}],
+},
+]
