@@ -248,11 +248,11 @@ O fato de a média da distribuição das médias amostrais ser sempre igual à m
 \begin{frame}
 \frametitle{Desvios padrão populacional e amostral}
 A variância da população pode ser obtida por
-\[\sigma^2 = \frac{1}{n}\sum_{i=1}^n x_i^2 - \mu^2=\frac{1}{4}696-169=5\]
+\[\sigma^2 = \frac{1}{N}\sum_{i=1}^N x_i^2 - \mu^2=\frac{1}{4}696-169=5\]
 E o desvio padrão
 \[\sigma= \sqrt{\sigma^2} = 2.24\]
 A variância da distribuição amostral pode ser obtida por
-\[Var(X) = \frac{1}{n}\sum_{i=1}^n \bar{x}_i^2 - \bar{X}^2=\frac{1}{16}2744-169=2.5\]
+\[Var(X) = \frac{1}{N}\sum_{i=1}^N \bar{x}_i^2 - \bar{X}^2=\frac{1}{16}2744-169=2.5\]
 E o desvio padrão
 \[DP = \sqrt{Var(X)} = 1.58\]
 \end{frame}
@@ -275,7 +275,7 @@ Observamos empiricamente, que:
 \begin{itemize}
 \item A média da distribuição das médias amostrais é igual a média populacional, \(\mu\);
 \item O desvio padrão é sempre igual ao SEM, \(\sigma/N\);
-\item O gráfico da distribuição da amostral tem distribuição aproximadamente normal (ou seja, em forma de sino).
+\item O gráfico da distribuição amostral tem distribuição aproximadamente normal (ou seja, em forma de sino).
 \end{itemize}
 
 \end{frame}
@@ -285,6 +285,31 @@ Observamos empiricamente, que:
 \begin{frame}
 \frametitle{Outros experimentos númericos}
 \begin{center}\includegraphics[width=0.9\linewidth]{figs/func2}\end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Teorema Central do Limite}
+Coletivamente, esses três fatos são conhecidos como teorema central do limite  (TCL) e nos dizem que a distribuição das médias amostrais com, centro (\(\mu\)) e dispersão (SEM = \(\sigma/N\)) tem forma normal para qualquer estudo.\\~\\ 
+
+Observamos empiricamente, que:
+\begin{enumerate}
+\item sugere que as amostras tendem a ter médias semelhantes às da população da qual foram extraídas;
+\item nos permite calcular a quantidade típica de erro de amostragem que qualquer estudo pode gerar.
+\end{enumerate}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Lei dos Grandes Números}
+Amostras maiores tenderão a ter meios que desviam-se menos da média da população do que amostras menores. Este é um exemplo específico da lei de números grandes: .
+ \begin{alertblock}{Lei dos Grandes Números}
+À medida que N aumenta, a estatística amostral (por exemplo, a média amostral) é uma estimativa melhor do parâmetro populacional (por exemplo, a média populacional)
+\end{alertblock}
+
+Porque a distribuição tem forma normal, ela segue a regra 68–95–99, como estudado em capítulos prévios. Portanto, 68\% de todos as possíveis médias amostrais estão entre -1 e +1 erro padrão da média da média da população.
+
 \end{frame}
 
 \setbeamercovered{transparent}
@@ -376,6 +401,46 @@ O teorema garante que para \textit{n} grande a distribuição da média amostral
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Cálculo da variável Z}
+A fórmula para a z para uma média amostral é muito semelhante à fórmula para a z para uma distribuição normal. 
+\[
+Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}}
+\] 
+Interpretação:
+\begin{itemize}
+\item z for "próximo" de zero, média amostral (\(\bar{X}\)) é "próximo" da média da população (\(\mu\)); 
+\item uma valor z "próximo" de 3 significa que o desvio observado (numerador) é três vezes maior que o desvio esperado pelo erro amostral (denominador);
+\item valores de z grandes geralmente indicam que algo diferente da variabilidade do erro amostral fez com que a média amostral (\(\bar{X}\)) ficasse muito longe do média populacional.
+\end{itemize}
+
+%\begin{center}\includegraphics[width=0.8\linewidth]{../figures/tabela_Z_01} \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cálculo da variável Z}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   A curva normal padrão e os valores de z\\~\\
+   \includegraphics[width=0.6\textwidth]{figs/pdf_norm_84}
+   \begin{itemize}
+   \item Um valor de z = +1 é maior que 84.13\% dos valores de z
+   \begin{itemize}
+   \item 0.8413 é a probabilidade no corpo (\textit{body}) da tabela usada no curso;
+   \item O restante para somar 1 é a probabilidade representada pela cauda (\textit{tail}).
+   \end{itemize}
+   \end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+    \begin{center}
+     \includegraphics[width=0.4\textwidth]{figs/ztab_crop}
+     \end{center}
+\end{column}
+\end{columns}
+
+%\begin{center}\includegraphics[width=0.8\linewidth]{../figures/tabela_Z_01} \end{center}
+\end{frame}
+
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Exemplo 7.14}
@@ -388,7 +453,7 @@ Suponha que a aceitação de um lote de 1000 peças ocorra apenas, se o comprime
 \begin{frame}
 \frametitle{Distribuição Normal}
 
-%\begin{center}\includegraphics[width=0.8\linewidth]{../figures/tabela_Z_01} \end{center}
+\begin{center}\includegraphics[width=0.5\linewidth]{figs/ztab_crop2} \end{center}
 \end{frame}
 
 

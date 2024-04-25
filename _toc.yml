@@ -4,4 +4,4 @@
 format: jb-book
 root: intro
 chapters:
-- file: capitulos/IntroStats/intro_est
+- file: capitulos/chap5/chap5

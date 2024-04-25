@@ -27,3 +27,18 @@ If a new library needs to be installed, don't forget to update the environment.y
 conda env export | grep -v "^prefix: " > environment.yml 
 ```
 
+### Building jupyter-book
+
+Before building, use the edit cell codes to hide with
+
+```
+python edit_notebooks.py YOUR_NOTEBOOK
+```
+
+Build
+
+```
+jupyter-book build bioestatistica/
+```
+
+You can preview the result on `_build/html/index.html` 
