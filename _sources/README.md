@@ -29,10 +29,23 @@ conda env export | grep -v "^prefix: " > environment.yml
 
 ### Building jupyter-book
 
+Before building, use the edit cell codes to hide with
+
+```
+python edit_notebooks.py YOUR_NOTEBOOK
+```
+
 Build
 
 ```
 jupyter-book build bioestatistica/
 ```
 
-You can preview the result on `_build/html/index.html` 
+You can preview the result on `_build/html/index.html`.
+
+After the build, publish the notebook.
+
+```
+ghp-import -n -p -f _build/html
+```
+
