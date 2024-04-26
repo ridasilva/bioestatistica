@@ -9,6 +9,7 @@ backend=biber,
 style=alphabetic,
 citestyle=authoryear
 ]{biblatex}
+\usepackage{array}
 
 % Footnote without number
 \newcommand\blfootnote[1]{%
@@ -20,7 +21,7 @@ citestyle=authoryear
 
 \addbibresource{stats.bib}
 \title[Bioestatística II] %optional
-{Distribuição Amostral da Média}
+{Testando hipóteses com a variável padrão z}
 
 \subtitle{CGF2046 - Bioestatística II}
 
@@ -66,120 +67,130 @@ citestyle=authoryear
   \\~\\
   \begin{itemize}
   \uncover<1->{\item
-    Explicar como uma distribuição de médias amostrais é criada;}
+    Escrever hipóteses nulas e alternativas usando parâmetros populacionais;}
   \uncover<2->{\item
-    Explicar como uma amostra aleatória é obtida;}
-  \uncover<3->{\item
-    Determinar a média, o desvio padrão e a forma de uma distribuição de médias amostrais;}
-   \uncover<4->{\item
-    Explicar qual é o erro padrão das medidas médias;}
-   \uncover<5->{\item
-    Explicar o teorema central do limite e por que ele é importante;}
-   \uncover<6->{\item
-    Explicar a lei dos grandes números;}
-   \uncover<7->{\item
     Calcular a z para uma média amostral;}
-   \uncover<8->{\item Usar z para uma média amostral e uma tabela de probabilidades para distribuição normal para determinar a probabilidade de uma dada média amostral ocorrer;}
+  \uncover<3->{\item
+    Determinar se você deve ou não rejeitar a hipótese nula;}
+   \uncover<4->{\item
+    Calcular e interpretar o tamanho do efeito (d) de um estudo;}
+   \uncover<5->{\item
+    Identificar exemplos de erro Tipo I, erro Tipo II e poder estatístico;}
+   \uncover<6->{\item
+    Fornecer uma descrição detalhada de um valor p, valor crítico e valor calculado;}
   \end{itemize}
 \end{frame}
 
-\section{Conceitos básicos de inferência}
+\section{Introdução ao teste de hipótese}
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Definições}
-  Conceitos fundamentais
+  No capítulo anterior, você aprendeu a
   \\~\\
   \begin{itemize}
   \uncover<1->{\item
-    \textbf{População}: Conjunto de todos os elementos sob investigação.}
+    Calcular z para uma média amostral;}
   \uncover<2->{\item
-    \textbf{Amostra}: Subconjunto da população.}
+    Localizar essa média amostral dentro de uma distribuição de médias amostrais;}
   \uncover<3->{\item
-    \textbf{Variável} de interesse: característica a ser observada em
-    cada indivíduo da amostra.}
+     Determinar a probabilidade dessa média amostral ocorrer devido ao erro de amostragem.}
   \end{itemize}
+  \uncover<3->{Essas habilidades permitem testar hipóteses.}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Variável aleatória}
+\frametitle{Teste de hipótese com z para uma média amostral (unicaudal)}
 
-\textbf{Definição}
-
-\begin{itemize}
-\item
-  \textbf{Variável aleatória} - Descrição numérica do resultado de um
-  fenômeno aleatório.
-\end{itemize}
-
-\textbf{Notação}
+\textbf{Exemplo:} Suponhamos que uma professora redesenhe seu curso de história para que os alunos façam testes frequentes antes de fazer os exames.
 
 \begin{itemize}
 \item
-  \(X\) denota a variável aleatória.
+  Nota média histórica para todos os alunos antes de exames frequentes (\(\mu = 75, \sigma = 10\));
 \item
-  \(x\) denota os valores realizados da v.a.
-\item
-  Probabilidade de \(X\) assumir o valor \(x\) é denotada \(P(X = x)\).
+  Depois de um semestre usando esses questionários, a nota média no exame final dos 25 alunos do seu curso foi \(\bar{x} = 80\);
 \end{itemize}
 
-\textbf{Exemplo}
+Com o teste de hipóteses, você pode determinar se a amostra de alunos que respondem aos testes frequentes teve pontuação "significativamente" melhor do que a dos alunos anteriores.
 
-\begin{itemize}
-\item
-  X: Número de alunos em uma sala de aula.
-\item
-  Uma possível realização \(x = 50\).
-\end{itemize}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Parâmetro e Estimador}
+\frametitle{Teste de hipótese com z para uma média amostral (unicaudal)}
 
-\textbf{População} \(\rightarrow\) \textbf{censo} \(\rightarrow\)
-\textbf{parâmetro}
+Os questionários frequentes ajudaram?\\~\\
 
-\emph{Uma medida numérica que descreve alguma característica da
-\textbf{população}, usualmente representada por letras gregas:
-\(\theta\), \(\mu\), \(\sigma\), \(\ldots\)}
+A média amostral de 80 é numericamente maior do que a média populacional de 75.\\~\\
 
-Exemplo: média populacional = \(\mu\)
+O desvio entre a média amostral de 80 e a média populacional de 75 é provável ou improvável de ter ocorrido devido a erro amostral?\\~\\
 
-\vspace{1em}
-\hrule
-\vspace{1em}
+Esses novos conceitos serão descritos em uma série de seis etapas.
 
-\textbf{População} \(\rightarrow\) \textbf{amostra} \(\rightarrow\)
-\textbf{Estimador}
-
-\emph{Uma medida numérica que descreve alguma característica da
-\textbf{amostra}, usualmente denotada pela letra grega do respectivo
-parâmetro com um acento circunflexo: \(\hat\theta\), \(\hat\mu\),
-\(\hat\sigma\), \(\ldots\), ou por letras do alfabeto comum: \(\bar x\),
-\(s\), \(\ldots\)}
-
-Exemplo: média amostral = \(\bar{x}\)
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Estimador}
+\frametitle{Etapa 1: examinar as variáveis para avaliar suposições estatísticas}
 
-\textbf{Observação:}
+Todos os testes de hipóteses são baseados em suposições específicas e, se essas suposições forem violadas, esses testes podem produzir resultados enganosos.\\~\\
+Os quatro pressupostos básicos são:
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-
-\item
-  O valor assumido pelo estimador pontual é chamado de
-  \textbf{estimativa
-  pontual},\[\hat{\theta} = T(\mathbf{X}) = T(X_1, \ldots, X_n) = t\] ou
-  seja, o estimador é uma \textbf{função} da amostra, e a estimativa é o
-  \textbf{valor observado} de um estimador (um número) de uma amostra
-  particular.
+\item independência dos dados;
+\item medição apropriada das variáveis para análise;
+\item normalidade das distribuições;
+\item homogeneidade da variância.
 \end{enumerate}
+
 \end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 1: examinar as variáveis para avaliar suposições estatísticas}
+
+Os quatro pressupostos básicos são:
+
+\begin{enumerate}
+\item \textbf{independência dos dados:} a pontuação de cada participante dentro de uma condição é independente das pontuações de todos os outros;
+\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) identifica grupos diferentes, variável dependente (VD) \(\Rightarrow\) medida em uma escala númerica quantitativa;
+\item \textbf{normalidade das distribuições:} distribuição das médias amostrais para cada condição deve ter uma forma normal;
+\item \textbf{homogeneidade da variância:} variâncias em cada condição do estudo são semelhantes.
+\end{enumerate}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 2: expor as hipóteses nulas e de pesquisa simbolicamente e verbalmente}
+
+Neste exemplo, o professor prevê que questionários frequentes aumentarão as pontuações dos testes. Embora a hipótese de pesquisa preveja que os questionários aumentarão os resultados dos testes, é possível que os questionários não funcionem. Esta segunda possibilidade é chamada de hipótese nula e é sempre o oposto da hipótese de pesquisa.
+
+\begin{center}
+\begin{tabular}{ m{2cm}|m{2cm}|m{3cm}|m{3cm} } 
+ \hline
+ Tipo de Hipótese & Simbólico & Vebal & Diferença entre médias amostral e populacional\\
+  \hline
+ Hipótese nula & $\mu_{quiz}=75;$ & Com questiónario notas $\approx$ 75 & Erro amostral \\ 
+ Hipótese de pesquisa & $\mu_{quiz}>75.$ & Com questiónario notas $>$ 75 & Intervenção melhora resultados  \\ 
+ \hline
+ \hline
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 2: expor as hipóteses nulas e de pesquisa simbolicamente e verbalmente}
+A notação simbólica do nulo e das hipóteses de pesquisa um pouco confusa porque estamos tentando determinar se $\mu_{quiz} > 75$, e já sabemos que $\bar{x} = 80$ e $\mu = 75$? \\~\\
+Contudo, é importante observar que o subscrito "quiz" em $\mu_{quiz} > 75$ refere-se àqueles que fazem testes frequentes antes do teste.\\~\\
+
+Não sabemos qual seria a pontuação média do teste se toda a população de alunos respondesse aos testes antes do teste (ou seja, não sabemos o $\mu_{quiz}$).
+
+
+\end{frame}
+
 
 \setbeamercovered{transparent}
 \begin{frame}

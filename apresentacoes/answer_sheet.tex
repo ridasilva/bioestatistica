@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{subfig}
+\usepackage[margin=1.0in]{geometry}
+\pagestyle{empty}
+\usepackage{framed}
+
+
+
+\begin{document}
+
+\begin{framed}
+\begin{tikzpicture}[font=\small]
+    \foreach \line in {1,2,...,10} {
+        \begin{scope}[yshift=-2*\line cm]
+            \foreach \letter/\position in {A/1, B/2, C/3, D/4, E/5} { 
+                \node at (0,0) {\normalsize\textbf{\line}};
+                \node[draw,circle,inner sep=16pt] at ({\position * 2.7},0) {\letter};
+            }
+        \end{scope}
+    }
+\end{tikzpicture}\hfill
+\end{framed}
+\end{document}
