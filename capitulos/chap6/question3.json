@@ -1,0 +1,7 @@
+[{"question": "8. Nesta situação de pesquisa, $\mu_{quiz}$ representa",
+"type": "multiple_choice",
+"answers":[
+{"answer": "a. a pontuação média do teste da população.", "correct": false, "feedback":"Incorreto, leio o parágrafo acima novamente."},
+{"answer": "b. qual seria a pontuação média do teste da população se todos os alunos respondessem aos testes antes de fazer a prova.", "correct": true, "feedback": "Correto!"}
+]
+}]
