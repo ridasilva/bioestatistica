@@ -1,0 +1,15 @@
+[{"question": "16. O valor crítico define o “ponto de corte” para",
+"type": "multiple_choice",
+"answers": [{"answer": "a. determinar se a hipótese nula deve ser rejeitada ou não.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. determinar se a hipótese de pesquisa deve ser rejeitada ou não.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+},
+{"question": "17. Se z calculado estiver na região crítica, você deve",
+"type": "multiple_choice",
+"answers": [{"answer": "a. rejeitar a hipótese nula.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. não rejeitar a hipótese nula.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+},
+{"question": "18. Se z calculado não estiver na região crítica, você deve",
+"type": "multiple_choice",
+"answers": [{"answer": "a. rejeitar a hipótese nula.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. não rejeitar a hipótese nula.", "correct": true, "feedback": "Correto!"}]
+}]

@@ -10,6 +10,7 @@ style=alphabetic,
 citestyle=authoryear
 ]{biblatex}
 \usepackage{array}
+\usepackage{xcolor}
 
 % Footnote without number
 \newcommand\blfootnote[1]{%
@@ -18,7 +19,10 @@ citestyle=authoryear
   \addtocounter{footnote}{-1}%
   \endgroup
 }
-
+\def\boxit#1{%
+  \smash{\color{red}\fboxrule=1pt\relax\fboxsep=2pt\relax%
+  \llap{\rlap{\fbox{\vphantom{0}\makebox[#1]{}}}~}}\ignorespaces
+}
 \addbibresource{stats.bib}
 \title[Bioestatística II] %optional
 {Testando hipóteses com a variável padrão z}
@@ -216,6 +220,123 @@ A região crítica é a coleção de todos os valores de z que são tão raros s
    \end{itemize}
 \end{column}
 \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Passo 3: Definir a Região Crítica}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   Excerto da tabela normal padrão e os valores de z\\~\\
+
+\begin{center}
+\begin{tabular}{ccc} 
+ \hline
+z &	Corpo & Cauda\\
+1.630000 & 	0.948400 & 0.051600\\
+1.640000 & 0.949500 & 0.050500\\
+\boxit{2.1in} 1.650000 & 0.950500 & 0.049500\\
+1.660000 & 0.951500 & 0.048500\\
+1.670000 & 0.952500 & 0.047500\\
+1.680000 & 0.953500 & 0.046500\\
+1.690000 & 0.954500 & 0.045500\\
+ \hline
+\end{tabular}
+\end{center}   
+   
+   
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+   \begin{itemize}
+   \item O valor de corte de 0.05 usado para identificar quais valores z são improváveis se o valor nulo for verdadeiro é chamado de nível alfa (\(\alpha\)).
+   \end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Passo 3: Definir a Região Crítica}
+O valor crítico é o ponto de corte do valor de z; valores de z iguais ou maiores que o valor crítico são considerados improváveis de ocorrer se a hipótese nula for verdadeira.
+\begin{center}\includegraphics[width=0.6\linewidth]{figs/regiao_critica} \end{center}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 4: calcular a estatística de teste (z para uma média amostral)}
+\begin{itemize}
+\item 4a. Calcule o desvio observado entre a média amostral e a média da população
+\[\bar{x} - \mu = 80 - 75 = 5\]
+\item 4b. Calcule o desvio esperado devido ao erro de amostragem
+\[SEM_p = \frac{\sigma}{\sqrt{N}} = \frac{10}{\sqrt{25}} = 2\]
+\item 4c. Calcule o z para uma média amostral
+\[z = \frac{(\bar{x} - \mu)}{SEM_p} = 2.5\]
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 4: calcular a estatística de teste (z para uma média amostral)}
+O valor z obtido de 2.5 é mais extremo que o valor crítico de 1.65, portanto esse valor de z está localizado na região de rejeição (ou seja, a região crítica).
+\begin{center}\includegraphics[width=0.55\linewidth]{figs/regiao_critica_observada} \end{center}
+
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
+Um tamanho de efeito é um índice da diferença entre a média da amostra e a média da população. A estatística de tamanho do efeito normalmente usada ao comparar duas médias é d. 
+\[d = \frac{Desvio\quad observado\quad entre\quad as\quad medias}{Desvio\quad padrao} = \frac{\bar{x}-\mu}{\sigma} = \frac{80-75}{10} = 0.5\]
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
+A melhor maneira de interpretar qualquer tamanho de efeito é compará-lo com os tamanhos de efeito produzidos por estudos semelhantes na literatura de pesquisa. Se você não conseguir encontrar estudos semelhantes na literatura para fornecer uma referência, poderá usar as diretrizes gerais sugeridas por Cohen (1992) para interpretar os tamanhos dos efeitos na Tabela 6.2.
+
+\begin{center}
+\begin{tabular}{cc} 
+ \hline
+d  & Tamanho estimado do efeito\\
+ \hline
+Perto de 0.2 & Pequeno \\
+Perto de 0.5 & Médio \\
+Perto de 0.8 & Grande \\
+ \hline
+\end{tabular}
+\end{center}   
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 6: Interpretando os Resultados do Teste de hipótese usando a z para uma média amostral}
+
+Declaração resumida sobre o teste estatístico acima:\\~\\
+As notas dos exames dos alunos que realizaram testes frequentes sobre o material $(\bar{x} = 80, dp = 9.50)$ foram significativamente maiores do que as pontuações daqueles que não realizaram testes frequentes $(\mu = 75, \sigma = 10)$, z (N = 25) = 2.50, p = 0.0062, d = 0.50.\\~\\
+
+Geralmente, você deve fornecer o valor exato de p, se souber. Em alguns casos, você não saberá disso e então escreveria \("p < 0.05"\) se rejeitou a hipótese nula ou \("p > 0.05"\) se não rejeitou a hipótese nula.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 6: Interpretando os Resultados do Teste de hipótese usando a z para uma média amostral}
+
+\begin{center}
+\begin{tabular}{cccc} 
+ \hline
+& Estado da hipótese nula &  & \\
+ \hline
+& & \textbf{$H_0$ falsa} & \textbf{$H_0$ verdadeira}\\
+Decisão & Rejeitar o nulo & Decisão correta/ & Erro tipo I \\
+estatística &  & poder estatístico &  \\
+& Não rejeitar o nulo & Erro tipo II & Decisão correta\\
+ \hline
+\end{tabular}
+\end{center}
+
 \end{frame}
 
 \setbeamercovered{transparent}

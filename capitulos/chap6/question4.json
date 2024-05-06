@@ -1,0 +1,24 @@
+[{"question": "9. Se a hipótese nula for verdadeira, você deve esperar um valor de z próxima de",
+"type": "multiple_choice",
+"answers": [
+{"answer": "a. 0", "correct": true, "feedback": "Correto! Se a hipótese nula for verdadeira, você deve esperar um valor de z próxima de 0."},
+{"answer": "b. 1", "correct": false, "feedback": "Incorreto. Leia a questão novamente."},
+{"answer": "c. -1", "correct": false, "feedback": "Incorreto. Leia a questão novamente."},
+{"answer": "d. 2.9", "correct": false, "feedback": "Incorreto. Leia a questão novamente."}
+]
+},
+{"question": "10. Mesmo que a hipótese nula seja verdadeira, você não deve se surpreender se um valor de z resultante de um teste de significância não for o valor exato selecionado acima devido a_________.",
+"type": "multiple_choice",
+"answers": [
+{"answer": "a. erro de amostragem", "correct": true, "feedback": "Correto! Se a hipótese nula for verdadeira, você deve esperar um valor de z próxima de 0."},
+{"answer": "b. uma hipótese de pesquisa inespecífica", "correct": false, "feedback": "Incorreto. Leia a questão novamente."}
+]
+},
+{"question": "11. Se a hipótese nula for verdadeira, pontuações z próximas de zero são ___________.",
+"type": "multiple_choice",
+"answers": [
+{"answer": "a. prováveis", "correct": true, "feedback": "Correto! Se a hipótese nula for verdadeira, você deve esperar um valor de z próxima de 0."},
+{"answer": "b. improváveis", "correct": false, "feedback": "Incorreto. Leia a questão novamente."}
+]
+}
+]

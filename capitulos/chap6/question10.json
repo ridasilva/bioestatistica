@@ -1,0 +1,11 @@
+[{"question":"23. Quando os estatísticos descrevem um resultado como 'estatisticamente significativo' ou simplesmente como 'significativo', querem dizer que (selecione quatro respostas)",
+"type": "many_choice",
+"answers":[{"answer": "a. a hipótese nula foi rejeitada.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. a hipótese nula não foi rejeitada.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "c. o valor obtido estava na região crítica.", "correct": true, "feedback": "Correto!"},
+{"answer": "d. o valor obtido não estava na região crítica.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "e. era improvável que os resultados fossem criados por erro de amostragem.", "correct": true, "feedback": "Correto!"},
+{"answer": "f. os resultados provavelmente foram criados por erro de amostragem.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "g. o valor p foi menor que o valor alfa.", "correct": true, "feedback": "Correto!"},
+{"answer": "h. o valor de p foi maior que o valor alfa.", "correct": false, "feedback": "Incorreto. O valor de p foi menor que o valor alfa."}]
+}]
