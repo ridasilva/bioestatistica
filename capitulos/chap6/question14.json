@@ -1,0 +1,20 @@
+[{"question":"28. Se um pesquisador conclui que um tratamento não funcionou, mas realmente funcionou, que tipo de erro ele cometeu?",
+"type": "multiple_choice",
+"answers":[
+{"answer": "a. Tipo I", "correct": false, "feedback": "Errado. Tipo I é quando você rejeita uma hipótese nula verdadeira."},
+{"answer": "b. Tipo II", "correct": true, "feedback": "Correto! Se o pesquisador concluiu que o tratamento não funcinou ele não rejeitou a hipótese nula."}]
+},
+{"question":"29. Rejeitar uma hipótese nula falsa é chamado",
+"type": "multiple_choice",
+"answers":[
+{"answer": "a. Erro tipo I.", "correct": false, "feedback": "Errado. Erro tipo I é quando você rejeita uma hipótese nula verdadeira."},
+{"answer": "b. Erro tipo II.", "correct": false, "feedback": "Errado. Erro tipo II é quando você não rejeita uma hipótese nula falsa."},
+{"answer": "c. poder estatístico.", "correct": true, "feedback": "Correto! O poder estatístico é a probabilidade de rejeitar uma hipótese nula falsa."}]
+},
+{"question":"30. Concluir que um tratamento funciona quando realmente funciona chama-se",
+"type": "multiple_choice",
+"answers":[
+{"answer": "a. Erro tipo I.", "correct": false, "feedback": "Errado. Erro tipo I implica dizer que o tratamento funciona quando não funciona."},
+{"answer": "b. Erro tipo II.", "correct": false, "feedback": "Errado. Erro tipo II implica dizer que o tratamento não funciona quando funciona"},
+{"answer": "c. poder estatístico.", "correct": true, "feedback": "Correto!"}]
+}]

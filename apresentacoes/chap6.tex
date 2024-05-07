@@ -341,262 +341,69 @@ estatística &  & poder estatístico &  \\
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Média de dados brutos}
+\frametitle{Etapa 6: Interpretando os Resultados do Teste de hipótese usando a z para uma média amostral}
 
-Divide-se a soma de todos os dados pelo número total deles:
-
-\[
-\bar{x}_{obs} = \frac{x_1 + x_2 + \cdots + x_n}{n} = \frac{\sum_{i=1}^n
-x_i}{n}.
-\]
-\begin{center}\includegraphics[width=0.8\linewidth]{figs/medidas-crop} \end{center}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Variância e desvio-padrão de um conjunto de dados}
-
-Uma alternativa melhor é usar a \textbf{soma dos quadrados dos desvios},
-que dá origem à \textbf{variância} de um conjunto de dados \[
-var_{obs} = \frac{1}{n}\sum_{i=1}^n (x_i - \bar{x}_{obs})^2
-\] Para manter a mesma unidade de medida dos dados originais, definimos
-o \textbf{desvio padrão} como \[
-dp_{obs} = \sqrt{var_{obs}}
-\] Uma expressão alternativa da variância (mais fácil de calcular) é \[
-var_{obs} = \frac{1}{n}\sum_{i=1}^n x_i^2 - \bar{x}_{obs}^2
-\]
-\end{frame}
-
-
-\section{Distribuição Amostral}
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Intuição para distribuições amostrais}
-Uma distribuição de médias amostrais é a população de todas as médias amostrais aleatórias possíveis para um estudo realizado com um determinado tamanho de amostra.\\~\\
-População exemplo de quatro valores: \[10, 12, 14, 16\]
+\begin{center}
+%\setlength{\tabcolsep}{1pt}
+\tiny
+\begin{tabular}{cccc} 
+ \hline
+Termo estatístico & Focando na & Focando na & Focando na\\
+ & Hipótese Nula & Hipótese Alternativa (de trabalho) & Hipótese Nula (2)\\
+ \hline
+Erro Tipo I & Rejeitar a hipótese nula & Dizer que o tratamento & Rejeitar um\\
+ & quando não deveria ter rejeitado & funciona quando não funciona & Verdadeiro nulo\\
+Erro Tipo II & Falhar em rejeitar a hipótese & Dizer que o tratamento & Não rejeitar\\
+ & nula quando deveria ser rejeitada & não funciona quando funciona & um Falso nulo\\
+Poder Estatístico & Rejeirar o nulo quando & Dizer que o tratamento & Rejeitar um\\
+ & deveria ser rejeitado & funciona quando funciona & verdadeiro falso\\ 
+ \hline
+\end{tabular}
+\end{center}
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo}
-Distribuição de médias amostrais para a população de quatro valores e um tamanho de amostra de 2
-\begin{center}\includegraphics[width=0.5\linewidth]{figs/chap5tab5.2} \end{center}
-\end{frame}
+\frametitle{Regras de Teste de Hipótese}
+O processo de teste de hipótese nada mais é do que um conjunto formal de regras que os pesquisadores usam para determinar se a hipótese nula (\(H_0\)) é provável ou improvável de ser verdadeira.
 
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Parâmetros \textit{vs} Estimativas}
-A média da população é dada por:
-\[\mu=\frac{1}{N}\sum_{i=1}^Nx_i=\frac{52}{4}=13\]
-A média da distribuição das médias amostrais, as 16 médias amostrais na última coluna da tabela anterior é dada por
-\[\bar{X}=\frac{1}{N}\sum_{i=1}^N\bar{x}_i=\frac{208}{16}=13\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição das médias}
-O fato de a média da distribuição das médias amostrais ser sempre igual à média da população original mostra que quando os pesquisadores selecionam aleatoriamente uma amostra para usar em seus estudo, selecionar uma amostra que tenha a mesma média da população, ou uma média próxima a ela, é bastante comum.
-\begin{center}\includegraphics[width=0.6\linewidth]{figs/chap5fig5.1} \end{center}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Desvios padrão populacional e amostral}
-A variância da população pode ser obtida por
-\[\sigma^2 = \frac{1}{N}\sum_{i=1}^N x_i^2 - \mu^2=\frac{1}{4}696-169=5\]
-E o desvio padrão
-\[\sigma= \sqrt{\sigma^2} = 2.24\]
-A variância da distribuição amostral pode ser obtida por
-\[Var(X) = \frac{1}{N}\sum_{i=1}^N \bar{x}_i^2 - \bar{X}^2=\frac{1}{16}2744-169=2.5\]
-E o desvio padrão
-\[DP = \sqrt{Var(X)} = 1.58\]
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Erro padrão da média}
-O erro padrão de um estimador é o desvio padrão de sua distribuição amostral. Para o estimador da média, temos o erro padrão da média
-\[\sigma_{\bar{X}} = SEM = \frac{\sigma}{\sqrt{N}}\]
-onde \(\sigma\) representa o devio padrão populacional e \(N\) o tamanho da amostra.
-Para o nosso exemplo, o erro padrão da média pode ser obtido por
-\[SEM = \frac{\sigma}{\sqrt{N}} = \frac{2.24}{\sqrt{2}}=1.58\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Observações do experimento númerico}
-Observamos empiricamente, que:
 \begin{itemize}
-\item A média da distribuição das médias amostrais é igual a média populacional, \(\mu\);
-\item O desvio padrão é sempre igual ao SEM, \(\sigma/N\);
-\item O gráfico da distribuição amostral tem distribuição aproximadamente normal (ou seja, em forma de sino).
+\item Se a hipótese nula for verdadeira \(\Rightarrow\) valores de z próximos de 0 têm uma probabilidade alta; 
+\item Se a probabilidade de um valor de z for baixa o suficiente, os pesquisadores devem rejeitam a hipótese nula.
 \end{itemize}
 
 \end{frame}
 
-
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Outros experimentos númericos}
-\begin{center}\includegraphics[width=0.9\linewidth]{figs/func2}\end{center}
-\end{frame}
+\frametitle{O que é um valor p?}
+Um valor p é a probabilidade de observar o valor calculada para a estatística do teste ou um valor mais extremo assumindo que a hipótese nula é verdadeira. É usado por pesquisadores para determinar se devem ou não rejeitar uma hipótese nula.\\~\\
+Sempre que você for confrontado com a questão de determinar se deve ou não rejeitar a hipótese nula, poderá usar uma das duas regras a seguir:
 
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Teorema Central do Limite}
-Coletivamente, esses três fatos são conhecidos como teorema central do limite  (TCL) e nos dizem que a distribuição das médias amostrais com, centro (\(\mu\)) e dispersão (SEM = \(\sigma/N\)) tem forma normal para qualquer estudo.\\~\\ 
-
-Observamos empiricamente, que:
 \begin{enumerate}
-\item sugere que as amostras tendem a ter médias semelhantes às da população da qual foram extraídas;
-\item nos permite calcular a quantidade típica de erro de amostragem que qualquer estudo pode gerar.
+\item Se o valor obtido for mais extremo que o valor crítico, você deve rejeitar a hipótese nula;
+\item Se o valor p for menor que o valor alfa, você deve rejeitar a hipótese nula.
 \end{enumerate}
 
 \end{frame}
 
-\setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Lei dos Grandes Números}
-Amostras maiores tenderão a ter meios que desviam-se menos da média da população do que amostras menores. Este é um exemplo específico da lei de números grandes: .
- \begin{alertblock}{Lei dos Grandes Números}
-À medida que N aumenta, a estatística amostral (por exemplo, a média amostral) é uma estimativa melhor do parâmetro populacional (por exemplo, a média populacional)
-\end{alertblock}
+\frametitle{O que é um valor p?}
+Um valor p é a probabilidade de observar o valor calculada para a estatística do teste ou um valor mais extremo assumindo que a hipótese nula é verdadeira.
 
-Porque a distribuição tem forma normal, ela segue a regra 68–95–99, como estudado em capítulos prévios. Portanto, 68\% de todos as possíveis médias amostrais estão entre -1 e +1 erro padrão da média da média da população.
-
+\begin{center}\includegraphics[width=0.6\linewidth]{figs/regiao_critica_valorp.png} \end{center}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Distribuições amostrais}
+\frametitle{Por que os estatísticos "falharam em rejeitar o nulo" em vez de "aceitar o nulo"}
+Um falso nulo pode não ser rejeitado por um grande número de razões, incluindo erro de amostragem, se o programa precisasse de mais tempo para ser eficaz ou se houvesse uma série de problemas metodológicos com o estudo.\\~\\ 
 
-\begin{block}{Distribuições amostrais}
+A frase 'não rejeitar o nulo' significa que atualmente não existem provas suficientes para rejeitar a hipótese nula, mas reconhece que pesquisas futuras poderão fornecer essa evidência. Em contraste, a frase 'Aceitar o nulo' pode implicar uma conclusão final e definitiva que desmente a maioria das situações de investigação.\\~\\
 
-A distribuição de probabilidade de uma estatística
-\(Y = T(x_1, x_2, \ldots, x_n)\) é denominada de \textbf{distribuição
-amostral} de \(Y\). Assim, uma estatística também é uma variável
-aleatória, pois seus valores mudam conforme a amostra aleatória.
-\end{block}
+Ignorar possibilidades alternativas não é consistente com a natureza cautelosa das conclusões científicas.
 
-\begin{block}{}
-\textbf{Exemplo}: duas estatísticas comumente utilizadas para o resumo
-de uma amostra aleatória são a \textbf{média amostral} \(\bar{x}\), e a
-\textbf{proporção amostral} \(\hat{p}\). Cada uma delas também possui
-uma distribuição amostral.
-\end{block}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição amostral da média}
-
-Através do estudo da distribuição da média amostral chegamos em um dos
-resultados mais importantes da inferência estatística.
-
-\begin{block}{Distribuição amostral da média}
-
-\begin{itemize}
-\item
-  \(\text{E}(\bar{X}) = \mu_{\bar{X}} = \mu\)
-\item
-  \(\text{Var}(\bar{X}) = \sigma^2_{\bar{X}} = \sigma^2/n\)
-\end{itemize}
-
-Portanto, se \[X \sim \text{N}(\mu, \sigma^2) \quad \text{então} \quad
-\bar{X} \sim \text{N}(\mu_{\bar{X}}, \sigma^2_{\bar{x}})\] mas, como
-\[\mu_{\bar{X}} = \mu \quad \text{e} \quad \sigma^2_{\bar{X}} =
-\sigma^2/n\] então, a \textbf{distribuição amostral} da média amostral
-\(\bar{X}\) é
-\[\bar{X} \sim \text{N}\left(\mu, \frac{\sigma^2}{n} \right)\]
-\end{block}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição amostral da média}
-
-Pode-se mostrar que, para amostras suficientemente grandes, \textbf{a
-média amostral \(\bar{X}\) converge para o verdadeiro valor da média
-populacional \(\mu\)} (é um \textbf{estimador não viesado} de \(\mu\)).
-
-Além disso, a variância das médias amostrais \(\sigma^2_{\bar{X}}\)
-tende a diminuir conforme \(n \rightarrow \infty\) (é um estimador
-\textbf{consistente}).
-
-Estes resultados sugerem que, quando o tamanho da amostra aumenta,
-
-\begin{center}
-\underline{independente do formato da distribuição da população
-original},
-\end{center}
-
-\textbf{a distribuição amostral de \(\bar{X}\) aproxima-se cada vez mais
-de uma distribuição Normal}, um resultado fundamental na teoria de
-probabilidade conhecido como \textbf{Teorema Central do Limite}.
-\end{frame}
-
-
-% adicionar figura 7.15
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição amostral da média}
-
-\begin{block}{Teorema Central do Limite (TCL)}
-
-Para amostras aleatórias simples \((X_1, X_2, \ldots, X_n)\), retiradas
-de uma população com média \(\mu\) e variância \(\sigma^2\), a
-distribuição amostral da média \(\bar{X}\), terá forma dada por \[
-Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}}
-\] no limite quando \(n \to \infty\), onde \(Z \sim \text{N}(0,1)\).
-
-\end{block}
-
-O teorema garante que para \textit{n} grande a distribuição da média amostral, devidamente padronizada, se comporta segundo um modelo Normal com média 0 e variância 1.
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Cálculo da variável Z}
-A fórmula para a z para uma média amostral é muito semelhante à fórmula para a z para uma distribuição normal. 
-\[
-Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}}
-\] 
-Interpretação:
-\begin{itemize}
-\item z for "próximo" de zero, média amostral (\(\bar{X}\)) é "próximo" da média da população (\(\mu\)); 
-\item uma valor z "próximo" de 3 significa que o desvio observado (numerador) é três vezes maior que o desvio esperado pelo erro amostral (denominador);
-\item valores de z grandes geralmente indicam que algo diferente da variabilidade do erro amostral fez com que a média amostral (\(\bar{X}\)) ficasse muito longe do média populacional.
-\end{itemize}
-
-%\begin{center}\includegraphics[width=0.8\linewidth]{../figures/tabela_Z_01} \end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Cálculo da variável Z}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-   A curva normal padrão e os valores de z\\~\\
-   \includegraphics[width=0.6\textwidth]{figs/pdf_norm_84}
-   \begin{itemize}
-   \item Um valor de z = +1 é maior que 84.13\% dos valores de z
-   \begin{itemize}
-   \item 0.8413 é a probabilidade no corpo (\textit{body}) da tabela usada no curso;
-   \item O restante para somar 1 é a probabilidade representada pela cauda (\textit{tail}).
-   \end{itemize}
-   \end{itemize}
-\end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-    \begin{center}
-     \includegraphics[width=0.4\textwidth]{figs/ztab_crop}
-     \end{center}
-\end{column}
-\end{columns}
-
-%\begin{center}\includegraphics[width=0.8\linewidth]{../figures/tabela_Z_01} \end{center}
 \end{frame}
 
 \setbeamercovered{transparent}

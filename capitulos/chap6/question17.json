@@ -1,0 +1,8 @@
+[{"question":"41. Você deve rejeitar a hipótese nula se o valor p for",
+"type":"multiple_choice",
+"answers":[{"answer":"a. menor ou igual a alfa ($p \leq \alpha$).","correct":true, "feedback":"Correto! Se o valor p for menor ou igual a alfa, você deve rejeitar a hipótese nula."},
+{"answer":"b. maior que alfa ($p > \alpha$).","correct":false, "feedback": "Incorreto. Se o valor p for maior que alfa, você não deve rejeitar a hipótese nula."}]},
+{"question":"42. Você deve rejeitar a hipótese nula se o valor z obtido for _____ que o valor crítico.",
+"type":"multiple_choice",
+"answers":[{"answer":"a. mais extremo","correct":true, "feedback": "Correto!"},
+{"answer":"b. menos extremo","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]}]
