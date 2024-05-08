@@ -381,7 +381,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa-simbolicamente-e-verbalmente"><em>Etapa 2: expor as hipóteses nulas e de pesquisa Simbolicamente e Verbalmente</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passo-3-definir-as-regioes-criticas"><em>Passo 3: Definir as Regiões Críticas</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-4-calcular-a-estatistica-de-teste-z-para-uma-media-amostral"><em>Etapa 4: calcular a estatística de teste (z para uma média amostral)</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-se-o-seu-grau-pequeno-medio-ou-grande"><em>Etapa 5: calcule o tamanho do efeito e descreva se o seu grau (pequeno, médio ou grande)</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o-seu-grau-pequeno-medio-ou-grande"><em>Etapa 5: calcule o tamanho do efeito e descreva o seu grau (pequeno, médio ou grande)</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-6-interpretando-os-resultados-do-teste-de-hipotese-usando-a-z-para-uma-media-amostral"><em>Etapa 6: Interpretando os Resultados do Teste de hipótese usando a z para uma média amostral</em></a></li>
 </ul>
 </li>
@@ -404,12 +404,12 @@ document.write(`
 <p>OBJETIVOS DE APRENDIZADO
 Depois de ler este capítulo, você será capaz de:</p>
 <ul class="simple">
-<li><p>Escrever hipóteses nulas e alternativas usando parâmetros populacionais</p></li>
-<li><p>Calcular a z para uma média amostral</p></li>
-<li><p>Determinar se você deve ou não rejeitar a hipótese nula</p></li>
-<li><p>Calcular e interpretar o tamanho do efeito (d) de um estudo</p></li>
-<li><p>Identificar exemplos de erro Tipo I, erro Tipo II e poder estatístico</p></li>
-<li><p>Fornecer uma descrição detalhada de um valor p, valor crítico e valor calculado</p></li>
+<li><p>Escrever hipóteses nulas e alternativas usando parâmetros populacionais;</p></li>
+<li><p>Calcular a z para uma média amostral;</p></li>
+<li><p>Determinar se você deve ou não rejeitar a hipótese nula;</p></li>
+<li><p>Calcular e interpretar o tamanho do efeito (d) de um estudo;</p></li>
+<li><p>Identificar exemplos de erro Tipo I, erro Tipo II e poder estatístico;</p></li>
+<li><p>Fornecer uma descrição detalhada de um valor p, valor crítico e valor calculado;</p></li>
 </ul>
 <section id="introducao-ao-teste-de-hipotese">
 <h2>Introdução ao teste de hipótese<a class="headerlink" href="#introducao-ao-teste-de-hipotese" title="Link to this heading">#</a></h2>
@@ -424,10 +424,10 @@ Obviamente, a média amostral de 80 é numericamente maior do que a média popul
 <section id="etapa-1-examinar-as-variaveis-para-avaliar-suposicoes-estatisticas">
 <h3><em>Etapa 1: examinar as variáveis para avaliar suposições estatísticas</em><a class="headerlink" href="#etapa-1-examinar-as-variaveis-para-avaliar-suposicoes-estatisticas" title="Link to this heading">#</a></h3>
 <p>Todos os testes de hipóteses são baseados em suposições específicas e, se essas suposições forem violadas, esses testes podem produzir resultados enganosos. Portanto, o primeiro passo ao conduzir qualquer teste de hipótese é determinar se os dados que você está prestes a analisar atendem às suposições necessárias. Felizmente, se você compreender quatro suposições básicas, será capaz de executar com segurança todas as estatísticas de testes de hipóteses discutidas neste texto. Os quatro pressupostos básicos são (1) independência dos dados, (2) medição apropriada das variáveis para análise, (3) normalidade das distribuições e (4) homogeneidade da variância.</p>
-<p>A independência da suposição de dados significa que a pontuação de cada participante dentro de uma condição é independente das pontuações de todos os outros participantes dentro da mesma condição. Por exemplo, nos testes de estudo, se testes frequentes melhorarem as notas dos alunos nos exames, você deverá garantir que todos os alunos responderam sozinhos a todas as perguntas do exame; se um ou mais alunos copiassem as respostas de outro aluno em vez de fornecerem as suas próprias respostas, esta fraude violaria o pressuposto da independência dos dados porque as respostas de um aluno “influenciavam” as respostas de outro aluno. Se essa trapaça fosse generalizada, isso arruinaria todo o estudo. Ao avaliar a independência dos dados, você está realmente avaliando o controle processual utilizado para coletar os dados. Se o controle processual de um estudo for muito fraco (por exemplo, houve trapaça generalizada ou algum outro problema com a coleta de dados), os dados violam a suposição de independência e você deverá refazer o estudo com mais cuidado.
-Ao realizar um teste de hipótese usando um z para uma média amostral, a suposição apropriada de medição de variáveis significa que a variável independente (VI) deve identificar um grupo de pessoas que são diferentes da população de alguma forma, e a variável dependente (VD) deve ser medida em uma escala númerica quantitativa. Se o VI ou o VD não atenderem a esses requisitos, então o z para uma média amostral não é o teste apropriado. Por exemplo, no estudo de questionários frequentes, a VI é se os participantes responderam ou não aos questionários frequentes antes de fazerem o exame final. A VI identifica como a amostra e a população são diferentes – ou seja, a amostra respondeu a questionários frequentes e a população não. Ao realizar um z para uma média amostral, a VI é uma “variável de agrupamento”; identifica um grupo de pessoas que são diferentes da população. O VD neste estudo, as notas dos alunos nos exames finais, deve ser medido para que o desempenho de cada aluno possa ser quantificado com precisão. Em outras palavras, a VD deve ser medido como uma variável quantitativa. Se as notas do exame forem registradas como número de respostas corretas ou porcentagem de acertos, essa suposição seria atendida porque saberíamos exatamente o quanto melhor (ou pior) cada aluno se saiu em relação aos outros alunos.
+<p>A suposição de independência dos dados significa que a pontuação de cada participante dentro de uma condição é independente das pontuações de todos os outros participantes dentro da mesma condição. Por exemplo, nos testes de estudo, se testes frequentes melhorarem as notas dos alunos nos exames, você deverá garantir que todos os alunos responderam sozinhos a todas as perguntas do exame; se um ou mais alunos copiassem as respostas de outro aluno em vez de fornecerem as suas próprias respostas, esta fraude violaria o pressuposto da independência dos dados porque as respostas de um aluno “influenciavam” as respostas de outro aluno. Se essa trapaça fosse generalizada, isso arruinaria todo o estudo. Ao avaliar a independência dos dados, você está realmente avaliando o controle processual utilizado para coletar os dados. Se o controle processual de um estudo for muito fraco (por exemplo, houve trapaça generalizada ou algum outro problema com a coleta de dados), os dados violam a suposição de independência e você deverá refazer o estudo com mais cuidado.
+Ao realizar um teste de hipótese usando um z para uma média amostral, a suposição apropriada de medição de variáveis significa que a variável independente (VI) deve identificar um grupo de pessoas que são diferentes da população de alguma forma, e a variável dependente (VD) deve ser medida em uma escala númerica quantitativa. Se o VI ou o VD não atenderem a esses requisitos, então o z para uma média amostral não é o teste apropriado. Por exemplo, no estudo de questionários frequentes, a VI representa os participantes que responderam ou não aos questionários frequentes antes de fazerem o exame final. A VI identifica como a amostra e a população são diferentes – ou seja, a amostra respondeu a questionários frequentes e a população não. Ao realizar um z para uma média amostral, a VI é uma “variável de agrupamento”; identifica um grupo de pessoas que são diferentes da população. A VD neste estudo, as notas dos alunos nos exames finais, deve ser medida para que o desempenho de cada aluno possa ser quantificado com precisão. Em outras palavras, a VD deve ser medida como uma variável quantitativa. Se as notas do exame forem registradas como número de respostas corretas ou porcentagem de acertos, essa suposição seria atendida porque saberíamos exatamente o quanto melhor (ou pior) cada aluno se saiu em relação aos outros alunos.
 A suposição de normalidade das distribuições significa que a distribuição das médias amostrais para cada condição deve ter uma forma normal. Como você deve lembrar do capítulo anterior, o teorema central do limite nos diz que uma distribuição de médias amostrais terá uma forma normal se (a) a população original de variáveis tiver uma forma normal ou (b) o tamanho da amostra	usado no cálculo do estudo é 30 ou maior. Assim, estritamente falando, neste estudo sobre questionários frequentes, o professor deve determinar se a população original das variáveis de todos os alunos tem uma forma normal ou aumentar o tamanho da amostra de 25 para 30 para estar relativamente confiante de que a suposição de normalidade é válida. Contudo, na prática, a menos que os investigadores saibam que uma distribuição de variáveis é muito distorcida, normalmente procedem com tamanhos de amostra “próximos de” 30.
-Em última análise, a solidez desta decisão baseia-se no quanto a forma de uma distribuição se desvia do normal. Se se desviar apenas ligeiramente da forma normal, um tamanho de amostra “próximo de” 30 é provavelmente suficiente. Contudo, se a forma de uma população se desviar substancialmente do normal, poderá ser necessária uma amostra ainda maior que 30. No final, os investigadores têm de “conhecer as suas variáveis” e fazer julgamentos sólidos. Para este estudo, o professor analisou a distribuição das notas de todos os ex-alunos e seu formato era normal. Portanto, a distribuição das médias amostrais terá uma forma normal, independentemente do tamanho da amostra.
+Em última análise, a solidez desta decisão baseia-se no quanto a forma de uma distribuição se desvia do normal. Se se desviar apenas ligeiramente da forma normal, um tamanho de amostra “próximo de” 30 é provavelmente suficiente. Contudo, se a forma de uma população se desviar substancialmente da normal, poderá ser necessária uma amostra ainda maior que 30. No final, os investigadores têm de “conhecer as suas variáveis” e fazer julgamentos sólidos. Para este estudo, o professor analisou a distribuição das notas de todos os ex-alunos e seu formato era normal. Portanto, a distribuição das médias amostrais terá uma forma normal, independentemente do tamanho da amostra.
 Ao realizar um z para uma média amostral, a suposição de homogeneidade de variância significa que as variâncias em cada condição do estudo são semelhantes. No estudo de questionários frequentes, isso significa que a variância das pontuações quando os alunos experimentam questionários frequentes precisa ser semelhante à variância das pontuações quando os alunos não experimentam questionários frequentes. Os investigadores não podem verificar esta suposição antes de recolherem os dados. Se o desvio padrão da amostra for o dobro do da população ou vice-versa, esta suposição pode ter sido violada. Neste estudo, o desvio padrão da amostra foi de 9.5 e o desvio padrão da população foi de 10. Assim, o pressuposto de homogeneidade de variância foi atendido.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -445,13 +445,13 @@ Ao realizar um z para uma média amostral, a suposição de homogeneidade de var
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="DkYfJvnNNMdZ" data-shufflequestions="False"
+<div class="output text_html"><div id="FvSCJDpOJpBb" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#DkYfJvnNNMdZ {
+#FvSCJDpOJpBb {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -621,7 +621,7 @@ Ao realizar um z para uma média amostral, a suposição de homogeneidade de var
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsDkYfJvnNNMdZ=[{"question": "1. A suposição de independência significa que",
+</style></div><script type="application/javascript">var questionsFvSCJDpOJpBb=[{"question": "1. A suposição de independência significa que",
 "type": "multiple_choice",
 "answers": [{"answer": "a. as variáveis dentro de uma condição são independentes umas das outras.", "correct": true, 
             "feedback": "Correto! A suposição de independência significa que as variáveis dentro de uma condição são independentes umas das outras."},
@@ -638,12 +638,12 @@ Ao realizar um z para uma média amostral, a suposição de homogeneidade de var
 "type": "multiple_choice",
 "answers":[{"answer": "a. Se o tamanho da amostra for maior que 30", "correct": false, "feedback": "Parcialmente correto. Leia a definição de normalidade novamente."},
             {"answer": "b. Se a população da variável amostrada for normalmente distribuída", "correct": false, "feedback": "Parcialmente correto. Leia a definição de normalidade novamente."},
-            {"answer": "c. Se o tamanho da amostra for superior a 30 ou se a amostrada for normalmente distribuída", "correct": true, "feedback": "Correto!"}]
+            {"answer": "c. Se o tamanho da amostra for superior a 30 ou se a amostra for normalmente distribuída", "correct": true, "feedback": "Correto!"}]
 },
 {"question": "4. Ao realizar um z para uma média amostral, você pode ter bastante certeza de que a suposição de homogeneidade de variância foi atendida pelos dados de um estudo, desde que",
 "type": "multiple_choice",
 "answers":[{"answer": "a. os desvios padrão da amostra e da população são semelhantes (ou seja, um não tem o dobro do tamanho do outro).", "correct": true, "feedback": "Correto!"},
-            {"answer": "b. o desvio padrão da amostra e da população é superior ao dobro do desvio padrão do outro grupo.", "correct": false, "feedback": "Incorreto."}]
+            {"answer": "b. os desvios padrão da amostra e da população são superiores ao dobro do desvio padrão do outro grupo.", "correct": false, "feedback": "Incorreto."}]
 }
 ];
     // Make a random ID
@@ -1432,8 +1432,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("DkYfJvnNNMdZ")) {
-            show_questions(questionsDkYfJvnNNMdZ,  DkYfJvnNNMdZ); 
+          if(document.getElementById("FvSCJDpOJpBb")) {
+            show_questions(questionsFvSCJDpOJpBb,  FvSCJDpOJpBb); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1442,8 +1442,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("DkYfJvnNNMdZ");
-        // console.log(document.getElementById("DkYfJvnNNMdZ"));
+        //console.log("FvSCJDpOJpBb");
+        // console.log(document.getElementById("FvSCJDpOJpBb"));
 
         try_show();
         }
@@ -1495,13 +1495,13 @@ Você deve reconhecer que as hipóteses nula e de pesquisa são opostas e, porta
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="fFTLQAZCQHKx" data-shufflequestions="False"
+<div class="output text_html"><div id="iGWDPzClPemV" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#fFTLQAZCQHKx {
+#iGWDPzClPemV {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -1671,7 +1671,7 @@ Você deve reconhecer que as hipóteses nula e de pesquisa são opostas e, porta
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsfFTLQAZCQHKx=[{"question": "5. A hipótese de pesquisa afirma que",
+</style></div><script type="application/javascript">var questionsiGWDPzClPemV=[{"question": "5. A hipótese de pesquisa afirma que",
 "type": "multiple_choice",
 "answers": [
     {"answer": "a. questionários frequentes aumentarão as pontuações dos exames finais.", 
@@ -2487,8 +2487,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("fFTLQAZCQHKx")) {
-            show_questions(questionsfFTLQAZCQHKx,  fFTLQAZCQHKx); 
+          if(document.getElementById("iGWDPzClPemV")) {
+            show_questions(questionsiGWDPzClPemV,  iGWDPzClPemV); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -2497,14 +2497,14 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("fFTLQAZCQHKx");
-        // console.log(document.getElementById("fFTLQAZCQHKx"));
+        //console.log("iGWDPzClPemV");
+        // console.log(document.getElementById("iGWDPzClPemV"));
 
         try_show();
         }
         </script></div>
 </div>
-<p>Alguns alunos acham a notação simbólica do nulo e das hipóteses de pesquisa um pouco confusa porque estamos tentando determinar se <span class="math notranslate nohighlight">\(\mu_{quiz} &gt; 75\)</span>, e já sabemos que <span class="math notranslate nohighlight">\(\bar{x} = 80\)</span> e <span class="math notranslate nohighlight">\(\mu = 75\)</span>, com base nas informações fornecidas no problema. Contudo, é importante observar o subscrito “quiz” em <span class="math notranslate nohighlight">\(\mu_{quiz} &gt; 75\)</span>. O subscrito refere-se àqueles que fazem testes frequentes antes do teste. Não sabemos qual seria a pontuação média do teste se toda a população de alunos respondesse aos testes antes do teste (ou seja, não sabemos o <span class="math notranslate nohighlight">\(\mu_{quiz}\)</span>). Sabemos que a média da população é 75 quando os alunos fazem a prova sem responder previamente aos questionários. A questão da pesquisa é se a realização de questionários frequentes criaria uma média populacional superior a 75. Portanto, a hipótese da pesquisa prevê que, se houvesse uma população de alunos que responderam aos testes antes do teste, a média do teste populacional (<span class="math notranslate nohighlight">\(\mu_{quiz}\)</span>) seria superior a 75 (ou seja, a média atual daqueles que não responderam aos testes antes do teste). Em contraste, a hipótese nula prevê que, se houvesse uma população de alunos que responderam aos testes antes do teste, a média do teste populacional (<span class="math notranslate nohighlight">\(\mu_{quiz}\)</span>) seria inferior a 75 (ou seja, a média atual daqueles que não responderam quiz antes de fazer o teste).</p>
+<p>Alguns alunos acham a notação simbólica do nulo e das hipóteses de pesquisa um pouco confusa porque estamos tentando determinar se <span class="math notranslate nohighlight">\(\mu_{quiz} &gt; 75\)</span>, e já sabemos que <span class="math notranslate nohighlight">\(\bar{x} = 80\)</span> e <span class="math notranslate nohighlight">\(\mu = 75\)</span>, com base nas informações fornecidas no problema. Contudo, é importante observar o subscrito “quiz” em <span class="math notranslate nohighlight">\(\mu_{quiz} &gt; 75\)</span>. O subscrito refere-se àqueles que fazem testes frequentes antes do teste. Não sabemos qual seria a pontuação média do teste se toda a população de alunos respondesse aos testes antes do teste (ou seja, não sabemos o <span class="math notranslate nohighlight">\(\mu_{quiz}\)</span>). Sabemos que a média da população é 75 quando os alunos fazem a prova sem responder previamente aos questionários. A questão da pesquisa é se a realização de questionários frequentes criaria uma média populacional superior a 75. Portanto, a hipótese da pesquisa prevê que, se houvesse uma população de alunos que responderam aos testes antes da prova, a média do teste populacional (<span class="math notranslate nohighlight">\(\mu_{quiz}\)</span>) seria superior a 75 (ou seja, a média atual daqueles que não responderam aos testes antes da prova). Em contraste, a hipótese nula prevê que, se houvesse uma população de alunos que responderam aos testes antes da prova final, a média do teste populacional (<span class="math notranslate nohighlight">\(\mu_{quiz}\)</span>) seria inferior a 75 (ou seja, a média atual daqueles que não responderam quiz antes de fazer o teste).</p>
 <p>Neste cenário, a hipótese da pesquisa é essencialmente dizer que o aumento de 5 pontos na pontuação do exame, de 75 para 80, foi criado pelos questionários frequentes. Em contraste, a hipótese nula afirma que este aumento foi criado por erro amostral; questionários frequentes não levarão a um aumento de toda a população.</p>
 <p>Hipóteses:</p>
 <p><span class="math notranslate nohighlight">\(H_0: \mu_{quiz}=75;\)</span></p>
@@ -2523,13 +2523,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="OONuwCXHsrGe" data-shufflequestions="False"
+<div class="output text_html"><div id="erOYjexOjdkh" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#OONuwCXHsrGe {
+#erOYjexOjdkh {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -2699,10 +2699,10 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsOONuwCXHsrGe=[{"question": "8. Nesta situação de pesquisa, $\mu_{quiz}$ representa",
+</style></div><script type="application/javascript">var questionserOYjexOjdkh=[{"question": "8. Nesta situação de pesquisa, $\mu_{quiz}$ representa",
 "type": "multiple_choice",
 "answers":[
-{"answer": "a. a pontuação média do teste da população.", "correct": false, "feedback":"Incorreto, leio o parágrafo acima novamente."},
+{"answer": "a. a pontuação média do teste da população.", "correct": false, "feedback":"Incorreto, leia o parágrafo acima novamente."},
 {"answer": "b. qual seria a pontuação média do teste da população se todos os alunos respondessem aos testes antes de fazer a prova.", "correct": true, "feedback": "Correto!"}
 ]
 }];
@@ -3492,8 +3492,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("OONuwCXHsrGe")) {
-            show_questions(questionsOONuwCXHsrGe,  OONuwCXHsrGe); 
+          if(document.getElementById("erOYjexOjdkh")) {
+            show_questions(questionserOYjexOjdkh,  erOYjexOjdkh); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -3502,8 +3502,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("OONuwCXHsrGe");
-        // console.log(document.getElementById("OONuwCXHsrGe"));
+        //console.log("erOYjexOjdkh");
+        // console.log(document.getElementById("erOYjexOjdkh"));
 
         try_show();
         }
@@ -3514,8 +3514,8 @@ if (typeof version == 'undefined') {
 <h3><em>Passo 3: Definir as Regiões Críticas</em><a class="headerlink" href="#passo-3-definir-as-regioes-criticas" title="Link to this heading">#</a></h3>
 <p>A terceira etapa no processo de teste de hipóteses é definir a região crítica. A região crítica é a coleção de todos os valores de z que são tão raros se o nulo for verdadeiro que, se qualquer um desses valores de z ocorrer, sugere que a hipótese nula é provavelmente falsa. Para entender a região crítica, precisamos retornar à distribuição das médias amostrais.</p>
 <p>Figura 6.1 - Uma distribuição de médias amostrais com uma linha numérica na escala z (superior) e uma média amostral</p>
-<p>A Figura 6.1 é a distribuição das médias amostrais para o estudo de questionário frequente. Contém todas as médias amostrais possíveis de tamanho N = 25 retiradas da população de alunos que realizaram o exame final sem completar questionários frequentes. O teorema do limite central nos diz que a média desta distribuição é 75 (<span class="math notranslate nohighlight">\(\mu\)</span>), e que o erro padrão da média é 2 (<span class="math notranslate nohighlight">\(SEM = \sigma/N = 10/25\)</span>). Assim, a distribuição é rotulada como com média 75 e desvio padrão 2. Em última análise, trabalharemos com valores de z, então também converteram cada um dos valores médios amostrais possíveis no eixo x em z (exemplo <span class="math notranslate nohighlight">\(z = (\bar{x} - \mu)/SEM = (77 - 75)/2 = 1\)</span>).
-Se a hipótese nula for verdadeira (questionários frequentes não têm efeito no desempenho do teste), você esperaria um valor de z igual a 0 porque seria esperado que M e <span class="math notranslate nohighlight">\(\mu\)</span> fossem idênticos (ou seja, seria esperado que ambos fossem 75). Portanto, o numerador da	fórmula z seria <span class="math notranslate nohighlight">\(\bar{x} - \mu = 0\)</span>. Mas, mesmo que a hipótese nula fosse verdadeira, o numerador da fórmula z pode não ser exatamente 0 porque é provável que haja algum erro de amostragem. Por exemplo, devido a um erro de amostragem, você não ficaria surpreso se obtivesse um valor z igual a 0.3, mesmo que o questionário não tenha efeito no desempenho. Você ficaria, no entanto, surpreso se obtivesse uma pontuação z de 2.9 se o questionário não tivesse efeito no desempenho.</p>
+<p>A Figura 6.1 é a distribuição das médias amostrais para o estudo de questionário frequente. Contém todas as médias amostrais possíveis de tamanho N = 25 retiradas da população de alunos que realizaram o exame final sem completar questionários frequentes. O teorema central do limite nos diz que a média desta distribuição é 75 (<span class="math notranslate nohighlight">\(\mu\)</span>), e que o erro padrão da média é 2 (<span class="math notranslate nohighlight">\(SEM = \sigma/\sqrt{N} = 10/\sqrt{25}\)</span>). Assim, a distribuição é rotulada como com média 75 e desvio padrão 2. Em última análise, trabalharemos com valores de z, então também convertemos cada um dos valores médios amostrais possíveis no eixo x em z (exemplo <span class="math notranslate nohighlight">\(z = (\bar{x} - \mu)/SEM = (77 - 75)/2 = 1\)</span>).
+Se a hipótese nula for verdadeira (questionários frequentes não têm efeito no desempenho do teste), você esperaria um valor de z igual a 0 porque seria esperado que <span class="math notranslate nohighlight">\(\bar{x}\)</span> e <span class="math notranslate nohighlight">\(\mu\)</span> fossem idênticos (ou seja, seria esperado que ambos fossem 75). Portanto, o numerador da	fórmula z seria <span class="math notranslate nohighlight">\(\bar{x} - \mu = 0\)</span>. Mas, mesmo que a hipótese nula fosse verdadeira, o numerador da fórmula z pode não ser exatamente 0 porque é provável que haja algum erro de amostragem. Por exemplo, devido a um erro de amostragem, você não ficaria surpreso se obtivesse um valor z igual a 0.3, mesmo que o questionário não tenha efeito no desempenho. Você ficaria, no entanto, surpreso se obtivesse uma pontuação z de 2.9 se o questionário não tivesse efeito no desempenho.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -3590,13 +3590,13 @@ Se a hipótese nula for verdadeira (questionários frequentes não têm efeito n
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="zoZCGbEuksRe" data-shufflequestions="False"
+<div class="output text_html"><div id="gjJeTuDYlSJO" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#zoZCGbEuksRe {
+#gjJeTuDYlSJO {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -3766,7 +3766,7 @@ Se a hipótese nula for verdadeira (questionários frequentes não têm efeito n
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionszoZCGbEuksRe=[{"question": "9. Se a hipótese nula for verdadeira, você deve esperar um valor de z próxima de",
+</style></div><script type="application/javascript">var questionsgjJeTuDYlSJO=[{"question": "9. Se a hipótese nula for verdadeira, você deve esperar um valor de z próxima de",
 "type": "multiple_choice",
 "answers": [
 {"answer": "a. 0", "correct": true, "feedback": "Correto! Se a hipótese nula for verdadeira, você deve esperar um valor de z próxima de 0."},
@@ -4576,8 +4576,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("zoZCGbEuksRe")) {
-            show_questions(questionszoZCGbEuksRe,  zoZCGbEuksRe); 
+          if(document.getElementById("gjJeTuDYlSJO")) {
+            show_questions(questionsgjJeTuDYlSJO,  gjJeTuDYlSJO); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -4586,8 +4586,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("zoZCGbEuksRe");
-        // console.log(document.getElementById("zoZCGbEuksRe"));
+        //console.log("gjJeTuDYlSJO");
+        // console.log(document.getElementById("gjJeTuDYlSJO"));
 
         try_show();
         }
@@ -4609,13 +4609,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="fnfQCoUDoJwp" data-shufflequestions="False"
+<div class="output text_html"><div id="suLMzlZWMCBb" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#fnfQCoUDoJwp {
+#suLMzlZWMCBb {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -4785,7 +4785,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsfnfQCoUDoJwp=[{"question":"12. Se você procurar um valor z de 2.2 na tabela de unidades normais, descobrirá que a probabilidade de obter uma valor de z de 2.2 ou superior se a hipótese nula for verdadeira é 0.0139. Este é um resultado provável ou improvável se usarmos um ponto de corte de 0.05?",
+</style></div><script type="application/javascript">var questionssuLMzlZWMCBb=[{"question":"12. Se você procurar um valor z de 2.2 na tabela de unidades normais, descobrirá que a probabilidade de obter uma valor de z de 2.2 ou superior se a hipótese nula for verdadeira é 0.0139. Este é um resultado provável ou improvável se usarmos um ponto de corte de 0.05?",
 "type":"multiple_choice",
 "answers":[{"answer": "a. Provável", "correct": false, "feedback": "Incorreto, leia o parágrafo acima novamente."},
 {"answer": "b. Improvável", "correct": true, "feedback": "Correto! Se a hipótese nula for verdadeira, a probabilidade de obter um valor de z de 2.2 ou superior é de 0.0139, o que é menor que o ponto de corte de 0.05. Portanto, é improvável que o resultado seja devido ao acaso."}]},
@@ -5580,8 +5580,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("fnfQCoUDoJwp")) {
-            show_questions(questionsfnfQCoUDoJwp,  fnfQCoUDoJwp); 
+          if(document.getElementById("suLMzlZWMCBb")) {
+            show_questions(questionssuLMzlZWMCBb,  suLMzlZWMCBb); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -5590,8 +5590,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("fnfQCoUDoJwp");
-        // console.log(document.getElementById("fnfQCoUDoJwp"));
+        //console.log("suLMzlZWMCBb");
+        // console.log(document.getElementById("suLMzlZWMCBb"));
 
         try_show();
         }
@@ -5627,68 +5627,68 @@ if (typeof version == 'undefined') {
 </details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_526af_row2_col0, #T_526af_row2_col1, #T_526af_row2_col2 {
+#T_08fa5_row2_col0, #T_08fa5_row2_col1, #T_08fa5_row2_col2 {
   background-color: yellow;
 }
 </style>
-<table id="T_526af">
+<table id="T_08fa5">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_526af_level0_col0" class="col_heading level0 col0" >z</th>
-      <th id="T_526af_level0_col1" class="col_heading level0 col1" >Corpo</th>
-      <th id="T_526af_level0_col2" class="col_heading level0 col2" >Cauda</th>
+      <th id="T_08fa5_level0_col0" class="col_heading level0 col0" >z</th>
+      <th id="T_08fa5_level0_col1" class="col_heading level0 col1" >Corpo</th>
+      <th id="T_08fa5_level0_col2" class="col_heading level0 col2" >Cauda</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_526af_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_526af_row0_col0" class="data row0 col0" >1.630000</td>
-      <td id="T_526af_row0_col1" class="data row0 col1" >0.948400</td>
-      <td id="T_526af_row0_col2" class="data row0 col2" >0.051600</td>
+      <th id="T_08fa5_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_08fa5_row0_col0" class="data row0 col0" >1.630000</td>
+      <td id="T_08fa5_row0_col1" class="data row0 col1" >0.948400</td>
+      <td id="T_08fa5_row0_col2" class="data row0 col2" >0.051600</td>
     </tr>
     <tr>
-      <th id="T_526af_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_526af_row1_col0" class="data row1 col0" >1.640000</td>
-      <td id="T_526af_row1_col1" class="data row1 col1" >0.949500</td>
-      <td id="T_526af_row1_col2" class="data row1 col2" >0.050500</td>
+      <th id="T_08fa5_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_08fa5_row1_col0" class="data row1 col0" >1.640000</td>
+      <td id="T_08fa5_row1_col1" class="data row1 col1" >0.949500</td>
+      <td id="T_08fa5_row1_col2" class="data row1 col2" >0.050500</td>
     </tr>
     <tr>
-      <th id="T_526af_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_526af_row2_col0" class="data row2 col0" >1.650000</td>
-      <td id="T_526af_row2_col1" class="data row2 col1" >0.950500</td>
-      <td id="T_526af_row2_col2" class="data row2 col2" >0.049500</td>
+      <th id="T_08fa5_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_08fa5_row2_col0" class="data row2 col0" >1.650000</td>
+      <td id="T_08fa5_row2_col1" class="data row2 col1" >0.950500</td>
+      <td id="T_08fa5_row2_col2" class="data row2 col2" >0.049500</td>
     </tr>
     <tr>
-      <th id="T_526af_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_526af_row3_col0" class="data row3 col0" >1.660000</td>
-      <td id="T_526af_row3_col1" class="data row3 col1" >0.951500</td>
-      <td id="T_526af_row3_col2" class="data row3 col2" >0.048500</td>
+      <th id="T_08fa5_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_08fa5_row3_col0" class="data row3 col0" >1.660000</td>
+      <td id="T_08fa5_row3_col1" class="data row3 col1" >0.951500</td>
+      <td id="T_08fa5_row3_col2" class="data row3 col2" >0.048500</td>
     </tr>
     <tr>
-      <th id="T_526af_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_526af_row4_col0" class="data row4 col0" >1.670000</td>
-      <td id="T_526af_row4_col1" class="data row4 col1" >0.952500</td>
-      <td id="T_526af_row4_col2" class="data row4 col2" >0.047500</td>
+      <th id="T_08fa5_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_08fa5_row4_col0" class="data row4 col0" >1.670000</td>
+      <td id="T_08fa5_row4_col1" class="data row4 col1" >0.952500</td>
+      <td id="T_08fa5_row4_col2" class="data row4 col2" >0.047500</td>
     </tr>
     <tr>
-      <th id="T_526af_level0_row5" class="row_heading level0 row5" >5</th>
-      <td id="T_526af_row5_col0" class="data row5 col0" >1.680000</td>
-      <td id="T_526af_row5_col1" class="data row5 col1" >0.953500</td>
-      <td id="T_526af_row5_col2" class="data row5 col2" >0.046500</td>
+      <th id="T_08fa5_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_08fa5_row5_col0" class="data row5 col0" >1.680000</td>
+      <td id="T_08fa5_row5_col1" class="data row5 col1" >0.953500</td>
+      <td id="T_08fa5_row5_col2" class="data row5 col2" >0.046500</td>
     </tr>
     <tr>
-      <th id="T_526af_level0_row6" class="row_heading level0 row6" >6</th>
-      <td id="T_526af_row6_col0" class="data row6 col0" >1.690000</td>
-      <td id="T_526af_row6_col1" class="data row6 col1" >0.954500</td>
-      <td id="T_526af_row6_col2" class="data row6 col2" >0.045500</td>
+      <th id="T_08fa5_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_08fa5_row6_col0" class="data row6 col0" >1.690000</td>
+      <td id="T_08fa5_row6_col1" class="data row6 col1" >0.954500</td>
+      <td id="T_08fa5_row6_col2" class="data row6 col2" >0.045500</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-<p>Como você pode ver, a tabela não inclui uma probabilidade final de exatamente 0.05, mas há duas probabilidades próximas de 0.05: 0.0505 e 0.0495. Na Figura 6.2, escolhemos 0.0495 e outilizamos para encontrar o ponto de corte do valor z de 1.65. Forçado a escolher entre 0.0505 e 0.0495, a maioria dos estatísticos recomendaria o uso de 0.0495 porque garante que a taxa de erro Tipo I não seja superior a 5%, em vez de ligeiramente superior a 5%. A mensagem para levar para casa é que o ponto de corte da pontuação z que usaremos para um teste de significância unilateral de 0.05 será 1.65 neste curso.
-A Figura 6.3 pode ajudar a explicar a relação entre o valor alfa e o valor crítico. O valor alfa de 0.05 é representado pela área sombreada na extremidade direita da curva na Figura 6.3. A área sombreada representa os 5% superiores da curva. O valor localizado no início da área improvável do escore z (a área sombreada) é chamado de valor crítico. Neste caso, o valor crítico é o escore z de 1.65. O valor crítico é o ponto de corte do valor de z; valores de z iguais ou maiores que o valor crítico são considerados improváveis de ocorrer se a hipótese nula for verdadeira. Em contraste, pontuações z mais próximas de zero do que o valor crítico (1.65) são consideradas prováveis de ocorrer se a hipótese nula for verdadeira.</p>
+<p>Como você pode ver, a tabela não inclui uma probabilidade final de exatamente 0.05, mas há duas probabilidades próximas de 0.05: 0.0505 e 0.0495. Na Figura 6.2, escolhemos 0.0495 e a utilizamos para encontrar o ponto de corte do valor z de 1.65. Forçado a escolher entre 0.0505 e 0.0495, a maioria dos estatísticos recomendaria o uso de 0.0495 porque garante que a taxa de erro Tipo I não seja superior a 5%, em vez de ligeiramente superior a 5%. A mensagem para levar para casa é que o ponto de corte da pontuação z que usaremos para um teste de significância unilateral de 0.05 será 1.65 neste curso.
+A Figura 6.3 pode ajudar a explicar a relação entre o valor alfa e o valor crítico. O valor alfa de 0.05 é representado pela área sombreada na extremidade direita da curva na Figura 6.3. A área sombreada representa os 5% superiores da curva. O valor localizado no início da área improvável do valor de z (a área sombreada) é chamado de valor crítico. Neste caso, o valor crítico de z é 1.65. O valor crítico é o ponto de corte do valor de z; valores de z iguais ou maiores que o valor crítico são considerados improváveis de ocorrer se a hipótese nula for verdadeira. Em contraste, pontuações z mais próximas de zero do que o valor crítico (1.65) são consideradas prováveis de ocorrer se a hipótese nula for verdadeira.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -5736,13 +5736,13 @@ A Figura 6.3 pode ajudar a explicar a relação entre o valor alfa e o valor cr�
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="vOTqzeqyCjol" data-shufflequestions="False"
+<div class="output text_html"><div id="EeAKPDddOtCc" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#vOTqzeqyCjol {
+#EeAKPDddOtCc {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -5912,7 +5912,7 @@ A Figura 6.3 pode ajudar a explicar a relação entre o valor alfa e o valor cr�
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsvOTqzeqyCjol=[{"question":"14. Quando a hipótese da pesquisa é que a média amostral será inferior à média populacional, a região crítica estará do lado _________ na distribuição porque se espera que o valor z obtido seja ________.",
+</style></div><script type="application/javascript">var questionsEeAKPDddOtCc=[{"question":"14. Quando a hipótese da pesquisa é que a média amostral será inferior à média populacional, a região crítica estará do lado _________ na distribuição porque se espera que o valor z obtido seja ________.",
 "type":"multiple_choice",
 "answers":[{"answer":"a. positivo, positivo","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
            {"answer":"b. negativo, positivo","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
@@ -6710,8 +6710,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("vOTqzeqyCjol")) {
-            show_questions(questionsvOTqzeqyCjol,  vOTqzeqyCjol); 
+          if(document.getElementById("EeAKPDddOtCc")) {
+            show_questions(questionsEeAKPDddOtCc,  EeAKPDddOtCc); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -6720,8 +6720,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("vOTqzeqyCjol");
-        // console.log(document.getElementById("vOTqzeqyCjol"));
+        //console.log("EeAKPDddOtCc");
+        // console.log(document.getElementById("EeAKPDddOtCc"));
 
         try_show();
         }
@@ -6742,13 +6742,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="cHGQfinMhVwm" data-shufflequestions="False"
+<div class="output text_html"><div id="rfgDrtrVjuce" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#cHGQfinMhVwm {
+#rfgDrtrVjuce {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -6918,7 +6918,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionscHGQfinMhVwm=[{"question": "16. O valor crítico define o “ponto de corte” para",
+</style></div><script type="application/javascript">var questionsrfgDrtrVjuce=[{"question": "16. O valor crítico define o “ponto de corte” para",
 "type": "multiple_choice",
 "answers": [{"answer": "a. determinar se a hipótese nula deve ser rejeitada ou não.", "correct": true, "feedback": "Correto!"},
 {"answer": "b. determinar se a hipótese de pesquisa deve ser rejeitada ou não.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
@@ -7719,8 +7719,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("cHGQfinMhVwm")) {
-            show_questions(questionscHGQfinMhVwm,  cHGQfinMhVwm); 
+          if(document.getElementById("rfgDrtrVjuce")) {
+            show_questions(questionsrfgDrtrVjuce,  rfgDrtrVjuce); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -7729,8 +7729,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("cHGQfinMhVwm");
-        // console.log(document.getElementById("cHGQfinMhVwm"));
+        //console.log("rfgDrtrVjuce");
+        // console.log(document.getElementById("rfgDrtrVjuce"));
 
         try_show();
         }
@@ -7739,17 +7739,17 @@ if (typeof version == 'undefined') {
 </section>
 <section id="etapa-4-calcular-a-estatistica-de-teste-z-para-uma-media-amostral">
 <h3><em>Etapa 4: calcular a estatística de teste (z para uma média amostral)</em><a class="headerlink" href="#etapa-4-calcular-a-estatistica-de-teste-z-para-uma-media-amostral" title="Link to this heading">#</a></h3>
-<p><em>4a. Calcule o desvio observado entre a média amostral e a média da população</em>
-Encontre o desvio entre a média amostral e a média populacional.</p>
+<p><em>4a. Calcule o desvio observado entre a média amostral e a média da população</em></p>
+<p>Encontre o desvio entre a média amostral e a média populacional.</p>
 <p><span class="math notranslate nohighlight">\(\bar{x} - \mu = 80 - 75 = 5\)</span></p>
-<p><em>4b. Calcule o desvio esperado devido ao erro de amostragem</em>
-Calcule a quantidade esperada de erro amostral dado o tamanho da amostra.</p>
+<p><em>4b. Calcule o desvio esperado devido ao erro de amostragem</em></p>
+<p>Calcule a quantidade esperada de erro amostral dado o tamanho da amostra.</p>
 <p><span class="math notranslate nohighlight">\(SEM_p = \frac{\sigma}{\sqrt{N}} = \frac{10}{\sqrt{25}} = 2\)</span></p>
 <p>Neste caso, o erro padrão da média é 2. Isso significa que quando N = 25, a distância típica que todas s médias amostrais possíveis estão da média populacional é 2. Esta é a quantidade de desvio que esperamos entre qualquer média amostral e a média da população devido ao erro amostral (ou seja, a diferença esperada pelo acaso).</p>
-<p><em>4c. Calcule o z para uma média amostral</em>
-Calcule o escore z obtido associado à média amostral obtida.</p>
+<p><em>4c. Calcule o z para uma média amostral</em></p>
+<p>Calcule o valor de z obtido associado à média amostral obtida.</p>
 <p><span class="math notranslate nohighlight">\(z = \frac{(\bar{x} - \mu)}{SEM_p} = 2.5\)</span></p>
-<p>O valor de z obtido, também chamado de valor observado, associado à média amostral de 80 é 2.5. O valor z obtido de 2.5 é mais extremo que o valor crítico de 1.65, portanto esse valor de z está localizado na região de rejeição (ou seja, a região crítica). Como resultado, você pode concluir que é improvável que o valor z de 2.5 seja devido a um erro de amostragem e que o valor de z inesperadamente alta resulta de questionários frequentes que melhoram as pontuações dos testes. Você também pode procurar a probabilidade de uma pontuação z de 2.5 no Apêndice A. Se o valor nulo for verdadeiro, uma pontuação z de 2.5 tem uma probabilidade de 0.0062; esse valor de probabilidade é chamado de valor p. Valores pequenos de p também indicam que você deve rejeitar a hipótese nulo. Sempre que o valor de z estiver na região crítica, o valor p será menor que o valor alfa. Portanto, existem duas maneiras de determinar se você deve rejeitar a hipótese nula: (1) se o escore z obtido está na região crítica ou (2) se o valor p é menor que o valor alfa. Ambos indicam que a probabilidade do valor z ser devido a um erro amostral é pequena. Para rever brevemente a lógica deste teste de significância, o valor z obtido deveria ter sido próximo de 0 se a hipótese nula fosse verdadeira. O valor z não foi próximo de 0 (próximo sendo definido como mais próximo de 0 do que a região crítica começando em +1.65) e, portanto, a hipótese nula é provavelmente falsa. Portanto, os pesquisadores concluem que a hipótese da pesquisa provavelmente é verdadeira. Em outras palavras, com base nesses resultados, parece que os questionários frequentes melhoraram os resultados dos testes. No entanto, ao relatar estes resultados, deve-se ter cautela. Embora improvável, é possível que o resultado tenha ocorrido por erro amostral. Portanto, ao relatar os resultados, deve-se dizer coisas como “as evidências sugerem” que questionários frequentes melhoram os resultados dos testes e evitar dizer coisas como “estes resultados provam” que os questionários frequentes melhoram os resultados dos testes.</p>
+<p>O valor de z obtido, também chamado de valor observado, associado à média amostral de 80 é 2.5. O valor z obtido de 2.5 é mais extremo que o valor crítico de 1.65, portanto esse valor de z está localizado na região de rejeição (ou seja, a região crítica). Como resultado, você pode concluir que é improvável que o valor z de 2.5 seja devido a um erro de amostragem e que o valor de z inesperadamente alta resulta de questionários frequentes que melhoram as pontuações dos testes. Você também pode procurar a probabilidade de uma pontuação z de 2.5 no Apêndice A. Se o valor nulo for verdadeiro, uma valor de z de 2.5 tem uma probabilidade de 0.0062; esse valor de probabilidade é chamado de valor p. Valores pequenos de p também indicam que você deve rejeitar a hipótese nulo. Sempre que o valor de z estiver na região crítica, o valor p será menor que o valor alfa. Portanto, existem duas maneiras de determinar se você deve rejeitar a hipótese nula: (1) se o escore z obtido está na região crítica ou (2) se o valor p é menor que o valor alfa. Ambos indicam que a probabilidade do valor z ser devido a um erro amostral é pequena. Para rever brevemente a lógica deste teste de significância, o valor z obtido deveria ter sido próximo de 0 se a hipótese nula fosse verdadeira. O valor z não foi próximo de 0 (próximo sendo definido como mais próximo de 0 do que a região crítica começando em +1.65) e, portanto, a hipótese nula é provavelmente falsa. Portanto, os pesquisadores concluem que a hipótese da pesquisa provavelmente é verdadeira. Em outras palavras, com base nesses resultados, parece que os questionários frequentes melhoraram os resultados dos testes. No entanto, ao relatar estes resultados, deve-se ter cautela. Embora improvável, é possível que o resultado tenha ocorrido por erro amostral. Portanto, ao relatar os resultados, deve-se dizer coisas como “as evidências sugerem” que questionários frequentes melhoram os resultados dos testes e evitar dizer coisas como “estes resultados provam” que os questionários frequentes melhoram os resultados dos testes.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -7803,13 +7803,13 @@ Calcule o escore z obtido associado à média amostral obtida.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="bfaUEfZeduPG" data-shufflequestions="False"
+<div class="output text_html"><div id="hjRVPPmgCfZn" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#bfaUEfZeduPG {
+#hjRVPPmgCfZn {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -7979,7 +7979,7 @@ Calcule o escore z obtido associado à média amostral obtida.</p>
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsbfaUEfZeduPG=[{"question":"19. Se um valor de z estiver na região crítica, a hipótese nula é provavelmente ________ e a hipótese de pesquisa é provavelmente ___________.",
+</style></div><script type="application/javascript">var questionshjRVPPmgCfZn=[{"question":"19. Se um valor de z estiver na região crítica, a hipótese nula é provavelmente ________ e a hipótese de pesquisa é provavelmente ___________.",
 "type":"multiple_choice",
 "answers":[{"answer":"a. falsa; verdadeira", "correct": true, "feedback":"Correto!"} ,
 {"answer":"b. verdadeira; falsa", "correct": false, "feedback":"Incorreto!"}]},
@@ -8774,8 +8774,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("bfaUEfZeduPG")) {
-            show_questions(questionsbfaUEfZeduPG,  bfaUEfZeduPG); 
+          if(document.getElementById("hjRVPPmgCfZn")) {
+            show_questions(questionshjRVPPmgCfZn,  hjRVPPmgCfZn); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -8784,17 +8784,17 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("bfaUEfZeduPG");
-        // console.log(document.getElementById("bfaUEfZeduPG"));
+        //console.log("hjRVPPmgCfZn");
+        // console.log(document.getElementById("hjRVPPmgCfZn"));
 
         try_show();
         }
         </script></div>
 </div>
 </section>
-<section id="etapa-5-calcule-o-tamanho-do-efeito-e-descreva-se-o-seu-grau-pequeno-medio-ou-grande">
-<h3><em>Etapa 5: calcule o tamanho do efeito e descreva se o seu grau (pequeno, médio ou grande)</em><a class="headerlink" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-se-o-seu-grau-pequeno-medio-ou-grande" title="Link to this heading">#</a></h3>
-<p>O objetivo do teste de hipótese é decidir se a diferença entre uma média amostral e uma média populacional pode ser atribuída a um efeito de tratamento ou se é devido a um erro amostral. Se a hipótese nula for rejeitada, o pesquisador está dizendo que a diferença observada provavelmente se deve a um efeito de tratamento e não a um erro de amostragem. Um tópico relacionado, mas diferente, é o tamanho da diferença entre a média da amostra e a média da população. Por exemplo, o pesquisador neste exemplo concluiu que os questionários frequentes parecem melhorar os resultados dos testes, mas até que ponto os questionários frequentes melhoraram os resultados dos testes? Esta questão não pode ser respondida com testes de hipóteses. Em vez disso, esta questão requer outro procedimento estatístico denominado tamanho do efeito. Um tamanho de efeito é um índice da diferença entre a média da amostra e a média da população. Neste caso, o tamanho do efeito indica quão grande é a diferença entre a média da amostra que respondeu aos questionários frequentes e a média da população que não respondeu aos questionários frequentes. A estatística de tamanho do efeito normalmente usada ao comparar duas médias é d. O numerador de d é igual ao z de uma média amostral (ou seja, a diferença entre as médias). O denominador, porém, é diferente. Quando
+<section id="etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o-seu-grau-pequeno-medio-ou-grande">
+<h3><em>Etapa 5: calcule o tamanho do efeito e descreva o seu grau (pequeno, médio ou grande)</em><a class="headerlink" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o-seu-grau-pequeno-medio-ou-grande" title="Link to this heading">#</a></h3>
+<p>O objetivo do teste de hipótese é decidir se a diferença entre uma média amostral e uma média populacional pode ser atribuída a um efeito de tratamento ou se é devida a um erro amostral. Se a hipótese nula for rejeitada, o pesquisador está dizendo que a diferença observada provavelmente se deve a um efeito de tratamento e não a um erro de amostragem. Um tópico relacionado, mas diferente, é o tamanho da diferença entre a média da amostra e a média da população. Por exemplo, o pesquisador neste exemplo concluiu que os questionários frequentes parecem melhorar os resultados dos testes, mas até que ponto os questionários frequentes melhoraram os resultados dos testes? Esta questão não pode ser respondida com testes de hipóteses. Em vez disso, esta questão requer outro procedimento estatístico denominado tamanho do efeito. Um tamanho de efeito é um índice da diferença entre a média da amostra e a média da população. Neste caso, o tamanho do efeito indica quão grande é a diferença entre a média da amostra que respondeu aos questionários frequentes e a média da população que não respondeu aos questionários frequentes. A estatística de tamanho do efeito normalmente usada ao comparar duas médias é denotada por <em>d</em>. O numerador de d é igual ao z de uma média amostral (ou seja, a diferença entre as médias). O denominador, porém, é diferente. Quando
 calculando o z para uma média amostral, você divide pelo erro padrão da média (ou seja, erro amostral típico). Ao calcular d, você divide pelo desvio padrão da população. Os cálculos para este problema são mostrados a seguir:</p>
 <p><span class="math notranslate nohighlight">\(d = \frac{Desvio\quad observado\quad entre\quad as\quad médias}{Desvio\quad padrão} = \frac{\bar{x}-\mu}{\sigma} = \frac{80-75}{10} = 0.5\)</span></p>
 <p>Ao calcular d, você pode descrever o tamanho relativo do desvio entre a média amostral e a média populacional. A d = 0.5 significa que a média da amostra foi meio desvio padrão superior à média da população. Um d = 0.5 é bom? A melhor maneira de interpretar qualquer tamanho de efeito é compará-lo com os tamanhos de efeito produzidos por estudos semelhantes na literatura de pesquisa. Por exemplo, se a maioria dos estudos que investigam maneiras de melhorar os resultados dos testes na literatura relatam tamanhos de efeito de d = 0.25 e seu estudo teve um d = 0.5, você deve estar bastante animado porque o tamanho do seu efeito é o dobro do relatado no literatura. Em relação a outros estudos semelhantes, o seu estudo criou um efeito impressionantemente maior. Porém, nem sempre é possível comparar o tamanho do seu efeito com o relatado na literatura. Se você não conseguir encontrar estudos semelhantes na literatura para fornecer uma referência, poderá usar as diretrizes gerais sugeridas por <em>Cohen (1992)</em> para interpretar os tamanhos dos efeitos na Tabela 6.2.</p>
@@ -8817,7 +8817,7 @@ calculando o z para uma média amostral, você divide pelo erro padrão da médi
 </tr>
 </tbody>
 </table>
-<p>Os valores d de Cohen próximos a 0.2 são pequenos, aqueles próximos a 0.5 são médios e aqueles próximos a 0.8 são grandes. Isso significa que um d de 0.35 é um “efeito de pequeno a médio”. Mais uma vez, estas orientações gerais destinam-se a auxiliar a interpretação quando um contexto mais amplo não é fornecido por estudos na literatura de investigação relevante. No presente exemplo, não temos estudos semelhantes para fornecer diretrizes específicas para a interpretação do nosso d de 0.50. Portanto, usamos diretrizes gerais e concluímos que o tamanho da diferença entre as médias do questionário e nenhuma média do questionário foi médio. Conforme afirmado anteriormente, um d de 0.50 indica que a média para aqueles que realizaram questionários frequentes é 0.50 desvios padrão acima da média da população que não realizou questionários frequentes.</p>
+<p>Os valores d de Cohen próximos a 0.2 são pequenos, aqueles próximos a 0.5 são médios e aqueles próximos a 0.8 são grandes. Isso significa que um d de 0.35 é um “efeito de pequeno a médio”. Mais uma vez, estas orientações gerais destinam-se a auxiliar a interpretação quando um contexto mais amplo não é fornecido por estudos na literatura de investigação relevante. No presente exemplo, não temos estudos semelhantes para fornecer diretrizes específicas para a interpretação do nosso d de 0.50. Portanto, usamos diretrizes gerais e concluímos que o tamanho da diferença entre as médias do uso questionário e nenhum uso de questionário foi médio. Conforme afirmado anteriormente, um d de 0.50 indica que a média para aqueles que realizaram questionários frequentes é 0.50 desvios padrão acima da média da população que não realizou questionários frequentes.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -8832,13 +8832,13 @@ calculando o z para uma média amostral, você divide pelo erro padrão da médi
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="InirZAFFRWAj" data-shufflequestions="False"
+<div class="output text_html"><div id="UVwfluqmQgaS" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#InirZAFFRWAj {
+#UVwfluqmQgaS {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -9008,7 +9008,7 @@ calculando o z para uma média amostral, você divide pelo erro padrão da médi
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsInirZAFFRWAj=[{"question":"21. Um tamanho de efeito de d = 0,65 é",
+</style></div><script type="application/javascript">var questionsUVwfluqmQgaS=[{"question":"21. Um tamanho de efeito de d = 0,65 é",
 "type":"multiple_choice",
 "answers":[{"answer":"a. pequeno.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima."},{"answer":"b. pequeno a médio.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima."},
 {"answer":"c. médio.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima."},{"answer":"d. médio a grande.","correct":true, "feedback":"Correto!"},{"answer":"e. grande.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima."}],
@@ -9803,8 +9803,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("InirZAFFRWAj")) {
-            show_questions(questionsInirZAFFRWAj,  InirZAFFRWAj); 
+          if(document.getElementById("UVwfluqmQgaS")) {
+            show_questions(questionsUVwfluqmQgaS,  UVwfluqmQgaS); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -9813,8 +9813,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("InirZAFFRWAj");
-        // console.log(document.getElementById("InirZAFFRWAj"));
+        //console.log("UVwfluqmQgaS");
+        // console.log(document.getElementById("UVwfluqmQgaS"));
 
         try_show();
         }
@@ -9824,9 +9824,9 @@ if (typeof version == 'undefined') {
 </section>
 <section id="etapa-6-interpretando-os-resultados-do-teste-de-hipotese-usando-a-z-para-uma-media-amostral">
 <h3><em>Etapa 6: Interpretando os Resultados do Teste de hipótese usando a z para uma média amostral</em><a class="headerlink" href="#etapa-6-interpretando-os-resultados-do-teste-de-hipotese-usando-a-z-para-uma-media-amostral" title="Link to this heading">#</a></h3>
-<p>Durante o resto do semestre, você calculará testes estatísticos, interpretará os resultados e, em seguida, escreverá resumos sobre os resultados dos testes. Essas declarações resumidas precisam estar em um formato muito específico. A seguir está uma declaração resumida sobre o teste estatístico acima:
-As notas dos exames dos alunos que realizaram testes frequentes sobre o material <span class="math notranslate nohighlight">\((\bar{x} = 80, dp = 9.50)\)</span> foram significativamente maiores do que as pontuações daqueles que não realizaram testes frequentes <span class="math notranslate nohighlight">\((\mu = 75, \sigma = 10)\)</span>, z (N = 25 ) = 2.50, p = 0.0062, d = 0,50.
-Nesse caso, escreveríamos “p = 0.0062” porque a probabilidade de obter um valor de z de 2.5 ou superior é 0.0062 (obtido na tabela de unidades normais). Geralmente, você deve fornecer o valor exato de p, se souber. Em alguns casos (por exemplo, no próximo capítulo), você não saberá disso e então escreveria “p &lt; 0.05” se rejeitou a hipótese nula ou “p &gt; 0.05” se não rejeitou a hipótese nula.</p>
+<p>Durante o resto do semestre, você calculará testes estatísticos, interpretará os resultados e, em seguida, escreverá resumos sobre os resultados dos testes. Essas declarações resumidas precisam estar em um formato muito específico. A seguir está uma declaração resumida sobre o teste estatístico acima:</p>
+<p><em>As notas dos exames dos alunos que realizaram testes frequentes sobre o material <span class="math notranslate nohighlight">\((\bar{x} = 80, dp = 9.50)\)</span> foram significativamente maiores do que as pontuações daqueles que não realizaram testes frequentes <span class="math notranslate nohighlight">\((\mu = 75, \sigma = 10)\)</span>, z (N = 25) = 2.50, p = 0.0062, d = 0,50.</em></p>
+<p>Nesse caso, escreveríamos “p = 0.0062” porque a probabilidade de obter um valor de z de 2.5 ou superior é 0.0062 (obtido na tabela de unidades normais). Geralmente, você deve fornecer o valor exato de p, se souber. Em alguns casos (por exemplo, no próximo capítulo), você não saberá disso e então escreveria “p &lt; 0.05” se rejeitou a hipótese nula ou “p &gt; 0.05” se não rejeitou a hipótese nula.</p>
 <p>O QUE SIGNIFICA DESCREVER ALGO COMO “ESTATISTICAMENTE SIGNIFICATIVO”?</p>
 <p>Ao escrever declarações resumidas de resultados estatísticos, as frases “significativamente mais alto”, “significativamente mais baixo” ou “significativamente diferente” têm significados muito específicos. Num contexto estatístico, estas frases significam simplesmente que é pouco provável que os resultados se devam a erros de amostragem. Portanto, sempre que você rejeitar a hipótese nula (ou seja, sempre que o valor z obtido calculado anteriormente na Etapa 4 estiver na região crítica), você poderá descrever os resultados como “estatisticamente significativos”. É importante compreender que “estatisticamente significativo” não é sinônimo de importante. Em vez disso, significa simplesmente que é improvável que os resultados sejam criados por erro de amostragem. Por outro lado, quando você não rejeita o nulo, pode dizer coisas como “Não houve diferença significativa” ao descrever os resultados. Novamente, num contexto estatístico, isto significa simplesmente que o valor z obtido não estava na região crítica. Um resultado “não estatisticamente significativo” ou “não significativo” pode ser muito importante. Por exemplo, se descobrirmos que um tratamento muito caro para um distúrbio psicológico “não é significativamente diferente” de um tratamento com placebo, essa seria uma descoberta muito importante.</p>
 <div class="cell tag_hide-input docutils container">
@@ -9843,13 +9843,13 @@ Nesse caso, escreveríamos “p = 0.0062” porque a probabilidade de obter um v
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="IFIKiBgfTWkn" data-shufflequestions="False"
+<div class="output text_html"><div id="IErwxtuEiWht" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#IFIKiBgfTWkn {
+#IErwxtuEiWht {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -10019,7 +10019,7 @@ Nesse caso, escreveríamos “p = 0.0062” porque a probabilidade de obter um v
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsIFIKiBgfTWkn=[{"question":"23. Quando os estatísticos descrevem um resultado como 'estatisticamente significativo' ou simplesmente como 'significativo', querem dizer que (selecione quatro respostas)",
+</style></div><script type="application/javascript">var questionsIErwxtuEiWht=[{"question":"23. Quando os estatísticos descrevem um resultado como 'estatisticamente significativo' ou simplesmente como 'significativo', querem dizer que (selecione quatro respostas)",
 "type": "many_choice",
 "answers":[{"answer": "a. a hipótese nula foi rejeitada.", "correct": true, "feedback": "Correto!"},
 {"answer": "b. a hipótese nula não foi rejeitada.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
@@ -10816,8 +10816,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("IFIKiBgfTWkn")) {
-            show_questions(questionsIFIKiBgfTWkn,  IFIKiBgfTWkn); 
+          if(document.getElementById("IErwxtuEiWht")) {
+            show_questions(questionsIErwxtuEiWht,  IErwxtuEiWht); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -10826,8 +10826,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("IFIKiBgfTWkn");
-        // console.log(document.getElementById("IFIKiBgfTWkn"));
+        //console.log("IErwxtuEiWht");
+        // console.log(document.getElementById("IErwxtuEiWht"));
 
         try_show();
         }
@@ -10849,13 +10849,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="gTkHTdQlSKJs" data-shufflequestions="False"
+<div class="output text_html"><div id="kOfoIbiNXQgs" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#gTkHTdQlSKJs {
+#kOfoIbiNXQgs {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -11025,7 +11025,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsgTkHTdQlSKJs=[{"question":"24. Se você rejeitar o nulo, há alguma probabilidade de você ter feito uma",
+</style></div><script type="application/javascript">var questionskOfoIbiNXQgs=[{"question":"24. Se você rejeitar o nulo, há alguma probabilidade de você ter cometido um",
 "type": "multiple_choice",
 "answers":[{"answer": "a. Erro tipo I.", "correct":true, "feedback": "Correto."},
            {"answer":"b. Erro tipo II.", "correct":false, "feedback": "Incorreto."}]
@@ -11821,8 +11821,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("gTkHTdQlSKJs")) {
-            show_questions(questionsgTkHTdQlSKJs,  gTkHTdQlSKJs); 
+          if(document.getElementById("kOfoIbiNXQgs")) {
+            show_questions(questionskOfoIbiNXQgs,  kOfoIbiNXQgs); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -11831,8 +11831,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("gTkHTdQlSKJs");
-        // console.log(document.getElementById("gTkHTdQlSKJs"));
+        //console.log("kOfoIbiNXQgs");
+        // console.log(document.getElementById("kOfoIbiNXQgs"));
 
         try_show();
         }
@@ -11853,13 +11853,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="BBslSKawiPOt" data-shufflequestions="False"
+<div class="output text_html"><div id="QkcOaqdtLndS" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#BBslSKawiPOt {
+#QkcOaqdtLndS {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -12029,7 +12029,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsBBslSKawiPOt=[{"question":"26. O poder estatístico refere-se a",
+</style></div><script type="application/javascript">var questionsQkcOaqdtLndS=[{"question":"26. O poder estatístico refere-se a",
 "type": "multiple_choice",
 "answers":[{"answer":"a. rejeitando corretamente o nulo.", "correct":true, "feedback":"Correto! O poder estatístico refere-se a rejeitar corretamente o nulo."},
  {"answer": "b. falhando corretamente em rejeitar o nulo.", "correct":false, "feedback":"Incorreto! Leia o parágrafo acima novamente."}]
@@ -12820,8 +12820,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("BBslSKawiPOt")) {
-            show_questions(questionsBBslSKawiPOt,  BBslSKawiPOt); 
+          if(document.getElementById("QkcOaqdtLndS")) {
+            show_questions(questionsQkcOaqdtLndS,  QkcOaqdtLndS); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -12830,14 +12830,14 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("BBslSKawiPOt");
-        // console.log(document.getElementById("BBslSKawiPOt"));
+        //console.log("QkcOaqdtLndS");
+        // console.log(document.getElementById("QkcOaqdtLndS"));
 
         try_show();
         }
         </script></div>
 </div>
-<p>A Tabela 6.3 pode ajudá-lo a compreender a relação entre decisões específicas relativas ao nulo hipótese e ocorrência de erros Tipo I, erros Tipo II e poder estatístico. Infelizmente, você nunca pode ter certeza se tomou uma decisão correta ou incorreta. Afinal, se você conhecesse o “estado verdadeiro” do nulo, não haveria necessidade de realizar um teste de hipótese. No entanto, você pode estimar a probabilidade de ter cometido um erro Tipo I ou Tipo II. Além disso, você pode calcular o probabilidade de você ter rejeitado corretamente a hipótese nula (ou seja, poder estatístico) porque isso, entre outras coisas, pode ajudá-lo a avaliar a qualidade do seu estudo. Um estudo com baixo poder estatístico (ou seja, um valor muito abaixo de 0.80) é considerado menos confiável pelos pesquisadores. Discutiremos as relações entre erro Tipo I, erro Tipo II e poder estatístico nas atividades deste capítulo. Por enquanto, seu objetivo é simplesmente conhecer as definições desses termos.</p>
+<p>A Tabela 6.3 pode ajudá-lo a compreender a relação entre decisões específicas relativas à hipótese nula e ocorrência de erros Tipo I, erros Tipo II e poder estatístico. Infelizmente, você nunca pode ter certeza se tomou uma decisão correta ou incorreta. Afinal, se você conhecesse o “estado verdadeiro” do nulo, não haveria necessidade de realizar um teste de hipótese. No entanto, você pode estimar a probabilidade de ter cometido um erro Tipo I ou Tipo II. Além disso, você pode calcular a probabilidade de você ter rejeitado corretamente a hipótese nula (ou seja, poder estatístico) porque isso, entre outras coisas, pode ajudá-lo a avaliar a qualidade do seu estudo. Um estudo com baixo poder estatístico (ou seja, um valor muito abaixo de 0.80) é considerado menos confiável pelos pesquisadores. Discutiremos as relações entre erro Tipo I, erro Tipo II e poder estatístico nas atividades deste capítulo. Por enquanto, seu objetivo é simplesmente conhecer as definições desses termos.</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p> </p></th>
@@ -12878,13 +12878,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="cFkduplIkFML" data-shufflequestions="False"
+<div class="output text_html"><div id="cBpVdFvguGVe" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#cFkduplIkFML {
+#cBpVdFvguGVe {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -13054,7 +13054,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionscFkduplIkFML=[{"question":"27. Se você não rejeitou o nulo, pode ter certeza de que cometeu um erro Tipo II.",
+</style></div><script type="application/javascript">var questionscBpVdFvguGVe=[{"question":"27. Se você não rejeitou o nulo, pode ter certeza de que cometeu um erro Tipo II.",
 "type":"multiple_choice",
 "answers": [{"answer":"a. Verdadeiro","correct":false, "feedback": "Incorreto. Leia a Tabela 6.3 novamente"},    
 {"answer":"b. Falso","correct":true, "feedback": "Ao não rejeitar o nulo existe a probabilidade de cometer um erro do tipo II."}]}];
@@ -13844,8 +13844,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("cFkduplIkFML")) {
-            show_questions(questionscFkduplIkFML,  cFkduplIkFML); 
+          if(document.getElementById("cBpVdFvguGVe")) {
+            show_questions(questionscBpVdFvguGVe,  cBpVdFvguGVe); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -13854,14 +13854,14 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("cFkduplIkFML");
-        // console.log(document.getElementById("cFkduplIkFML"));
+        //console.log("cBpVdFvguGVe");
+        // console.log(document.getElementById("cBpVdFvguGVe"));
 
         try_show();
         }
         </script></div>
 </div>
-<p>Um exemplo pode ajudá-lo a pensar sobre esses termos. Você conduziu um estudo avaliando o impacto de questionários  frequentes nas notas dos alunos. Como você rejeitou o nulo, você sabe que há alguma probabilidade de ter cometido um erro Tipo I. Em outras palavras, você concluiu que os testes pareciam funcionar, mas é possível que os testes realmente não tenham melhorado as notas dos exames e, em vez disso, o resultado tenha sido devido a um erro de amostragem. Claro, você pode ter rejeitado corretamente o nulo (ou seja, o poder estatístico). A probabilidade de você ter cometido um erro Tipo II é zero porque você não deve rejeitar nulo para cometer um erro Tipo II. Você rejeitou o nulo, então certamente não cometeu um erro Tipo II.</p>
+<p>Um exemplo pode ajudá-lo a pensar sobre esses termos. Você conduziu um estudo avaliando o impacto de questionários  frequentes nas notas dos alunos. Como você rejeitou o nulo, você sabe que há alguma probabilidade de ter cometido um erro Tipo I. Em outras palavras, você concluiu que os testes pareciam funcionar, mas é possível que os testes realmente não tenham melhorado as notas dos exames e, em vez disso, o resultado tenha sido devido a um erro de amostragem. Claro, você pode ter rejeitado corretamente o nulo (ou seja, o poder estatístico). A probabilidade de você ter cometido um erro Tipo II é zero porque você não deve rejeitar o nulo para cometer um erro Tipo II. Você rejeitou o nulo, então certamente não cometeu um erro Tipo II.</p>
 <p>A linguagem do teste de hipótese pode ser um pouco complicada por causa de duplas negativas (por exemplo, “não rejeitar o nulo”). Explicaremos por que a linguagem duplo-negativa é comumente usada posteriormente neste capítulo. A Tabela 6.4 resume uma variedade de maneiras corretas de descrever o erro Tipo I, o erro Tipo II e o poder estatístico.</p>
 <table class="table">
 <thead>
@@ -13885,7 +13885,7 @@ if (typeof version == 'undefined') {
 <tr class="row-even"><td><p>Poder Estatístico</p></td>
 <td><p>Rejeirar o nulo quando deveria ser rejeitado</p></td>
 <td><p>Dizer que o tratamento funciona quando funciona</p></td>
-<td><p>Rejeitar um verdadeiro falso</p></td>
+<td><p>Rejeitar um falso nulo</p></td>
 </tr>
 </tbody>
 </table>
@@ -13903,13 +13903,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="RpnHejcgJVoj" data-shufflequestions="False"
+<div class="output text_html"><div id="RdQoqHRzYjDz" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#RpnHejcgJVoj {
+#RdQoqHRzYjDz {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -14079,7 +14079,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsRpnHejcgJVoj=[{"question":"28. Se um pesquisador conclui que um tratamento não funcionou, mas realmente funcionou, que tipo de erro ele cometeu?",
+</style></div><script type="application/javascript">var questionsRdQoqHRzYjDz=[{"question":"28. Se um pesquisador conclui que um tratamento não funcionou, mas realmente funcionou, que tipo de erro ele cometeu?",
 "type": "multiple_choice",
 "answers":[
 {"answer": "a. Tipo I", "correct": false, "feedback": "Errado. Tipo I é quando você rejeita uma hipótese nula verdadeira."},
@@ -14885,8 +14885,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("RpnHejcgJVoj")) {
-            show_questions(questionsRpnHejcgJVoj,  RpnHejcgJVoj); 
+          if(document.getElementById("RdQoqHRzYjDz")) {
+            show_questions(questionsRdQoqHRzYjDz,  RdQoqHRzYjDz); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -14895,15 +14895,15 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("RpnHejcgJVoj");
-        // console.log(document.getElementById("RpnHejcgJVoj"));
+        //console.log("RdQoqHRzYjDz");
+        // console.log(document.getElementById("RdQoqHRzYjDz"));
 
         try_show();
         }
         </script></div>
 </div>
 <p><em>Regras de Teste de Hipótese</em></p>
-<p>O processo de teste de hipótese nada mais é do que um conjunto formal de regras que os pesquisadores usam para determinar se a hipótese nula (H0) é provável ou improvável de ser verdadeira. Se a hipótese nula for verdadeira, os pesquisadores esperam que a estatística computada esteja próxima de um valor específico. Ao realizar um z para uma média amostral, os pesquisadores esperam que o valor de z esteja próximo de 0 se a hipótese nula for verdadeira. Cada valor de z tem alguma  probabilidade de ocorrer. Se a hipótese nula for verdadeira, então valores de z próximos de 0 têm uma probabilidade alta e valores de z distantes de 0 têm uma probabilidade baixa. Se a probabilidade de um valor de z for baixa o suficiente, os pesquisadores rejeitam a hipótese nula. A lógica desta decisão é que um valor de z tirá uma probabilidade baixa se o nulo for verdadeiro e esse valor de z ainda acontecer, então a hipótese nula provavelmente não é verdadeira. Mas quão baixa deve ser a probabilidade de um valor z antes que a hipótese nula seja rejeitada? Deve ser inferior ao valor alfa. No exemplo anterior, usamos um valor alfa de 0,05. Os pesquisadores normalmente escolhem entre um valor alfa de 0.05 (5%) ou 0.01  (1%). Em geral, se quiser minimizar os erros do Tipo I, escolha um alfa de 0.01 e, se quiser maximizar o poder estatístico, escolha um alfa de 0.05. Em ambos os casos, sempre que o valor p for menor que o nível alfa, é improvável que a hipótese nula seja verdadeira e você deve rejeitá-la.</p>
+<p>O processo de teste de hipótese nada mais é do que um conjunto formal de regras que os pesquisadores usam para determinar se a hipótese nula (<span class="math notranslate nohighlight">\(H_0\)</span>) é provável ou improvável. Se a hipótese nula for verdadeira, os pesquisadores esperam que a estatística computada esteja próxima de um valor específico. Ao realizar um z para uma média amostral, os pesquisadores esperam que o valor de z esteja próximo de 0 se a hipótese nula for verdadeira. Cada valor de z tem alguma probabilidade de ocorrer. Se a hipótese nula for verdadeira, então valores de z próximos de 0 têm uma probabilidade alta e valores de z distantes de 0 têm uma probabilidade baixa. Se a probabilidade de um valor de z for baixa o suficiente, os pesquisadores rejeitam a hipótese nula. A lógica desta decisão é que um valor de z terá uma probabilidade baixa se o nulo for verdadeiro e esse valor de z ainda acontecer, então a hipótese nula provavelmente não é verdadeira. Mas quão baixa deve ser a probabilidade de um valor z antes que a hipótese nula seja rejeitada? Deve ser inferior ao valor <span class="math notranslate nohighlight">\(\alpha\)</span>. No exemplo anterior, usamos um valor alfa de 0.05. Os pesquisadores normalmente escolhem entre um valor <span class="math notranslate nohighlight">\(\alpha\)</span> de 0.05 (5%) ou 0.01  (1%). Em geral, se quiser minimizar os erros do Tipo I, escolha um alfa de 0.01 e, se quiser maximizar o poder estatístico, escolha um alfa de 0.05. Em ambos os casos, sempre que o valor p for menor que o nível alfa, é improvável que a hipótese nula seja verdadeira e você deve rejeitá-la.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -14918,13 +14918,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="oDshBkzLNNfv" data-shufflequestions="False"
+<div class="output text_html"><div id="WmfiwwmWsSUo" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#oDshBkzLNNfv {
+#WmfiwwmWsSUo {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -15094,7 +15094,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsoDshBkzLNNfv=[{"question":"32. Se a hipótese nula for verdadeira, você deve esperar que o valor de z seja próxima de",
+</style></div><script type="application/javascript">var questionsWmfiwwmWsSUo=[{"question":"32. Se a hipótese nula for verdadeira, você deve esperar que o valor de z seja próxima de",
 "type":"multiple_choice",
 "answers":[{"answer":"a. a média da população.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. 0.","correct":true, "feedback":"Correto. Se a hipótese nula for verdadeira, a média da amostra deve ser próxima de 0."},
@@ -15900,8 +15900,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("oDshBkzLNNfv")) {
-            show_questions(questionsoDshBkzLNNfv,  oDshBkzLNNfv); 
+          if(document.getElementById("WmfiwwmWsSUo")) {
+            show_questions(questionsWmfiwwmWsSUo,  WmfiwwmWsSUo); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -15910,15 +15910,15 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("oDshBkzLNNfv");
-        // console.log(document.getElementById("oDshBkzLNNfv"));
+        //console.log("WmfiwwmWsSUo");
+        // console.log(document.getElementById("WmfiwwmWsSUo"));
 
         try_show();
         }
         </script></div>
 </div>
 <p>O parágrafo anterior descreve o processo de tomada de decisão que fundamenta o teste de hipóteses de uma forma geral. O próximo parágrafo descreve o mesmo processo de teste de hipótese com um exemplo específico.
-Os pesquisadores tentaram aumentar as pontuações nos testes de ciências dando aulas particulares aos alunos. Se a tutoria não tiver qualquer efeito nas pontuações em ciências, os investigadores esperam um valor z obtido (ou seja, calculado) “próximo de 0”. Os pesquisadores decidiram por um valor alfa unilateral de 0.05. Eles usaram essas informações para procurar o valor de z (ou seja, o valor crítico) na tabela normal da unidade e descobriram que era +1.65. O valor z obtido de +2.2 foi maior que o valor crítico, então os pesquisadores rejeitaram a hipótese nula. Obter um valor z de +2.2 ou maior se o nulo fosse verdadeiro seria “improvável”. Na verdade, você pode determinar com precisão o quão improvável. Use a tabela de unidades normais (Apêndice A) para procurar a probabilidade de obter um valor z de +2.2 ou maior se o valor nulo for verdadeiro. Você deve descobrir que a probabilidade ou valor p é 0.0139. Isso significa que apenas 1.39% de todos os valores de z são maiores que +2.2 se você assumir que a hipótese nula é verdadeira. A probabilidade de um valor de z ser +2.2 ou maior é 0.0139, que é menor que o valor alfa de 0.05 ou 5%; portanto, os pesquisadores rejeitaram a hipótese nula e concluíram que a tutoria ajudou a melhorar as notas dos alunos em ciências.</p>
+Os pesquisadores tentaram aumentar as pontuações nos testes de ciências dando aulas particulares aos alunos. Se a tutoria não tiver qualquer efeito nas pontuações em ciências, os investigadores esperam um valor z obtido (ou seja, calculado) “próximo de 0”. Os pesquisadores decidiram por um valor alfa unilateral de 0.05. Eles usaram essas informações para procurar o valor de z (ou seja, o valor crítico) na tabela unidades normais de e descobriram que era +1.65. O valor z obtido de +2.2 foi maior que o valor crítico, então os pesquisadores rejeitaram a hipótese nula. Obter um valor z de +2.2 ou maior se o nulo fosse verdadeiro seria “improvável”. Na verdade, você pode determinar com precisão o quão improvável. Use a tabela de unidades normais (Apêndice A) para procurar a probabilidade de obter um valor z de +2.2 ou maior se o valor nulo for verdadeiro. Você deve descobrir que a probabilidade ou valor p é 0.0139. Isso significa que apenas 1.39% de todos os valores de z são maiores que +2.2 se você assumir que a hipótese nula é verdadeira. A probabilidade de um valor de z ser +2.2 ou maior é 0.0139, que é menor que o valor alfa de 0.05 ou 5%; portanto, os pesquisadores rejeitaram a hipótese nula e concluíram que a tutoria ajudou a melhorar as notas dos alunos em ciências.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -15933,13 +15933,13 @@ Os pesquisadores tentaram aumentar as pontuações nos testes de ciências dando
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="OrtUwylyfkWK" data-shufflequestions="False"
+<div class="output text_html"><div id="QchIzEJLmPtL" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#OrtUwylyfkWK {
+#QchIzEJLmPtL {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -16109,7 +16109,7 @@ Os pesquisadores tentaram aumentar as pontuações nos testes de ciências dando
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsOrtUwylyfkWK=[{"question":"36. Um pesquisador espera que a média da amostra seja maior do que a média da população e o mesmo acontece com um teste unilateral com um alfa de 0,05. Qual é o valor crítico para este teste?",
+</style></div><script type="application/javascript">var questionsQchIzEJLmPtL=[{"question":"36. Um pesquisador espera que a média da amostra seja maior do que a média da população e o mesmo acontece com um teste unilateral com um alfa de 0,05. Qual é o valor crítico para este teste?",
 "type":"multiple_choice",
 "answers":[{"answer":"a. 0.05","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. 1.65","correct":true, "feedback":"Correto!"},
@@ -16126,7 +16126,7 @@ Os pesquisadores tentaram aumentar as pontuações nos testes de ciências dando
 "type":"multiple_choice",
 "answers":[{"answer":"a. menos extremo","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. mais extremo","correct":true, "feedback":"Correto!"}]},
-{"question":"40. Além de rejeitar ou não rejeitar o nulo, o pesquisador pode afirmar a probabilidade de obter uma pontuação z específica se a hipótese nula for verdadeira. Esta probabilidade é obtida consultando o valor na coluna final da tabela de normais unitárias em frente ao _____.",
+{"question":"40. Além de rejeitar ou não rejeitar o nulo, o pesquisador pode afirmar a probabilidade de obter um valor z específico se a hipótese nula for verdadeira. Esta probabilidade é obtida consultando o valor na coluna final da tabela de normais unitárias em frente ao _____.",
 "type":"multiple_choice",
 "answers":[{"answer":"a. nível alfa","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. valor de z obtida (ou seja, calculada)","correct":true, "feedback":"Correto!"},
@@ -16917,8 +16917,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("OrtUwylyfkWK")) {
-            show_questions(questionsOrtUwylyfkWK,  OrtUwylyfkWK); 
+          if(document.getElementById("QchIzEJLmPtL")) {
+            show_questions(questionsQchIzEJLmPtL,  QchIzEJLmPtL); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -16927,15 +16927,15 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("OrtUwylyfkWK");
-        // console.log(document.getElementById("OrtUwylyfkWK"));
+        //console.log("QchIzEJLmPtL");
+        // console.log(document.getElementById("QchIzEJLmPtL"));
 
         try_show();
         }
         </script></div>
 </div>
 <p>O que é um valor p?</p>
-<p>Um valor p é a probabilidade de observar o valor calculada para a estatística do teste ou um valor mais extremo assumindo que a hipótese nula é verdadeira. É usado por pesquisadores para determinar se devem ou não rejeitar uma hipótese nula.</p>
+<p>Um valor p é a probabilidade de observar o valor calculado para a estatística do teste ou um valor mais extremo assumindo que a hipótese nula é verdadeira. É usado por pesquisadores para determinar se devem ou não rejeitar uma hipótese nula.</p>
 <p>A Figura 6.4 pode ajudá-lo a visualizar como os valores z obtidos, os valores críticos e os valores p estão relacionados.</p>
 <p>Realizaremos vários procedimentos estatísticos diferentes neste livro (por exemplo, z, t, r, F e <span class="math notranslate nohighlight">\(\chi^2\)</span>). Para cada um desses testes estatísticos, as regras básicas do teste de hipóteses são as mesmas. Se o valor estatístico calculado (denominado valor obtido) for mais extremo que o valor crítico, deve-se rejeitar a hipótese nula. Além disso, se o valor p para um valor obtido for menor ou igual ao valor alfa (geralmente 0.05 ou 0.01), você deve rejeitar a hipótese nula.</p>
 <p>Sempre que você for confrontado com a questão de determinar se deve ou não rejeitar a hipótese nula, poderá usar uma das duas regras a seguir:</p>
@@ -16967,18 +16967,18 @@ if (typeof version == 'undefined') {
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">Z</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">px</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="n">px</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">zobs</span><span class="p">,</span><span class="mi">0</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">Z</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">px</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.64</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$z_c=1.65$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.64</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;zc=1.65&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">1.65</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$z_</span><span class="si">{obs}</span><span class="s1">=2.2$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;zobs=2.2&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">2.2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.29</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribuição Z com área acima de 1.65 e 2.2 destacadas.&#39;</span><span class="p">)</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
 <span class="n">l</span> <span class="o">=</span> <span class="n">mlines</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([</span><span class="o">-</span><span class="mf">1.65</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">1.66</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\alpha=0.05$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">1.66</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;α=0.05&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 <span class="n">l</span> <span class="o">=</span> <span class="n">mlines</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([</span><span class="o">-</span><span class="mf">1.05</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">1.05</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$valor\quad p=0.0139$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">1.05</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;valorp=0.0139&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 <span class="c1">#plt.savefig(&#39;regiao_critica_valorp.png&#39;, bbox_inches=&#39;tight&#39;, pad_inches=0.02, dpi=150)</span>
 </pre></div>
@@ -16986,10 +16986,10 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7cdadfc05e20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x775f45b15e20&gt;
 </pre></div>
 </div>
-<img alt="../../_images/15dabfc285f8d7d0dd223872a194390f99f7d81c94ea3327085cd984328cbd6f.png" src="../../_images/15dabfc285f8d7d0dd223872a194390f99f7d81c94ea3327085cd984328cbd6f.png" />
+<img alt="../../_images/2673e12fb177c7435560d0c13d897008f12e88a435aa336098aa20fd14cf546f.png" src="../../_images/2673e12fb177c7435560d0c13d897008f12e88a435aa336098aa20fd14cf546f.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -17006,13 +17006,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="EXFkytYMOfKh" data-shufflequestions="False"
+<div class="output text_html"><div id="fHrisFFCnLvV" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#EXFkytYMOfKh {
+#fHrisFFCnLvV {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -17182,9 +17182,9 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsEXFkytYMOfKh=[{"question":"41. Você deve rejeitar a hipótese nula se o valor p for",
+</style></div><script type="application/javascript">var questionsfHrisFFCnLvV=[{"question":"41. Você deve rejeitar a hipótese nula se o valor p for",
 "type":"multiple_choice",
-"answers":[{"answer":"a. menor ou igual a alfa ($p \leq \alpha$).","correct":true, "feedback":"Correto! Se o valor p for menor ou igual a alfa, você deve rejeitar a hipótese nula."},
+"answers":[{"answer":"a. menor ou igual a alfa ($p <= \alpha$).","correct":true, "feedback":"Correto! Se o valor p for menor ou igual a alfa, você deve rejeitar a hipótese nula."},
 {"answer":"b. maior que alfa ($p > \alpha$).","correct":false, "feedback": "Incorreto. Se o valor p for maior que alfa, você não deve rejeitar a hipótese nula."}]},
 {"question":"42. Você deve rejeitar a hipótese nula se o valor z obtido for _____ que o valor crítico.",
 "type":"multiple_choice",
@@ -17976,8 +17976,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("EXFkytYMOfKh")) {
-            show_questions(questionsEXFkytYMOfKh,  EXFkytYMOfKh); 
+          if(document.getElementById("fHrisFFCnLvV")) {
+            show_questions(questionsfHrisFFCnLvV,  fHrisFFCnLvV); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -17986,15 +17986,15 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("EXFkytYMOfKh");
-        // console.log(document.getElementById("EXFkytYMOfKh"));
+        //console.log("fHrisFFCnLvV");
+        // console.log(document.getElementById("fHrisFFCnLvV"));
 
         try_show();
         }
         </script></div>
 </div>
 <p><em>Por que os estatísticos “falharam em rejeitar o nulo” em vez de “aceitar o nulo”</em></p>
-<p>Os alunos muitas vezes se perguntam por que os estatísticos usam a dupla negativa confusa ‘não rejeitar o nulo’ em vez da expressão mais fácil de entender ‘aceitar o nulo’. Ofereceremos duas explicações relacionadas. A primeira será no contexto de um  exemplo de pesquisa específico. O segundo será um argumento lógico mais abstrato.
+<p>Os alunos muitas vezes se perguntam por que os estatísticos usam a dupla negativa confusa ‘não rejeitar o nulo’ em vez da expressão mais fácil de entender ‘aceitar o nulo’. Ofereceremos duas explicações relacionadas. A primeira será no contexto de um  exemplo de pesquisa específico. A segunda será um argumento lógico mais abstrato.
 Um pesquisador que testa a eficácia de um programa destinado a reduzir a ansiedade matemática administra o programa a uma amostra de N = 25 pessoas. Após os participantes concluírem o programa, o pesquisador compara sua pontuação média de ansiedade (<span class="math notranslate nohighlight">\(\bar{x} = 55\)</span>) com o parâmetro populacional conhecido (<span class="math notranslate nohighlight">\(\mu = 58, \sigma = 10\)</span>). O valor de z resultante para a média amostral de -1.5 não está mais distante de 0 do que o valor crítico de -1.65, então ele não consegue rejeitar a hipótese nula. O nulo indica que o programa não é eficaz. Ao não rejeitar esta hipótese, o pesquisador está dizendo que o presente estudo não forneceu evidências suficientes para rejeitá-la. No entanto, ele também reconhece a possibilidade de que a hipótese nula possa não ter sido rejeitada devido a um ou mais possíveis problemas com o estudo.</p>
 <p>Por exemplo, um falso nulo pode não ser rejeitado por um grande número de razões, incluindo erro de amostragem, se o programa precisasse de mais tempo para ser eficaz ou se houvesse uma série de problemas metodológicos com o estudo. Ao ‘não rejeitar o nulo’, o pesquisador está reconhecendo todas essas possibilidades. Assim, a frase ‘não rejeitar o nulo’ significa que atualmente não existem provas suficientes para rejeitar a hipótese nula, mas reconhece que pesquisas futuras poderão fornecer essa evidência. Em contraste, a frase ‘aceitar o nulo’ ignora a perspectiva de que pesquisas futuras possam mudar a nossa conclusão. ‘Aceitar o nulo’ implica uma conclusão final e definitiva que desmente a maioria das situações de investigação. Ignorar possibilidades alternativas não é consistente com a natureza cautelosa das conclusões científicas.</p>
 <p>A segunda explicação para o motivo pelo qual os investigadores não utilizam as palavras ‘aceitar o nulo’ está relacionada com uma limitação inerente ao raciocínio indutivo. Por exemplo, suponha que você tenha a hipótese de que todos os cisnes são brancos. Você poderia testar sua hipótese indo a um lago local. Se você descobrir que todos os cisnes naquele lago são de fato brancos, sua visita ao lago local significa que você deveria ‘aceitar’ a hipótese de que todos os cisnes são brancos? Não, é possível que exista um lago diferente que tenha pelo menos um cisne negro. Mesmo que você visite 1, 3 ou 10 lagoas adicionais e em cada uma delas você veja apenas cisnes brancos, você não pode descartar a possibilidade de que em algum lugar do mundo exista uma lagoa com pelo menos um cisne negro. Em outras palavras, você não deve ‘aceitar’ a hipótese de que todos os cisnes são brancos. Em vez disso, você deveria apenas dizer que depois de muitas, muitas tentativas de refutar sua hipótese de que todos os cisnes são brancos, você ‘falhou em rejeitá-la’ todas as vezes. Você pode estar muito confiante em sua hipótese, mas cientificamente precisa reconhecer que um cisne negro é possível. Da mesma forma, quando um investigador realiza muitas experiências (ou seja, visita muitos lagos) e depois de cada experiência utiliza palavras como ‘não conseguiu rejeitar o nulo’, está reconhecendo que outro estudo poderia potencialmente rejeitar a mesma hipótese nula.</p>
@@ -18013,13 +18013,13 @@ Um pesquisador que testa a eficácia de um programa destinado a reduzir a ansied
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="miJnrIBLEPzS" data-shufflequestions="False"
+<div class="output text_html"><div id="gwLtJpkpqvLp" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#miJnrIBLEPzS {
+#gwLtJpkpqvLp {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -18189,7 +18189,7 @@ Um pesquisador que testa a eficácia de um programa destinado a reduzir a ansied
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsmiJnrIBLEPzS=[{"question":"43. Não rejeitar a hipótese nula é o mesmo que aceitar a hipótese nula.",
+</style></div><script type="application/javascript">var questionsgwLtJpkpqvLp=[{"question":"43. Não rejeitar a hipótese nula é o mesmo que aceitar a hipótese nula.",
 "type":"multiple_choice",
 "answers":[{"answer":"a. Verdadeiro","correct":false, "feedback":"Incorreto. A frase 'aceitar o nulo' ignora a perspectiva de que pesquisas futuras possam mudar a nossa conclusão."},
 {"answer":"b. Falso","correct":true, "feedback":"Correto!"}]},
@@ -18989,8 +18989,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("miJnrIBLEPzS")) {
-            show_questions(questionsmiJnrIBLEPzS,  miJnrIBLEPzS); 
+          if(document.getElementById("gwLtJpkpqvLp")) {
+            show_questions(questionsgwLtJpkpqvLp,  gwLtJpkpqvLp); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -18999,8 +18999,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("miJnrIBLEPzS");
-        // console.log(document.getElementById("miJnrIBLEPzS"));
+        //console.log("gwLtJpkpqvLp");
+        // console.log(document.getElementById("gwLtJpkpqvLp"));
 
         try_show();
         }
@@ -19094,7 +19094,7 @@ if (typeof version == 'undefined') {
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa-simbolicamente-e-verbalmente"><em>Etapa 2: expor as hipóteses nulas e de pesquisa Simbolicamente e Verbalmente</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passo-3-definir-as-regioes-criticas"><em>Passo 3: Definir as Regiões Críticas</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-4-calcular-a-estatistica-de-teste-z-para-uma-media-amostral"><em>Etapa 4: calcular a estatística de teste (z para uma média amostral)</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-se-o-seu-grau-pequeno-medio-ou-grande"><em>Etapa 5: calcule o tamanho do efeito e descreva se o seu grau (pequeno, médio ou grande)</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o-seu-grau-pequeno-medio-ou-grande"><em>Etapa 5: calcule o tamanho do efeito e descreva o seu grau (pequeno, médio ou grande)</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-6-interpretando-os-resultados-do-teste-de-hipotese-usando-a-z-para-uma-media-amostral"><em>Etapa 6: Interpretando os Resultados do Teste de hipótese usando a z para uma média amostral</em></a></li>
 </ul>
 </li>
