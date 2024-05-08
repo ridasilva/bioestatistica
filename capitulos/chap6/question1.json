@@ -15,11 +15,11 @@
 "type": "multiple_choice",
 "answers":[{"answer": "a. Se o tamanho da amostra for maior que 30", "correct": false, "feedback": "Parcialmente correto. Leia a definição de normalidade novamente."},
             {"answer": "b. Se a população da variável amostrada for normalmente distribuída", "correct": false, "feedback": "Parcialmente correto. Leia a definição de normalidade novamente."},
-            {"answer": "c. Se o tamanho da amostra for superior a 30 ou se a amostrada for normalmente distribuída", "correct": true, "feedback": "Correto!"}]
+            {"answer": "c. Se o tamanho da amostra for superior a 30 ou se a amostra for normalmente distribuída", "correct": true, "feedback": "Correto!"}]
 },
 {"question": "4. Ao realizar um z para uma média amostral, você pode ter bastante certeza de que a suposição de homogeneidade de variância foi atendida pelos dados de um estudo, desde que",
 "type": "multiple_choice",
 "answers":[{"answer": "a. os desvios padrão da amostra e da população são semelhantes (ou seja, um não tem o dobro do tamanho do outro).", "correct": true, "feedback": "Correto!"},
-            {"answer": "b. o desvio padrão da amostra e da população é superior ao dobro do desvio padrão do outro grupo.", "correct": false, "feedback": "Incorreto."}]
+            {"answer": "b. os desvios padrão da amostra e da população são superiores ao dobro do desvio padrão do outro grupo.", "correct": false, "feedback": "Incorreto."}]
 }
 ]

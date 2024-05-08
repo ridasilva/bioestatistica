@@ -1,4 +1,4 @@
-[{"question":"24. Se você rejeitar o nulo, há alguma probabilidade de você ter feito uma",
+[{"question":"24. Se você rejeitar o nulo, há alguma probabilidade de você ter cometido um",
 "type": "multiple_choice",
 "answers":[{"answer": "a. Erro tipo I.", "correct":true, "feedback": "Correto."},
            {"answer":"b. Erro tipo II.", "correct":false, "feedback": "Incorreto."}]
