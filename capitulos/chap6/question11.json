@@ -1,10 +1,10 @@
-[{"question":"24. Se você rejeitar o nulo, há alguma probabilidade de você ter cometido um",
+[{"question":"24. Se você rejeitar a hipótese nula, há alguma probabilidade de você ter cometido um",
 "type": "multiple_choice",
-"answers":[{"answer": "a. Erro tipo I.", "correct":true, "feedback": "Correto."},
-           {"answer":"b. Erro tipo II.", "correct":false, "feedback": "Incorreto."}]
+"answers":[{"answer": "a. Erro do tipo I.", "correct":true, "feedback": "Correto."},
+           {"answer":"b. Erro do tipo II.", "correct":false, "feedback": "Incorreto."}]
 },
-{"question":"25. Se você não rejeitar o nulo, há alguma probabilidade de você ter feito uma",
+{"question":"25. Se você não rejeitar a hipótese nula, há alguma probabilidade de você ter cometido um",
 "type": "multiple_choice",
-"answers":[{"answer": "a. Erro tipo I.", "correct":false, "feedback": "Incorreto."},
-           {"answer":"b. Erro tipo II.", "correct":true, "feedback": "Correto."}]
+"answers":[{"answer": "a. Erro do tipo I.", "correct":false, "feedback": "Incorreto."},
+           {"answer":"b. Erro do tipo II.", "correct":true, "feedback": "Correto."}]
 }]

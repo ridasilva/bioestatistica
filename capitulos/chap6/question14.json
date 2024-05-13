@@ -7,14 +7,14 @@
 {"question":"29. Rejeitar uma hipótese nula falsa é chamado",
 "type": "multiple_choice",
 "answers":[
-{"answer": "a. Erro tipo I.", "correct": false, "feedback": "Errado. Erro tipo I é quando você rejeita uma hipótese nula verdadeira."},
-{"answer": "b. Erro tipo II.", "correct": false, "feedback": "Errado. Erro tipo II é quando você não rejeita uma hipótese nula falsa."},
+{"answer": "a. Erro do tipo I.", "correct": false, "feedback": "Errado. Erro do tipo I é quando você rejeita uma hipótese nula verdadeira."},
+{"answer": "b. Erro do tipo II.", "correct": false, "feedback": "Errado. Erro do tipo II é quando você não rejeita uma hipótese nula falsa."},
 {"answer": "c. poder estatístico.", "correct": true, "feedback": "Correto! O poder estatístico é a probabilidade de rejeitar uma hipótese nula falsa."}]
 },
 {"question":"30. Concluir que um tratamento funciona quando realmente funciona chama-se",
 "type": "multiple_choice",
 "answers":[
-{"answer": "a. Erro tipo I.", "correct": false, "feedback": "Errado. Erro tipo I implica dizer que o tratamento funciona quando não funciona."},
-{"answer": "b. Erro tipo II.", "correct": false, "feedback": "Errado. Erro tipo II implica dizer que o tratamento não funciona quando funciona"},
+{"answer": "a. Erro do tipo I.", "correct": false, "feedback": "Errado. Erro do tipo I implica dizer que o tratamento funciona quando não funciona."},
+{"answer": "b. Erro do tipo II.", "correct": false, "feedback": "Errado. Erro do tipo II implica dizer que o tratamento não funciona quando funciona"},
 {"answer": "c. poder estatístico.", "correct": true, "feedback": "Correto!"}]
 }]

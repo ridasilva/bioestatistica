@@ -1,4 +1,4 @@
-[{"question":"12. Se você procurar um valor z de 2.2 na tabela de unidades normais, descobrirá que a probabilidade de obter uma valor de z de 2.2 ou superior se a hipótese nula for verdadeira é 0.0139. Este é um resultado provável ou improvável se usarmos um ponto de corte de 0.05?",
+[{"question":"12. Se você procurar um valor z de 2.2 na tabela de unidades normais, descobrirá que a probabilidade de obter um valor de z de 2.2 ou superior se a hipótese nula for verdadeira é 0.0139. Este é um resultado provável ou improvável se usarmos um ponto de corte de 0.05?",
 "type":"multiple_choice",
 "answers":[{"answer": "a. Provável", "correct": false, "feedback": "Incorreto, leia o parágrafo acima novamente."},
 {"answer": "b. Improvável", "correct": true, "feedback": "Correto! Se a hipótese nula for verdadeira, a probabilidade de obter um valor de z de 2.2 ou superior é de 0.0139, o que é menor que o ponto de corte de 0.05. Portanto, é improvável que o resultado seja devido ao acaso."}]},

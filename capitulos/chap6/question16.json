@@ -15,8 +15,8 @@
 "type":"multiple_choice",
 "answers":[{"answer":"a. menos extremo","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. mais extremo","correct":true, "feedback":"Correto!"}]},
-{"question":"40. Além de rejeitar ou não rejeitar o nulo, o pesquisador pode afirmar a probabilidade de obter um valor z específico se a hipótese nula for verdadeira. Esta probabilidade é obtida consultando o valor na coluna final da tabela de normais unitárias em frente ao _____.",
+{"question":"40. Além de rejeitar ou não rejeitar a hipótese nula, o pesquisador pode afirmar a probabilidade de obter um valor z específico se a hipótese nula for verdadeira. Esta probabilidade é obtida consultando o valor na coluna final da tabela de unidades normais em frente ao _____.",
 "type":"multiple_choice",
 "answers":[{"answer":"a. nível alfa","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"b. valor de z obtida (ou seja, calculada)","correct":true, "feedback":"Correto!"},
+{"answer":"b. valor de z obtido (ou seja, calculado)","correct":true, "feedback":"Correto!"},
 {"answer":"c. valor crítico","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]}]

@@ -1,5 +1,5 @@
-[{"question":"26. O poder estatístico refere-se a",
+[{"question":"26. O poder estatístico refere-se à",
 "type": "multiple_choice",
-"answers":[{"answer":"a. rejeitando corretamente o nulo.", "correct":true, "feedback":"Correto! O poder estatístico refere-se a rejeitar corretamente o nulo."},
- {"answer": "b. falhando corretamente em rejeitar o nulo.", "correct":false, "feedback":"Incorreto! Leia o parágrafo acima novamente."}]
+"answers":[{"answer":"a. rejeição correta da hipótese nula.", "correct":true, "feedback":"Correto! O poder estatístico refere-se a rejeitar corretamente o nulo."},
+ {"answer": "b. falha na correta rejeição da hipótese nula.", "correct":false, "feedback":"Incorreto! Leia o parágrafo acima novamente."}]
  }]

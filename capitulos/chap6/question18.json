@@ -5,7 +5,7 @@
 {"question":"44. Um pesquisador pode não rejeitar a hipótese nula porque",
 "type":"multiple_choice",
 "answers":[{"answer":"a. o tratamento realmente não funcionou.","correct":false, "feedback":"Correto, mas incompleto."},
-{"answer":"b. de erro amostral.","correct":false, "feedback":"Correto, mas incompleto."},
+{"answer":"b. houve erro amostral.","correct":false, "feedback":"Correto, mas incompleto."},
 {"answer":"c. o estudo foi mal desenhado.","correct":false, "feedback":"Correto, mas incompleto."},
 {"answer":"d. Tudo o que precede","correct":true, "feedback":"Correto!"}]},
 {"question":"45. Os estatísticos não 'aceitam' a hipótese nula porque",
