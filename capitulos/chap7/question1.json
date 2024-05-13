@@ -1,0 +1,7 @@
+[{"question":"1. Uma das diferenças entre a z para um teste de média amostral e um teste t de amostra única",
+"type":"multiple_choice",
+"answers":[{"answer": "a. o z para uma média amostral é usado quando você não conhece o desvio padrão da população.",
+            "correct": false, "feedback": "Incorreto! Leio o parágrafo acima novamente."}, 
+            {"answer": "b. o teste t de amostra única usa o desvio padrão da amostra para calcular uma estimativa da quantidade típica de erro amostral.",
+            "correct": true, "feedback": "Correto!"}]
+}]
