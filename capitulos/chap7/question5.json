@@ -1,0 +1,7 @@
+[{"question":"8. Ao realizar um teste t, aumentar o tamanho da amostra __________ a quantidade de erro de amostragem esperado. Isso significa que o denominador do teste t será __________.",
+"type":"multiple_choice",
+"answers":[{"answer":"a. aumenta; menor","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. aumenta; maior","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"c. diminui; menor","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"d. diminui; maior","correct":true, "feedback": "Correto!"}]
+}]

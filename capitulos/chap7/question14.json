@@ -1,0 +1,7 @@
+[{"question":"23. Qual dos seguintes símbolos deve ser usado para representar uma hipótese de pesquisa bicaudal?",
+"type":"multiple_choice",
+"answers":[{"answer":"a. ≤", "correct":false, "feedback":"Resposta incorreta. Por favor, tente novamente."},
+{"answer":"b. >", "correct":false, "feedback":"Resposta incorreta. Por favor, tente novamente."},
+{"answer":"c. =", "correct":false, "feedback":"Resposta incorreta. Por favor, tente novamente."},
+{"answer":"d. ≠", "correct":true, "feedback":"Correto!"}]
+}]

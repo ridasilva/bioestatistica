@@ -1,0 +1,12 @@
+[{"question":"13. Os graus de liberdade (gl) para um teste t de amostra única são calculados como",
+"type":"multiple_choice",
+"answers": [{"answer":"a. N.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. N - 1.","correct":true, "feedback": "Correto!"}]},
+{"question":"14. Os graus de liberdade são usados para",
+"type":"multiple_choice",
+"answers": [{"answer":"a. calcular o t para amostra única.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. determinar o valor crítico.","correct":true, "feedback": "Correto!"}]},
+{"question":"15. Se a hipótese de pesquisa indicar que os salários diminuirão, o valor crítico será",
+"type":"multiple_choice",
+"answers": [{"answer":"a. positivo.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. negativo.","correct":true, "feedback": "Correto!"}]}]

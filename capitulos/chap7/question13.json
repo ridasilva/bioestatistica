@@ -1,0 +1,12 @@
+[{"question":"21. Por que sua decisão de realizar um teste unilateral em vez de um teste bicaudal potencialmente importante?",
+"type":"multiple_choice",
+"answers":[{"answer":"a. Os testes uni e bicaudais têm regiões críticas diferentes e, portanto, podem levar a conclusões diferentes sobre a hipótese nula.",
+"correct":true, "feedback": "Correto!"},
+{"answer":"b. Testes unicaudais e bicaudais produzirão diferentes valores t obtidos.", "correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+},
+{"question":"22. Quando você deve realizar um teste unilateral?",
+"type":"multiple_choice",
+"answers":[{"answer":"a. Conduza um teste unilateral quando a hipótese de pesquisa prevê que a quantidade estudada irá aumentar ou se prevê que a quantidade diminuirá.",
+"correct":true, "feedback": "Correto!"},
+{"answer":"b. Conduza um teste unilateral quando a hipótese de pesquisa não especificar se as quantidades estudadas aumentarão ou diminuirão.", "correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+}]

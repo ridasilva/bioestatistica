@@ -1,0 +1,10 @@
+[{"question":"19. O número entre parênteses na sequência de caracteres 't(14) = 2.22, p < 0.05, d = 0.57' é o",
+"type":"multiple_choice",
+"answers":[{"answer":"a. número de participantes do estudo.", "correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. graus de liberdade.", "correct":true, "feedback": "Correto!"}, 
+{"answer":"c. tamanho do efeito.", "correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]},
+{"question":"20. Geralmente, você deve relatar _________, mas é aceitável relatar __________ quando estiver computando seus testes estatísticos manualmente.",
+"type":"multiple_choice",
+"answers":[{"answer":"a. valores exatos de p ; p > 0,05 ou p < 0,05", "correct":true, "feedback":"Correto!"},
+{"answer":"b. p > 0,05 ou p < 0,05; valores exatos de p", "correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]
+}]

@@ -1,0 +1,5 @@
+[{"question":"18. Ao calcular um tamanho de efeito para um teste t de amostra única, o denominador é",
+"type":"multiple_choice",
+"answers":[{"answer": "a. o desvio padrão da amostra.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leio o parágrafo acima novamente"}]
+}]

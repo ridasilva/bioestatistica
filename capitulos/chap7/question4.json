@@ -1,0 +1,26 @@
+[{"question": "4. O valor crítico para um teste z unilateral com $\alpha = 0.05$ é sempre",
+"type": "multiple_choice",
+"answers": [
+{"answer": "a. +1,65 ou -1,65.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. 0.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "c. +1,96 ou -1,96.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}
+]},
+{"question": "5. O valor crítico para um teste t unilateral com $\alpha = 0.05$",
+"type": "multiple_choice",
+"answers": [
+{"answer": "a. é igual ao valor crítico para um teste z semelhante.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. muda com base no tamanho da amostra (ou seja, N) que está sendo usada.", "correct": true, "feedback": "Correto!"}
+]},
+{"question": "6. O valor crítico para um teste t será __________ à medida que o tamanho da amostra aumenta.",
+"type": "multiple_choice",
+"answers": [
+{"answer": "a. mais distante de zero.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. mais próximo de zero.", "correct": true, "feedback": "Correto!"}
+]},
+{"question": "7. À medida que o tamanho da amostra aumenta, a região crítica para um teste t",
+"type": "multiple_choice",
+"answers": [
+{"answer": "a. fica maior (mais de 5% da distribuição).", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. fica menor (menos de 5% da distribuição).", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "c. permanece o mesmo tamanho (igual a 5% da distribuição), mas sua localização muda.", "correct": true, "feedback": "Correto!"}
+]}]

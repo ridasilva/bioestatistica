@@ -1,0 +1,5 @@
+[{"question":"17. Se o valor t obtido estiver mais distante de zero do que o valor crítico, você deve",
+"type":"multiple_choice",
+"answers":[{"answer":"a. rejeitar a hipótese nula.", "correct":true, "feedback":"Correto!"},
+{"answer":"b. não rejeitar a hipótese nula.", "correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]
+}]

@@ -1,0 +1,5 @@
+[{"question":"3. A única diferença computacional entre z para uma fórmula de média amostral e a fórmula t de amostra única é a forma como",
+"type":"multiple_choice",
+"answers":[{"answer": "a. o numerador é calculado.", "correct": false, "feedback": "Incorreto! Leio o parágrafo acima novamente."},
+{"answer": "b. erro de amostragem típico é calculado.", "correct": true, "feedback": "Correto!"}]
+}]
