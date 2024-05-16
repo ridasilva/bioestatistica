@@ -73,20 +73,18 @@ citestyle=authoryear
   \uncover<1->{\item
     Explicar quando um t de amostra única deve ser usado em vez de z para uma média amostral;}
   \uncover<2->{\item
-    Explicar por que o z para uma média amostral é superior ao teste t de amostra única, mas raramente usado;}
-  \uncover<3->{\item
     Escrever hipóteses nulas unicaudais e bicaudais e hipóteses de pesquisa usando parâmetros populacionais e também textualmente;}
-   \uncover<4->{\item
+   \uncover<3->{\item
     Calcular os graus de liberdade e definir a região crítica para testes t unicaudais e bicaudais de amostra única;}
-   \uncover<5->{\item
+   \uncover<4->{\item
     Explicar por que um z para um teste de média amostral e um teste t de amostra única têm regiões críticas diferentes;}
-   \uncover<6->{\item
+   \uncover<5->{\item
     Calcular um t de amostra única manualmente e usando \textit{software};}
-   \uncover<7->{\item
+   \uncover<6->{\item
     Determinar se você deve ou não rejeitar a hipótese nula;}
-   \uncover<8->{\item
+   \uncover<7->{\item
     Calcular e interpretar um tamanho de efeito (d);}
-   \uncover<9->{\item
+   \uncover<8->{\item
     Interpretar a saída do \textit{software} para um t de amostra única.}            
   \end{itemize}
 \end{frame}
@@ -95,9 +93,9 @@ citestyle=authoryear
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Contexto}
-No último capítulo, você aprendeu a usar a variável padrão z como estatística da média amostral para testar uma hipótese nula. Para calcular o z para uma média amostral, você deve conhecer o desvio padrão da população ($\sigma$). \\~\\ 
+No último capítulo, você aprendeu a usar a variável padrão z como estatística da média amostral para testar uma hipótese nula. \textit{calcular o z para uma média amostral, você deve conhecer o desvio padrão da população ($\sigma$)}. \\~\\ 
   
-Porém, na maioria das situações de pesquisa, o desvio padrão da população não é conhecido. Neste capítulo, você aprenderá como usar a estatística t de amostra única quando não souber o desvio padrão da população.
+\textit{Porém, na maioria das situações de pesquisa, o desvio padrão da população não é conhecido}. Neste capítulo, você aprenderá como usar a estatística t de amostra única quando não souber o desvio padrão da população.
 \end{frame}
 
 \setbeamercovered{transparent}
@@ -126,7 +124,7 @@ Cálculo do erro amostral & $SEM_p = \frac{\sigma}{\sqrt{N}}$ & $SEM_a = \frac{D
 \frametitle{Contexto}
 O valor crítico para um teste z unilateral com $\alpha = 0.05$ é sempre +1.65 ou -1.65. 
 \\~\\
-Por outro lado, os valores críticos para um teste t unilateral com $\alpha = 0.05$ mudarão com base em quantos elementos estão na amostra. A consequência importante das curvas t terem um formato diferente para cada tamanho de amostra é que os valores críticos que definem a região crítica são diferentes para cada tamanho de amostra (isto é, N). 
+\textit{Por outro lado, os valores críticos para um teste t unilateral com $\alpha = 0.05$ mudarão com base em quantos elementos estão na amostra}. A consequência importante das curvas t terem um formato diferente para cada tamanho de amostra é que os valores críticos que definem a região crítica são diferentes para cada tamanho de amostra (isto é, N). 
 \\~\\
 À medida que N aumenta, o valor crítico de t fica mais próximo do valor crítico de z.
 \end{frame}
@@ -147,6 +145,7 @@ Por outro lado, os valores críticos para um teste t unilateral com $\alpha = 0.
 \textbf{Exemplo:} O salário inicial médio estimado dos alunos é significativamente superior ao salário inicial real dos cursos de farmácia?
 
 \begin{itemize}
+\item Sabe se que a distribuição dos salários iniciais dos formandos em farmácia é normalmente distribuída com uma média $\mu = 3000$ por mês;
 \item
    Salários iniciais mensais esperados de 15 alunos: 3500, 4200, 2500, 3200, 2700, 2000, 2500, 4100, 5000, 4200, 2900, 3900, 4000, 5000 e 5500;
 \item
@@ -208,30 +207,6 @@ Um valor t em uma região crítica positiva indicaria que a média da amostra é
 
 \end{frame}
 
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Passo 3: Definir a Região Crítica}
-A região crítica é a coleção de todos os valores de z que são tão raros se o nulo for verdadeiro que, se qualquer um desses valores de z ocorrer, sugere que a hipótese nula é provavelmente falsa.
-\begin{center}\includegraphics[width=0.6\linewidth]{figs/two_xticks_under} \end{center}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Passo 3: Definir a Região Crítica}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-   A curva normal padrão e os valores de z\\~\\
-   \includegraphics[width=1\linewidth]{figs/two_xticks_under}
-\end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-   \begin{itemize}
-   \item Se a hipótese nula for verdadeira, você esperaria um valor de z próximo a 0;
-   \item Se a hipótese nula não for verdadeira, você esperaria um valor de z distante de 0.
-   \end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
-
 \begin{frame}
 \frametitle{Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas}
 Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). Para o teste t de amostra única, a fórmula para o gl é \textit{gl = N - 1}. Portanto, neste caso,
@@ -264,14 +239,6 @@ gl & $\alpha = .05$ & $\alpha = .01$\\
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Passo 3: Definir a Região Crítica}
-O valor crítico é o ponto de corte do valor de z; valores de z iguais ou maiores que o valor crítico são considerados improváveis de ocorrer se a hipótese nula for verdadeira.
-\begin{center}\includegraphics[width=0.6\linewidth]{figs/regiao_critica} \end{center}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
 \frametitle{Etapa 4: calcular a estatística do teste (teste t de amostra única)}
 \begin{itemize}
 \item 4a. Calcule o desvio observado entre a média amostral e a média da população
@@ -287,7 +254,7 @@ O valor crítico é o ponto de corte do valor de z; valores de z iguais ou maior
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Etapa 4: calcular a estatística do teste (teste t de amostra única)}
-O valor t obtido de 2.54 é mais extremo que o valor crítico de 1.7613, portanto esse valor de z está localizado na região de rejeição (ou seja, a região crítica).
+O valor t obtido de 2.54 é mais extremo que o valor crítico de 1.7613, portanto esse valor de t está localizado na região de rejeição (ou seja, a região crítica).
 \begin{center}\includegraphics[width=0.55\linewidth]{figs/regiao_critica_observada_t} \end{center}
 
 \end{frame}
@@ -329,13 +296,13 @@ Perto de 0.8 & Grande \\
 
 Declaração resumida sobre o teste estatístico acima:\\~\\
 
-O salário médio mensal esperado para formandos em farmácia ($\bar{x} = 680, DP = 1038.68$) foi significativamente maior do que o salário inicial real de 3.000 Reais, t(14) = 2.54, p < 0.05, d = 0.65. Esta análise sugere que os formandos em farmácia tendem a superestimar bastante os salários iniciais que podem esperar após a formatura.\\~\\
+O salário médio mensal esperado para formandos em farmácia ($\bar{x} = 680, DP = 1038.68$) foi significativamente maior do que o salário inicial real de 3.000 Reais, t(14) = 2.54, \(p < 0.05\), d = 0.65. Esta análise sugere que os formandos em farmácia tendem a superestimar bastante os salários iniciais que podem esperar após a formatura.\\~\\
 
-Geralmente, você deve fornecer o valor exato de p, se souber. Em alguns casos, você não saberá disso e então escreveria \("p < 0.05"\) se rejeitou a hipótese nula ou \("p > 0.05"\) se não rejeitou a hipótese nula.
+Geralmente, você deve fornecer o valor exato de p, se souber. Em alguns casos, você não saberá disso e então escreveria "\(p < 0.05\)" se rejeitou a hipótese nula ou "\(p > 0.05\)" se não rejeitou a hipótese nula.
 \end{frame}
 
 \begin{frame}
-\frametitle{Exemplo de teste t de amostra únical de duas caudas (bicaudal)}
+\frametitle{Exemplo de teste t de amostra única de duas caudas (bicaudal)}
 \textbf{Exemplo:} Os alunos são igualmente otimistas ao estimar os salários iniciais dos outros? 
 Você não tem certeza se os alunos superestimarão ou subestimarão os salários iniciais dos outros e, portanto, você deve fazer um teste bicaudal em vez de um teste unilateral.\\~\\ 
 
@@ -368,6 +335,7 @@ Em um teste bicaudal, seus valores t críticos seriam +2.1448 e -2.1448, a hipó
 
 \textbf{Exemplo:} Você recruta 15 estudantes de farmácia diferentes e pede-lhes que estimem o salário médio mensal que um estudante de farmácia típico pode esperar em seu primeiro emprego após a formatura.
 \begin{itemize}
+\item Sabe se que a distribuição dos salários iniciais dos formandos em farmácia é normalmente distribuída com uma média $\mu = 3000$ por mês;
 \item
    Salários iniciais mensais esperados de 15 alunos: 3400, 3500, 2500, 3200, 2700, 2000, 2500, 3300, 3200, 3000, 2900, 3900, 3800, 3900 e 3600;
 \item
@@ -415,30 +383,6 @@ Um valor t em uma região crítica positiva indicaria que a média da amostra é
 
 \end{frame}
 
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Passo 3: Definir a Região Crítica}
-A região crítica é a coleção de todos os valores de z que são tão raros se o nulo for verdadeiro que, se qualquer um desses valores de z ocorrer, sugere que a hipótese nula é provavelmente falsa.
-\begin{center}\includegraphics[width=0.6\linewidth]{figs/two_xticks_under} \end{center}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Passo 3: Definir a Região Crítica}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-   A curva normal padrão e os valores de z\\~\\
-   \includegraphics[width=1\linewidth]{figs/two_xticks_under}
-\end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-   \begin{itemize}
-   \item Se a hipótese nula for verdadeira, você esperaria um valor de z próximo a 0;
-   \item Se a hipótese nula não for verdadeira, você esperaria um valor de z distante de 0.
-   \end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
-
 \begin{frame}
 \frametitle{Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas}
 A fórmula para gl é a mesma para testes unicaudais e bicaudais. Como foi o caso no exemplo unilateral, o gl aqui é
@@ -469,13 +413,6 @@ gl & $\alpha = .05$ & $\alpha = .025$\\
 \end{columns}
 \end{frame}
 
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Passo 3: Definir a Região Crítica}
-O valor crítico é o ponto de corte do valor de z; valores de z iguais ou maiores que o valor crítico são considerados improváveis de ocorrer se a hipótese nula for verdadeira.
-\begin{center}\includegraphics[width=0.6\linewidth]{figs/regiao_critica} \end{center}
-
-\end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
@@ -524,8 +461,8 @@ Geralmente, você deve fornecer o valor exato de p, se souber. Em alguns casos, 
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.14}
-Suponha que a aceitação de um lote de 1000 peças ocorra apenas, se o comprimento médio de 10 peças, retiradas aleatoriamente do lote, estiver entre 5 e 10 \(cm\). Sabe-se que o comprimento das peças é uma variável aleatória com distribuição Normal de média 7.5 e variância 20 \(cm^2\). Qual é a probabilidade de aceitação de um dado lote?
+\frametitle{Exemplo 8.5}
+Deseja-se investigar se uma certa moléstia que ataca o rim altera o consumo de oxigênio desse orgão. Para indivíduos sadios, admite-se que esse consumo tem distribuição Normal com média 12\(cm^3/min\). Os valores medidos em cinco pacientes com a moléstia foram: 14.4, 12.9, 15.0, 13.7 3 13.5. Qual seria a conclusão, ao nível de 1\% de significância?
 \vspace{1in}
 \vspace{1in}
 
@@ -534,14 +471,14 @@ Suponha que a aceitação de um lote de 1000 peças ocorra apenas, se o comprime
 \begin{frame}
 \frametitle{Distribuição Normal}
 
-\begin{center}\includegraphics[width=0.5\linewidth]{figs/ztab_crop2} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{figs/tabela_t} \end{center}
 \end{frame}
 
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.15}
-Uma variável aleatória X assume valores 3, 6 e 8 com, respectivamente, probabilidades 0.4; 0.3 e 0.3. Uma amostra com 40 observações é sorteada. A variável X não tem distribuição Normal e obtemos \(\mu=5.4\) e \(\sigma^2=4.44\). Calcule a probabilidade da média amostral superar o valor 5.
+\frametitle{Exemplo 8.3.2}
+Uma amostra com 10 observação de uma variável aleatória Normal forneceu média de 5.5 e variância amostral de 4. Deseja-se testar, ao nível de signifiância de 5\%, se a média na população é igual ou menor que 6. Qual a conclusão?
 \vspace{1in}
 \vspace{1in}
 
