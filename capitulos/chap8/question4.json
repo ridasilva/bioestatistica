@@ -1,0 +1,11 @@
+[{"question": "6. Qual das alternativas a seguir pode ser usada como estimativa pontual em um IC?",
+"type": "multiple_choice",
+"answers":[{"answer":"a. Limite superior", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. Limite inferior", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"c. Média da amostra", "correct": true, "feedback": "Correto!"},
+{"answer":"d. Margem de erro", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]},
+{"question": "7. O tamanho do intervalo de valores de parâmetros plausíveis fornecidos por um IC é determinado pela",
+"type": "multiple_choice",
+"answers":[{"answer":"a. Média da amostra", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. Margem de erro", "correct": true, "feedback": "Correto!"}]}
+]

@@ -1,0 +1,11 @@
+[{"question":"8. Qual das seguintes opções contribui para o tamanho (isto é, largura) da margem de erro? (Escolha dois.)",
+"type":"many_choice",
+"answers":[{"answer":"a. Média da amostra", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente"},
+{"answer":"b. Tamanho da amostra", "correct": true, "feedback":"Correto!"},
+{"answer":"c. Nível de confiança", "correct": true, "feedback":"Correto!"}]},
+{"question":"9. Em geral, ICs de 99% de confiança são _____________ que ICs de 95%.",
+"type":"multiple_choice",
+"answers":[{"answer": "a. mais amplos", "correct": true, "feedback":"Correto!"},
+{"answer": "b. mais estreitos", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "c. mais precisos", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]}
+]

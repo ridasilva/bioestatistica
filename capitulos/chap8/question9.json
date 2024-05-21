@@ -1,0 +1,6 @@
+[{"question":"14. Qual das alternativas a seguir determina valores plausíveis para parâmetros populacionais?",
+"type":"multiple_choice",
+"answers":[{"answer":"a. Estimativas pontuais","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. Tamanhos de efeito","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"c. ICs","correct":true, "feedback":"Correto."}]
+}]

@@ -1,0 +1,5 @@
+[{"question":"1. Os testes de significância (por exemplo, testes t de amostra única) foram concebidos para ajudar os investigadores a determinar se a diferença observada era susceptível de ser criada por",
+"type":"multiple_choice",
+"answers":[{"answer": "a. erro de amostragem.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. fator confundidor (uma variável que influencia tanto a variável dependente, quanto a variável independente).", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+}]

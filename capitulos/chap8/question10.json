@@ -1,0 +1,5 @@
+[{"question":"15. O modelo de relatório recomenda que os pesquisadores utilizem",
+"type":"multiple_choice",
+"answers":[{"answer":"a. ICs em vez de testes de significância.","correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. ICs em conjunto com testes de significância e tamanhos de efeito.","correct":true, "feedback": "Correto!"}]
+}]
