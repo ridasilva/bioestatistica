@@ -387,7 +387,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-6-interpretando-os-resultados-do-teste-de-hipoteses"><em>Etapa 6: Interpretando os Resultados do Teste de Hipóteses</em></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-de-teste-t-de-amostra-unical-de-duas-caudas-bicaudal">Exemplo de teste t de amostra únical de duas caudas (bicaudal)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-de-teste-t-de-amostra-unica-de-duas-caudas-bicaudal">Exemplo de teste t de amostra única de duas caudas (bicaudal)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-1-examinar-as-premissas-estatisticas"><em>Etapa 1: examinar as premissas estatísticas</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa-imbolicamente-e-verbalmente"><em>Etapa 2: expor as hipóteses nulas e de pesquisa imbolicamente e Verbalmente</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-3-use-o-tamanho-da-amostra-para-calcular-os-graus-de-liberdade-e-definir-as-regioes-criticas"><em>Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e definir as regiões críticas</em></a></li>
@@ -428,7 +428,7 @@ Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
 <section id="introducao">
 <h2>Introdução<a class="headerlink" href="#introducao" title="Link to this heading">#</a></h2>
 <p>No último capítulo, você aprendeu a usar a variável padrão z como estatística da média amostral para testar uma hipótese nula. Para calcular o z para uma média amostral, você deve conhecer o desvio padrão da população (<span class="math notranslate nohighlight">\(\sigma\)</span>). Porém, na maioria das situações de pesquisa, o desvio padrão da população não é conhecido. Neste capítulo, você aprenderá como usar a estatística t de amostra única quando não souber o desvio padrão da população.</p>
-<p>Assim como o z para uma média amostral, a estatística t de amostra única é usada para determinar se a diferença entre uma média amostral e uma média populacional é provavelmente devida a um erro amostral. O z para uma média amostral e o t de amostra única são diferentes porque o teste t de amostra única usa o desvio padrão da amostra (DP) em vez do desvio padrão da população para calcular uma estimativa do erro amostral esperado. Se você conhece o desvio padrão populacional (<span class="math notranslate nohighlight">\(\sigma\)</span>), você deve sempre fazer um z para uma média amostral, mas quando não o conhece, é necessário fazer um teste t de amostra única. Quase todo o resto é o mesmo entre o t de amostra única e o z para uma média amostral.</p>
+<p>Assim como o z para uma média amostral, a estatística t de amostra única é usada para determinar se a diferença entre uma média amostral e uma média populacional ocorre provavelmente devido a um erro amostral. O z para uma média amostral e o t de amostra única são diferentes porque o teste t de amostra única usa o desvio padrão da amostra (DP) em vez do desvio padrão da população para calcular uma estimativa do erro amostral esperado. Se você conhece o desvio padrão populacional (<span class="math notranslate nohighlight">\(\sigma\)</span>), você deve sempre fazer um z para uma média amostral, mas quando não o conhece, é necessário fazer um teste t de amostra única. Quase todo o resto é o mesmo entre o t de amostra única e o z para uma média amostral.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -445,13 +445,13 @@ Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="ZNWBkaxdZUKU" data-shufflequestions="False"
+<div class="output text_html"><div id="JvAcudrxddpQ" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#ZNWBkaxdZUKU {
+#JvAcudrxddpQ {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -621,7 +621,7 @@ Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsZNWBkaxdZUKU=[{"question":"1. Uma das diferenças entre a z para um teste de média amostral e um teste t de amostra única",
+</style></div><script type="application/javascript">var questionsJvAcudrxddpQ=[{"question":"1. Uma das diferenças entre a z para um teste de média amostral e um teste t de amostra única é que",
 "type":"multiple_choice",
 "answers":[{"answer": "a. o z para uma média amostral é usado quando você não conhece o desvio padrão da população.",
             "correct": false, "feedback": "Incorreto! Leio o parágrafo acima novamente."}, 
@@ -1414,8 +1414,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("ZNWBkaxdZUKU")) {
-            show_questions(questionsZNWBkaxdZUKU,  ZNWBkaxdZUKU); 
+          if(document.getElementById("JvAcudrxddpQ")) {
+            show_questions(questionsJvAcudrxddpQ,  JvAcudrxddpQ); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1424,8 +1424,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("ZNWBkaxdZUKU");
-        // console.log(document.getElementById("ZNWBkaxdZUKU"));
+        //console.log("JvAcudrxddpQ");
+        // console.log(document.getElementById("JvAcudrxddpQ"));
 
         try_show();
         }
@@ -1446,13 +1446,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="FShUYEtuKDZD" data-shufflequestions="False"
+<div class="output text_html"><div id="snyMiGASRVcD" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#FShUYEtuKDZD {
+#snyMiGASRVcD {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -1622,7 +1622,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsFShUYEtuKDZD=[{"question":"2. Um pesquisador deseja avaliar o conhecimento das pessoas sobre um tópico usando um teste de verdadeiros/falsos em 10 perguntas. Qual valor poderia ser de interesse teórico para este pesquisador e, portanto, funcionar como um valor de teste de hipótese nula?",
+</style></div><script type="application/javascript">var questionssnyMiGASRVcD=[{"question":"2. Um pesquisador deseja avaliar o conhecimento das pessoas sobre um tópico usando um teste de verdadeiros/falsos em 10 perguntas. Qual valor poderia ser de interesse teórico para este pesquisador e, portanto, funcionar como um valor de teste de hipótese nula?",
 "type":"multiple_choice",
 "answers":[{"answer":"a. O pesquisador pode comparar a média de acertos com 10, número que representa o desempenho perfeito no teste.",
            "correct": false, "feedback": "Incompleto. Leia a questão novamente."},
@@ -2417,8 +2417,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("FShUYEtuKDZD")) {
-            show_questions(questionsFShUYEtuKDZD,  FShUYEtuKDZD); 
+          if(document.getElementById("snyMiGASRVcD")) {
+            show_questions(questionssnyMiGASRVcD,  snyMiGASRVcD); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -2427,8 +2427,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("FShUYEtuKDZD");
-        // console.log(document.getElementById("FShUYEtuKDZD"));
+        //console.log("snyMiGASRVcD");
+        // console.log(document.getElementById("snyMiGASRVcD"));
 
         try_show();
         }
@@ -2471,13 +2471,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="ydRrCxprGixY" data-shufflequestions="False"
+<div class="output text_html"><div id="nlExyBOncsoW" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#ydRrCxprGixY {
+#nlExyBOncsoW {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -2647,10 +2647,10 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsydRrCxprGixY=[{"question":"3. A única diferença computacional entre z para uma fórmula de média amostral e a fórmula t de amostra única é a forma como",
+</style></div><script type="application/javascript">var questionsnlExyBOncsoW=[{"question":"3. A única diferença computacional entre z para uma fórmula de média amostral e a fórmula t de amostra única é a forma como",
 "type":"multiple_choice",
 "answers":[{"answer": "a. o numerador é calculado.", "correct": false, "feedback": "Incorreto! Leio o parágrafo acima novamente."},
-{"answer": "b. erro de amostragem típico é calculado.", "correct": true, "feedback": "Correto!"}]
+{"answer": "b. o erro de amostragem típico é calculado.", "correct": true, "feedback": "Correto!"}]
 }];
     // Make a random ID
 function makeid(length) {
@@ -3438,8 +3438,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("ydRrCxprGixY")) {
-            show_questions(questionsydRrCxprGixY,  ydRrCxprGixY); 
+          if(document.getElementById("nlExyBOncsoW")) {
+            show_questions(questionsnlExyBOncsoW,  nlExyBOncsoW); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -3448,14 +3448,14 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("ydRrCxprGixY");
-        // console.log(document.getElementById("ydRrCxprGixY"));
+        //console.log("nlExyBOncsoW");
+        // console.log(document.getElementById("nlExyBOncsoW"));
 
         try_show();
         }
         </script></div>
 </div>
-<p>Você deve se lembrar que as regiões críticas definem quais valores (valores z ou t) resultam na rejeição da hipótese nula. Outra diferença entre os testes z e t são os valores críticos usados para cada teste. Embora os valores críticos para os testes z sejam sempre os mesmos, os valores críticos para os testes t mudam com base no tamanho da amostra. Por exemplo, o valor crítico para um teste z unilateral com <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> é sempre +1.65 ou -1.65. Dito de outra forma, os valores z de +1.65 ou -1.65 serão sempre os pontos que “delimitam” os 5% dos valores de z na região crítica dos 95% dos valores de z no corpo da distribuição. Por outro lado, os valores críticos para um teste t unilateral com <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> mudarão com base em quantos elementos estão na amostra. A razão para isso é que a distribuição dos valores de t nem sempre tem formato normal. Quando o tamanho da amostra é pequeno, a curva dos valores t não tem o formato de uma curva normal. Na verdade, o formato da curva t é diferente para cada tamanho de amostra. A Figura 7.1 ilustra como cada tamanho de amostra cria uma curva t diferente, exibindo as diferentes curvas t para três tamanhos de amostra diferentes. A consequência importante das curvas t terem um formato diferente para cada tamanho de amostra é que os valores críticos que definem a região crítica são diferentes para cada tamanho de amostra (isto é, N). Portanto, estudos com tamanhos amostrais diferentes terão valores críticos diferentes, mesmo que ambos utilizem testes unicaudais com <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>. À medida que N aumenta, o valor crítico de t fica mais próximo do valor crítico de z.</p>
+<p>Você deve se lembrar de que as regiões críticas definem quais valores (z ou t) resultam na rejeição da hipótese nula. Outra diferença entre os testes z e t são os valores críticos usados para cada teste. Embora os valores críticos para os testes z sejam sempre os mesmos, os valores críticos para os testes t mudam com base no tamanho da amostra. Por exemplo, o valor crítico para um teste z unilateral com <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> é sempre +1.65 ou -1.65. Dito de outra forma, os valores z de +1.65 ou -1.65 serão sempre os pontos que “delimitam” os 5% dos valores de z na região crítica dos 95% dos valores de z no corpo da distribuição. Por outro lado, os valores críticos para um teste t unilateral com <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> mudarão com base em quantos elementos estão na amostra. A razão para isso é que a distribuição dos valores de t nem sempre tem formato normal. Quando o tamanho da amostra é pequeno, a curva dos valores t não tem o formato de uma curva normal. Na verdade, o formato da curva t é diferente para cada tamanho de amostra. A Figura 7.1 ilustra como cada tamanho de amostra cria uma curva t diferente, exibindo as diferentes curvas t para três tamanhos de amostra diferentes. A consequência importante de as curvas t terem um formato diferente para cada tamanho de amostra é que os valores críticos que definem a região crítica são diferentes para cada tamanho de amostra (isto é, N). Portanto, estudos com tamanhos amostrais diferentes terão valores críticos diferentes, mesmo que ambos utilizem testes unicaudais com <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>. À medida que N aumenta, o valor crítico de t fica mais próximo do valor crítico de z.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -3517,13 +3517,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="WoemtSMFOUpM" data-shufflequestions="False"
+<div class="output text_html"><div id="HiRckGoRjdlD" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#WoemtSMFOUpM {
+#HiRckGoRjdlD {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -3693,7 +3693,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsWoemtSMFOUpM=[{"question": "4. O valor crítico para um teste z unilateral com $\alpha = 0.05$ é sempre",
+</style></div><script type="application/javascript">var questionsHiRckGoRjdlD=[{"question": "4. O valor crítico para um teste z unilateral com $\alpha = 0.05$ é sempre",
 "type": "multiple_choice",
 "answers": [
 {"answer": "a. +1,65 ou -1,65.", "correct": true, "feedback": "Correto!"},
@@ -4505,8 +4505,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("WoemtSMFOUpM")) {
-            show_questions(questionsWoemtSMFOUpM,  WoemtSMFOUpM); 
+          if(document.getElementById("HiRckGoRjdlD")) {
+            show_questions(questionsHiRckGoRjdlD,  HiRckGoRjdlD); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -4515,14 +4515,14 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("WoemtSMFOUpM");
-        // console.log(document.getElementById("WoemtSMFOUpM"));
+        //console.log("HiRckGoRjdlD");
+        // console.log(document.getElementById("HiRckGoRjdlD"));
 
         try_show();
         }
         </script></div>
 </div>
-<p>A razão pela qual a curva t tem uma forma diferente para cada tamanho de amostra está relacionada ao fato de que o erro de amostragem aleatória muda tão rapidamente com o tamanho da amostra. Intuitivamente, provavelmente faz sentido para você que amostras aleatórias maiores tenham menos erros de amostragem do que amostras aleatórias menores. Afinal, amostras maiores contêm mais elementos da população e isso implica menos diferença entre a amostra e a população.</p>
+<p>A razão pela qual a curva t tem uma forma diferente para cada tamanho de amostra está relacionada ao fato de que o erro de amostragem aleatória muda rapidamente com o tamanho da amostra. Intuitivamente, provavelmente faz sentido para você que amostras aleatórias maiores tenham menos erros de amostragem do que amostras aleatórias menores. Afinal, amostras maiores contêm mais elementos da população e isso implica menos diferença entre a amostra e a população.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -4537,13 +4537,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="sgPGTDyzcrcl" data-shufflequestions="False"
+<div class="output text_html"><div id="YEpSRBnnGBTr" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#sgPGTDyzcrcl {
+#YEpSRBnnGBTr {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -4713,12 +4713,12 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionssgPGTDyzcrcl=[{"question":"8. Ao realizar um teste t, aumentar o tamanho da amostra __________ a quantidade de erro de amostragem esperado. Isso significa que o denominador do teste t será __________.",
+</style></div><script type="application/javascript">var questionsYEpSRBnnGBTr=[{"question":"8. Ao realizar um teste t, aumentar o tamanho da amostra __________ a quantidade de erro de amostragem esperado. Isso significa que o denominador do teste t será __________.",
 "type":"multiple_choice",
 "answers":[{"answer":"a. aumenta; menor","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. aumenta; maior","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"c. diminui; menor","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"d. diminui; maior","correct":true, "feedback": "Correto!"}]
+{"answer":"c. diminui; menor","correct":true, "feedback": "Correto!"},
+{"answer":"d. diminui; maior","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
 }];
     // Make a random ID
 function makeid(length) {
@@ -5506,8 +5506,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("sgPGTDyzcrcl")) {
-            show_questions(questionssgPGTDyzcrcl,  sgPGTDyzcrcl); 
+          if(document.getElementById("YEpSRBnnGBTr")) {
+            show_questions(questionsYEpSRBnnGBTr,  YEpSRBnnGBTr); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -5516,8 +5516,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("sgPGTDyzcrcl");
-        // console.log(document.getElementById("sgPGTDyzcrcl"));
+        //console.log("YEpSRBnnGBTr");
+        // console.log(document.getElementById("YEpSRBnnGBTr"));
 
         try_show();
         }
@@ -5527,11 +5527,11 @@ if (typeof version == 'undefined') {
 </section>
 <section id="exemplo-do-teste-t-unicaudal-de-amostra-unica">
 <h2>Exemplo do Teste t unicaudal de amostra única<a class="headerlink" href="#exemplo-do-teste-t-unicaudal-de-amostra-unica" title="Link to this heading">#</a></h2>
-<p>Os estudantes universitários brasileiros estão contraindo dívidas de empréstimos estudantis através do FIES (Fundo de Financiamento ao Estudante do Ensino Superior). Em 2023, o Portal da Câmara dos Deputados estimou que o valor total da dívida federal de empréstimos estudantis no Brasil ultrapassaram 6.6 bilhões de reais. Embora existam muitas razões para o aumento da dívida de empréstimos estudantis, a pesquisa sobre uma heurística comum de tomada de decisão conhecida como viés de otimismo (Weinstein, 1980) sugere que um fator que contribui para o aumento da dívida de empréstimos estudantis pode ser o fato de os estudantes serem excessivamente otimistas sobre quais serão os salários após a formatura. Um conselheiro de ajuda financeira quer ver se os alunos estão excessivamente otimistas quanto aos seus salários futuros. Ele sabe que a distribuição dos salários iniciais dos formandos em farmácia que se formam em sua escola é normalmente distribuída com uma média de 36,000 Reais ou <span class="math notranslate nohighlight">\(\mu = 3000\)</span> por mês. Para determinar se os estudantes de farmácia estão excessivamente otimistas em relação aos seus possíveis salários, a conselheira obtém uma amostra aleatória de 15 formandos em farmácia da sua escola e pergunta a cada um deles individualmente qual será o seu salário mensal no primeiro emprego após a formatura. Os salários iniciais mensais esperados dos 15 alunos eram 3500, 4200, 2500, 3200, 2700, 2000, 2500, 4100, 5000, 4200, 2900, 3900, 4000, 5000 e 5500, que da origem a uma média amostral de <span class="math notranslate nohighlight">\(\bar{x} = 3680\)</span>. Pesquisas anteriores sobre o viés do otimismo (por exemplo, Weinstein, 1980) sugerem que os alunos serão excessivamente otimistas nas suas estimativas e, portanto, o conselheiro opta por fazer um teste unilateral. Ela também escolhe um alfa de 0,05. O salário inicial médio estimado dos alunos é significativamente superior ao salário inicial real dos cursos de farmácia?</p>
+<p>Os estudantes universitários brasileiros estão contraindo dívidas de empréstimos estudantis através do FIES (Fundo de Financiamento ao Estudante do Ensino Superior). Em 2023, o Portal da Câmara dos Deputados estimou que o valor total da dívida federal de empréstimos estudantis no Brasil ultrapassou 6.6 bilhões de reais. Embora existam muitas razões para o aumento da dívida de empréstimos estudantis, a pesquisa sobre uma heurística comum de tomada de decisão conhecida como viés de otimismo (Weinstein, 1980) sugere que um fator que contribui para o aumento da dívida de empréstimos estudantis pode ser o fato de os estudantes serem excessivamente otimistas sobre quais serão os salários após a formatura. Um conselheiro de ajuda financeira quer ver se os alunos estão excessivamente otimistas quanto aos seus salários futuros. Ele sabe que a distribuição dos salários iniciais dos formandos em farmácia que se formam em sua escola é normalmente distribuída com uma média de 36,000 Reais ou <span class="math notranslate nohighlight">\(\mu = 3000\)</span> por mês. Para determinar se os estudantes de farmácia estão excessivamente otimistas em relação aos seus possíveis salários, o conselheiro obtém uma amostra aleatória de 15 formandos em farmácia da sua escola e pergunta a cada um deles individualmente qual será o seu salário mensal no primeiro emprego após a formatura. Os salários iniciais mensais esperados dos 15 alunos foram 3500, 4200, 2500, 3200, 2700, 2000, 2500, 4100, 5000, 4200, 2900, 3900, 4000, 5000 e 5500, que dá origem a uma média amostral de <span class="math notranslate nohighlight">\(\bar{x} = 3680\)</span>. Pesquisas anteriores sobre o viés do otimismo (por exemplo, Weinstein, 1980) sugerem que os alunos serão excessivamente otimistas nas suas estimativas e, portanto, o conselheiro opta por fazer um teste unilateral. Ele também escolhe um alfa de 0,05. O salário inicial médio estimado dos alunos é significativamente superior ao salário inicial real dos cursos de farmácia?</p>
 <section id="etapa-1-examinar-as-pressuposicoes-estatisticas">
 <h3><em>Etapa 1: examinar as pressuposições estatísticas</em><a class="headerlink" href="#etapa-1-examinar-as-pressuposicoes-estatisticas" title="Link to this heading">#</a></h3>
-<p>O primeiro pressuposto de independência dos dados é cumprido porque o conselheiro recolheu os dados cuidadosamente, não permitindo que nenhum participante influenciasse as respostas dos outros participantes. A segunda suposição de medição apropriada da VI e da VD é atendida porque a VD, salário mensal esperado, é medido em como uma variável quantitativa, quanto mais (ou menos) cada participante espera ganhar, e a VI, expectativas dos estudantes de farmácia versus salários reais, identifica as expectativas salariais de um grupo de estudantes versus os salários reais de uma população. A terceira suposição de que a distribuição das médias amostrais terá uma forma normal também é satisfeita porque a população de salários esperados dos formandos em farmácia é normalmente distribuida.
-Ao realizar um teste t para amostra única, a última suposição de homogeneidade de variância é mais difícil de avaliar. A suposição é que o desvio padrão da amostra (DP) é semelhante ao desvio padrão da população (<span class="math notranslate nohighlight">\(\sigma\)</span>), mas quando você está fazendo um teste t de amostra única, você não conhece o desvio padrão da população (<span class="math notranslate nohighlight">\(\sigma\)</span>). Assim, os investigadores normalmente avaliam esta suposição utilizando o seu conhecimento das variáveis que estão estudando. O “tratamento” aplicado à amostra poderá alterar a variabilidade das pontuações? Neste estudo, o conselheiro está apenas perguntando aos alunos quanto dinheiro eles esperam fazer. Esta questão, se colocada com cuidado, é pouco provável que torne as respostas dos alunos mais ou menos variáveis, pelo que é seguro assumir que o desvio padrão da amostra será semelhante ao desvio padrão da população. No entanto, se o conselheiro conduzisse mal o estudo, talvez fazendo uma pergunta indutora como “Muitos estudantes sobrestimam quais serão os seus salários iniciais. Quanto você espera ganhar?” Fazer a pergunta desta forma poderia alterar as respostas dos alunos, fazendo com que cada aluno diminuísse a sua estimativa, o que poderia fazer com que as estimativas salariais da amostra fossem menos variáveis do que as estimativas salariais da população, o que violaria a suposição de homogeneidade de variância. Novamente, este exemplo ilustra que uma metodologia de pesquisa inadequada pode realmente atrapalhar suas estatísticas. Neste estudo, o conselheiro formulou a pergunta cuidadosamente para que a suposição de homogeneidade de variância fosse provavelmente atendida.</p>
+<p>O primeiro pressuposto de independência dos dados é cumprido porque o conselheiro recolheu os dados cuidadosamente, não permitindo que nenhum participante influenciasse as respostas dos outros participantes. A segunda suposição de medição apropriada da VI e da VD é atendida porque a VD, salário mensal esperado, é medida em como uma variável quantitativa, quanto mais (ou menos) cada participante espera ganhar, e a VI, expectativas dos estudantes de farmácia versus salários reais, identifica as expectativas salariais de um grupo de estudantes versus os salários reais de uma população. A terceira suposição segundo a qual a distribuição das médias amostrais terá uma forma normal, também é satisfeita porque a população de salários esperados dos formandos em farmácia é normalmente distribuida.
+Ao realizar um teste t para amostra única, a última suposição, que presume a homogeneidade de variância, é mais difícil de avaliar. A suposição é que o desvio padrão da amostra (DP) é semelhante ao desvio padrão da população (<span class="math notranslate nohighlight">\(\sigma\)</span>), mas quando você está fazendo um teste t de amostra única, você não conhece o desvio padrão da população (<span class="math notranslate nohighlight">\(\sigma\)</span>). Assim, os investigadores normalmente avaliam esta suposição utilizando o seu conhecimento das variáveis que estão estudando. O “tratamento” aplicado à amostra poderá alterar a variabilidade das pontuações? Neste estudo, o conselheiro está apenas perguntando aos alunos quanto dinheiro eles esperam ganhar. Esta questão, se colocada com cuidado, tem pouca probabilidade de tornar as respostas dos alunos mais ou menos variáveis, de modo que é seguro assumir que o desvio padrão da amostra será semelhante ao desvio padrão da população. No entanto, se o conselheiro conduzisse mal o estudo, talvez fazendo uma pergunta indutora como “Muitos estudantes superestimam quais serão os seus salários iniciais. Quanto você espera ganhar?”, fazer a pergunta desta forma poderia alterar as respostas dos alunos, fazendo com que cada aluno diminuísse a sua estimativa, o que poderia fazer com que as estimativas salariais da amostra fossem menos variáveis do que as estimativas salariais da população e, consequentemente, violaria a suposição de homogeneidade de variância. Novamente, este exemplo ilustra que uma metodologia de pesquisa inadequada pode realmente atrapalhar suas estatísticas. Neste estudo, o conselheiro formulou a pergunta cuidadosamente para que a suposição de homogeneidade de variância fosse provavelmente atendida.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -5546,13 +5546,13 @@ Ao realizar um teste t para amostra única, a última suposição de homogeneida
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="UCEAbrqsIhiv" data-shufflequestions="False"
+<div class="output text_html"><div id="LQrLiAIzDmmP" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#UCEAbrqsIhiv {
+#LQrLiAIzDmmP {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -5722,13 +5722,13 @@ Ao realizar um teste t para amostra única, a última suposição de homogeneida
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsUCEAbrqsIhiv=[{"question":"9. Você usa um t de amostra única quando",
+</style></div><script type="application/javascript">var questionsLQrLiAIzDmmP=[{"question":"9. Você usa um t de amostra única quando",
 "type":"multiple_choice",
 "answers":[{"answer": "a. a VI define duas amostras independentes e a VD é medida como uma variável quantitativa.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer": "b. a VI define duas amostras dependentes e a VD é medida como uma variável quantitativa.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer": "c. a VI define uma amostra, a VD é medida como uma variável quantitativa e a VD é medido duas vezes na mesma amostra.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer": "d. a VI define uma amostra e o VD é medida como uma variável quantitativa e você não conhece o desvio padrão da população.", "correct": true, "feedback": "Correto!"},
-{"answer": "e. a VI define uma amostra e o VD é medida como uma variável quantitativa e você conhece o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+{"answer": "d. a VI define uma amostra e a VD é medida como uma variável quantitativa e você não conhece o desvio padrão da população.", "correct": true, "feedback": "Correto!"},
+{"answer": "e. a VI define uma amostra e a VD é medida como uma variável quantitativa e você conhece o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
 },
 {"question": "10. Ao realizar um teste t para amostra única, qual das seguintes suposições é a mais difícil de avaliar?",
 "type": "multiple_choice",
@@ -6523,8 +6523,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("UCEAbrqsIhiv")) {
-            show_questions(questionsUCEAbrqsIhiv,  UCEAbrqsIhiv); 
+          if(document.getElementById("LQrLiAIzDmmP")) {
+            show_questions(questionsLQrLiAIzDmmP,  LQrLiAIzDmmP); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -6533,8 +6533,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("UCEAbrqsIhiv");
-        // console.log(document.getElementById("UCEAbrqsIhiv"));
+        //console.log("LQrLiAIzDmmP");
+        // console.log(document.getElementById("LQrLiAIzDmmP"));
 
         try_show();
         }
@@ -6558,13 +6558,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="clFEqyDWxHTr" data-shufflequestions="False"
+<div class="output text_html"><div id="VvAXBdUMPzpi" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#clFEqyDWxHTr {
+#VvAXBdUMPzpi {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -6734,7 +6734,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsclFEqyDWxHTr=[{"question":"11. Testes de significância unicaudal",
+</style></div><script type="application/javascript">var questionsVvAXBdUMPzpi=[{"question":"11. Testes de significância unicaudal",
 "type":"multiple_choice",
 "answers":[{"answer":"a. têm uma região crítica que está no lado positivo ou negativo de uma distribuição.","correct":true, "feedback":"Correto!"},
 {"answer":"b. têm duas regiões críticas, uma no lado positivo e outra no lado negativo de uma.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]
@@ -7530,8 +7530,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("clFEqyDWxHTr")) {
-            show_questions(questionsclFEqyDWxHTr,  clFEqyDWxHTr); 
+          if(document.getElementById("VvAXBdUMPzpi")) {
+            show_questions(questionsVvAXBdUMPzpi,  VvAXBdUMPzpi); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -7540,14 +7540,14 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("clFEqyDWxHTr");
-        // console.log(document.getElementById("clFEqyDWxHTr"));
+        //console.log("VvAXBdUMPzpi");
+        // console.log(document.getElementById("VvAXBdUMPzpi"));
 
         try_show();
         }
         </script></div>
 </div>
-<p>Você deve observar duas coisas sobre as hipóteses nula e de pesquisa para um teste de significância unilateral. Primeiro, porque são mutuamente exclusivos, um deles tem que estar correto. Em segundo lugar, as hipóteses unicaudais indicam que os investigadores só rejeitarão a hipótese nula se o valor t estiver longe de zero e se estiver na direção indicada na hipótese de investigação. Nesse caso, os pesquisadores só rejeitariam a hipótese nula se o valor t estivesse longe de zero no lado positivo da distribuição t. Um valor t em uma região crítica positiva indicaria que a média da amostra é significativamente maior do que o valor real de 3000/mês. Neste exemplo, um valor t que está longe de zero na direção negativa resultaria na falha na rejeição da hipótese nula. As representações simbólicas e verbais da pesquisa e das hipóteses nulas são apresentadas na Tabela 7.2.</p>
+<p>Você deve observar duas coisas sobre as hipóteses nula e de pesquisa para um teste de significância unilateral. Primeiro, porque são mutuamente exclusivas, uma delas tem que estar correta. Em segundo lugar, as hipóteses unicaudais indicam que os investigadores só rejeitarão a hipótese nula se o valor t estiver longe de zero e se estiver na direção indicada na hipótese de investigação. Nesse caso, os pesquisadores só rejeitariam a hipótese nula se o valor t estivesse longe de zero no lado positivo da distribuição t. Um valor t em uma região crítica positiva indicaria que a média da amostra é significativamente maior do que o valor real de 3000/mês. Neste exemplo, um valor t que está longe de zero na direção negativa resultaria na falha na rejeição da hipótese nula. As representações simbólicas e verbais da pesquisa e das hipóteses nulas são apresentadas na Tabela 7.2.</p>
 <p>Tabela 7.2 Representações Simbólicas e Verbais para Hipóteses Nulas e de Pesquisa</p>
 <table class="table">
 <thead>
@@ -7573,7 +7573,7 @@ if (typeof version == 'undefined') {
 </section>
 <section id="etapa-3-use-o-tamanho-da-amostra-para-calcular-os-graus-de-liberdade-e-defina-as-regioes-criticas">
 <h3><em>Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas</em><a class="headerlink" href="#etapa-3-use-o-tamanho-da-amostra-para-calcular-os-graus-de-liberdade-e-defina-as-regioes-criticas" title="Link to this heading">#</a></h3>
-<p>Na discussão anterior sobre regiões críticas, você aprendeu que à medida que o tamanho da amostra aumenta, o valor crítico se aproxima de zero. Para localizar a região crítica exata, você precisará do tamanho da amostra do estudo, bem como de uma tabela de valores t críticos (Apêndice B). Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). Para o teste t de amostra única, a fórmula gl é gl = N - 1. Portanto, neste caso,</p>
+<p>Na discussão anterior sobre regiões críticas, você aprendeu que, à medida que o tamanho da amostra aumenta, o valor crítico se aproxima de zero. Para localizar a região crítica exata, você precisará do tamanho da amostra do estudo, bem como de uma tabela de valores t críticos (Apêndice B). Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). Para o teste t de amostra única, a fórmula gl é gl = N - 1. Portanto, neste caso,</p>
 <p><span class="math notranslate nohighlight">\(gl = 15 - 1 = 14\)</span></p>
 <p>Em seguida, você usa a tabela de valores t críticos no Apêndice B para encontrar o valor t crítico específico quando gl = 14. Nesse caso, você deve encontrar o gl de 14 na coluna mais à esquerda da tabela unicaudal e, em seguida, encontrar o valor crítico nessa linha sob o título 0.05. A Figura 7.2 ilustra como usar o Apêndice B.</p>
 <div class="cell tag_hide-input docutils container">
@@ -7592,9 +7592,9 @@ if (typeof version == 'undefined') {
 <span class="n">a05</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.05</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gls</span><span class="p">]</span>
 <span class="n">a01</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gls</span><span class="p">]</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">gls</span><span class="p">,</span> <span class="n">a05</span><span class="p">,</span> <span class="n">a01</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;gl&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\alpha = .05$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\alpha = .01$&#39;</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">gls</span><span class="p">,</span> <span class="n">a05</span><span class="p">,</span> <span class="n">a01</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;gl&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;α=.05&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;α=.01&#39;</span><span class="p">])</span>
 
-<span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;$\alpha = .05$&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;background-color: yellow&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">})</span>
+<span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;α=.05&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;background-color: yellow&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">})</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">color</span><span class="p">)</span>
 </pre></div>
@@ -7603,37 +7603,37 @@ if (typeof version == 'undefined') {
 </details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_db707_row1_col0, #T_db707_row1_col1, #T_db707_row1_col2 {
+#T_ebca5_row1_col0, #T_ebca5_row1_col1, #T_ebca5_row1_col2 {
   background-color: yellow;
 }
 </style>
-<table id="T_db707">
+<table id="T_ebca5">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_db707_level0_col0" class="col_heading level0 col0" >gl</th>
-      <th id="T_db707_level0_col1" class="col_heading level0 col1" >$\alpha = .05$</th>
-      <th id="T_db707_level0_col2" class="col_heading level0 col2" >$\alpha = .01$</th>
+      <th id="T_ebca5_level0_col0" class="col_heading level0 col0" >gl</th>
+      <th id="T_ebca5_level0_col1" class="col_heading level0 col1" >α=.05</th>
+      <th id="T_ebca5_level0_col2" class="col_heading level0 col2" >α=.01</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_db707_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_db707_row0_col0" class="data row0 col0" >13</td>
-      <td id="T_db707_row0_col1" class="data row0 col1" >1.770900</td>
-      <td id="T_db707_row0_col2" class="data row0 col2" >2.650300</td>
+      <th id="T_ebca5_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_ebca5_row0_col0" class="data row0 col0" >13</td>
+      <td id="T_ebca5_row0_col1" class="data row0 col1" >1.770900</td>
+      <td id="T_ebca5_row0_col2" class="data row0 col2" >2.650300</td>
     </tr>
     <tr>
-      <th id="T_db707_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_db707_row1_col0" class="data row1 col0" >14</td>
-      <td id="T_db707_row1_col1" class="data row1 col1" >1.761300</td>
-      <td id="T_db707_row1_col2" class="data row1 col2" >2.624500</td>
+      <th id="T_ebca5_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_ebca5_row1_col0" class="data row1 col0" >14</td>
+      <td id="T_ebca5_row1_col1" class="data row1 col1" >1.761300</td>
+      <td id="T_ebca5_row1_col2" class="data row1 col2" >2.624500</td>
     </tr>
     <tr>
-      <th id="T_db707_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_db707_row2_col0" class="data row2 col0" >15</td>
-      <td id="T_db707_row2_col1" class="data row2 col1" >1.753100</td>
-      <td id="T_db707_row2_col2" class="data row2 col2" >2.602500</td>
+      <th id="T_ebca5_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_ebca5_row2_col0" class="data row2 col0" >15</td>
+      <td id="T_ebca5_row2_col1" class="data row2 col1" >1.753100</td>
+      <td id="T_ebca5_row2_col2" class="data row2 col2" >2.602500</td>
     </tr>
   </tbody>
 </table>
@@ -7654,13 +7654,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="IDMbIMRvPafL" data-shufflequestions="False"
+<div class="output text_html"><div id="BjYkbBsdPXdR" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#IDMbIMRvPafL {
+#BjYkbBsdPXdR {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -7830,7 +7830,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsIDMbIMRvPafL=[{"question":"13. Os graus de liberdade (gl) para um teste t de amostra única são calculados como",
+</style></div><script type="application/javascript">var questionsBjYkbBsdPXdR=[{"question":"13. Os graus de liberdade (gl) para um teste t de amostra única são calculados como",
 "type":"multiple_choice",
 "answers": [{"answer":"a. N.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. N - 1.","correct":true, "feedback": "Correto!"}]},
@@ -8628,8 +8628,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("IDMbIMRvPafL")) {
-            show_questions(questionsIDMbIMRvPafL,  IDMbIMRvPafL); 
+          if(document.getElementById("BjYkbBsdPXdR")) {
+            show_questions(questionsBjYkbBsdPXdR,  BjYkbBsdPXdR); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -8638,8 +8638,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("IDMbIMRvPafL");
-        // console.log(document.getElementById("IDMbIMRvPafL"));
+        //console.log("BjYkbBsdPXdR");
+        // console.log(document.getElementById("BjYkbBsdPXdR"));
 
         try_show();
         }
@@ -8652,12 +8652,12 @@ if (typeof version == 'undefined') {
 <p>Comece calculando o desvio entre a média amostral e a média populacional. O salário médio mensal estimado dos 15 cursos de farmácia foi <span class="math notranslate nohighlight">\(\bar{x} = 3680\)</span>, e o salário mensal real foi <span class="math notranslate nohighlight">\(\mu = 3000\)</span>. Portanto, a diferença média é 680.</p>
 <p><span class="math notranslate nohighlight">\(\bar{x} - \mu =  3680-3000 = 680.\)</span></p>
 <p><em>4b. Calcule o erro de amostragem esperado</em></p>
-<p>Para interpretar o desvio observado de 680, você precisa determinar quanta diferença você esperaria entre <span class="math notranslate nohighlight">\(\bar{x}\)</span> e <span class="math notranslate nohighlight">\(\mu\)</span> devido ao erro de amostragem. O erro de amostragem é estimado calculando a estimativa erro padrão da média estimado (<span class="math notranslate nohighlight">\(SEM_a = DP/\sqrt{N}\)</span>). Para calcular o erro de amostragem, você precisa conhecer o desvio padrão da amostra (DP) e tamanho da amostra (N). Neste problema, o desvio padrão da amostra não é fornecido a você. Portanto, você deve calculá-lo a partir dos dados de amostra. Como você deve se lembrar do Capítulo 3, calcular a variância (isto é, a média dos quadrados dos desvios) é o primeiro passo para calcular o DP (Desvio Padrão). A fórmula computacional para é <span class="math notranslate nohighlight">\(Var(X) = 1/(N-1)\sum_{i=1}^n(X_i - \bar{X})^2\)</span>. Obtivemos 15 valores, então N = 15. A <em>Var(x)</em> é calculado conforme mostrado abaixo.</p>
+<p>Para interpretar o desvio observado de 680, você precisa determinar quanta diferença você esperaria entre <span class="math notranslate nohighlight">\(\bar{x}\)</span> e <span class="math notranslate nohighlight">\(\mu\)</span> devido ao erro de amostragem. O erro de amostragem é estabelecido calculando o erro padrão da média estimado (<span class="math notranslate nohighlight">\(SEM_a = DP/\sqrt{N}\)</span>). Para calcular o erro de amostragem, você precisa conhecer o desvio padrão da amostra (DP) e tamanho da amostra (N). Neste problema, o desvio padrão da amostra não é fornecido a você. Portanto, você deve calculá-lo a partir dos dados de amostra. Como você deve se lembrar do Capítulo 3, calcular a variância (isto é, a média dos quadrados dos desvios) é o primeiro passo para calcular o DP (Desvio Padrão). A fórmula computacional para é <span class="math notranslate nohighlight">\(Var(X) = 1/(N-1)\sum_{i=1}^n(X_i - \bar{X})^2\)</span>. Obtivemos 15 valores, então N = 15. A <em>Var(x)</em> é calculado conforme mostrado abaixo.</p>
 <p><span class="math notranslate nohighlight">\(Var(X) = \frac{1}{N-1}\sum_{i=1}^n(X_i - \bar{X})^2 = 1078857.143.\)</span></p>
 <p>O desvio padrão é calculado dividindo com o estimador não viesado da variância (com N - 1 no denominador) e extraindo a raiz quadrada do quociente.</p>
 <p>E, finalmente, o erro padrão da média é calculado dividindo o desvio padrão pela raiz quadrada do tamanho da amostra.</p>
 <p><span class="math notranslate nohighlight">\(SEM_a = \frac{DP}{\sqrt{N}} = \frac{1038.680}{\sqrt{15}} = 268.186\)</span></p>
-<p>Neste caso, a quantidade típica de erro amostral foi calculada como 268.186. Portanto, as médias amostrais normalmente estarão 268.186 distantes da média populacional devido ao erro amostral.</p>
+<p>Neste caso, a quantidade típica de erro amostral foi calculada como 268.186. Portanto, as médias amostrais normalmente estarãoa uma distância de 268.186 da média populacional devido ao erro amostral.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -8672,13 +8672,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="RQzIlXKCVict" data-shufflequestions="False"
+<div class="output text_html"><div id="OcunnypZJqjE" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#RQzIlXKCVict {
+#OcunnypZJqjE {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -8848,7 +8848,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsRQzIlXKCVict=[{"question":"16. Para este exemplo, a diferença observada entre a média amostral e a média populacional foi _______________; a diferença esperada devido ao erro amostral foi _____________.",
+</style></div><script type="application/javascript">var questionsOcunnypZJqjE=[{"question":"16. Para este exemplo, a diferença observada entre a média amostral e a média populacional foi _______________; a diferença esperada devido ao erro amostral foi _____________.",
 "type":"multiple_choice",
 "answers":[{"answer": "a. 268.186; 680", "correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer": "b. 680; 268.186", "correct":true, "feedback": "Correto!"}]
@@ -9639,8 +9639,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("RQzIlXKCVict")) {
-            show_questions(questionsRQzIlXKCVict,  RQzIlXKCVict); 
+          if(document.getElementById("OcunnypZJqjE")) {
+            show_questions(questionsOcunnypZJqjE,  OcunnypZJqjE); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -9649,15 +9649,15 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("RQzIlXKCVict");
-        // console.log(document.getElementById("RQzIlXKCVict"));
+        //console.log("OcunnypZJqjE");
+        // console.log(document.getElementById("OcunnypZJqjE"));
 
         try_show();
         }
         </script></div>
 </div>
 <p><em>4c. Calcule a estatística do teste (teste t de amostra única)</em></p>
-<p>Dividindo a diferença observada entre a média amostral e a média populacional pela estimativa do erro amostral médio obtém-se o valor t calculado.</p>
+<p>Dividindo a diferença observada entre a média amostral e a média populacional pela estimativa do erro amostral médio, obtém-se o valor t calculado.</p>
 <p><span class="math notranslate nohighlight">\(t = \frac{(\bar{x} - \mu)}{SEM_a} = \frac{(3680-3000)}{268.186} = 2.54.\)</span></p>
 <p>Então, determinar se você deve rejeitar o nulo ou não é tão fácil quanto determinar se o valor t obtido (+2.54) está na direção prevista e se está mais distante de zero do que o valor crítico de +1.7613. Neste caso, o valor t obtido é positivo, conforme previsto, e é mais extremo que o valor crítico, portanto você tem evidências suficientes para rejeitar a hipótese nula.</p>
 <p>Outra forma de descrever estes resultados é dizer: “O valor t obtido está na região crítica; portanto, há evidências suficientes para rejeitar a hipótese nula”. Nesse caso, seu <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> e seu t obtido estavam na região crítica. Isso significa que há menos de 5% de chance de você obter um valor t de +2,54 ou superior se a hipótese nula fosse verdadeira. Portanto, a análise estatística sugere que a hipótese nula é provavelmente falsa e que a hipótese de investigação é provavelmente verdadeira. Em outras palavras, o estudo sugere que os formandos em farmácia tendem a superestimar seus salários iniciais após a formatura.</p>
@@ -9675,13 +9675,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="CvpPSAmRXQTe" data-shufflequestions="False"
+<div class="output text_html"><div id="cPsunJGOAJFF" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#CvpPSAmRXQTe {
+#cPsunJGOAJFF {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -9851,7 +9851,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsCvpPSAmRXQTe=[{"question":"17. Se o valor t obtido estiver mais distante de zero do que o valor crítico, você deve",
+</style></div><script type="application/javascript">var questionscPsunJGOAJFF=[{"question":"17. Se o valor t obtido estiver mais distante de zero do que o valor crítico, você deve",
 "type":"multiple_choice",
 "answers":[{"answer":"a. rejeitar a hipótese nula.", "correct":true, "feedback":"Correto!"},
 {"answer":"b. não rejeitar a hipótese nula.", "correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]
@@ -10642,8 +10642,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("CvpPSAmRXQTe")) {
-            show_questions(questionsCvpPSAmRXQTe,  CvpPSAmRXQTe); 
+          if(document.getElementById("cPsunJGOAJFF")) {
+            show_questions(questionscPsunJGOAJFF,  cPsunJGOAJFF); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -10652,8 +10652,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("CvpPSAmRXQTe");
-        // console.log(document.getElementById("CvpPSAmRXQTe"));
+        //console.log("cPsunJGOAJFF");
+        // console.log(document.getElementById("cPsunJGOAJFF"));
 
         try_show();
         }
@@ -10682,9 +10682,9 @@ if (typeof version == 'undefined') {
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">T</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">px</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="n">px</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span><span class="mi">0</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">T</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">px</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.75</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_c=1.76$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.75</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;tc=1.76&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">1.76</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.3</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_</span><span class="si">{obs}</span><span class="s1">=2.54$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.3</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;tobs=2.54&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">2.54</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.29</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribuição t com área acima de 1.76 e 2.5 destacadas.&#39;</span><span class="p">)</span>
 <span class="c1">#plt.savefig(&#39;regiao_crUS$ itica_observada_t.png&#39;, bbox_inches=&#39;tight&#39;, pad_inches=0.02, dpi=150)</span>
@@ -10696,15 +10696,15 @@ if (typeof version == 'undefined') {
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição t com área acima de 1.76 e 2.5 destacadas.&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/1b808a640aa4ec7b1ff91b63034b85dfc6995b9ee5745b004094a0f394d042c0.png" src="../../_images/1b808a640aa4ec7b1ff91b63034b85dfc6995b9ee5745b004094a0f394d042c0.png" />
+<img alt="../../_images/8b1233c854a4e6c755a6f14922dc4e1fc47b692e4dc1598bb9e1abe965e5070a.png" src="../../_images/8b1233c854a4e6c755a6f14922dc4e1fc47b692e4dc1598bb9e1abe965e5070a.png" />
 </div>
 </div>
 </section>
 <section id="etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o">
 <h3><em>Etapa 5: calcule o tamanho do efeito e descreva-o</em><a class="headerlink" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o" title="Link to this heading">#</a></h3>
 <p>Tal como acontece com o z para uma média amostral, depois de concluir o teste de significância na Etapa 4, você deve calcular um tamanho de efeito para poder descrever a diferença entre as médias como leve, moderada ou grande. A estimativa do tamanho do efeito para o teste t de amostra única é calculada da mesma forma que foi para o z para uma média amostral, exceto que o desvio padrão da amostra (ou seja, DP) é o denominador, em vez do desvio padrão da população (ou seja, <span class="math notranslate nohighlight">\(\sigma\)</span>).</p>
-<p>d = Desvio observado entre as médias/Desvio padrão <span class="math notranslate nohighlight">\(= \frac{(\bar{x} - \mu)}{DP} =  \frac{(3680 - 3000)}{1038.68} = .65.\)</span></p>
-<p>Um tamanho de efeito de 0.65 significa que os formandos em farmácia estimaram seu salário médio em 0.65 de um desvio padrão superior ao salário médio mensal real dos formandos em farmácia. As mesmas diretrizes de tamanho de efeito são usadas para z e t – ou seja, ds próximos a 0.2, 0.5 e 0.8 são efeitos pequenos, médios e grandes, respectivamente. Neste caso, o tamanho do efeito de 0.65 é de médio a grande, o que significa que os formandos em psicologia sobrestimam bastante os seus salários iniciais. No entanto, com um tamanho de amostra tão pequeno, é possível que este efeito seja resultado de um erro de amostragem.</p>
+<p>d = Desvio observado entre as médias/Desvio padrão <span class="math notranslate nohighlight">\(= \frac{(\bar{x} - \mu)}{DP} =  \frac{(3680 - 3000)}{1038.68} = 0.65.\)</span></p>
+<p>Um tamanho de efeito de 0.65 significa que os formandos em farmácia estimaram seu salário médio em 0.65 de um desvio padrão superior ao salário médio mensal real dos formandos em farmácia. As mesmas diretrizes de tamanho de efeito são usadas para z e t – ou seja, valore de d próximos a 0.2, 0.5 e 0.8 são efeitos pequenos, médios e grandes, respectivamente. Neste caso, o tamanho do efeito de 0.65 é de médio a grande, o que significa que os formandos em farmácia superestimam bastante os seus salários iniciais. No entanto, com um tamanho de amostra tão pequeno, é possível que este efeito seja resultado de um erro de amostragem.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -10719,13 +10719,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="DwdZiZZiQBiF" data-shufflequestions="False"
+<div class="output text_html"><div id="VksKegNMynca" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#DwdZiZZiQBiF {
+#VksKegNMynca {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -10895,7 +10895,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsDwdZiZZiQBiF=[{"question":"18. Ao calcular um tamanho de efeito para um teste t de amostra única, o denominador é",
+</style></div><script type="application/javascript">var questionsVksKegNMynca=[{"question":"18. Ao calcular um tamanho de efeito para um teste t de amostra única, o denominador é",
 "type":"multiple_choice",
 "answers":[{"answer": "a. o desvio padrão da amostra.", "correct": true, "feedback": "Correto!"},
 {"answer": "b. o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leio o parágrafo acima novamente"}]
@@ -11686,8 +11686,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("DwdZiZZiQBiF")) {
-            show_questions(questionsDwdZiZZiQBiF,  DwdZiZZiQBiF); 
+          if(document.getElementById("VksKegNMynca")) {
+            show_questions(questionsVksKegNMynca,  VksKegNMynca); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -11696,8 +11696,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("DwdZiZZiQBiF");
-        // console.log(document.getElementById("DwdZiZZiQBiF"));
+        //console.log("VksKegNMynca");
+        // console.log(document.getElementById("VksKegNMynca"));
 
         try_show();
         }
@@ -11706,9 +11706,9 @@ if (typeof version == 'undefined') {
 </section>
 <section id="etapa-6-interpretando-os-resultados-do-teste-de-hipoteses">
 <h3><em>Etapa 6: Interpretando os Resultados do Teste de Hipóteses</em><a class="headerlink" href="#etapa-6-interpretando-os-resultados-do-teste-de-hipoteses" title="Link to this heading">#</a></h3>
-<p>Tal como antes com o z para a média amostral, o passo final é resumir os resultados, declarando explicitamente se os formandos em farmácia tendem a sobrestimar os seus salários iniciais ou não. Responder a esta pergunta foi a razão pela qual você fez todas essas estatísticas; é um desperdício de todo esse esforço se você não contar explicitamente às pessoas o que encontrou. Seu resumo também deve incluir a média da amostra e da população, os gl, o valor de t obtido, se o valor p foi menor ou maior que o valor alfa e o tamanho do efeito calculado. Um exemplo de descrição resumida é mostrado a seguir:</p>
+<p>Tal como antes com o z para a média amostral, o passo final é resumir os resultados, declarando explicitamente se os formandos em farmácia tendem a superestimar os seus salários iniciais ou não. Responder a esta pergunta foi a razão pela qual você fez todas essas estatísticas; é um desperdício de todo esse esforço se você não contar explicitamente às pessoas o que encontrou. Seu resumo também deve incluir a média da amostra e da população, os gl, o valor de t obtido, se o valor p foi menor ou maior que o valor alfa e o tamanho do efeito calculado. Um exemplo de descrição resumida é mostrado a seguir:</p>
 <p><em>O salário médio mensal esperado para formandos em farmácia (<span class="math notranslate nohighlight">\(\bar{x} = 680, DP = 1038.68\)</span>) foi significativamente maior do que o salário inicial real de 3.000 Reais, t(14) = 2.54, p &lt; 0.05, d = 0.65. Esta análise sugere que os formandos em psicologia tendem a superestimar bastante os salários iniciais que podem esperar após a formatura.</em></p>
-<p>No capítulo anterior, você aprendeu a relatar o valor p exato em sua declaração resumida de a z para uma média amostral (por exemplo, p = 0.02). Se você souber o valor p exato de um resultado estatístico, deverá sempre relatá- lo. Ao usar um z para uma média amostral no capítulo anterior, você poderia facilmente determinar o valor exato de p para qualquer valor de z consultando-o na tabela normal padrão (ou seja, Apêndice A). No entanto, é mais difícil determinar o valor p exato de uma distribuição t porque, embora haja apenas uma probabilidade para cada valor de z, a probabilidade de uma valor t depende do tamanho da amostra do estudo. Portanto, não é prático para qualquer livro fornecer todas as probabilidades para cada valor de t e cada tamanho de amostra. Portanto, é comum simplesmente informar se o valor p é maior ou menor que o valor alfa escolhido (por exemplo, 0.05 ou 0.01) ao realizar um teste t manualmente. Se o valor t obtido estiver na região crítica, o valor p para esse valor de t deve ser menor que o valor alfa (0.05 ou 0.01). Portanto, você escreveria p &lt; 0.05 sempre que rejeitasse o nulo. Por outro lado, se o valor de t obtido for menor que o valor crítico, seu valor p deve ser maior que o valor alfa e você escreveria p &gt; 0.05. Para ser claro, a única razão pela qual você escreveria p &lt; 0.05 ou p &gt; 0.05 seria se você não soubesse o valor exato de p. Quando você calcula uma estatística manualmente, geralmente não saberá o valor exato de p dos seus resultados. No entanto, quando você usa um computador para realizar suas estatísticas, ele geralmente fornece o valor exato de p e, portanto, você deve relatá-lo.</p>
+<p>No capítulo anterior, você aprendeu a relatar o valor p exato em sua declaração resumida de a z para uma média amostral (por exemplo, p = 0.02). Se você souber o valor p exato de um resultado estatístico, deverá sempre relatá-lo. Ao usar um z para uma média amostral no capítulo anterior, você poderia facilmente determinar o valor exato de p para qualquer valor de z consultando-o na tabela normal padrão (ou seja, Apêndice A). No entanto, é mais difícil determinar o valor p exato de uma distribuição t porque, embora haja apenas uma probabilidade para cada valor de z, a probabilidade de uma valor t depende do tamanho da amostra do estudo. Portanto, não é prático para qualquer livro fornecer todas as probabilidades para cada valor de t e cada tamanho de amostra. Portanto, é comum simplesmente informar se o valor p é maior ou menor que o valor alfa escolhido (por exemplo, 0.05 ou 0.01) ao realizar um teste t manualmente. Se o valor t obtido estiver na região crítica, o valor p para esse valor de t deve ser menor que o valor alfa (0.05 ou 0.01). Portanto, você escreveria p &lt; 0.05 sempre que rejeitasse a hipótese nula. Por outro lado, se o valor de t obtido for menor que o valor crítico, seu valor p deve ser maior que o valor alfa e você escreveria p &gt; 0.05. Para ser claro, a única razão pela qual você escreveria p &lt; 0.05 ou p &gt; 0.05 seria se você não soubesse o valor exato de p. Quando você calcula uma estatística manualmente, geralmente não saberá o valor exato de p dos seus resultados. No entanto, quando você usa um computador para realizar suas estatísticas, ele geralmente fornece o valor exato de p e, portanto, você deve relatá-lo.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -11723,13 +11723,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="InSTSBwLZAtF" data-shufflequestions="False"
+<div class="output text_html"><div id="dEjLwaDfPzoQ" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#InSTSBwLZAtF {
+#dEjLwaDfPzoQ {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -11899,7 +11899,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsInSTSBwLZAtF=[{"question":"19. O número entre parênteses na sequência de caracteres 't(14) = 2.22, p < 0.05, d = 0.57' é o",
+</style></div><script type="application/javascript">var questionsdEjLwaDfPzoQ=[{"question":"19. O número entre parênteses na sequência de caracteres 't(14) = 2.22, p < 0.05, d = 0.57' é o",
 "type":"multiple_choice",
 "answers":[{"answer":"a. número de participantes do estudo.", "correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. graus de liberdade.", "correct":true, "feedback": "Correto!"}, 
@@ -12695,8 +12695,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("InSTSBwLZAtF")) {
-            show_questions(questionsInSTSBwLZAtF,  InSTSBwLZAtF); 
+          if(document.getElementById("dEjLwaDfPzoQ")) {
+            show_questions(questionsdEjLwaDfPzoQ,  dEjLwaDfPzoQ); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -12705,8 +12705,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("InSTSBwLZAtF");
-        // console.log(document.getElementById("InSTSBwLZAtF"));
+        //console.log("dEjLwaDfPzoQ");
+        // console.log(document.getElementById("dEjLwaDfPzoQ"));
 
         try_show();
         }
@@ -12714,9 +12714,9 @@ if (typeof version == 'undefined') {
 </div>
 </section>
 </section>
-<section id="exemplo-de-teste-t-de-amostra-unical-de-duas-caudas-bicaudal">
-<h2>Exemplo de teste t de amostra únical de duas caudas (bicaudal)<a class="headerlink" href="#exemplo-de-teste-t-de-amostra-unical-de-duas-caudas-bicaudal" title="Link to this heading">#</a></h2>
-<p>No exemplo anterior, usamos um teste t unilateral (também conhecido como teste direcional). Também é possível usar um teste t bicaudal (também conhecido como teste não direcional). Por exemplo, suponha que, depois de saber que os formandos em farmácia eram excessivamente otimistas em relação aos seus próprios salários iniciais, você deseja saber se os alunos são igualmente otimistas ao estimar os salários iniciais dos outros. Para testar isso, você recruta 15 estudantes de farmácia diferentes e pede-lhes que estimem o salário médio mensal que um típico estudante de farmácia pode esperar em seu primeiro emprego após a formatura. Você não tem certeza se os alunos superestimarão ou subestimarão os salários iniciais dos outros e, portanto, você deve fazer um teste bicaudal em vez de um teste unilateral. Em testes de hipóteses bicaudais, você não tem uma previsão direcional específica em relação ao tratamento. Portanto, a hipótese de pesquisa bicaudal afirma que o salário médio mensal estimado será superior a 3000 Reais ou inferior a 3000. Assim, as hipóteses de pesquisa bicaudais possuem duas regiões críticas, uma na cauda positiva e outra na cauda negativa. Se o valor t obtido estivesse na região crítica positiva, você concluiria que os alunos superestimaram o salário inicial médio do típico do curso de farmácia. Por outro lado, se o valor t obtido estivesse na região crítica negativa, você concluiria que os alunos subestimaram o salário inicial médio. Finalmente, se o valor t obtido fosse “próximo de zero” (ou seja, entre os valores críticos positivos e negativos), você não conseguiria rejeitar a hipótese nula.
+<section id="exemplo-de-teste-t-de-amostra-unica-de-duas-caudas-bicaudal">
+<h2>Exemplo de teste t de amostra única de duas caudas (bicaudal)<a class="headerlink" href="#exemplo-de-teste-t-de-amostra-unica-de-duas-caudas-bicaudal" title="Link to this heading">#</a></h2>
+<p>No exemplo anterior, usamos um teste t unilateral (também conhecido como teste direcional). Também é possível usar um teste t bicaudal (também conhecido como teste não direcional). Por exemplo, suponha que, depois de saber que os formandos em farmácia eram excessivamente otimistas em relação aos seus próprios salários iniciais, você desejasse saber se os alunos são igualmente otimistas ao estimar os salários iniciais dos outros. Para testar isso, você recruta 15 estudantes de farmácia diferentes e pede-lhes que estimem o salário médio mensal que um típico estudante de farmácia pode esperar em seu primeiro emprego após a formatura. Você não tem certeza se os alunos superestimarão ou subestimarão os salários iniciais dos outros e, portanto, você deve fazer um teste bicaudal em vez de um teste unilateral. Em testes de hipóteses bicaudais, você não tem uma previsão direcional específica em relação ao tratamento. Portanto, a hipótese de pesquisa bicaudal afirma que o salário médio mensal estimado será superior a 3000 Reais ou inferior a 3000. Assim, as hipóteses de pesquisa bicaudais possuem duas regiões críticas, uma na cauda positiva e outra na cauda negativa. Se o valor t obtido estivesse na região crítica positiva, você concluiria que os alunos superestimaram o salário inicial médio do típico do curso de farmácia. Por outro lado, se o valor t obtido estivesse na região crítica negativa, você concluiria que os alunos subestimaram o salário inicial médio. Finalmente, se o valor t obtido fosse “próximo de zero” (ou seja, entre os valores críticos positivos e negativos), você não conseguiria rejeitar a hipótese nula.
 A escolha entre um teste unicaudal ou bicaudal pode ter um impacto dramático na(s) região(ões) crítica(s) e, portanto, sua decisão sobre usar um teste unicaudal ou bicaudal pode influenciar se você rejeita ou não a hipótese nula do teste. Por exemplo, se sua amostra tiver 15 pessoas e você realizar um teste unilateral com <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>, seu valor crítico seria +1.7613 e você rejeitaria o nulo se o valor t obtido fosse +1.8. No entanto, se você analisasse os mesmos dados, mas optasse por realizar um teste bicaudal, seus valores t críticos seriam +2.1448 e -2.1448. Se usar esse teste bicaudal, você não rejeitaria a hipótese nula se o valor de t obtido fosse +1.8 porque +1.8 não está em nenhuma das duas regiões críticas. A Figura 7.2 demonstra isso visualmente. A razão para as diferentes conclusões é que o valor crítico do teste unicaudal está mais próximo de zero do que os valores críticos bicaudais. Para ambos os tipos de testes, 5% da distribuição está em uma região crítica, mas com um teste bicaudal, 2.5% da distribuição está em cada cauda, enquanto com um teste unicaudal, 5% está em uma cauda única. Isso significa que o valor crítico estará mais próximo de zero para um teste unilateral do que para um teste bicaudal. Portanto, se a sua hipótese de pesquisa for direcional, é vantajoso usar um teste unilateral em vez de um teste bicaudal. Novamente, esse ponto é apresentado visualmente na Figura 7.3.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -12742,7 +12742,7 @@ A escolha entre um teste unicaudal ou bicaudal pode ter um impacto dramático na
 <span class="c1">#px=np.arange(-tc,0-3*1,0.1)</span>
 <span class="c1">#plt.fill_between(px, T.pdf(px),color=&#39;b&#39;)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.75</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_c=1.76$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.75</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;tc=1.76&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">1.76</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribuição t com região crítica unicaudal.&#39;</span><span class="p">)</span>
 <span class="c1">#plt.savefig(&#39;regiao_critica_unicaudal_t.png&#39;, bbox_inches=&#39;tight&#39;, pad_inches=0.02, dpi=150)</span>
@@ -12754,7 +12754,7 @@ A escolha entre um teste unicaudal ou bicaudal pode ter um impacto dramático na
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição t com região crítica unicaudal.&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/83af112572c048d9d2cdb26e4cdae05801d0599b5ec1645a7261874da988ba02.png" src="../../_images/83af112572c048d9d2cdb26e4cdae05801d0599b5ec1645a7261874da988ba02.png" />
+<img alt="../../_images/28e533dd18180c29d233d067c26b88f3da86df135fed263926d8933d87eb622c.png" src="../../_images/28e533dd18180c29d233d067c26b88f3da86df135fed263926d8933d87eb622c.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -12781,9 +12781,9 @@ A escolha entre um teste unicaudal ou bicaudal pode ter um impacto dramático na
 <span class="n">px</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">tc</span><span class="p">,</span><span class="mi">0</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">T</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">px</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.13</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_c=2.145$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.13</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;tc=2.145&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">2.145</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">2.13</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_c=-2.145$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">2.13</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;tc=−2.145&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="o">-</span><span class="mf">2.145</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribuição t com região crítica bicaudal.&#39;</span><span class="p">)</span>
@@ -12796,7 +12796,7 @@ A escolha entre um teste unicaudal ou bicaudal pode ter um impacto dramático na
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição t com região crítica bicaudal.&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/d75f480d9becb4586e2b7e1ba765804ae329d1c70d51be841e57deabca280bf9.png" src="../../_images/d75f480d9becb4586e2b7e1ba765804ae329d1c70d51be841e57deabca280bf9.png" />
+<img alt="../../_images/00da168722e86044b2ea1b94ede8da39f0bc55a03ff6be9923523913b82e99d0.png" src="../../_images/00da168722e86044b2ea1b94ede8da39f0bc55a03ff6be9923523913b82e99d0.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -12813,13 +12813,13 @@ A escolha entre um teste unicaudal ou bicaudal pode ter um impacto dramático na
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="cQkLQOoPWQvL" data-shufflequestions="False"
+<div class="output text_html"><div id="AJaZGKzwVmzk" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#cQkLQOoPWQvL {
+#AJaZGKzwVmzk {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -12989,7 +12989,7 @@ A escolha entre um teste unicaudal ou bicaudal pode ter um impacto dramático na
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionscQkLQOoPWQvL=[{"question":"21. Por que sua decisão de realizar um teste unilateral em vez de um teste bicaudal potencialmente importante?",
+</style></div><script type="application/javascript">var questionsAJaZGKzwVmzk=[{"question":"21. Por que sua decisão de realizar um teste unilateral em vez de um teste bicaudal é potencialmente importante?",
 "type":"multiple_choice",
 "answers":[{"answer":"a. Os testes uni e bicaudais têm regiões críticas diferentes e, portanto, podem levar a conclusões diferentes sobre a hipótese nula.",
 "correct":true, "feedback": "Correto!"},
@@ -12997,9 +12997,9 @@ A escolha entre um teste unicaudal ou bicaudal pode ter um impacto dramático na
 },
 {"question":"22. Quando você deve realizar um teste unilateral?",
 "type":"multiple_choice",
-"answers":[{"answer":"a. Conduza um teste unilateral quando a hipótese de pesquisa prevê que a quantidade estudada irá aumentar ou se prevê que a quantidade diminuirá.",
+"answers":[{"answer":"a. Quando a hipótese de pesquisa prevê que a variável estudada irá aumentar ou se irá diminuir.",
 "correct":true, "feedback": "Correto!"},
-{"answer":"b. Conduza um teste unilateral quando a hipótese de pesquisa não especificar se as quantidades estudadas aumentarão ou diminuirão.", "correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+{"answer":"b. Quando a hipótese de pesquisa não especificar se as variáveis estudadas aumentarão ou diminuirão.", "correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
 }];
     // Make a random ID
 function makeid(length) {
@@ -13787,8 +13787,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("cQkLQOoPWQvL")) {
-            show_questions(questionscQkLQOoPWQvL,  cQkLQOoPWQvL); 
+          if(document.getElementById("AJaZGKzwVmzk")) {
+            show_questions(questionsAJaZGKzwVmzk,  AJaZGKzwVmzk); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -13797,8 +13797,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("cQkLQOoPWQvL");
-        // console.log(document.getElementById("cQkLQOoPWQvL"));
+        //console.log("AJaZGKzwVmzk");
+        // console.log(document.getElementById("AJaZGKzwVmzk"));
 
         try_show();
         }
@@ -13807,7 +13807,7 @@ if (typeof version == 'undefined') {
 <p>Depois de saber que os formandos em farmácia eram excessivamente otimistas em relação aos seus próprios salários iniciais, você quer saber se os alunos estão igualmente otimistas em relação aos salários iniciais dos outros. Você recruta 15 estudantes de farmácia diferentes e pede-lhes que estimem o salário médio mensal que um estudante de farmácia típico pode esperar em seu primeiro emprego após a formatura. Os salários estimados foram 3400, 3500, 2500, 3200, 2700, 2000, 2500, 3300, 3200, 3000, 2900, 3900, 3800, 3900 e 3600. Você sabe que o salário mensal real da população normalmente é formado por <span class="math notranslate nohighlight">\(\mu = 3000\)</span>. Você não tem certeza se os alunos ficarão otimistas em relação aos salários iniciais dos outros e, portanto, você escolhe corretamente fazer um teste bicaudal em vez de um teste unilateral. Você decide usar <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
 <section id="etapa-1-examinar-as-premissas-estatisticas">
 <h3><em>Etapa 1: examinar as premissas estatísticas</em><a class="headerlink" href="#etapa-1-examinar-as-premissas-estatisticas" title="Link to this heading">#</a></h3>
-<p>Seu estudo parece atender a todas as quatro suposições estatísticas. Os dados foram coletados cuidadosamente para garantir que as respostas dos alunos não influenciassem umas às outras (suposição de independência dos dados). Você também formulou sua pergunta com cuidado para que as respostas dos alunos não se tornassem mais ou menos variáveis (suposição de homogeneidade de variância). Você mediu o VD do salário esperado em como um variável quantitativa, e seu VI identifica como a amostra difere da população (suposição de medição apropriada de variáveis). A distribuição das médias amostrais terá um formato normal (suposição de normalidade) porque a população original de sálarios estimados tem um formato normal. Novamente, um bom projeto experimental é necessário para estatísticas confiáveis.</p>
+<p>Seu estudo parece atender a todas as quatro suposições estatísticas. Os dados foram coletados cuidadosamente para garantir que as respostas dos alunos não influenciassem umas às outras (suposição de independência dos dados). Você também formulou sua pergunta com cuidado para que as respostas dos alunos não se tornassem mais ou menos variáveis (suposição de homogeneidade de variância). Você mediu o VD do salário esperado como uma variável quantitativa, e sua VI identifica como a amostra difere da população (suposição de medição apropriada de variáveis). A distribuição das médias amostrais terá um formato normal (suposição de normalidade) porque a população original de sálarios estimados tem um formato normal. Novamente, um bom projeto experimental é necessário para estatísticas confiáveis.</p>
 </section>
 <section id="etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa-imbolicamente-e-verbalmente">
 <h3><em>Etapa 2: expor as hipóteses nulas e de pesquisa imbolicamente e Verbalmente</em><a class="headerlink" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa-imbolicamente-e-verbalmente" title="Link to this heading">#</a></h3>
@@ -13817,7 +13817,7 @@ if (typeof version == 'undefined') {
 <thead>
 <tr class="row-odd"><th class="head"><p>Tipo de Hipótese</p></th>
 <th class="head"><p>Simbólico</p></th>
-<th class="head"><p>Vebal</p></th>
+<th class="head"><p>Verbal</p></th>
 <th class="head"><p>Diferença entre médias amostral e populacional</p></th>
 </tr>
 </thead>
@@ -13849,13 +13849,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="fHTHtcQtbqFz" data-shufflequestions="False"
+<div class="output text_html"><div id="ZtweeIOWMBkz" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#fHTHtcQtbqFz {
+#ZtweeIOWMBkz {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -14025,7 +14025,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsfHTHtcQtbqFz=[{"question":"23. Qual dos seguintes símbolos deve ser usado para representar uma hipótese de pesquisa bicaudal?",
+</style></div><script type="application/javascript">var questionsZtweeIOWMBkz=[{"question":"23. Qual dos seguintes símbolos deve ser usado para representar uma hipótese de pesquisa bicaudal?",
 "type":"multiple_choice",
 "answers":[{"answer":"a. ≤", "correct":false, "feedback":"Resposta incorreta. Por favor, tente novamente."},
 {"answer":"b. >", "correct":false, "feedback":"Resposta incorreta. Por favor, tente novamente."},
@@ -14818,8 +14818,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("fHTHtcQtbqFz")) {
-            show_questions(questionsfHTHtcQtbqFz,  fHTHtcQtbqFz); 
+          if(document.getElementById("ZtweeIOWMBkz")) {
+            show_questions(questionsZtweeIOWMBkz,  ZtweeIOWMBkz); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -14828,8 +14828,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("fHTHtcQtbqFz");
-        // console.log(document.getElementById("fHTHtcQtbqFz"));
+        //console.log("ZtweeIOWMBkz");
+        // console.log(document.getElementById("ZtweeIOWMBkz"));
 
         try_show();
         }
@@ -14857,9 +14857,9 @@ if (typeof version == 'undefined') {
 <span class="n">a05</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.05</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gls</span><span class="p">]</span>
 <span class="n">a025</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.025</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gls</span><span class="p">]</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">gls</span><span class="p">,</span> <span class="n">a05</span><span class="p">,</span> <span class="n">a025</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;gl&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\alpha = .05$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\alpha = .025$&#39;</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">gls</span><span class="p">,</span> <span class="n">a05</span><span class="p">,</span> <span class="n">a025</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;gl&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;α=.05&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;α=.025&#39;</span><span class="p">])</span>
 
-<span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;$\alpha = .05$&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;background-color: yellow&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">})</span>
+<span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;α=.05&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;background-color: yellow&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">})</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">color</span><span class="p">)</span>
 </pre></div>
@@ -14868,37 +14868,37 @@ if (typeof version == 'undefined') {
 </details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_4f36d_row1_col0, #T_4f36d_row1_col1, #T_4f36d_row1_col2 {
+#T_865ef_row1_col0, #T_865ef_row1_col1, #T_865ef_row1_col2 {
   background-color: yellow;
 }
 </style>
-<table id="T_4f36d">
+<table id="T_865ef">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_4f36d_level0_col0" class="col_heading level0 col0" >gl</th>
-      <th id="T_4f36d_level0_col1" class="col_heading level0 col1" >$\alpha = .05$</th>
-      <th id="T_4f36d_level0_col2" class="col_heading level0 col2" >$\alpha = .025$</th>
+      <th id="T_865ef_level0_col0" class="col_heading level0 col0" >gl</th>
+      <th id="T_865ef_level0_col1" class="col_heading level0 col1" >α=.05</th>
+      <th id="T_865ef_level0_col2" class="col_heading level0 col2" >α=.025</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_4f36d_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_4f36d_row0_col0" class="data row0 col0" >13</td>
-      <td id="T_4f36d_row0_col1" class="data row0 col1" >1.770900</td>
-      <td id="T_4f36d_row0_col2" class="data row0 col2" >2.160400</td>
+      <th id="T_865ef_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_865ef_row0_col0" class="data row0 col0" >13</td>
+      <td id="T_865ef_row0_col1" class="data row0 col1" >1.770900</td>
+      <td id="T_865ef_row0_col2" class="data row0 col2" >2.160400</td>
     </tr>
     <tr>
-      <th id="T_4f36d_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_4f36d_row1_col0" class="data row1 col0" >14</td>
-      <td id="T_4f36d_row1_col1" class="data row1 col1" >1.761300</td>
-      <td id="T_4f36d_row1_col2" class="data row1 col2" >2.144800</td>
+      <th id="T_865ef_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_865ef_row1_col0" class="data row1 col0" >14</td>
+      <td id="T_865ef_row1_col1" class="data row1 col1" >1.761300</td>
+      <td id="T_865ef_row1_col2" class="data row1 col2" >2.144800</td>
     </tr>
     <tr>
-      <th id="T_4f36d_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_4f36d_row2_col0" class="data row2 col0" >15</td>
-      <td id="T_4f36d_row2_col1" class="data row2 col1" >1.753100</td>
-      <td id="T_4f36d_row2_col2" class="data row2 col2" >2.131400</td>
+      <th id="T_865ef_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_865ef_row2_col0" class="data row2 col0" >15</td>
+      <td id="T_865ef_row2_col1" class="data row2 col1" >1.753100</td>
+      <td id="T_865ef_row2_col2" class="data row2 col2" >2.131400</td>
     </tr>
   </tbody>
 </table>
@@ -14943,12 +14943,12 @@ if (typeof version == 'undefined') {
 <span class="n">px</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">tc</span><span class="p">,</span><span class="mi">0</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">T</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">px</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.13</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_c=2.145$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.13</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;tc=2.145&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">2.145</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_</span><span class="si">{obs}</span><span class="s1">=1.1$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;tobs=1.1&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">2.13</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_c=-2.145$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">2.13</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;tc=−2.145&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="o">-</span><span class="mf">2.145</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribuição t com região crítica bicaudal e t observado.&#39;</span><span class="p">)</span>
@@ -14961,7 +14961,7 @@ if (typeof version == 'undefined') {
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição t com região crítica bicaudal e t observado.&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/75064f61ba28433589681e3dc2860b3295eae7478a1c6a73b034b4a61452acf2.png" src="../../_images/75064f61ba28433589681e3dc2860b3295eae7478a1c6a73b034b4a61452acf2.png" />
+<img alt="../../_images/644896d2b2b12b027e764241a4ab7a92d0e0332406513d0621f87b178b1d47ed.png" src="../../_images/644896d2b2b12b027e764241a4ab7a92d0e0332406513d0621f87b178b1d47ed.png" />
 </div>
 </div>
 </section>
@@ -14974,7 +14974,7 @@ if (typeof version == 'undefined') {
 <section id="id4">
 <h3><em>Etapa 6: Interpretando os Resultados do Teste de Hipóteses</em><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>A única diferença ao escrever resumos de testes de hipóteses unicaudais e bicaudais é que você precisa informar ao leitor se executou um teste unicaudal ou bicaudal. É uma boa prática fazer sempre isso, mas não fizemos isso anteriormente porque você ainda não conhecia os dois tipos de testes. As frases a seguir resumem a análise deste exemplo:</p>
-<p>O salário médio estimado para estudantes típicos de psicologia <span class="math notranslate nohighlight">\((\bar{x} = 3160.00, DP = 561.63)\)</span> não foi significativamente diferente do salário médio mensal real de 3000 Reais, t(14) = 1.10, <span class="math notranslate nohighlight">\(p &gt; 0.05\)</span> (bicaudal), d = 0.28. Esses resultados sugerem que os estudantes de farmácia são bastante precisos ao estimar os futuros salários iniciais de outras pessoas. Embora tenha havido uma ligeira tendência para sobrestimar os salários, não houve provas suficientes para concluir que a tendência era mais do que apenas um erro de amostragem.</p>
+<p>O salário médio estimado para estudantes típicos de farmácia <span class="math notranslate nohighlight">\((\bar{x} = 3160.00, DP = 561.63)\)</span> não foi significativamente diferente do salário médio mensal real de 3000 Reais, t(14) = 1.10, <span class="math notranslate nohighlight">\(p &gt; 0.05\)</span> (bicaudal), d = 0.28. Esses resultados sugerem que os estudantes de farmácia são bastante precisos ao estimar os futuros salários iniciais de outras pessoas. Embora tenha havido uma ligeira tendência para superestimar os salários, não houve provas suficientes para concluir que a tendência era mais do que apenas um erro de amostragem.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -14989,13 +14989,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="NHEsXfVwdKiq" data-shufflequestions="False"
+<div class="output text_html"><div id="iqPgssSqfORU" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#NHEsXfVwdKiq {
+#iqPgssSqfORU {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -15165,7 +15165,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsNHEsXfVwdKiq=[{"question":"24. Para qual das seguintes etapas de teste de hipótese existe uma diferença entre testes unicaudais e bicaudais? (Você deve escolher três das cinco etapas a seguir.)",
+</style></div><script type="application/javascript">var questionsiqPgssSqfORU=[{"question":"24. Para quais das seguintes etapas de teste de hipótese existe uma diferença entre testes unicaudais e bicaudais? (Você deve escolher três das cinco etapas a seguir.)",
 "type":"many_choice",
 "answers":[{"answer":"a. Etapa 1: declaração de hipóteses nula e de pesquisa","correct":true, "feedback":"Correto!"},
 {"answer":"b. Etapa 2: definição da região crítica","correct":true, "feedback":"Correto!"},
@@ -15959,8 +15959,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("NHEsXfVwdKiq")) {
-            show_questions(questionsNHEsXfVwdKiq,  NHEsXfVwdKiq); 
+          if(document.getElementById("iqPgssSqfORU")) {
+            show_questions(questionsiqPgssSqfORU,  iqPgssSqfORU); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -15969,8 +15969,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("NHEsXfVwdKiq");
-        // console.log(document.getElementById("NHEsXfVwdKiq"));
+        //console.log("iqPgssSqfORU");
+        // console.log(document.getElementById("iqPgssSqfORU"));
 
         try_show();
         }
@@ -15981,8 +15981,8 @@ if (typeof version == 'undefined') {
 <section id="outros-niveis-de-alpha">
 <h2>Outros Níveis de <span class="math notranslate nohighlight">\(\alpha\)</span><a class="headerlink" href="#outros-niveis-de-alpha" title="Link to this heading">#</a></h2>
 <p>Em ambos os exemplos anteriores, optamos por usar  <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> porque em muitas áreas de pesquisa é o nível alfa mais comumente usado. No entanto, em alguns casos, você pode escolher o nível alfa mais rigoroso de 0.01. Um resultado do uso de <span class="math notranslate nohighlight">\(\alpha = 0.01\)</span> é que a região crítica se torna menor. Por exemplo, se você usasse <span class="math notranslate nohighlight">\(\alpha = 0.01\)</span> com um teste bicaudal com gl = 14, suas regiões críticas seriam <span class="math notranslate nohighlight">\(t \geq 2.9768\)</span> e <span class="math notranslate nohighlight">\(t \leq -2.9768\)</span>. Se você usasse <span class="math notranslate nohighlight">\(\alpha = 0.01\)</span> com um teste unilateral com gl = 14, suas regiões críticas seriam <span class="math notranslate nohighlight">\(t \geq 2.6245\)</span>.
-Quando a hipótese nula é verdadeira, a probabilidade de um erro Tipo I é igual ao valor alfa que você escolher. Portanto, se você escolher o <span class="math notranslate nohighlight">\(\alpha = 0.01\)</span> mais rigoroso, estará dificultando a rejeição da hipótese nula. Isso significa que é menos provável que você cometa um erro Tipo I, mas o nível alfa menor também afeta as taxas de erro Tipo II e o poder estatístico. O alfa menor de 0.01 significa que você tem menos poder estatístico e é mais provável que cometa um erro Tipo II do que se usar um valor alfa de 0.05. Assim, você precisa equilibrar seu desejo de minimizar os erros do Tipo I com seu desejo de ter poder estatístico (ou seja, sua capacidade de rejeitar a hipótese nula).
-Neste livro, normalmente lhe diremos qual nível alfa usar, porque você ainda não tem informações suficientes sobre as questões de pesquisa para tomar uma decisão informada sobre qual nível alfa é mais apropriado. Os pesquisadores tomam essa decisão com base em vários fatores diferentes. Por exemplo, um pesquisador que está testando um tratamento para um distúrbio grave que atualmente não tem tratamento disponível ficará mais preocupado em cometer um erro do Tipo II (perder um tratamento realmente funciona) e usar um nível alfa mais alto (por exemplo, 0.05). ou mesmo 0.10). Os pesquisadores também podem escolher o nível alfa  com base no tamanho da amostra. Por exemplo, um investigador que estuda as diferenças de género nas pontuações dos testes de matemática pode ter acesso às pontuações de milhões de crianças. Neste caso, o pesquisador provavelmente usaria um nível alfa muito mais baixo (por exemplo, 0.01 ou mesmo 0.001) porque tem tanto poder estatístico que não deseja relatar efeitos estatisticamente significativos, mas praticamente sem sentido (ou seja, têm tamanhos de efeito muito pequenos).</p>
+Quando a hipótese nula é verdadeira, a probabilidade de um erro do Tipo I é igual ao valor alfa que você escolher. Portanto, se você escolher o <span class="math notranslate nohighlight">\(\alpha = 0.01\)</span> mais rigoroso, estará dificultando a rejeição da hipótese nula. Isso significa que é menos provável que você cometa um erro do Tipo I, mas o nível alfa menor também afeta as taxas de erro do Tipo II e o poder estatístico. O alfa menor de 0.01 significa que você tem menos poder estatístico e é mais provável que cometa um erro do Tipo II do que se usar um valor alfa de 0.05. Assim, você precisa equilibrar seu desejo de minimizar os erros do Tipo I com seu desejo de ter poder estatístico (ou seja, sua capacidade de rejeitar a hipótese nula).
+Neste livro, normalmente lhe diremos qual nível alfa usar, porque você ainda não tem informações suficientes sobre as questões de pesquisa para tomar uma decisão informada sobre qual nível alfa é mais apropriado. Os pesquisadores tomam essa decisão com base em vários fatores diferentes. Por exemplo, um pesquisador que está testando um tratamento para um distúrbio grave que atualmente não tem tratamento disponível ficará mais preocupado em cometer um erro do Tipo II (perder um tratamento que realmente funciona) e usar um nível alfa mais alto (por exemplo, 0.05, ou mesmo 0.10). Os pesquisadores também podem escolher o nível alfa  com base no tamanho da amostra. Por exemplo, um investigador que estuda as diferenças de gênero nas pontuações dos exames de matemática pode ter acesso às pontuações de milhões de crianças. Neste caso, o pesquisador provavelmente usaria um nível alfa muito mais baixo (por exemplo, 0.01 ou mesmo 0.001) porque tem tanto poder estatístico que não deseja relatar efeitos estatisticamente significativos, mas praticamente sem sentido (ou seja, cujos tamanhos de efeito são muito pequenos).</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -15997,13 +15997,13 @@ Neste livro, normalmente lhe diremos qual nível alfa usar, porque você ainda n
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="hIYxmIgEgpHT" data-shufflequestions="False"
+<div class="output text_html"><div id="XQiqleDyIpnJ" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#hIYxmIgEgpHT {
+#XQiqleDyIpnJ {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -16173,17 +16173,17 @@ Neste livro, normalmente lhe diremos qual nível alfa usar, porque você ainda n
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionshIYxmIgEgpHT=[{"question":"25. Qual dos seguintes valores alfa cria uma maior probabilidade de erro Tipo I?",
+</style></div><script type="application/javascript">var questionsXQiqleDyIpnJ=[{"question":"25. Qual dos seguintes valores alfa cria uma maior probabilidade de erro do Tipo I?",
 "type":"multiple_choice",
 "answers":[{"answer":"a. .01","correct":false, "feedback": "Incorreto. Leia a questão novamente."},
 {"answer":"b. 0.05","correct":true, "feedback": "Correto!"}]},
-{"question":"26. Qual dos seguintes valores alfa cria uma maior probabilidade de erro Tipo II?",
+{"question":"26. Qual dos seguintes valores alfa cria uma maior probabilidade de erro do Tipo II?",
 "type":"multiple_choice",
-"answers":[{"answer":"a. .01","correct":true, "feedback": "Correto!"},
+"answers":[{"answer":"a. 0.01","correct":true, "feedback": "Correto!"},
 {"answer":"b. 0.05","correct":false, "feedback": "Incorreto. Leia a questão novamente."}]},
 {"question":"27. Qual dos seguintes valores alfa resulta em mais poder estatístico?",
 "type":"multiple_choice",
-"answers":[{"answer":"a. .01","correct":false, "feedback": "Incorreto. Leia a questão novamente."},
+"answers":[{"answer":"a. 0.01","correct":false, "feedback": "Incorreto. Leia a questão novamente."},
 {"answer":"b. 0.05","correct":true, "feedback": "Correto!"}]
 }];
     // Make a random ID
@@ -16972,8 +16972,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("hIYxmIgEgpHT")) {
-            show_questions(questionshIYxmIgEgpHT,  hIYxmIgEgpHT); 
+          if(document.getElementById("XQiqleDyIpnJ")) {
+            show_questions(questionsXQiqleDyIpnJ,  XQiqleDyIpnJ); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -16982,8 +16982,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("hIYxmIgEgpHT");
-        // console.log(document.getElementById("hIYxmIgEgpHT"));
+        //console.log("XQiqleDyIpnJ");
+        // console.log(document.getElementById("XQiqleDyIpnJ"));
 
         try_show();
         }
@@ -17087,7 +17087,7 @@ if (typeof version == 'undefined') {
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-6-interpretando-os-resultados-do-teste-de-hipoteses"><em>Etapa 6: Interpretando os Resultados do Teste de Hipóteses</em></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-de-teste-t-de-amostra-unical-de-duas-caudas-bicaudal">Exemplo de teste t de amostra únical de duas caudas (bicaudal)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-de-teste-t-de-amostra-unica-de-duas-caudas-bicaudal">Exemplo de teste t de amostra única de duas caudas (bicaudal)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-1-examinar-as-premissas-estatisticas"><em>Etapa 1: examinar as premissas estatísticas</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa-imbolicamente-e-verbalmente"><em>Etapa 2: expor as hipóteses nulas e de pesquisa imbolicamente e Verbalmente</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-3-use-o-tamanho-da-amostra-para-calcular-os-graus-de-liberdade-e-definir-as-regioes-criticas"><em>Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e definir as regiões críticas</em></a></li>

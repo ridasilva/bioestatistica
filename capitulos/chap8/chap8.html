@@ -397,8 +397,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="estimativa-com-intervalos-de-confianca">
 <h1>8 - Estimativa com Intervalos de confiança<a class="headerlink" href="#estimativa-com-intervalos-de-confianca" title="Link to this heading">#</a></h1>
 <p>Este material foi traduzido e adaptado de <span id="id1">[<a class="reference internal" href="#id9" title="Kieth A Carlson and Jennifer R Winquist. An introduction to statistics: An active learning approach. Sage Publications, 2017.">CW17</a>]</span>.</p>
-<p>OBJETIVOS DE APRENDIZADO
-Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
+<p>OBJETIVOS DE APRENDIZADO</p>
+<p>Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
 <ul class="simple">
 <li><p>Descrever os objetivos distintos dos testes de significância, tamanhos de efeito e intervalos de confiança;</p></li>
 <li><p>Explique a lógica dos intervalos de confiança;</p></li>
@@ -410,7 +410,12 @@ Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
 <section id="tres-procedimentos-de-estatisticos-com-tres-finalidades-distintas">
 <h2>Três procedimentos de estatísticos com três finalidades distintas<a class="headerlink" href="#tres-procedimentos-de-estatisticos-com-tres-finalidades-distintas" title="Link to this heading">#</a></h2>
 <p>No Capítulo 7, você aprendeu como usar o teste t de amostra única para determinar se uma diferença observada entre uma média amostral e uma média populacional tem probabilidade de ser criada por erro amostral ou por uma variável independente (VI; ou seja, o variável de agrupamento). O teste t para amostra única compara a diferença média observada nos dados com a diferença média esperada devido ao erro amostral (ou seja, SEM). Se a diferença média observada for significativamente maior do que a diferença média esperada devido ao erro amostral, a hipótese nula é rejeitada e você conclui que a diferença média foi criada pela VI. Esta conclusão é sólida se a metodologia de pesquisa do estudo for sólida (ou seja, não tiver variáveis de confusão).</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
 <span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
@@ -419,14 +424,15 @@ Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="ZiAZpxcPEMGK" data-shufflequestions="False"
+<div class="output text_html"><div id="jWHXhHvUmeJy" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#ZiAZpxcPEMGK {
+#jWHXhHvUmeJy {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -596,7 +602,7 @@ Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsZiAZpxcPEMGK=[{"question":"1. Os testes de significância (por exemplo, testes t de amostra única) foram concebidos para ajudar os investigadores a determinar se a diferença observada era susceptível de ser criada por",
+</style></div><script type="application/javascript">var questionsjWHXhHvUmeJy=[{"question":"1. Os testes de significância (por exemplo, testes t de amostra única) foram concebidos para ajudar os investigadores a determinar se a diferença observada era susceptível de ser criada por",
 "type":"multiple_choice",
 "answers":[{"answer": "a. erro de amostragem.", "correct": true, "feedback": "Correto!"},
 {"answer": "b. fator confundidor (uma variável que influencia tanto a variável dependente, quanto a variável independente).", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
@@ -1387,8 +1393,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("ZiAZpxcPEMGK")) {
-            show_questions(questionsZiAZpxcPEMGK,  ZiAZpxcPEMGK); 
+          if(document.getElementById("jWHXhHvUmeJy")) {
+            show_questions(questionsjWHXhHvUmeJy,  jWHXhHvUmeJy); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1397,28 +1403,35 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("ZiAZpxcPEMGK");
-        // console.log(document.getElementById("ZiAZpxcPEMGK"));
+        //console.log("jWHXhHvUmeJy");
+        // console.log(document.getElementById("jWHXhHvUmeJy"));
 
         try_show();
         }
         </script></div>
 </div>
 <p>Depois que os pesquisadores usam testes de significância, eles calculam um tamanho do efeito (por exemplo, d) para descrever a magnitude do impacto do VI na variável dependente (VD). Calcular o tamanho do efeito é tão importante quanto o teste de significância. Por exemplo, você pode usar o resultado de um teste de significância para rejeitar a hipótese nula e então descobrir que o tamanho do efeito é muito pequeno. Isto indicaria que, embora seja pouco provável que os resultados se devam a erros de amostragem, a dimensão do efeito pode ser demasiado pequena para ser importante ou útil.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question2.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question2.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="dUQxkYqVUrVB" data-shufflequestions="False"
+<div class="output text_html"><div id="XNbsixsfrNaR" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#dUQxkYqVUrVB {
+#XNbsixsfrNaR {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -1588,7 +1601,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsdUQxkYqVUrVB=[{"question":"2. Se um teste estatístico levar à rejeição da hipótese nula, a conclusão da pesquisa é sempre importante ou útil.",
+</style></div><script type="application/javascript">var questionsXNbsixsfrNaR=[{"question":"2. Se um teste estatístico levar à rejeição da hipótese nula, a conclusão da pesquisa é sempre importante ou útil.",
 "type":"multiple_choice",
 "answers":[{"answer":"a. Verdadeiro","correct":false, "feedback": "Leia o parágrafo acima novamente."},
 {"answer":"b. Falso", "correct":true, "feedback": "Correto! O tamanho do efeito pode ser demasiado pequeno para ser importante ou útil."}]
@@ -2385,8 +2398,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("dUQxkYqVUrVB")) {
-            show_questions(questionsdUQxkYqVUrVB,  dUQxkYqVUrVB); 
+          if(document.getElementById("XNbsixsfrNaR")) {
+            show_questions(questionsXNbsixsfrNaR,  XNbsixsfrNaR); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -2395,8 +2408,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("dUQxkYqVUrVB");
-        // console.log(document.getElementById("dUQxkYqVUrVB"));
+        //console.log("XNbsixsfrNaR");
+        // console.log(document.getElementById("XNbsixsfrNaR"));
 
         try_show();
         }
@@ -2425,20 +2438,27 @@ Como você pode ver, os intervalos de confiança são um procedimento estatísti
 </tr>
 </tbody>
 </table>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question3.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question3.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="RMnPRaHcitHT" data-shufflequestions="False"
+<div class="output text_html"><div id="lVydfZaEQDJT" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#RMnPRaHcitHT {
+#lVydfZaEQDJT {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -2608,7 +2628,7 @@ Como você pode ver, os intervalos de confiança são um procedimento estatísti
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsRMnPRaHcitHT=[{"question":"4. O objetivo de um intervalo de confiança é",
+</style></div><script type="application/javascript">var questionslVydfZaEQDJT=[{"question":"4. O objetivo de um intervalo de confiança é",
 "type":"multiple_choice",
 "answers":[{"answer":"a. teste para diferenças significativas.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. quantificar a eficácia de um tratamento.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
@@ -3404,8 +3424,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("RMnPRaHcitHT")) {
-            show_questions(questionsRMnPRaHcitHT,  RMnPRaHcitHT); 
+          if(document.getElementById("lVydfZaEQDJT")) {
+            show_questions(questionslVydfZaEQDJT,  lVydfZaEQDJT); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -3414,8 +3434,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("RMnPRaHcitHT");
-        // console.log(document.getElementById("RMnPRaHcitHT"));
+        //console.log("lVydfZaEQDJT");
+        // console.log(document.getElementById("lVydfZaEQDJT"));
 
         try_show();
         }
@@ -3428,20 +3448,27 @@ if (typeof version == 'undefined') {
 Embora existam muitos tipos diferentes de ICs, todos eles têm uma lógica semelhante. Cada IC usa uma estimativa pontual e uma margem de erro em torno dessa estimativa pontual para encontrar valores de limite superior e inferior. Ao estimar uma média populacional, a estimativa pontual é a média amostral, que é o valor mais plausível para <span class="math notranslate nohighlight">\(\mu\)</span>, e uma margem de erro determina o intervalo de valores plausíveis adicionais para esse parâmetro. No exemplo acima, a média amostral do tempo de exercício semanal dos estudantes universitários após frequentarem o curso de vida saudável (<span class="math notranslate nohighlight">\(\bar{x} = 155.67\)</span>) é a previsão mais plausível para o tempo médio de exercício da população se eles frequentarem o curso de vida saudável. Mas, devido ao erro amostral, esta estimativa pontual de 155.67 provavelmente não é perfeitamente precisa. Portanto, uma margem de erro é adicionada e subtraída da estimativa pontual para obter os limites superior e inferior do IC. As fórmulas conceituais para os limites superior e inferior são fornecidas a seguir:</p>
 <p>Limite superior = estimativa pontual + Margem de erro.</p>
 <p>Limite inferior = estimativa pontual - Margem de erro.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question4.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question4.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="ZoofruyFbhmz" data-shufflequestions="False"
+<div class="output text_html"><div id="LEGFnngzrHgV" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#ZoofruyFbhmz {
+#LEGFnngzrHgV {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -3611,7 +3638,7 @@ Embora existam muitos tipos diferentes de ICs, todos eles têm uma lógica semel
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsZoofruyFbhmz=[{"question": "6. Qual das alternativas a seguir pode ser usada como estimativa pontual em um IC?",
+</style></div><script type="application/javascript">var questionsLEGFnngzrHgV=[{"question": "6. Qual das alternativas a seguir pode ser usada como estimativa pontual em um IC?",
 "type": "multiple_choice",
 "answers":[{"answer":"a. Limite superior", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. Limite inferior", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
@@ -4408,8 +4435,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("ZoofruyFbhmz")) {
-            show_questions(questionsZoofruyFbhmz,  ZoofruyFbhmz); 
+          if(document.getElementById("LEGFnngzrHgV")) {
+            show_questions(questionsLEGFnngzrHgV,  LEGFnngzrHgV); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -4418,28 +4445,35 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("ZoofruyFbhmz");
-        // console.log(document.getElementById("ZoofruyFbhmz"));
+        //console.log("LEGFnngzrHgV");
+        // console.log(document.getElementById("LEGFnngzrHgV"));
 
         try_show();
         }
         </script></div>
 </div>
 <p>O centro de um IC é a média amostral. O tamanho da margem de erro em torno da média amostral é determinado por dois fatores: (1) a quantidade esperada de erro amostral (SEM) e (2) o nível específico de confiança que você deseja alcançar (geralmente 95% ou 99% confiança). Provavelmente faz sentido para você que estudos com maiores erros amostrais esperados tenham ICs com margens de erro maiores. Afinal, com mais erro amostral, mais valores são plausíveis para a média populacional. Pode ser menos óbvio que, se os investigadores quiserem mais confiança nas suas estimativas, a sua margem de erro deva ser maior. Por analogia, suponha que seu instrutor lhe peça para estimar sua pontuação na próxima final de estatística. Você poderia dizer: “Vou obter uma pontuação entre 84% e 86%” ou: “Vou obter uma pontuação entre 70% e 100%”. A primeira estimativa é mais precisa (isto é, tem menos valores plausíveis). Estimativas precisas têm uma pequena faixa de valores plausíveis (isto é, margem de erro); portanto, eles devem ser feitos com uma confiança muito baixa. Por outro lado, a segunda estimativa, uma nota entre 70% e 100%, é menos preciso, mas pode ser feito com maior confiança. Existe sempre uma relação inversa entre a precisão de uma estimativa (ou seja, quão estreita é a gama de valores) e a confiança que se deve ter nessa estimativa. Portanto, quando todas as outras coisas forem iguais, se você quiser ter 99% de confiança em sua estimativa, seu IC precisará ser mais amplo do que se você precisar apenas de 95% de confiança. Mais confiança requer uma margem de erro mais ampla.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question5.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question5.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="UYWGPAKaOcBa" data-shufflequestions="False"
+<div class="output text_html"><div id="vlpylBlzoJbR" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#UYWGPAKaOcBa {
+#vlpylBlzoJbR {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -4609,7 +4643,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsUYWGPAKaOcBa=[{"question":"8. Qual das seguintes opções contribui para o tamanho (isto é, largura) da margem de erro? (Escolha dois.)",
+</style></div><script type="application/javascript">var questionsvlpylBlzoJbR=[{"question":"8. Qual das seguintes opções contribui para o tamanho (isto é, largura) da margem de erro? (Escolha dois.)",
 "type":"many_choice",
 "answers":[{"answer":"a. Média da amostra", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente"},
 {"answer":"b. Tamanho da amostra", "correct": true, "feedback":"Correto!"},
@@ -5406,8 +5440,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("UYWGPAKaOcBa")) {
-            show_questions(questionsUYWGPAKaOcBa,  UYWGPAKaOcBa); 
+          if(document.getElementById("vlpylBlzoJbR")) {
+            show_questions(questionsvlpylBlzoJbR,  vlpylBlzoJbR); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -5416,8 +5450,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("UYWGPAKaOcBa");
-        // console.log(document.getElementById("UYWGPAKaOcBa"));
+        //console.log("vlpylBlzoJbR");
+        // console.log(document.getElementById("vlpylBlzoJbR"));
 
         try_show();
         }
@@ -5427,20 +5461,27 @@ if (typeof version == 'undefined') {
 <section id="calculo-de-um-intervalo-de-confianca-para-uma-media-populacional">
 <h2>Cálculo de um intervalo de confiança para uma média populacional<a class="headerlink" href="#calculo-de-um-intervalo-de-confianca-para-uma-media-populacional" title="Link to this heading">#</a></h2>
 <p>As fórmulas da seção anterior são fórmulas “conceituais”, pois ajudam a explicar a lógica geral dos ICs. As fórmulas descritas nesta seção serão as que você realmente usará ao estimar a média de uma população. Conforme mencionado anteriormente, uma média amostral serve como estimativa pontual, e uma margem de erro é adicionada e subtraída da média amostral para encontrar os limites superior e inferior de um IC. Nesta seção, você aprenderá a calcular a margem de erro. Conforme mencionado acima, a margem de erro é derivada do erro amostral esperado, SEM, e de um nível de confiança específico (geralmente 95% ou 99%). Ao usar uma média amostral para estimar a média, a quantidade esperada de amostragem o erro é definido pelos <span class="math notranslate nohighlight">\(SEM_a\)</span> (<span class="math notranslate nohighlight">\(DP/\sqrt{N}\)</span>). O nível de confiança específico (95% ou 99%). é definido por um valor t específico da tabela t crítica. Como sempre, o valor crítico específico de t depende dos graus de liberdade (gl) associados à fórmula de erro amostral, neste caso, df = N - 1. Ao calcular um IC de 95%, use o df para procurar o valor t crítico na tabela t crítica bicaudal 0.05. Um IC de 99% requer o valor t crítico na tabela t crítica bicaudal 0.01. A atividade neste capítulo explicará por que esses valores específicos são usados para ICs de 95% e 99%, respectivamente. Neste ponto, basta você saber quando usar qual tabela t.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question6.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question6.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="BoiIwfbreWNR" data-shufflequestions="False"
+<div class="output text_html"><div id="SIdVUSWmewOY" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#BoiIwfbreWNR {
+#SIdVUSWmewOY {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -5610,7 +5651,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsBoiIwfbreWNR=[{"question":" 10. Ao criar um IC de 95%, use um valor t crítico do",
+</style></div><script type="application/javascript">var questionsSIdVUSWmewOY=[{"question":" 10. Ao criar um IC de 95%, use um valor t crítico do",
 "type":"multiple_choice",
 "answers": [{"answer":"a. tabela bicaudal de 0.01 t.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."},
 {"answer":"b. tabela bicaudal de 0.05 t.", "correct":true, "feedback": "Correto."},
@@ -6403,8 +6444,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("BoiIwfbreWNR")) {
-            show_questions(questionsBoiIwfbreWNR,  BoiIwfbreWNR); 
+          if(document.getElementById("SIdVUSWmewOY")) {
+            show_questions(questionsSIdVUSWmewOY,  SIdVUSWmewOY); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -6413,8 +6454,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("BoiIwfbreWNR");
-        // console.log(document.getElementById("BoiIwfbreWNR"));
+        //console.log("SIdVUSWmewOY");
+        // console.log(document.getElementById("SIdVUSWmewOY"));
 
         try_show();
         }
@@ -6428,20 +6469,27 @@ if (typeof version == 'undefined') {
 <p>Você deve notar que a linha final do cálculo acima é idêntica à fórmula conceitual discutida na seção anterior, a estimativa pontual de 155.67 mais a margem de erro de 5.383. O limite inferior é</p>
 <p><span class="math notranslate nohighlight">\(Limite\quad inferior = 155.67 - (2.001)(2.69) = 150.29\)</span></p>
 <p>Novamente, vale a pena notar que o limite inferior é a estimativa pontual de 155.67 menos a margem de erro de 5.38. Com base nestes cálculos, deveríamos ter 95% de confiança de que o intervalo 150.29 e 161.05 minutos por semana, contém o tempo médio real de exercício da população de estudantes universitários, se participassem nas aulas de vida saudável. Este IC pode ajudar os decisores políticos a determinar se os benefícios de saúde obtidos ao exigir o curso compensariam o custo adicional da oferta do curso. Os ICs ajudam os investigadores, ou decisores políticos, a pensar sobre as possíveis consequências da aplicação dos resultados de uma amostra a uma população inteira.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question7.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question7.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="IRJUXRrVJePU" data-shufflequestions="False"
+<div class="output text_html"><div id="xsVkXpWxORTX" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#IRJUXRrVJePU {
+#xsVkXpWxORTX {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -6611,7 +6659,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsIRJUXRrVJePU=[{"question": "11. Qual das alternativas a seguir determina o valor correto do $t_{IC}$ para um determinado IC? (Escolha dois.)",
+</style></div><script type="application/javascript">var questionsxsVkXpWxORTX=[{"question": "11. Qual das alternativas a seguir determina o valor correto do $t_{IC}$ para um determinado IC? (Escolha dois.)",
 "type": "many_choice",
 "answers":[{"answer": "a. Nível de confiança (por exemplo, 95% ou 99%)", "correct": true, "feedback": "Correto!"},
 {"answer": "b. Os graus de liberdade", "correct": true, "feedback": "Correto!"},
@@ -7407,8 +7455,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("IRJUXRrVJePU")) {
-            show_questions(questionsIRJUXRrVJePU,  IRJUXRrVJePU); 
+          if(document.getElementById("xsVkXpWxORTX")) {
+            show_questions(questionsxsVkXpWxORTX,  xsVkXpWxORTX); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -7417,8 +7465,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("IRJUXRrVJePU");
-        // console.log(document.getElementById("IRJUXRrVJePU"));
+        //console.log("xsVkXpWxORTX");
+        // console.log(document.getElementById("xsVkXpWxORTX"));
 
         try_show();
         }
@@ -7438,20 +7486,27 @@ if (typeof version == 'undefined') {
 <p>Limite inferior = 5.67-5.383 = 0.29.</p>
 <p>Com base nestes cálculos, deveríamos ter 95% de confiança de que se a população de estudantes universitários frequentasse as aulas de vida saudável, o seu tempo de exercício aumentaria entre 0.29 e 11.05 minutos por semana. Agora, como você deve interpretar essa faixa de valores plausíveis? Primeiro, você deve reconhecer que nem todos os valores do IC são igualmente plausíveis. Embora todos os valores no IC sejam considerados plausíveis, os valores dos limites inferior e inferior são os menos plausíveis e a estimativa pontual é a mais plausível. A regra geral é que os valores de IC tornam-se menos plausíveis com o aumento da distância da estimativa pontual.</p>
 <p>Em segundo lugar, vale a pena observar se a diferença média de zero está incluída ou não no intervalo de valores plausíveis. Se uma diferença média de zero não estiver entre os limites superior e inferior do IC de 95% para a diferença média, a média amostral de 155.67 e a média populacional de 150 são significativamente diferentes uma da outra. Esta conclusão é completamente consistente com os resultados do teste de significância descrito no início do capítulo. Este será sempre o caso. Se você realizar um teste de significância bicaudal com um valor alfa de 0.05 e rejeitar o nulo, o IC de 95% para a diferença média nunca conterá zero. Por outro lado, se você não rejeitar o nulo, o IC de 95% sempre conterá zero.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question8.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question8.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="XieKJIEeAmCt" data-shufflequestions="False"
+<div class="output text_html"><div id="EmzLHaKrYYsS" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#XieKJIEeAmCt {
+#EmzLHaKrYYsS {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -7621,7 +7676,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsXieKJIEeAmCt=[{"question": "13. Ao calcular um IC para uma diferença média, se zero for considerado um valor plausível (ou seja, estiver entre os limites superior e inferior), um teste de significância bicaudal descobriria que as duas médias são",
+</style></div><script type="application/javascript">var questionsEmzLHaKrYYsS=[{"question": "13. Ao calcular um IC para uma diferença média, se zero for considerado um valor plausível (ou seja, estiver entre os limites superior e inferior), um teste de significância bicaudal descobriria que as duas médias são",
 "type": "multiple_choice",
 "answers":[
     {"answer": "a. não significativamente diferentes.", "correct": true, "feedback": "Correto!"},
@@ -8413,8 +8468,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("XieKJIEeAmCt")) {
-            show_questions(questionsXieKJIEeAmCt,  XieKJIEeAmCt); 
+          if(document.getElementById("EmzLHaKrYYsS")) {
+            show_questions(questionsEmzLHaKrYYsS,  EmzLHaKrYYsS); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -8423,28 +8478,35 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("XieKJIEeAmCt");
-        // console.log(document.getElementById("XieKJIEeAmCt"));
+        //console.log("EmzLHaKrYYsS");
+        // console.log(document.getElementById("EmzLHaKrYYsS"));
 
         try_show();
         }
         </script></div>
 </div>
 <p>Por que você deveria realizar um IC para uma diferença média depois de realizar um teste de significância? A resposta remonta ao início do capítulo. Os dois procedimentos estatísticos têm finalidades distintas. O teste de significância indica se um determinado efeito foi provavelmente criado ou não por erro amostral. Então, o tamanho do efeito descreve a magnitude do efeito. E, finalmente, o IC ajuda a generalizar seus resultados para a população, identificando valores plausíveis de parâmetros populacionais.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question9.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question9.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="PRJgNXUDQxjU" data-shufflequestions="False"
+<div class="output text_html"><div id="uIPtJdyVZqBk" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#PRJgNXUDQxjU {
+#uIPtJdyVZqBk {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -8614,7 +8676,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsPRJgNXUDQxjU=[{"question":"14. Qual das alternativas a seguir determina valores plausíveis para parâmetros populacionais?",
+</style></div><script type="application/javascript">var questionsuIPtJdyVZqBk=[{"question":"14. Qual das alternativas a seguir determina valores plausíveis para parâmetros populacionais?",
 "type":"multiple_choice",
 "answers":[{"answer":"a. Estimativas pontuais","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. Tamanhos de efeito","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
@@ -9406,8 +9468,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("PRJgNXUDQxjU")) {
-            show_questions(questionsPRJgNXUDQxjU,  PRJgNXUDQxjU); 
+          if(document.getElementById("uIPtJdyVZqBk")) {
+            show_questions(questionsuIPtJdyVZqBk,  uIPtJdyVZqBk); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -9416,8 +9478,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("PRJgNXUDQxjU");
-        // console.log(document.getElementById("PRJgNXUDQxjU"));
+        //console.log("uIPtJdyVZqBk");
+        // console.log(document.getElementById("uIPtJdyVZqBk"));
 
         try_show();
         }
@@ -9448,20 +9510,27 @@ if (typeof version == 'undefined') {
 <p>Embora o procedimento de IC não seja novo, a sua proeminência nas ciências tem aumentado. Recomenda se que os pesquisadores calculem e interpretem os ICs em conjunto com testes de significância e tamanhos de efeito ao relatar resultados.</p>
 <p>Observe como as informações de IC que calculamos neste capítulo são integradas ao relatório. Ele relata o IC de 95% para a média da população e a diferença média. Na primeira vez que você relata um IC para um conjunto de análises, você informa o nível de confiança (ou seja, 95% ou 99%). Depois disso, não é necessário indicar o nível de confiança, pois o leitor pode inferir que você utilizou o mesmo nível de confiança para todas as análises.</p>
 <p>Um teste t de amostra única revelou que os alunos que frequentaram o curso de vida saudável se exercitavam mais semanalmente (<span class="math notranslate nohighlight">\(\bar{x} = 155.67\)</span>, DP = 2.69), IC 95% [150,29, 161,05], do que os alunos da população (<span class="math notranslate nohighlight">\(\mu = 150\)</span>), <span class="math notranslate nohighlight">\(t_{(59)} = 2.11\)</span>, p = 0.04, d = 0.27, IC [0,29, 11,05].</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question10.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question10.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="xCxIbePByCTs" data-shufflequestions="False"
+<div class="output text_html"><div id="xdPjUgLNygTR" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#xCxIbePByCTs {
+#xdPjUgLNygTR {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -9631,7 +9700,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsxCxIbePByCTs=[{"question":"15. O modelo de relatório recomenda que os pesquisadores utilizem",
+</style></div><script type="application/javascript">var questionsxdPjUgLNygTR=[{"question":"15. O modelo de relatório recomenda que os pesquisadores utilizem",
 "type":"multiple_choice",
 "answers":[{"answer":"a. ICs em vez de testes de significância.","correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. ICs em conjunto com testes de significância e tamanhos de efeito.","correct":true, "feedback": "Correto!"}]
@@ -10422,8 +10491,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("xCxIbePByCTs")) {
-            show_questions(questionsxCxIbePByCTs,  xCxIbePByCTs); 
+          if(document.getElementById("xdPjUgLNygTR")) {
+            show_questions(questionsxdPjUgLNygTR,  xdPjUgLNygTR); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -10432,8 +10501,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("xCxIbePByCTs");
-        // console.log(document.getElementById("xCxIbePByCTs"));
+        //console.log("xdPjUgLNygTR");
+        // console.log(document.getElementById("xdPjUgLNygTR"));
 
         try_show();
         }
@@ -10446,20 +10515,27 @@ if (typeof version == 'undefined') {
 Em segundo lugar, a largura dos ICs ajuda os pesquisadores a interpretar a precisão da estimativa dos parâmetros de um determinado estudo. ICs mais restritos (ou seja, aqueles com margens de erro menores) fornecem estimativas mais precisas.
 Terceiro, um IC de 95% tem uma taxa de recaptura de replicação de 0,83. Esta interpretação requer mais algumas explicações. Se um determinado estudo produzir um IC de 95% de [10, 20], a primeira interpretação do IC descrita anteriormente indica que os investigadores devem ter 95% de confiança de que o intervalo entre 10 e 20 contém <span class="math notranslate nohighlight">\(\mu\)</span>. Porém, isso não significa que se os pesquisadores repetissem o estudo uma segunda vez, a média do segundo estudo ficaria entre 10 e 20, 95% das vezes.</p>
 <p>Por fim, mencionaremos uma maneira adicional de usar a lógica de IC que é limitada a ICs para diferenças médias. É uma extensão lógica da primeira interpretação que discutimos anteriormente – nomeadamente, que os valores fora dos limites do IC são implausíveis. Ao calcular um IC de 95% para uma diferença média, se zero não for plausível, um teste t bicaudal de 0.05 descobriria que as duas médias são significativamente diferentes. Por outro lado, se o zero estiver localizado entre os limites superior e inferior, as duas médias não seriam significativamente diferentes. Por exemplo, considere um intervalo de confiança de 95% para uma diferença média com um limite inferior de -0.5 e um limite superior de 1.50. Na Figura 8.2a, a estimativa pontual é a diferença média amostral de 0.5. O limite inferior é -0.5 e o limite superior é 1.5. Uma diferença média de zero fica entre o limite superior e inferior. Para este IC, uma diferença média de zero é um valor plausível, portanto, se você executou um teste t bicaudal com <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> para determinar se essa diferença era significativa, você não rejeitaria a hipótese nula. No entanto, conforme ilustrado na Figura 8.2b, um intervalo de confiança com uma estimativa pontual de 1.5, um limite inferior de 0.5 e um limite superior de 2.5 não inclui zero e, portanto, se você executou um teste bicaudal com <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> nesses dados, você rejeitaria a hipótese nula. As Figuras 8.2a e 8.2b devem ajudá-lo a compreender a relação entre os resultados de um IC e os resultados do teste de significância para uma diferença média. Se zero estiver entre os limites inferior e superior, a diferença não é significativa. Se estiver fora desses limites, é significativo.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question11.json&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question11.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="SzqxqSMFpjpI" data-shufflequestions="False"
+<div class="output text_html"><div id="uccVaYckPHRp" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#SzqxqSMFpjpI {
+#uccVaYckPHRp {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -10629,7 +10705,7 @@ Terceiro, um IC de 95% tem uma taxa de recaptura de replicação de 0,83. Esta i
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsSzqxqSMFpjpI=[{"question": "16. Qual das alternativas a seguir não é uma interpretação correta de um IC de 95%?",
+</style></div><script type="application/javascript">var questionsuccVaYckPHRp=[{"question": "16. Qual das alternativas a seguir não é uma interpretação correta de um IC de 95%?",
 "type": "multiple_choice",
 "answers":[{"answer": "a. Uma gama de valores de parâmetros plausíveis", "correct": false, "feedback": "Incorreto. Por favor, leia o parágrafo acima novamente."},
 {"answer": "b. Um IC mais amplo é menos preciso que um IC estreito", "correct": false, "feedback": "Incorreto. Por favor, leia o parágrafo acima novamente."},
@@ -11425,8 +11501,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("SzqxqSMFpjpI")) {
-            show_questions(questionsSzqxqSMFpjpI,  SzqxqSMFpjpI); 
+          if(document.getElementById("uccVaYckPHRp")) {
+            show_questions(questionsuccVaYckPHRp,  uccVaYckPHRp); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -11435,8 +11511,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("SzqxqSMFpjpI");
-        // console.log(document.getElementById("SzqxqSMFpjpI"));
+        //console.log("uccVaYckPHRp");
+        // console.log(document.getElementById("uccVaYckPHRp"));
 
         try_show();
         }
