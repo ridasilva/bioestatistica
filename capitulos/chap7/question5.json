@@ -2,6 +2,6 @@
 "type":"multiple_choice",
 "answers":[{"answer":"a. aumenta; menor","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. aumenta; maior","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"c. diminui; menor","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"d. diminui; maior","correct":true, "feedback": "Correto!"}]
+{"answer":"c. diminui; menor","correct":true, "feedback": "Correto!"},
+{"answer":"d. diminui; maior","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
 }]

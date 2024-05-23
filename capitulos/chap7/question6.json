@@ -3,8 +3,8 @@
 "answers":[{"answer": "a. a VI define duas amostras independentes e a VD é medida como uma variável quantitativa.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer": "b. a VI define duas amostras dependentes e a VD é medida como uma variável quantitativa.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer": "c. a VI define uma amostra, a VD é medida como uma variável quantitativa e a VD é medido duas vezes na mesma amostra.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer": "d. a VI define uma amostra e o VD é medida como uma variável quantitativa e você não conhece o desvio padrão da população.", "correct": true, "feedback": "Correto!"},
-{"answer": "e. a VI define uma amostra e o VD é medida como uma variável quantitativa e você conhece o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+{"answer": "d. a VI define uma amostra e a VD é medida como uma variável quantitativa e você não conhece o desvio padrão da população.", "correct": true, "feedback": "Correto!"},
+{"answer": "e. a VI define uma amostra e a VD é medida como uma variável quantitativa e você conhece o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
 },
 {"question": "10. Ao realizar um teste t para amostra única, qual das seguintes suposições é a mais difícil de avaliar?",
 "type": "multiple_choice",
