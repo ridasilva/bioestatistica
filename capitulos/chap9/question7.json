@@ -1,0 +1,5 @@
+[{"question":"15. Se o valor t obtido (ou seja, neste caso 2.83) estiver mais distante de 0 do que o valor crítico, a diferença entre as duas médias é",
+"type":"multiple_choice",
+"answers":[{"answer":"a. provavelmente devida a erro de amostragem.", "correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. provavelmente não será devida a erro de amostragem.", "correct":true, "feedback":"Correto!"}]
+}]

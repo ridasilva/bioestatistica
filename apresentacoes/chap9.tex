@@ -167,7 +167,7 @@ Os quatro pressupostos básicos são:
 \begin{frame}
 \frametitle{Etapa 1: examinar as pressuposições estatísticas}
 
-Os quatro pressupostos básicos são:
+Os três pressupostos básicos são:
 
 \begin{enumerate}
 \item \textbf{independência dos dados:} A VI neste estudo identifica dois grupos relacionados, designados aleatoriamente para duas condições diferentes;
@@ -253,23 +253,25 @@ F & 195 & 194 & -1 \\
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostra única)}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
 \begin{itemize}
-\item 4a. Calcule o desvio observado entre a média amostral e a média da população
-\[\bar{x} - \mu = 3680-3000 = 680\]
-\item 4b. Calcule o desvio esperado devido ao erro de amostragem
-\[Var(X) = \frac{1}{N-1}\sum_{i=1}^n(X_i - \bar{X})^2 = 1078857.143\]
-\[SEM_a = \frac{DP}{\sqrt{N}} = \frac{1038.680}{\sqrt{15}} = 268.186\]
-\item 4c. Calcule o z para uma média amostral
-\[t = \frac{(\bar{x} - \mu)}{SEM_a} = \frac{(3680-3000)}{268.186} = 2.54.\]
+\item 4b. Calcule a diferença média observada ($\bar{x}_D$)
+
+\[\bar{x}_D = \frac{\sum_{i=1}^n D_i}{N} = \frac{24}{6} = 4\]
+
+\item 4c. Calcule a diferença média esperada devido ao erro de amostragem
+\[SQ_D = \frac{1}{N-1}\sum_{i=1}^n(D_i - \bar{x}_D)^2 = 12\]
+\[SEM_r = \frac{DP}{\sqrt{N}} = \frac{3.464}{\sqrt{6}} = 1.414\]
+\item 4d. Calcule a estatística do teste (teste t de amostras relacionadas)
+\[t =  \frac{\bar{x}_D}{SEM_r}  = \frac{4}{1.414} = 2.83\]
 \end{itemize}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostra única)}
-O valor t obtido de 2.54 é mais extremo que o valor crítico de 1.7613, portanto esse valor de t está localizado na região de rejeição (ou seja, a região crítica).
-\begin{center}\includegraphics[width=0.55\linewidth]{figs/regiao_critica_observada_t} \end{center}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
+O valor t obtido de 2.83 está mais distante de 0 do que o valor crítico de +2.5706.
+\begin{center}\includegraphics[width=0.55\linewidth]{figs/regiao_critica_observada_t_rel} \end{center}
 
 \end{frame}
 
@@ -280,7 +282,7 @@ O valor t obtido de 2.54 é mais extremo que o valor crítico de 1.7613, portant
 Um tamanho de efeito é um índice da diferença entre a média da amostra e a média da população. A estatística de tamanho do efeito normalmente usada ao comparar duas médias é d. 
 \begin{align*}
 d &= \frac{Desvio\quad observado\quad entre\quad as\quad medias}{Desvio\quad padrao}\\
-  &= \frac{\bar{x}-\mu}{DP} = \frac{3680 - 3000}{1038.68} = 0.65
+  &= \frac{\bar{x}_D}{DP_D} = \frac{4}{3.464} = 1.15
 \end{align*}
 
 \end{frame}
@@ -308,71 +310,43 @@ Perto de 0.8 & Grande \\
 \begin{frame}
 \frametitle{Etapa 6: Interpretando os Resultados do Teste de Hipóteses}
 
-Declaração resumida sobre o teste estatístico acima:\\~\\
+As frases a seguir resumem os resultados deste teste t de amostras relacionadas. Você precisará calcular as médias para os grupos de medicamento e placebo manualmente ou usando \textit{software} para incluí-los em seu relatório de resultados.\\~\\
 
-O salário médio mensal esperado para formandos em farmácia ($\bar{x} = 680, DP = 1038.68$) foi significativamente maior do que o salário inicial real de 3.000 Reais, t(14) = 2.54, \(p < 0.05\), d = 0.65. Esta análise sugere que os formandos em farmácia tendem a superestimar bastante os salários iniciais que podem esperar após a formatura.\\~\\
-
-Geralmente, você deve fornecer o valor exato de p, se souber. Em alguns casos, você não saberá disso e então escreveria "\(p < 0.05\)" se rejeitou a hipótese nula ou "\(p > 0.05\)" se não rejeitou a hipótese nula.
+As pessoas que tomaram o ansiolítico apresentaram níveis de colesterol substancialmente mais elevados (\(\bar{x}_A = 194.83\), DP = 13.64) do que as pessoas que tomaram o placebo (\(\bar{x}_P = 190.83\), DP = 14.29), \(t_{(5)} = 2.83\), \(p < 0.05\), d = 1.15. A droga aumentou os níveis de colesterol em mais de 1 desvio padrão, sugerindo que a droga tem um efeito prejudicial sobre os níveis de colesterol. No entanto, a amostra incluiu apenas seis pares de pessoas e, portanto, o estudo deve ser replicado com uma amostra maior.
 \end{frame}
 
 \begin{frame}
-\frametitle{Exemplo de teste t de amostra única de duas caudas (bicaudal)}
-\textbf{Exemplo:} Os alunos são igualmente otimistas ao estimar os salários iniciais dos outros? 
-Você não tem certeza se os alunos superestimarão ou subestimarão os salários iniciais dos outros e, portanto, você deve fazer um teste bicaudal em vez de um teste unilateral.\\~\\ 
+\frametitle{Exemplo de teste t de amostras relacionadas (unicaudal)}
+\textbf{Exemplo:} Um psiquiatra recruta seis pessoas com altos índices de ansiedade para um estudo de avaliação do novo medicamento. Todos os seis voluntários completam um inventário de ansiedade antes de tomar o medicamento e novamente após tomar o medicamento por 1 mês.\\~\\ 
 
-A hipótese de pesquisa bicaudal afirma que o salário médio mensal estimado será superior a 3000 Reais ou inferior a 3000 Reais. \\~\\
-
-Assim, as hipóteses de pesquisa bicaudais possuem duas regiões críticas, uma na cauda positiva e outra na cauda negativa. \\~\\
-
-A escolha entre um teste unicaudal ou bicaudal pode ter um impacto dramático na(s) região(ões) crítica(s) e, portanto, sua decisão sobre usar um teste unicaudal ou bicaudal pode influenciar se você rejeita ou não a hipótese nula do teste. \\~\\
-
-Portanto, se a sua hipótese de pesquisa for direcional, é vantajoso usar um teste unilateral em vez de um teste bicaudal.
+Espera-se que diminua os índices de ansiedade das pessoas que o tomam.
 \end{frame}
-
-\begin{frame}
-\frametitle{Exemplo de teste t de amostra únical de duas caudas (bicaudal)}
-Com amostra  N=15 um teste unilateral com $\alpha = 0.05$, tem valor crítico seria +1.7613 \(\Rightarrow\) se o valor t obtido fosse +1.8 a hipótese seria rejeitada. \\~\\
-Em um teste bicaudal, seus valores t críticos seriam +2.1448 e -2.1448, a hipótese nula não seria rejeitada.
-\begin{columns}
-\begin{column}{0.5\textwidth}
-   \includegraphics[width=1\linewidth]{figs/regiao_critica_unicaudal_t}
-\end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-   \includegraphics[width=1\linewidth]{figs/regiao_critica_bicaudal_t}
-\end{column}
-\end{columns}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Teste t bicaudal de amostra única}
-
-\textbf{Exemplo:} Você recruta 15 estudantes de farmácia diferentes e pede-lhes que estimem o salário médio mensal que um estudante de farmácia típico pode esperar em seu primeiro emprego após a formatura.
-\begin{itemize}
-\item Sabe se que a distribuição dos salários iniciais dos formandos em farmácia é normalmente distribuída com uma média $\mu = 3000$ por mês;
-\item
-   Salários iniciais mensais esperados de 15 alunos: 3400, 3500, 2500, 3200, 2700, 2000, 2500, 3300, 3200, 3000, 2900, 3900, 3800, 3900 e 3600;
-\item
-  Média amostral de $\bar{x} = 3680$.
-\end{itemize}
-
-Optamos por um teste bilateral. Também escolhemos um \(\alpha=0.05\).
-
-\end{frame}
-
-
 
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Etapa 1: examinar as pressuposições estatísticas}
 
-O novo estudo parece atender a todas as quatro suposições estatísticas.
+Todos os testes de hipóteses são baseados em suposições específicas e, se essas suposições forem violadas, esses testes podem produzir resultados enganosos.\\~\\
+Os quatro pressupostos básicos são:
 
 \begin{enumerate}
-\item \textbf{independência dos dados:} as expectativas de salários um estudante é independente das expectativas de todos os outros;
-\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) expectativas dos estudantes versus salários reais, variável dependente (VD) \(\Rightarrow\) o salário mensal esperado, é medido em como uma variável quantitativa;
-\item \textbf{normalidade das distribuições:} população de salários esperados dos formandos em farmácia é normalmente distribuida;
-\item \textbf{homogeneidade da variância:} é seguro assumir que o desvio padrão da amostra será semelhante ao desvio padrão da população?
+\item independência dos dados;
+\item medição apropriada das variáveis para análise;
+\item normalidade das distribuições.
+\end{enumerate}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 1: examinar as pressuposições estatísticas}
+
+Os três pressupostos básicos são:
+
+\begin{enumerate}
+\item \textbf{independência dos dados:} A VI neste estudo identifica dois grupos relacionados, ou seja, antes vs. depois de tomar o medicamento;
+\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) identifica as duas condições de medicamento versus placebo, variável dependente (VD) \(\Rightarrow\) nível de colesterol dos participantes, é medido em como uma variável quantitativa;
+\item \textbf{normalidade das distribuições:} população original de diferenças médias é normalmente distribuida.
 \end{enumerate}
 
 \end{frame}
@@ -381,15 +355,15 @@ O novo estudo parece atender a todas as quatro suposições estatísticas.
 \begin{frame}
 \frametitle{Etapa 2: expor as hipóteses nulas e de pesquisa simbolicamente e verbalmente}
 
-Um valor t em uma região crítica positiva indicaria que a média da amostra é significativamente maior do que o valor real de 3000/mês.
+O teste t de amostras relacionadas determina se a média dessas diferenças é significativamente menor do que 0.
 
 \begin{center}
 \begin{tabular}{ m{2cm}|m{2cm}|m{3cm}|m{3cm} } 
  \hline
  Tipo de Hipótese & Simbólico & Vebal & Diferença entre médias amostral e populacional\\
   \hline
- Hipótese nula & $\mu_{farma}=3000;$ & Salário estimado $\approx$ 3000 & Erro amostral \\ 
- Hipótese de pesquisa & $\mu_{farma} \neq 3000.$ & Salário estimado $\neq$ 3000 & Estudantes super(sub)estimam salário  \\ 
+ Hipótese nula & $\mu_{D}=0;$ & Diferença média $\approx$ 0 & Erro amostral \\ 
+ Hipótese de pesquisa & $\mu_{D} > 0.$ & Diferença média $>$ 0 & Medicamento diminui ansiedade  \\ 
  \hline
  \hline
 \end{tabular}
@@ -399,20 +373,20 @@ Um valor t em uma região crítica positiva indicaria que a média da amostra é
 
 \begin{frame}
 \frametitle{Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas}
-A fórmula para gl é a mesma para testes unicaudais e bicaudais. Como foi o caso no exemplo unilateral, o gl aqui é
-\[gl = 15 - 1 = 14\]
+Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). Para o teste t de amostra única, a fórmula para o gl é \textit{gl = N - 1}. Portanto, neste caso,
+\[gl = 6 - 1 = 5\]
 
 \begin{columns}
 \begin{column}{0.5\textwidth}
-   Excerto da tabela t\\~\\
+   Excerto da tabela t bilateral\\~\\
 
 \begin{center}
 \begin{tabular}{ccc} 
  \hline
-gl & $\alpha = .05$ & $\alpha = .025$\\
-13 & 1.770900 & 2.160400\\
-\boxit{1.7in} 14 & 1.761300 & 2.144800\\
-15 & 1.753100 & 2.131400\\
+gl & $\alpha = .05$ & $\alpha = .01$\\
+4 &	2.131800 & 3.746900\\
+\boxit{1.7in} 5 & 2.015000 & 3.364900\\
+6 & 1.943200 & 3.142700\\
  \hline
 \end{tabular}
 \end{center}   
@@ -421,35 +395,51 @@ gl & $\alpha = .05$ & $\alpha = .025$\\
 \end{column}
 \begin{column}{0.5\textwidth}  %%<--- here
    \begin{itemize}
-   \item O valor de corte de \(\alpha= .025\) define a região crítica bilateral, os valores t são improváveis se a hipótese nula for verdadeira.
+   \item O valor de corte de \(\alpha= .05\) define a região crítica, os valores t são improváveis se o valor nulo for verdadeiro.
    \end{itemize}
 \end{column}
 \end{columns}
 \end{frame}
 
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
+\textit{4a. Calcule D para cada participante/par correspondente}\\~\\
+
+A primeira etapa no cálculo da estatística t das amostras relacionadas é calcular o valor da diferença (ou seja, D) para cada par de valores. 
+
+\begin{center}
+\begin{tabular}{cccc} 
+ \hline
+Voluntário & Antes & Depois & D (Depois - Antes)\\
+ \hline
+A & 22 & 19 & -3\\
+B & 22 & 19 & -3\\
+C & 23 & 18 & -5\\
+D & 26 & 25 & -1\\
+E & 23 & 20 & -3\\
+F & 25 & 21 & -4\\
+ \hline
+\end{tabular}
+\end{center}   
+
+\end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostra única)}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
 \begin{itemize}
-\item 4a. Calcule o desvio observado entre a média amostral e a média da população
-\[\bar{x} - \mu = 3160-3000 = 160\]
-\item 4b. Calcule o desvio esperado devido ao erro de amostragem
-\[Var(X) = \frac{1}{N-1}\sum_{i=1}^n(X_i - \bar{X})^2 = 315428.57\]
-\[SEM_a = \frac{DP}{\sqrt{N}} = \frac{561.630}{\sqrt{15}} = 145.012\]
-\item 4c. Calcule o z para uma média amostral
-\[t = \frac{(\bar{x} - \mu)}{SEM_a} = \frac{(3160-3000)}{145.012} = 1.10.\]
+\item 4b. Calcule a diferença média observada ($\bar{x}_D$)
+
+\[\bar{x}_D = \frac{\sum_{i=1}^n D_i}{N} = \frac{-19}{6} = -3.167\]
+
+\item 4c. Calcule a diferença média esperada devido ao erro de amostragem
+\[QM_D = \frac{1}{N-1}\sum_{i=1}^n(D_i - \bar{x}_D)^2 = 1.77\]
+\[SEM_r = \frac{DP}{\sqrt{N}} = \frac{1.329}{\sqrt{6}} = 0.543\]
+\item 4d. Calcule a estatística do teste (teste t de amostras relacionadas)
+\[t =  \frac{\bar{x}_D}{SEM_r}  = \frac{-3.167}{0.543} = 5.83\]
 \end{itemize}
 \end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostra única)}
-O valor t obtido associado à média amostral de 3160 (ou seja, 1.10) não estava em nenhuma das regiões críticas. Isso significa que há mais de 5\% de chance de que a diferença média no numerador se deva a um erro amostral.
-\begin{center}\includegraphics[width=0.55\linewidth]{figs/regiao_critica_bicaudal_t_tobs} \end{center}
-
-\end{frame}
-
 
 \setbeamercovered{transparent}
 \begin{frame}
@@ -457,21 +447,22 @@ O valor t obtido associado à média amostral de 3160 (ou seja, 1.10) não estav
 Um tamanho de efeito é um índice da diferença entre a média da amostra e a média da população. A estatística de tamanho do efeito normalmente usada ao comparar duas médias é d. 
 \begin{align*}
 d &= \frac{Desvio\quad observado\quad entre\quad as\quad medias}{Desvio\quad padrao}\\
-  &= \frac{\bar{x}-\mu}{DP} = \frac{3160 - 3000}{561.630} = 0.28
+  &= \frac{\bar{x}_D}{DP_D} = \frac{-3.167}{1.329} =  -2.38
 \end{align*}
 
 \end{frame}
+
 
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Etapa 6: Interpretando os Resultados do Teste de Hipóteses}
 
-Declaração resumida sobre o teste estatístico acima:\\~\\
+As frases a seguir resumem os resultados deste estudo:\\~\\
 
-O salário médio estimado para estudantes típicos de psicologia $(\bar{x} = 3160.00, DP = 561.63)$ não foi significativamente diferente do salário médio mensal real de 3000 Reais, t(14) = 1.10, $p > 0.05$ (bicaudal), d = 0.28. Esses resultados sugerem que os estudantes de farmácia são bastante precisos ao estimar os futuros salários iniciais de outras pessoas.\\~\\
+As pessoas apresentaram níveis de ansiedade mais baixos (\(\bar{x}_D = 20.33\), DP = 2.50) depois de tomar o medicamento do que antes de tomar o medicamento (\(\bar{x}_D = 23.50\), DP = 1.64), \(t_{(5)} = -5.83\), \(p < 0.05\) (unicaudal), d = -2.38. A redução nos valores de ansiedade foi bastante grande, mais de 2 desvios padrão. O tamanho da amostra neste estudo foi muito pequeno. Um estudo mais amplo deve ser feito antes de se tirar qualquer conclusão sobre o medicamento.
 
-Geralmente, você deve fornecer o valor exato de p, se souber. Em alguns casos, você não saberá disso e então escreveria \("p < 0.05"\) se rejeitou a hipótese nula ou \("p > 0.05"\) se não rejeitou a hipótese nula.
 \end{frame}
+
 
 \setbeamercovered{transparent}
 \begin{frame}

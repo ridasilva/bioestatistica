@@ -1,0 +1,5 @@
+[{"question":"23. Ao redigir a demonstração de resultados, o valor p é escrito como menor do que 0.05 (ou seja, p < 0.05) porque",
+"type": "multiple_choice",
+"answers":[{"answer":"a. o valor t obtido estava na região crítica.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. a hipótese nula não foi rejeitada.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+}]

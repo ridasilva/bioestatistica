@@ -1,7 +1,7 @@
-[{"question":" 10. Ao criar um IC de 95%, use um valor t crítico do",
+[{"question":" 10. Ao criar um IC de 95%, use um valor t crítico da",
 "type":"multiple_choice",
-"answers": [{"answer":"a. tabela bicaudal de 0.01 t.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."},
-{"answer":"b. tabela bicaudal de 0.05 t.", "correct":true, "feedback": "Correto."},
-{"answer": "c. tabela unilateral de 0.01 t.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."},
-{"answer": "d. tabela unilateral de 0.05 t.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."}]
+"answers": [{"answer":"a. tabela t bicaudal de 0.01.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."},
+{"answer":"b. tabela t bicaudal de 0.05.", "correct":true, "feedback": "Correto."},
+{"answer": "c. tabela t unilateral de 0.01.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."},
+{"answer": "d. tabela t unilateral de 0.05.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."}]
 }]

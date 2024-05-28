@@ -1,6 +1,6 @@
 [{"question":"4. O objetivo de um intervalo de confiança é",
 "type":"multiple_choice",
-"answers":[{"answer":"a. teste para diferenças significativas.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+"answers":[{"answer":"a. realizar um teste para diferenças significativas.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. quantificar a eficácia de um tratamento.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"c. ajudar os pesquisadores a estimar um parâmetro populacional com um nível específico de confiança e precisão.","correct":true, "feedback": "Correto!"}]},
 {"question":"5. Os intervalos de confiança fornecem aos pesquisadores",

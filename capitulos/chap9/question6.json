@@ -1,0 +1,10 @@
+[{"question":"13. O teste t de amostras relacionadas analisa ________ em vez de __________.",
+"type": "multiple_choice",
+"answers":[{"answer":"a. desvios de valores; diferenças de valores","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. valores brutos; valores de diferenças","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"c. valores de diferenças; valores brutos","correct":true, "feedback": "Correto!"}]},
+{"question":"14. Qual dos seguintes valores é uma medida do erro amostral?",
+"type": "multiple_choice",
+"answers":[{"answer":"a. $SEM_r$","correct":true, "feedback": "Correto!"},
+{"answer":"b. $SS_D$","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"c. $SQ_D$","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]}]

@@ -5,7 +5,7 @@
 },
 {"question":"3. Um tamanho de efeito pode ajudar um pesquisador a determinar",
 "type":"multiple_choice",
-"answers":[{"answer":"a. se um efeito for grande o suficiente para ser útil.", "correct":true, "feedback": "Correto!"},
-{"answer":"b. se a diferença média for provavelmente devida a erro de amostragem.", "correct":false, "feedback": "Leia o parágrafo acima novamente."},
+"answers":[{"answer":"a. se um efeito é grande o suficiente para ser útil.", "correct":true, "feedback": "Correto!"},
+{"answer":"b. se a diferença média ocorre provavelmente devido a erro de amostragem.", "correct":false, "feedback": "Leia o parágrafo acima novamente."},
 {"answer":"c. ambos mencionados acima.", "correct":false, "feedback": "Leia o parágrafo acima novamente."}]
 }]
