@@ -1,0 +1,875 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>11 - ANOVA de um fator para amostras independentes &#8212; Bioestatística</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'capitulos/chap11/chap11';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="10 - Teste t de amostras independentes" href="../chap10/chap10.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Bioestatística - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Bioestatística - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Bem vindo ao livro complementar da Bioestatística
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcapitulos/chap11/chap11.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/capitulos/chap11/chap11.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>11 - ANOVA de um fator para amostras independentes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anova-de-amostras-independentes">ANOVA de amostras independentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outros-nomes">Outros nomes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logica-da-anova">Lógica da ANOVA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-exemplo-de-problema-para-anova">Um exemplo de problema para ANOVA</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-1-examinar-variaveis-para-avaliar-suposicoes-estatisticas">Etapa 1: examinar variáveis para avaliar suposições estatísticas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa">Etapa 2: expor as hipóteses nulas e de pesquisa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-3-definir-o-valor-critico-de-f">Etapa 3: Definir o valor crítico de F</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-4-calculando-a-estatistica-do-teste-anova-independente">Etapa 4: Calculando a estatística do teste (ANOVA independente)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="anova-de-um-fator-para-amostras-independentes">
+<h1>11 - ANOVA de um fator para amostras independentes<a class="headerlink" href="#anova-de-um-fator-para-amostras-independentes" title="Link to this heading">#</a></h1>
+<p>Este material foi traduzido e adaptado de <span id="id1">[<a class="reference internal" href="../chap10/chap10.html#id13" title="Kieth A Carlson and Jennifer R Winquist. An introduction to statistics: An active learning approach. Sage Publications, 2017.">CW17</a>]</span>.</p>
+<p>OBJETIVOS DE APRENDIZADO</p>
+<p>Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
+<ul class="simple">
+<li><p>Identificar quando usar uma ANOVA de amostras independentes;</p></li>
+<li><p>Explicar a lógica da razão F para ANOVA;</p></li>
+<li><p>Explicar como o erro de medição, as diferenças individuais e os efeitos do tratamento influenciam o numerador e o denominador da razão F;</p></li>
+<li><p>Escrever hipóteses nulas e de pesquisa usando símbolos e palavras;</p></li>
+<li><p>Preencha uma tabela de resumo da ANOVA calculando os graus de liberdade, SQs, QMs e razão F;</p></li>
+<li><p>Defina uma região crítica e determine se você deve rejeitar ou não rejeitar a hipótese nula;</p></li>
+<li><p>Calcular tamanhos de efeito e descrevê-los;</p></li>
+<li><p>Explicar quando e por que os testes post hoc são necessários;</p></li>
+<li><p>Resumir os resultados de uma ANOVA de amostras independentes;</p></li>
+<li><p>Usar software para calcular uma ANOVA de amostras independentes, incluindo testes post hoc;</p></li>
+<li><p>Interpretar a saída do software para uma ANOVA de amostras independentes.</p></li>
+</ul>
+<section id="anova-de-amostras-independentes">
+<h2>ANOVA de amostras independentes<a class="headerlink" href="#anova-de-amostras-independentes" title="Link to this heading">#</a></h2>
+<p>O teste t de amostras independentes e o teste t de amostras relacionadas comparam duas médias amostrais para determinar se seu desvio é maior do que seria esperado pelo erro amostral. Ambos os testes t compartilham uma limitação importante, pois só podem comparar duas médias amostrais por vez. Uma ANOVA é substancialmente mais flexível, pois pode comparar duas ou mais médias amostrais ao mesmo tempo para determinar se o desvio entre qualquer par de médias amostrais é maior do que seria esperado pelo erro amostral. Portanto, uma única ANOVA, também conhecida como ANOVA unidirecional ou ANOVA de fator único, pode comparar dois tratamentos (por exemplo, Tratamento A e Tratamento B) entre si, bem como comparar cada um desses tratamentos com uma condição de controle (por exemplo, placebo).</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
+<span class="c1">#display_quiz(&quot;questions.json&quot;, preserve_responses = True)</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question1.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#display_quiz(&quot;questions.json&quot;, preserve_responses = True)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question1.json&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bioestast/lib/python3.9/site-packages/jupyterquiz/dynamic.py:176,</span> in <span class="ni">display_quiz</span><span class="nt">(ref, num, shuffle_questions, shuffle_answers, preserve_responses, border_radius, question_alignment, max_width, colors)</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>     <span class="c1">#print(&quot;File detected&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>     <span class="n">script</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;var questions</span><span class="si">{</span><span class="n">div_id</span><span class="si">}</span><span class="s2">=&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">176</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span>         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">178</span>             <span class="n">script</span> <span class="o">+=</span> <span class="n">line</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;question1.json&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="outros-nomes">
+<h2>Outros nomes<a class="headerlink" href="#outros-nomes" title="Link to this heading">#</a></h2>
+<p>ANOVA é uma abreviatura para Análise de Variância. Uma ANOVA independente, assim como um teste t independente , é usada quando há pessoas diferentes em cada condição do projeto. Por exemplo, se houvesse três tratamentos diferentes que você desejasse comparar em um desenho de amostras independentes, algumas pessoas receberiam o Tratamento A, outras o Tratamento B e o restante o Tratamento C. Este tipo de desenho também é conhecido como desenho entre sujeitos ou um projeto de medidas independentes. Uma ANOVA de amostras relacionadas, assim como um teste t de amostras relacionadas , é usada quando as médias amostrais são geradas pela mesma amostra ou por amostras correspondentes. ANOVAs de amostras independentes e ANOVAs de amostras relacionadas que envolvem apenas uma variável categórica (por exemplo, uma variável independente, VI) são frequentemente chamadas de ANOVAs de um fator. Neste livro, discutiremos apenas ANOVAs de amostras independentes.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question2.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="logica-da-anova">
+<h2>Lógica da ANOVA<a class="headerlink" href="#logica-da-anova" title="Link to this heading">#</a></h2>
+<p>Todos os testes de significância que você aprendeu até agora (isto é, z para uma média amostral, teste t para amostra única, teste t para amostras independentes e o teste t para amostras relacionadas) compartilham uma lógica comum. Ou seja, para todos eles, você calculou a diferença observada entre duas médias e depois dividiu essa diferença pela diferença que seria esperada devido ao erro amostral. A lógica do teste ANOVA é diferente. Como provavelmente fica evidente pelo nome, uma análise de variância analisa a variância das observações. Especificamente, uma ANOVA analisa a variância das observação entre e dentro das condições da VI, numa tentativa de determinar se as diferentes condições de tratamento afetam os valores de forma diferente. Por exemplo, você poderia usar uma ANOVA para determinar se três condições de tratamento diferentes levam a diferentes valores de depressão. Para compreender a lógica das ANOVAs, você deve entender que três coisas afetam a variância das observações:</p>
+<ol class="arabic simple">
+<li><p>Erro de medição: Sempre haverá variação nas observações entre as unidades amostrais porque as variáveis não podem ser medidas perfeitamente.</p></li>
+<li><p>Diferenças individuais: Sempre haverá variação nas observações entre as unidades amostrais porque as unidades são naturalmente diferentes entre si.</p></li>
+<li><p>Efeito do tratamento: Pode haver variação nas observações entre os grupos porque estes experimentaram diferentes condições (VI) ou tratamentos.</p></li>
+</ol>
+<p>As duas primeiras fontes de variância nas observações, erro de medição e diferenças individuais, estarão sempre presentes. Essas duas fontes de variação são frequentemente chamadas coletivamente de variação de erro porque ambos são componentes do erro amostral. A terceira fonte de variação é realmente o que interessa aos pesquisadores. Os pesquisadores usam a ANOVA para estimar a quantidade de variação das observações criada pelas diferentes condições de tratamento (VI). Ao realizar as atividades deste capítulo, você poderá entender isso melhor. Por enquanto, você tem informações suficientes para entender a lógica da ANOVA.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question3.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>A ANOVA analisa as quantidades relativas dessas três fontes de variabilidade das observações – a saber, (1) efeitos de tratamento, (2) diferenças individuais e (3) erro de medição – para produzir uma estatística F. A fórmula conceitual da ANOVA é uma razão entre a variabilidade entre as condições de tratamento e a variabilidade dentro das condições de tratamento. Duas representações da fórmula conceitual para uma ANOVA independente são mostradas a seguir:</p>
+<p><span class="math notranslate nohighlight">\(F = \frac{Variabilidade\quad entre\quad condições\quad de\quad tratamento}{Variabilidade\quad dentro\quad das\quad condições\quad de\quad tratamento}\)</span></p>
+<p><span class="math notranslate nohighlight">\(F = \frac{Efeito\quad do\quad tratamento\quad \&amp;\quad diferenças\quad individuais\quad \&amp;\quad erro\quad de\quad medição}{Diferenças\quad individuais\quad \&amp;\quad Erro\quad de\quad medição}\)</span></p>
+<p>O numerador da razão F é a variabilidade nas observações que existe entre os diferentes grupos de tratamento (ou seja, condições da VI), que é chamada de variabilidade entre grupos ou variabilidade entre tratamentos. Por exemplo, se uma condição tivesse valores observados altos e outra condição tivesse valores observados baixos, haveria muita variabilidade entre grupos. No entanto, se todas as condições tivessem valores semelhantes, haveria pouca variabilidade entre grupos. Existem três fontes possíveis para a variabilidade entre tratamentos. É possível que os diferentes tratamentos criem variabilidade entre grupos porque um tratamento é mais eficaz que outro (ou seja, os tratamentos afectam a variável dependente de forma diferente). Esta é a variabilidade na qual os investigadores estão mais interessados. No entanto, alguma da variabilidade entre grupos é sempre causada por diferenças individuais e erros de medição. Assim, o numerador da razão F, a variabilidade entre grupos, consiste em efeitos de tratamento, efeitos de diferenças individuais e erro de medição.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question4.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>O denominador da razão F é a variabilidade nas observações que existe dentro dos grupos de tratamento (isto é, condições da VI), que é chamada de variabilidade dentro do grupo. Existem duas fontes possíveis para a variabilidade intratratamento: (1) diferenças individuais e (2) erro de medição. É importante notar que as diferenças nas observações dentro de cada condição de tratamento não são causadas por diferenças na eficácia do tratamento porque todas as pessoas dentro de um determinado grupo experimentaram o mesmo tratamento. As únicas fontes de diferenças dentro de uma condição de tratamento são diferenças individuais e erros de medição. O denominador da razão F é frequentemente chamado de termo de erro porque contém apenas a variância criada pelo erro de amostragem.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question5.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Se você observar as fontes de variação no numerador e no denominador da ANOVA independente, poderá ver que a única diferença é que o numerador inclui efeitos de tratamento e o denominador não. Este fato é crítico para a lógica da ANOVA independente. Imagine uma situação em qual o efeito do tratamento cria variância zero (ou seja, o tratamento não funciona). Se você substituir “efeito do tratamento” na fórmula conceitual por “0”, a equação seria a seguinte:</p>
+<p><span class="math notranslate nohighlight">\(F = \frac{0\quad \&amp;\quad diferenças\quad individuais\quad \&amp;\quad erro}{Diferenças\quad individuais\quad \&amp;\quad erro}\)</span></p>
+<p>Com a variância do efeito do tratamento sendo zero, a razão F seria igual a 1 porque o numerador e o denominador seriam o mesmo número. Portanto, se o tratamento não criar variabilidade nas observações, espera-se que a ANOVA produza um valor estatístico F próximo de 1. Por outro lado, se os diferentes tratamentos criarem muita variabilidade nas pontuações, espera-se que o valor F seja substancialmente maior que 1. Um valor ANOVA F não pode ser negativo porque é a razão de duas variâncias, e as variâncias devem ser positivas.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question5.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="um-exemplo-de-problema-para-anova">
+<h2>Um exemplo de problema para ANOVA<a class="headerlink" href="#um-exemplo-de-problema-para-anova" title="Link to this heading">#</a></h2>
+<p>Você usa uma ANOVA de amostras independentes para comparar as médias de dois ou mais grupos/amostras contendo unidades amostrais diferentes. Por exemplo, suponha que você queira comparar a terapia cognitivo-comportamental (TCC) e a terapia psicodinâmica (TPD) como tratamentos para a depressão. Você identifica uma amostra de pessoas com depressão grave e as divide aleatoriamente em três grupos diferentes. Um grupo é submetido à TCC por 6 meses, um segundo grupo é submetido à TPD por 6 meses e um terceiro grupo funciona como grupo controle e não recebe tratamento (NT). Após 6 meses, você avalia os níveis de depressão usando o Inventário de Depressão de Beck (BDI; os valores variam de 0 a 63), com pontuações mais altas indicando maior depressão. Os valores de depressão encontrados para cada grupo estão listados na Tabela 11.1. Neste estudo, a VI é o tipo de tratamento (TCC, TPD ou TN) e a VD (variável dependente) é o valor de depressão de cada pessoa na escala BDI.</p>
+<p><em>Tabela 11.1 - Valores de depressão após três tipos diferentes de tratamento</em></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Grupo 1</p></th>
+<th class="head"><p>Grupo 2</p></th>
+<th class="head"><p>Grupo 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Terapia cognitiva comportamental</strong></p></td>
+<td><p><strong>Terapia Psicodinâmica</strong></p></td>
+<td><p><strong>Controle - sem de tratamento</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>16</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>17</p></td>
+<td><p>19</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>18</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>13</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>10</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>19</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\bar{x}_1 = 8.00\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bar{x}_2 = 15.50\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bar{x}_3 = 16.333\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(DP_1 = 4.65\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(DP_2 = 3.39\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(DP_3 = 5.35\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<section id="etapa-1-examinar-variaveis-para-avaliar-suposicoes-estatisticas">
+<h3>Etapa 1: examinar variáveis para avaliar suposições estatísticas<a class="headerlink" href="#etapa-1-examinar-variaveis-para-avaliar-suposicoes-estatisticas" title="Link to this heading">#</a></h3>
+<p>As suposições estatísticas para testes t independentes e ANOVAs independentes são idênticas. Portanto, você deve considerar quatro suposições. No seu estudo, os valores de depressão dos indivíduos devem ser medidos sem que a medição de um participante influencie o de outro (independência de dados). Sua VD, pontuação de depressão, deve ser medida como uma variável quantitativa, e seu VI deve identificar como os três tratamentos terapêuticos são diferentes (medição apropriada de variáveis para ANOVA independente). A distribuição das médias amostrais para cada uma de suas condições deve ter uma forma normal (normalidade). Como foi o caso de alguns exemplos anteriores, os tamanhos amostrais neste estudo (ns = 6) são demasiado pequenos para se ter certeza de que as distribuições das médias amostrais terão uma forma normal, a menos que as populações originais tenham uma forma normal. Você deve tentar obter tamanhos de amostra próximos a 30 participantes por condição (ou seja, perto de 90 participantes no total neste caso). Mas, para fins didáticos, esses tamanhos de amostra menores funcionarão bem. Sua quarta suposição é a homogeneidade de variância. Para ANOVAs, retorne à regra do duplo desvio padrão; se qualquer uma de suas condições tiver um desvio padrão o dobro de outra, a suposição de homogeneidade de variância pode ser violada. Embora existam maneiras de testar variâncias iguais na ANOVA (ver Field, 2013), as ANOVAs são geralmente bastante robustas a violações desta suposição, desde que os tamanhos das amostras sejam aproximadamente iguais.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question6.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa">
+<h3>Etapa 2: expor as hipóteses nulas e de pesquisa<a class="headerlink" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa" title="Link to this heading">#</a></h3>
+<p>Sua segunda etapa é estabelecer as hipóteses nula e de pesquisa. A hipótese nula sempre afirma que todas as populações têm os mesmos valores médios da VD. Nesse caso, a hipótese nula afirma que as três populações de pessoas estudadas (isto é, aquelas que recebem TCC, TPD ou TN) têm os mesmos valores médios de depressão; quaisquer diferenças observadas nas amostras são devidas a erros amostrais. Em contraste, a hipótese de investigação afirma que os valores médios da VD das três populações não são iguais.
+Neste caso, a hipótese de investigação afirma que pelo menos uma dos valores médios de depressão das populações é significativamente diferente de pelo menos uma das outras. Observe que a hipótese de pesquisa não especifica que todas as médias da população são diferentes, apenas que pelo menos uma média da população é diferente de pelo menos uma dos outros. A hipótese da pesquisa diz que um ou mais dos tratamentos funcionam melhor do que um ou mais dos outros. A Tabela 11.2 resume como escrever as hipóteses nula e de pesquisa.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo de Hipótese</p></th>
+<th class="head"><p>Simbólico</p></th>
+<th class="head"><p>Vebal</p></th>
+<th class="head"><p>Diferença entre médias amostral e populacional</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hipótese nula</p></td>
+<td><p><span class="math notranslate nohighlight">\(H_0:\mu_1=\mu_2=...=\mu_K;\)</span></p></td>
+<td><p>Médias <span class="math notranslate nohighlight">\(\approx\)</span> para todas populações</p></td>
+<td><p>Erro amostral</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hipótese de pesquisa</p></td>
+<td><p><span class="math notranslate nohighlight">\(H_a:\mu_i \neq \mu_j.\)</span></p></td>
+<td><p>Médias <span class="math notranslate nohighlight">\(\neq\)</span> para pelo menos um par</p></td>
+<td><p>Um ou mais tratamentos têm efeito</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question7.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="etapa-3-definir-o-valor-critico-de-f">
+<h3>Etapa 3: Definir o valor crítico de F<a class="headerlink" href="#etapa-3-definir-o-valor-critico-de-f" title="Link to this heading">#</a></h3>
+<p>Tal como acontece com os testes t, você usa um valor crítico para determinar se deve rejeitar o nulo, mas precisará de dois valores gl diferentes para encontrar o valor crítico de F. Você precisará de um valor gl baseado no número de participantes e outro valor gl baseado no número de grupos. Se a hipótese nula for verdadeira, o valor F obtido deve estar próximo de 1. Se a hipótese nula for falsa, o valor F obtido deve ser muito maior que 1. Mas a que distância de 1 um valor F deve estar para rejeitar a hipótese nula? Se o valor F for igual ou maior que o valor F crítico, você rejeita a hipótese nula.</p>
+<p>Especificamente, você precisará dos graus de liberdade entre tratamentos (gl_entre) e dos graus de liberdade dentro dos tratamentos (gl_dentro(error)) para encontrar o valor F crítico. Esses gls são calculados com as seguintes fórmulas, respectivamente:</p>
+<p>gl_entre = g - 1, entre onde g representa o número de grupos/condições de tratamento, e</p>
+<p>gl_dentro = N-g , onde N representa o número de valores em estudo inteiro.</p>
+<p>Neste caso, o gl_entre = 3 - 1 = 2, e o gl_dentro = 18 - 3 = 15. Você usa esses valores gl para encontrar o valor crítico de F no Apêndice C. O Apêndice C contém valores críticos para níveis alfa de 0.05 e 0.01 em duas tabelas separadas. O gl_entre (neste caso, 2) indica a coluna, e o gl_dentro (neste caso, 15) indica a linha para encontrar o valor crítico de F. Conforme ilustrado na Figura 11.1, o valor crítico de F quando os dfs são 2 e 15 e usando um valor alfa de 0.05 é 3.68. Portanto, se o valor F observado fosse maior que 3.68, você rejeita a hipótese nula.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">gl_entre</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">gl_dentro</span> <span class="o">=</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+
+<span class="n">a05</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">gl_entre</span><span class="p">:</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">gl_dentro</span><span class="p">:</span>
+        <span class="n">tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.95</span><span class="p">),</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">a05</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">a05</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">gl_entre</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">gl_dentro</span><span class="p">)</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;background-color: yellow&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">})</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_e3672_row1_col0, #T_e3672_row1_col1, #T_e3672_row1_col2 {
+  background-color: yellow;
+}
+</style>
+<table id="T_e3672">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_e3672_level0_col0" class="col_heading level0 col0" >1</th>
+      <th id="T_e3672_level0_col1" class="col_heading level0 col1" >2</th>
+      <th id="T_e3672_level0_col2" class="col_heading level0 col2" >3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_e3672_level0_row0" class="row_heading level0 row0" >14</th>
+      <td id="T_e3672_row0_col0" class="data row0 col0" >4.600100</td>
+      <td id="T_e3672_row0_col1" class="data row0 col1" >4.543100</td>
+      <td id="T_e3672_row0_col2" class="data row0 col2" >4.494000</td>
+    </tr>
+    <tr>
+      <th id="T_e3672_level0_row1" class="row_heading level0 row1" >15</th>
+      <td id="T_e3672_row1_col0" class="data row1 col0" >3.738900</td>
+      <td id="T_e3672_row1_col1" class="data row1 col1" >3.682300</td>
+      <td id="T_e3672_row1_col2" class="data row1 col2" >3.633700</td>
+    </tr>
+    <tr>
+      <th id="T_e3672_level0_row2" class="row_heading level0 row2" >16</th>
+      <td id="T_e3672_row2_col0" class="data row2 col0" >3.343900</td>
+      <td id="T_e3672_row2_col1" class="data row2 col1" >3.287400</td>
+      <td id="T_e3672_row2_col2" class="data row2 col2" >3.238900</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question8.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="etapa-4-calculando-a-estatistica-do-teste-anova-independente">
+<h3>Etapa 4: Calculando a estatística do teste (ANOVA independente)<a class="headerlink" href="#etapa-4-calculando-a-estatistica-do-teste-anova-independente" title="Link to this heading">#</a></h3>
+<p><em>4a–4d. Completando a Tabela Resumo da ANOVA</em></p>
+<p>Para calcular a razão F , você precisa calcular dois números: (1) a variância entre as condições de tratamento e (2) a variância dentro das condições de tratamento. Neste livro, até agora, você geralmente calculou o desvio padrão para medir a variabilidade. No entanto, ao fazer uma ANOVA, você calcula a variância como uma medida de variabilidade. Você deve se lembrar que a variância da amostra é o desvio médio quadrático das observações em relação à média e é calculada dividindo a SQ pelo seu gl. Na terminologia ANOVA, a variância é referida como quadrado médio (abreviado como QM). Embora a terminologia seja um pouco diferente, a lógica é a mesma. Para calcular cada QM, você divide cada SQ por seu gl. Esses cálculos são normalmente feitos usando um pacote de <em>software</em> (por exemplo, Google Sheet), e os resultados são frequentemente apresentados em uma tabela fonte ANOVA. Uma tabela de origem ANOVA é um resumo valioso da análise estatística ANOVA porque mostra como o F obtido é criado. A tabela de origem lista as fontes de variação discutidas nas seções anteriores, entre e dentro dos tratamentos, na primeira coluna. Os títulos das colunas indicam as etapas necessárias para calcular um F: SQ, gl, QM e, finalmente, F. A Tabela 11.3 é uma tabela fonte da ANOVA. As fórmulas para gl, SQ, F e <span class="math notranslate nohighlight">\(\nu^2\)</span> são apresentadas porque a melhor maneira de entender as inter-relações entre esses termos é ver como cada valor é gerado. A <span class="math notranslate nohighlight">\(SQ_{entre}\)</span> representa a soma da variabilidade criada pelo efeito do tratamento, diferenças individuais e erro de medição. Você calcula o <span class="math notranslate nohighlight">\(SQ_{entre}\)</span> calculando a SQ para as médias dos três grupos e depois multiplicando esse valor <span class="math notranslate nohighlight">\(SQ_{medias}\)</span> por n (ou seja, o número de unidades amostrais em cada grupo). Nesse caso, as médias dos três grupos são 8.0, 15.5 e 16.3333, respectivamente. Portanto, seu <span class="math notranslate nohighlight">\(SQ_{media}\)</span> é a SQ destas três médias:</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./capitulos/chap11"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../chap10/chap10.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">10 - Teste t de amostras independentes</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anova-de-amostras-independentes">ANOVA de amostras independentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outros-nomes">Outros nomes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logica-da-anova">Lógica da ANOVA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-exemplo-de-problema-para-anova">Um exemplo de problema para ANOVA</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-1-examinar-variaveis-para-avaliar-suposicoes-estatisticas">Etapa 1: examinar variáveis para avaliar suposições estatísticas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa">Etapa 2: expor as hipóteses nulas e de pesquisa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-3-definir-o-valor-critico-de-f">Etapa 3: Definir o valor crítico de F</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-4-calculando-a-estatistica-do-teste-anova-independente">Etapa 4: Calculando a estatística do teste (ANOVA independente)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ricardo R. da Silva
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

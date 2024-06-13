@@ -1,0 +1,1144 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>10 - Teste t de amostras independentes &#8212; Bioestatística</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'capitulos/chap10/chap10';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="11 - ANOVA de um fator para amostras independentes" href="../chap11/chap11.html" />
+    <link rel="prev" title="9 - Teste t de amostras relacionadas" href="../chap9/chap9.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Bioestatística - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Bioestatística - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Bem vindo ao livro complementar da Bioestatística
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcapitulos/chap10/chap10.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/capitulos/chap10/chap10.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>10 - Teste t de amostras independentes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teste-t-para-amostras-independentes">Teste t para amostras independentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-conceitural-para-t-de-amostras-independentes">Fórmula conceitural para t de amostras independentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-de-teste-t-de-amostras-independentes-bicaudal">Exemplo de teste t de amostras independentes bicaudal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-1-examinar-as-premissas-estatisticas">Etapa 1: examinar as premissas estatísticas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-declarar-as-hipoteses-nula-e-de-pesquisa-simbolica-e-verbalmente">Etapa 2: declarar as hipóteses nula e de pesquisa Simbólica e Verbalmente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-3-calcule-os-graus-de-liberdade-e-definicao-da-regiao-critica">Etapa 3: calcule os graus de liberdade e definição da região crítica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-4-calcular-a-estatistica-de-teste">Etapa 4: calcular a estatística de teste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o">Etapa 5: calcule o tamanho do efeito e descreva-o</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-de-teste-t-de-amostras-independentes-unicaldal">Exemplo de teste t de amostras independentes unicaldal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Etapa 1: examinar as premissas estatísticas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-declarar-as-hipotese-nula-e-de-pesquisa-simbolica-e-verbalmente">Etapa 2: declarar as hipótese nula e de pesquisa simbólica e verbalmente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Etapa 3: calcule os graus de Liberdade e definição da região crítica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Etapa 4: calcular a estatística de teste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Etapa 5: calcule o tamanho do efeito e descreva-o</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-6-interpretando-os-resultados-do-teste-de-hipoteses">Etapa 6: Interpretando os Resultados do Teste de Hipóteses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outros-niveis-alfa">Outros Níveis Alfa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="teste-t-de-amostras-independentes">
+<h1>10 - Teste t de amostras independentes<a class="headerlink" href="#teste-t-de-amostras-independentes" title="Link to this heading">#</a></h1>
+<p>Este material foi traduzido e adaptado de <span id="id1">[<a class="reference internal" href="#id13" title="Kieth A Carlson and Jennifer R Winquist. An introduction to statistics: An active learning approach. Sage Publications, 2017.">CW17</a>]</span>.</p>
+<p>OBJETIVOS DE APRENDIZADO</p>
+<p>Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
+<ul class="simple">
+<li><p>Explicar quando usar um teste t de amostras independentes;</p></li>
+<li><p>Explicar a lógica do teste t de amostras independentes;</p></li>
+<li><p>Escrever hipóteses nulas e de pesquisa usando símbolos e palavras para testes unicaudais e bicaudais;</p></li>
+<li><p>Calcular graus de liberdade e definir uma região crítica para testes unicaudais e bicaudais;</p></li>
+<li><p>Calcular amostras independentes t usando software;</p></li>
+<li><p>Calcular e interpretar um tamanho de efeito (d);</p></li>
+<li><p>Resumir os resultados da análise.</p></li>
+</ul>
+<section id="teste-t-para-amostras-independentes">
+<h2>Teste t para amostras independentes<a class="headerlink" href="#teste-t-para-amostras-independentes" title="Link to this heading">#</a></h2>
+<p>Até agora, você aprendeu a usar dois testes t diferentes: o t de amostra única e o t de amostras relacionadas. Você deve usar o t de amostra única sempre que quiser comparar uma média amostral com uma média populacional (ou um valor de interesse teórico), mas não souber o desvio padrão da população. Você deve usar o teste t de amostras relacionadas ao comparar as médias amostrais dos mesmos indivíduos medidos em dois momentos diferentes ou de pares de pessoas pareadas medidas sob condições diferentes. Quando você precisar comparar duas médias amostrais que não estão relacionadas, você deve usar um terceiro teste t : um teste t de amostras independentes.</p>
+<p>Um exemplo pode ajudar a ilustrar a diferença entre esses três testes t. Suponha que você esteja interessado no efeito de um medicamento na perda de peso. Para testar a eficácia deste medicamento, você poderia administrá-lo a uma amostra de pessoas e, depois de tomarem o medicamento por 1 mês, comparar a média de quilos perdidos pela amostra com zero quilos. Nesse caso, você usaria um t de amostra única. No entanto, se você mediu o peso médio da amostra antes de tomar o medicamento e novamente um mês depois de tomar o medicamento, você usaria um t de amostras relacionado. Finalmente, você também pode dar o medicamento a uma amostra de pessoas e um placebo a outra amostra. Depois que ambas as amostras tivessem tomado seus respectivos “medicamentos” durante 1 mês, você poderia comparar a perda média de peso das duas amostras. Nesta opção final, você usaria um teste t de amostras independentes porque as duas amostras contêm pessoas diferentes e incomparáveis.</p>
+<p>O teste t independente utiliza duas amostras da população para representar duas condições diferentes. Como no exemplo anterior, acontece frequentemente que uma amostra se destina a representar como seria a população se nada lhe fosse feito (isto é, uma condição de controle), e outra amostra se destina a representar o que a população seria, se lhe fosse dado algum tratamento (isto é, condição experimental). O objetivo do teste t de amostras independentes é determinar se é provável que a diferença entre as duas médias amostrais se deva ao erro amostral. A lógica do teste t independente é semelhante à do z para a média amostral, o teste t de amostra única e o teste t de amostras relacionadas. Todos os quatro testes calculam uma razão, especificamente, o desvio observado entre duas médias sobre o desvio esperado devido ao erro amostral:</p>
+<p>Valor obtido t ou z = <span class="math notranslate nohighlight">\(\frac{Diferença\quad observada\quad entre\quad as\quad médias}{Diferença\quad da\quad média\quad esperada\quad devido\quad a\quad erro\quad de\quad amostragem}\)</span>.</p>
+<p>Para todos esses testes, se a hipótese nula for verdadeira, o t ou z obtido deverão ser iguais a zero. No entanto, se o a hipótese nula for falsa, o t ou z obtidos devem estar longe de zero.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
+<span class="c1">#display_quiz(&quot;questions.json&quot;, preserve_responses = True)</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question1.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#display_quiz(&quot;questions.json&quot;, preserve_responses = True)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question1.json&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bioestast/lib/python3.9/site-packages/jupyterquiz/dynamic.py:176,</span> in <span class="ni">display_quiz</span><span class="nt">(ref, num, shuffle_questions, shuffle_answers, preserve_responses, border_radius, question_alignment, max_width, colors)</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>     <span class="c1">#print(&quot;File detected&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>     <span class="n">script</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;var questions</span><span class="si">{</span><span class="n">div_id</span><span class="si">}</span><span class="s2">=&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">176</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span>         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">178</span>             <span class="n">script</span> <span class="o">+=</span> <span class="n">line</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;question1.json&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>O teste t de amostras independentes compara duas médias amostrais de duas amostras não relacionadas. Por exemplo, suponha que você e seu amigo João se unam em um projeto de pesquisa que vocês mesmos desenvolveram para praticar o que aprenderam no seu curso de estatística. Vocês dois querem testar como os rótulos verbais influenciam a memória das imagens dos participantes. Você investiga essa questão mostrando a todos os participantes uma série de 25 desenhos de linhas simples, como os mostrados na Figura 10.1, e pedindo-lhes que lembrem dos desenhos 10 minutos depois. No entanto, metade dos participantes viu apenas os desenhos, enquanto a outra metade também viu uma descrição verbal de cada desenho semelhante à da Figura 10.1. Seu estudo é semelhante ao conduzido por Bower, Karlin e Dueck (1975).</p>
+<p>Você precisa comparar a memória daqueles que viram os desenhos e as descrições verbais (isto é, o grupo experimental) com a memória daqueles que apenas viram os desenhos (isto é, o grupo de controle). Nessa situação, você criou duas amostras e deu a cada uma delas um tratamento diferente. Você então mediu o número médio de desenhos que cada amostra recuperou. A média amostral do grupo de controle estima qual seria o valor médio de memória da população se a população visse apenas os desenhos sem rótulos verbais. Em contraste, a outra amostra estima qual seria o valor médio de memória da população se todos vissem os desenhos e rótulos verbais. Você pode usar um teste t de amostras independentes para determinar se a diferença entre estas duas médias amostrais é provável de ocorrer devido ao erro amostral apenas. Se o grupo experimental usado tivesse uma média maior e se o valor t obtido estiver na região crítica, você poderá concluir que as descrições verbais aumentaram os valores de memória. Se, no entanto, o grupo de descrição verbal tivesse uma média significativamente mais baixa, poderíamos concluir que as descrições verbais diminuíram os valores de memória.</p>
+<p>Neste estudo, uma amostra única foi coletada da população e depois se dividiu essa amostra para criar dois grupos diferentes; um não recebeu rótulos verbais (isto é, condição de controle) e o outro recebeu rótulos verbais (isto é, condição experimental). Basicamente, você pegou pessoas que eram semelhantes e as tornou diferentes, dando-lhes tratamentos diferentes (ou seja, você deu a elas níveis diferentes de VI [variável independente]). Em seguida, você usou o teste t de amostras independentes para determinar se os diferentes níveis da VI afetavam a memória de maneira diferente.</p>
+<p>Um teste t de amostras independentes também pode ser usado para comparar duas populações distintas de pessoas que já são diferentes de alguma forma. Em outras palavras, um teste t de amostras independente pode comparar grupos com uma diferença pré-existente. Por exemplo, suponha que você e o João decidam projetar outro experimento de memória para testar uma questão de pesquisa diferente. Você deseja testar uma teoria de aprendizagem chamada “estilos de aprendizagem”. A teoria propõe que algumas pessoas são “aprendizes visuais” e outras são “aprendizes verbais”. De acordo com a teoria dos estilos de aprendizagem, os “alunos visuais” deveriam aprender melhor com o material visual do que os “alunos verbais” aprendem com o material visual. Você deseja testar essa previsão determinando se a pontuação média de memória visual de “aprendizes visuais” é significativamente maior do que a de “aprendizes verbais”. Para testar essa hipótese, você pega uma amostra de “aprendizes visuais” e uma amostra de “aprendizes verbais”, mostra a ambos os grupos 25 desenhos de linhas simples (ou seja, informações visuais) e mede sua capacidade de lembrar os desenhos 2 dias depois, pedindo para os participantes recriarem os 25 desenhos. Em seguida, você usa o teste de amostras t independentes para determinar se as pontuações médias de memória visual das duas amostras são significativamente diferentes. A Figura 10.3 ilustra o cenário “aluno visual” versus “aluno verbal”.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question2.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="formula-conceitural-para-t-de-amostras-independentes">
+<h2>Fórmula conceitural para t de amostras independentes<a class="headerlink" href="#formula-conceitural-para-t-de-amostras-independentes" title="Link to this heading">#</a></h2>
+<p>Independentemente de você ter médias de dois grupos com uma diferença preexistente ou de dois grupos nos quais você criou uma diferença, a mesma fórmula do teste t de amostras independentes será usada. O teste t de amostras independentes é a razão entre a diferença média observada e a diferença esperada devido ao erro de amostragem:</p>
+<p>t = Diferença média das amostras - Diferença média esperada das populações se H0 for verdadeira/Diferença média esperada devido ao erro de amostragem</p>
+<p>Conforme indicado na “fórmula lógica” anterior, existem três termos neste teste t. A diferença média das duas amostras é determinada pelos dados. No cenário “aprendizes visuais” versus “aprendizes verbais”, este termo é a diferença real entre as pontuações de memória dos alunos “visuais” e “verbais”. A hipótese nula determina o outro termo no numerador. Por exemplo, se o estilo de aprendizagem (visual vs. verbal) não tem impacto nas pontuações de memória, esperaríamos que a pontuação média de memória da população dos dois grupos fosse a mesma, e que a sua diferença média fosse zero. Na maioria das situações de pesquisa (todas as situações neste livro), a diferença média das populações que é esperada se a hipótese nula for verdadeira é zero. Em outras palavras, o numerador é simplesmente a diferença entre as duas médias amostrais. O termo no denominador representa a quantidade de erro amostral esperado. Na fórmula a seguir, <span class="math notranslate nohighlight">\(\bar{x}_1\)</span> e <span class="math notranslate nohighlight">\(\bar{x}_2\)</span> são as médias amostrais do Grupo 1 e do Grupo 2, respectivamente.</p>
+<p><span class="math notranslate nohighlight">\(t = \frac{\bar{x}_1-\bar{x}_2}{SEM_i}\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question3.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="exemplo-de-teste-t-de-amostras-independentes-bicaudal">
+<h2>Exemplo de teste t de amostras independentes bicaudal<a class="headerlink" href="#exemplo-de-teste-t-de-amostras-independentes-bicaudal" title="Link to this heading">#</a></h2>
+<p>Depois de planejar seu estudo investigando o efeito das descrições verbais na memória para desenhos simples, você e seu amigo João discutem suas previsões. João acha que fornecer as descrições verbais junto com os desenhos irá distrair os participantes de prestar atenção aos desenhos. Portanto, ele pensa que a pontuação média de memória para o grupo de descrição verbal será inferior à pontuação média de memória para o grupo sem descrição verbal. Você discorda. Você acha que as descrições verbais ajudarão a dar significado aos desenhos de linhas abstratas, e esse significado maior deve aumentar os índices de memória. Então, você acha que o grupo de descrição verbal terá a pontuação média de memória mais alta. Como existem duas teorias concorrentes que fazem previsões opostas, você escolhe sabiamente realizar um teste t bicaudal. Doze estudantes se voluntariam para participar de seu estudo. Metade deles vê os desenhos de 25 linhas com descrições verbais e a outra metade vê os desenhos de 25 linhas sem descrições verbais. Você registra a pontuação de memória de cada pessoa. As pontuações de memória são normalmente distribuidas. Você usa um teste t bicaudal com um alfa de 0,05 para testar sua questão de pesquisa.</p>
+<p>Grupo 1: Grupo com descrições verbais:
+21, 22, 20, 20, 18, 20</p>
+<p>Grupo 2: Grupo sem descrições verbais:
+19, 20, 19, 18, 16, 20</p>
+<section id="etapa-1-examinar-as-premissas-estatisticas">
+<h3>Etapa 1: examinar as premissas estatísticas<a class="headerlink" href="#etapa-1-examinar-as-premissas-estatisticas" title="Link to this heading">#</a></h3>
+<p>Você coletou seus dados cuidadosamente, satisfazendo assim a suposição de independência de dados. A VD, número de desenhos de linhas lembrados corretamente, é uma variável quantitativa, e a VI, presença ou ausência de descrições verbais, identifica dois grupos/condições diferentes. Portanto, o estudo atende ao pressuposto adequado de mensuração das variáveis. Quando se trata da suposição de normalidade, as distribuições das pontuações de memória tendem a ter formato normal e, portanto, essa suposição provavelmente é atendida. Este estudo provavelmente terá um poder estatístico muito baixo e muitos erros de amostragem devido ao seu tamanho amostral muito pequeno, e você precisará ser muito cauteloso na interpretação dos resultados. A última suposição a considerar é a suposição de homogeneidade de variâncias. Para o teste t de amostras independentes, essa suposição é que os dois grupos apresentam variabilidade semelhante em seus valores de memória. Nos capítulos anteriores, utilizamos a regra geral de que se o desvio padrão numa condição for o dobro do de outra condição, esta suposição pode ser violada. Este ainda é um bom guia a seguir para o teste t independente, mas para o teste t independente, existe uma forma mais precisa de avaliar esta suposição. Como se viu na seção anterior, o valor t obtido de uma amostra independente é a diferença média entre as duas condições dividida pelo erro de amostragem esperado. Na verdade, existem duas maneiras de calcular o erro de amostragem esperado ao fazer um teste t de amostras independentes. Uma forma pressupõe homogeneidade de variância (ou seja, que as duas condições têm variâncias semelhantes) e a outra não. Qual é o melhor caminho depende dos dados. Se as variâncias forem de fato semelhantes, então é melhor calcular o erro de amostragem assumindo variâncias iguais. Se, no entanto, as variâncias forem de fato muito diferentes, é melhor calcular o erro de amostragem sem assumir variâncias iguais. Na maioria dos casos, assumir variâncias iguais será o melhor, e é isso que este livro ensina você a fazer ao fazer cálculos manuais. No entanto, há momentos em que é melhor assumir variâncias desiguais. Obviamente, a quantidade de erro amostral afeta o valor t obtido e sua decisão sobre rejeitar a hipótese nula.
+Felizmente, os programas estatísticos calculam ambos os valores t. Portanto, ao usar os programas, você deve saber como determinar qual valor t obtido é o melhor para seus dados. É possível utilizar testes para determinar a homogeneidade das variância, como o teste de Levene para ajudá-lo a tomar essa decisão. Descreveremos este teste em detalhes na seção de uso de computadores deste capítulo, mas a ideia principal é que este teste compare a variabilidade nas duas condições, e os resultados deste teste indiquem se as duas variâncias são semelhantes o suficiente para satisfazer suposição de que as variâncias iguais. Com base nos resultados deste teste de Levene, você escolherá entre o teste t que assume variância igual ou aquele que não o faz. Os resultados do teste de Levene são geralmente consistentes com a diretriz de desvio padrão duplo que você aprendeu anteriormente neste texto. Depois de avaliar as suposições, você estará pronto para passar para a próxima etapa.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question4.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="etapa-2-declarar-as-hipoteses-nula-e-de-pesquisa-simbolica-e-verbalmente">
+<h3>Etapa 2: declarar as hipóteses nula e de pesquisa Simbólica e Verbalmente<a class="headerlink" href="#etapa-2-declarar-as-hipoteses-nula-e-de-pesquisa-simbolica-e-verbalmente" title="Link to this heading">#</a></h3>
+<p>Como mencionado acima, você e João têm previsões opostas sobre os efeitos dos rótulos verbais na memória, então concordam corretamente em usar um teste bicaudal. Como mostra a Tabela 10.1, a hipótese de pesquisa bicaudal afirma que as duas médias são diferentes (ou seja, não são iguais). A hipótese nula é exatamente o oposto, afirmando que as duas médias não são diferentes (ou seja, são iguais).</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo de Hipótese</p></th>
+<th class="head"><p>Simbólico</p></th>
+<th class="head"><p>Vebal</p></th>
+<th class="head"><p>Diferença entre médias amostral e populacional</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hipótese nula</p></td>
+<td><p><span class="math notranslate nohighlight">\(H_0:\mu_1=\mu_2;\)</span> ou <span class="math notranslate nohighlight">\(H_0:\mu_1-\mu_2=0;\)</span></p></td>
+<td><p>Diferença das médias <span class="math notranslate nohighlight">\(\approx\)</span> 0</p></td>
+<td><p>Erro amostral</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hipótese de pesquisa</p></td>
+<td><p><span class="math notranslate nohighlight">\(H_a:\mu_1 \neq \mu_2;\)</span> ou <span class="math notranslate nohighlight">\(H_0:\mu_1-\mu_2 \neq 0;\)</span></p></td>
+<td><p>Diferença das médias <span class="math notranslate nohighlight">\(\neq\)</span> 0</p></td>
+<td><p>Descrição verbal afeta memória</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question5.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="etapa-3-calcule-os-graus-de-liberdade-e-definicao-da-regiao-critica">
+<h3>Etapa 3: calcule os graus de liberdade e definição da região crítica<a class="headerlink" href="#etapa-3-calcule-os-graus-de-liberdade-e-definicao-da-regiao-critica" title="Link to this heading">#</a></h3>
+<p>Quando você calculou os graus de liberdade (gl) para o teste t de amostra única, a fórmula do gl foi <span class="math notranslate nohighlight">\(gl = (N - 1)\)</span>. A fórmula gl para um teste t de amostras independentes é diferente porque o teste t de amostras independentes usa duas amostras em vez de apenas uma amostra. Portanto, você tem que calcular o gl para cada amostra e combiná-las para obter o gl para o teste t independente. A fórmula do gl para teste t de amostras independente é <span class="math notranslate nohighlight">\(gl = (n_1 - 1) + (n_2 - 1)\)</span>, onde <span class="math notranslate nohighlight">\(n_1\)</span> e <span class="math notranslate nohighlight">\(n_2\)</span> representam os tamanhos amostrais das duas amostras, espectivamente.</p>
+<p>Neste caso, o gl é o seguinte:</p>
+<p><span class="math notranslate nohighlight">\(gl = (n_1-1) + (n_2-1) = (6-1) + (6-1) = 10\)</span></p>
+<p>Você então usa a tabela t correta de valores críticos e o critério <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> para encontrar o valor crítico de t para este teste t de amoastras independente bicaudal. Neste caso, o valor crítico é 2.2281. Isso significa que as duas regiões críticas são <span class="math notranslate nohighlight">\(t \geq 2,2281\)</span> e <span class="math notranslate nohighlight">\(t  \leq -2.2281\)</span>.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">gls</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+<span class="n">a05</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.025</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gls</span><span class="p">]</span>
+<span class="n">a01</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.005</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gls</span><span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">gls</span><span class="p">,</span> <span class="n">a05</span><span class="p">,</span> <span class="n">a01</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;gl&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;α=.05&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;α=.01&#39;</span><span class="p">])</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;α=.05&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;background-color: yellow&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">})</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_915ba_row1_col0, #T_915ba_row1_col1, #T_915ba_row1_col2 {
+  background-color: yellow;
+}
+</style>
+<table id="T_915ba">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_915ba_level0_col0" class="col_heading level0 col0" >gl</th>
+      <th id="T_915ba_level0_col1" class="col_heading level0 col1" >α=.05</th>
+      <th id="T_915ba_level0_col2" class="col_heading level0 col2" >α=.01</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_915ba_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_915ba_row0_col0" class="data row0 col0" >9</td>
+      <td id="T_915ba_row0_col1" class="data row0 col1" >2.262200</td>
+      <td id="T_915ba_row0_col2" class="data row0 col2" >3.249800</td>
+    </tr>
+    <tr>
+      <th id="T_915ba_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_915ba_row1_col0" class="data row1 col0" >10</td>
+      <td id="T_915ba_row1_col1" class="data row1 col1" >2.228100</td>
+      <td id="T_915ba_row1_col2" class="data row1 col2" >3.169300</td>
+    </tr>
+    <tr>
+      <th id="T_915ba_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_915ba_row2_col0" class="data row2 col0" >11</td>
+      <td id="T_915ba_row2_col1" class="data row2 col1" >2.201000</td>
+      <td id="T_915ba_row2_col2" class="data row2 col2" >3.105800</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="etapa-4-calcular-a-estatistica-de-teste">
+<h3>Etapa 4: calcular a estatística de teste<a class="headerlink" href="#etapa-4-calcular-a-estatistica-de-teste" title="Link to this heading">#</a></h3>
+<p><em>4a. Calcule o desvio entre as duas médias amostrais</em></p>
+<p>Conforme mencionado acima, existem dois termos no numerador da estatística t. A primeira <span class="math notranslate nohighlight">\((\bar{x}_1 - \bar{x}_2)\)</span> é a diferença entre as duas médias amostrais. O segundo <span class="math notranslate nohighlight">\((\mu_1 - \mu_2)\)</span> é a diferença entre as duas populações, assumindo que a hipótese nula é verdadeira. Embora seja possível testar hipóteses nulas que predizem uma diferença específica diferente de zero (por exemplo, <span class="math notranslate nohighlight">\(\mu_1 - \mu_2 = 10\)</span>), estes tipos de testes são muito raros e não serão abordados neste texto. Para nossos propósitos, <span class="math notranslate nohighlight">\(\mu_1 - \mu_2\)</span> será sempre igual a 0. Assim, o numerador é simplesmente a diferença observada entre as duas médias amostrais:</p>
+<p><span class="math notranslate nohighlight">\((\bar{x}_1 - \bar{x}_2) = ( 20.17 - 18.67) = 1.50\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question6.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p><em>4b. Calcule o erro de amostragem esperado</em></p>
+<p>O cálculo do denominador, ou erro de amostragem esperado, requer várias etapas. Primeiro, calcule o desvio padrão para o Grupo 1 (<span class="math notranslate nohighlight">\(DP_1\)</span>) e depois calcule o desvio padrão para o Grupo 2 (<span class="math notranslate nohighlight">\(DP_2\)</span>). Neste problema, o desvio padrão para cada grupo de pontuações não é fornecido a você, portanto você deve calcular cada uma delas. Em outros problemas, esta informação pode ser fornecida. Como você deve se lembrar, a fórmula computacional para a soma dos quadrados é SQ. Portanto, o <span class="math notranslate nohighlight">\(SQ_1\)</span> e o <span class="math notranslate nohighlight">\(SD_1\)</span> são os seguintes:</p>
+<p><span class="math notranslate nohighlight">\(SQ_1 = \frac{1}{N-1}\sum_{i=1}^n(x_{1i} - \bar{x}_1)^2 = 1.767\)</span></p>
+<p><span class="math notranslate nohighlight">\(DP_1 = \sqrt{1.767} = 1.329\)</span></p>
+<p><span class="math notranslate nohighlight">\(SQ_2 = \frac{1}{N-1}\sum_{i=1}^n(x_{1i} - \bar{x}_1)^2 = 2.267\)</span></p>
+<p><span class="math notranslate nohighlight">\(DP_2 = \sqrt{2.267} = 1.506\)</span></p>
+<p>Depois de calcular o desvio padrão para cada grupo, calcule a variância agrupada. Este método assume que as variações nas duas condições são semelhantes; isto é, está assumindo homogeneidade de variância). Se as duas populações das quais essas amostras foram extraídas tiverem de fato variâncias semelhantes, é melhor agrupá-las ao calcular o erro de amostragem porque você está usando mais dados para estimar as variâncias das populações. Quando apropriado, agrupar as variações tornará seu teste de significância mais preciso. A fórmula para a variância agrupada é a seguinte:</p>
+<p><span class="math notranslate nohighlight">\(SQ_p = \frac{(n_1-1)SQ_1+(n_2-1)SQ_2}{(n_1-1)+(n_2-1)} = \frac{(6-1)1.767+(6-1)2.267}{(6-1)+(6-1)}=2.02\)</span></p>
+<p>A fórmula de variância combinada pode ser um pouco confusa, mas é importante que você entenda o que ela representa. A variância combinada é a média das duas variâncias amostrais ponderadas pelo tamanho da amostra. Neste exemplo específico, os tamanhos das amostras são iguais (ou seja, seis em cada grupo) e, portanto, você poderia calcular a variância agrupada simplesmente calculando a média das duas variâncias (lembre-se da variância <span class="math notranslate nohighlight">\(SQ\)</span>, (<span class="math notranslate nohighlight">\(\frac{(SQ_1+SQ_1)}{2}\)</span>). Esta fórmula simples fornece o mesmo valor para as variáveis agrupadas é igual à fórmula mais complexa acima apenas quando os tamanhos das amostras são iguais. Se os tamanhos das amostras forem diferentes, a fórmula mais complexa fornecerá um valor diferente e mais preciso porque dará mais peso à amostra maior. Em geral, quanto maior a amostra, mais precisamente ela representa a população e, portanto, quando os tamanhos das amostras forem diferentes, use a fórmula mais complexa que  dá maior peso aos dados da amostra maior.</p>
+<p>O método de cálculo do erro amostral que assume a homogeneidade da variância utiliza a variância agrupada para determinar o erro padrão estimado da diferença média (<span class="math notranslate nohighlight">\(SEM_i\)</span>), conforme ilustrado pela equação a seguir. Certifique-se de usar n e não gl no denominador e observe que a variância combinada (<span class="math notranslate nohighlight">\(SD_p\)</span>) já está ao quadrado.</p>
+<p><span class="math notranslate nohighlight">\(SEM_i = \sqrt{\frac{SD_p}{n_1}+\frac{SD_p}{n_2}} = \sqrt{\frac{2.02}{6}+\frac{2.02}{6}} = 0.82\)</span></p>
+<p>O erro padrão estimado da diferença média, 0.82, é a nossa estimativa do erro amostral esperado. Um erro padrão de 0.82 indica que a diferença entre as duas médias esperadas devido ao erro amostral é de 0.82.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question7.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p><em>4c. Calcule a estatística do teste (teste t independente)</em></p>
+<p>O teste t de amostras independente é a razão entre o desvio observado entre as duas médias amostrais dividido pelo erro padrão estimado da diferença média:</p>
+<p><span class="math notranslate nohighlight">\(t = \frac{\bar{x}_1-\bar{x}_2}{SEM_i} =  \frac{20.17 - 18.67}{0.82} = 1.83\)</span></p>
+<p>A diferença entre as duas médias (ou seja, 20.17 - 18.67 = 1.50) foi 1.83 vezes maior que o desvio esperado devido ao erro amostral (ou seja, 0.82). As regiões críticas de t foram <span class="math notranslate nohighlight">\(t \geq 2,2281\)</span> e <span class="math notranslate nohighlight">\(t \leq -2,2281\)</span>, e portanto o valor t obtido não caiu na região crítica. O valor t obtido não é suficientemente grande para rejeitar a hipótese nula e, portanto, você não rejeita a hipótese nula.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question8.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o">
+<h3>Etapa 5: calcule o tamanho do efeito e descreva-o<a class="headerlink" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o" title="Link to this heading">#</a></h3>
+<p>A fórmula para calcular o tamanho do efeito de um teste t independente é semelhante à de um teste t de amostra única. No entanto, ao calcular d, o denominador é a variância combinada (ou seja, <span class="math notranslate nohighlight">\(SQ_p\)</span>), que pode ser convertido para o desvio padrão agrupado (ou seja, <span class="math notranslate nohighlight">\(SQ_p\)</span>) calculando sua raiz quadrada. Você calculou a variância combinada na Etapa 3b; era 2.02. O cálculo d é o seguinte:</p>
+<p>d = Diferença observada entre as médias/Desvio padrão combinado = <span class="math notranslate nohighlight">\(\frac{\bar{x}_1 - \bar{x}_2}{SQ_p} = \frac{20.17-18.67}{2.02} = 1.06\)</span>.</p>
+<p>Os mesmos pontos de corte de tamanho de efeito são usados para um teste t independente. Se d estiver próximo de 0.2, o tamanho do efeito é pequeno; se estiver próximo de 0.5, o tamanho do efeito é médio; e se estiver próximo de 0.8, é grande. Um tamanho de efeito de 1.06 é considerado um efeito grande. Os resultados das etapas 4 e 5 podem ser um pouco confusos. No Passo 4, você não conseguiu rejeitar a hipótese nula, o que significava que o grupo com rótulo verbal não se lembrava de mais imagens do que o grupo sem rótulo verbal. No entanto, o tamanho do efeito de 1.06 indica que a diferença entre as duas médias é grande. Sempre que a hipótese nula não é rejeitada e ainda assim houve um tamanho de efeito médio ou grande, o tamanho da amostra utilizado no estudo foi muito pequeno para que o teste estatístico ou o tamanho do efeito sejam confiáveis. Ao interpretar os resultados de qualquer estudo, também é importante considerar os resultados de outros estudos semelhantes. Quando Bower et al. (1975) conduziram um estudo semelhante e descobriram que os rótulos verbais melhoraram o desempenho da memória. A combinação de amostras pequenas e o grande tamanho do efeito do seu estudo e o fato de um estudo semelhante ter rejeitado a hipótese nulo sugerem que você deve interpretar o seu resultado nulo com cautela. Em situações como essa, você deve obter um tamanho de amostra maior e, em seguida, reexecutar o estudo.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question9.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p><em>Etapa 6: Interpretando os Resultados do Teste de Hipóteses</em></p>
+<p>O parágrafo a seguir resume os resultados desses testes:
+Não houve diferença significativa entre as pontuações de memória daqueles que obtiveram as descrições verbais <span class="math notranslate nohighlight">\((\bar{x}_1 = 20.17, DP_1 = 1.33)\)</span> e daqueles que não obtiveram <span class="math notranslate nohighlight">\((\bar{x}_2 = 18.67, DP_2 = 1.51)\)</span>, <span class="math notranslate nohighlight">\(t_{(10)} = 1.83\)</span>, <span class="math notranslate nohighlight">\(p &gt; 0.05\)</span>, d = 1.06. No entanto, é importante notar que os tamanhos amostrais eram pequenos, portanto este estudo deve ser repetido com tamanhos amostrais maiores antes de serem tiradas conclusões.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question10.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="exemplo-de-teste-t-de-amostras-independentes-unicaldal">
+<h2>Exemplo de teste t de amostras independentes unicaldal<a class="headerlink" href="#exemplo-de-teste-t-de-amostras-independentes-unicaldal" title="Link to this heading">#</a></h2>
+<p>Você e seu amigo João agora voltam seus esforços de pesquisa para o estudo de “estilos de aprendizagem”. Os “aprendizes visuais” têm melhor memória para informações visuais do que os “aprendizes verbais”? Se a teoria dos estilos de aprendizagem for precisa, os “alunos visuais’ deveriam recordar mais informações visuais do que os “alunos verbais”. Dado que a teoria faz uma previsão específica, um teste t unilateral é apropriado nesta situação. Vinte e nove “aprendizes verbais” e 31 “aprendizes visuais” voluntariaram-se para participar num estudo que investigou esta questão. Todos os alunos foram apresentados a desenhos de linhas simples e, em seguida, foram solicitados a recriar tantos desenhos de linhas quanto conseguissem lembrar. As pontuações de memória visual de cada grupo estão listadas abaixo. Você usa corretamente um teste t independente unilateral com um nível alfa de 0.05 para determinar se “aprendizes visuais” se lembram mais dos desenhos de linha do que “aprendizes verbais”.</p>
+<p>Grupo 1: Grupo de Aprendizes Verbais:</p>
+<p><span class="math notranslate nohighlight">\(\bar{x}_1 = 15.00; DP_1 = 1.41, n_1 = 29\)</span></p>
+<p>Grupo 2: Grupo de Aprendiz Visual:</p>
+<p><span class="math notranslate nohighlight">\(\bar{x}_2 = 15.25; DP_2 = 1.67, n_2 = 31\)</span></p>
+<section id="id2">
+<h3>Etapa 1: examinar as premissas estatísticas<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Tal como no exemplo anterior, estes dados cumprem todos os pressupostos estatísticos. Os dados dentro de cada condição são independentes e a VD é medido com uma variável quantitativa. Você também sabe que as pontuações de memória tendem a ser distribuídas normalmente, portanto, a suposição de normalidade provavelmente é atendida. Como antes, a suposição de homogeneidade de variância será avaliada com o teste de Levene.</p>
+</section>
+<section id="etapa-2-declarar-as-hipotese-nula-e-de-pesquisa-simbolica-e-verbalmente">
+<h3>Etapa 2: declarar as hipótese nula e de pesquisa simbólica e verbalmente<a class="headerlink" href="#etapa-2-declarar-as-hipotese-nula-e-de-pesquisa-simbolica-e-verbalmente" title="Link to this heading">#</a></h3>
+<p>A hipótese de pesquisa para um teste unilateral especifica qual das duas médias amostrais será maior se o “tratamento” funcionar. Neste exemplo, o Grupo 1 era formado por “aprendizes verbais” e o Grupo 2 era formado por “aprendizes visuais”. A teoria dos estilos de aprendizagem prevê que os “aprendizes visuais” deveriam aprender informações visuais melhor do que os “aprendizes verbais”, e esta previsão é representada simbolicamente pelo seguinte</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo de Hipótese</p></th>
+<th class="head"><p>Simbólico</p></th>
+<th class="head"><p>Vebal</p></th>
+<th class="head"><p>Diferença entre médias amostral e populacional</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hipótese nula</p></td>
+<td><p><span class="math notranslate nohighlight">\(H_0:\mu_1=\mu_2;\)</span> ou <span class="math notranslate nohighlight">\(H_0:\mu_1-\mu_2=0;\)</span></p></td>
+<td><p>Diferença das médias <span class="math notranslate nohighlight">\(\approx\)</span> 0</p></td>
+<td><p>Erro amostral</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hipótese de pesquisa</p></td>
+<td><p><span class="math notranslate nohighlight">\(H_a:\mu_1 &lt; \mu_2;\)</span> ou <span class="math notranslate nohighlight">\(H_0:\mu_1-\mu_2 &lt; 0;\)</span></p></td>
+<td><p>Diferença das médias <span class="math notranslate nohighlight">\(&lt;\)</span> 0</p></td>
+<td><p>Aprendizes visuais lembram mais</p></td>
+</tr>
+</tbody>
+</table>
+<p>hipótese de pesquisa: <span class="math notranslate nohighlight">\(\mu_{verbal} &lt; \mu_{visual}\)</span> ou <span class="math notranslate nohighlight">\(\mu_{verbal} - \mu_{visual} &lt; 0\)</span>. A hipótese nula é o oposto da hipótese de pesquisa, incluindo todos os outros resultados possíveis. Assim, a hipótese nula afirma que <span class="math notranslate nohighlight">\(\mu_{verbal} = \mu_{visual}\)</span> ou <span class="math notranslate nohighlight">\(\mu_{verbal} - \mu_{visual} = 0\)</span>. Em outras palavras, a hipótese nula é que “aprendizes visuais” não aprendem informações visuais melhor do que os “aprendizes verbais”. A pesquisa e as hipóteses nulas para este teste t independente unilateral são mostradas na Tabela 10.2.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question11.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="id3">
+<h3>Etapa 3: calcule os graus de Liberdade e definição da região crítica<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>O cálculo do gl para testes unicaudais é feito exatamente da mesma maneira que para um teste bicaudal. Nesse caso,</p>
+<p><span class="math notranslate nohighlight">\(gl = (n_1-1)+(n_2-1) = (29 - 1)+(31 - 1) = 58\)</span></p>
+<p>A tabela t unicaudal indica que um estudo com gl = 58, ao utilizar <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>, tem valor crítico de 1.6716. A hipótese de pesquisa prevê que <span class="math notranslate nohighlight">\(\mu_1\)</span>, o grupo verbal, será menor que <span class="math notranslate nohighlight">\(\mu_2\)</span>, o grupo visual, portanto está prevendo um valor t negativo obtido, <span class="math notranslate nohighlight">\(\mu_{verbal} - \mu_{visual} &lt; 0\)</span>. Assim, a região crítica está no lado negativo da distribuição. O hipótese nula deve ser rejeitada se <span class="math notranslate nohighlight">\(t &lt; -1.6716\)</span>. Se os “aprendizes verbais” fossem rotulados como Grupo 2 e os “aprendizes visuais” como Grupo 1, teríamos esperado um t positivo, e a região crítica estaria no lado positivo da distribuição.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">gls</span> <span class="o">=</span> <span class="p">[</span><span class="mi">57</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">59</span><span class="p">]</span>
+<span class="n">a05</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.05</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gls</span><span class="p">]</span>
+<span class="n">a01</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gls</span><span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">gls</span><span class="p">,</span> <span class="n">a05</span><span class="p">,</span> <span class="n">a01</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;gl&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;α=.05&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;α=.01&#39;</span><span class="p">])</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;α=.05&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;background-color: yellow&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">})</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_41540_row1_col0, #T_41540_row1_col1, #T_41540_row1_col2 {
+  background-color: yellow;
+}
+</style>
+<table id="T_41540">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_41540_level0_col0" class="col_heading level0 col0" >gl</th>
+      <th id="T_41540_level0_col1" class="col_heading level0 col1" >α=.05</th>
+      <th id="T_41540_level0_col2" class="col_heading level0 col2" >α=.01</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_41540_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_41540_row0_col0" class="data row0 col0" >57</td>
+      <td id="T_41540_row0_col1" class="data row0 col1" >1.672000</td>
+      <td id="T_41540_row0_col2" class="data row0 col2" >2.393600</td>
+    </tr>
+    <tr>
+      <th id="T_41540_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_41540_row1_col0" class="data row1 col0" >58</td>
+      <td id="T_41540_row1_col1" class="data row1 col1" >1.671600</td>
+      <td id="T_41540_row1_col2" class="data row1 col2" >2.392400</td>
+    </tr>
+    <tr>
+      <th id="T_41540_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_41540_row2_col0" class="data row2 col0" >59</td>
+      <td id="T_41540_row2_col1" class="data row2 col1" >1.671100</td>
+      <td id="T_41540_row2_col2" class="data row2 col2" >2.391200</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question12.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="id4">
+<h3>Etapa 4: calcular a estatística de teste<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p><em>4a. Calcule o desvio entre as duas médias amostrais</em></p>
+<p>Novamente, o numerador do teste é a diferença entre as duas médias amostrais:</p>
+<p><span class="math notranslate nohighlight">\((\bar{x}_1 - \bar{x}_2) = (15.00-15) = -0.25\)</span>.</p>
+<p><em>4b. Calcule o erro médio de amostra esperado</em></p>
+<p>Como no exemplo anterior, você precisa do desvio padrão para cada grupo de pontuações. Neste problema, eles foram fornecidos para você, mas você deve saber como calculá-los se precisar para problemas futuros. Revise o exemplo anterior se não tiver certeza de como isso é feito. Depois que o desvio padrão para o Grupo 1 (ou seja, <span class="math notranslate nohighlight">\(DP_1 = 1.41\)</span>) e o desvio padrão para o Grupo 2 (ou seja, <span class="math notranslate nohighlight">\(DP_2 = 1.67\)</span>) forem calculados, você calcula a variância agrupada (ou seja, <span class="math notranslate nohighlight">\(SQ_p\)</span>) do seguinte modo:</p>
+<p><span class="math notranslate nohighlight">\(SQ_p = \frac{((n_1-1)SQ_1+(n_2-1)SQ_2)}{(n_1-1)+(n_2-1)} = 2.402\)</span></p>
+<p>A variância combinada é a variância média das duas amostras ponderada pelo tamanho da amostra. Nesse caso, a segunda amostra era um pouco maior que a segunda amostra e, portanto, a variância associada a essa amostra recebeu mais peso no cálculo da variância agrupada. Só faz sentido agrupar (ou calcular a média) os dois desvios padrão se eles estiverem estimando o mesmo parâmetro populacional. Se os desvios padrão forem significativamente diferentes entre si, a variância agrupada deverá ser calculada de uma maneira diferente. Felizmente, os pacotes estatísticos fazem todos esses cálculos automaticamente e, portanto,  revisitaremos esse problema na seção de uso de computadores a seguir. Depois de calcular a variância agrupada, você a usará para calcular o erro padrão estimado da diferença média, que é feito da seguinte forma:</p>
+<p><span class="math notranslate nohighlight">\(SEM_i = \sqrt{\frac{SQ_p}{n_1}+\frac{SQ_p}{n_2}} = 0.4\)</span></p>
+<p>Certifique-se de usar n de cada grupo e não gl no denominador ao calcular a estimativa de erro padrão da diferença média. Além disso, observe que a variância agrupada (<span class="math notranslate nohighlight">\(SQ_p\)</span>) já está elevado ao quadrado e, portanto, você não deve elevá-la ao quadrado novamente.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question13.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p><em>4c. Calcule a estatística do teste (teste t de amostras independentes)</em></p>
+<p>Novamente, o cálculo do teste t é idêntico a um teste bicaudal:</p>
+<p><span class="math notranslate nohighlight">\(t = \frac{(\bar{x}_1 - \bar{x}_2)}{SEM_i} = \frac{(15 - 15.25)}{0.40} = -0.63\)</span></p>
+<p>O valor t obtido de -0.63 não está mais longe de zero do que o valor crítico de -1.6716. Portanto, você não rejeita a hipótese nula.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question14.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="id5">
+<h3>Etapa 5: calcule o tamanho do efeito e descreva-o<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Novamente, calcular o tamanho do efeito para testes unicaudais e bicaudais é idêntico:</p>
+<p>d = Diferença observada entre as médias/Desvio padrão = -0.16</p>
+<p>Um tamanho de efeito com valor absoluto de 0.16 é pequeno. Isso significa que o estilo de aprendizagem dos alunos praticamente não teve efeito algum nas pontuações de memória.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question15.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="etapa-6-interpretando-os-resultados-do-teste-de-hipoteses">
+<h3>Etapa 6: Interpretando os Resultados do Teste de Hipóteses<a class="headerlink" href="#etapa-6-interpretando-os-resultados-do-teste-de-hipoteses" title="Link to this heading">#</a></h3>
+<p>Ao interpretar os resultados de qualquer estudo, você deve sempre considerar os resultados do teste de significância e o tamanho do efeito. Neste estudo sobre estilos de aprendizagem, o teste de significância sugeriu que a diferença nas pontuações médias de memória entre alunos visuais e verbais era provavelmente apenas um erro de amostragem. Em outras palavras, os dados não apoiaram a teoria dos estilos de aprendizagem. O pequeno tamanho do efeito neste estudo também não apoiou a ideia de que os estilos de aprendizagem influenciam o desempenho da memória. Este estudo gerou um “resultado nulo” inequívoco. Se muitos outros estudos na literatura relatarem resultados nulos semelhantes, então você poderá ter mais certeza de que seu resultado nulo reflete com precisão a situação real. Mesmo que você já tenha ouvido falar muito sobre estilos de aprendizagem e tenha sido informado de que você é um aluno “visual”, “auditivo” ou “verbal”, você deve saber que estudos experimentais geralmente encontraram resultados nulos ao investigar estilos de aprendizagem (Cook, Gelula, Dupras e Schwartz, 2007; Pashler, McDaniel, Rohrer e Bjork, 2008). Na verdade, a coleção de resultados nulos é suficientemente grande para que os investigadores da memória geralmente concordem que, atualmente, não há evidências que apoiem a teoria dos estilos de aprendizagem (Pasher et al., 2008). Em vez disso, os pesquisadores da memória sugerem que os instrutores deveriam incorporar estratégias de memória apoiadas por evidências. Muitas pesquisas sobre memória apoiam a eficácia do uso de níveis mais profundos de processamento ou efeitos de práticas de recuperação. Em outras palavras, você deve pensar sobre o significado do que está tentando aprender e praticar a recuperação das informações da sua memória. A pesquisa sugere que essas estratégias de estudo aumentarão seu desempenho acadêmico, mas não depender de estilos de aprendizagem. Os resultados do estudo de estilos de aprendizagem, tanto seu, quanto do João, podem ser resumidos da seguinte forma:</p>
+<p>Ao contrário da previsão da teoria dos estilos de aprendizagem, os alunos visuais <span class="math notranslate nohighlight">\((\bar{x} = 15.25, DP = 1.41)\)</span> não aprenderam significativamente mais informações visuais do que os alunos verbais <span class="math notranslate nohighlight">\((\bar{x} = 15.00, DP = 1.67)\)</span>, <span class="math notranslate nohighlight">\(t_{(58)} = -0.63\)</span>, <span class="math notranslate nohighlight">\(p &gt; 0.05\)</span> (unicaudal), d = -0.16. O resultado nulo do estudo é consistente com os resultados nulos encontrados por vários outros pesquisadores que investigam estilos de aprendizagem. Coletivamente, os resultados nulos de vários estudos sobre estilos de aprendizagem sugerem fortemente que há muito pouco, ou nenhum, mérito na teoria da aprendizagem dos estilos de aprendizagem.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question16.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="outros-niveis-alfa">
+<h2>Outros Níveis Alfa<a class="headerlink" href="#outros-niveis-alfa" title="Link to this heading">#</a></h2>
+<p>Em ambos os exemplos anteriores, você usou um alfa de 0.05. Se você usasse um alfa de 0.01 em vez de 0.05, seria mais difícil rejeitar a hipótese nula. Isso significa que você teria menos poder estatístico, mas um risco menor de cometer um erro Tipo I.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question17.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="pratica-complementar-opcional">
+<h2>Prática complementar OPCIONAL<a class="headerlink" href="#pratica-complementar-opcional" title="Link to this heading">#</a></h2>
+<p>Código python: <a class="reference external" href="http://colab.research.google.com/github/ridasilva/bioestatisca/blob/master/capitulos/chap10/chap10amostras_independentes.ipynb"><img alt="Abra com Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Google Planilhas: <a class="reference external" href="https://docs.google.com/spreadsheets/d/1TVjJWrYZ7jnKslqKZXkGpvjY8vctVjZ5N3cNL9F0HSU/edit?usp=sharing"><img alt="Abra com Colab" src="../../_images/google_sheet.png" /></a></p>
+</section>
+<section id="bibliografia">
+<h2>Bibliografia<a class="headerlink" href="#bibliografia" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id6">
+<div role="list" class="citation-list">
+<div class="citation" id="id12" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BM09<span class="fn-bracket">]</span></span>
+<p>Wilton de Oliveira Bussab and Pedro Alberto Morettin. <em>Estatística básica</em>. Saraiva, 2009.</p>
+</div>
+<div class="citation" id="id13" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">CW17</a><span class="fn-bracket">]</span></span>
+<p>Kieth A Carlson and Jennifer R Winquist. <em>An introduction to statistics: An active learning approach</em>. Sage Publications, 2017.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./capitulos/chap10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../chap9/chap9.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">9 - Teste t de amostras relacionadas</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chap11/chap11.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">11 - ANOVA de um fator para amostras independentes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teste-t-para-amostras-independentes">Teste t para amostras independentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-conceitural-para-t-de-amostras-independentes">Fórmula conceitural para t de amostras independentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-de-teste-t-de-amostras-independentes-bicaudal">Exemplo de teste t de amostras independentes bicaudal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-1-examinar-as-premissas-estatisticas">Etapa 1: examinar as premissas estatísticas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-declarar-as-hipoteses-nula-e-de-pesquisa-simbolica-e-verbalmente">Etapa 2: declarar as hipóteses nula e de pesquisa Simbólica e Verbalmente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-3-calcule-os-graus-de-liberdade-e-definicao-da-regiao-critica">Etapa 3: calcule os graus de liberdade e definição da região crítica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-4-calcular-a-estatistica-de-teste">Etapa 4: calcular a estatística de teste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-5-calcule-o-tamanho-do-efeito-e-descreva-o">Etapa 5: calcule o tamanho do efeito e descreva-o</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-de-teste-t-de-amostras-independentes-unicaldal">Exemplo de teste t de amostras independentes unicaldal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Etapa 1: examinar as premissas estatísticas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-declarar-as-hipotese-nula-e-de-pesquisa-simbolica-e-verbalmente">Etapa 2: declarar as hipótese nula e de pesquisa simbólica e verbalmente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Etapa 3: calcule os graus de Liberdade e definição da região crítica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Etapa 4: calcular a estatística de teste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Etapa 5: calcule o tamanho do efeito e descreva-o</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-6-interpretando-os-resultados-do-teste-de-hipoteses">Etapa 6: Interpretando os Resultados do Teste de Hipóteses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outros-niveis-alfa">Outros Níveis Alfa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ricardo R. da Silva
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
