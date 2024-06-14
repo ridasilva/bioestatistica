@@ -256,9 +256,9 @@ O teste t de amostras independentes determina se a diferença das média é sign
 \frametitle{Etapa 3: Definir o valor crítico de F}
 Especificamente, você precisará dos graus de liberdade entre tratamentos (\(gl_{entre}\)) e dos graus de liberdade dentro dos tratamentos (\(gl_{dentro(error)}\)) para encontrar o valor F crítico:
 
-\(gl_{entre} = g - 1\), entre onde g representa o número de grupos/condições de tratamento, e
+\(gl_{entre} = K - 1\), entre onde K representa o número de grupos/condições de tratamento, e
 
-\(gl_{dentro} = N-g\), onde N representa o número de valores em estudo inteiro.
+\(gl_{dentro} = N-K\), onde N representa o número de valores em estudo inteiro.
 
 Neste caso, o \(gl_{entre} = 3 - 1 = 2\), e o \(gl_{dentro} = 18 - 3 = 15\).\\~\\
 
@@ -304,7 +304,7 @@ Você calcula o $SQ_{entre}$ calculando a SQ para as médias dos três grupos e 
 Tratamento & Média ($\bar{Y}_i$) & $\bar{Y}_i^2$\\
  \hline
 TCC & 8 & 64 \\
-TFD & 15.5 & 240.25 \\
+TPD & 15.5 & 240.25 \\
 TN  & 16.333 & 266.777 \\
  \hline
  & $\bar{Y}=13.6$ & $\sum_{i=1}^K\bar{Y}_i^2 = 571.027$\\
@@ -314,7 +314,7 @@ TN  & 16.333 & 266.777 \\
  
 \[SQE = m \sum_{i=1}^K(\bar{Y}_i-\bar{Y})^2 = m(\sum_{i=1}^K\bar{Y}_i^2-K\bar{Y}^2)\]
 
-\[SQE =  6 \times (571.027- 3\times 13.6^2) = \]
+\[SQE =  6 \times (571.027- 3\times 13.6^2) = 252.78\]
 
 \end{frame}
 
@@ -323,11 +323,11 @@ TN  & 16.333 & 266.777 \\
 \frametitle{Etapa 4: Calculando a estatística do teste (ANOVA independente)}
 Você encontra o $SQD$ calculando a SQ para cada condição de tratamento separadamente e depois somando-os.
 
-\[SQD = \sum_{i=1}^K\sum_{j=1}^m (Y_{ij}-\bar{Y}_i)^2 = \sum_{i=1}^K\sum_{j=1}^m Y_{ij}^2 -m\sum_{i=1}^K\bar{Y}^2\]
+\[SQD = \sum_{i=1}^K\sum_{j=1}^m (Y_{ij}-\bar{Y}_i)^2 = \sum_{i=1}^K\sum_{j=1}^m Y_{ij}^2 -m\sum_{i=1}^K\bar{Y}_i^2\]
 
 \[SQ_{TCC} = \sum_{j=1}^m (Y_{1j}-\bar{Y}_1)^2 = 108\]
 
-\[SQ_{TFD} = \sum_{j=1}^m (Y_{2j}-\bar{Y}_2)^2 = 57.5\]
+\[SQ_{TPD} = \sum_{j=1}^m (Y_{2j}-\bar{Y}_2)^2 = 57.5\]
 
 \[SQ_{TN} = \sum_{j=1}^m (Y_{3j}-\bar{Y}_3)^2 = 143.333\]
 
@@ -341,7 +341,7 @@ Você encontra o $SQD$ calculando a SQ para cada condição de tratamento separa
 
 \[SQ_{TCC} = \sum_{j=1}^m (Y_{1j}-\bar{Y}_1)^2 = 108\]
 
-\[SQ_{TFD} = \sum_{j=1}^m (Y_{2j}-\bar{Y}_2)^2 = 57.5\]
+\[SQ_{TPD} = \sum_{j=1}^m (Y_{2j}-\bar{Y}_2)^2 = 57.5\]
 
 \[SQ_{TN} = \sum_{j=1}^m (Y_{3j}-\bar{Y}_3)^2 = 143.333\]
 
@@ -428,7 +428,7 @@ Neste caso, o valor F obtido foi 6.14, que é superior ao valor F crítico de 3.
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{4e. Se necessário, calcule testes post hoc}
+\frametitle{4e. Se necessário, calcule testes \textit{post hoc}}
 A hipótese nula para uma ANOVA é que todas as diferentes médias das condições são iguais. \\~\\
 
 Rejeitar a hipótese nula não indica quais pares de médias são diferentes entre si. Assim, se você rejeitar a hipótese nula e houver três ou mais condições VI no estudo, será necessário realizar testes post hoc de pares para determinar qual par ou pares de médias são diferentes entre si. 
@@ -437,7 +437,7 @@ Rejeitar a hipótese nula não indica quais pares de médias são diferentes ent
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{\textit{teste de diferença honestamente significativa (HSD) de Tukey}}
+\frametitle{\textit{Teste de diferença honestamente significativa (HSD) de Tukey}}
 
 O teste HSD revela quão diferentes devem ser quaisquer duas médias para serem consideradas "improváveis de resultar de erro de amostragem". A fórmula HSD é
 
@@ -465,7 +465,7 @@ Comparação & Diferença entre médias & Siginificância\\
 \hline
 TCC vs TFD & $|8-15.5|=7.5$ & $>HSD$ - Significativo\\
 TCC vs NT & $|8-16.33|=8.33$ & $>HSD$ - Significativo\\
-NT vs PDT & $|15.5-16.33|=-0.83$ & $<HSD$ - Não Significativo\\
+NT vs TFD & $|15.5-16.33|=0.83$ & $<HSD$ - Não Significativo\\
 \hline
 \end{tabular}
 \end{table}
@@ -489,13 +489,13 @@ Para ANOVAs de um fator, você deve interpretar o eta parcial quadrado como a po
 
 Ao relatar uma ANOVA, as médias, desvios padrão e tamanhos de efeito para as comparações aos pares são relatados em tabelas, portanto não precisam ser repetidos no texto. O que se segue é um exemplo de como a análise acima pode ser resumida.\\~\\
 
-Uma ANOVA independente revelou diferenças significativas entre as três terapias para depressão, F(2, 15) = 6.14, $p < 0.05$, $\eta_p^2 = 0.45$, QME = 20.59. As médias e desvios padrão para cada tratamento estão na Tabela de ANOVA. Os testes \textit{post hoc} do HSD de Tukey revelaram que o grupo da TCC apresentou valores de depressão mais baixos do que o grupo TFD e o grupo sem tratamento. A terapia TFD não foi melhor do que não receber nenhum tratamento. Os testes post hoc do HSD e seus tamanhos de efeito foram apresentados anteriormente.
+Uma ANOVA independente revelou diferenças significativas entre as três terapias para depressão, F(2, 15) = 6.14, $p < 0.05$, $\eta_p^2 = 0.45$, QME = 20.59. As médias e desvios padrão para cada tratamento estão na Tabela de ANOVA. Os testes \textit{post hoc} do HSD de Tukey revelaram que o grupo da TCC apresentou valores de depressão mais baixos do que o grupo TFD e o grupo sem tratamento. A terapia TFD não foi melhor do que não receber nenhum tratamento. Os testes \textit{post hoc} do HSD e seus tamanhos de efeito foram apresentados anteriormente.
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Uma nota adicional sobre ANOVAS}
+\frametitle{Uma nota adicional sobre ANOVAs}
 Se você fizer vários testes t, cada teste t terá 5\% de chance de produzir um erro Tipo I. Se você realizar vários testes t, a probabilidade exata de ter cometido pelo menos um erro Tipo I é dada pela seguinte fórmula de erro familiar (\textit{family-wise error rate} - FWER)\\~\\
 
 $FWER = 1-(1-\alpha)^c$, onde c é o número de comparações\\~\\
@@ -509,7 +509,7 @@ $FWER = 1 - (1-0.05)^1 = 0.05$ ou 5\%.\\~\\
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Uma nota adicional sobre ANOVAS}
+\frametitle{Uma nota adicional sobre ANOVAs}
 No entanto, se você tiver três comparações no mesmo estudo, a probabilidade de ter cometido pelo menos um erro Tipo I é um pouco maior, 0,14 ou 14\%.\\~\\
 
 $FWER = 1 - (1 - 0.05)^3 = 0.14$.\\~\\

@@ -77,7 +77,7 @@ citestyle=authoryear
    \uncover<3->{\item
     Escrever hipóteses nulas e de pesquisa usando símbolos e palavras para testes unicaudais e bicaudais;}
    \uncover<4->{\item
-    alcular graus de liberdade e definir uma região crítica para testes unicaudais e bicaudais;}
+    Calcular graus de liberdade e definir uma região crítica para testes unicaudais e bicaudais;}
    \uncover<5->{\item
     Calcular amostras independentes t usando \textit{software};}
    \uncover<7->{\item
@@ -142,7 +142,7 @@ Optamos por um teste bilateral. Também escolhemos um \(\alpha=0.05\).
 Grupo 1: Grupo com descrições verbais:
 21, 22, 20, 20, 18, 20
 
-Grupo 2: Grupo sem Descrições Verbais:
+Grupo 2: Grupo sem descrições verbais:
 19, 20, 19, 18, 16, 20
 
 \end{frame}
@@ -269,7 +269,7 @@ Existem dois termos no numerador da estatística t. A primeira $(\bar{x}_1 - \ba
 4b. Calcule o erro de amostragem esperado
 \[SQ_1 = \frac{1}{N-1}\sum_{i=1}^n(x_{1i} - \bar{x}_1)^2 = 1.767\]
 \[DP_1 = \sqrt{1.767} = 1.329\]
-\[SQ_2 = \frac{1}{N-1}\sum_{i=1}^n(x_{1i} - \bar{x}_1)^2 = 2.267\]
+\[SQ_2 = \frac{1}{N-1}\sum_{i=1}^n(x_{2i} - \bar{x}_2)^2 = 2.267\]
 \[DP_2 = \sqrt{2.267} = 1.506\]
 
 \end{frame}
@@ -283,7 +283,7 @@ Quando apropriado, agrupar as variações tornará seu teste de significância m
 \[SQ_p = \frac{(n_1-1)SQ_1+(n_2-1)SQ_2}{(n_1-1)+(n_2-1)} = \frac{(6-1)1.767+(6-1)2.267}{(6-1)+(6-1)}=2.02\]
 O método de cálculo do erro amostral que assume a homogeneidade da variância utiliza a variância agrupada para determinar o erro padrão estimado da diferença média ($SEM_i$)
 
-\[SEM_i = \sqrt{\frac{SD_p}{n_1}+\frac{SD_p}{n_2}} = \sqrt{\frac{2.02}{6}+\frac{2.02}{6}} = 0.82\]
+\[SEM_i = \sqrt{\frac{SQ_p}{n_1}+\frac{SQ_p}{n_2}} = \sqrt{\frac{2.02}{6}+\frac{2.02}{6}} = 0.82\]
 
 \end{frame}
 
