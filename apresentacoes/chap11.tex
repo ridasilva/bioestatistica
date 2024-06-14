@@ -288,6 +288,13 @@ gl & 1 & 2 & 3\\
 
 \setbeamercovered{transparent}
 \begin{frame}
+\frametitle{Distribuição de Fisher-Snedecor}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{figs/figura_92b} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
 \frametitle{Etapa 4: Calculando a estatística do teste (ANOVA independente)}
 Você calcula o $SQ_{entre}$ calculando a SQ para as médias dos três grupos e depois multiplicando esse valor $SQ_{medias}$ por \textit{m} (o número de unidades amostrais em cada grupo).
 
@@ -482,7 +489,7 @@ Para ANOVAs de um fator, você deve interpretar o eta parcial quadrado como a po
 
 Ao relatar uma ANOVA, as médias, desvios padrão e tamanhos de efeito para as comparações aos pares são relatados em tabelas, portanto não precisam ser repetidos no texto. O que se segue é um exemplo de como a análise acima pode ser resumida.\\~\\
 
-Uma ANOVA independente revelou diferenças significativas entre as três terapias para depressão, F(2, 15) = 6.14, p < 0.05, $\eta_p^2 = 0.45$, QME = 20.59. As médias e desvios padrão para cada tratamento estão na Tabela de ANOVA. Os testes \textit{post hoc} do HSD de Tukey revelaram que o grupo da TCC apresentou valores de depressão mais baixos do que o grupo TFD e o grupo sem tratamento. A terapia TFD não foi melhor do que não receber nenhum tratamento. Os testes post hoc do HSD e seus tamanhos de efeito foram apresentados anteriormente.
+Uma ANOVA independente revelou diferenças significativas entre as três terapias para depressão, F(2, 15) = 6.14, $p < 0.05$, $\eta_p^2 = 0.45$, QME = 20.59. As médias e desvios padrão para cada tratamento estão na Tabela de ANOVA. Os testes \textit{post hoc} do HSD de Tukey revelaram que o grupo da TCC apresentou valores de depressão mais baixos do que o grupo TFD e o grupo sem tratamento. A terapia TFD não foi melhor do que não receber nenhum tratamento. Os testes post hoc do HSD e seus tamanhos de efeito foram apresentados anteriormente.
 
 \end{frame}
 
@@ -510,6 +517,33 @@ $FWER = 1 - (1 - 0.05)^3 = 0.14$.\\~\\
 Fazer uma única ANOVA em vez de vários testes t mantém a taxa de erro familiar em 0.05 para a ANOVA geral. Se forem necessários testes \textit{post hoc}, há uma variedade de testes para escolher, mas a ideia geral por trás da maioria deles é que eles evitam que a taxa de erro Tipo I aumente.
 
 \end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 9.16}
+A gerência de um depósito que armazena cargas aéreas de pequeno porte está estudando o peso das cargas que chegam ao seu terminal no interior de São Paulo. Usualmente, o terminal recebe 4 tipos de cargas: doméstica (D), administrativa (A), equipamentos industriais (E) e outros tipos (O). Deseja-se verificar se, em média, existem diferenças entre os pesos dos 4 tipos de cargas. Ao longo de 1 mês, cargas foram colhidas aleatoriamente e seus pesos foram aferidos, fornecendo os dados (em kg):
+
+\begin{table}[h]
+\tiny
+\centering
+\begin{tabular}{cccc}
+\hline
+& Tipos de Carga & & \\
+\hline
+D & A & E & O \\
+24.9 & 27.9 & 38.4 & 23.8 \\
+20.4 & 28.1 & 38.6 & 25.3 \\
+24.2 & 28.4 & 41.2 & 23.5 \\
+22.3 & 25.3 & 43.9 & 27.6 \\
+20.3 & 29.3 & 40.2 & 25.5 \\
+24.0 & 28.5 & 40.2 & 23.9 \\
+23.5 & 27.9 & 37.3 & 22.6 \\
+
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
 
 \setbeamercovered{transparent}
 \begin{frame}
