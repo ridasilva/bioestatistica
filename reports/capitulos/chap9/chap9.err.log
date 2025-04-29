@@ -15,25 +15,31 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
+# HIDE CODE
+import pandas as pd
 import numpy as np
-import scipy.stats
+from scipy import stats
 
-def mean_confidence_interval(data, confidence=0.95):
-    a = 1.0 * np.array(data)
-    n = len(a)
-    m, se = np.mean(a), scipy.stats.sem(a)
-    h = se * scipy.stats.t.ppf((1 + confidence) / 2., n-1)
-    return m, m-h, m+h
+gls = [4, 5, 6]
+a05 = [round(-stats.t(x).ppf(0.025), 4) for x in gls]
+a01 = [round(-stats.t(x).ppf(0.005), 4) for x in gls]
+
+df = pd.DataFrame(zip(gls, a05, a01), columns=['gl', r'α=.05', r'α=.01'])
+
+color = (df.iloc[:,1] == df.loc[1,r'α=.05']).map({True: 'background-color: yellow', False: ''})
+
+df.style.apply(lambda s: color)
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 2[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
-[0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mstats[39;00m
-[1;32m      4[0m [38;5;28;01mdef[39;00m [38;5;21mmean_confidence_interval[39m(data, confidence[38;5;241m=[39m[38;5;241m0.95[39m):
-[1;32m      5[0m     a [38;5;241m=[39m [38;5;241m1.0[39m [38;5;241m*[39m np[38;5;241m.[39marray(data)
+Cell [0;32mIn[5], line 4[0m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;32m----> 4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mscipy[39;00m [38;5;28;01mimport[39;00m stats
+[1;32m      6[0m gls [38;5;241m=[39m [[38;5;241m4[39m, [38;5;241m5[39m, [38;5;241m6[39m]
+[1;32m      7[0m a05 [38;5;241m=[39m [[38;5;28mround[39m([38;5;241m-[39mstats[38;5;241m.[39mt(x)[38;5;241m.[39mppf([38;5;241m0.025[39m), [38;5;241m4[39m) [38;5;28;01mfor[39;00m x [38;5;129;01min[39;00m gls]
 
 [0;31mModuleNotFoundError[0m: No module named 'scipy'
 

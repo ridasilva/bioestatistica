@@ -181,6 +181,12 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - ANOVA de um fator para amostras independentes</a></li>
 </ul>
 
     </div>
@@ -395,8 +401,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="a-distribuicao-amostral-das-medias-e-z-para-uma-media-amostral">
 <h1>5 - A Distribuição Amostral das Médias e z para uma média amostral<a class="headerlink" href="#a-distribuicao-amostral-das-medias-e-z-para-uma-media-amostral" title="Link to this heading">#</a></h1>
 <p>Este material foi traduzido e adaptado de <span id="id1">[<a class="reference internal" href="#id9" title="Kieth A Carlson and Jennifer R Winquist. An introduction to statistics: An active learning approach. Sage Publications, 2017.">CW17</a>]</span>.</p>
-<p>OBJETIVOS DE APRENDIZADO
-Depois de ler este capítulo, você será capaz de:</p>
+<p>OBJETIVOS DE APRENDIZADO:</p>
+<p>Depois de ler este capítulo, você será capaz de:</p>
 <ul class="simple">
 <li><p>Explicar como uma distribuição de médias amostrais é criada;</p></li>
 <li><p>Explicar como uma amostra aleatória é obtida;</p></li>
@@ -426,13 +432,13 @@ Depois de ler este capítulo, você será capaz de:</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="xPuGiIckRIVm" data-shufflequestions="False"
+<div class="output text_html"><div id="eHgcDKYewqed" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#xPuGiIckRIVm {
+#eHgcDKYewqed {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -602,7 +608,7 @@ Depois de ler este capítulo, você será capaz de:</p>
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsxPuGiIckRIVm=[{
+</style></div><script type="application/javascript">var questionseHgcDKYewqed=[{
     "question": "1 - O uso de estatística inferencial cria quais dos seguintes problemas para pesquisadores?",
     "type": "multiple_choice",
     "answers": [
@@ -1404,8 +1410,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("xPuGiIckRIVm")) {
-            show_questions(questionsxPuGiIckRIVm,  xPuGiIckRIVm); 
+          if(document.getElementById("eHgcDKYewqed")) {
+            show_questions(questionseHgcDKYewqed,  eHgcDKYewqed); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1414,14 +1420,14 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("xPuGiIckRIVm");
-        // console.log(document.getElementById("xPuGiIckRIVm"));
+        //console.log("eHgcDKYewqed");
+        // console.log(document.getElementById("eHgcDKYewqed"));
 
         try_show();
         }
         </script></div>
 </div>
-<p>Suponha que a Dra. Joana queira estudar como o envelhecimento afeta a memória prospectiva (ou seja, a memória de alguém para realizar tarefas futuras, como levar o lixo para fora antes das 8h, tomar uma comprimido às 14h ou ir a uma consulta às 16h). A Dra. Joana vai a um centro local para idosos e encontra 25 pessoas, entre as idades de 65 e 80 anos, que concordam em participar de seu estudo na próxima terça-feira às 15h. No entanto, apenas 10 dessas 25 pessoas se lembram de comparecer ao estudo. Claramente, concluir que os resultados de apenas quem se lembrou de comparecer representem toda a população é problemático. Talvez as pessoas que se lembraram de comparecer tenham melhores habilidades de memória prospectiva do que aqueles que se esqueceram de aparecer. Neste caso, o procedimento de amostragem da Dra. Joana foi ruim, ela acabou com uma amostra não representativa de pessoas idosas.</p>
+<p>Suponha que a Dra. Joana queira estudar como o envelhecimento afeta a memória prospectiva (ou seja, a memória de alguém para realizar tarefas futuras, como levar o lixo para fora antes das 8h, tomar um comprimido às 14h ou ir a uma consulta às 16h). A Dra. Joana vai a um centro local para idosos e encontra 25 pessoas, entre as idades de 65 e 80 anos, que concordam em participar de seu estudo na próxima terça-feira às 15h. No entanto, apenas 10 dessas 25 pessoas se lembram de comparecer ao estudo. Claramente, concluir que os resultados de apenas quem se lembrou de comparecer representem toda a população é problemático. Talvez as pessoas que se lembraram de comparecer tenham melhores habilidades de memória prospectiva do que aqueles que se esqueceram de aparecer. Neste caso, o procedimento de amostragem da Dra. Joana foi ruim, ela acabou com uma amostra não representativa de pessoas idosas.</p>
 <p>O erro de amostragem também é conhecido como erro padrão da média (SEM), e sua fórmula é dada por</p>
 <p><span class="math notranslate nohighlight">\(\sigma_{\bar{x}} = SEM = \frac{\sigma}{\sqrt{N}}\)</span></p>
 <p>Assim, existem apenas duas coisas que contribuem para o erro amostral: o desvio padrão da população e o tamanho da amostra. À medida que <span class="math notranslate nohighlight">\(\sigma\)</span> aumenta, o SEM também aumenta. À medida que o tamanho da amostra aumenta, o SEM diminui. Em geral, os investigadores têm muito menos controle sobre o desvio padrão da população do que sobre o tamanho da amostra e, portanto, os esforços para reduzir o erro amostral tendem a se concentrar no aumento do tamanho da amostra.</p>
@@ -1471,73 +1477,90 @@ if (typeof version == 'undefined') {
 <p><strong>Distribuição de médias amostrais para a população de quatro valores e um tamanho de amostra de 2</strong></p>
 <table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Amostra 1</p></th>
-<th class="head"><p>Amostra 2</p></th>
+<tr class="row-odd"><th class="head"><p>Amostra</p></th>
+<th class="head"><p>1° valor</p></th>
+<th class="head"><p>2° valor</p></th>
 <th class="head"><p>Média</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>10</p></td>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>10</p></td>
 <td><p>10</p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-odd"><td><p>10</p></td>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>10</p></td>
 <td><p>12</p></td>
 <td><p>11</p></td>
 </tr>
-<tr class="row-even"><td><p>10</p></td>
+<tr class="row-even"><td><p>C</p></td>
+<td><p>10</p></td>
 <td><p>14</p></td>
 <td><p>12</p></td>
 </tr>
-<tr class="row-odd"><td><p>10</p></td>
+<tr class="row-odd"><td><p>D</p></td>
+<td><p>10</p></td>
 <td><p>16</p></td>
 <td><p>13</p></td>
 </tr>
-<tr class="row-even"><td><p>12</p></td>
+<tr class="row-even"><td><p>E</p></td>
+<td><p>12</p></td>
 <td><p>10</p></td>
 <td><p>11</p></td>
 </tr>
-<tr class="row-odd"><td><p>12</p></td>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>12</p></td>
 <td><p>12</p></td>
 <td><p>12</p></td>
 </tr>
-<tr class="row-even"><td><p>12</p></td>
+<tr class="row-even"><td><p>G</p></td>
+<td><p>12</p></td>
 <td><p>14</p></td>
 <td><p>13</p></td>
 </tr>
-<tr class="row-odd"><td><p>12</p></td>
+<tr class="row-odd"><td><p>H</p></td>
+<td><p>12</p></td>
 <td><p>16</p></td>
 <td><p>14</p></td>
 </tr>
-<tr class="row-even"><td><p>14</p></td>
+<tr class="row-even"><td><p>I</p></td>
+<td><p>14</p></td>
 <td><p>10</p></td>
 <td><p>12</p></td>
 </tr>
-<tr class="row-odd"><td><p>14</p></td>
+<tr class="row-odd"><td><p>J</p></td>
+<td><p>14</p></td>
 <td><p>12</p></td>
 <td><p>13</p></td>
 </tr>
-<tr class="row-even"><td><p>14</p></td>
+<tr class="row-even"><td><p>K</p></td>
+<td><p>14</p></td>
 <td><p>14</p></td>
 <td><p>14</p></td>
 </tr>
-<tr class="row-odd"><td><p>14</p></td>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>14</p></td>
 <td><p>16</p></td>
 <td><p>15</p></td>
 </tr>
-<tr class="row-even"><td><p>16</p></td>
+<tr class="row-even"><td><p>M</p></td>
+<td><p>16</p></td>
 <td><p>10</p></td>
 <td><p>13</p></td>
 </tr>
-<tr class="row-odd"><td><p>16</p></td>
+<tr class="row-odd"><td><p>N</p></td>
+<td><p>16</p></td>
 <td><p>12</p></td>
 <td><p>14</p></td>
 </tr>
-<tr class="row-even"><td><p>16</p></td>
+<tr class="row-even"><td><p>O</p></td>
+<td><p>16</p></td>
 <td><p>14</p></td>
 <td><p>15</p></td>
 </tr>
-<tr class="row-odd"><td><p>16</p></td>
+<tr class="row-odd"><td><p>P</p></td>
+<td><p>16</p></td>
 <td><p>16</p></td>
 <td><p>16</p></td>
 </tr>
@@ -1609,13 +1632,13 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="yJPEFQqYIgDm" data-shufflequestions="False"
+<div class="output text_html"><div id="TLHROynuxwsm" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#yJPEFQqYIgDm {
+#TLHROynuxwsm {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -1785,7 +1808,7 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsyJPEFQqYIgDm=[{"question":"2 - A média da distribuição das médias amostrais é _____, e o desvio padrão da distribuição das médias amostrais é _________.",
+</style></div><script type="application/javascript">var questionsTLHROynuxwsm=[{"question":"2 - A média da distribuição das médias amostrais é _____, e o desvio padrão da distribuição das médias amostrais é _________.",
   "type": "multiple_choice",
   "answers":[{"answer":"a. a média populacional; o desvio padrão da população.", "correct": false, "feedback": "Incorreto! Por favor, leia o parágrafo acima novamente."},
              {"answer":"b. o erro padrão da média; o desvio padrão da população.", "correct": false, "feedback": "Incorreto! Por favor, leia o parágrafo acima novamente."},
@@ -2598,8 +2621,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("yJPEFQqYIgDm")) {
-            show_questions(questionsyJPEFQqYIgDm,  yJPEFQqYIgDm); 
+          if(document.getElementById("TLHROynuxwsm")) {
+            show_questions(questionsTLHROynuxwsm,  TLHROynuxwsm); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -2608,8 +2631,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("yJPEFQqYIgDm");
-        // console.log(document.getElementById("yJPEFQqYIgDm"));
+        //console.log("TLHROynuxwsm");
+        // console.log(document.getElementById("TLHROynuxwsm"));
 
         try_show();
         }
@@ -2631,13 +2654,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="XNTsaZGenAdT" data-shufflequestions="False"
+<div class="output text_html"><div id="qOQHPNwgJcXy" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#XNTsaZGenAdT {
+#qOQHPNwgJcXy {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -2807,7 +2830,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsXNTsaZGenAdT=[{"question":"6 - Qual das alternativas a seguir reduzirá o erro padrão da média?",
+</style></div><script type="application/javascript">var questionsqOQHPNwgJcXy=[{"question":"6 - Qual das alternativas a seguir reduzirá o erro padrão da média?",
 "type":"multiple_choice",
 "answers":[{"answer": "a. Aumentar N.", "correct":true, "feedback":"Correto! O erro padrão da média é inversamente proporcional à raiz quadrada do tamanho da amostra."},
            {"answer": "b. Diminuir N.", "correct":false, "feedback":"Incorreto. Diminuir o número de observações aumentará o erro padrão da média."},
@@ -3605,8 +3628,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("XNTsaZGenAdT")) {
-            show_questions(questionsXNTsaZGenAdT,  XNTsaZGenAdT); 
+          if(document.getElementById("qOQHPNwgJcXy")) {
+            show_questions(questionsqOQHPNwgJcXy,  qOQHPNwgJcXy); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -3615,8 +3638,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("XNTsaZGenAdT");
-        // console.log(document.getElementById("XNTsaZGenAdT"));
+        //console.log("qOQHPNwgJcXy");
+        // console.log(document.getElementById("qOQHPNwgJcXy"));
 
         try_show();
         }
@@ -3643,13 +3666,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="jHuvAHbYOljN" data-shufflequestions="False"
+<div class="output text_html"><div id="UqwFPSOcAQZv" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#jHuvAHbYOljN {
+#UqwFPSOcAQZv {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -3819,7 +3842,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsjHuvAHbYOljN=[{"question":"8 - Ao calcular z para uma média amostral, se o valor de z for próximo de zero, a média amostral",
+</style></div><script type="application/javascript">var questionsUqwFPSOcAQZv=[{"question":"8 - Ao calcular z para uma média amostral, se o valor de z for próximo de zero, a média amostral",
 "type":"multiple_choice",
 "answers": [{"answer": "a. não é muito diferente da média da população e a diferença ocorre provavelmente devido a erro de amostragem.", 
             "correct": true, "feedback":"Correto! Quanto mais próximo de zero, menor a diferença esperada para a média populacional."},
@@ -4620,8 +4643,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("jHuvAHbYOljN")) {
-            show_questions(questionsjHuvAHbYOljN,  jHuvAHbYOljN); 
+          if(document.getElementById("UqwFPSOcAQZv")) {
+            show_questions(questionsUqwFPSOcAQZv,  UqwFPSOcAQZv); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -4630,8 +4653,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("jHuvAHbYOljN");
-        // console.log(document.getElementById("jHuvAHbYOljN"));
+        //console.log("UqwFPSOcAQZv");
+        // console.log(document.getElementById("UqwFPSOcAQZv"));
 
         try_show();
         }
@@ -4639,7 +4662,7 @@ if (typeof version == 'undefined') {
 </div>
 <p><span style="color:blue">EXEMPLO</span>: Cálculo e interpretação de z para uma média amostral</p>
 <p>O valor de z para uma média amostral permite que se tomem decisões importantes no mundo real com base em evidências estatísticas.</p>
-<p>Suponha que você seja um funcionário federal investigando 16 agentes de crédito em um grande banco conglomerado que você suspeita realizar práticas hipotecárias ilegais. Todos os agentes de crédito deste banco foram pagos parcialmente em comissão, e assim atividades ilegais poderiam aumentar sua renda. Olhando os registros da empresa, você descobre que a renda média de todos os agentes de crédito da empresa é <span class="math notranslate nohighlight">\(\mu = 50,000\)</span> com um desvio padrão ção de <span class="math notranslate nohighlight">\(\sigma = 12,000\)</span>. Além disso, o rendimento médio dos 16 agentes de crédito suspeitos de fraude é US 55,000. Você deseja saber a probabilidade desses agentes de crédito terem uma média amostral de US 55,000 ou maior devido ao acaso (ou seja, erro de amostragem). Basicamente, você está perguntando: “Qual é a probabilidade de que a renda média dos funcionários suspeitos fosse de US 55,000 (ou seja, US 5,000 a mais que a renda média da empresa) meramente por causa de uma coincidência (ou seja, devido a um erro de amostragem)?”</p>
+<p>Suponha que você seja um funcionário federal investigando 16 agentes de crédito em um grande banco conglomerado que você suspeita realizar práticas hipotecárias ilegais. Todos os agentes de crédito deste banco foram pagos parcialmente em comissão, e assim atividades ilegais poderiam aumentar sua renda. Olhando os registros da empresa, você descobre que a renda média de todos os agentes de crédito da empresa é <span class="math notranslate nohighlight">\(\mu = 50,000\)</span> com um desvio padrão de <span class="math notranslate nohighlight">\(\sigma = 12,000\)</span>. Além disso, o rendimento médio dos 16 agentes de crédito suspeitos de fraude é US 55,000. Você deseja saber a probabilidade desses agentes de crédito terem uma média amostral de US 55,000 ou maior devido ao acaso (ou seja, erro de amostragem). Basicamente, você está perguntando: “Qual é a probabilidade de que a renda média dos funcionários suspeitos fosse de US 55,000 (ou seja, US 5,000 a mais que a renda média da empresa) meramente por causa de uma coincidência (ou seja, devido a um erro de amostragem)?”</p>
 <p><em>Etapa 1: calcular o desvio esperado pelo erro de amostragem</em></p>
 <p><span class="math notranslate nohighlight">\(SEM_p = \frac{\sigma}{\sqrt{N}}= \frac{12000}{\sqrt{16}}=3000\)</span></p>
 <p>Isto significa que quando N = 16, a distância típica com que todas as médias amostrais possíveis se desviam da média populacional é 3,000. Quando o tamanho da amostra é 16, US 3,000 é o valor do desvio que esperamos entre qualquer média amostral e a média populacional devido a erro de amostragem.</p>
@@ -4677,10 +4700,18 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição Z com área acima de 1.67 destacada.&#39;)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># HIDE CODE</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># simular valores dentro da distribuição normal N(0,1)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
 </pre></div>
 </div>
-<img alt="../../_images/ea58e977ba681727935d459a8afd1d09758a43922c80acfb5a4bce555944670b.png" src="../../_images/ea58e977ba681727935d459a8afd1d09758a43922c80acfb5a4bce555944670b.png" />
 </div>
 </div>
 <p><em>Etapa 4: procure o valor de z</em></p>
@@ -4791,13 +4822,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="MulwZGtmTmdB" data-shufflequestions="False"
+<div class="output text_html"><div id="mKrWUdsldwaf" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#MulwZGtmTmdB {
+#mKrWUdsldwaf {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -4967,12 +4998,12 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsMulwZGtmTmdB=[{"question":"10 - Este exemplo ilustra que z para um procedimento de média amostral",
+</style></div><script type="application/javascript">var questionsmKrWUdsldwaf=[{"question":"10 - Este exemplo ilustra que z para um procedimento de média amostral",
 "type":"multiple_choice",
-"answers":[{"answer":"a. pode ser usado para identificar se é provável ou improvável que a discrepância entre uma média amostral e uma média da população ocorra devido a erro de amostragem.",
+"answers":[{"answer":"a. pode ser usado para identificar se é provável ou improvável que a discrepância entre uma média amostral e um média da população que seja devido a erro de amostragem.",
            "correct":true, "feedback":"Correto!"},
            {"answer":"b. só é útil em um ambiente de laboratório controlado.","correct":false, "feedback":"Incorreto!"},
-           {"answer":"c. Tanto a quanto b estão corretas.","correct":false, "feedback":"Incorreto!"}]
+           {"answer":"c. Tanto a quanto b estão corretos.","correct":false, "feedback":"Incorreto!"}]
 }
 ];
     // Make a random ID
@@ -5761,8 +5792,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("MulwZGtmTmdB")) {
-            show_questions(questionsMulwZGtmTmdB,  MulwZGtmTmdB); 
+          if(document.getElementById("mKrWUdsldwaf")) {
+            show_questions(questionsmKrWUdsldwaf,  mKrWUdsldwaf); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -5771,8 +5802,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("MulwZGtmTmdB");
-        // console.log(document.getElementById("MulwZGtmTmdB"));
+        //console.log("mKrWUdsldwaf");
+        // console.log(document.getElementById("mKrWUdsldwaf"));
 
         try_show();
         }
