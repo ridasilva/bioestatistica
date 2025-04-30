@@ -14,45 +14,45 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -72,23 +72,27 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,13 +114,8 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
     </header>
   
 
@@ -142,8 +141,6 @@
         <div class="sidebar-primary-item">
 
   
-    
-  
 
 <a class="navbar-brand logo" href="../../intro.html">
   
@@ -165,7 +162,7 @@
 
  <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -205,7 +202,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -214,14 +211,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -346,10 +343,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -357,14 +354,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -420,16 +417,6 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:4: SyntaxWarning: invalid escape sequence &#39;\m&#39;
-&lt;&gt;:5: SyntaxWarning: invalid escape sequence &#39;\s&#39;
-&lt;&gt;:4: SyntaxWarning: invalid escape sequence &#39;\m&#39;
-&lt;&gt;:5: SyntaxWarning: invalid escape sequence &#39;\s&#39;
-/tmp/ipykernel_584136/3163130471.py:4: SyntaxWarning: invalid escape sequence &#39;\m&#39;
-  display(Latex(f&#39;$\mu={mu}$&#39;))
-/tmp/ipykernel_584136/3163130471.py:5: SyntaxWarning: invalid escape sequence &#39;\s&#39;
-  display(Latex(f&#39;$\sigma={dev}$&#39;))
-</pre></div>
-</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\mu=5.0\]</div>
 <div class="output text_latex math notranslate nohighlight">
@@ -443,7 +430,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.23606797749979)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.23606797749979
 </pre></div>
 </div>
 </div>
@@ -455,7 +442,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.581988897471611)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.581988897471611
 </pre></div>
 </div>
 </div>
@@ -471,35 +458,35 @@ document.write(`
 
 class combinations(builtins.object)
  |  combinations(iterable, r)
- |
+ |  
  |  Return successive r-length combinations of elements in the iterable.
- |
+ |  
  |  combinations(range(4), 3) --&gt; (0,1,2), (0,1,3), (0,2,3), (1,2,3)
- |
+ |  
  |  Methods defined here:
- |
+ |  
  |  __getattribute__(self, name, /)
  |      Return getattr(self, name).
- |
+ |  
  |  __iter__(self, /)
  |      Implement iter(self).
- |
+ |  
  |  __next__(self, /)
  |      Implement next(self).
- |
+ |  
  |  __reduce__(...)
  |      Return state information for pickling.
- |
+ |  
  |  __setstate__(...)
  |      Set state information for unpickling.
- |
+ |  
  |  __sizeof__(...)
  |      Returns size in memory, in bytes.
- |
+ |  
  |  ----------------------------------------------------------------------
  |  Static methods defined here:
- |
- |  __new__(*args, **kwargs)
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
  |      Create and return a new object.  See help(type) for accurate signature.
 </pre></div>
 </div>
@@ -615,7 +602,7 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(1.5811388300841895)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5811388300841895
 </pre></div>
 </div>
 </div>
@@ -627,7 +614,7 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Counter({5.0: 4, 4.0: 3, 6.0: 3, 3.0: 2, 7.0: 2, 2.0: 1, 8.0: 1})
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Counter({2.0: 1, 3.0: 2, 4.0: 3, 5.0: 4, 6.0: 3, 7.0: 2, 8.0: 1})
 </pre></div>
 </div>
 </div>
@@ -642,7 +629,7 @@ class combinations(builtins.object)
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 7 artists&gt;
 </pre></div>
 </div>
-<img alt="../../_images/eeae2e05fa88affa392958451f41dd8edf7d864ec22766c5b1dc7ced4e4e900a.png" src="../../_images/eeae2e05fa88affa392958451f41dd8edf7d864ec22766c5b1dc7ced4e4e900a.png" />
+<img alt="../../_images/9d5d2480105eea515b298d6a7e25eb61934f1685c2a197b7709b4cd5fa996f92.png" src="../../_images/9d5d2480105eea515b298d6a7e25eb61934f1685c2a197b7709b4cd5fa996f92.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -670,12 +657,12 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 61., 116.,   0., 203.,   0., 258., 178.,   0., 115.,  69.]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 64., 123.,   0., 174.,   0., 241., 181.,   0., 158.,  59.]),
  array([2. , 2.6, 3.2, 3.8, 4.4, 5. , 5.6, 6.2, 6.8, 7.4, 8. ]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="../../_images/356101adda3fd4554f560ad51292991f264d2e875daea70f4b3c58fb883bd0fb.png" src="../../_images/356101adda3fd4554f560ad51292991f264d2e875daea70f4b3c58fb883bd0fb.png" />
+<img alt="../../_images/67863bd2966bbd431b59dc27958a031e609750f59b019305551c44d72f05a252.png" src="../../_images/67863bd2966bbd431b59dc27958a031e609750f59b019305551c44d72f05a252.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -685,12 +672,12 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 61., 140.,   0., 177.,   0., 243., 191.,   0., 134.,  54.]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 61., 118.,   0., 204.,   0., 246., 184.,   0., 124.,  63.]),
  array([2. , 2.6, 3.2, 3.8, 4.4, 5. , 5.6, 6.2, 6.8, 7.4, 8. ]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="../../_images/477446de30ad7a3cbbe4f59e30d7be8d0bdc4d1a507a3c6b959d4b60aaaeb109.png" src="../../_images/477446de30ad7a3cbbe4f59e30d7be8d0bdc4d1a507a3c6b959d4b60aaaeb109.png" />
+<img alt="../../_images/392fcbf9d2ef94f04fe111a844a93283ccfbbb7d8e007baf4e88ec65d528ed83.png" src="../../_images/392fcbf9d2ef94f04fe111a844a93283ccfbbb7d8e007baf4e88ec65d528ed83.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -712,7 +699,7 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.23606797749979)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.23606797749979
 </pre></div>
 </div>
 </div>
@@ -728,14 +715,14 @@ class combinations(builtins.object)
 
 &lt;scipy.stats._continuous_distns.norm_gen object&gt;
     A normal continuous random variable.
-
+    
     The location (``loc``) keyword specifies the mean.
     The scale (``scale``) keyword specifies the standard deviation.
-
+    
     As an instance of the `rv_continuous` class, `norm` object inherits from it
     a collection of generic methods (see below for the full list),
     and completes them with details specific for this particular distribution.
-
+    
     Methods
     -------
     rvs(loc=0, scale=1, size=1, random_state=None)
@@ -778,17 +765,17 @@ class combinations(builtins.object)
         Standard deviation of the distribution.
     interval(confidence, loc=0, scale=1)
         Confidence interval with equal areas around the median.
-
+    
     Notes
     -----
     The probability density function for `norm` is:
-
+    
     .. math::
-
+    
         f(x) = \frac{\exp(-x^2/2)}{\sqrt{2\pi}}
-
+    
     for a real number :math:`x`.
-
+    
     The probability density above is defined in the &quot;standardized&quot; form. To shift
     and/or scale the distribution use the ``loc`` and ``scale`` parameters.
     Specifically, ``norm.pdf(x, loc, scale)`` is identically
@@ -796,47 +783,47 @@ class combinations(builtins.object)
     ``y = (x - loc) / scale``. Note that shifting the location of a distribution
     does not make it a &quot;noncentral&quot; distribution; noncentral generalizations of
     some distributions are available in separate classes.
-
+    
     Examples
     --------
     &gt;&gt;&gt; import numpy as np
     &gt;&gt;&gt; from scipy.stats import norm
     &gt;&gt;&gt; import matplotlib.pyplot as plt
     &gt;&gt;&gt; fig, ax = plt.subplots(1, 1)
-
+    
     Calculate the first four moments:
-
-
+    
+    
     &gt;&gt;&gt; mean, var, skew, kurt = norm.stats(moments=&#39;mvsk&#39;)
-
+    
     Display the probability density function (``pdf``):
-
+    
     &gt;&gt;&gt; x = np.linspace(norm.ppf(0.01),
     ...                 norm.ppf(0.99), 100)
     &gt;&gt;&gt; ax.plot(x, norm.pdf(x),
     ...        &#39;r-&#39;, lw=5, alpha=0.6, label=&#39;norm pdf&#39;)
-
+    
     Alternatively, the distribution object can be called (as a function)
     to fix the shape, location and scale parameters. This returns a &quot;frozen&quot;
     RV object holding the given parameters fixed.
-
+    
     Freeze the distribution and display the frozen ``pdf``:
-
+    
     &gt;&gt;&gt; rv = norm()
     &gt;&gt;&gt; ax.plot(x, rv.pdf(x), &#39;k-&#39;, lw=2, label=&#39;frozen pdf&#39;)
-
+    
     Check accuracy of ``cdf`` and ``ppf``:
-
+    
     &gt;&gt;&gt; vals = norm.ppf([0.001, 0.5, 0.999])
     &gt;&gt;&gt; np.allclose([0.001, 0.5, 0.999], norm.cdf(vals))
     True
-
+    
     Generate random numbers:
-
+    
     &gt;&gt;&gt; r = norm.rvs(size=1000)
-
+    
     And compare the histogram:
-
+    
     &gt;&gt;&gt; ax.hist(r, density=True, bins=&#39;auto&#39;, histtype=&#39;stepfilled&#39;, alpha=0.2)
     &gt;&gt;&gt; ax.set_xlim([x[0], x[-1]])
     &gt;&gt;&gt; ax.legend(loc=&#39;best&#39;, frameon=False)
@@ -859,11 +846,10 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_584136/2173188723.py:7: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
-  ax.legend(loc=&#39;best&#39;, frameon=False)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
 </pre></div>
 </div>
-<img alt="../../_images/3abc24c1bf62dd4bf49a9d3cde1996026044c7f3b8d85d3e5be277e0942fb0b6.png" src="../../_images/3abc24c1bf62dd4bf49a9d3cde1996026044c7f3b8d85d3e5be277e0942fb0b6.png" />
+<img alt="../../_images/f16f9d20942948abf7e9033bb517d402e85a412fea16548f4d857ec4d13fb96f.png" src="../../_images/f16f9d20942948abf7e9033bb517d402e85a412fea16548f4d857ec4d13fb96f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -873,11 +859,11 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.float64(12.565734349837662),
- np.float64(18.07823080795347),
- np.float64(13.341562555224701),
- np.float64(13.165767077356797),
- np.float64(13.018248559170294)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[19.0826387182508,
+ 23.012631951363943,
+ 9.70204686503972,
+ 21.89407237787885,
+ 14.119198049843174]
 </pre></div>
 </div>
 </div>
@@ -901,7 +887,7 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0fe663269cb87a34e146a31415463607589ff02e75d7247ae31d078361037236.png" src="../../_images/0fe663269cb87a34e146a31415463607589ff02e75d7247ae31d078361037236.png" />
+<img alt="../../_images/7f84be0b9f497b83049f0bde8dd62479785196c4f02daca11fa5478e41829d5d.png" src="../../_images/7f84be0b9f497b83049f0bde8dd62479785196c4f02daca11fa5478e41829d5d.png" />
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
@@ -942,7 +928,7 @@ class combinations(builtins.object)
               
               
               
-                <footer class="prev-next-footer d-print-none">
+                <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
 </div>
@@ -1010,8 +996,8 @@ By Ricardo R. da Silva
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

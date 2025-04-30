@@ -14,45 +14,45 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -74,23 +74,27 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -112,13 +116,8 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
     </header>
   
 
@@ -142,8 +141,6 @@
         <div class="sidebar-primary-item">
 
   
-    
-  
 
 <a class="navbar-brand logo" href="../../intro.html">
   
@@ -165,7 +162,7 @@
 
  <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -205,7 +202,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -214,14 +211,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -346,10 +343,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -357,14 +354,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -435,8 +432,13 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="fbYYOpnTjIfr" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#fbYYOpnTjIfr {
+<div class="output text_html"><div id="UJJotuebHmvX" data-shufflequestions="False"
+               data-shuffleanswers="True"
+               data-preserveresponses="false"
+               data-numquestions="1000000"
+               data-maxwidth="600"
+               style="border-radius: 10px; text-align: left"> <style>
+#UJJotuebHmvX {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -456,8 +458,8 @@ document.write(`
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-/*    margin-bottom: 15px;*/
-/*    padding-bottom: 4px;*/
+    margin-bottom: 15px;
+    padding-bottom: 4px;
     padding-top: 4px;
     line-height: 1.1;
     font-size: 16pt;
@@ -475,48 +477,18 @@ document.write(`
     padding: 4px;
 }
 
-.Quiz code {
-    background-color: lightgray;
-    color: black;
-}
-
-.Quiz .QuizCode code {
-    background-color: inherit;
-    color: inherit;
-}
-
-
-.Quiz .MCButton code {
-    background-color: inherit;
-    color: inherit;
-}
-
-.MCButton .QuizCode {
-    text-align: left;
-}
-
-
-
-
 .Answer {
-    border-radius: inherit;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
     margin: 10px 0;
-}
-
-@media only screen and (max-width:480px) {
-    .Answer {
-        grid-template-columns: 1fr;
-    }
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    border-radius: inherit;
 }
 
 .Feedback {
     font-size: 16pt;
     text-align: center;
-/*    min-height: 2em;*/
+    min-height: 2em;
 }
 
 .Input {
@@ -543,7 +515,7 @@ document.write(`
 }
 
 .Input-text:focus {
-    /*outline: none;*/
+    outline: none;
     background-color: var(--jq-numeric-input-bg);
     box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
 }
@@ -552,7 +524,6 @@ document.write(`
     background: var(--jq-mc-button-bg);
     border: 1px solid var(--jq-mc-button-border);
     border-radius: inherit;
-    color: #333333;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -581,10 +552,10 @@ document.write(`
 }
 
 .NumericQn {
-    background: var(--jq-numeric-bg);
-    border-radius: inherit;
-    color: var(--jq-text-color);
     padding: 10px;
+    background: var(--jq-numeric-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
 }
 
 .NumericQn p {
@@ -592,11 +563,11 @@ document.write(`
 }
 
 .InpLabel {
-    color: var(--jq-numeric-input-label);
-    float: left;
-    font-size: 15pt;
     line-height: 34px;
+    float: left;
     margin-right: 10px;
+    color: var(--jq-numeric-input-label);
+    font-size: 15pt;
 }
 
 .incorrect {
@@ -613,17 +584,17 @@ document.write(`
    */
     animation: correct-anim 0.6s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 .incorrectButton {
     animation: incorrect-anim 0.8s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 @keyframes incorrect-anim {
@@ -637,7 +608,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsfbYYOpnTjIfr=[{
+</style></div><script type="application/javascript">var questionsUJJotuebHmvX=[{
     "question": "1 - O uso de estatística inferencial cria quais dos seguintes problemas para pesquisadores?",
     "type": "multiple_choice",
     "answers": [
@@ -653,7 +624,7 @@ document.write(`
          "correct": false, "feedback": "Incorreto! Por favor, leia o parágrafo acima novamente."}
     ]
 }];
-// Make a random ID
+    // Make a random ID
 function makeid(length) {
     var result = [];
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -662,118 +633,6 @@ function makeid(length) {
         result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
     }
     return result.join('');
-}
-// Convert LaTeX delimiters and markdown links to HTML
-function jaxify(string) {
-    let mystring = string;
-    let count = 0, count2 = 0;
-    let loc = mystring.search(/([^\\]|^)(\$)/);
-    let loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    while (loc >= 0 || loc2 >= 0) {
-        if (loc2 >= 0) {
-            mystring = mystring.replace(/([^\\]|^)(\$\$)/, count2 % 2 ? '$1\\]' : '$1\\[');
-            count2++;
-        } else {
-            mystring = mystring.replace(/([^\\]|^)(\$)/, count % 2 ? '$1\\)' : '$1\\(');
-            count++;
-        }
-        loc = mystring.search(/([^\\]|^)(\$)/);
-        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    }
-    // Replace markdown links
-    mystring = mystring.replace(/<(.*?)>/g, '<a href="$1" target="_blank" class="Link">$1</a>');
-    mystring = mystring.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" class="Link">$1</a>');
-    return mystring;
-}
-
-// Base class for question types
-class Question {
-    static registry = {};
-    static register(type, cls) {
-        Question.registry[type] = cls;
-    }
-    static create(qa, id, index, options, rootDiv) {
-        const Cls = Question.registry[qa.type];
-        if (!Cls) {
-            console.error(`No question class registered for type "${qa.type}"`);
-            return;
-        }
-        const q = new Cls(qa, id, index, options, rootDiv);
-        q.render();
-    }
-
-    constructor(qa, id, index, options, rootDiv) {
-        this.qa = qa;
-        this.id = id;
-        this.index = index;
-        this.options = options;
-        this.rootDiv = rootDiv;
-        // wrapper
-        this.wrapper = document.createElement('div');
-        this.wrapper.id = `quizWrap${id}`;
-        this.wrapper.className = 'Quiz';
-        this.wrapper.dataset.qnum = index;
-        this.wrapper.style.maxWidth = `${options.maxWidth}px`;
-        rootDiv.appendChild(this.wrapper);
-        // question container
-        this.outerqDiv = document.createElement('div');
-        this.outerqDiv.id = `OuterquizQn${id}${index}`;
-        this.wrapper.appendChild(this.outerqDiv);
-        // question text
-        this.qDiv = document.createElement('div');
-        this.qDiv.id = `quizQn${id}${index}`;
-        if (qa.question) {
-            this.qDiv.innerHTML = jaxify(qa.question);
-            this.outerqDiv.appendChild(this.qDiv);
-        }
-        // code block
-        if (qa.code) {
-            const codeDiv = document.createElement('div');
-            codeDiv.id = `code${id}${index}`;
-            codeDiv.className = 'QuizCode';
-            const pre = document.createElement('pre');
-            const codeEl = document.createElement('code');
-            codeEl.innerHTML = qa.code;
-            pre.appendChild(codeEl);
-            codeDiv.appendChild(pre);
-            this.outerqDiv.appendChild(codeDiv);
-        }
-        // answer container
-        this.aDiv = document.createElement('div');
-        this.aDiv.id = `quizAns${id}${index}`;
-        this.aDiv.className = 'Answer';
-        this.wrapper.appendChild(this.aDiv);
-        // feedback container (append after answers)
-        this.fbDiv = document.createElement('div');
-        this.fbDiv.id = `fb${id}`;
-        this.fbDiv.className = 'Feedback';
-        this.fbDiv.dataset.answeredcorrect = 0;
-    }
-
-    render() {
-        throw new Error('render() not implemented');
-    }
-
-    preserveResponse(val) {
-        if (!this.options.preserveResponses) return;
-        const resp = document.getElementById(`responses${this.rootDiv.id}`);
-        if (!resp) return;
-        const arr = JSON.parse(resp.dataset.responses);
-        arr[this.index] = val;
-        resp.dataset.responses = JSON.stringify(arr);
-        printResponses(resp);
-    }
-
-    typeset(container) {
-        if (typeof MathJax !== 'undefined') {
-            const v = MathJax.version;
-            if (v[0] === '2') {
-                MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-            } else {
-                MathJax.typeset([container]);
-            }
-        }
-    }
 }
 
 // Choose a random subset of an array. Can also be used to shuffle the array
@@ -800,9 +659,6 @@ function printResponses(responsesContainer) {
     });
     responsesContainer.innerHTML=stringResponses;
 }
-/* Callback function to determine whether a selected multiple-choice
-   button corresponded to a correct answer and to provide feedback
-   based on the answer */
 function check_mc() {
     var id = this.id.split('-')[0];
     //var response = this.id.split('-')[1];
@@ -824,16 +680,17 @@ function check_mc() {
 
 
     var answers = label.parentElement.children;
+
     //console.log(answers);
+
 
     // Split behavior based on multiple choice vs many choice:
     var fb = document.getElementById("fb" + id);
 
 
 
-    /* Multiple choice (1 answer). Allow for 0 correct
-       answers as an edge case */
-    if (fb.dataset.numcorrect <= 1) {
+
+    if (fb.dataset.numcorrect == 1) {
         // What follows is for the saved responses stuff
         var outerContainer = fb.parentElement.parentElement;
         var responsesContainer = document.getElementById("responses" + outerContainer.id);
@@ -855,7 +712,7 @@ function check_mc() {
             printResponses(responsesContainer);
         }
         // End code to preserve responses
-
+        
         for (var i = 0; i < answers.length; i++) {
             var child = answers[i];
             //console.log(child);
@@ -867,9 +724,9 @@ function check_mc() {
         if (label.dataset.correct == "true") {
             // console.log("Correct action");
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Correct!";
+                fb.textContent = "Correct!";
             }
             label.classList.add("correctButton");
 
@@ -878,9 +735,9 @@ function check_mc() {
 
         } else {
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Incorrect -- try again.";
+                fb.textContent = "Incorrect -- try again.";
             }
             //console.log("Error action");
             label.classList.add("incorrectButton");
@@ -888,7 +745,7 @@ function check_mc() {
             fb.classList.add("incorrect");
         }
     }
-    else { /* Many choice (more than 1 correct answer) */
+    else {
         var reset = false;
         var feedback;
          if (label.dataset.correct == "true") {
@@ -977,9 +834,9 @@ function check_mc() {
         var numcorrect = fb.dataset.numcorrect;
         var answeredcorrect = fb.dataset.answeredcorrect;
         if (answeredcorrect >= 0) {
-            fb.innerHTML = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
         } else {
-            fb.innerHTML = feedback + " [" + 0 + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + 0 + "/" + numcorrect + "]";
         }
 
 
@@ -999,12 +856,7 @@ function check_mc() {
 
 }
 
-
-/* Function to produce the HTML buttons for a multiple choice/
-   many choice question  and to update the CSS tags based on
-   the question type */
 function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
-
     var shuffled;
     if (shuffle_answers == "True") {
         //console.log(shuffle_answers+" read as true");
@@ -1016,6 +868,8 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
 
 
     var num_correct = 0;
+
+
 
     shuffled.forEach((item, index, ans_array) => {
         //console.log(answer);
@@ -1081,28 +935,6 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
     return num_correct;
 
 }
-// Object-oriented wrapper for MC/MANY choice
-class MCQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) { super(qa, id, idx, opts, rootDiv); }
-    render() {
-        const numCorrect = make_mc(
-            this.qa,
-            this.options.shuffleAnswers,
-            this.outerqDiv,
-            this.qDiv,
-            this.aDiv,
-            this.id
-        );
-        if ('answer_cols' in this.qa) {
-            this.aDiv.style.gridTemplateColumns =
-                'repeat(' + this.qa.answer_cols + ', 1fr)';
-        }
-        this.fbDiv.dataset.numcorrect = numCorrect;
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('multiple_choice', MCQuestion);
-Question.register('many_choice', MCQuestion);
 function check_numeric(ths, event) {
 
     if (event.keyCode === 13) {
@@ -1120,7 +952,9 @@ function check_numeric(ths, event) {
 
         if ("precision" in ths.dataset) {
             var precision = ths.dataset.precision;
-            submission = Number(Number(submission).toPrecision(precision));
+            // console.log("1:", submission)
+            submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
+            // console.log("Rounded to ", submission, " precision=", precision  );
         }
 
 
@@ -1130,12 +964,12 @@ function check_numeric(ths, event) {
 
         var fb = document.getElementById("fb" + id);
         fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
+        fb.textContent = "Incorrect -- try again.";
 
         var answers = JSON.parse(ths.dataset.answers);
         //console.log(answers);
 
-        var defaultFB = "Incorrect. Try again.";
+        var defaultFB = "";
         var correct;
         var done = false;
         answers.every(answer => {
@@ -1144,37 +978,27 @@ function check_numeric(ths, event) {
             correct = false;
             // if (answer.type=="value"){
             if ('value' in answer) {
-                var value;
-                if ("precision" in ths.dataset) {
-                    value = answer.value.toPrecision(ths.dataset.precision);
-                } else {
-                    value = answer.value;
-                }
-                if (submission == value) {
+                if (submission == answer.value) {
                     if ("feedback" in answer) {
-                        fb.innerHTML = jaxify(answer.feedback);
+                        fb.textContent = jaxify(answer.feedback);
                     } else {
-                        fb.innerHTML = jaxify("Correct");
+                        fb.textContent = jaxify("Correct");
                     }
                     correct = answer.correct;
                     //console.log(answer.correct);
                     done = true;
                 }
-
                 // } else if (answer.type=="range") {
             } else if ('range' in answer) {
-                console.log(answer.range);
-                console.log(submission, submission >=answer.range[0], submission < answer.range[1])
+                //console.log(answer.range);
                 if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
-                    fb.innerHTML = jaxify(answer.feedback);
+                    fb.textContent = jaxify(answer.feedback);
                     correct = answer.correct;
-                    console.log(answer.correct);
+                    //console.log(answer.correct);
                     done = true;
                 }
             } else if (answer.type == "default") {
-                if ("feedback" in answer) {
-                    defaultFB = answer.feedback;
-                } 
+                defaultFB = answer.feedback;
             }
             if (done) {
                 return false; // Break out of loop if this has been marked correct
@@ -1182,7 +1006,6 @@ function check_numeric(ths, event) {
                 return true; // Keep looking for case that includes this as a correct answer
             }
         });
-        console.log("done:", done);
 
         if ((!done) && (defaultFB != "")) {
             fb.innerHTML = jaxify(defaultFB);
@@ -1237,17 +1060,6 @@ function check_numeric(ths, event) {
     }
 
 }
-// Object-oriented wrapper for numeric questions
-class NumericQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_numeric(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('numeric', NumericQuestion);
 
 function isValid(el, charC) {
     //console.log("Input char: ", charC);
@@ -1332,7 +1144,7 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
     var lab = document.createElement("label");
     lab.className = "InpLabel";
-    lab.innerHTML = "Type numeric answer here:";
+    lab.textContent = "Type numeric answer here:";
     aDiv.append(lab);
 
     var inp = document.createElement("input");
@@ -1367,49 +1179,165 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
 
 }
-// Override show_questions to use object-oriented Question API
-function show_questions(json, container) {
-    // Accept container element or element ID
-    if (typeof container === 'string') {
-        container = document.getElementById(container);
-    }
-    if (!container) {
-        console.error('show_questions: invalid container', container);
-        return;
+function jaxify(string) {
+    var mystring = string;
+
+    var count = 0;
+    var loc = mystring.search(/([^\\]|^)(\$)/);
+
+    var count2 = 0;
+    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+
+    //console.log(loc);
+
+    while ((loc >= 0) || (loc2 >= 0)) {
+
+        /* Have to replace all the double $$ first with current implementation */
+        if (loc2 >= 0) {
+            if (count2 % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
+            }
+            count2++;
+        } else {
+            if (count % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
+            }
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+        //console.log(mystring,", loc:",loc,", loc2:",loc2);
     }
 
-    const shuffleQuestions = container.dataset.shufflequestions === 'True';
-    const shuffleAnswers = container.dataset.shuffleanswers === 'True';
-    const preserveResponses = container.dataset.preserveresponses === 'true';
-    const maxWidth = parseInt(container.dataset.maxwidth, 10) || 0;
-    let numQuestions = parseInt(container.dataset.numquestions, 10) || json.length;
-    if (numQuestions > json.length) numQuestions = json.length;
+    //console.log(mystring);
+    return mystring;
+}
 
-    let questions = json;
-    if (shuffleQuestions || numQuestions < json.length) {
-        questions = getRandomSubarray(json, numQuestions);
+
+function show_questions(json, mydiv) {
+    console.log('show_questions');
+    //var mydiv=document.getElementById(myid);
+    var shuffle_questions = mydiv.dataset.shufflequestions;
+    var num_questions = mydiv.dataset.numquestions;
+    var shuffle_answers = mydiv.dataset.shuffleanswers;
+    var max_width = mydiv.dataset.maxwidth;
+
+    if (num_questions > json.length) {
+        num_questions = json.length;
     }
 
-    questions.forEach((qa, index) => {
-        const id = makeid(8);
-        const options = {
-            shuffleAnswers: shuffleAnswers,
-            preserveResponses: preserveResponses,
-            maxWidth: maxWidth
-        };
-        Question.create(qa, id, index, options, container);
+    var questions;
+    if ((num_questions < json.length) || (shuffle_questions == "True")) {
+        //console.log(num_questions+","+json.length);
+        questions = getRandomSubarray(json, num_questions);
+    } else {
+        questions = json;
+    }
+
+    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
+
+    // Iterate over questions
+    questions.forEach((qa, index, array) => {
+        //console.log(qa.question); 
+
+        var id = makeid(8);
+        //console.log(id);
+
+
+        // Create Div to contain question and answers
+        var iDiv = document.createElement('div');
+        //iDiv.id = 'quizWrap' + id + index;
+        iDiv.id = 'quizWrap' + id;
+        iDiv.className = 'Quiz';
+        iDiv.setAttribute('data-qnum', index);
+        iDiv.style.maxWidth  =max_width+"px";
+        mydiv.appendChild(iDiv);
+        // iDiv.innerHTML=qa.question;
+        
+        var outerqDiv = document.createElement('div');
+        outerqDiv.id = "OuterquizQn" + id + index;
+        // Create div to contain question part
+        var qDiv = document.createElement('div');
+        qDiv.id = "quizQn" + id + index;
+        
+        if (qa.question) {
+            iDiv.append(outerqDiv);
+
+            //qDiv.textContent=qa.question;
+            qDiv.innerHTML = jaxify(qa.question);
+            outerqDiv.append(qDiv);
+        }
+
+        // Create div for code inside question
+        var codeDiv;
+        if ("code" in qa) {
+            codeDiv = document.createElement('div');
+            codeDiv.id = "code" + id + index;
+            codeDiv.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeDiv.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = qa.code;
+            outerqDiv.append(codeDiv);
+            //console.log(codeDiv);
+        }
+
+
+        // Create div to contain answer part
+        var aDiv = document.createElement('div');
+        aDiv.id = "quizAns" + id + index;
+        aDiv.className = 'Answer';
+        iDiv.append(aDiv);
+
+        //console.log(qa.type);
+
+        var num_correct;
+        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
+            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
+            if ("answer_cols" in qa) {
+                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
+                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
+            }
+        } else if (qa.type == "numeric") {
+            //console.log("numeric");
+            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
+        }
+
+
+        //Make div for feedback
+        var fb = document.createElement("div");
+        fb.id = "fb" + id;
+        //fb.style="font-size: 20px;text-align:center;";
+        fb.className = "Feedback";
+        fb.setAttribute("data-answeredcorrect", 0);
+        fb.setAttribute("data-numcorrect", num_correct);
+        iDiv.append(fb);
+
+
     });
+    var preserveResponses = mydiv.dataset.preserveresponses;
+    console.log(preserveResponses);
+    console.log(preserveResponses == "true");
+    if (preserveResponses == "true") {
+        console.log(preserveResponses);
+        // Create Div to contain record of answers
+        var iDiv = document.createElement('div');
+        iDiv.id = 'responses' + mydiv.id;
+        iDiv.className = 'JCResponses';
+        // Create a place to store responses as an empty array
+        iDiv.setAttribute('data-responses', '[]');
 
-    if (preserveResponses) {
-        const respDiv = document.createElement('div');
-        respDiv.id = 'responses' + container.id;
-        respDiv.className = 'JCResponses';
-        respDiv.dataset.responses = JSON.stringify([]);
-        respDiv.innerHTML = '<b>Select your answers and then follow the directions that will appear here.</b>';
-        container.appendChild(respDiv);
+        // Dummy Text
+        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
+        //iDiv.className = 'Quiz';
+        mydiv.appendChild(iDiv);
     }
-
-    // Trigger MathJax typesetting if available
+//console.log("At end of show_questions");
     if (typeof MathJax != 'undefined') {
         console.log("MathJax version", MathJax.version);
         var version = MathJax.version;
@@ -1420,7 +1348,7 @@ function show_questions(json, container) {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -1448,7 +1376,7 @@ if (typeof version == 'undefined') {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -1472,211 +1400,32 @@ if (typeof version == 'undefined') {
             }
         }
     }
-    // if (typeof MathJax !== 'undefined') {
-    //     const v = MathJax.version;
-    //     if (v[0] === '2') {
-    //         MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-    //     } else if (v[0] === '3') {
-    //         MathJax.typeset([container]);
-    //     }
-    // }
-
-    // Prevent link clicks from bubbling up
-    Array.from(container.getElementsByClassName('Link')).forEach(link => {
-        link.addEventListener('click', e => e.stopPropagation());
-    });
+    return false;
 }
-function levenshteinDistance(a, b) {
-    if (a.length === 0) return b.length;
-    if (b.length === 0) return a.length;
+/* This is to handle asynchrony issues in loading Jupyter notebooks
+           where the quiz has been previously run. The Javascript was generally
+           being run before the div was added to the DOM. I tried to do this
+           more elegantly using Mutation Observer, but I didn't get it to work.
 
-    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+           Someone more knowledgeable could make this better ;-) */
 
-    for (let i = 0; i <= a.length; i++) {
-        matrix[0][i] = i;
-    }
+        function try_show() {
+          if(document.getElementById("UJJotuebHmvX")) {
+            show_questions(questionsUJJotuebHmvX,  UJJotuebHmvX); 
+          } else {
+             setTimeout(try_show, 200);
+          }
+        };
+    
+        {
+        // console.log(element);
 
-    for (let j = 0; j <= b.length; j++) {
-        matrix[j][0] = j;
-    }
+        //console.log("UJJotuebHmvX");
+        // console.log(document.getElementById("UJJotuebHmvX"));
 
-    for (let j = 1; j <= b.length; j++) {
-        for (let i = 1; i <= a.length; i++) {
-            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-            matrix[j][i] = Math.min(
-                matrix[j - 1][i] + 1, // Deletion
-                matrix[j][i - 1] + 1, // Insertion
-                matrix[j - 1][i - 1] + cost // Substitution
-            );
+        try_show();
         }
-    }
-    return matrix[b.length][a.length];
-}
-// Object-oriented wrapper for string input questions
-class StringQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_string(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('string', StringQuestion);
-
-function check_string(ths, event) {
-    if (event.keyCode === 13) {
-        ths.blur();
-
-        var id = ths.id.split('-')[0];
-        var submission = ths.value.trim();
-        var fb = document.getElementById("fb" + id);
-        fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
-
-        var answers = JSON.parse(ths.dataset.answers);
-        var defaultFB = "Incorrect. Try again.";
-        var correct;
-        var done = false;
-
-        answers.every(answer => {
-            correct = false;
-
-            let match = false;
-            if (answer.match_case) {
-                match = submission === answer.answer;
-            } else {
-                match = submission.toLowerCase() === answer.answer.toLowerCase();
-            }
-            console.log(submission);
-            console.log(answer.answer);
-            console.log(match);
-
-            if (match) {
-                if ("feedback" in answer) {
-                    fb.innerHTML = jaxify(answer.feedback);
-                } else {
-                    fb.innerHTML = jaxify("Correct");
-                }
-                correct = answer.correct;
-                done = true;
-            } else if (answer.fuzzy_threshold) {
-                var max_length = Math.max(submission.length, answer.answer.length);
-                var ratio;
-                if (answer.match_case) {
-                    ratio = 1- (levenshteinDistance(submission, answer.answer) / max_length);
-                } else {
-                    ratio = 1- (levenshteinDistance(submission.toLowerCase(),
-                                                    answer.answer.toLowerCase()) / max_length);
-                }
-                if (ratio >= answer.fuzzy_threshold) {
-                    if ("feedback" in answer) {
-                        fb.innerHTML = jaxify("(Fuzzy) " + answer.feedback);
-                    } else {
-                        fb.innerHTML = jaxify("Correct");
-                    }
-                    correct = answer.correct;
-                    done = true;
-                }
-
-            }
-
-            if (done) {
-                return false;
-            } else {
-                return true;
-            }
-        });
-
-        if ((!done) && (defaultFB != "")) {
-            fb.innerHTML = jaxify(defaultFB);
-        }
-
-        fb.style.display = "block";
-        if (correct) {
-            ths.className = "Input-text";
-            ths.classList.add("correctButton");
-            fb.className = "Feedback";
-            fb.classList.add("correct");
-        } else {
-            ths.className = "Input-text";
-            ths.classList.add("incorrectButton");
-            fb.className = "Feedback";
-            fb.classList.add("incorrect");
-        }
-
-        var outerContainer = fb.parentElement.parentElement;
-        var responsesContainer = document.getElementById("responses" + outerContainer.id);
-        if (responsesContainer) {
-            var qnum = document.getElementById("quizWrap" + id).dataset.qnum;
-            var responses = JSON.parse(responsesContainer.dataset.responses);
-            responses[qnum] = submission;
-            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
-            printResponses(responsesContainer);
-        }
-
-        if (typeof MathJax != 'undefined') {
-            var version = MathJax.version;
-            if (version[0] == "2") {
-                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-            } else if (version[0] == "3") {
-                MathJax.typeset([fb]);
-            }
-        } else {
-            console.log('MathJax not detected');
-        }
-        return false;
-    }
-}
-
-function string_keypress(evnt) {
-    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
-
-    if (charC == 13) {
-        check_string(this, evnt);
-    } 
-}
-
-
-function make_string(qa, outerqDiv, qDiv, aDiv, id) {
-    outerqDiv.className = "StringQn";
-    aDiv.style.display = 'block';
-
-    var lab = document.createElement("label");
-    lab.className = "InpLabel";
-    lab.innerHTML = "Type your answer here:";
-    aDiv.append(lab);
-
-    var inp = document.createElement("input");
-    inp.type = "text";
-    inp.id = id + "-0";
-    inp.className = "Input-text";
-    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
-    aDiv.append(inp);
-
-    inp.onkeypress = string_keypress;
-    inp.onpaste = event => false;
-
-    inp.addEventListener("focus", function (event) {
-        this.value = "";
-        return false;
-    });
-}
-/*
- * Handle asynchrony issues when re-running quizzes in Jupyter notebooks.
- * Ensures show_questions is called after the container div is in the DOM.
- */
-function try_show() {
-  if (document.getElementById("fbYYOpnTjIfr")) {
-    show_questions(questionsfbYYOpnTjIfr, fbYYOpnTjIfr);
-  } else {
-    setTimeout(try_show, 200);
-  }
-};
-// Invoke immediately
-{
-  try_show();
-}</script></div>
+        </script></div>
 </div>
 <p>Suponha que a Dra. Joana queira estudar como o envelhecimento afeta a memória prospectiva (ou seja, a memória de alguém para realizar tarefas futuras, como levar o lixo para fora antes das 8h, tomar um comprimido às 14h ou ir a uma consulta às 16h). A Dra. Joana vai a um centro local para idosos e encontra 25 pessoas, entre as idades de 65 e 80 anos, que concordam em participar de seu estudo na próxima terça-feira às 15h. No entanto, apenas 10 dessas 25 pessoas se lembram de comparecer ao estudo. Claramente, concluir que os resultados de apenas quem se lembrou de comparecer representem toda a população é problemático. Talvez as pessoas que se lembraram de comparecer tenham melhores habilidades de memória prospectiva do que aqueles que se esqueceram de aparecer. Neste caso, o procedimento de amostragem da Dra. Joana foi ruim, ela acabou com uma amostra não representativa de pessoas idosas.</p>
 <p>O erro de amostragem também é conhecido como erro padrão da média (SEM), e sua fórmula é dada por</p>
@@ -1684,7 +1433,7 @@ function try_show() {
 <p>Assim, existem apenas duas coisas que contribuem para o erro amostral: o desvio padrão da população e o tamanho da amostra. À medida que <span class="math notranslate nohighlight">\(\sigma\)</span> aumenta, o SEM também aumenta. À medida que o tamanho da amostra aumenta, o SEM diminui. Em geral, os investigadores têm muito menos controle sobre o desvio padrão da população do que sobre o tamanho da amostra e, portanto, os esforços para reduzir o erro amostral tendem a se concentrar no aumento do tamanho da amostra.</p>
 <p>Embora a redução do erro amostral seja importante, você também deve pesar os custos e os retornos decrescentes de obter amostras cada vez maiores ao decidir o tamanho da amostra do seu estudo. Neste exemplo, aumentar o tamanho da amostra de 10 a 40 reduz o erro amostral pela metade. No entanto, para reduzir o erro de amostragem pela metade novamente, você teria que adicionar outras 120 pessoas para a amostra.</p>
 <p><strong>Relacionamento entre Tamanho da amostra e Erro de amostragem com <span class="math notranslate nohighlight">\(\sigma = 100\)</span></strong></p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tamanho da amostra</p></th>
 <th class="head"><p>Erro de amostragem</p></th>
@@ -1720,14 +1469,13 @@ function try_show() {
 </tr>
 </tbody>
 </table>
-</div>
 </section>
 <section id="distribuicao-amostral-da-media">
 <h2>Distribuição Amostral da média<a class="headerlink" href="#distribuicao-amostral-da-media" title="Link to this heading">#</a></h2>
 <p>Calcular a quantidade de erro de amostragem esperado em um estudo não é difícil. Você simplesmente divide <span class="math notranslate nohighlight">\(\sigma\)</span> pela raiz quadrada do tamanho da amostra (N). No entanto, para entender por que essa fórmula simples de erro de amostragem funciona, você deve entender as distribuições amostrais. Uma distribuição de médias amostrais é a população de todas as médias amostrais aleatórias possíveis para um estudo realizado com um determinado tamanho de amostra.</p>
 <p>Para ilustrar o que significa uma distribuição amostral, trabalharemos com uma população muito pequena de quatro valores: 10, 12, 14, 16. Se você gerar esta lista completa de amostras possíveis, você terá todas as 16 amostras aleatórias possíveis da população de quatro valores, quando N = 2.</p>
 <p><strong>Distribuição de médias amostrais para a população de quatro valores e um tamanho de amostra de 2</strong></p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Amostra</p></th>
 <th class="head"><p>1° valor</p></th>
@@ -1818,7 +1566,6 @@ function try_show() {
 </tr>
 </tbody>
 </table>
-</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1849,7 +1596,7 @@ function try_show() {
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição de médias amostrais para amostras de tamanho 2 em uma população de 4 variáveis&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/af12ad635c1f353ee43ea16e7905203ce805fb550797d6e13a07b3756efd8f18.png" src="../../_images/af12ad635c1f353ee43ea16e7905203ce805fb550797d6e13a07b3756efd8f18.png" />
+<img alt="../../_images/3dcc8b701caae677f233ba334437740d349f6f714a40de614cd2a09ccf76a2aa.png" src="../../_images/3dcc8b701caae677f233ba334437740d349f6f714a40de614cd2a09ccf76a2aa.png" />
 </div>
 </div>
 <p>Agora você pode começar a apreciar as relações especiais entre a população original de vairáveis e a distribuição das médias amostrais. Você começou com uma população de quatro valores: 10, 12, 14 e 16. A média desta população foi</p>
@@ -1885,8 +1632,13 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="OWClYKzCMGsc" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#OWClYKzCMGsc {
+<div class="output text_html"><div id="nkeUJkggTifq" data-shufflequestions="False"
+               data-shuffleanswers="True"
+               data-preserveresponses="false"
+               data-numquestions="1000000"
+               data-maxwidth="600"
+               style="border-radius: 10px; text-align: left"> <style>
+#nkeUJkggTifq {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -1906,8 +1658,8 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-/*    margin-bottom: 15px;*/
-/*    padding-bottom: 4px;*/
+    margin-bottom: 15px;
+    padding-bottom: 4px;
     padding-top: 4px;
     line-height: 1.1;
     font-size: 16pt;
@@ -1925,48 +1677,18 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
     padding: 4px;
 }
 
-.Quiz code {
-    background-color: lightgray;
-    color: black;
-}
-
-.Quiz .QuizCode code {
-    background-color: inherit;
-    color: inherit;
-}
-
-
-.Quiz .MCButton code {
-    background-color: inherit;
-    color: inherit;
-}
-
-.MCButton .QuizCode {
-    text-align: left;
-}
-
-
-
-
 .Answer {
-    border-radius: inherit;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
     margin: 10px 0;
-}
-
-@media only screen and (max-width:480px) {
-    .Answer {
-        grid-template-columns: 1fr;
-    }
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    border-radius: inherit;
 }
 
 .Feedback {
     font-size: 16pt;
     text-align: center;
-/*    min-height: 2em;*/
+    min-height: 2em;
 }
 
 .Input {
@@ -1993,7 +1715,7 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
 }
 
 .Input-text:focus {
-    /*outline: none;*/
+    outline: none;
     background-color: var(--jq-numeric-input-bg);
     box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
 }
@@ -2002,7 +1724,6 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
     background: var(--jq-mc-button-bg);
     border: 1px solid var(--jq-mc-button-border);
     border-radius: inherit;
-    color: #333333;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -2031,10 +1752,10 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
 }
 
 .NumericQn {
-    background: var(--jq-numeric-bg);
-    border-radius: inherit;
-    color: var(--jq-text-color);
     padding: 10px;
+    background: var(--jq-numeric-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
 }
 
 .NumericQn p {
@@ -2042,11 +1763,11 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
 }
 
 .InpLabel {
-    color: var(--jq-numeric-input-label);
-    float: left;
-    font-size: 15pt;
     line-height: 34px;
+    float: left;
     margin-right: 10px;
+    color: var(--jq-numeric-input-label);
+    font-size: 15pt;
 }
 
 .incorrect {
@@ -2063,17 +1784,17 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
    */
     animation: correct-anim 0.6s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 .incorrectButton {
     animation: incorrect-anim 0.8s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 @keyframes incorrect-anim {
@@ -2087,7 +1808,7 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsOWClYKzCMGsc=[{"question":"2 - A média da distribuição das médias amostrais é _____, e o desvio padrão da distribuição das médias amostrais é _________.",
+</style></div><script type="application/javascript">var questionsnkeUJkggTifq=[{"question":"2 - A média da distribuição das médias amostrais é _____, e o desvio padrão da distribuição das médias amostrais é _________.",
   "type": "multiple_choice",
   "answers":[{"answer":"a. a média populacional; o desvio padrão da população.", "correct": false, "feedback": "Incorreto! Por favor, leia o parágrafo acima novamente."},
              {"answer":"b. o erro padrão da média; o desvio padrão da população.", "correct": false, "feedback": "Incorreto! Por favor, leia o parágrafo acima novamente."},
@@ -2114,7 +1835,7 @@ O desvio padrão para a população (ou seja, 10, 12, 14, 16) foi 2,24. O N refe
           ]
 }
 ];
-// Make a random ID
+    // Make a random ID
 function makeid(length) {
     var result = [];
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -2123,118 +1844,6 @@ function makeid(length) {
         result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
     }
     return result.join('');
-}
-// Convert LaTeX delimiters and markdown links to HTML
-function jaxify(string) {
-    let mystring = string;
-    let count = 0, count2 = 0;
-    let loc = mystring.search(/([^\\]|^)(\$)/);
-    let loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    while (loc >= 0 || loc2 >= 0) {
-        if (loc2 >= 0) {
-            mystring = mystring.replace(/([^\\]|^)(\$\$)/, count2 % 2 ? '$1\\]' : '$1\\[');
-            count2++;
-        } else {
-            mystring = mystring.replace(/([^\\]|^)(\$)/, count % 2 ? '$1\\)' : '$1\\(');
-            count++;
-        }
-        loc = mystring.search(/([^\\]|^)(\$)/);
-        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    }
-    // Replace markdown links
-    mystring = mystring.replace(/<(.*?)>/g, '<a href="$1" target="_blank" class="Link">$1</a>');
-    mystring = mystring.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" class="Link">$1</a>');
-    return mystring;
-}
-
-// Base class for question types
-class Question {
-    static registry = {};
-    static register(type, cls) {
-        Question.registry[type] = cls;
-    }
-    static create(qa, id, index, options, rootDiv) {
-        const Cls = Question.registry[qa.type];
-        if (!Cls) {
-            console.error(`No question class registered for type "${qa.type}"`);
-            return;
-        }
-        const q = new Cls(qa, id, index, options, rootDiv);
-        q.render();
-    }
-
-    constructor(qa, id, index, options, rootDiv) {
-        this.qa = qa;
-        this.id = id;
-        this.index = index;
-        this.options = options;
-        this.rootDiv = rootDiv;
-        // wrapper
-        this.wrapper = document.createElement('div');
-        this.wrapper.id = `quizWrap${id}`;
-        this.wrapper.className = 'Quiz';
-        this.wrapper.dataset.qnum = index;
-        this.wrapper.style.maxWidth = `${options.maxWidth}px`;
-        rootDiv.appendChild(this.wrapper);
-        // question container
-        this.outerqDiv = document.createElement('div');
-        this.outerqDiv.id = `OuterquizQn${id}${index}`;
-        this.wrapper.appendChild(this.outerqDiv);
-        // question text
-        this.qDiv = document.createElement('div');
-        this.qDiv.id = `quizQn${id}${index}`;
-        if (qa.question) {
-            this.qDiv.innerHTML = jaxify(qa.question);
-            this.outerqDiv.appendChild(this.qDiv);
-        }
-        // code block
-        if (qa.code) {
-            const codeDiv = document.createElement('div');
-            codeDiv.id = `code${id}${index}`;
-            codeDiv.className = 'QuizCode';
-            const pre = document.createElement('pre');
-            const codeEl = document.createElement('code');
-            codeEl.innerHTML = qa.code;
-            pre.appendChild(codeEl);
-            codeDiv.appendChild(pre);
-            this.outerqDiv.appendChild(codeDiv);
-        }
-        // answer container
-        this.aDiv = document.createElement('div');
-        this.aDiv.id = `quizAns${id}${index}`;
-        this.aDiv.className = 'Answer';
-        this.wrapper.appendChild(this.aDiv);
-        // feedback container (append after answers)
-        this.fbDiv = document.createElement('div');
-        this.fbDiv.id = `fb${id}`;
-        this.fbDiv.className = 'Feedback';
-        this.fbDiv.dataset.answeredcorrect = 0;
-    }
-
-    render() {
-        throw new Error('render() not implemented');
-    }
-
-    preserveResponse(val) {
-        if (!this.options.preserveResponses) return;
-        const resp = document.getElementById(`responses${this.rootDiv.id}`);
-        if (!resp) return;
-        const arr = JSON.parse(resp.dataset.responses);
-        arr[this.index] = val;
-        resp.dataset.responses = JSON.stringify(arr);
-        printResponses(resp);
-    }
-
-    typeset(container) {
-        if (typeof MathJax !== 'undefined') {
-            const v = MathJax.version;
-            if (v[0] === '2') {
-                MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-            } else {
-                MathJax.typeset([container]);
-            }
-        }
-    }
 }
 
 // Choose a random subset of an array. Can also be used to shuffle the array
@@ -2261,9 +1870,6 @@ function printResponses(responsesContainer) {
     });
     responsesContainer.innerHTML=stringResponses;
 }
-/* Callback function to determine whether a selected multiple-choice
-   button corresponded to a correct answer and to provide feedback
-   based on the answer */
 function check_mc() {
     var id = this.id.split('-')[0];
     //var response = this.id.split('-')[1];
@@ -2285,16 +1891,17 @@ function check_mc() {
 
 
     var answers = label.parentElement.children;
+
     //console.log(answers);
+
 
     // Split behavior based on multiple choice vs many choice:
     var fb = document.getElementById("fb" + id);
 
 
 
-    /* Multiple choice (1 answer). Allow for 0 correct
-       answers as an edge case */
-    if (fb.dataset.numcorrect <= 1) {
+
+    if (fb.dataset.numcorrect == 1) {
         // What follows is for the saved responses stuff
         var outerContainer = fb.parentElement.parentElement;
         var responsesContainer = document.getElementById("responses" + outerContainer.id);
@@ -2316,7 +1923,7 @@ function check_mc() {
             printResponses(responsesContainer);
         }
         // End code to preserve responses
-
+        
         for (var i = 0; i < answers.length; i++) {
             var child = answers[i];
             //console.log(child);
@@ -2328,9 +1935,9 @@ function check_mc() {
         if (label.dataset.correct == "true") {
             // console.log("Correct action");
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Correct!";
+                fb.textContent = "Correct!";
             }
             label.classList.add("correctButton");
 
@@ -2339,9 +1946,9 @@ function check_mc() {
 
         } else {
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Incorrect -- try again.";
+                fb.textContent = "Incorrect -- try again.";
             }
             //console.log("Error action");
             label.classList.add("incorrectButton");
@@ -2349,7 +1956,7 @@ function check_mc() {
             fb.classList.add("incorrect");
         }
     }
-    else { /* Many choice (more than 1 correct answer) */
+    else {
         var reset = false;
         var feedback;
          if (label.dataset.correct == "true") {
@@ -2438,9 +2045,9 @@ function check_mc() {
         var numcorrect = fb.dataset.numcorrect;
         var answeredcorrect = fb.dataset.answeredcorrect;
         if (answeredcorrect >= 0) {
-            fb.innerHTML = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
         } else {
-            fb.innerHTML = feedback + " [" + 0 + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + 0 + "/" + numcorrect + "]";
         }
 
 
@@ -2460,12 +2067,7 @@ function check_mc() {
 
 }
 
-
-/* Function to produce the HTML buttons for a multiple choice/
-   many choice question  and to update the CSS tags based on
-   the question type */
 function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
-
     var shuffled;
     if (shuffle_answers == "True") {
         //console.log(shuffle_answers+" read as true");
@@ -2477,6 +2079,8 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
 
 
     var num_correct = 0;
+
+
 
     shuffled.forEach((item, index, ans_array) => {
         //console.log(answer);
@@ -2542,28 +2146,6 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
     return num_correct;
 
 }
-// Object-oriented wrapper for MC/MANY choice
-class MCQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) { super(qa, id, idx, opts, rootDiv); }
-    render() {
-        const numCorrect = make_mc(
-            this.qa,
-            this.options.shuffleAnswers,
-            this.outerqDiv,
-            this.qDiv,
-            this.aDiv,
-            this.id
-        );
-        if ('answer_cols' in this.qa) {
-            this.aDiv.style.gridTemplateColumns =
-                'repeat(' + this.qa.answer_cols + ', 1fr)';
-        }
-        this.fbDiv.dataset.numcorrect = numCorrect;
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('multiple_choice', MCQuestion);
-Question.register('many_choice', MCQuestion);
 function check_numeric(ths, event) {
 
     if (event.keyCode === 13) {
@@ -2581,7 +2163,9 @@ function check_numeric(ths, event) {
 
         if ("precision" in ths.dataset) {
             var precision = ths.dataset.precision;
-            submission = Number(Number(submission).toPrecision(precision));
+            // console.log("1:", submission)
+            submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
+            // console.log("Rounded to ", submission, " precision=", precision  );
         }
 
 
@@ -2591,12 +2175,12 @@ function check_numeric(ths, event) {
 
         var fb = document.getElementById("fb" + id);
         fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
+        fb.textContent = "Incorrect -- try again.";
 
         var answers = JSON.parse(ths.dataset.answers);
         //console.log(answers);
 
-        var defaultFB = "Incorrect. Try again.";
+        var defaultFB = "";
         var correct;
         var done = false;
         answers.every(answer => {
@@ -2605,37 +2189,27 @@ function check_numeric(ths, event) {
             correct = false;
             // if (answer.type=="value"){
             if ('value' in answer) {
-                var value;
-                if ("precision" in ths.dataset) {
-                    value = answer.value.toPrecision(ths.dataset.precision);
-                } else {
-                    value = answer.value;
-                }
-                if (submission == value) {
+                if (submission == answer.value) {
                     if ("feedback" in answer) {
-                        fb.innerHTML = jaxify(answer.feedback);
+                        fb.textContent = jaxify(answer.feedback);
                     } else {
-                        fb.innerHTML = jaxify("Correct");
+                        fb.textContent = jaxify("Correct");
                     }
                     correct = answer.correct;
                     //console.log(answer.correct);
                     done = true;
                 }
-
                 // } else if (answer.type=="range") {
             } else if ('range' in answer) {
-                console.log(answer.range);
-                console.log(submission, submission >=answer.range[0], submission < answer.range[1])
+                //console.log(answer.range);
                 if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
-                    fb.innerHTML = jaxify(answer.feedback);
+                    fb.textContent = jaxify(answer.feedback);
                     correct = answer.correct;
-                    console.log(answer.correct);
+                    //console.log(answer.correct);
                     done = true;
                 }
             } else if (answer.type == "default") {
-                if ("feedback" in answer) {
-                    defaultFB = answer.feedback;
-                } 
+                defaultFB = answer.feedback;
             }
             if (done) {
                 return false; // Break out of loop if this has been marked correct
@@ -2643,7 +2217,6 @@ function check_numeric(ths, event) {
                 return true; // Keep looking for case that includes this as a correct answer
             }
         });
-        console.log("done:", done);
 
         if ((!done) && (defaultFB != "")) {
             fb.innerHTML = jaxify(defaultFB);
@@ -2698,17 +2271,6 @@ function check_numeric(ths, event) {
     }
 
 }
-// Object-oriented wrapper for numeric questions
-class NumericQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_numeric(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('numeric', NumericQuestion);
 
 function isValid(el, charC) {
     //console.log("Input char: ", charC);
@@ -2793,7 +2355,7 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
     var lab = document.createElement("label");
     lab.className = "InpLabel";
-    lab.innerHTML = "Type numeric answer here:";
+    lab.textContent = "Type numeric answer here:";
     aDiv.append(lab);
 
     var inp = document.createElement("input");
@@ -2828,49 +2390,165 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
 
 }
-// Override show_questions to use object-oriented Question API
-function show_questions(json, container) {
-    // Accept container element or element ID
-    if (typeof container === 'string') {
-        container = document.getElementById(container);
-    }
-    if (!container) {
-        console.error('show_questions: invalid container', container);
-        return;
+function jaxify(string) {
+    var mystring = string;
+
+    var count = 0;
+    var loc = mystring.search(/([^\\]|^)(\$)/);
+
+    var count2 = 0;
+    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+
+    //console.log(loc);
+
+    while ((loc >= 0) || (loc2 >= 0)) {
+
+        /* Have to replace all the double $$ first with current implementation */
+        if (loc2 >= 0) {
+            if (count2 % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
+            }
+            count2++;
+        } else {
+            if (count % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
+            }
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+        //console.log(mystring,", loc:",loc,", loc2:",loc2);
     }
 
-    const shuffleQuestions = container.dataset.shufflequestions === 'True';
-    const shuffleAnswers = container.dataset.shuffleanswers === 'True';
-    const preserveResponses = container.dataset.preserveresponses === 'true';
-    const maxWidth = parseInt(container.dataset.maxwidth, 10) || 0;
-    let numQuestions = parseInt(container.dataset.numquestions, 10) || json.length;
-    if (numQuestions > json.length) numQuestions = json.length;
+    //console.log(mystring);
+    return mystring;
+}
 
-    let questions = json;
-    if (shuffleQuestions || numQuestions < json.length) {
-        questions = getRandomSubarray(json, numQuestions);
+
+function show_questions(json, mydiv) {
+    console.log('show_questions');
+    //var mydiv=document.getElementById(myid);
+    var shuffle_questions = mydiv.dataset.shufflequestions;
+    var num_questions = mydiv.dataset.numquestions;
+    var shuffle_answers = mydiv.dataset.shuffleanswers;
+    var max_width = mydiv.dataset.maxwidth;
+
+    if (num_questions > json.length) {
+        num_questions = json.length;
     }
 
-    questions.forEach((qa, index) => {
-        const id = makeid(8);
-        const options = {
-            shuffleAnswers: shuffleAnswers,
-            preserveResponses: preserveResponses,
-            maxWidth: maxWidth
-        };
-        Question.create(qa, id, index, options, container);
+    var questions;
+    if ((num_questions < json.length) || (shuffle_questions == "True")) {
+        //console.log(num_questions+","+json.length);
+        questions = getRandomSubarray(json, num_questions);
+    } else {
+        questions = json;
+    }
+
+    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
+
+    // Iterate over questions
+    questions.forEach((qa, index, array) => {
+        //console.log(qa.question); 
+
+        var id = makeid(8);
+        //console.log(id);
+
+
+        // Create Div to contain question and answers
+        var iDiv = document.createElement('div');
+        //iDiv.id = 'quizWrap' + id + index;
+        iDiv.id = 'quizWrap' + id;
+        iDiv.className = 'Quiz';
+        iDiv.setAttribute('data-qnum', index);
+        iDiv.style.maxWidth  =max_width+"px";
+        mydiv.appendChild(iDiv);
+        // iDiv.innerHTML=qa.question;
+        
+        var outerqDiv = document.createElement('div');
+        outerqDiv.id = "OuterquizQn" + id + index;
+        // Create div to contain question part
+        var qDiv = document.createElement('div');
+        qDiv.id = "quizQn" + id + index;
+        
+        if (qa.question) {
+            iDiv.append(outerqDiv);
+
+            //qDiv.textContent=qa.question;
+            qDiv.innerHTML = jaxify(qa.question);
+            outerqDiv.append(qDiv);
+        }
+
+        // Create div for code inside question
+        var codeDiv;
+        if ("code" in qa) {
+            codeDiv = document.createElement('div');
+            codeDiv.id = "code" + id + index;
+            codeDiv.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeDiv.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = qa.code;
+            outerqDiv.append(codeDiv);
+            //console.log(codeDiv);
+        }
+
+
+        // Create div to contain answer part
+        var aDiv = document.createElement('div');
+        aDiv.id = "quizAns" + id + index;
+        aDiv.className = 'Answer';
+        iDiv.append(aDiv);
+
+        //console.log(qa.type);
+
+        var num_correct;
+        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
+            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
+            if ("answer_cols" in qa) {
+                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
+                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
+            }
+        } else if (qa.type == "numeric") {
+            //console.log("numeric");
+            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
+        }
+
+
+        //Make div for feedback
+        var fb = document.createElement("div");
+        fb.id = "fb" + id;
+        //fb.style="font-size: 20px;text-align:center;";
+        fb.className = "Feedback";
+        fb.setAttribute("data-answeredcorrect", 0);
+        fb.setAttribute("data-numcorrect", num_correct);
+        iDiv.append(fb);
+
+
     });
+    var preserveResponses = mydiv.dataset.preserveresponses;
+    console.log(preserveResponses);
+    console.log(preserveResponses == "true");
+    if (preserveResponses == "true") {
+        console.log(preserveResponses);
+        // Create Div to contain record of answers
+        var iDiv = document.createElement('div');
+        iDiv.id = 'responses' + mydiv.id;
+        iDiv.className = 'JCResponses';
+        // Create a place to store responses as an empty array
+        iDiv.setAttribute('data-responses', '[]');
 
-    if (preserveResponses) {
-        const respDiv = document.createElement('div');
-        respDiv.id = 'responses' + container.id;
-        respDiv.className = 'JCResponses';
-        respDiv.dataset.responses = JSON.stringify([]);
-        respDiv.innerHTML = '<b>Select your answers and then follow the directions that will appear here.</b>';
-        container.appendChild(respDiv);
+        // Dummy Text
+        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
+        //iDiv.className = 'Quiz';
+        mydiv.appendChild(iDiv);
     }
-
-    // Trigger MathJax typesetting if available
+//console.log("At end of show_questions");
     if (typeof MathJax != 'undefined') {
         console.log("MathJax version", MathJax.version);
         var version = MathJax.version;
@@ -2881,7 +2559,7 @@ function show_questions(json, container) {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -2909,7 +2587,7 @@ if (typeof version == 'undefined') {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -2933,211 +2611,32 @@ if (typeof version == 'undefined') {
             }
         }
     }
-    // if (typeof MathJax !== 'undefined') {
-    //     const v = MathJax.version;
-    //     if (v[0] === '2') {
-    //         MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-    //     } else if (v[0] === '3') {
-    //         MathJax.typeset([container]);
-    //     }
-    // }
-
-    // Prevent link clicks from bubbling up
-    Array.from(container.getElementsByClassName('Link')).forEach(link => {
-        link.addEventListener('click', e => e.stopPropagation());
-    });
+    return false;
 }
-function levenshteinDistance(a, b) {
-    if (a.length === 0) return b.length;
-    if (b.length === 0) return a.length;
+/* This is to handle asynchrony issues in loading Jupyter notebooks
+           where the quiz has been previously run. The Javascript was generally
+           being run before the div was added to the DOM. I tried to do this
+           more elegantly using Mutation Observer, but I didn't get it to work.
 
-    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+           Someone more knowledgeable could make this better ;-) */
 
-    for (let i = 0; i <= a.length; i++) {
-        matrix[0][i] = i;
-    }
+        function try_show() {
+          if(document.getElementById("nkeUJkggTifq")) {
+            show_questions(questionsnkeUJkggTifq,  nkeUJkggTifq); 
+          } else {
+             setTimeout(try_show, 200);
+          }
+        };
+    
+        {
+        // console.log(element);
 
-    for (let j = 0; j <= b.length; j++) {
-        matrix[j][0] = j;
-    }
+        //console.log("nkeUJkggTifq");
+        // console.log(document.getElementById("nkeUJkggTifq"));
 
-    for (let j = 1; j <= b.length; j++) {
-        for (let i = 1; i <= a.length; i++) {
-            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-            matrix[j][i] = Math.min(
-                matrix[j - 1][i] + 1, // Deletion
-                matrix[j][i - 1] + 1, // Insertion
-                matrix[j - 1][i - 1] + cost // Substitution
-            );
+        try_show();
         }
-    }
-    return matrix[b.length][a.length];
-}
-// Object-oriented wrapper for string input questions
-class StringQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_string(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('string', StringQuestion);
-
-function check_string(ths, event) {
-    if (event.keyCode === 13) {
-        ths.blur();
-
-        var id = ths.id.split('-')[0];
-        var submission = ths.value.trim();
-        var fb = document.getElementById("fb" + id);
-        fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
-
-        var answers = JSON.parse(ths.dataset.answers);
-        var defaultFB = "Incorrect. Try again.";
-        var correct;
-        var done = false;
-
-        answers.every(answer => {
-            correct = false;
-
-            let match = false;
-            if (answer.match_case) {
-                match = submission === answer.answer;
-            } else {
-                match = submission.toLowerCase() === answer.answer.toLowerCase();
-            }
-            console.log(submission);
-            console.log(answer.answer);
-            console.log(match);
-
-            if (match) {
-                if ("feedback" in answer) {
-                    fb.innerHTML = jaxify(answer.feedback);
-                } else {
-                    fb.innerHTML = jaxify("Correct");
-                }
-                correct = answer.correct;
-                done = true;
-            } else if (answer.fuzzy_threshold) {
-                var max_length = Math.max(submission.length, answer.answer.length);
-                var ratio;
-                if (answer.match_case) {
-                    ratio = 1- (levenshteinDistance(submission, answer.answer) / max_length);
-                } else {
-                    ratio = 1- (levenshteinDistance(submission.toLowerCase(),
-                                                    answer.answer.toLowerCase()) / max_length);
-                }
-                if (ratio >= answer.fuzzy_threshold) {
-                    if ("feedback" in answer) {
-                        fb.innerHTML = jaxify("(Fuzzy) " + answer.feedback);
-                    } else {
-                        fb.innerHTML = jaxify("Correct");
-                    }
-                    correct = answer.correct;
-                    done = true;
-                }
-
-            }
-
-            if (done) {
-                return false;
-            } else {
-                return true;
-            }
-        });
-
-        if ((!done) && (defaultFB != "")) {
-            fb.innerHTML = jaxify(defaultFB);
-        }
-
-        fb.style.display = "block";
-        if (correct) {
-            ths.className = "Input-text";
-            ths.classList.add("correctButton");
-            fb.className = "Feedback";
-            fb.classList.add("correct");
-        } else {
-            ths.className = "Input-text";
-            ths.classList.add("incorrectButton");
-            fb.className = "Feedback";
-            fb.classList.add("incorrect");
-        }
-
-        var outerContainer = fb.parentElement.parentElement;
-        var responsesContainer = document.getElementById("responses" + outerContainer.id);
-        if (responsesContainer) {
-            var qnum = document.getElementById("quizWrap" + id).dataset.qnum;
-            var responses = JSON.parse(responsesContainer.dataset.responses);
-            responses[qnum] = submission;
-            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
-            printResponses(responsesContainer);
-        }
-
-        if (typeof MathJax != 'undefined') {
-            var version = MathJax.version;
-            if (version[0] == "2") {
-                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-            } else if (version[0] == "3") {
-                MathJax.typeset([fb]);
-            }
-        } else {
-            console.log('MathJax not detected');
-        }
-        return false;
-    }
-}
-
-function string_keypress(evnt) {
-    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
-
-    if (charC == 13) {
-        check_string(this, evnt);
-    } 
-}
-
-
-function make_string(qa, outerqDiv, qDiv, aDiv, id) {
-    outerqDiv.className = "StringQn";
-    aDiv.style.display = 'block';
-
-    var lab = document.createElement("label");
-    lab.className = "InpLabel";
-    lab.innerHTML = "Type your answer here:";
-    aDiv.append(lab);
-
-    var inp = document.createElement("input");
-    inp.type = "text";
-    inp.id = id + "-0";
-    inp.className = "Input-text";
-    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
-    aDiv.append(inp);
-
-    inp.onkeypress = string_keypress;
-    inp.onpaste = event => false;
-
-    inp.addEventListener("focus", function (event) {
-        this.value = "";
-        return false;
-    });
-}
-/*
- * Handle asynchrony issues when re-running quizzes in Jupyter notebooks.
- * Ensures show_questions is called after the container div is in the DOM.
- */
-function try_show() {
-  if (document.getElementById("OWClYKzCMGsc")) {
-    show_questions(questionsOWClYKzCMGsc, OWClYKzCMGsc);
-  } else {
-    setTimeout(try_show, 200);
-  }
-};
-// Invoke immediately
-{
-  try_show();
-}</script></div>
+        </script></div>
 </div>
 <p>Existem duas maneiras de reduzir o erro de amostragem. Uma opção é reduzir o desvio padrão populacional (<span class="math notranslate nohighlight">\(\sigma\)</span>), mas esta opção raramente é possível. Uma opção muito mais viável é aumentar o tamanho da amostra. À medida que N aumenta, o erro padrão geral da média diminuirá. Amostras maiores tenderão a ter meios que desviam-se menos da média da população do que amostras menores. Este é um exemplo específico da lei de números grandes: à medida que N aumenta, a estatística amostral (por exemplo, a média amostral) é uma estimativa melhor do parâmetro populacional (por exemplo, a média populacional).</p>
 <p>Visto que a distribuição tem forma normal, ela segue a regra 68–95–99, como estudado em capítulos prévios. Portanto, 68% de todas as possíveis médias amostrais estão entre -1 e +1 erro padrão da média da distribuição amostral da média.</p>
@@ -3155,8 +2654,13 @@ function try_show() {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="hcwwujyFbwwr" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#hcwwujyFbwwr {
+<div class="output text_html"><div id="POwmQZJdIKvT" data-shufflequestions="False"
+               data-shuffleanswers="True"
+               data-preserveresponses="false"
+               data-numquestions="1000000"
+               data-maxwidth="600"
+               style="border-radius: 10px; text-align: left"> <style>
+#POwmQZJdIKvT {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -3176,8 +2680,8 @@ function try_show() {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-/*    margin-bottom: 15px;*/
-/*    padding-bottom: 4px;*/
+    margin-bottom: 15px;
+    padding-bottom: 4px;
     padding-top: 4px;
     line-height: 1.1;
     font-size: 16pt;
@@ -3195,48 +2699,18 @@ function try_show() {
     padding: 4px;
 }
 
-.Quiz code {
-    background-color: lightgray;
-    color: black;
-}
-
-.Quiz .QuizCode code {
-    background-color: inherit;
-    color: inherit;
-}
-
-
-.Quiz .MCButton code {
-    background-color: inherit;
-    color: inherit;
-}
-
-.MCButton .QuizCode {
-    text-align: left;
-}
-
-
-
-
 .Answer {
-    border-radius: inherit;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
     margin: 10px 0;
-}
-
-@media only screen and (max-width:480px) {
-    .Answer {
-        grid-template-columns: 1fr;
-    }
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    border-radius: inherit;
 }
 
 .Feedback {
     font-size: 16pt;
     text-align: center;
-/*    min-height: 2em;*/
+    min-height: 2em;
 }
 
 .Input {
@@ -3263,7 +2737,7 @@ function try_show() {
 }
 
 .Input-text:focus {
-    /*outline: none;*/
+    outline: none;
     background-color: var(--jq-numeric-input-bg);
     box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
 }
@@ -3272,7 +2746,6 @@ function try_show() {
     background: var(--jq-mc-button-bg);
     border: 1px solid var(--jq-mc-button-border);
     border-radius: inherit;
-    color: #333333;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -3301,10 +2774,10 @@ function try_show() {
 }
 
 .NumericQn {
-    background: var(--jq-numeric-bg);
-    border-radius: inherit;
-    color: var(--jq-text-color);
     padding: 10px;
+    background: var(--jq-numeric-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
 }
 
 .NumericQn p {
@@ -3312,11 +2785,11 @@ function try_show() {
 }
 
 .InpLabel {
-    color: var(--jq-numeric-input-label);
-    float: left;
-    font-size: 15pt;
     line-height: 34px;
+    float: left;
     margin-right: 10px;
+    color: var(--jq-numeric-input-label);
+    font-size: 15pt;
 }
 
 .incorrect {
@@ -3333,17 +2806,17 @@ function try_show() {
    */
     animation: correct-anim 0.6s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 .incorrectButton {
     animation: incorrect-anim 0.8s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 @keyframes incorrect-anim {
@@ -3357,7 +2830,7 @@ function try_show() {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionshcwwujyFbwwr=[{"question":"6 - Qual das alternativas a seguir reduzirá o erro padrão da média?",
+</style></div><script type="application/javascript">var questionsPOwmQZJdIKvT=[{"question":"6 - Qual das alternativas a seguir reduzirá o erro padrão da média?",
 "type":"multiple_choice",
 "answers":[{"answer": "a. Aumentar N.", "correct":true, "feedback":"Correto! O erro padrão da média é inversamente proporcional à raiz quadrada do tamanho da amostra."},
            {"answer": "b. Diminuir N.", "correct":false, "feedback":"Incorreto. Diminuir o número de observações aumentará o erro padrão da média."},
@@ -3369,7 +2842,7 @@ function try_show() {
            {"answer": "b. Falso", "correct":false, "feedback":"Incorreto. Leia o parágrafo anterior novamente."}],
 },
 ];
-// Make a random ID
+    // Make a random ID
 function makeid(length) {
     var result = [];
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -3378,118 +2851,6 @@ function makeid(length) {
         result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
     }
     return result.join('');
-}
-// Convert LaTeX delimiters and markdown links to HTML
-function jaxify(string) {
-    let mystring = string;
-    let count = 0, count2 = 0;
-    let loc = mystring.search(/([^\\]|^)(\$)/);
-    let loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    while (loc >= 0 || loc2 >= 0) {
-        if (loc2 >= 0) {
-            mystring = mystring.replace(/([^\\]|^)(\$\$)/, count2 % 2 ? '$1\\]' : '$1\\[');
-            count2++;
-        } else {
-            mystring = mystring.replace(/([^\\]|^)(\$)/, count % 2 ? '$1\\)' : '$1\\(');
-            count++;
-        }
-        loc = mystring.search(/([^\\]|^)(\$)/);
-        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    }
-    // Replace markdown links
-    mystring = mystring.replace(/<(.*?)>/g, '<a href="$1" target="_blank" class="Link">$1</a>');
-    mystring = mystring.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" class="Link">$1</a>');
-    return mystring;
-}
-
-// Base class for question types
-class Question {
-    static registry = {};
-    static register(type, cls) {
-        Question.registry[type] = cls;
-    }
-    static create(qa, id, index, options, rootDiv) {
-        const Cls = Question.registry[qa.type];
-        if (!Cls) {
-            console.error(`No question class registered for type "${qa.type}"`);
-            return;
-        }
-        const q = new Cls(qa, id, index, options, rootDiv);
-        q.render();
-    }
-
-    constructor(qa, id, index, options, rootDiv) {
-        this.qa = qa;
-        this.id = id;
-        this.index = index;
-        this.options = options;
-        this.rootDiv = rootDiv;
-        // wrapper
-        this.wrapper = document.createElement('div');
-        this.wrapper.id = `quizWrap${id}`;
-        this.wrapper.className = 'Quiz';
-        this.wrapper.dataset.qnum = index;
-        this.wrapper.style.maxWidth = `${options.maxWidth}px`;
-        rootDiv.appendChild(this.wrapper);
-        // question container
-        this.outerqDiv = document.createElement('div');
-        this.outerqDiv.id = `OuterquizQn${id}${index}`;
-        this.wrapper.appendChild(this.outerqDiv);
-        // question text
-        this.qDiv = document.createElement('div');
-        this.qDiv.id = `quizQn${id}${index}`;
-        if (qa.question) {
-            this.qDiv.innerHTML = jaxify(qa.question);
-            this.outerqDiv.appendChild(this.qDiv);
-        }
-        // code block
-        if (qa.code) {
-            const codeDiv = document.createElement('div');
-            codeDiv.id = `code${id}${index}`;
-            codeDiv.className = 'QuizCode';
-            const pre = document.createElement('pre');
-            const codeEl = document.createElement('code');
-            codeEl.innerHTML = qa.code;
-            pre.appendChild(codeEl);
-            codeDiv.appendChild(pre);
-            this.outerqDiv.appendChild(codeDiv);
-        }
-        // answer container
-        this.aDiv = document.createElement('div');
-        this.aDiv.id = `quizAns${id}${index}`;
-        this.aDiv.className = 'Answer';
-        this.wrapper.appendChild(this.aDiv);
-        // feedback container (append after answers)
-        this.fbDiv = document.createElement('div');
-        this.fbDiv.id = `fb${id}`;
-        this.fbDiv.className = 'Feedback';
-        this.fbDiv.dataset.answeredcorrect = 0;
-    }
-
-    render() {
-        throw new Error('render() not implemented');
-    }
-
-    preserveResponse(val) {
-        if (!this.options.preserveResponses) return;
-        const resp = document.getElementById(`responses${this.rootDiv.id}`);
-        if (!resp) return;
-        const arr = JSON.parse(resp.dataset.responses);
-        arr[this.index] = val;
-        resp.dataset.responses = JSON.stringify(arr);
-        printResponses(resp);
-    }
-
-    typeset(container) {
-        if (typeof MathJax !== 'undefined') {
-            const v = MathJax.version;
-            if (v[0] === '2') {
-                MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-            } else {
-                MathJax.typeset([container]);
-            }
-        }
-    }
 }
 
 // Choose a random subset of an array. Can also be used to shuffle the array
@@ -3516,9 +2877,6 @@ function printResponses(responsesContainer) {
     });
     responsesContainer.innerHTML=stringResponses;
 }
-/* Callback function to determine whether a selected multiple-choice
-   button corresponded to a correct answer and to provide feedback
-   based on the answer */
 function check_mc() {
     var id = this.id.split('-')[0];
     //var response = this.id.split('-')[1];
@@ -3540,16 +2898,17 @@ function check_mc() {
 
 
     var answers = label.parentElement.children;
+
     //console.log(answers);
+
 
     // Split behavior based on multiple choice vs many choice:
     var fb = document.getElementById("fb" + id);
 
 
 
-    /* Multiple choice (1 answer). Allow for 0 correct
-       answers as an edge case */
-    if (fb.dataset.numcorrect <= 1) {
+
+    if (fb.dataset.numcorrect == 1) {
         // What follows is for the saved responses stuff
         var outerContainer = fb.parentElement.parentElement;
         var responsesContainer = document.getElementById("responses" + outerContainer.id);
@@ -3571,7 +2930,7 @@ function check_mc() {
             printResponses(responsesContainer);
         }
         // End code to preserve responses
-
+        
         for (var i = 0; i < answers.length; i++) {
             var child = answers[i];
             //console.log(child);
@@ -3583,9 +2942,9 @@ function check_mc() {
         if (label.dataset.correct == "true") {
             // console.log("Correct action");
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Correct!";
+                fb.textContent = "Correct!";
             }
             label.classList.add("correctButton");
 
@@ -3594,9 +2953,9 @@ function check_mc() {
 
         } else {
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Incorrect -- try again.";
+                fb.textContent = "Incorrect -- try again.";
             }
             //console.log("Error action");
             label.classList.add("incorrectButton");
@@ -3604,7 +2963,7 @@ function check_mc() {
             fb.classList.add("incorrect");
         }
     }
-    else { /* Many choice (more than 1 correct answer) */
+    else {
         var reset = false;
         var feedback;
          if (label.dataset.correct == "true") {
@@ -3693,9 +3052,9 @@ function check_mc() {
         var numcorrect = fb.dataset.numcorrect;
         var answeredcorrect = fb.dataset.answeredcorrect;
         if (answeredcorrect >= 0) {
-            fb.innerHTML = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
         } else {
-            fb.innerHTML = feedback + " [" + 0 + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + 0 + "/" + numcorrect + "]";
         }
 
 
@@ -3715,12 +3074,7 @@ function check_mc() {
 
 }
 
-
-/* Function to produce the HTML buttons for a multiple choice/
-   many choice question  and to update the CSS tags based on
-   the question type */
 function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
-
     var shuffled;
     if (shuffle_answers == "True") {
         //console.log(shuffle_answers+" read as true");
@@ -3732,6 +3086,8 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
 
 
     var num_correct = 0;
+
+
 
     shuffled.forEach((item, index, ans_array) => {
         //console.log(answer);
@@ -3797,28 +3153,6 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
     return num_correct;
 
 }
-// Object-oriented wrapper for MC/MANY choice
-class MCQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) { super(qa, id, idx, opts, rootDiv); }
-    render() {
-        const numCorrect = make_mc(
-            this.qa,
-            this.options.shuffleAnswers,
-            this.outerqDiv,
-            this.qDiv,
-            this.aDiv,
-            this.id
-        );
-        if ('answer_cols' in this.qa) {
-            this.aDiv.style.gridTemplateColumns =
-                'repeat(' + this.qa.answer_cols + ', 1fr)';
-        }
-        this.fbDiv.dataset.numcorrect = numCorrect;
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('multiple_choice', MCQuestion);
-Question.register('many_choice', MCQuestion);
 function check_numeric(ths, event) {
 
     if (event.keyCode === 13) {
@@ -3836,7 +3170,9 @@ function check_numeric(ths, event) {
 
         if ("precision" in ths.dataset) {
             var precision = ths.dataset.precision;
-            submission = Number(Number(submission).toPrecision(precision));
+            // console.log("1:", submission)
+            submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
+            // console.log("Rounded to ", submission, " precision=", precision  );
         }
 
 
@@ -3846,12 +3182,12 @@ function check_numeric(ths, event) {
 
         var fb = document.getElementById("fb" + id);
         fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
+        fb.textContent = "Incorrect -- try again.";
 
         var answers = JSON.parse(ths.dataset.answers);
         //console.log(answers);
 
-        var defaultFB = "Incorrect. Try again.";
+        var defaultFB = "";
         var correct;
         var done = false;
         answers.every(answer => {
@@ -3860,37 +3196,27 @@ function check_numeric(ths, event) {
             correct = false;
             // if (answer.type=="value"){
             if ('value' in answer) {
-                var value;
-                if ("precision" in ths.dataset) {
-                    value = answer.value.toPrecision(ths.dataset.precision);
-                } else {
-                    value = answer.value;
-                }
-                if (submission == value) {
+                if (submission == answer.value) {
                     if ("feedback" in answer) {
-                        fb.innerHTML = jaxify(answer.feedback);
+                        fb.textContent = jaxify(answer.feedback);
                     } else {
-                        fb.innerHTML = jaxify("Correct");
+                        fb.textContent = jaxify("Correct");
                     }
                     correct = answer.correct;
                     //console.log(answer.correct);
                     done = true;
                 }
-
                 // } else if (answer.type=="range") {
             } else if ('range' in answer) {
-                console.log(answer.range);
-                console.log(submission, submission >=answer.range[0], submission < answer.range[1])
+                //console.log(answer.range);
                 if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
-                    fb.innerHTML = jaxify(answer.feedback);
+                    fb.textContent = jaxify(answer.feedback);
                     correct = answer.correct;
-                    console.log(answer.correct);
+                    //console.log(answer.correct);
                     done = true;
                 }
             } else if (answer.type == "default") {
-                if ("feedback" in answer) {
-                    defaultFB = answer.feedback;
-                } 
+                defaultFB = answer.feedback;
             }
             if (done) {
                 return false; // Break out of loop if this has been marked correct
@@ -3898,7 +3224,6 @@ function check_numeric(ths, event) {
                 return true; // Keep looking for case that includes this as a correct answer
             }
         });
-        console.log("done:", done);
 
         if ((!done) && (defaultFB != "")) {
             fb.innerHTML = jaxify(defaultFB);
@@ -3953,17 +3278,6 @@ function check_numeric(ths, event) {
     }
 
 }
-// Object-oriented wrapper for numeric questions
-class NumericQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_numeric(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('numeric', NumericQuestion);
 
 function isValid(el, charC) {
     //console.log("Input char: ", charC);
@@ -4048,7 +3362,7 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
     var lab = document.createElement("label");
     lab.className = "InpLabel";
-    lab.innerHTML = "Type numeric answer here:";
+    lab.textContent = "Type numeric answer here:";
     aDiv.append(lab);
 
     var inp = document.createElement("input");
@@ -4083,49 +3397,165 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
 
 }
-// Override show_questions to use object-oriented Question API
-function show_questions(json, container) {
-    // Accept container element or element ID
-    if (typeof container === 'string') {
-        container = document.getElementById(container);
-    }
-    if (!container) {
-        console.error('show_questions: invalid container', container);
-        return;
+function jaxify(string) {
+    var mystring = string;
+
+    var count = 0;
+    var loc = mystring.search(/([^\\]|^)(\$)/);
+
+    var count2 = 0;
+    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+
+    //console.log(loc);
+
+    while ((loc >= 0) || (loc2 >= 0)) {
+
+        /* Have to replace all the double $$ first with current implementation */
+        if (loc2 >= 0) {
+            if (count2 % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
+            }
+            count2++;
+        } else {
+            if (count % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
+            }
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+        //console.log(mystring,", loc:",loc,", loc2:",loc2);
     }
 
-    const shuffleQuestions = container.dataset.shufflequestions === 'True';
-    const shuffleAnswers = container.dataset.shuffleanswers === 'True';
-    const preserveResponses = container.dataset.preserveresponses === 'true';
-    const maxWidth = parseInt(container.dataset.maxwidth, 10) || 0;
-    let numQuestions = parseInt(container.dataset.numquestions, 10) || json.length;
-    if (numQuestions > json.length) numQuestions = json.length;
+    //console.log(mystring);
+    return mystring;
+}
 
-    let questions = json;
-    if (shuffleQuestions || numQuestions < json.length) {
-        questions = getRandomSubarray(json, numQuestions);
+
+function show_questions(json, mydiv) {
+    console.log('show_questions');
+    //var mydiv=document.getElementById(myid);
+    var shuffle_questions = mydiv.dataset.shufflequestions;
+    var num_questions = mydiv.dataset.numquestions;
+    var shuffle_answers = mydiv.dataset.shuffleanswers;
+    var max_width = mydiv.dataset.maxwidth;
+
+    if (num_questions > json.length) {
+        num_questions = json.length;
     }
 
-    questions.forEach((qa, index) => {
-        const id = makeid(8);
-        const options = {
-            shuffleAnswers: shuffleAnswers,
-            preserveResponses: preserveResponses,
-            maxWidth: maxWidth
-        };
-        Question.create(qa, id, index, options, container);
+    var questions;
+    if ((num_questions < json.length) || (shuffle_questions == "True")) {
+        //console.log(num_questions+","+json.length);
+        questions = getRandomSubarray(json, num_questions);
+    } else {
+        questions = json;
+    }
+
+    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
+
+    // Iterate over questions
+    questions.forEach((qa, index, array) => {
+        //console.log(qa.question); 
+
+        var id = makeid(8);
+        //console.log(id);
+
+
+        // Create Div to contain question and answers
+        var iDiv = document.createElement('div');
+        //iDiv.id = 'quizWrap' + id + index;
+        iDiv.id = 'quizWrap' + id;
+        iDiv.className = 'Quiz';
+        iDiv.setAttribute('data-qnum', index);
+        iDiv.style.maxWidth  =max_width+"px";
+        mydiv.appendChild(iDiv);
+        // iDiv.innerHTML=qa.question;
+        
+        var outerqDiv = document.createElement('div');
+        outerqDiv.id = "OuterquizQn" + id + index;
+        // Create div to contain question part
+        var qDiv = document.createElement('div');
+        qDiv.id = "quizQn" + id + index;
+        
+        if (qa.question) {
+            iDiv.append(outerqDiv);
+
+            //qDiv.textContent=qa.question;
+            qDiv.innerHTML = jaxify(qa.question);
+            outerqDiv.append(qDiv);
+        }
+
+        // Create div for code inside question
+        var codeDiv;
+        if ("code" in qa) {
+            codeDiv = document.createElement('div');
+            codeDiv.id = "code" + id + index;
+            codeDiv.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeDiv.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = qa.code;
+            outerqDiv.append(codeDiv);
+            //console.log(codeDiv);
+        }
+
+
+        // Create div to contain answer part
+        var aDiv = document.createElement('div');
+        aDiv.id = "quizAns" + id + index;
+        aDiv.className = 'Answer';
+        iDiv.append(aDiv);
+
+        //console.log(qa.type);
+
+        var num_correct;
+        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
+            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
+            if ("answer_cols" in qa) {
+                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
+                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
+            }
+        } else if (qa.type == "numeric") {
+            //console.log("numeric");
+            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
+        }
+
+
+        //Make div for feedback
+        var fb = document.createElement("div");
+        fb.id = "fb" + id;
+        //fb.style="font-size: 20px;text-align:center;";
+        fb.className = "Feedback";
+        fb.setAttribute("data-answeredcorrect", 0);
+        fb.setAttribute("data-numcorrect", num_correct);
+        iDiv.append(fb);
+
+
     });
+    var preserveResponses = mydiv.dataset.preserveresponses;
+    console.log(preserveResponses);
+    console.log(preserveResponses == "true");
+    if (preserveResponses == "true") {
+        console.log(preserveResponses);
+        // Create Div to contain record of answers
+        var iDiv = document.createElement('div');
+        iDiv.id = 'responses' + mydiv.id;
+        iDiv.className = 'JCResponses';
+        // Create a place to store responses as an empty array
+        iDiv.setAttribute('data-responses', '[]');
 
-    if (preserveResponses) {
-        const respDiv = document.createElement('div');
-        respDiv.id = 'responses' + container.id;
-        respDiv.className = 'JCResponses';
-        respDiv.dataset.responses = JSON.stringify([]);
-        respDiv.innerHTML = '<b>Select your answers and then follow the directions that will appear here.</b>';
-        container.appendChild(respDiv);
+        // Dummy Text
+        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
+        //iDiv.className = 'Quiz';
+        mydiv.appendChild(iDiv);
     }
-
-    // Trigger MathJax typesetting if available
+//console.log("At end of show_questions");
     if (typeof MathJax != 'undefined') {
         console.log("MathJax version", MathJax.version);
         var version = MathJax.version;
@@ -4136,7 +3566,7 @@ function show_questions(json, container) {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -4164,7 +3594,7 @@ if (typeof version == 'undefined') {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -4188,211 +3618,32 @@ if (typeof version == 'undefined') {
             }
         }
     }
-    // if (typeof MathJax !== 'undefined') {
-    //     const v = MathJax.version;
-    //     if (v[0] === '2') {
-    //         MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-    //     } else if (v[0] === '3') {
-    //         MathJax.typeset([container]);
-    //     }
-    // }
-
-    // Prevent link clicks from bubbling up
-    Array.from(container.getElementsByClassName('Link')).forEach(link => {
-        link.addEventListener('click', e => e.stopPropagation());
-    });
+    return false;
 }
-function levenshteinDistance(a, b) {
-    if (a.length === 0) return b.length;
-    if (b.length === 0) return a.length;
+/* This is to handle asynchrony issues in loading Jupyter notebooks
+           where the quiz has been previously run. The Javascript was generally
+           being run before the div was added to the DOM. I tried to do this
+           more elegantly using Mutation Observer, but I didn't get it to work.
 
-    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+           Someone more knowledgeable could make this better ;-) */
 
-    for (let i = 0; i <= a.length; i++) {
-        matrix[0][i] = i;
-    }
+        function try_show() {
+          if(document.getElementById("POwmQZJdIKvT")) {
+            show_questions(questionsPOwmQZJdIKvT,  POwmQZJdIKvT); 
+          } else {
+             setTimeout(try_show, 200);
+          }
+        };
+    
+        {
+        // console.log(element);
 
-    for (let j = 0; j <= b.length; j++) {
-        matrix[j][0] = j;
-    }
+        //console.log("POwmQZJdIKvT");
+        // console.log(document.getElementById("POwmQZJdIKvT"));
 
-    for (let j = 1; j <= b.length; j++) {
-        for (let i = 1; i <= a.length; i++) {
-            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-            matrix[j][i] = Math.min(
-                matrix[j - 1][i] + 1, // Deletion
-                matrix[j][i - 1] + 1, // Insertion
-                matrix[j - 1][i - 1] + cost // Substitution
-            );
+        try_show();
         }
-    }
-    return matrix[b.length][a.length];
-}
-// Object-oriented wrapper for string input questions
-class StringQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_string(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('string', StringQuestion);
-
-function check_string(ths, event) {
-    if (event.keyCode === 13) {
-        ths.blur();
-
-        var id = ths.id.split('-')[0];
-        var submission = ths.value.trim();
-        var fb = document.getElementById("fb" + id);
-        fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
-
-        var answers = JSON.parse(ths.dataset.answers);
-        var defaultFB = "Incorrect. Try again.";
-        var correct;
-        var done = false;
-
-        answers.every(answer => {
-            correct = false;
-
-            let match = false;
-            if (answer.match_case) {
-                match = submission === answer.answer;
-            } else {
-                match = submission.toLowerCase() === answer.answer.toLowerCase();
-            }
-            console.log(submission);
-            console.log(answer.answer);
-            console.log(match);
-
-            if (match) {
-                if ("feedback" in answer) {
-                    fb.innerHTML = jaxify(answer.feedback);
-                } else {
-                    fb.innerHTML = jaxify("Correct");
-                }
-                correct = answer.correct;
-                done = true;
-            } else if (answer.fuzzy_threshold) {
-                var max_length = Math.max(submission.length, answer.answer.length);
-                var ratio;
-                if (answer.match_case) {
-                    ratio = 1- (levenshteinDistance(submission, answer.answer) / max_length);
-                } else {
-                    ratio = 1- (levenshteinDistance(submission.toLowerCase(),
-                                                    answer.answer.toLowerCase()) / max_length);
-                }
-                if (ratio >= answer.fuzzy_threshold) {
-                    if ("feedback" in answer) {
-                        fb.innerHTML = jaxify("(Fuzzy) " + answer.feedback);
-                    } else {
-                        fb.innerHTML = jaxify("Correct");
-                    }
-                    correct = answer.correct;
-                    done = true;
-                }
-
-            }
-
-            if (done) {
-                return false;
-            } else {
-                return true;
-            }
-        });
-
-        if ((!done) && (defaultFB != "")) {
-            fb.innerHTML = jaxify(defaultFB);
-        }
-
-        fb.style.display = "block";
-        if (correct) {
-            ths.className = "Input-text";
-            ths.classList.add("correctButton");
-            fb.className = "Feedback";
-            fb.classList.add("correct");
-        } else {
-            ths.className = "Input-text";
-            ths.classList.add("incorrectButton");
-            fb.className = "Feedback";
-            fb.classList.add("incorrect");
-        }
-
-        var outerContainer = fb.parentElement.parentElement;
-        var responsesContainer = document.getElementById("responses" + outerContainer.id);
-        if (responsesContainer) {
-            var qnum = document.getElementById("quizWrap" + id).dataset.qnum;
-            var responses = JSON.parse(responsesContainer.dataset.responses);
-            responses[qnum] = submission;
-            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
-            printResponses(responsesContainer);
-        }
-
-        if (typeof MathJax != 'undefined') {
-            var version = MathJax.version;
-            if (version[0] == "2") {
-                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-            } else if (version[0] == "3") {
-                MathJax.typeset([fb]);
-            }
-        } else {
-            console.log('MathJax not detected');
-        }
-        return false;
-    }
-}
-
-function string_keypress(evnt) {
-    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
-
-    if (charC == 13) {
-        check_string(this, evnt);
-    } 
-}
-
-
-function make_string(qa, outerqDiv, qDiv, aDiv, id) {
-    outerqDiv.className = "StringQn";
-    aDiv.style.display = 'block';
-
-    var lab = document.createElement("label");
-    lab.className = "InpLabel";
-    lab.innerHTML = "Type your answer here:";
-    aDiv.append(lab);
-
-    var inp = document.createElement("input");
-    inp.type = "text";
-    inp.id = id + "-0";
-    inp.className = "Input-text";
-    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
-    aDiv.append(inp);
-
-    inp.onkeypress = string_keypress;
-    inp.onpaste = event => false;
-
-    inp.addEventListener("focus", function (event) {
-        this.value = "";
-        return false;
-    });
-}
-/*
- * Handle asynchrony issues when re-running quizzes in Jupyter notebooks.
- * Ensures show_questions is called after the container div is in the DOM.
- */
-function try_show() {
-  if (document.getElementById("hcwwujyFbwwr")) {
-    show_questions(questionshcwwujyFbwwr, hcwwujyFbwwr);
-  } else {
-    setTimeout(try_show, 200);
-  }
-};
-// Invoke immediately
-{
-  try_show();
-}</script></div>
+        </script></div>
 </div>
 </section>
 <section id="z-para-uma-media-amostral">
@@ -4415,8 +3666,13 @@ function try_show() {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="YILsdEESfQEr" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#YILsdEESfQEr {
+<div class="output text_html"><div id="PsRiicrtNtmU" data-shufflequestions="False"
+               data-shuffleanswers="True"
+               data-preserveresponses="false"
+               data-numquestions="1000000"
+               data-maxwidth="600"
+               style="border-radius: 10px; text-align: left"> <style>
+#PsRiicrtNtmU {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -4436,8 +3692,8 @@ function try_show() {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-/*    margin-bottom: 15px;*/
-/*    padding-bottom: 4px;*/
+    margin-bottom: 15px;
+    padding-bottom: 4px;
     padding-top: 4px;
     line-height: 1.1;
     font-size: 16pt;
@@ -4455,48 +3711,18 @@ function try_show() {
     padding: 4px;
 }
 
-.Quiz code {
-    background-color: lightgray;
-    color: black;
-}
-
-.Quiz .QuizCode code {
-    background-color: inherit;
-    color: inherit;
-}
-
-
-.Quiz .MCButton code {
-    background-color: inherit;
-    color: inherit;
-}
-
-.MCButton .QuizCode {
-    text-align: left;
-}
-
-
-
-
 .Answer {
-    border-radius: inherit;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
     margin: 10px 0;
-}
-
-@media only screen and (max-width:480px) {
-    .Answer {
-        grid-template-columns: 1fr;
-    }
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    border-radius: inherit;
 }
 
 .Feedback {
     font-size: 16pt;
     text-align: center;
-/*    min-height: 2em;*/
+    min-height: 2em;
 }
 
 .Input {
@@ -4523,7 +3749,7 @@ function try_show() {
 }
 
 .Input-text:focus {
-    /*outline: none;*/
+    outline: none;
     background-color: var(--jq-numeric-input-bg);
     box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
 }
@@ -4532,7 +3758,6 @@ function try_show() {
     background: var(--jq-mc-button-bg);
     border: 1px solid var(--jq-mc-button-border);
     border-radius: inherit;
-    color: #333333;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -4561,10 +3786,10 @@ function try_show() {
 }
 
 .NumericQn {
-    background: var(--jq-numeric-bg);
-    border-radius: inherit;
-    color: var(--jq-text-color);
     padding: 10px;
+    background: var(--jq-numeric-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
 }
 
 .NumericQn p {
@@ -4572,11 +3797,11 @@ function try_show() {
 }
 
 .InpLabel {
-    color: var(--jq-numeric-input-label);
-    float: left;
-    font-size: 15pt;
     line-height: 34px;
+    float: left;
     margin-right: 10px;
+    color: var(--jq-numeric-input-label);
+    font-size: 15pt;
 }
 
 .incorrect {
@@ -4593,17 +3818,17 @@ function try_show() {
    */
     animation: correct-anim 0.6s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 .incorrectButton {
     animation: incorrect-anim 0.8s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 @keyframes incorrect-anim {
@@ -4617,7 +3842,7 @@ function try_show() {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsYILsdEESfQEr=[{"question":"8 - Ao calcular z para uma média amostral, se o valor de z for próximo de zero, a média amostral",
+</style></div><script type="application/javascript">var questionsPsRiicrtNtmU=[{"question":"8 - Ao calcular z para uma média amostral, se o valor de z for próximo de zero, a média amostral",
 "type":"multiple_choice",
 "answers": [{"answer": "a. não é muito diferente da média da população e a diferença ocorre provavelmente devido a erro de amostragem.", 
             "correct": true, "feedback":"Correto! Quanto mais próximo de zero, menor a diferença esperada para a média populacional."},
@@ -4632,7 +3857,7 @@ function try_show() {
            "correct": true, "feedback":"Correto! Quanto mais longe de zero, maior a diferença esperada para a média populacional."}]
 
 }];
-// Make a random ID
+    // Make a random ID
 function makeid(length) {
     var result = [];
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -4641,118 +3866,6 @@ function makeid(length) {
         result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
     }
     return result.join('');
-}
-// Convert LaTeX delimiters and markdown links to HTML
-function jaxify(string) {
-    let mystring = string;
-    let count = 0, count2 = 0;
-    let loc = mystring.search(/([^\\]|^)(\$)/);
-    let loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    while (loc >= 0 || loc2 >= 0) {
-        if (loc2 >= 0) {
-            mystring = mystring.replace(/([^\\]|^)(\$\$)/, count2 % 2 ? '$1\\]' : '$1\\[');
-            count2++;
-        } else {
-            mystring = mystring.replace(/([^\\]|^)(\$)/, count % 2 ? '$1\\)' : '$1\\(');
-            count++;
-        }
-        loc = mystring.search(/([^\\]|^)(\$)/);
-        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    }
-    // Replace markdown links
-    mystring = mystring.replace(/<(.*?)>/g, '<a href="$1" target="_blank" class="Link">$1</a>');
-    mystring = mystring.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" class="Link">$1</a>');
-    return mystring;
-}
-
-// Base class for question types
-class Question {
-    static registry = {};
-    static register(type, cls) {
-        Question.registry[type] = cls;
-    }
-    static create(qa, id, index, options, rootDiv) {
-        const Cls = Question.registry[qa.type];
-        if (!Cls) {
-            console.error(`No question class registered for type "${qa.type}"`);
-            return;
-        }
-        const q = new Cls(qa, id, index, options, rootDiv);
-        q.render();
-    }
-
-    constructor(qa, id, index, options, rootDiv) {
-        this.qa = qa;
-        this.id = id;
-        this.index = index;
-        this.options = options;
-        this.rootDiv = rootDiv;
-        // wrapper
-        this.wrapper = document.createElement('div');
-        this.wrapper.id = `quizWrap${id}`;
-        this.wrapper.className = 'Quiz';
-        this.wrapper.dataset.qnum = index;
-        this.wrapper.style.maxWidth = `${options.maxWidth}px`;
-        rootDiv.appendChild(this.wrapper);
-        // question container
-        this.outerqDiv = document.createElement('div');
-        this.outerqDiv.id = `OuterquizQn${id}${index}`;
-        this.wrapper.appendChild(this.outerqDiv);
-        // question text
-        this.qDiv = document.createElement('div');
-        this.qDiv.id = `quizQn${id}${index}`;
-        if (qa.question) {
-            this.qDiv.innerHTML = jaxify(qa.question);
-            this.outerqDiv.appendChild(this.qDiv);
-        }
-        // code block
-        if (qa.code) {
-            const codeDiv = document.createElement('div');
-            codeDiv.id = `code${id}${index}`;
-            codeDiv.className = 'QuizCode';
-            const pre = document.createElement('pre');
-            const codeEl = document.createElement('code');
-            codeEl.innerHTML = qa.code;
-            pre.appendChild(codeEl);
-            codeDiv.appendChild(pre);
-            this.outerqDiv.appendChild(codeDiv);
-        }
-        // answer container
-        this.aDiv = document.createElement('div');
-        this.aDiv.id = `quizAns${id}${index}`;
-        this.aDiv.className = 'Answer';
-        this.wrapper.appendChild(this.aDiv);
-        // feedback container (append after answers)
-        this.fbDiv = document.createElement('div');
-        this.fbDiv.id = `fb${id}`;
-        this.fbDiv.className = 'Feedback';
-        this.fbDiv.dataset.answeredcorrect = 0;
-    }
-
-    render() {
-        throw new Error('render() not implemented');
-    }
-
-    preserveResponse(val) {
-        if (!this.options.preserveResponses) return;
-        const resp = document.getElementById(`responses${this.rootDiv.id}`);
-        if (!resp) return;
-        const arr = JSON.parse(resp.dataset.responses);
-        arr[this.index] = val;
-        resp.dataset.responses = JSON.stringify(arr);
-        printResponses(resp);
-    }
-
-    typeset(container) {
-        if (typeof MathJax !== 'undefined') {
-            const v = MathJax.version;
-            if (v[0] === '2') {
-                MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-            } else {
-                MathJax.typeset([container]);
-            }
-        }
-    }
 }
 
 // Choose a random subset of an array. Can also be used to shuffle the array
@@ -4779,9 +3892,6 @@ function printResponses(responsesContainer) {
     });
     responsesContainer.innerHTML=stringResponses;
 }
-/* Callback function to determine whether a selected multiple-choice
-   button corresponded to a correct answer and to provide feedback
-   based on the answer */
 function check_mc() {
     var id = this.id.split('-')[0];
     //var response = this.id.split('-')[1];
@@ -4803,16 +3913,17 @@ function check_mc() {
 
 
     var answers = label.parentElement.children;
+
     //console.log(answers);
+
 
     // Split behavior based on multiple choice vs many choice:
     var fb = document.getElementById("fb" + id);
 
 
 
-    /* Multiple choice (1 answer). Allow for 0 correct
-       answers as an edge case */
-    if (fb.dataset.numcorrect <= 1) {
+
+    if (fb.dataset.numcorrect == 1) {
         // What follows is for the saved responses stuff
         var outerContainer = fb.parentElement.parentElement;
         var responsesContainer = document.getElementById("responses" + outerContainer.id);
@@ -4834,7 +3945,7 @@ function check_mc() {
             printResponses(responsesContainer);
         }
         // End code to preserve responses
-
+        
         for (var i = 0; i < answers.length; i++) {
             var child = answers[i];
             //console.log(child);
@@ -4846,9 +3957,9 @@ function check_mc() {
         if (label.dataset.correct == "true") {
             // console.log("Correct action");
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Correct!";
+                fb.textContent = "Correct!";
             }
             label.classList.add("correctButton");
 
@@ -4857,9 +3968,9 @@ function check_mc() {
 
         } else {
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Incorrect -- try again.";
+                fb.textContent = "Incorrect -- try again.";
             }
             //console.log("Error action");
             label.classList.add("incorrectButton");
@@ -4867,7 +3978,7 @@ function check_mc() {
             fb.classList.add("incorrect");
         }
     }
-    else { /* Many choice (more than 1 correct answer) */
+    else {
         var reset = false;
         var feedback;
          if (label.dataset.correct == "true") {
@@ -4956,9 +4067,9 @@ function check_mc() {
         var numcorrect = fb.dataset.numcorrect;
         var answeredcorrect = fb.dataset.answeredcorrect;
         if (answeredcorrect >= 0) {
-            fb.innerHTML = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
         } else {
-            fb.innerHTML = feedback + " [" + 0 + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + 0 + "/" + numcorrect + "]";
         }
 
 
@@ -4978,12 +4089,7 @@ function check_mc() {
 
 }
 
-
-/* Function to produce the HTML buttons for a multiple choice/
-   many choice question  and to update the CSS tags based on
-   the question type */
 function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
-
     var shuffled;
     if (shuffle_answers == "True") {
         //console.log(shuffle_answers+" read as true");
@@ -4995,6 +4101,8 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
 
 
     var num_correct = 0;
+
+
 
     shuffled.forEach((item, index, ans_array) => {
         //console.log(answer);
@@ -5060,28 +4168,6 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
     return num_correct;
 
 }
-// Object-oriented wrapper for MC/MANY choice
-class MCQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) { super(qa, id, idx, opts, rootDiv); }
-    render() {
-        const numCorrect = make_mc(
-            this.qa,
-            this.options.shuffleAnswers,
-            this.outerqDiv,
-            this.qDiv,
-            this.aDiv,
-            this.id
-        );
-        if ('answer_cols' in this.qa) {
-            this.aDiv.style.gridTemplateColumns =
-                'repeat(' + this.qa.answer_cols + ', 1fr)';
-        }
-        this.fbDiv.dataset.numcorrect = numCorrect;
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('multiple_choice', MCQuestion);
-Question.register('many_choice', MCQuestion);
 function check_numeric(ths, event) {
 
     if (event.keyCode === 13) {
@@ -5099,7 +4185,9 @@ function check_numeric(ths, event) {
 
         if ("precision" in ths.dataset) {
             var precision = ths.dataset.precision;
-            submission = Number(Number(submission).toPrecision(precision));
+            // console.log("1:", submission)
+            submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
+            // console.log("Rounded to ", submission, " precision=", precision  );
         }
 
 
@@ -5109,12 +4197,12 @@ function check_numeric(ths, event) {
 
         var fb = document.getElementById("fb" + id);
         fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
+        fb.textContent = "Incorrect -- try again.";
 
         var answers = JSON.parse(ths.dataset.answers);
         //console.log(answers);
 
-        var defaultFB = "Incorrect. Try again.";
+        var defaultFB = "";
         var correct;
         var done = false;
         answers.every(answer => {
@@ -5123,37 +4211,27 @@ function check_numeric(ths, event) {
             correct = false;
             // if (answer.type=="value"){
             if ('value' in answer) {
-                var value;
-                if ("precision" in ths.dataset) {
-                    value = answer.value.toPrecision(ths.dataset.precision);
-                } else {
-                    value = answer.value;
-                }
-                if (submission == value) {
+                if (submission == answer.value) {
                     if ("feedback" in answer) {
-                        fb.innerHTML = jaxify(answer.feedback);
+                        fb.textContent = jaxify(answer.feedback);
                     } else {
-                        fb.innerHTML = jaxify("Correct");
+                        fb.textContent = jaxify("Correct");
                     }
                     correct = answer.correct;
                     //console.log(answer.correct);
                     done = true;
                 }
-
                 // } else if (answer.type=="range") {
             } else if ('range' in answer) {
-                console.log(answer.range);
-                console.log(submission, submission >=answer.range[0], submission < answer.range[1])
+                //console.log(answer.range);
                 if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
-                    fb.innerHTML = jaxify(answer.feedback);
+                    fb.textContent = jaxify(answer.feedback);
                     correct = answer.correct;
-                    console.log(answer.correct);
+                    //console.log(answer.correct);
                     done = true;
                 }
             } else if (answer.type == "default") {
-                if ("feedback" in answer) {
-                    defaultFB = answer.feedback;
-                } 
+                defaultFB = answer.feedback;
             }
             if (done) {
                 return false; // Break out of loop if this has been marked correct
@@ -5161,7 +4239,6 @@ function check_numeric(ths, event) {
                 return true; // Keep looking for case that includes this as a correct answer
             }
         });
-        console.log("done:", done);
 
         if ((!done) && (defaultFB != "")) {
             fb.innerHTML = jaxify(defaultFB);
@@ -5216,17 +4293,6 @@ function check_numeric(ths, event) {
     }
 
 }
-// Object-oriented wrapper for numeric questions
-class NumericQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_numeric(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('numeric', NumericQuestion);
 
 function isValid(el, charC) {
     //console.log("Input char: ", charC);
@@ -5311,7 +4377,7 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
     var lab = document.createElement("label");
     lab.className = "InpLabel";
-    lab.innerHTML = "Type numeric answer here:";
+    lab.textContent = "Type numeric answer here:";
     aDiv.append(lab);
 
     var inp = document.createElement("input");
@@ -5346,49 +4412,165 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
 
 }
-// Override show_questions to use object-oriented Question API
-function show_questions(json, container) {
-    // Accept container element or element ID
-    if (typeof container === 'string') {
-        container = document.getElementById(container);
-    }
-    if (!container) {
-        console.error('show_questions: invalid container', container);
-        return;
+function jaxify(string) {
+    var mystring = string;
+
+    var count = 0;
+    var loc = mystring.search(/([^\\]|^)(\$)/);
+
+    var count2 = 0;
+    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+
+    //console.log(loc);
+
+    while ((loc >= 0) || (loc2 >= 0)) {
+
+        /* Have to replace all the double $$ first with current implementation */
+        if (loc2 >= 0) {
+            if (count2 % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
+            }
+            count2++;
+        } else {
+            if (count % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
+            }
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+        //console.log(mystring,", loc:",loc,", loc2:",loc2);
     }
 
-    const shuffleQuestions = container.dataset.shufflequestions === 'True';
-    const shuffleAnswers = container.dataset.shuffleanswers === 'True';
-    const preserveResponses = container.dataset.preserveresponses === 'true';
-    const maxWidth = parseInt(container.dataset.maxwidth, 10) || 0;
-    let numQuestions = parseInt(container.dataset.numquestions, 10) || json.length;
-    if (numQuestions > json.length) numQuestions = json.length;
+    //console.log(mystring);
+    return mystring;
+}
 
-    let questions = json;
-    if (shuffleQuestions || numQuestions < json.length) {
-        questions = getRandomSubarray(json, numQuestions);
+
+function show_questions(json, mydiv) {
+    console.log('show_questions');
+    //var mydiv=document.getElementById(myid);
+    var shuffle_questions = mydiv.dataset.shufflequestions;
+    var num_questions = mydiv.dataset.numquestions;
+    var shuffle_answers = mydiv.dataset.shuffleanswers;
+    var max_width = mydiv.dataset.maxwidth;
+
+    if (num_questions > json.length) {
+        num_questions = json.length;
     }
 
-    questions.forEach((qa, index) => {
-        const id = makeid(8);
-        const options = {
-            shuffleAnswers: shuffleAnswers,
-            preserveResponses: preserveResponses,
-            maxWidth: maxWidth
-        };
-        Question.create(qa, id, index, options, container);
+    var questions;
+    if ((num_questions < json.length) || (shuffle_questions == "True")) {
+        //console.log(num_questions+","+json.length);
+        questions = getRandomSubarray(json, num_questions);
+    } else {
+        questions = json;
+    }
+
+    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
+
+    // Iterate over questions
+    questions.forEach((qa, index, array) => {
+        //console.log(qa.question); 
+
+        var id = makeid(8);
+        //console.log(id);
+
+
+        // Create Div to contain question and answers
+        var iDiv = document.createElement('div');
+        //iDiv.id = 'quizWrap' + id + index;
+        iDiv.id = 'quizWrap' + id;
+        iDiv.className = 'Quiz';
+        iDiv.setAttribute('data-qnum', index);
+        iDiv.style.maxWidth  =max_width+"px";
+        mydiv.appendChild(iDiv);
+        // iDiv.innerHTML=qa.question;
+        
+        var outerqDiv = document.createElement('div');
+        outerqDiv.id = "OuterquizQn" + id + index;
+        // Create div to contain question part
+        var qDiv = document.createElement('div');
+        qDiv.id = "quizQn" + id + index;
+        
+        if (qa.question) {
+            iDiv.append(outerqDiv);
+
+            //qDiv.textContent=qa.question;
+            qDiv.innerHTML = jaxify(qa.question);
+            outerqDiv.append(qDiv);
+        }
+
+        // Create div for code inside question
+        var codeDiv;
+        if ("code" in qa) {
+            codeDiv = document.createElement('div');
+            codeDiv.id = "code" + id + index;
+            codeDiv.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeDiv.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = qa.code;
+            outerqDiv.append(codeDiv);
+            //console.log(codeDiv);
+        }
+
+
+        // Create div to contain answer part
+        var aDiv = document.createElement('div');
+        aDiv.id = "quizAns" + id + index;
+        aDiv.className = 'Answer';
+        iDiv.append(aDiv);
+
+        //console.log(qa.type);
+
+        var num_correct;
+        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
+            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
+            if ("answer_cols" in qa) {
+                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
+                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
+            }
+        } else if (qa.type == "numeric") {
+            //console.log("numeric");
+            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
+        }
+
+
+        //Make div for feedback
+        var fb = document.createElement("div");
+        fb.id = "fb" + id;
+        //fb.style="font-size: 20px;text-align:center;";
+        fb.className = "Feedback";
+        fb.setAttribute("data-answeredcorrect", 0);
+        fb.setAttribute("data-numcorrect", num_correct);
+        iDiv.append(fb);
+
+
     });
+    var preserveResponses = mydiv.dataset.preserveresponses;
+    console.log(preserveResponses);
+    console.log(preserveResponses == "true");
+    if (preserveResponses == "true") {
+        console.log(preserveResponses);
+        // Create Div to contain record of answers
+        var iDiv = document.createElement('div');
+        iDiv.id = 'responses' + mydiv.id;
+        iDiv.className = 'JCResponses';
+        // Create a place to store responses as an empty array
+        iDiv.setAttribute('data-responses', '[]');
 
-    if (preserveResponses) {
-        const respDiv = document.createElement('div');
-        respDiv.id = 'responses' + container.id;
-        respDiv.className = 'JCResponses';
-        respDiv.dataset.responses = JSON.stringify([]);
-        respDiv.innerHTML = '<b>Select your answers and then follow the directions that will appear here.</b>';
-        container.appendChild(respDiv);
+        // Dummy Text
+        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
+        //iDiv.className = 'Quiz';
+        mydiv.appendChild(iDiv);
     }
-
-    // Trigger MathJax typesetting if available
+//console.log("At end of show_questions");
     if (typeof MathJax != 'undefined') {
         console.log("MathJax version", MathJax.version);
         var version = MathJax.version;
@@ -5399,7 +4581,7 @@ function show_questions(json, container) {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -5427,7 +4609,7 @@ if (typeof version == 'undefined') {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -5451,211 +4633,32 @@ if (typeof version == 'undefined') {
             }
         }
     }
-    // if (typeof MathJax !== 'undefined') {
-    //     const v = MathJax.version;
-    //     if (v[0] === '2') {
-    //         MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-    //     } else if (v[0] === '3') {
-    //         MathJax.typeset([container]);
-    //     }
-    // }
-
-    // Prevent link clicks from bubbling up
-    Array.from(container.getElementsByClassName('Link')).forEach(link => {
-        link.addEventListener('click', e => e.stopPropagation());
-    });
+    return false;
 }
-function levenshteinDistance(a, b) {
-    if (a.length === 0) return b.length;
-    if (b.length === 0) return a.length;
+/* This is to handle asynchrony issues in loading Jupyter notebooks
+           where the quiz has been previously run. The Javascript was generally
+           being run before the div was added to the DOM. I tried to do this
+           more elegantly using Mutation Observer, but I didn't get it to work.
 
-    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+           Someone more knowledgeable could make this better ;-) */
 
-    for (let i = 0; i <= a.length; i++) {
-        matrix[0][i] = i;
-    }
+        function try_show() {
+          if(document.getElementById("PsRiicrtNtmU")) {
+            show_questions(questionsPsRiicrtNtmU,  PsRiicrtNtmU); 
+          } else {
+             setTimeout(try_show, 200);
+          }
+        };
+    
+        {
+        // console.log(element);
 
-    for (let j = 0; j <= b.length; j++) {
-        matrix[j][0] = j;
-    }
+        //console.log("PsRiicrtNtmU");
+        // console.log(document.getElementById("PsRiicrtNtmU"));
 
-    for (let j = 1; j <= b.length; j++) {
-        for (let i = 1; i <= a.length; i++) {
-            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-            matrix[j][i] = Math.min(
-                matrix[j - 1][i] + 1, // Deletion
-                matrix[j][i - 1] + 1, // Insertion
-                matrix[j - 1][i - 1] + cost // Substitution
-            );
+        try_show();
         }
-    }
-    return matrix[b.length][a.length];
-}
-// Object-oriented wrapper for string input questions
-class StringQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_string(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('string', StringQuestion);
-
-function check_string(ths, event) {
-    if (event.keyCode === 13) {
-        ths.blur();
-
-        var id = ths.id.split('-')[0];
-        var submission = ths.value.trim();
-        var fb = document.getElementById("fb" + id);
-        fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
-
-        var answers = JSON.parse(ths.dataset.answers);
-        var defaultFB = "Incorrect. Try again.";
-        var correct;
-        var done = false;
-
-        answers.every(answer => {
-            correct = false;
-
-            let match = false;
-            if (answer.match_case) {
-                match = submission === answer.answer;
-            } else {
-                match = submission.toLowerCase() === answer.answer.toLowerCase();
-            }
-            console.log(submission);
-            console.log(answer.answer);
-            console.log(match);
-
-            if (match) {
-                if ("feedback" in answer) {
-                    fb.innerHTML = jaxify(answer.feedback);
-                } else {
-                    fb.innerHTML = jaxify("Correct");
-                }
-                correct = answer.correct;
-                done = true;
-            } else if (answer.fuzzy_threshold) {
-                var max_length = Math.max(submission.length, answer.answer.length);
-                var ratio;
-                if (answer.match_case) {
-                    ratio = 1- (levenshteinDistance(submission, answer.answer) / max_length);
-                } else {
-                    ratio = 1- (levenshteinDistance(submission.toLowerCase(),
-                                                    answer.answer.toLowerCase()) / max_length);
-                }
-                if (ratio >= answer.fuzzy_threshold) {
-                    if ("feedback" in answer) {
-                        fb.innerHTML = jaxify("(Fuzzy) " + answer.feedback);
-                    } else {
-                        fb.innerHTML = jaxify("Correct");
-                    }
-                    correct = answer.correct;
-                    done = true;
-                }
-
-            }
-
-            if (done) {
-                return false;
-            } else {
-                return true;
-            }
-        });
-
-        if ((!done) && (defaultFB != "")) {
-            fb.innerHTML = jaxify(defaultFB);
-        }
-
-        fb.style.display = "block";
-        if (correct) {
-            ths.className = "Input-text";
-            ths.classList.add("correctButton");
-            fb.className = "Feedback";
-            fb.classList.add("correct");
-        } else {
-            ths.className = "Input-text";
-            ths.classList.add("incorrectButton");
-            fb.className = "Feedback";
-            fb.classList.add("incorrect");
-        }
-
-        var outerContainer = fb.parentElement.parentElement;
-        var responsesContainer = document.getElementById("responses" + outerContainer.id);
-        if (responsesContainer) {
-            var qnum = document.getElementById("quizWrap" + id).dataset.qnum;
-            var responses = JSON.parse(responsesContainer.dataset.responses);
-            responses[qnum] = submission;
-            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
-            printResponses(responsesContainer);
-        }
-
-        if (typeof MathJax != 'undefined') {
-            var version = MathJax.version;
-            if (version[0] == "2") {
-                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-            } else if (version[0] == "3") {
-                MathJax.typeset([fb]);
-            }
-        } else {
-            console.log('MathJax not detected');
-        }
-        return false;
-    }
-}
-
-function string_keypress(evnt) {
-    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
-
-    if (charC == 13) {
-        check_string(this, evnt);
-    } 
-}
-
-
-function make_string(qa, outerqDiv, qDiv, aDiv, id) {
-    outerqDiv.className = "StringQn";
-    aDiv.style.display = 'block';
-
-    var lab = document.createElement("label");
-    lab.className = "InpLabel";
-    lab.innerHTML = "Type your answer here:";
-    aDiv.append(lab);
-
-    var inp = document.createElement("input");
-    inp.type = "text";
-    inp.id = id + "-0";
-    inp.className = "Input-text";
-    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
-    aDiv.append(inp);
-
-    inp.onkeypress = string_keypress;
-    inp.onpaste = event => false;
-
-    inp.addEventListener("focus", function (event) {
-        this.value = "";
-        return false;
-    });
-}
-/*
- * Handle asynchrony issues when re-running quizzes in Jupyter notebooks.
- * Ensures show_questions is called after the container div is in the DOM.
- */
-function try_show() {
-  if (document.getElementById("YILsdEESfQEr")) {
-    show_questions(questionsYILsdEESfQEr, YILsdEESfQEr);
-  } else {
-    setTimeout(try_show, 200);
-  }
-};
-// Invoke immediately
-{
-  try_show();
-}</script></div>
+        </script></div>
 </div>
 <p><span style="color:blue">EXEMPLO</span>: Cálculo e interpretação de z para uma média amostral</p>
 <p>O valor de z para uma média amostral permite que se tomem decisões importantes no mundo real com base em evidências estatísticas.</p>
@@ -5700,7 +4703,7 @@ function try_show() {
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição Z com área acima de 1.67 destacada.&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/2d72192d4101676b055a3ee2259ef826c5183825e0082ff4d3439c30412e334f.png" src="../../_images/2d72192d4101676b055a3ee2259ef826c5183825e0082ff4d3439c30412e334f.png" />
+<img alt="../../_images/ea58e977ba681727935d459a8afd1d09758a43922c80acfb5a4bce555944670b.png" src="../../_images/ea58e977ba681727935d459a8afd1d09758a43922c80acfb5a4bce555944670b.png" />
 </div>
 </div>
 <p><em>Etapa 4: procure o valor de z</em></p>
@@ -5811,8 +4814,13 @@ function try_show() {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="qGvIoreByWIJ" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#qGvIoreByWIJ {
+<div class="output text_html"><div id="HknqNBfSImoh" data-shufflequestions="False"
+               data-shuffleanswers="True"
+               data-preserveresponses="false"
+               data-numquestions="1000000"
+               data-maxwidth="600"
+               style="border-radius: 10px; text-align: left"> <style>
+#HknqNBfSImoh {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -5832,8 +4840,8 @@ function try_show() {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-/*    margin-bottom: 15px;*/
-/*    padding-bottom: 4px;*/
+    margin-bottom: 15px;
+    padding-bottom: 4px;
     padding-top: 4px;
     line-height: 1.1;
     font-size: 16pt;
@@ -5851,48 +4859,18 @@ function try_show() {
     padding: 4px;
 }
 
-.Quiz code {
-    background-color: lightgray;
-    color: black;
-}
-
-.Quiz .QuizCode code {
-    background-color: inherit;
-    color: inherit;
-}
-
-
-.Quiz .MCButton code {
-    background-color: inherit;
-    color: inherit;
-}
-
-.MCButton .QuizCode {
-    text-align: left;
-}
-
-
-
-
 .Answer {
-    border-radius: inherit;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
     margin: 10px 0;
-}
-
-@media only screen and (max-width:480px) {
-    .Answer {
-        grid-template-columns: 1fr;
-    }
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    border-radius: inherit;
 }
 
 .Feedback {
     font-size: 16pt;
     text-align: center;
-/*    min-height: 2em;*/
+    min-height: 2em;
 }
 
 .Input {
@@ -5919,7 +4897,7 @@ function try_show() {
 }
 
 .Input-text:focus {
-    /*outline: none;*/
+    outline: none;
     background-color: var(--jq-numeric-input-bg);
     box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
 }
@@ -5928,7 +4906,6 @@ function try_show() {
     background: var(--jq-mc-button-bg);
     border: 1px solid var(--jq-mc-button-border);
     border-radius: inherit;
-    color: #333333;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -5957,10 +4934,10 @@ function try_show() {
 }
 
 .NumericQn {
-    background: var(--jq-numeric-bg);
-    border-radius: inherit;
-    color: var(--jq-text-color);
     padding: 10px;
+    background: var(--jq-numeric-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
 }
 
 .NumericQn p {
@@ -5968,11 +4945,11 @@ function try_show() {
 }
 
 .InpLabel {
-    color: var(--jq-numeric-input-label);
-    float: left;
-    font-size: 15pt;
     line-height: 34px;
+    float: left;
     margin-right: 10px;
+    color: var(--jq-numeric-input-label);
+    font-size: 15pt;
 }
 
 .incorrect {
@@ -5989,17 +4966,17 @@ function try_show() {
    */
     animation: correct-anim 0.6s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 .incorrectButton {
     animation: incorrect-anim 0.8s ease;
     animation-fill-mode: forwards;
-    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    /*outline: none;*/
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
 }
 
 @keyframes incorrect-anim {
@@ -6013,7 +4990,7 @@ function try_show() {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsqGvIoreByWIJ=[{"question":"10 - Este exemplo ilustra que z para um procedimento de média amostral",
+</style></div><script type="application/javascript">var questionsHknqNBfSImoh=[{"question":"10 - Este exemplo ilustra que z para um procedimento de média amostral",
 "type":"multiple_choice",
 "answers":[{"answer":"a. pode ser usado para identificar se é provável ou improvável que a discrepância entre uma média amostral e uma média da população ocorra devido a erro de amostragem.",
            "correct":true, "feedback":"Correto!"},
@@ -6021,7 +4998,7 @@ function try_show() {
            {"answer":"c. Tanto a quanto b estão corretas.","correct":false, "feedback":"Incorreto!"}]
 }
 ];
-// Make a random ID
+    // Make a random ID
 function makeid(length) {
     var result = [];
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -6030,118 +5007,6 @@ function makeid(length) {
         result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
     }
     return result.join('');
-}
-// Convert LaTeX delimiters and markdown links to HTML
-function jaxify(string) {
-    let mystring = string;
-    let count = 0, count2 = 0;
-    let loc = mystring.search(/([^\\]|^)(\$)/);
-    let loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    while (loc >= 0 || loc2 >= 0) {
-        if (loc2 >= 0) {
-            mystring = mystring.replace(/([^\\]|^)(\$\$)/, count2 % 2 ? '$1\\]' : '$1\\[');
-            count2++;
-        } else {
-            mystring = mystring.replace(/([^\\]|^)(\$)/, count % 2 ? '$1\\)' : '$1\\(');
-            count++;
-        }
-        loc = mystring.search(/([^\\]|^)(\$)/);
-        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-    }
-    // Replace markdown links
-    mystring = mystring.replace(/<(.*?)>/g, '<a href="$1" target="_blank" class="Link">$1</a>');
-    mystring = mystring.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" class="Link">$1</a>');
-    return mystring;
-}
-
-// Base class for question types
-class Question {
-    static registry = {};
-    static register(type, cls) {
-        Question.registry[type] = cls;
-    }
-    static create(qa, id, index, options, rootDiv) {
-        const Cls = Question.registry[qa.type];
-        if (!Cls) {
-            console.error(`No question class registered for type "${qa.type}"`);
-            return;
-        }
-        const q = new Cls(qa, id, index, options, rootDiv);
-        q.render();
-    }
-
-    constructor(qa, id, index, options, rootDiv) {
-        this.qa = qa;
-        this.id = id;
-        this.index = index;
-        this.options = options;
-        this.rootDiv = rootDiv;
-        // wrapper
-        this.wrapper = document.createElement('div');
-        this.wrapper.id = `quizWrap${id}`;
-        this.wrapper.className = 'Quiz';
-        this.wrapper.dataset.qnum = index;
-        this.wrapper.style.maxWidth = `${options.maxWidth}px`;
-        rootDiv.appendChild(this.wrapper);
-        // question container
-        this.outerqDiv = document.createElement('div');
-        this.outerqDiv.id = `OuterquizQn${id}${index}`;
-        this.wrapper.appendChild(this.outerqDiv);
-        // question text
-        this.qDiv = document.createElement('div');
-        this.qDiv.id = `quizQn${id}${index}`;
-        if (qa.question) {
-            this.qDiv.innerHTML = jaxify(qa.question);
-            this.outerqDiv.appendChild(this.qDiv);
-        }
-        // code block
-        if (qa.code) {
-            const codeDiv = document.createElement('div');
-            codeDiv.id = `code${id}${index}`;
-            codeDiv.className = 'QuizCode';
-            const pre = document.createElement('pre');
-            const codeEl = document.createElement('code');
-            codeEl.innerHTML = qa.code;
-            pre.appendChild(codeEl);
-            codeDiv.appendChild(pre);
-            this.outerqDiv.appendChild(codeDiv);
-        }
-        // answer container
-        this.aDiv = document.createElement('div');
-        this.aDiv.id = `quizAns${id}${index}`;
-        this.aDiv.className = 'Answer';
-        this.wrapper.appendChild(this.aDiv);
-        // feedback container (append after answers)
-        this.fbDiv = document.createElement('div');
-        this.fbDiv.id = `fb${id}`;
-        this.fbDiv.className = 'Feedback';
-        this.fbDiv.dataset.answeredcorrect = 0;
-    }
-
-    render() {
-        throw new Error('render() not implemented');
-    }
-
-    preserveResponse(val) {
-        if (!this.options.preserveResponses) return;
-        const resp = document.getElementById(`responses${this.rootDiv.id}`);
-        if (!resp) return;
-        const arr = JSON.parse(resp.dataset.responses);
-        arr[this.index] = val;
-        resp.dataset.responses = JSON.stringify(arr);
-        printResponses(resp);
-    }
-
-    typeset(container) {
-        if (typeof MathJax !== 'undefined') {
-            const v = MathJax.version;
-            if (v[0] === '2') {
-                MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-            } else {
-                MathJax.typeset([container]);
-            }
-        }
-    }
 }
 
 // Choose a random subset of an array. Can also be used to shuffle the array
@@ -6168,9 +5033,6 @@ function printResponses(responsesContainer) {
     });
     responsesContainer.innerHTML=stringResponses;
 }
-/* Callback function to determine whether a selected multiple-choice
-   button corresponded to a correct answer and to provide feedback
-   based on the answer */
 function check_mc() {
     var id = this.id.split('-')[0];
     //var response = this.id.split('-')[1];
@@ -6192,16 +5054,17 @@ function check_mc() {
 
 
     var answers = label.parentElement.children;
+
     //console.log(answers);
+
 
     // Split behavior based on multiple choice vs many choice:
     var fb = document.getElementById("fb" + id);
 
 
 
-    /* Multiple choice (1 answer). Allow for 0 correct
-       answers as an edge case */
-    if (fb.dataset.numcorrect <= 1) {
+
+    if (fb.dataset.numcorrect == 1) {
         // What follows is for the saved responses stuff
         var outerContainer = fb.parentElement.parentElement;
         var responsesContainer = document.getElementById("responses" + outerContainer.id);
@@ -6223,7 +5086,7 @@ function check_mc() {
             printResponses(responsesContainer);
         }
         // End code to preserve responses
-
+        
         for (var i = 0; i < answers.length; i++) {
             var child = answers[i];
             //console.log(child);
@@ -6235,9 +5098,9 @@ function check_mc() {
         if (label.dataset.correct == "true") {
             // console.log("Correct action");
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Correct!";
+                fb.textContent = "Correct!";
             }
             label.classList.add("correctButton");
 
@@ -6246,9 +5109,9 @@ function check_mc() {
 
         } else {
             if ("feedback" in label.dataset) {
-                fb.innerHTML = jaxify(label.dataset.feedback);
+                fb.textContent = jaxify(label.dataset.feedback);
             } else {
-                fb.innerHTML = "Incorrect -- try again.";
+                fb.textContent = "Incorrect -- try again.";
             }
             //console.log("Error action");
             label.classList.add("incorrectButton");
@@ -6256,7 +5119,7 @@ function check_mc() {
             fb.classList.add("incorrect");
         }
     }
-    else { /* Many choice (more than 1 correct answer) */
+    else {
         var reset = false;
         var feedback;
          if (label.dataset.correct == "true") {
@@ -6345,9 +5208,9 @@ function check_mc() {
         var numcorrect = fb.dataset.numcorrect;
         var answeredcorrect = fb.dataset.answeredcorrect;
         if (answeredcorrect >= 0) {
-            fb.innerHTML = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
         } else {
-            fb.innerHTML = feedback + " [" + 0 + "/" + numcorrect + "]";
+            fb.textContent = feedback + " [" + 0 + "/" + numcorrect + "]";
         }
 
 
@@ -6367,12 +5230,7 @@ function check_mc() {
 
 }
 
-
-/* Function to produce the HTML buttons for a multiple choice/
-   many choice question  and to update the CSS tags based on
-   the question type */
 function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
-
     var shuffled;
     if (shuffle_answers == "True") {
         //console.log(shuffle_answers+" read as true");
@@ -6384,6 +5242,8 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
 
 
     var num_correct = 0;
+
+
 
     shuffled.forEach((item, index, ans_array) => {
         //console.log(answer);
@@ -6449,28 +5309,6 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
     return num_correct;
 
 }
-// Object-oriented wrapper for MC/MANY choice
-class MCQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) { super(qa, id, idx, opts, rootDiv); }
-    render() {
-        const numCorrect = make_mc(
-            this.qa,
-            this.options.shuffleAnswers,
-            this.outerqDiv,
-            this.qDiv,
-            this.aDiv,
-            this.id
-        );
-        if ('answer_cols' in this.qa) {
-            this.aDiv.style.gridTemplateColumns =
-                'repeat(' + this.qa.answer_cols + ', 1fr)';
-        }
-        this.fbDiv.dataset.numcorrect = numCorrect;
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('multiple_choice', MCQuestion);
-Question.register('many_choice', MCQuestion);
 function check_numeric(ths, event) {
 
     if (event.keyCode === 13) {
@@ -6488,7 +5326,9 @@ function check_numeric(ths, event) {
 
         if ("precision" in ths.dataset) {
             var precision = ths.dataset.precision;
-            submission = Number(Number(submission).toPrecision(precision));
+            // console.log("1:", submission)
+            submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
+            // console.log("Rounded to ", submission, " precision=", precision  );
         }
 
 
@@ -6498,12 +5338,12 @@ function check_numeric(ths, event) {
 
         var fb = document.getElementById("fb" + id);
         fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
+        fb.textContent = "Incorrect -- try again.";
 
         var answers = JSON.parse(ths.dataset.answers);
         //console.log(answers);
 
-        var defaultFB = "Incorrect. Try again.";
+        var defaultFB = "";
         var correct;
         var done = false;
         answers.every(answer => {
@@ -6512,37 +5352,27 @@ function check_numeric(ths, event) {
             correct = false;
             // if (answer.type=="value"){
             if ('value' in answer) {
-                var value;
-                if ("precision" in ths.dataset) {
-                    value = answer.value.toPrecision(ths.dataset.precision);
-                } else {
-                    value = answer.value;
-                }
-                if (submission == value) {
+                if (submission == answer.value) {
                     if ("feedback" in answer) {
-                        fb.innerHTML = jaxify(answer.feedback);
+                        fb.textContent = jaxify(answer.feedback);
                     } else {
-                        fb.innerHTML = jaxify("Correct");
+                        fb.textContent = jaxify("Correct");
                     }
                     correct = answer.correct;
                     //console.log(answer.correct);
                     done = true;
                 }
-
                 // } else if (answer.type=="range") {
             } else if ('range' in answer) {
-                console.log(answer.range);
-                console.log(submission, submission >=answer.range[0], submission < answer.range[1])
+                //console.log(answer.range);
                 if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
-                    fb.innerHTML = jaxify(answer.feedback);
+                    fb.textContent = jaxify(answer.feedback);
                     correct = answer.correct;
-                    console.log(answer.correct);
+                    //console.log(answer.correct);
                     done = true;
                 }
             } else if (answer.type == "default") {
-                if ("feedback" in answer) {
-                    defaultFB = answer.feedback;
-                } 
+                defaultFB = answer.feedback;
             }
             if (done) {
                 return false; // Break out of loop if this has been marked correct
@@ -6550,7 +5380,6 @@ function check_numeric(ths, event) {
                 return true; // Keep looking for case that includes this as a correct answer
             }
         });
-        console.log("done:", done);
 
         if ((!done) && (defaultFB != "")) {
             fb.innerHTML = jaxify(defaultFB);
@@ -6605,17 +5434,6 @@ function check_numeric(ths, event) {
     }
 
 }
-// Object-oriented wrapper for numeric questions
-class NumericQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_numeric(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('numeric', NumericQuestion);
 
 function isValid(el, charC) {
     //console.log("Input char: ", charC);
@@ -6700,7 +5518,7 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
     var lab = document.createElement("label");
     lab.className = "InpLabel";
-    lab.innerHTML = "Type numeric answer here:";
+    lab.textContent = "Type numeric answer here:";
     aDiv.append(lab);
 
     var inp = document.createElement("input");
@@ -6735,49 +5553,165 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
 
 }
-// Override show_questions to use object-oriented Question API
-function show_questions(json, container) {
-    // Accept container element or element ID
-    if (typeof container === 'string') {
-        container = document.getElementById(container);
-    }
-    if (!container) {
-        console.error('show_questions: invalid container', container);
-        return;
+function jaxify(string) {
+    var mystring = string;
+
+    var count = 0;
+    var loc = mystring.search(/([^\\]|^)(\$)/);
+
+    var count2 = 0;
+    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+
+    //console.log(loc);
+
+    while ((loc >= 0) || (loc2 >= 0)) {
+
+        /* Have to replace all the double $$ first with current implementation */
+        if (loc2 >= 0) {
+            if (count2 % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
+            }
+            count2++;
+        } else {
+            if (count % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
+            }
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+        //console.log(mystring,", loc:",loc,", loc2:",loc2);
     }
 
-    const shuffleQuestions = container.dataset.shufflequestions === 'True';
-    const shuffleAnswers = container.dataset.shuffleanswers === 'True';
-    const preserveResponses = container.dataset.preserveresponses === 'true';
-    const maxWidth = parseInt(container.dataset.maxwidth, 10) || 0;
-    let numQuestions = parseInt(container.dataset.numquestions, 10) || json.length;
-    if (numQuestions > json.length) numQuestions = json.length;
+    //console.log(mystring);
+    return mystring;
+}
 
-    let questions = json;
-    if (shuffleQuestions || numQuestions < json.length) {
-        questions = getRandomSubarray(json, numQuestions);
+
+function show_questions(json, mydiv) {
+    console.log('show_questions');
+    //var mydiv=document.getElementById(myid);
+    var shuffle_questions = mydiv.dataset.shufflequestions;
+    var num_questions = mydiv.dataset.numquestions;
+    var shuffle_answers = mydiv.dataset.shuffleanswers;
+    var max_width = mydiv.dataset.maxwidth;
+
+    if (num_questions > json.length) {
+        num_questions = json.length;
     }
 
-    questions.forEach((qa, index) => {
-        const id = makeid(8);
-        const options = {
-            shuffleAnswers: shuffleAnswers,
-            preserveResponses: preserveResponses,
-            maxWidth: maxWidth
-        };
-        Question.create(qa, id, index, options, container);
+    var questions;
+    if ((num_questions < json.length) || (shuffle_questions == "True")) {
+        //console.log(num_questions+","+json.length);
+        questions = getRandomSubarray(json, num_questions);
+    } else {
+        questions = json;
+    }
+
+    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
+
+    // Iterate over questions
+    questions.forEach((qa, index, array) => {
+        //console.log(qa.question); 
+
+        var id = makeid(8);
+        //console.log(id);
+
+
+        // Create Div to contain question and answers
+        var iDiv = document.createElement('div');
+        //iDiv.id = 'quizWrap' + id + index;
+        iDiv.id = 'quizWrap' + id;
+        iDiv.className = 'Quiz';
+        iDiv.setAttribute('data-qnum', index);
+        iDiv.style.maxWidth  =max_width+"px";
+        mydiv.appendChild(iDiv);
+        // iDiv.innerHTML=qa.question;
+        
+        var outerqDiv = document.createElement('div');
+        outerqDiv.id = "OuterquizQn" + id + index;
+        // Create div to contain question part
+        var qDiv = document.createElement('div');
+        qDiv.id = "quizQn" + id + index;
+        
+        if (qa.question) {
+            iDiv.append(outerqDiv);
+
+            //qDiv.textContent=qa.question;
+            qDiv.innerHTML = jaxify(qa.question);
+            outerqDiv.append(qDiv);
+        }
+
+        // Create div for code inside question
+        var codeDiv;
+        if ("code" in qa) {
+            codeDiv = document.createElement('div');
+            codeDiv.id = "code" + id + index;
+            codeDiv.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeDiv.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = qa.code;
+            outerqDiv.append(codeDiv);
+            //console.log(codeDiv);
+        }
+
+
+        // Create div to contain answer part
+        var aDiv = document.createElement('div');
+        aDiv.id = "quizAns" + id + index;
+        aDiv.className = 'Answer';
+        iDiv.append(aDiv);
+
+        //console.log(qa.type);
+
+        var num_correct;
+        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
+            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
+            if ("answer_cols" in qa) {
+                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
+                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
+            }
+        } else if (qa.type == "numeric") {
+            //console.log("numeric");
+            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
+        }
+
+
+        //Make div for feedback
+        var fb = document.createElement("div");
+        fb.id = "fb" + id;
+        //fb.style="font-size: 20px;text-align:center;";
+        fb.className = "Feedback";
+        fb.setAttribute("data-answeredcorrect", 0);
+        fb.setAttribute("data-numcorrect", num_correct);
+        iDiv.append(fb);
+
+
     });
+    var preserveResponses = mydiv.dataset.preserveresponses;
+    console.log(preserveResponses);
+    console.log(preserveResponses == "true");
+    if (preserveResponses == "true") {
+        console.log(preserveResponses);
+        // Create Div to contain record of answers
+        var iDiv = document.createElement('div');
+        iDiv.id = 'responses' + mydiv.id;
+        iDiv.className = 'JCResponses';
+        // Create a place to store responses as an empty array
+        iDiv.setAttribute('data-responses', '[]');
 
-    if (preserveResponses) {
-        const respDiv = document.createElement('div');
-        respDiv.id = 'responses' + container.id;
-        respDiv.className = 'JCResponses';
-        respDiv.dataset.responses = JSON.stringify([]);
-        respDiv.innerHTML = '<b>Select your answers and then follow the directions that will appear here.</b>';
-        container.appendChild(respDiv);
+        // Dummy Text
+        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
+        //iDiv.className = 'Quiz';
+        mydiv.appendChild(iDiv);
     }
-
-    // Trigger MathJax typesetting if available
+//console.log("At end of show_questions");
     if (typeof MathJax != 'undefined') {
         console.log("MathJax version", MathJax.version);
         var version = MathJax.version;
@@ -6788,7 +5722,7 @@ function show_questions(json, container) {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -6816,7 +5750,7 @@ if (typeof version == 'undefined') {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
                 if (MathJax.hasOwnProperty('typeset') ) {
-                    MathJax.typeset([container]);
+                    MathJax.typeset([mydiv]);
                 } else {
                     console.log('WARNING: Trying to force load MathJax 3');
                     window.MathJax = {
@@ -6840,211 +5774,32 @@ if (typeof version == 'undefined') {
             }
         }
     }
-    // if (typeof MathJax !== 'undefined') {
-    //     const v = MathJax.version;
-    //     if (v[0] === '2') {
-    //         MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
-    //     } else if (v[0] === '3') {
-    //         MathJax.typeset([container]);
-    //     }
-    // }
-
-    // Prevent link clicks from bubbling up
-    Array.from(container.getElementsByClassName('Link')).forEach(link => {
-        link.addEventListener('click', e => e.stopPropagation());
-    });
+    return false;
 }
-function levenshteinDistance(a, b) {
-    if (a.length === 0) return b.length;
-    if (b.length === 0) return a.length;
+/* This is to handle asynchrony issues in loading Jupyter notebooks
+           where the quiz has been previously run. The Javascript was generally
+           being run before the div was added to the DOM. I tried to do this
+           more elegantly using Mutation Observer, but I didn't get it to work.
 
-    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+           Someone more knowledgeable could make this better ;-) */
 
-    for (let i = 0; i <= a.length; i++) {
-        matrix[0][i] = i;
-    }
+        function try_show() {
+          if(document.getElementById("HknqNBfSImoh")) {
+            show_questions(questionsHknqNBfSImoh,  HknqNBfSImoh); 
+          } else {
+             setTimeout(try_show, 200);
+          }
+        };
+    
+        {
+        // console.log(element);
 
-    for (let j = 0; j <= b.length; j++) {
-        matrix[j][0] = j;
-    }
+        //console.log("HknqNBfSImoh");
+        // console.log(document.getElementById("HknqNBfSImoh"));
 
-    for (let j = 1; j <= b.length; j++) {
-        for (let i = 1; i <= a.length; i++) {
-            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-            matrix[j][i] = Math.min(
-                matrix[j - 1][i] + 1, // Deletion
-                matrix[j][i - 1] + 1, // Insertion
-                matrix[j - 1][i - 1] + cost // Substitution
-            );
+        try_show();
         }
-    }
-    return matrix[b.length][a.length];
-}
-// Object-oriented wrapper for string input questions
-class StringQuestion extends Question {
-    constructor(qa, id, idx, opts, rootDiv) {
-        super(qa, id, idx, opts, rootDiv);
-    }
-    render() {
-        make_string(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
-        this.wrapper.appendChild(this.fbDiv);
-    }
-}
-Question.register('string', StringQuestion);
-
-function check_string(ths, event) {
-    if (event.keyCode === 13) {
-        ths.blur();
-
-        var id = ths.id.split('-')[0];
-        var submission = ths.value.trim();
-        var fb = document.getElementById("fb" + id);
-        fb.style.display = "none";
-        fb.innerHTML = "Incorrect -- try again.";
-
-        var answers = JSON.parse(ths.dataset.answers);
-        var defaultFB = "Incorrect. Try again.";
-        var correct;
-        var done = false;
-
-        answers.every(answer => {
-            correct = false;
-
-            let match = false;
-            if (answer.match_case) {
-                match = submission === answer.answer;
-            } else {
-                match = submission.toLowerCase() === answer.answer.toLowerCase();
-            }
-            console.log(submission);
-            console.log(answer.answer);
-            console.log(match);
-
-            if (match) {
-                if ("feedback" in answer) {
-                    fb.innerHTML = jaxify(answer.feedback);
-                } else {
-                    fb.innerHTML = jaxify("Correct");
-                }
-                correct = answer.correct;
-                done = true;
-            } else if (answer.fuzzy_threshold) {
-                var max_length = Math.max(submission.length, answer.answer.length);
-                var ratio;
-                if (answer.match_case) {
-                    ratio = 1- (levenshteinDistance(submission, answer.answer) / max_length);
-                } else {
-                    ratio = 1- (levenshteinDistance(submission.toLowerCase(),
-                                                    answer.answer.toLowerCase()) / max_length);
-                }
-                if (ratio >= answer.fuzzy_threshold) {
-                    if ("feedback" in answer) {
-                        fb.innerHTML = jaxify("(Fuzzy) " + answer.feedback);
-                    } else {
-                        fb.innerHTML = jaxify("Correct");
-                    }
-                    correct = answer.correct;
-                    done = true;
-                }
-
-            }
-
-            if (done) {
-                return false;
-            } else {
-                return true;
-            }
-        });
-
-        if ((!done) && (defaultFB != "")) {
-            fb.innerHTML = jaxify(defaultFB);
-        }
-
-        fb.style.display = "block";
-        if (correct) {
-            ths.className = "Input-text";
-            ths.classList.add("correctButton");
-            fb.className = "Feedback";
-            fb.classList.add("correct");
-        } else {
-            ths.className = "Input-text";
-            ths.classList.add("incorrectButton");
-            fb.className = "Feedback";
-            fb.classList.add("incorrect");
-        }
-
-        var outerContainer = fb.parentElement.parentElement;
-        var responsesContainer = document.getElementById("responses" + outerContainer.id);
-        if (responsesContainer) {
-            var qnum = document.getElementById("quizWrap" + id).dataset.qnum;
-            var responses = JSON.parse(responsesContainer.dataset.responses);
-            responses[qnum] = submission;
-            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
-            printResponses(responsesContainer);
-        }
-
-        if (typeof MathJax != 'undefined') {
-            var version = MathJax.version;
-            if (version[0] == "2") {
-                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-            } else if (version[0] == "3") {
-                MathJax.typeset([fb]);
-            }
-        } else {
-            console.log('MathJax not detected');
-        }
-        return false;
-    }
-}
-
-function string_keypress(evnt) {
-    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
-
-    if (charC == 13) {
-        check_string(this, evnt);
-    } 
-}
-
-
-function make_string(qa, outerqDiv, qDiv, aDiv, id) {
-    outerqDiv.className = "StringQn";
-    aDiv.style.display = 'block';
-
-    var lab = document.createElement("label");
-    lab.className = "InpLabel";
-    lab.innerHTML = "Type your answer here:";
-    aDiv.append(lab);
-
-    var inp = document.createElement("input");
-    inp.type = "text";
-    inp.id = id + "-0";
-    inp.className = "Input-text";
-    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
-    aDiv.append(inp);
-
-    inp.onkeypress = string_keypress;
-    inp.onpaste = event => false;
-
-    inp.addEventListener("focus", function (event) {
-        this.value = "";
-        return false;
-    });
-}
-/*
- * Handle asynchrony issues when re-running quizzes in Jupyter notebooks.
- * Ensures show_questions is called after the container div is in the DOM.
- */
-function try_show() {
-  if (document.getElementById("qGvIoreByWIJ")) {
-    show_questions(questionsqGvIoreByWIJ, qGvIoreByWIJ);
-  } else {
-    setTimeout(try_show, 200);
-  }
-};
-// Invoke immediately
-{
-  try_show();
-}</script></div>
+        </script></div>
 </div>
 </section>
 <section id="pratica-complementar-opcional">
@@ -7097,7 +5852,7 @@ function try_show() {
               
               
               
-                <footer class="prev-next-footer d-print-none">
+                <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -7187,8 +5942,8 @@ By Ricardo R. da Silva
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

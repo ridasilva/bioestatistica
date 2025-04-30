@@ -14,45 +14,45 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -72,23 +72,27 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,13 +114,8 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
     </header>
   
 
@@ -142,8 +141,6 @@
         <div class="sidebar-primary-item">
 
   
-    
-  
 
 <a class="navbar-brand logo" href="../../intro.html">
   
@@ -165,7 +162,7 @@
 
  <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -205,7 +202,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -214,14 +211,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -346,10 +343,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -357,14 +354,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -434,61 +431,61 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_aa931_row2_col0, #T_aa931_row2_col1, #T_aa931_row2_col2 {
+#T_8018d_row2_col0, #T_8018d_row2_col1, #T_8018d_row2_col2 {
   background-color: yellow;
 }
 </style>
-<table id="T_aa931">
+<table id="T_8018d">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_aa931_level0_col0" class="col_heading level0 col0" >z</th>
-      <th id="T_aa931_level0_col1" class="col_heading level0 col1" >Corpo</th>
-      <th id="T_aa931_level0_col2" class="col_heading level0 col2" >Cauda</th>
+      <th id="T_8018d_level0_col0" class="col_heading level0 col0" >z</th>
+      <th id="T_8018d_level0_col1" class="col_heading level0 col1" >Corpo</th>
+      <th id="T_8018d_level0_col2" class="col_heading level0 col2" >Cauda</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_aa931_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_aa931_row0_col0" class="data row0 col0" >1.630000</td>
-      <td id="T_aa931_row0_col1" class="data row0 col1" >0.948400</td>
-      <td id="T_aa931_row0_col2" class="data row0 col2" >0.051600</td>
+      <th id="T_8018d_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_8018d_row0_col0" class="data row0 col0" >1.630000</td>
+      <td id="T_8018d_row0_col1" class="data row0 col1" >0.948400</td>
+      <td id="T_8018d_row0_col2" class="data row0 col2" >0.051600</td>
     </tr>
     <tr>
-      <th id="T_aa931_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_aa931_row1_col0" class="data row1 col0" >1.640000</td>
-      <td id="T_aa931_row1_col1" class="data row1 col1" >0.949500</td>
-      <td id="T_aa931_row1_col2" class="data row1 col2" >0.050500</td>
+      <th id="T_8018d_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_8018d_row1_col0" class="data row1 col0" >1.640000</td>
+      <td id="T_8018d_row1_col1" class="data row1 col1" >0.949500</td>
+      <td id="T_8018d_row1_col2" class="data row1 col2" >0.050500</td>
     </tr>
     <tr>
-      <th id="T_aa931_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_aa931_row2_col0" class="data row2 col0" >1.650000</td>
-      <td id="T_aa931_row2_col1" class="data row2 col1" >0.950500</td>
-      <td id="T_aa931_row2_col2" class="data row2 col2" >0.049500</td>
+      <th id="T_8018d_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_8018d_row2_col0" class="data row2 col0" >1.650000</td>
+      <td id="T_8018d_row2_col1" class="data row2 col1" >0.950500</td>
+      <td id="T_8018d_row2_col2" class="data row2 col2" >0.049500</td>
     </tr>
     <tr>
-      <th id="T_aa931_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_aa931_row3_col0" class="data row3 col0" >1.660000</td>
-      <td id="T_aa931_row3_col1" class="data row3 col1" >0.951500</td>
-      <td id="T_aa931_row3_col2" class="data row3 col2" >0.048500</td>
+      <th id="T_8018d_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_8018d_row3_col0" class="data row3 col0" >1.660000</td>
+      <td id="T_8018d_row3_col1" class="data row3 col1" >0.951500</td>
+      <td id="T_8018d_row3_col2" class="data row3 col2" >0.048500</td>
     </tr>
     <tr>
-      <th id="T_aa931_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_aa931_row4_col0" class="data row4 col0" >1.670000</td>
-      <td id="T_aa931_row4_col1" class="data row4 col1" >0.952500</td>
-      <td id="T_aa931_row4_col2" class="data row4 col2" >0.047500</td>
+      <th id="T_8018d_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_8018d_row4_col0" class="data row4 col0" >1.670000</td>
+      <td id="T_8018d_row4_col1" class="data row4 col1" >0.952500</td>
+      <td id="T_8018d_row4_col2" class="data row4 col2" >0.047500</td>
     </tr>
     <tr>
-      <th id="T_aa931_level0_row5" class="row_heading level0 row5" >5</th>
-      <td id="T_aa931_row5_col0" class="data row5 col0" >1.680000</td>
-      <td id="T_aa931_row5_col1" class="data row5 col1" >0.953500</td>
-      <td id="T_aa931_row5_col2" class="data row5 col2" >0.046500</td>
+      <th id="T_8018d_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_8018d_row5_col0" class="data row5 col0" >1.680000</td>
+      <td id="T_8018d_row5_col1" class="data row5 col1" >0.953500</td>
+      <td id="T_8018d_row5_col2" class="data row5 col2" >0.046500</td>
     </tr>
     <tr>
-      <th id="T_aa931_level0_row6" class="row_heading level0 row6" >6</th>
-      <td id="T_aa931_row6_col0" class="data row6 col0" >1.690000</td>
-      <td id="T_aa931_row6_col1" class="data row6 col1" >0.954500</td>
-      <td id="T_aa931_row6_col2" class="data row6 col2" >0.045500</td>
+      <th id="T_8018d_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_8018d_row6_col0" class="data row6 col0" >1.690000</td>
+      <td id="T_8018d_row6_col1" class="data row6 col1" >0.954500</td>
+      <td id="T_8018d_row6_col2" class="data row6 col2" >0.045500</td>
     </tr>
   </tbody>
 </table>
@@ -515,7 +512,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição Z com área acima de 1.65 destacada.&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/c9c8a9e4cbecba428c8d58ad62eeb22ef47729091c68796df74688cf4f1d0cec.png" src="../../_images/c9c8a9e4cbecba428c8d58ad62eeb22ef47729091c68796df74688cf4f1d0cec.png" />
+<img alt="../../_images/8d39504d65668f8e62e521d67f756fcc15cf53e614ed01eeb880bbef42feb6e0.png" src="../../_images/8d39504d65668f8e62e521d67f756fcc15cf53e614ed01eeb880bbef42feb6e0.png" />
 </div>
 </div>
 <p><strong>3</strong> - Identificar a distribuição do estimador e obter sua estimativa.</p>
@@ -802,10 +799,10 @@ Calcule o escore z obtido associado à média amostral obtida.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x71e676ac4e00&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7672bae6dfd0&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/29a193b4271da654b8a326f420ad172b137b4824e1f30367c393627d37ad16a3.png" src="../../_images/29a193b4271da654b8a326f420ad172b137b4824e1f30367c393627d37ad16a3.png" />
+<img alt="../../_images/72a748ab6f598ec5d0202f1b0e7223801f5f6f1769a700b471ef613be32fc546.png" src="../../_images/72a748ab6f598ec5d0202f1b0e7223801f5f6f1769a700b471ef613be32fc546.png" />
 </div>
 </div>
 </section>
@@ -837,7 +834,7 @@ Calcule o escore z obtido associado à média amostral obtida.</p>
               
               
               
-                <footer class="prev-next-footer d-print-none">
+                <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
 </div>
@@ -907,8 +904,8 @@ By Ricardo R. da Silva
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
