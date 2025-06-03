@@ -1,0 +1,16 @@
+[{
+    "question": "21. Qual valor de alfa apresenta menor risco de cometer um erro do Tipo I?",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. 0,05", "correct": false, "feedback": "Incorreto. O risco de erro do Tipo I é maior com alfa = 0,05."},
+        {"answer": "b. 0,01", "correct": true, "feedback": "Correto! O risco de erro do Tipo I é menor com alfa = 0,01."}
+    ]
+},
+{
+    "question": "22. Qual valor de alfa apresenta menor risco de cometer um erro do Tipo II?",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. 0,05", "correct": true, "feedback": "Correto! O risco de erro do Tipo II é menor com alfa = 0,05."},
+        {"answer": "b. 0,01", "correct": false, "feedback": "Incorreto. O risco de erro do Tipo II é maior com alfa = 0,01."}
+    ]
+}]

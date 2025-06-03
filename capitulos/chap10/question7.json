@@ -1,0 +1,9 @@
+[{
+	"question": "11. O erro padrão estimado da diferença média é",
+    "type": "multiple_choice",
+	"answers": [
+		{"answer": "a. usado para encontrar o valor crítico para o teste t.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+		{"answer": "b. uma estimativa de quão diferentes as duas médias amostrais devem ser devido ao erro amostral.", "correct": true, "feedback": "Correto!"},
+		{"answer": "c. Tanto (a) quanto (b) estão corretas.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}
+	]
+}]

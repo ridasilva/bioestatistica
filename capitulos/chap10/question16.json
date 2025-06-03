@@ -1,0 +1,8 @@
+[{
+    "question": "20. Os pesquisadores precisam ser muito cautelosos ao interpretar resultados nulos porque",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. eles provam que a VI não teve efeito sobre o VD.", "correct": false, "feedback": "Incorreto. Resultados nulos não provam ausência de efeito."},
+        {"answer": "b. um resultado nulo pode ocorrer devido a um problema com o procedimento experimental do estudo.", "correct": true, "feedback": "Correto! Problemas experimentais podem levar a resultados nulos."}
+    ]
+}]
