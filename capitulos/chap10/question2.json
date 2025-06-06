@@ -1,5 +1,6 @@
 [{
     "question": "3. Um teste t para amostras independentes t pode ser usado para comparar diferenças entre amostras que",
+    "type": "multiple_choice",
     "answers": [
         {"answer": "a. são criadas pelo pesquisador ao diferenciar níveis da VI.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
         {"answer": "b. já ocorrem na população estudada.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
