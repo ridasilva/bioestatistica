@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -180,7 +180,14 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - ANOVA de um fator para amostras independentes</a></li>
 </ul>
 
     </div>
@@ -424,7 +431,7 @@ Na primeira parte deste livro estaremos interessados na redução, análise e in
 dos dados sob consideração, adotando um enfoque que chamaremos de análise
 exploratória de dados (AED). Nessa abordagem tentaremos obter dos dados a maior
 quantidade possível de informação, que indique modelos plausíveis a serem utilizados
-numa fase posterior, a análise confirmatória de dados (ou inferência estatística) <span id="id1">[<a class="reference internal" href="../chap10/chap10.html#id12" title="Wilton de Oliveira Bussab and Pedro Alberto Morettin. Estatística básica. Saraiva, 2009.">BM09</a>]</span>.</p>
+numa fase posterior, a análise confirmatória de dados (ou inferência estatística) <span id="id1">[<a class="reference internal" href="../chap9/chap9.html#id11" title="Wilton de Oliveira Bussab and Pedro Alberto Morettin. Estatística básica. Saraiva, 2009.">BM09</a>]</span>.</p>
 <section id="modelos">
 <h2>Modelos<a class="headerlink" href="#modelos" title="Link to this heading">#</a></h2>
 <p>Fundamentalmente, quando se procede a uma análise de dados, busca-se alguma
@@ -939,7 +946,7 @@ correspondem às partes de maneira proporcional.</p>
 <span class="g g-Whitespace">      </span><span class="mi">4</span>              <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Toler&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="nn">File ~/miniconda3/envs/bioestast/lib/python3.9/site-packages/plotly/express/_chart_types.py:1482,</span> in <span class="ni">pie</span><span class="nt">(data_frame, names, values, color, facet_row, facet_col, facet_col_wrap, facet_row_spacing, facet_col_spacing, color_discrete_sequence, color_discrete_map, hover_name, hover_data, custom_data, category_orders, labels, title, template, width, height, opacity, hole)</span>
+<span class="nn">File ~/miniconda3/envs/bioestats/lib/python3.9/site-packages/plotly/express/_chart_types.py:1482,</span> in <span class="ni">pie</span><span class="nt">(data_frame, names, values, color, facet_row, facet_col, facet_col_wrap, facet_row_spacing, facet_col_spacing, color_discrete_sequence, color_discrete_map, hover_name, hover_data, custom_data, category_orders, labels, title, template, width, height, opacity, hole)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1480</span> <span class="k">else</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">1481</span>     <span class="n">layout_patch</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="ne">-&gt; </span><span class="mi">1482</span> <span class="k">return</span> <span class="n">make_figure</span><span class="p">(</span>
@@ -949,14 +956,14 @@ correspondem às partes de maneira proporcional.</p>
 <span class="g g-Whitespace">   </span><span class="mi">1486</span>     <span class="n">layout_patch</span><span class="o">=</span><span class="n">layout_patch</span><span class="p">,</span>
 <span class="g g-Whitespace">   </span><span class="mi">1487</span> <span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/bioestast/lib/python3.9/site-packages/plotly/express/_core.py:2090,</span> in <span class="ni">make_figure</span><span class="nt">(args, constructor, trace_patch, layout_patch)</span>
+<span class="nn">File ~/miniconda3/envs/bioestats/lib/python3.9/site-packages/plotly/express/_core.py:2090,</span> in <span class="ni">make_figure</span><span class="nt">(args, constructor, trace_patch, layout_patch)</span>
 <span class="g g-Whitespace">   </span><span class="mi">2087</span> <span class="n">layout_patch</span> <span class="o">=</span> <span class="n">layout_patch</span> <span class="ow">or</span> <span class="p">{}</span>
 <span class="g g-Whitespace">   </span><span class="mi">2088</span> <span class="n">apply_default_cascade</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 <span class="ne">-&gt; </span><span class="mi">2090</span> <span class="n">args</span> <span class="o">=</span> <span class="n">build_dataframe</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">constructor</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">2091</span> <span class="k">if</span> <span class="n">constructor</span> <span class="ow">in</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Treemap</span><span class="p">,</span> <span class="n">go</span><span class="o">.</span><span class="n">Sunburst</span><span class="p">,</span> <span class="n">go</span><span class="o">.</span><span class="n">Icicle</span><span class="p">]</span> <span class="ow">and</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;path&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">2092</span>     <span class="n">args</span> <span class="o">=</span> <span class="n">process_dataframe_hierarchy</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/bioestast/lib/python3.9/site-packages/plotly/express/_core.py:1492,</span> in <span class="ni">build_dataframe</span><span class="nt">(args, constructor)</span>
+<span class="nn">File ~/miniconda3/envs/bioestats/lib/python3.9/site-packages/plotly/express/_core.py:1492,</span> in <span class="ni">build_dataframe</span><span class="nt">(args, constructor)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1489</span>     <span class="n">args</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="g g-Whitespace">   </span><span class="mi">1490</span> <span class="c1"># now that things have been prepped, we do the systematic rewriting of `args`</span>
 <span class="ne">-&gt; </span><span class="mi">1492</span> <span class="n">df_output</span><span class="p">,</span> <span class="n">wide_id_vars</span> <span class="o">=</span> <span class="n">process_args_into_dataframe</span><span class="p">(</span>
@@ -967,7 +974,7 @@ correspondem às partes de maneira proporcional.</p>
 <span class="g g-Whitespace">   </span><span class="mi">1498</span> <span class="c1"># df_output</span>
 <span class="g g-Whitespace">   </span><span class="mi">1500</span> <span class="n">count_name</span> <span class="o">=</span> <span class="n">_escape_col_name</span><span class="p">(</span><span class="n">df_output</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">var_name</span><span class="p">,</span> <span class="n">value_name</span><span class="p">])</span>
 
-<span class="nn">File ~/miniconda3/envs/bioestast/lib/python3.9/site-packages/plotly/express/_core.py:1213,</span> in <span class="ni">process_args_into_dataframe</span><span class="nt">(args, wide_mode, var_name, value_name)</span>
+<span class="nn">File ~/miniconda3/envs/bioestats/lib/python3.9/site-packages/plotly/express/_core.py:1213,</span> in <span class="ni">process_args_into_dataframe</span><span class="nt">(args, wide_mode, var_name, value_name)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1211</span>         <span class="k">if</span> <span class="n">argument</span> <span class="o">==</span> <span class="s2">&quot;index&quot;</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">1212</span>             <span class="n">err_msg</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> To use the index, pass it in directly as `df.index`.&quot;</span>
 <span class="ne">-&gt; </span><span class="mi">1213</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">err_msg</span><span class="p">)</span>
@@ -1163,6 +1170,14 @@ assimétricas à esquerda, tome <span class="math notranslate nohighlight">\(p &
 <div class="citation" id="id10" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>CW17<span class="fn-bracket">]</span></span>
 <p>Kieth A Carlson and Jennifer R Winquist. <em>An introduction to statistics: An active learning approach</em>. Sage Publications, 2017.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MagalhaesdL02<span class="fn-bracket">]</span></span>
+<p>Marcos Nascimento Magalhães and Antonio Carlos Pedroso de Lima. <em>Noções de probabilidade e estatística</em>. Volume 5. Editora da Universidade de São Paulo, 2002.</p>
+</div>
+<div class="citation" id="id12" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Mar15<span class="fn-bracket">]</span></span>
+<p>Edson Zangiacomi Martinez. <em>Bioestatística para os cursos de graduação da área da saúde</em>. Blucher São Paulo, 2015.</p>
 </div>
 </div>
 </div>

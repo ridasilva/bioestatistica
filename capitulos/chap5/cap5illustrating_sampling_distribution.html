@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -180,7 +180,14 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - ANOVA de um fator para amostras independentes</a></li>
 </ul>
 
     </div>
@@ -396,6 +403,19 @@ document.write(`
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Latex</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
 </pre></div>
 </div>
 </div>
@@ -623,7 +643,7 @@ class combinations(builtins.object)
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 7 artists&gt;
 </pre></div>
 </div>
-<img alt="../../_images/9d5d2480105eea515b298d6a7e25eb61934f1685c2a197b7709b4cd5fa996f92.png" src="../../_images/9d5d2480105eea515b298d6a7e25eb61934f1685c2a197b7709b4cd5fa996f92.png" />
+<img alt="../../_images/41ce16907235dac8ce023421dcf849f2378de881241900f02a091c19db476398.png" src="../../_images/41ce16907235dac8ce023421dcf849f2378de881241900f02a091c19db476398.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -651,12 +671,12 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 65., 121.,   0., 189.,   0., 254., 193.,   0., 127.,  51.]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 55., 130.,   0., 214.,   0., 246., 191.,   0., 109.,  55.]),
  array([2. , 2.6, 3.2, 3.8, 4.4, 5. , 5.6, 6.2, 6.8, 7.4, 8. ]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="../../_images/9208998d16176b1260fdfae948835387c65d5d9b9f7aa9f9ec874b5c19d35cbb.png" src="../../_images/9208998d16176b1260fdfae948835387c65d5d9b9f7aa9f9ec874b5c19d35cbb.png" />
+<img alt="../../_images/953a4f6a94a19a9b9d4e5550800f7f9f89338e416fa04269c0db181f760e3cea.png" src="../../_images/953a4f6a94a19a9b9d4e5550800f7f9f89338e416fa04269c0db181f760e3cea.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -666,12 +686,12 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 65., 129.,   0., 176.,   0., 266., 177.,   0., 131.,  56.]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 62., 122.,   0., 194.,   0., 254., 184.,   0., 121.,  63.]),
  array([2. , 2.6, 3.2, 3.8, 4.4, 5. , 5.6, 6.2, 6.8, 7.4, 8. ]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="../../_images/fa62f6374fb3e1c432ec58acba9de045f627555ce361bedff90fb69b02e08f54.png" src="../../_images/fa62f6374fb3e1c432ec58acba9de045f627555ce361bedff90fb69b02e08f54.png" />
+<img alt="../../_images/8f5e7f378d751d08ef9153ca513c7a361926fedf495a7120c002ed495e4a25ec.png" src="../../_images/8f5e7f378d751d08ef9153ca513c7a361926fedf495a7120c002ed495e4a25ec.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -681,7 +701,7 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3, 4, 3, 2, 1])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(dict_values([1, 2, 3, 4, 3, 2, 1]), dtype=object)
 </pre></div>
 </div>
 </div>
@@ -840,10 +860,10 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:matplotlib.legend:No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
 </pre></div>
 </div>
-<img alt="../../_images/f00dbde4584fc88c3bcc20664d7bba2eccb48b9abdc9b13c2d1433327dfe44e1.png" src="../../_images/f00dbde4584fc88c3bcc20664d7bba2eccb48b9abdc9b13c2d1433327dfe44e1.png" />
+<img alt="../../_images/2f7a51e8e0fa6dcf494afd7170ba25529574d173d01c3ad8f57b1f422b3619b0.png" src="../../_images/2f7a51e8e0fa6dcf494afd7170ba25529574d173d01c3ad8f57b1f422b3619b0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -853,11 +873,11 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[9.953205285630958,
- 15.758507735854277,
- 24.741403273167407,
- 24.741403273167407,
- 16.55283690423315]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[22.159365253103616,
+ 16.588620370675272,
+ 15.244901321653456,
+ 19.48950875600346,
+ 19.441125225372538]
 </pre></div>
 </div>
 </div>
@@ -881,13 +901,219 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/353e5d6cf7b545e3ee2e216023d7a4ec0fbb3cd3b0091fca36f955c740be7955.png" src="../../_images/353e5d6cf7b545e3ee2e216023d7a4ec0fbb3cd3b0091fca36f955c740be7955.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exception ignored in: &lt;function TransformNode.set_children.&lt;locals&gt;.&lt;lambda&gt; at 0x7edec8b7e5f0&gt;
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/dist-packages/matplotlib/transforms.py&quot;, line 209, in &lt;lambda&gt;
+    self, lambda _, pop=child._parents.pop, k=id(self): pop(k))
+KeyboardInterrupt: 
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nn">&lt;ipython-input-79-e73a70a0eea2&gt;</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>   <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)))</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>   <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">10</span>   <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>   <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/pyplot.py</span> in <span class="ni">show</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">444</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">445</span><span class="sd">     _warn_if_gui_out_of_main_thread()</span>
+<span class="ne">--&gt; </span><span class="mi">446</span><span class="sd">     return _get_backend_mod().show(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span><span class="sd"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib_inline/backend_inline.py</span> in <span class="ni">show</span><span class="nt">(close, block)</span>
+<span class="g g-Whitespace">     </span><span class="mi">88</span><span class="sd">     try:</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span><span class="sd">         for figure_manager in Gcf.get_all_fig_managers():</span>
+<span class="ne">---&gt; </span><span class="mi">90</span><span class="sd">             display(</span>
+<span class="g g-Whitespace">     </span><span class="mi">91</span><span class="sd">                 figure_manager.canvas.figure,</span>
+<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="sd">                 metadata=_fetch_figure_metadata(figure_manager.canvas.figure)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/IPython/core/display.py</span> in <span class="ni">display</span><span class="nt">(include, exclude, metadata, transient, display_id, *objs, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span><span class="sd">             publish_display_data(data=obj, metadata=metadata, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="sd">         else:</span>
+<span class="ne">--&gt; </span><span class="mi">320</span><span class="sd">             format_dict, md_dict = format(obj, include=include, exclude=exclude)</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span><span class="sd">             if not format_dict:</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span><span class="sd">                 # nothing to display (e.g. _ipython_display_ took over)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/IPython/core/formatters.py</span> in <span class="ni">format</span><span class="nt">(self, obj, include, exclude)</span>
+<span class="g g-Whitespace">    </span><span class="mi">178</span><span class="sd">             md = None</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span><span class="sd">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">180</span><span class="sd">                 data = formatter(obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span><span class="sd">             except:</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span><span class="sd">                 # FIXME: log the exception</span>
+
+<span class="nn">&lt;decorator-gen-2&gt;</span> in <span class="ni">__call__</span><span class="nt">(self, obj)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/IPython/core/formatters.py</span> in <span class="ni">catch_format_error</span><span class="nt">(method, self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span><span class="sd">     &quot;&quot;&quot;</span><span class="n">show</span> <span class="n">traceback</span> <span class="n">on</span> <span class="n">failed</span> <span class="nb">format</span> <span class="n">call</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="s2">     try:</span>
+<span class="ne">--&gt; </span><span class="mi">224</span><span class="s2">         r = method(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span><span class="s2">     except NotImplementedError:</span>
+<span class="g g-Whitespace">    </span><span class="mi">226</span><span class="s2">         # don&#39;t warn on NotImplementedErrors</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/IPython/core/formatters.py</span> in <span class="ni">__call__</span><span class="nt">(self, obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span><span class="s2">                 pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span><span class="s2">             else:</span>
+<span class="ne">--&gt; </span><span class="mi">341</span><span class="s2">                 return printer(obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span><span class="s2">             # Finally look for special method names</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span><span class="s2">             method = get_real_method(obj, self.print_method)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/IPython/core/pylabtools.py</span> in <span class="ni">print_figure</span><span class="nt">(fig, fmt, bbox_inches, base64, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span><span class="s2">         FigureCanvasBase(fig)</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">151</span><span class="s2">     fig.canvas.print_figure(bytes_io, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span><span class="s2">     data = bytes_io.getvalue()</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span><span class="s2">     if fmt == &#39;svg&#39;:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/backend_bases.py</span> in <span class="ni">print_figure</span><span class="nt">(self, filename, dpi, facecolor, edgecolor, orientation, format, bbox_inches, pad_inches, bbox_extra_artists, backend, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2340</span><span class="s2">                 )</span>
+<span class="g g-Whitespace">   </span><span class="mi">2341</span><span class="s2">                 with getattr(renderer, &quot;_draw_disabled&quot;, nullcontext)():</span>
+<span class="ne">-&gt; </span><span class="mi">2342</span><span class="s2">                     self.figure.draw(renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2343</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">2344</span><span class="s2">             if bbox_inches:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="s2">     @wraps(draw)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="s2">     def draw_wrapper(artist, renderer, *args, **kwargs):</span>
+<span class="ne">---&gt; </span><span class="mi">95</span><span class="s2">         result = draw(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span><span class="s2">         if renderer._rasterizing:</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span><span class="s2">             renderer.stop_rasterizing()</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="s2">                 renderer.start_filter()</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="s2"> </span>
+<span class="ne">---&gt; </span><span class="mi">72</span><span class="s2">             return draw(artist, renderer)</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span><span class="s2">         finally:</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2">             if artist.get_agg_filter() is not None:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/figure.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3138</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">3139</span><span class="s2">             self.patch.draw(renderer)</span>
+<span class="ne">-&gt; </span><span class="mi">3140</span><span class="s2">             mimage._draw_list_compositing_images(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3141</span><span class="s2">                 renderer, self, artists, self.suppressComposite)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3142</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/image.py</span> in <span class="ni">_draw_list_compositing_images</span><span class="nt">(renderer, parent, artists, suppress_composite)</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span><span class="s2">     if not_composite or not has_images:</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span><span class="s2">         for a in artists:</span>
+<span class="ne">--&gt; </span><span class="mi">131</span><span class="s2">             a.draw(renderer)</span>
+<span class="g g-Whitespace">    </span><span class="mi">132</span><span class="s2">     else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span><span class="s2">         # Composite any adjacent images together</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="s2">                 renderer.start_filter()</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="s2"> </span>
+<span class="ne">---&gt; </span><span class="mi">72</span><span class="s2">             return draw(artist, renderer)</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span><span class="s2">         finally:</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2">             if artist.get_agg_filter() is not None:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/axes/_base.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3062</span><span class="s2">             _draw_rasterized(self.figure, artists_rasterized, renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3063</span><span class="s2"> </span>
+<span class="ne">-&gt; </span><span class="mi">3064</span><span class="s2">         mimage._draw_list_compositing_images(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3065</span><span class="s2">             renderer, self, artists, self.figure.suppressComposite)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3066</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/image.py</span> in <span class="ni">_draw_list_compositing_images</span><span class="nt">(renderer, parent, artists, suppress_composite)</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span><span class="s2">     if not_composite or not has_images:</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span><span class="s2">         for a in artists:</span>
+<span class="ne">--&gt; </span><span class="mi">131</span><span class="s2">             a.draw(renderer)</span>
+<span class="g g-Whitespace">    </span><span class="mi">132</span><span class="s2">     else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span><span class="s2">         # Composite any adjacent images together</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="s2">                 renderer.start_filter()</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="s2"> </span>
+<span class="ne">---&gt; </span><span class="mi">72</span><span class="s2">             return draw(artist, renderer)</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span><span class="s2">         finally:</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2">             if artist.get_agg_filter() is not None:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/axis.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1374</span><span class="s2">         renderer.open_group(__name__, gid=self.get_gid())</span>
+<span class="g g-Whitespace">   </span><span class="mi">1375</span><span class="s2"> </span>
+<span class="ne">-&gt; </span><span class="mi">1376</span><span class="s2">         ticks_to_draw = self._update_ticks()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1377</span><span class="s2">         tlb1, tlb2 = self._get_ticklabel_bboxes(ticks_to_draw, renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1378</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/axis.py</span> in <span class="ni">_update_ticks</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span><span class="s2">         major_locs = self.get_majorticklocs()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span><span class="s2">         major_labels = self.major.formatter.format_ticks(major_locs)</span>
+<span class="ne">-&gt; </span><span class="mi">1264</span><span class="s2">         major_ticks = self.get_major_ticks(len(major_locs))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span><span class="s2">         self.major.formatter.set_locs(major_locs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1266</span><span class="s2">         for tick, loc, label in zip(major_ticks, major_locs, major_labels):</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/axis.py</span> in <span class="ni">get_major_ticks</span><span class="nt">(self, numticks)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1602</span><span class="s2">             tick = self._get_tick(major=True)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1603</span><span class="s2">             self.majorTicks.append(tick)</span>
+<span class="ne">-&gt; </span><span class="mi">1604</span><span class="s2">             self._copy_tick_props(self.majorTicks[0], tick)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1605</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1606</span><span class="s2">         return self.majorTicks[:numticks]</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/axis.py</span> in <span class="ni">_copy_tick_props</span><span class="nt">(self, src, dest)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1569</span><span class="s2">         dest.label1.update_from(src.label1)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1570</span><span class="s2">         dest.label2.update_from(src.label2)</span>
+<span class="ne">-&gt; </span><span class="mi">1571</span><span class="s2">         dest.tick1line.update_from(src.tick1line)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1572</span><span class="s2">         dest.tick2line.update_from(src.tick2line)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1573</span><span class="s2">         dest.gridline.update_from(src.gridline)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/lines.py</span> in <span class="ni">update_from</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1353</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1354</span><span class="s2">         self._linestyle = other._linestyle</span>
+<span class="ne">-&gt; </span><span class="mi">1355</span><span class="s2">         self._marker = MarkerStyle(marker=other._marker)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1356</span><span class="s2">         self._drawstyle = other._drawstyle</span>
+<span class="g g-Whitespace">   </span><span class="mi">1357</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/markers.py</span> in <span class="ni">__init__</span><span class="nt">(self, marker, fillstyle, transform, capstyle, joinstyle)</span>
+<span class="g g-Whitespace">    </span><span class="mi">270</span><span class="s2">                 &quot;</span><span class="si">%(since)s</span><span class="s2">; support will be removed </span><span class="si">%(removal)s</span><span class="s2">.  Use &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">271</span><span class="s2">                 &quot;MarkerStyle(&#39;&#39;) to construct an empty MarkerStyle.&quot;)</span>
+<span class="ne">--&gt; </span><span class="mi">272</span><span class="s2">         self._set_marker(marker)</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">274</span><span class="s2">     __init__.__signature__ = inspect.signature(  # Only for deprecation period.</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/markers.py</span> in <span class="ni">_set_marker</span><span class="nt">(self, marker)</span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span><span class="s2">                 self, &#39;_set_&#39; + self.markers[marker])</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span><span class="s2">         elif isinstance(marker, MarkerStyle):</span>
+<span class="ne">--&gt; </span><span class="mi">355</span><span class="s2">             self.__dict__ = copy.deepcopy(marker.__dict__)</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">357</span><span class="s2">         else:</span>
+
+<span class="nn">/usr/lib/python3.10/copy.py</span> in <span class="ni">deepcopy</span><span class="nt">(x, memo, _nil)</span>
+<span class="g g-Whitespace">    </span><span class="mi">144</span><span class="s2">     copier = _deepcopy_dispatch.get(cls)</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span><span class="s2">     if copier is not None:</span>
+<span class="ne">--&gt; </span><span class="mi">146</span><span class="s2">         y = copier(x, memo)</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span><span class="s2">     else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span><span class="s2">         if issubclass(cls, type):</span>
+
+<span class="nn">/usr/lib/python3.10/copy.py</span> in <span class="ni">_deepcopy_dict</span><span class="nt">(x, memo, deepcopy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">229</span><span class="s2">     memo[id(x)] = y</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span><span class="s2">     for key, value in x.items():</span>
+<span class="ne">--&gt; </span><span class="mi">231</span><span class="s2">         y[deepcopy(key, memo)] = deepcopy(value, memo)</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span><span class="s2">     return y</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span><span class="s2"> d[dict] = _deepcopy_dict</span>
+
+<span class="nn">/usr/lib/python3.10/copy.py</span> in <span class="ni">deepcopy</span><span class="nt">(x, memo, _nil)</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span><span class="s2">             copier = getattr(x, &quot;__deepcopy__&quot;, None)</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span><span class="s2">             if copier is not None:</span>
+<span class="ne">--&gt; </span><span class="mi">153</span><span class="s2">                 y = copier(memo)</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span><span class="s2">                 reductor = dispatch_table.get(cls)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/matplotlib/path.py</span> in <span class="ni">__deepcopy__</span><span class="nt">(self, memo)</span>
+<span class="g g-Whitespace">    </span><span class="mi">285</span><span class="s2">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">286</span>         <span class="c1"># Deepcopying arrays (vertices, codes) strips the writeable=False flag.</span>
+<span class="ne">--&gt; </span><span class="mi">287</span>         <span class="n">p</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="nb">super</span><span class="p">(),</span> <span class="n">memo</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">288</span>         <span class="n">p</span><span class="o">.</span><span class="n">_readonly</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="g g-Whitespace">    </span><span class="mi">289</span>         <span class="k">return</span> <span class="n">p</span>
+
+<span class="nn">/usr/lib/python3.10/copy.py</span> in <span class="ni">deepcopy</span><span class="nt">(x, memo, _nil)</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span> <span class="k">del</span> <span class="n">d</span><span class="p">,</span> <span class="n">t</span>
+<span class="g g-Whitespace">    </span><span class="mi">127</span> 
+<span class="ne">--&gt; </span><span class="mi">128</span> <span class="k">def</span> <span class="nf">deepcopy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">memo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">_nil</span><span class="o">=</span><span class="p">[]):</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span>     <span class="s2">&quot;&quot;&quot;Deep copy operation on arbitrary Python objects.</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span><span class="s2"> </span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>

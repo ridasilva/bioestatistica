@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -180,7 +180,14 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap10.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - ANOVA de um fator para amostras independentes</a></li>
 </ul>
 
     </div>
@@ -544,8 +551,8 @@ tarefa? Conclua com <span class="math notranslate nohighlight">\(\alpha = 0.01\)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&lt;matplotlib.axis.XTick at 0x7ee0d5f49400&gt;,
-  &lt;matplotlib.axis.XTick at 0x7ee0d5f493d0&gt;],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&lt;matplotlib.axis.XTick at 0x7ff20eb23e20&gt;,
+  &lt;matplotlib.axis.XTick at 0x7ff20eb23df0&gt;],
  [Text(1, 0, &#39;J&#39;), Text(2, 0, &#39;A&#39;)])
 </pre></div>
 </div>
@@ -612,6 +619,16 @@ Variância comum: 4.2602197802197805
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -641,7 +658,7 @@ Variância comum: 4.2602197802197805
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TtestResult(statistic=-4.7965159407850715, pvalue=6.313275155202227e-05, df=25.0)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=-4.796515940785071, pvalue=6.313275155202227e-05)
 </pre></div>
 </div>
 </div>
@@ -653,7 +670,7 @@ Variância comum: 4.2602197802197805
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TtestResult(statistic=4.7965159407850715, pvalue=6.313275155202227e-05, df=25.0)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=4.796515940785071, pvalue=6.313275155202227e-05)
 </pre></div>
 </div>
 </div>
@@ -677,27 +694,7 @@ Variância comum: 4.2602197802197805
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_rel</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span>
-
-<span class="nn">File ~/miniconda3/envs/bioestast/lib/python3.9/site-packages/scipy/stats/_axis_nan_policy.py:531,</span> in <span class="ni">_axis_nan_policy_factory.&lt;locals&gt;.axis_nan_policy_decorator.&lt;locals&gt;.axis_nan_policy_wrapper</span><span class="nt">(***failed resolving arguments***)</span>
-<span class="g g-Whitespace">    </span><span class="mi">529</span> <span class="k">if</span> <span class="n">sentinel</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>     <span class="n">samples</span> <span class="o">=</span> <span class="n">_remove_sentinel</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">paired</span><span class="p">,</span> <span class="n">sentinel</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">531</span> <span class="n">res</span> <span class="o">=</span> <span class="n">hypotest_fun_out</span><span class="p">(</span><span class="o">*</span><span class="n">samples</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span> <span class="n">res</span> <span class="o">=</span> <span class="n">result_to_tuple</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="n">res</span> <span class="o">=</span> <span class="n">_add_reduced_axes</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">reduced_axes</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/bioestast/lib/python3.9/site-packages/scipy/stats/_stats_py.py:7707,</span> in <span class="ni">ttest_rel</span><span class="nt">(a, b, axis, nan_policy, alternative)</span>
-<span class="g g-Whitespace">   </span><span class="mi">7705</span> <span class="n">nb</span> <span class="o">=</span> <span class="n">_get_len</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="s2">&quot;second argument&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">7706</span> <span class="k">if</span> <span class="n">na</span> <span class="o">!=</span> <span class="n">nb</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">7707</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;unequal length arrays&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">7709</span> <span class="k">if</span> <span class="n">na</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">nb</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">7710</span>     <span class="c1"># _axis_nan_policy decorator ensures this only happens with 1d input</span>
-<span class="g g-Whitespace">   </span><span class="mi">7711</span>     <span class="n">NaN</span> <span class="o">=</span> <span class="n">_get_nan</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="ne">ValueError</span>: unequal length arrays
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0973016297226766e-05
 </pre></div>
 </div>
 </div>

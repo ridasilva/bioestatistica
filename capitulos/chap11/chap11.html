@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -178,8 +178,15 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11 - ANOVA de um fator para amostras independentes</a></li>
 </ul>
 
     </div>
@@ -383,8 +390,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa">Etapa 2: expor as hipóteses nulas e de pesquisa</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-3-definir-o-valor-critico-de-f">Etapa 3: Definir o valor crítico de F</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-4-calculando-a-estatistica-do-teste-anova-independente">Etapa 4: Calculando a estatística do teste (ANOVA independente)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-6-resumir-os-resultados">Etapa 6: resumir os resultados</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-nota-adicional-sobre-anovas">Uma nota adicional sobre ANOVAS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
 </ul>
             </nav>
         </div>
@@ -398,7 +409,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="anova-de-um-fator-para-amostras-independentes">
 <h1>11 - ANOVA de um fator para amostras independentes<a class="headerlink" href="#anova-de-um-fator-para-amostras-independentes" title="Link to this heading">#</a></h1>
-<p>Este material foi traduzido e adaptado de <span id="id1">[<a class="reference internal" href="../chap10/chap10.html#id13" title="Kieth A Carlson and Jennifer R Winquist. An introduction to statistics: An active learning approach. Sage Publications, 2017.">CW17</a>]</span>.</p>
+<p>Este material foi traduzido e adaptado de <span id="id1">[<a class="reference internal" href="../chap9/chap9.html#id12" title="Kieth A Carlson and Jennifer R Winquist. An introduction to statistics: An active learning approach. Sage Publications, 2017.">CW17</a>]</span>.</p>
 <p>OBJETIVOS DE APRENDIZADO</p>
 <p>Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
 <ul class="simple">
@@ -406,13 +417,13 @@ document.write(`
 <li><p>Explicar a lógica da razão F para ANOVA;</p></li>
 <li><p>Explicar como o erro de medição, as diferenças individuais e os efeitos do tratamento influenciam o numerador e o denominador da razão F;</p></li>
 <li><p>Escrever hipóteses nulas e de pesquisa usando símbolos e palavras;</p></li>
-<li><p>Preencha uma tabela de resumo da ANOVA calculando os graus de liberdade, SQs, QMs e razão F;</p></li>
-<li><p>Defina uma região crítica e determine se você deve rejeitar ou não rejeitar a hipótese nula;</p></li>
+<li><p>Preencher uma tabela resumo da ANOVA calculando os graus de liberdade, SQs, QMs e razão F;</p></li>
+<li><p>Definir uma região crítica e determinar se você deve rejeitar ou não a hipótese nula;</p></li>
 <li><p>Calcular tamanhos de efeito e descrevê-los;</p></li>
-<li><p>Explicar quando e por que os testes post hoc são necessários;</p></li>
+<li><p>Explicar quando e por que os testes <em>post hoc</em> são necessários;</p></li>
 <li><p>Resumir os resultados de uma ANOVA de amostras independentes;</p></li>
-<li><p>Usar software para calcular uma ANOVA de amostras independentes, incluindo testes post hoc;</p></li>
-<li><p>Interpretar a saída do software para uma ANOVA de amostras independentes.</p></li>
+<li><p>Usar <em>software</em> para calcular uma ANOVA de amostras independentes, incluindo testes <em>post hoc</em>;</p></li>
+<li><p>Interpretar a saída do <em>software</em> para uma ANOVA de amostras independentes.</p></li>
 </ul>
 <section id="anova-de-amostras-independentes">
 <h2>ANOVA de amostras independentes<a class="headerlink" href="#anova-de-amostras-independentes" title="Link to this heading">#</a></h2>
@@ -440,7 +451,7 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#display_quiz(&quot;questions.json&quot;, preserve_responses = True)</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question1.json&quot;</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/bioestast/lib/python3.9/site-packages/jupyterquiz/dynamic.py:176,</span> in <span class="ni">display_quiz</span><span class="nt">(ref, num, shuffle_questions, shuffle_answers, preserve_responses, border_radius, question_alignment, max_width, colors)</span>
+<span class="nn">File ~/miniconda3/envs/bioestats/lib/python3.9/site-packages/jupyterquiz/dynamic.py:176,</span> in <span class="ni">display_quiz</span><span class="nt">(ref, num, shuffle_questions, shuffle_answers, preserve_responses, border_radius, question_alignment, max_width, colors)</span>
 <span class="g g-Whitespace">    </span><span class="mi">173</span> <span class="k">else</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">174</span>     <span class="c1">#print(&quot;File detected&quot;)</span>
 <span class="g g-Whitespace">    </span><span class="mi">175</span>     <span class="n">script</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;var questions</span><span class="si">{</span><span class="n">div_id</span><span class="si">}</span><span class="s2">=&quot;</span>
@@ -456,7 +467,7 @@ document.write(`
 </section>
 <section id="outros-nomes">
 <h2>Outros nomes<a class="headerlink" href="#outros-nomes" title="Link to this heading">#</a></h2>
-<p>ANOVA é uma abreviatura para Análise de Variância. Uma ANOVA independente, assim como um teste t independente , é usada quando há pessoas diferentes em cada condição do projeto. Por exemplo, se houvesse três tratamentos diferentes que você desejasse comparar em um desenho de amostras independentes, algumas pessoas receberiam o Tratamento A, outras o Tratamento B e o restante o Tratamento C. Este tipo de desenho também é conhecido como desenho entre sujeitos ou um projeto de medidas independentes. Uma ANOVA de amostras relacionadas, assim como um teste t de amostras relacionadas , é usada quando as médias amostrais são geradas pela mesma amostra ou por amostras correspondentes. ANOVAs de amostras independentes e ANOVAs de amostras relacionadas que envolvem apenas uma variável categórica (por exemplo, uma variável independente, VI) são frequentemente chamadas de ANOVAs de um fator. Neste livro, discutiremos apenas ANOVAs de amostras independentes.</p>
+<p>ANOVA é uma abreviatura para Análise de Variância. Uma ANOVA independente, assim como um teste t independente , é usada quando há pessoas diferentes em cada condição do projeto. Por exemplo, se houvesse três tratamentos diferentes que você desejasse comparar em um desenho de amostras independentes, algumas pessoas receberiam o Tratamento A, outras o Tratamento B e o restante o Tratamento C. Este tipo de desenho também é conhecido como desenho entre sujeitos ou um projeto de medidas independentes. Uma ANOVA de amostras relacionadas, assim como um teste t de amostras relacionadas, é usada quando as médias amostrais são geradas pela mesma amostra ou por amostras correspondentes. ANOVAs de amostras independentes e ANOVAs de amostras relacionadas que envolvem apenas uma variável categórica (por exemplo, uma variável independente, VI) são frequentemente chamadas de ANOVAs de um fator. Neste livro, discutiremos apenas ANOVAs de amostras independentes.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -530,7 +541,7 @@ document.write(`
 </div>
 <p>Se você observar as fontes de variação no numerador e no denominador da ANOVA independente, poderá ver que a única diferença é que o numerador inclui efeitos de tratamento e o denominador não. Este fato é crítico para a lógica da ANOVA independente. Imagine uma situação em qual o efeito do tratamento cria variância zero (ou seja, o tratamento não funciona). Se você substituir “efeito do tratamento” na fórmula conceitual por “0”, a equação seria a seguinte:</p>
 <p><span class="math notranslate nohighlight">\(F = \frac{0\quad \&amp;\quad diferenças\quad individuais\quad \&amp;\quad erro}{Diferenças\quad individuais\quad \&amp;\quad erro}\)</span></p>
-<p>Com a variância do efeito do tratamento sendo zero, a razão F seria igual a 1 porque o numerador e o denominador seriam o mesmo número. Portanto, se o tratamento não criar variabilidade nas observações, espera-se que a ANOVA produza um valor estatístico F próximo de 1. Por outro lado, se os diferentes tratamentos criarem muita variabilidade nas pontuações, espera-se que o valor F seja substancialmente maior que 1. Um valor ANOVA F não pode ser negativo porque é a razão de duas variâncias, e as variâncias devem ser positivas.</p>
+<p>Com a variância do efeito do tratamento sendo zero, a razão F seria igual a 1 porque o numerador e o denominador seriam o mesmo número. Portanto, se o tratamento não criar variabilidade nas observações, espera-se que a ANOVA produza um valor estatístico F próximo de 1. Por outro lado, se os diferentes tratamentos criarem muita variabilidade nas observações, espera-se que o valor F seja substancialmente maior que 1. Um valor ANOVA F não pode ser negativo porque é a razão de duas variâncias, e as variâncias devem ser positivas.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -748,8 +759,190 @@ Neste caso, a hipótese de investigação afirma que pelo menos uma dos valores 
 <section id="etapa-4-calculando-a-estatistica-do-teste-anova-independente">
 <h3>Etapa 4: Calculando a estatística do teste (ANOVA independente)<a class="headerlink" href="#etapa-4-calculando-a-estatistica-do-teste-anova-independente" title="Link to this heading">#</a></h3>
 <p><em>4a–4d. Completando a Tabela Resumo da ANOVA</em></p>
-<p>Para calcular a razão F , você precisa calcular dois números: (1) a variância entre as condições de tratamento e (2) a variância dentro das condições de tratamento. Neste livro, até agora, você geralmente calculou o desvio padrão para medir a variabilidade. No entanto, ao fazer uma ANOVA, você calcula a variância como uma medida de variabilidade. Você deve se lembrar que a variância da amostra é o desvio médio quadrático das observações em relação à média e é calculada dividindo a SQ pelo seu gl. Na terminologia ANOVA, a variância é referida como quadrado médio (abreviado como QM). Embora a terminologia seja um pouco diferente, a lógica é a mesma. Para calcular cada QM, você divide cada SQ por seu gl. Esses cálculos são normalmente feitos usando um pacote de <em>software</em> (por exemplo, Google Sheet), e os resultados são frequentemente apresentados em uma tabela fonte ANOVA. Uma tabela de origem ANOVA é um resumo valioso da análise estatística ANOVA porque mostra como o F obtido é criado. A tabela de origem lista as fontes de variação discutidas nas seções anteriores, entre e dentro dos tratamentos, na primeira coluna. Os títulos das colunas indicam as etapas necessárias para calcular um F: SQ, gl, QM e, finalmente, F. A Tabela 11.3 é uma tabela fonte da ANOVA. As fórmulas para gl, SQ, F e <span class="math notranslate nohighlight">\(\nu^2\)</span> são apresentadas porque a melhor maneira de entender as inter-relações entre esses termos é ver como cada valor é gerado. A <span class="math notranslate nohighlight">\(SQ_{entre}\)</span> representa a soma da variabilidade criada pelo efeito do tratamento, diferenças individuais e erro de medição. Você calcula o <span class="math notranslate nohighlight">\(SQ_{entre}\)</span> calculando a SQ para as médias dos três grupos e depois multiplicando esse valor <span class="math notranslate nohighlight">\(SQ_{medias}\)</span> por n (ou seja, o número de unidades amostrais em cada grupo). Nesse caso, as médias dos três grupos são 8.0, 15.5 e 16.3333, respectivamente. Portanto, seu <span class="math notranslate nohighlight">\(SQ_{media}\)</span> é a SQ destas três médias:</p>
+<p>Para calcular a razão F , você precisa calcular dois números: (1) a variância entre as condições de tratamento e (2) a variância dentro das condições de tratamento. Neste livro, até agora, você geralmente calculou o desvio padrão para medir a variabilidade. No entanto, ao fazer uma ANOVA, você calcula a variância como uma medida de variabilidade. Você deve se lembrar que a variância da amostra é o desvio médio quadrático das observações em relação à média e é calculada dividindo a SQ pelo seu gl. Na terminologia ANOVA, a variância é referida como quadrado médio (abreviado como QM). Embora a terminologia seja um pouco diferente, a lógica é a mesma. Para calcular cada QM, você divide cada SQ por seu gl. Esses cálculos são normalmente feitos usando um pacote de <em>software</em> (por exemplo, Google Sheet), e os resultados são frequentemente apresentados em uma tabela fonte ANOVA. Uma tabela de origem ANOVA é um resumo valioso da análise estatística ANOVA porque mostra como o F obtido é criado. A tabela de origem lista as fontes de variação discutidas nas seções anteriores, entre e dentro dos tratamentos, na primeira coluna. Os títulos das colunas indicam as etapas necessárias para calcular um F: SQ, gl, QM e, finalmente, F. A Tabela 11.3 é uma tabela fonte da ANOVA. As fórmulas para gl, SQ, F e <span class="math notranslate nohighlight">\(\eta^2\)</span> são apresentadas porque a melhor maneira de entender as inter-relações entre esses termos é ver como cada valor é gerado. A <span class="math notranslate nohighlight">\(SQ_{entre}\)</span> representa a soma da variabilidade criada pelo efeito do tratamento, diferenças individuais e erro de medição. Você calcula o <span class="math notranslate nohighlight">\(SQ_{entre}\)</span> calculando a SQ para as médias dos três grupos e depois multiplicando esse valor <span class="math notranslate nohighlight">\(SQ_{medias}\)</span> por <em>m</em> (ou seja, o número de unidades amostrais em cada grupo). Nesse caso, as médias dos três grupos são 8.0, 15.5 e 16.3333, respectivamente. Portanto, seu <span class="math notranslate nohighlight">\(SQ_{media}\)</span> é a SQ destas três médias:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tratamento</p></th>
+<th class="head"><p>Média (<span class="math notranslate nohighlight">\(\bar{Y}_i\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\bar{Y}_i^2\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TCC</p></td>
+<td><p>8</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-odd"><td><p>TPD</p></td>
+<td><p>15.5</p></td>
+<td><p>240.25</p></td>
+</tr>
+<tr class="row-even"><td><p>TN</p></td>
+<td><p>16.333</p></td>
+<td><p>266.777</p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p><span class="math notranslate nohighlight">\(\bar{Y}=13.6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum_{i=1}^K\bar{Y}_i^2 = 571.027\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math notranslate nohighlight">\(SQE = m \sum_{i=1}^K(\bar{Y}_i-\bar{Y})^2 = m(\sum_{i=1}^K\bar{Y}_i^2-K\bar{Y}^2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(SQE =  6 \times (571.027- 3\times 13.278^2) = 252.667\)</span></p>
+<p>A fórmula acima para <span class="math notranslate nohighlight">\(SQE\)</span> só funciona quando há um número igual de unidades amostrais em cada condição de tratamento. Em situações onde os tamanhos amostrais não são iguais, seria necessária uma fórmula computacional diferente, mas a lógica do SQentre ainda é a mesma. O valor resultante representa a variabilidade criada pelas diferentes condições de tratamento, diferenças individuais e erros de medição. Não apresentamos aqui a fórmula computacional necessária quando há tamanhos de amostra desiguais. Estamos mais interessados na sua compreensão da lógica da ANOVA e em como interpretar seus resultados do que na sua capacidade de calcular uma ANOVA com tamanhos de amostra desiguais a partir de dados brutos.</p>
+<p>Agora que você tem seu <span class="math notranslate nohighlight">\(SQE\)</span>, o próximo passo é encontrar o <span class="math notranslate nohighlight">\(SQD\)</span>. O <span class="math notranslate nohighlight">\(SQD\)</span> é a soma da variabilidade criada pelas diferenças individuais e erros de medição dentro de cada condição. Você encontra o <span class="math notranslate nohighlight">\(SQD\)</span> calculando o SQ para cada condição de tratamento separadamente e depois somando-os.</p>
+<p><span class="math notranslate nohighlight">\(SQD = \sum_{i=1}^K\sum_{j=1}^m (Y_{ij}-\bar{Y}_i)^2 = \sum_{i=1}^K\sum_{j=1}^m Y_{ij}^2 -m\sum_{i=1}^K\bar{Y}_i^2\)</span></p>
+<p><span class="math notranslate nohighlight">\(SQ_{TCC} = \sum_{j=1}^m (Y_{1j}-\bar{Y}_1)^2 = 108\)</span></p>
+<p><span class="math notranslate nohighlight">\(SQ_{TPD} = \sum_{j=1}^m (Y_{2j}-\bar{Y}_2)^2 = 57.5\)</span></p>
+<p><span class="math notranslate nohighlight">\(SQ_{TN} = \sum_{j=1}^m (Y_{3j}-\bar{Y}_3)^2 = 143.333\)</span></p>
+<p><span class="math notranslate nohighlight">\(SQD = 108+57.5+143.333=308.83\)</span></p>
+<p>Agora você precisa da SQtotal, que representa a variabilidade total em todo o conjunto de dados. Você soma o variabilidade entre condições (isto é, SQE) e a variabilidade dentro das condições (isto é, SQD).</p>
+<p><span class="math notranslate nohighlight">\(SQT = \sum_{i=1}^K\sum_{j=1}^m (Y_{ij}-\bar{Y})^2 = \sum_{i=1}^K\sum_{j=1}^m Y_{ij}^2 -mK\bar{Y}^2 = SQE + SQD = 252.78 + 308.83 = 561.61\)</span>.</p>
+<p>Seu objetivo final é calcular o F obtido, que é a razão entre QMentre e QMerro. Para calcular os QMs, você divide cada valor das SQ por seu próprio valor de gl.</p>
+<p><span class="math notranslate nohighlight">\(QME = \frac{SQE}{K-1}=\frac{252.58}{2} = 126.39\)</span></p>
+<p><span class="math notranslate nohighlight">\(QMD = \frac{SQD}{N-K}=\frac{252.58}{15} = 20.59\)</span></p>
+<p>Seu F obtido é calculado dividindo o QME pelo QMD:</p>
+<p><span class="math notranslate nohighlight">\(F = \frac{QME}{QMD} = \frac{126.39}{20.59} = 6.138\)</span></p>
+<p>A Tabela 11.4 é a tabela fonte da ANOVA para esta análise. Confirme que você entende como cada um os valores SQs, gls, QMs e F foram calculados.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question8.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fonte de Variação</p></th>
+<th class="head"><p>Graus de Liberdade</p></th>
+<th class="head"><p>Soma de Quadrados</p></th>
+<th class="head"><p>Quadrado Médio</p></th>
+<th class="head"><p>F</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Entre</p></td>
+<td><p>2</p></td>
+<td><p>258.72</p></td>
+<td><p>126.39</p></td>
+<td><p>6.14</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dentro</p></td>
+<td><p>15</p></td>
+<td><p>308.83</p></td>
+<td><p>20.59</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Total</p></td>
+<td><p>17</p></td>
+<td><p>561.61</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Neste caso, o valor F obtido foi 6.14, que é superior ao valor F crítico de 3.68 (alpha = 0.05). Portanto, você rejeita a hipótese nula e conclui que pelo menos uma média amostral é significativamente diferente de uma das outras.</p>
+<p><em>4e. Se necessário, calcule testes post hoc</em></p>
+<p>A hipótese nula para uma ANOVA é que todas as diferentes médias das condições são iguais. Rejeitar o nulo não indica quais pares de médias são diferentes entre si. Assim, se você rejeitar a hipótese nula e houver três ou mais condições VI no estudo, será necessário realizar testes <em>post hoc</em> de pares para determinar qual par ou pares de médias são diferentes entre si. Neste caso, são necessárias três comparações aos pares. O grupo TCC precisa ser comparado com o grupo TFD e o grupo NT. Além disso, o grupo TFD precisa ser comparado com o grupo NT. A Figura 11.2 ilustra as três comparações post hoc para esta análise.</p>
+<p>Existem vários testes post hoc diferentes que você pode usar. O que usamos ao longo deste livro é o teste de diferença honestamente significativa (HSD) de Tukey. O teste HSD revela quão diferentes devem ser quaisquer duas médias para serem consideradas “improváveis de resultar de erro de amostragem” (isto é, significativamente diferentes). Portanto, qualquer par de médias que difira mais do que o valor HSD é significativamente diferente. A fórmula HSD é</p>
+<p><span class="math notranslate nohighlight">\(HSD = q\sqrt{\frac{QMD}{m}}\)</span></p>
+<p>Você obtém o QMerror da tabela geral de resumo da ANOVA. Neste caso, QMerror = 20.59. O número de unidades amostrais dentro de cada condição de tratamento é <em>m</em>; neste caso, <em>m = 6</em>. O valor de q (chamado de estatística de faixa estudentizada) muda, com base no número de condições de tratamento (ou seja, K), o gl para o termo de erro e o valor alfa. Uma tabela de valores q está no Apêndice D. Nesse caso, g = 3, o gl para o termo de erro (<span class="math notranslate nohighlight">\(gl_{erro}\)</span>) = 15 e o nível alfa = 0.05. Com base nesses valores, a estatística q é 3.67.</p>
+<p>Assim, seu valor HSD é</p>
+<p><span class="math notranslate nohighlight">\(HSD = q\sqrt{\frac{QMD}{m}}= 3.67\sqrt{\frac{20.59}{6}}=6.80\)</span></p>
+<p>Agora você compara o valor HSD com o valor absoluto da diferença observada entre cada par de médias. Por exemplo, a diferença média entre as condições TCC e TFD é (8 - 15.5) = -7.5. O valor absoluto dessa diferença é maior que o valor HSD de 6.80. Consequentemente, o grupo TCC (<span class="math notranslate nohighlight">\(\bar{x}_{TCC} = 8\)</span>) apresentou níveis de depressão significativamente mais baixos do que o grupo PDT (<span class="math notranslate nohighlight">\(\bar{x}_{PDT} = 15.5\)</span>). Os dois testes <em>post hoc</em> restantes estão resumidos na Tabela 11.5. Conforme indicado na tabela, diferenças significativas sugerem que a diferença não foi criada por erro amostral.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Comparação</p></th>
+<th class="head"><p>Diferença entre médias</p></th>
+<th class="head"><p>Siginificância</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TCC vs TPD</p></td>
+<td><p>|8-15.5|=7.5</p></td>
+<td><p>&gt;HSD - Significativo</p></td>
+</tr>
+<tr class="row-odd"><td><p>TCC vs NT</p></td>
+<td><p>|8-16.33|=8.33</p></td>
+<td><p>&gt;HSD - Significativo</p></td>
+</tr>
+<tr class="row-even"><td><p>NT vs TPD</p></td>
+<td><p>|15.5-16.33|=-0.83</p></td>
+<td><p>&lt;HSD - Não Significativo</p></td>
+</tr>
+</tbody>
+</table>
+<p>Com base nessas análises, você pode concluir que o grupo da TCC teve pontuações de depressão significativamente mais baixas do que o grupo da TFD, sugerindo que a TCC é melhor para tratar a depressão do que a TPD. Da mesma forma, o grupo TCC apresentou depressão significativamente menor do que o grupo NT, sugerindo que a TCC é melhor que a NT. Finalmente, os grupos TPD e NT não foram significativamente diferentes. Uma diferença não significativa entre estas duas condições significa que a diferença é provavelmente criada por erro de amostragem. Portanto, estes resultados sugerem que a TPD não é melhor no tratamento da depressão do que nenhum tratamento. A fórmula HSD apresentada acima é apropriada apenas quando o número de observações dentro de cada condição de tratamento é o mesmo. Quando n é diferente dentro de cada condição, você calcula valores HSD separados para cada comparação entre pares. Usaremos <em>software</em> para calcular os valores HSD quando for o caso.</p>
+<p><em>Etapa 5: calcule o tamanho do efeito e descreva-o</em></p>
+<p>Quando você tem dois grupos, usa d como medida do tamanho do efeito. Você não pode usar d como medida do tamanho do efeito para uma ANOVA geral porque geralmente há mais de dois grupos, então você não pode calcular uma diferença média simples. O tamanho do efeito mais comum para ANOVAs é eta parcial quadrado  (<span class="math notranslate nohighlight">\(\eta_p^2\)</span>). Os cálculos são os seguintes:</p>
+<p><span class="math notranslate nohighlight">\(\eta_p^2 = \frac{SQE}{SQE+SQD}=\frac{252.78}{252.78+308.83}=0.45\)</span></p>
+<p>Para ANOVAs de um fator, você deve interpretar o eta parcial quadrado como a porcentagem da variabilidade VD que a VI “explica”. Neste caso, o tipo de tratamento que os participantes recebem “explica” 45% da variabilidade nos seus valores de depressão. Num contexto estatístico, a percentagem de variabilidade que uma VI “explica” é a percentagem de variância de VD que está associada a mudanças no tipo de tratamento que os participantes receberam. Se uma VI (isto é, tratamentos diferentes) explica 45% da variabilidade numa VD (ou seja, pontuações de depressão), os restantes 55% da variabilidade são “explicados” por erro. Quando estudos de pesquisa semelhantes não estiverem disponíveis para fornecer uma comparação relativa, use as diretrizes na Tabela 11.6 para interpretar o tamanho de (<span class="math notranslate nohighlight">\(\eta_p^2\)</span>). O tamanho do efeito obtido de 0.45 é maior que 0.14 e, portanto, é um efeito grande.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;question9.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Você pode descobrir que essa medida do tamanho do efeito, eta parcial ao quadrado, às vezes é chamada de eta ao quadrado. Embora seja verdade que para ANOVAs de um fator, eta ao quadrado e eta parcial ao quadrado  produzem valores idênticos, na verdade são estatísticas diferentes. A distinção torna-se mais importante quando se trabalha com experimentos fatoriais mais complexos descritos no próximo capítulo. Usamos eta ao quadrado parcial neste livro. O eta parcial quadrado fornece um tamanho de efeito para a ANOVA geral. No exemplo da depressão, representa que 45% da variabilidade nas pontuações de depressão pode ser explicada pelo tipo de tratamento que os participantes receberam. Isso indica que o tipo de tratamento teve um grande efeito nos valores de depressão. No entanto, o eta parcial quadrado  não descreve o tamanho dos efeitos para as comparações aos pares. Nesse caso, há três comparações aos pares, e você precisa calcular um tamanho de efeito para cada comparação para saber o quanto cada tipo de tratamento foi mais eficaz do que os outros tratamentos. Para os tamanhos de efeito dessas comparações de pares, você pode usar o mesmo d usado para o t independente:</p>
+<p>Como lembrete, as médias e os desvios padrão para cada grupo são fornecidos na Tabela 11.7. Para cada comparação pareada, você calcula a diferença média e depois divide pelos desvios padrão agrupados para os dois grupos. Os tamanhos de efeito para d são interpretados da mesma forma que nos capítulos anteriores (ou seja, 0,2 é pequeno, 0,5 é médio e 0,8 é grande). Esses ds pareados indicam que a TCC (d = 4,65) foi muito mais eficaz que a TFD (d = 1,84) e a NT (d = 1,66). Se você fosse um psicólogo clínico tentando encontrar a melhor maneira de ajudar seus clientes, essas estatísticas seriam extremamente úteis, indicando que a TCC era de longe o tratamento mais eficaz para seus clientes. Depois de ver esses resultados, você deveria estar pensando que a TCC é a terapia mais apoiada pelas evidências da pesquisa. Mas, como mencionado anteriormente, o tamanho da amostra deste estudo é demasiado pequeno para tirar conclusões firmes. O estudo anterior pode ser considerado um estudo piloto que sugere que vale a pena fazer um estudo maior.</p>
 </section>
+<section id="etapa-6-resumir-os-resultados">
+<h3>Etapa 6: resumir os resultados<a class="headerlink" href="#etapa-6-resumir-os-resultados" title="Link to this heading">#</a></h3>
+<p>Ao relatar uma ANOVA, você deve relatar gl_entre, gl_error, o valor F obtido, o valor p, QME, <span class="math notranslate nohighlight">\(\eta_p^2\)</span> e o ds individuais para as comparações aos pares. Você também deve indicar quais condições de tratamento foram significativamente diferentes uns dos outros. As médias, desvios padrão e tamanhos de efeito para as comparações aos pares são relatados em tabelas, portanto não precisam ser repetidos no texto. O que se segue é um exemplo de como a análise acima pode ser resumida.</p>
+<p>Uma ANOVA independente revelou diferenças significativas entre as três terapias para depressão, F(2, 15) = 6.14, p &lt; 0.05, <span class="math notranslate nohighlight">\(\eta_p^2 = 0.45\)</span>, QME = 20.59. As médias e desvios padrão para cada tratamento estão na Tabela 11.9. Os testes <em>post hoc</em> do HSD de Tukey revelaram que o grupo da TCC apresentou valores de depressão mais baixos do que o grupo PDT e o grupo sem tratamento. A terapia PDT não foi melhor do que não receber nenhum tratamento. Os testes <em>post hoc</em> do HSD e seus tamanhos de efeito estão na Tabela 11.10.</p>
+</section>
+</section>
+<section id="uma-nota-adicional-sobre-anovas">
+<h2>Uma nota adicional sobre ANOVAS<a class="headerlink" href="#uma-nota-adicional-sobre-anovas" title="Link to this heading">#</a></h2>
+<p>Você pode estar se perguntando por que nos preocupamos com se vamos apenas fazer testes <em>post hoc</em> em pares depois de fazer uma ANOVA. Por que não fazemos testes t para comparar todos os pares de médias? A resposta está na taxa de erro do estudo (frequentemente chamada de erro familiar - <em>family-wise error rate</em> (FWER) é a probabilidade de obter um ou mais falso posivitos). Ao definir o nível alfa de um teste como 0,05, você está definindo a taxa de erro tipo I de 5%. Um erro Tipo I é a probabilidade de dizer que um tratamento funcionou quando na verdade não funcionou. No entanto, se você fizer vários testes t, cada teste t terá 5% de chance de produzir um erro Tipo I. Se você realizar vários testes t, a probabilidade exata de ter cometido pelo menos um erro Tipo I é dada pela seguinte fórmula de erro familiar</p>
+<p><span class="math notranslate nohighlight">\(FWER = 1-(1-\alpha)^c\)</span>, onde c é o número de comparações</p>
+<p>Se você tiver apenas uma comparação, a taxa de erro Tipo I seria</p>
+<p><span class="math notranslate nohighlight">\(FWER = 1 - (1-0.05)^1 = 0.05\)</span> ou 5%.</p>
+<p>No entanto, se você tiver três comparações no mesmo estudo, a probabilidade de ter cometido pelo menos um erro Tipo I é um pouco maior, 0,14 ou 14%.</p>
+<p><span class="math notranslate nohighlight">\(FWER = 1 - (1 - 0.05)^3 = 0.14\)</span>.</p>
+<p>Fazer uma única ANOVA em vez de vários testes t mantém a taxa de erro familiar em 0.05 para a ANOVA geral. Se forem necessários testes <em>post hoc</em>, há uma variedade de testes para escolher, mas a ideia geral por trás da maioria deles é que eles evitam que a taxa de erro Tipo I aumente.</p>
+</section>
+<section id="pratica-complementar-opcional">
+<h2>Prática complementar OPCIONAL<a class="headerlink" href="#pratica-complementar-opcional" title="Link to this heading">#</a></h2>
+<p>Código python: <a class="reference external" href="http://colab.research.google.com/github/ridasilva/bioestatisca/blob/master/capitulos/chap11/chap11anova.ipynb"><img alt="Abra com Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Google Planilhas: <a class="reference external" href="https://docs.google.com/spreadsheets/d/1-7qaAk6d1a3IL7huaGC8o4PrYNhcFEHHXJcdWvowvKY/edit?usp=sharing"><img alt="Abra com Colab" src="../../_images/google_sheet.png" /></a></p>
+</section>
+<section id="bibliografia">
+<h2>Bibliografia<a class="headerlink" href="#bibliografia" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id2">
+<div role="list" class="citation-list">
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BM09<span class="fn-bracket">]</span></span>
+<p>Wilton de Oliveira Bussab and Pedro Alberto Morettin. <em>Estatística básica</em>. Saraiva, 2009.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">CW17</a><span class="fn-bracket">]</span></span>
+<p>Kieth A Carlson and Jennifer R Winquist. <em>An introduction to statistics: An active learning approach</em>. Sage Publications, 2017.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MagalhaesdL02<span class="fn-bracket">]</span></span>
+<p>Marcos Nascimento Magalhães and Antonio Carlos Pedroso de Lima. <em>Noções de probabilidade e estatística</em>. Volume 5. Editora da Universidade de São Paulo, 2002.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Mar15<span class="fn-bracket">]</span></span>
+<p>Edson Zangiacomi Martinez. <em>Bioestatística para os cursos de graduação da área da saúde</em>. Blucher São Paulo, 2015.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -816,8 +1009,12 @@ Neste caso, a hipótese de investigação afirma que pelo menos uma dos valores 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-2-expor-as-hipoteses-nulas-e-de-pesquisa">Etapa 2: expor as hipóteses nulas e de pesquisa</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-3-definir-o-valor-critico-de-f">Etapa 3: Definir o valor crítico de F</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-4-calculando-a-estatistica-do-teste-anova-independente">Etapa 4: Calculando a estatística do teste (ANOVA independente)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etapa-6-resumir-os-resultados">Etapa 6: resumir os resultados</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-nota-adicional-sobre-anovas">Uma nota adicional sobre ANOVAS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
 </ul>
   </nav></div>
 

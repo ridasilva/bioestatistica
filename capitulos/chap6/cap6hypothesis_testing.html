@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -180,7 +180,14 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - ANOVA de um fator para amostras independentes</a></li>
 </ul>
 
     </div>
@@ -424,66 +431,19 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style type="text/css">
-#T_2cea8_row2_col0, #T_2cea8_row2_col1, #T_2cea8_row2_col2 {
-  background-color: yellow;
-}
-</style>
-<table id="T_2cea8">
-  <thead>
-    <tr>
-      <th class="blank level0" >&nbsp;</th>
-      <th id="T_2cea8_level0_col0" class="col_heading level0 col0" >z</th>
-      <th id="T_2cea8_level0_col1" class="col_heading level0 col1" >Corpo</th>
-      <th id="T_2cea8_level0_col2" class="col_heading level0 col2" >Cauda</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th id="T_2cea8_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_2cea8_row0_col0" class="data row0 col0" >1.630000</td>
-      <td id="T_2cea8_row0_col1" class="data row0 col1" >0.948400</td>
-      <td id="T_2cea8_row0_col2" class="data row0 col2" >0.051600</td>
-    </tr>
-    <tr>
-      <th id="T_2cea8_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_2cea8_row1_col0" class="data row1 col0" >1.640000</td>
-      <td id="T_2cea8_row1_col1" class="data row1 col1" >0.949500</td>
-      <td id="T_2cea8_row1_col2" class="data row1 col2" >0.050500</td>
-    </tr>
-    <tr>
-      <th id="T_2cea8_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_2cea8_row2_col0" class="data row2 col0" >1.650000</td>
-      <td id="T_2cea8_row2_col1" class="data row2 col1" >0.950500</td>
-      <td id="T_2cea8_row2_col2" class="data row2 col2" >0.049500</td>
-    </tr>
-    <tr>
-      <th id="T_2cea8_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_2cea8_row3_col0" class="data row3 col0" >1.660000</td>
-      <td id="T_2cea8_row3_col1" class="data row3 col1" >0.951500</td>
-      <td id="T_2cea8_row3_col2" class="data row3 col2" >0.048500</td>
-    </tr>
-    <tr>
-      <th id="T_2cea8_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_2cea8_row4_col0" class="data row4 col0" >1.670000</td>
-      <td id="T_2cea8_row4_col1" class="data row4 col1" >0.952500</td>
-      <td id="T_2cea8_row4_col2" class="data row4 col2" >0.047500</td>
-    </tr>
-    <tr>
-      <th id="T_2cea8_level0_row5" class="row_heading level0 row5" >5</th>
-      <td id="T_2cea8_row5_col0" class="data row5 col0" >1.680000</td>
-      <td id="T_2cea8_row5_col1" class="data row5 col1" >0.953500</td>
-      <td id="T_2cea8_row5_col2" class="data row5 col2" >0.046500</td>
-    </tr>
-    <tr>
-      <th id="T_2cea8_level0_row6" class="row_heading level0 row6" >6</th>
-      <td id="T_2cea8_row6_col0" class="data row6 col0" >1.690000</td>
-      <td id="T_2cea8_row6_col1" class="data row6 col1" >0.954500</td>
-      <td id="T_2cea8_row6_col2" class="data row6 col2" >0.045500</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.63</span><span class="p">,</span> <span class="mf">1.69</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -506,7 +466,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição Z com área acima de 1.65 destacada.&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/8d39504d65668f8e62e521d67f756fcc15cf53e614ed01eeb880bbef42feb6e0.png" src="../../_images/8d39504d65668f8e62e521d67f756fcc15cf53e614ed01eeb880bbef42feb6e0.png" />
+<img alt="../../_images/d4ac44ae7d545ee0a19c0fc20a477dc8de05a68a5c08af932619676dcd805874.png" src="../../_images/d4ac44ae7d545ee0a19c0fc20a477dc8de05a68a5c08af932619676dcd805874.png" />
 </div>
 </div>
 <p><strong>3</strong> - Identificar a distribuição do estimador e obter sua estimativa.</p>
@@ -793,10 +753,10 @@ Calcule o escore z obtido associado à média amostral obtida.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7e584efa01f0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7a100b52a530&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/72a748ab6f598ec5d0202f1b0e7223801f5f6f1769a700b471ef613be32fc546.png" src="../../_images/72a748ab6f598ec5d0202f1b0e7223801f5f6f1769a700b471ef613be32fc546.png" />
+<img alt="../../_images/76fcfd0f58f22063eb55f8c61ab4c0111a6b6d8d639e0b31849a58ceddb016b0.png" src="../../_images/76fcfd0f58f22063eb55f8c61ab4c0111a6b6d8d639e0b31849a58ceddb016b0.png" />
 </div>
 </div>
 </section>
