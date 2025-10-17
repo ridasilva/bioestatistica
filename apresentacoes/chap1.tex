@@ -23,7 +23,7 @@ citestyle=authoryear
 
 \addbibresource{stats.bib}
 \title[Bioestatística II] %optional
-{Distribuição Amostral da Média}
+{Introdução à Bioestatística}
 
 \subtitle{CGF2046 - Bioestatística II}
 
@@ -270,6 +270,39 @@ Estatística é um conjunto de técnicas para, sistematicamente:
 
 \setbeamercovered{transparent}
 \begin{frame}
+\frametitle{Desenho de estudos\footcite{martinez2015bioestatistica}}
+\begin{center}\includegraphics[width=0.9\linewidth]{figs/desenho_estudos} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Estudos caso-controles}
+De uma mesma população são selecionadas amostras de indivíduos portadores de uma condição (casos) e outra de indivíduos não portadores (controle). Se há maior frequencia de exposição a uma situação entre os indivíduos portadores, temos um indício de que a exposição está relacionada à condição de interesse.
+\begin{center}\includegraphics[width=0.8\linewidth]{figs/caso_controle} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Estudos transversais}
+Seleciona-se uma amostra da população em questão, e posteriormente, verificamos quem é portador ou não da característica de interesse (por exemplo, doença). Objetiva-se obter uma estimativa da proporção de pessoas portadoras da característica. Como todas as informações da amostra são obtidas em um mesmo instante, pode ser difícil entender se a característica de interesse surgiu antes ou depois da exposição.
+\begin{center}\includegraphics[width=0.8\linewidth]{figs/estudos_transversais} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Estudos de coorte}
+Os indivíduos amostados são classificados como expostos ou não a uma situação que pode (ou não) ocasionar um evento específico (como uma doença). Esses individuos são acompanhados durante um período, e se ocorrer um mais eventos entre indivíduos expostos, temos evidências que a exposição pode ocasionar aquele evento.
+\begin{center}\includegraphics[width=0.8\linewidth]{figs/coorte} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Estudos de intervenção}
+Objetiva-se administrar um tipo de intervenção capaz de alterar algum aspecto dos indivíduos, como o estado de saúde. Os estudos podem ser caracterizados como profiláticos ou terapêuticos. Um tipo de intervenção comum é o ensaio controlado aleatorizado, em que os indivíduos elegiveis ao estudo são divididos ao acaso em dois ou mais grupos. O grupo que não recebe a intervenção, ou tratamento, é geralmente denominado grupo controle. Outro tipo de estudo de intervenção é chamado de ensaio de não superioridade, cujo objetivo é entender se a intervenção estudada é tão benéfica quanto outra tradicionalmente utillizada no tratamento de uma condição.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
 \frametitle{Planejamento da coleta de dados}
 \Fontvi
 
@@ -310,16 +343,6 @@ Estatística é um conjunto de técnicas para, sistematicamente:
     \end{itemize}
    }
 
-  \uncover<3->{
-  Coleta de dados observacionais. Exemplos:
-
-  \begin{itemize}
-  \item
-    Presença de seres vivos num ambiente;
-  \item
-    Fenômenos climáticos; Fluxo de usuários em um website.
-  \end{itemize}
-  }
 \end{frame}
 
 
@@ -987,6 +1010,12 @@ $Sum$ & 50 & 1.00 &  \\
 \item
   Seção 1.4: Ex. 1, 3, 5, 9, 19 e 21.
 \end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Referências bibliográficas}
+\printbibliography
 \end{frame}
 
 \end{document}
