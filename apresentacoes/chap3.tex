@@ -1,0 +1,942 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[
+backend=biber,
+style=alphabetic,
+citestyle=authoryear
+]{biblatex}
+
+\newcommand\Fontvi{\fontsize{8}{7.2}\selectfont}
+
+% Footnote without number
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+\newcommand{\comment}[1]{}
+
+\addbibresource{stats.bib}
+\title[Bioestatística II] %optional
+{Variáveis Aleatórias Discretas}
+
+\subtitle{CGF2022 - Bioestatística I}
+
+\author[da Silva, Ricardo] % (optional, for multiple authors)
+{R. ~R. ~da Silva\inst{1}}
+
+\institute[FCFRP] % (optional)
+{
+  \inst{1}%
+  Departamento de Ciências BioMoleculares\\
+  Faculdade de Ciências Farmacêuticas
+
+}
+
+\date{\today} % (optional)
+
+\titlegraphic{\includegraphics[width=5.8cm]{figs/logo_final}} 
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\label{contents}
+\frametitle{Sumário}
+\tableofcontents
+\end{frame}
+
+\section{Introdução}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Resumo}
+\begin{itemize}
+\uncover<1->{
+  \item Fenômeno aleatório: situação ou acontecimento cujos resultados não
+  podem ser previstos com certeza.
+}
+\uncover<2->{
+  \item Espaço amostral: conjunto de todos os resultados possíveis de um
+  fenômeno aleatório, denotado por \(\Omega\).
+}
+\uncover<3->{
+  \item Eventos: subconjuntos de \(\Omega\), denotado por \(A, B, \ldots\).
+}
+\uncover<4->{
+  \item Conjunto vazio: conjunto sem eventos, denotado por \(\emptyset\).
+}
+\uncover<5->{
+  \item União \(A \cup B\): ocorrência de pelo menos um dos eventos A ou B.
+}
+\uncover<6->{
+  \item Intersecção \(A \cap B\): ocorrência simultânea de A e B.
+}
+\uncover<7->{
+  \item Eventos disjuntos ou mutuamente exclusivos: \(A \cap B = \emptyset\).
+}
+\uncover<8->{
+  \item Eventos complementares: \(A \cup A^{c} = \Omega\) e
+  \(A \cap A^{c} = \emptyset\).
+}
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Definição e Notação}
+
+\begin{block}{Definição}
+\begin{itemize}
+\item
+  \textbf{Variável aleatória} - Descrição numérica do resultado de um
+  fenômeno aleatório.
+\end{itemize}
+\end{block}
+
+\begin{block}{Notação}
+\begin{itemize}
+\item
+  \(X\) denota a variável aleatória.
+\item
+  \(x\) denota os valores realizados da v.a.
+\item
+  Probabilidade de \(X\) assumir o valor \(x\) é denotada \(P(X = x)\).
+\end{itemize}
+\end{block}
+
+\begin{block}{Exemplo}
+
+\begin{itemize}
+\item
+  X: Número de alunos em uma sala de aula.
+\item
+  Uma possível realização \(x = 50\).
+\end{itemize}
+\end{block}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Tipos de dados, espaço amostral e v.a}
+
+\begin{itemize}
+\item
+  Tipos de dados
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    Dados na reta real, \(\Omega = \Re\).
+  \item
+    Dados estritamente positivos, \(\Omega = \Re_{+}\).
+  \item
+    Dados positivos com zeros, \(\Omega = \Re_{0} = [0,\infty)\).
+  \item
+    Proporções, \(\Omega = (0,1)\).
+  \item
+    Direções, \(\Omega = [0, 2 \pi)\).
+  \item
+    Contagens, \(\Omega = \mathbb{N}_{0} = \{0,1,2,\ldots \}\).
+  \item
+    Binomial, \(\Omega = = \{0,1,2,\ldots,m \}\).
+  \end{enumerate}
+\item
+  Tipos de espaço amostral
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    \textbf{Espaço amostral Discreto}: Contêm apenas um número finito ou
+    contável de elementos.
+  \item
+    \textbf{Espaço amostral Contínuo}: Contêm um número infinito de
+    elementos.
+  \end{enumerate}
+\item
+  Tipos de variáveis aleatórias
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    Variável aleatória é \textbf{contínua} se seu espaço amostral é
+    contínuo.
+  \item
+    Variável aleatória é \textbf{dicreta} se seu espaço amostral é
+    discreto.
+  \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Descrição probabilística de v.a}
+
+\begin{itemize}
+\item
+  Dada a realização de um experimento aleatório qualquer, com um certo
+  espaço de probabilidade, desejamos estudar a \textbf{estrutura
+  probabilística} de quantidades associadas à esse experimento.
+\item
+  Note que antes da realização de um experimento, \textbf{não sabemos
+  seu resultado}, entretanto seu espaço amostral pode ser estabelecido
+  com precisão.
+\item
+  Podemos atribuir probabilidades aos \emph{eventos} deste espaço
+  amostral, dando origem a idéia de \textbf{distribuição de
+  probabilidade}.
+\item
+  Em geral vamos distinguir a distribuição de probabilidade de v.a's
+  discretas e contínuas.
+\end{itemize}
+\end{frame}
+
+\section{Função de Probabilidade}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Definição}
+
+A \textbf{função de probabilidade} (fp) da v.a discreta \(X\), que
+assume os valores \(x_1, x_2, \ldots, x_n, \ldots\), é a função que
+atribui probabilidades a cada um dos possíveis valores:
+\(\{[x_i, p(x_i)], i = 1, 2, ...\}\), ou seja,
+
+\[
+P[X = x_i] = p(x_i) = p_i, \quad i = 1, 2, \ldots.
+\]
+
+com as seguintes propriedades:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  A probabilidade de cada valor deve estar entre 0 e 1 \[
+  0 \leq p(x_i) \leq 1, \quad i = 1, 2,\ldots .
+  \]
+\item
+  A soma de todas as probabilidades é igual a 1 \[
+  \sum_{i} p(x_i) = 1.
+  \]
+\end{enumerate}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.3}
+
+\begin{block}{Experimento}
+
+Lançamento de duas moedas. \(X\) = número de resultados cara (C).
+
+
+\begin{center}\includegraphics[width=0.6\linewidth]{figs/exp_moedas-crop} \end{center}
+\end{block}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.3}
+
+Podemos montar uma tabela de distribuição de frequência para a variável
+aleatória \(X\) = número de resultados cara (C).
+
+\begin{table}[h]
+  \centering
+    \begin{tabular}{ccc}
+      \hline
+      $X$ & Frequência ($f_i$) & Frequência relativa ($fr_i$) \\
+      \hline
+      0 & 1 & 1/4 \\
+      1 & 2 & 2/4\\
+      2 & 1 & 1/4\\
+      \hline
+      Total & 4 & 1 \\
+      \hline
+    \end{tabular}
+\end{table}
+
+Assim podemos associar a cada valor de \(X\) sua \textbf{probabilidade}
+correspondente, como resultado das \textbf{frequências relativas}.
+\begin{align*}
+P[X=0] &= 1/4 \\
+P[X=1] &= 2/4 = 1/2 \\
+P[X=2] &= 1/4
+\end{align*}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.3}
+
+Dessa forma, a \textbf{distribuição de probabilidade} da variável
+aleatória \(X\) = número de resultados cara (C) é a tabela:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ccc}
+      \hline
+      $X$ & $P[X = x_i] = p(x_i)$ \\
+      \hline
+      0 & 1/4 \\
+      1 & 1/2\\
+      2 & 1/4\\
+      \hline
+      Total & 1 \\
+      \hline
+    \end{tabular}
+\end{table}
+
+Repare que as propriedades da função de probabilidade estão satisfeitas:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  As probabilidades \(p(x_i)\) estão entre 0 e 1.
+\item
+  A soma de todas as probabilidades \(p(x_i)\) é 1.
+\end{enumerate}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.1}
+
+Com dados do último censo, a assistente social de um Centro de Saúde
+constatou que para as famílias da região, \(20\%\) não tem filhos,
+\(30\%\) tem um filho, \(35\%\) tem dois, e as restantes se dividem
+igualmente entre três, quatro ou cinco filhos. Descreva a função de
+probabilidade da v.a \(N\) definida como número de filhos.
+
+\begin{table}[]
+\begin{tabular}{lllllll} \hline
+X      & 0    & 1    & 2    & 3 & 4 & 5 \\ \hline
+P(X=x) & 0.20 & 0.30 & 0.35 & ? & ? & ? \\ \hline
+\end{tabular}
+\end{table}
+
+Porém sabemos que
+\[ \sum_{i=1}^6 P(X = x_i) = 0.20 + 0.30 + 0.35 + x + x + x = 1.\]
+
+\begin{table}[]
+\begin{tabular}{lllllll} \hline
+X      & 0    & 1    & 2    & 3 & 4 & 5 \\ \hline
+P(X=x) & 0.20 & 0.30 & 0.35 & 0.05 & 0.05 & 0.05 \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.2}
+
+Na construção de um certo prédio, as fundações devem atingir \(15\)
+metros de profundidade e, para cada \(5\) metros de estacas colocadas, o
+operador anota se houve alteração no ritmo de perfuração previamente
+estabelecido. Essa alteração é resultado de mudanças para mais ou para
+menos, na resistência do subsolo.
+
+Nos dois casos, medidas corretivas serão necessárias, encarecendo o
+custo da obra. Com base em avaliações geológicas, admite-se que a
+probabilidade de ocorrência de alterações é de \(0.1\) para cada \(5\)
+metros.
+
+O custo básico inicial é de \(100\) UPC (unidade padrão de construção) e
+será acrescida de \(50k\), com \(k\) representando o número de
+alterações observadas. Como se comporta a v.a custo das obras de
+fundações?
+\end{frame}
+
+%\setbeamercovered{transparent}
+%\begin{frame}
+%\frametitle{Exemplo 3.2}
+
+%\begin{center}\includegraphics[width=1.15\linewidth]{figs/Arvore} \end{center}
+%\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.2}
+
+
+\end{frame}
+
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.2}
+
+\begin{itemize}
+\item
+  Construindo a função de probabilidade.
+\item
+  V.a custo da obra.
+\end{itemize}
+
+\begin{table}[]
+\begin{tabular}{lllllll} \hline
+C      & 100     & 150    & 200     & 250 & \\ \hline
+P(C=c) & 0.729 & 0.243  & 0.027 & 0.001  \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Função de distribuição de probabilidade}
+
+\begin{itemize}
+\item
+  Em muitas situações, é útil calcularmos a probabilidade
+  \textbf{acumulada} até um certo valor.
+\item
+  Definimos a \textbf{função de distribuição} ou \textbf{função
+  acumulada de probablidade} de uma v.a \(X\) pela expressão:
+\end{itemize}
+
+\[
+F(x) = P(X \leq x)
+\]
+
+para qualquer número real \(x\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.5}
+
+Uma população de 1000 crianças foi analisada num estudo para determinar
+a efetividade de uma vacina contra um tipo de alergia.
+
+No estudo, as crianças recebiam uma dose da vacina e, após um mês,
+passavam por um novo teste. Caso ainda tivessem tido alguma reação
+alérgica, recebiam outra dose da vacina. Ao fim de 5 doses todas as
+crianças foram consideradas imunizadas.
+
+Os resultados estão na tabela a seguir.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+  \hline
+ & 1 & 2 & 3 & 4 & 5 \\ 
+  \hline
+Freq. & 245 & 288 & 256 & 145 & 66 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+Para uma criança sorteado ao acaso qual a probabilidade dela ter
+recebido \(2\) doses? E até \(2\) doses?
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.5}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+Tabela de frequência:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+  \hline
+ & $n_i$ & $f_i$ & $f_{ac}$ \\ 
+  \hline
+1 & 245 & 0.245 & 0.245 \\ 
+  2 & 288 & 0.288 & 0.533 \\ 
+  3 & 256 & 0.256 & 0.789 \\ 
+  4 & 145 & 0.145 & 0.934 \\ 
+  5 & 66 & 0.066 & 1.000 \\ 
+   \hline
+Sum & 1000 & 1.000 &  \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+
+Grafico de \(F(X)\):
+
+\begin{center}\includegraphics[width=0.99\linewidth]{figs/unnamed-chunk-16-1} \end{center}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.5}
+
+Assim, \[
+F(2) = P(X \leq 2) = P(X = 1) + P(X = 2) = 0,533.
+\] Note que podemos escrever \[
+F(x) = P(X \leq x) = 0,533 \quad \text{para} \quad 2 \leq x < 3.
+\] Função de distribuição \small \[F(x) = \left\{
+  \begin{array}{lr}
+    0 & \text{se } x < 1 \\
+    0,245 & \text{se } 1 \leq x < 2 \\
+    0,533 & \text{se } 2 \leq x < 3 \\
+    0,789 & \text{se } 3 \leq x < 4 \\
+    0,934 & \text{se } 4 \leq x < 5 \\
+    1 & \text{se } x \geq 5
+  \end{array}
+\right.
+\]
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.6}
+
+Num estudo sobre a incidência de câncer foi registrado, para cada
+paciente com esse diagnóstico, o número de casos de câncer em parentes
+próximos (pais, irmãos, tios, filhos, primos e sobrinhos). A
+distribuição de frequência para 26 pacientes é a seguinte:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrr}
+  \hline
+ & 0 & 1 & 2 & 3 & 4 & 5 \\ 
+  \hline
+$n_i$ & 4 & 4 & 6 & 6 & 2 & 4 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+Estudos anteriores assumem que a incidência de câncer em parentes
+próximos pode ser teoricamente modelada pela seguinte função discreta de
+probabilidade:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrr}
+  \hline
+ & 0 & 1 & 2 & 3 & 4 & 5 \\ 
+  \hline
+$p_i$ & 0.1 & 0.1 & 0.3 & 0.3 & 0.1 & 0.1 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+Os dados observados concordam com o modelo teórico?
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.6}
+
+O número de observações de incidência esperado seguindo o modelo teórico
+é calculado como \[e_i = n \times p_i.\]
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrr}
+  \hline
+ & $n_i$ & $e_i$ \\ 
+  \hline
+0 & 4 & 2.6 \\ 
+  1 & 4 & 2.6 \\ 
+  2 & 6 & 7.8 \\ 
+  3 & 6 & 7.8 \\ 
+  4 & 2 & 2.6 \\ 
+  5 & 4 & 2.6 \\ 
+   \hline
+Sum & 26 & 26.0 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+
+\begin{center}\includegraphics[width=0.99\linewidth]{figs/esperado-1} \end{center}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{Distribuições discretas de probabilidade}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Uniforme Discreto}
+
+\textbf{Definição:} Seja \(X\) uma v.a assumindo valores
+\(1, 2, \ldots, k\). Dizemos que \(X\) segue o modelo \textbf{Uniforme
+Discreto} se atribui a mesma probabilidade \(1/k\) a cada um desses
+\(k\) valores.
+
+Então, sua função de probabilidade é dada por \[
+P[X = j] =  \frac{1}{k}, \quad j = 1, 2, \ldots, k.
+\]
+
+\textbf{Notação}: \(X \sim \text{U}_D[1,k]\)
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Uniforme Discreto}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figs/unnamed-chunk-20-1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.7}
+
+Uma rifa tem 100 bilhetes numerados de 1 a 100. Tenho 5 bilhetes
+consecutivos numerados de 21 a 25 e meu colega tem outros 5 bilhetes,
+com os números 1, 11, 29, 68 e 93. Quem tem maior possibilidade de ser
+sorteado?
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Bernoulli}
+
+\textbf{Definição:} Uma variável aleatória \(X\) segue o modelo
+Bernoulli se assume apenas os valores 0 (``fracasso'') ou 1
+(``sucesso''). Sua função de probabilidade é dada por \[
+P[X = x] = p^x (1-p)^{1-x}, \quad \quad x = 0, 1
+\] onde o parâmetro \(0 \leq p \leq 1\) é a probabilidade de sucesso.
+
+\textbf{Notação:} \(X \sim \text{Ber}(p)\)
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Bernoulli}
+
+\begin{center}\includegraphics[width=0.99\linewidth]{figs/unnamed-chunk-21-1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo}
+
+No lançamento de uma moeda, considere cara como o evento de sucesso.
+Qual a probabilidade de sair cara, sendo que \(p = 1/2\)?
+
+\[ X = \left\{
+  \begin{array}{ll}
+    1, & \quad \text{cara}\\
+    0, & \quad \text{coroa}
+\end{array} \right.\]
+
+Temos que
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{ccc}
+    \hline
+    $X$ & $P[X=x]$ & $p = 1/2$ \\
+    \hline
+    0 & $1-p$ & $1/2$ \\
+    1 & $p$ & $1/2$ \\
+    \hline
+  \end{tabular}
+\end{table}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Binomial}
+
+\textbf{Definição:} Seja um experimento realizado dentro das seguintes
+condições:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  São realizados \(n\) ``ensaios'' de Bernoulli independentes.
+\item
+  Cada ensaio só pode ter dois resultados possíveis: ``sucesso'' ou
+  ``fracasso''.
+\item
+  A probabilidade \(p\) de sucesso em cada ensaio é constante.
+\end{enumerate}
+
+Vamos associar a v.a \(X\) o número de sucessos em \(n\) ensaios de
+Bernoulli. Portanto \(X\) poderá assumir os valores \(0, 1, \ldots, n\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Binomial}
+
+Vamos determinar a distribuição de probabilidade de \(X\), através da
+probabilidade de um número genérico \(x\) de sucessos.
+
+Suponha que ocorram sucessos (1) apenas nas \(k\) primeiras provas, e
+fracassos (0) nas \(n-k\) provas restantes \[
+\underbrace{1,1,1,..., 1}_{k}, \underbrace{0,0,0, ..., 0}_{n-k}.
+\] Como as provas são independentes, a probabilidade de ocorrência de
+\(k\) sucessos em \(n\) tentativas é uma extensão do modelo de Bernoulli
+para \(n\) ensaios, ou seja, \[
+\underbrace{p\cdot p\cdot p \cdots p}_{k} \cdot
+\underbrace{(1-p)\cdot (1-p)\cdot (1-p) \cdots (1-p)}_{n-k} =
+ p^k (1-p)^{n-k}.
+\]
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Binomial}
+
+Porém, o evento: ``\(k\) sucessos em \(n\) provas'' pode ocorrer de
+diferentes maneiras (ordens) distintas, todas com a mesma probabilidade.
+
+Como o número de ordens é o número de combinações de \(n\) elementos
+tomados \(k\) a \(k\), então a probabilidade de ocorrerem \(k\) sucessos
+em \(n\) provas de Bernoulli será então a distribuição binomial, dada
+por \[
+P[X = x] = \binom{n}{k} p^k (1-p)^{n-k}, \quad \quad x = 0, 1, \ldots, n
+\] onde \[
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+\] é o \textbf{coeficiente binomial}, que dá o número total de
+combinações possíveis de \(n\) elementos, com \(x\) sucessos.
+
+\textbf{Notação:} \(X \sim B(n,p)\)
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Binomial}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{figs/unnamed-chunk-22-1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Binomial}
+
+\begin{itemize}
+\item
+  As probabilidades são completamente caracterizadas pela informação dos
+  \textbf{parâmetros}.
+\item
+  Por exemplo, para calcular a probabilidade de 3 sucessos de uma
+  \(B(12, 0.4)\) fazemos \[
+  P[X = 3] = \binom{12}{3} 0.4^3 0.6^{9} =
+   \frac{12!}{3!9!} 0.4^3 0.6^{9} = 0.142
+  \] Diversos programas computacionais fazem esse cálculo facilmente.
+  Por exemplo, com o Python.
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.9}
+
+O escore de um teste internacional de proficiência na língua inglesa
+varia de \(0\) a \(700\) pontos, com mais pontos indicando um melhor
+desempenho. Informações, coletadas durante vários anos, permite
+estabelecer o seguinte modelo para o desempenho no teste:
+
+\begin{table}[]
+\centering
+\scriptsize
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+Pontos & $[0,200)$ & $[200,300)$ & $[300,400)$ & $[400,500)$ & $[500,600)$ & $[600,700)$ \\ \hline
+$p_i$   & $0.06$   & $0.15$       & $0.16$       & $0.25$     & $0.28$   & $0.10$        \\ \hline
+\end{tabular}
+\end{table}
+
+Várias universidades americanas, exigem um escore mínimo de \(600\)
+pontos para aceitar candidatos de países de língua não inglesa. De um
+grande grupo de estudantes brasileiros que prestaram o último exame,
+escolhemos ao acaso \(20\) deles. Qual é a probabilidade de no máximo
+\(3\) atenderem ao requisito mínimo?
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.9}
+
+
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Geométrico}
+
+\textbf{Definição:} Considere o número (\(k\)) de ensaios Bernoulli
+\textbf{que precedem o primeiro sucesso}. Nesse caso, dizemos que a v.a
+\(X\) tem distribuição Geométrica de parâmetro \(p\), e sua função de
+probabilidade tem a forma \[
+P(X = k) = p(1-p)^{k}, \quad k = 0, 1, 2, \ldots .
+\] onde \(0 \leq p \leq 1\) é a probabilidade de sucesso.
+
+\textbf{Notação:} \(X \sim \text{G}(p)\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Geométrico}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{figs/unnamed-chunk-27-1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.11}
+
+Uma linha de produção está sendo analisada para efeito de controle da
+qualidade das peças produzidas. Tendo em vista o alto padrão requerido,
+a produção é interrompida para regulagem toda vez que uma peça
+defeituosa é observada. Se \(0.01\) é a probabilidade da peça ser
+defeituosa, estude o comportamento da variável \(Q\), quantidade de
+peças boas produzidas antes da primeira defeituosa.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.11}
+
+\(P(Q = k) = 0.01 \times 0.99^{k}, \quad k = 0, 1, 2, \ldots\)
+
+\begin{center}\includegraphics[width=0.9\linewidth]{figs/unnamed-chunk-28-1} \end{center}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Poisson}
+
+\textbf{Definição:} Seja um experimento realizado nas seguintes
+condições:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  As ocorrências são independentes.
+\item
+  As ocorrências são aleatórias.
+\item
+  A variável aleatória \(X\) é o número de ocorrências de um evento
+  \textbf{ao longo de algum intervalo} (de tempo ou espaço).
+\end{enumerate}
+
+Denominamos esse experimento de \textbf{processo de Poisson}.
+
+Vamos associar a v.a \(X\) o número de ocorrências em um intervalo.
+Portanto \(X\) poderá assumir os valores \(0, 1, \ldots\) (sem limite
+superior).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Poisson}
+
+Uma v.a \(X\) segue o modelo de Poisson se surge a partir de um processo
+de Poisson, e sua \textbf{função de probabilidade} for dada por \[
+P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}, \quad k = 0, 1, 2, \ldots .
+\] onde o parâmetro \(\lambda > 0\) é a taxa média de ocorrências em um
+intervalo de tempo ou espaço.
+
+Notação: \(X \sim P(\lambda)\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Poisson}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{figs/unnamed-chunk-29-1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.12}
+
+A emissão de partículas radioativas têm sido modelada através de uma
+distribuição de Poisson, com o valor do parâmetro dependendo da fonte
+utilizada.
+
+Suponha que o número de partículas alfa, emitidas por minuto, seja uma
+variável aleatória seguindo o modelo Poisson com parâmetro 5, isto é, a
+taxa média de ocorrência é de 5 emissões a cada minuto.
+
+Calcule a probabilidade de haver mais de \(2\) emissões em um minuto.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 3.12}
+
+Note que \(P(A > 2) = 1 - P(A \leq 2)\), portanto \begin{align*}
+P(A > 2) &= \sum_{a = 3}^{\infty} P(A = a) = 1 - P(A \leq 2) \\
+&= 1 - \sum_{a =0}^2 \frac{e^{-5}5^a}{a!} = 0.875
+\end{align*}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo hipergeométrico}
+
+\textbf{Definição:} Considere um conjunto de \(n\) objetos dos quais
+\(m\) são do tipo \(I\) e \(n-m\) são do tipo \(II\). Para um sorteio de
+\(r\) objetos \(r < n\), feito ao acaso e \textbf{sem reposição}, defina
+\(X\) como o número de objetos de tipo \(I\) selecionados.
+
+Diremos que a v.a \(X\) segue o modelo Hipergeométrico e sua função de
+probabilidade é dada por \[
+P[X = k] = \frac{\dbinom{m}{k} \dbinom{n-m}{r-k}}{\dbinom{n}{r}},
+\] onde \(k = \max{\{0, r - (n-m)\}} \leq k \leq \min{\{r, m\}}\).
+
+\textbf{Notação:} \(X \sim \text{HG}(m, n, r)\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo}
+
+Considere que, num lote de 20 peças, existam 4 defeituosas.
+Selecionando-se 5 dessas peças, sem reposição, qual seria a
+probabilidade de 2 defeituosas terem sido escolhidas?
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo}
+
+Pelo enunciado, sabemos que \(n = 20\), \(m = 4\), \(r = 5\). Podemos
+calcular a probabilidade de \(X = 2\) como
+
+\begin{align*}
+P[X = 2] &= \frac{\dbinom{m}{k} \dbinom{n-m}{r-k}}{\dbinom{n}{r}}
+  = \frac{\dbinom{4}{2} \dbinom{20-4}{5-2}}{\dbinom{20}{5}} = 0.217
+\end{align*}
+\end{frame}
+
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exercícios recomendados}
+
+\begin{itemize}
+\item
+  Seção \(3.1\) - \(3,5\).
+\item
+  Seção \(3.2\) - \(2,3,5\) e \(6\).
+\item
+  Seção \(3.3\) - \(1,2,3,4,5\) e \(6\).
+\end{itemize}
+\end{frame}
+
+\end{document}
