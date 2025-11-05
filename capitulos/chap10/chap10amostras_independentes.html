@@ -553,8 +553,8 @@ tarefa? Conclua com <span class="math notranslate nohighlight">\(\alpha = 0.01\)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&lt;matplotlib.axis.XTick at 0x7fd44163ee20&gt;,
-  &lt;matplotlib.axis.XTick at 0x7fd44163edf0&gt;],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&lt;matplotlib.axis.XTick at 0x7bf528cc42b0&gt;,
+  &lt;matplotlib.axis.XTick at 0x7bf528cc4280&gt;],
  [Text(1, 0, &#39;J&#39;), Text(2, 0, &#39;A&#39;)])
 </pre></div>
 </div>
@@ -691,14 +691,14 @@ Variância comum: 4.2602197802197805
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_rel</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span>
 
-<span class="nn">File ~/miniconda3/envs/bioestats/lib/python3.9/site-packages/scipy/stats/_axis_nan_policy.py:531,</span> in <span class="ni">_axis_nan_policy_factory.&lt;locals&gt;.axis_nan_policy_decorator.&lt;locals&gt;.axis_nan_policy_wrapper</span><span class="nt">(***failed resolving arguments***)</span>
+<span class="nn">File /mnt/home/rsilva/Documents/miniconda3/envs/bioestats/lib/python3.9/site-packages/scipy/stats/_axis_nan_policy.py:531,</span> in <span class="ni">_axis_nan_policy_factory.&lt;locals&gt;.axis_nan_policy_decorator.&lt;locals&gt;.axis_nan_policy_wrapper</span><span class="nt">(***failed resolving arguments***)</span>
 <span class="g g-Whitespace">    </span><span class="mi">529</span> <span class="k">if</span> <span class="n">sentinel</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">530</span>     <span class="n">samples</span> <span class="o">=</span> <span class="n">_remove_sentinel</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">paired</span><span class="p">,</span> <span class="n">sentinel</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">531</span> <span class="n">res</span> <span class="o">=</span> <span class="n">hypotest_fun_out</span><span class="p">(</span><span class="o">*</span><span class="n">samples</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">532</span> <span class="n">res</span> <span class="o">=</span> <span class="n">result_to_tuple</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="n">res</span> <span class="o">=</span> <span class="n">_add_reduced_axes</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">reduced_axes</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/bioestats/lib/python3.9/site-packages/scipy/stats/_stats_py.py:7707,</span> in <span class="ni">ttest_rel</span><span class="nt">(a, b, axis, nan_policy, alternative)</span>
+<span class="nn">File /mnt/home/rsilva/Documents/miniconda3/envs/bioestats/lib/python3.9/site-packages/scipy/stats/_stats_py.py:7707,</span> in <span class="ni">ttest_rel</span><span class="nt">(a, b, axis, nan_policy, alternative)</span>
 <span class="g g-Whitespace">   </span><span class="mi">7705</span> <span class="n">nb</span> <span class="o">=</span> <span class="n">_get_len</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="s2">&quot;second argument&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">7706</span> <span class="k">if</span> <span class="n">na</span> <span class="o">!=</span> <span class="n">nb</span><span class="p">:</span>
 <span class="ne">-&gt; </span><span class="mi">7707</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;unequal length arrays&#39;</span><span class="p">)</span>
