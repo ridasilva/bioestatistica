@@ -1,0 +1,1310 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3 - Variáveis Aleatórias Discretas &#8212; Bioestatística</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'capitulos/chap3/chap3';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="5 - A Distribuição Amostral das Médias e z para uma média amostral" href="../chap5/chap5.html" />
+    <link rel="prev" title="2 - Fundamentos de probabilidades" href="../chap2/chap2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Bioestatística - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Bioestatística - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Bem vindo ao livro complementar da Bioestatística
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2/chap2.html">2 - Fundamentos de probabilidades</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3 - Variáveis Aleatórias Discretas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - ANOVA de um fator para amostras independentes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcapitulos/chap3/chap3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/capitulos/chap3/chap3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3 - Variáveis Aleatórias Discretas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo">Resumo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definicao-e-notacao">Definição e Notação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-dados-espaco-amostral-e-v-a">Tipos de dados, espaço amostral e v.a</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descricao-probabilistica-de-v-a">Descrição probabilı́stica de v.a</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definicao">Definição</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-3">Exemplo 3.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exemplo 3.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exemplo 3.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-1">Exemplo 3.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcao-de-distribuicao-de-probabilidade">Função de distribuição de probabilidade</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-5">Exemplo 3.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-uniforme-discreto">Modelo Uniforme Discreto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-bernoulli">Modelo Bernoulli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo">Exemplo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-binomial">Modelo Binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Modelo Binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-geometrico">Modelo Geométrico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-poisson">Modelo Poisson</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-hipergeometrico">Modelo hipergeométrico</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="variaveis-aleatorias-discretas">
+<h1>3 - Variáveis Aleatórias Discretas<a class="headerlink" href="#variaveis-aleatorias-discretas" title="Link to this heading">#</a></h1>
+<p>Este material foi adaptado de <span id="id1">[<a class="reference internal" href="../chap9/chap9.html#id13" title="Marcos Nascimento Magalhães and Antonio Carlos Pedroso de Lima. Noções de probabilidade e estatística. Volume 5. Editora da Universidade de São Paulo, 2002.">MagalhaesdL02</a>]</span>.</p>
+<section id="resumo">
+<h2>Resumo<a class="headerlink" href="#resumo" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fenômeno aleatório: situação ou acontecimento cujos resultados não podem ser previstos com certeza.</p></li>
+<li><p>Espaço amostral: conjunto de todos os resultados possı́veis de um fenômeno aleatório, denotado por Ω.</p></li>
+<li><p>Eventos: subconjuntos de Ω, denotado por A, B, ….</p></li>
+<li><p>Conjunto vazio: conjunto sem eventos, denotado por ∅.</p></li>
+<li><p>União A ∪ B: ocorrência de pelo menos um dos eventos A ou B.</p></li>
+<li><p>Intersecção A ∩ B: ocorrência simultânea de A e B.</p></li>
+<li><p>Eventos disjuntos ou mutuamente exclusivos: A ∩ B = ∅.</p></li>
+<li><p>Eventos complementares: <span class="math notranslate nohighlight">\(A \cup A^c = \Omega\)</span> e <span class="math notranslate nohighlight">\(A \cap A^c = \emptyset\)</span>.</p></li>
+</ul>
+<section id="definicao-e-notacao">
+<h3>Definição e Notação<a class="headerlink" href="#definicao-e-notacao" title="Link to this heading">#</a></h3>
+<p><strong>Definição</strong></p>
+<ul class="simple">
+<li><p>Variável aleatória - Descrição numérica do resultado de um fenômeno aleatório.</p></li>
+</ul>
+<p><strong>Notação</strong></p>
+<ul class="simple">
+<li><p>X denota a variável aleatória.</p></li>
+<li><p>x denota os valores realizados da v.a.</p></li>
+<li><p>Probabilidade de X assumir o valor x é denotada P(X = x).</p></li>
+</ul>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>X: Número de alunos em uma sala de aula.</p></li>
+<li><p>Uma possı́vel realização x = 50.</p></li>
+</ul>
+</section>
+<section id="tipos-de-dados-espaco-amostral-e-v-a">
+<h3>Tipos de dados, espaço amostral e v.a<a class="headerlink" href="#tipos-de-dados-espaco-amostral-e-v-a" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Tipos de dados</p>
+<ul>
+<li><p>Dados na reta real, Ω = ℜ.</p></li>
+<li><p>Dados estritamente positivos, Ω = ℜ+ .</p></li>
+<li><p>Dados positivos com zeros, Ω = ℜ0 = [0, ∞).</p></li>
+<li><p>Proporções, Ω = (0, 1).</p></li>
+<li><p>Direções, Ω = [0, 2π).</p></li>
+<li><p>Contagens, Ω = N0 = {0, 1, 2, …}.</p></li>
+<li><p>Binomial, Ω == {0, 1, 2, … , m}.</p></li>
+</ul>
+</li>
+<li><p>Tipos de espaço amostral</p>
+<ul>
+<li><p>Espaço amostral Discreto: Contêm apenas um número finito ou contável de elementos.</p></li>
+<li><p>Espaço amostral Contı́nuo: Contêm um número infinito de elementos.</p></li>
+</ul>
+</li>
+<li><p>Tipos de variáveis aleatórias</p>
+<ul>
+<li><p>Variável aleatória é contı́nua se seu espaço amostral é contı́nuo.</p></li>
+<li><p>Variável aleatória é dicreta se seu espaço amostral é discreto.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="descricao-probabilistica-de-v-a">
+<h3>Descrição probabilı́stica de v.a<a class="headerlink" href="#descricao-probabilistica-de-v-a" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Dada a realização de um experimento aleatório qualquer, com um certo espaço de probabilidade, desejamos estudar a estrutura
+probabilı́stica de quantidades associadas à esse experimento.</p></li>
+<li><p>Note que antes da realização de um experimento, não sabemos seu resultado, entretanto seu espaço amostral pode ser estabelecido com precisão.</p></li>
+<li><p>Podemos atribuir probabilidades aos eventos deste espaço amostral, dando origem a idéia de distribuição de probabilidade.
+Em geral vamos distinguir a distribuição de probabilidade de v.a’s discretas e contı́nuas.</p></li>
+</ul>
+</section>
+<section id="definicao">
+<h3>Definição<a class="headerlink" href="#definicao" title="Link to this heading">#</a></h3>
+<p>A <strong>função de probabilidade</strong> (fp) da v.a. discreta <span class="math notranslate nohighlight">\(X\)</span>, que assume os valores <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n, \ldots\)</span>, é a função que atribui probabilidades a cada um dos possíveis valores:
+<span class="math notranslate nohighlight">\(\{[x_i, p(x_i)], i = 1, 2, \ldots\}\)</span>, ou seja,</p>
+<p><span class="math notranslate nohighlight">\(P[X = x_i] = p(x_i) = p_i,\quad i = 1,2,\ldots.\)</span></p>
+<p>Com as seguintes propriedades:</p>
+<ol class="arabic simple">
+<li><p>A probabilidade de cada valor deve estar entre 0 e 1:
+$<span class="math notranslate nohighlight">\(
+ 0 \le p(x_i) \le 1,\quad i = 1,2,\ldots.
+ \)</span>$</p></li>
+<li><p>A soma de todas as probabilidades é igual a 1:
+$<span class="math notranslate nohighlight">\(
+ \sum_i p(x_i) = 1.
+ \)</span>$</p></li>
+</ol>
+</section>
+<section id="exemplo-3-3">
+<h3>Exemplo 3.3<a class="headerlink" href="#exemplo-3-3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Experimento
+Lançamento de duas moedas. X = número de resultados cara (C).</p></li>
+</ul>
+<p><img alt="image.png" src="data:image/png;base64,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EZFcLBiIiIiIiEguFgxERERERCQXCwYiIiIiIpKLBQMREREREcnFgoGIiIiIiORiwUBERERERHKxYCAiIiIiIrlYMBARERERkVwsGIiIiIiISC4WDEREREREJBcLBiIiIiIikosFAxERERERycWCgYiIiIiI5GLBQEREREREcrFgICIiIiIiuVgwEBERERGRXCwYiIiIiIhILhYMREREREQkFwsGIiIiIiKSiwUDERERERHJxYKBiIiIiIjkYsFARERERERysWAgIiIiIiK5WDAQEREREZFcLBiIiIiIiEguFgxERERERCQXCwYiIiIiIpKLBQMREREREcnFgoGIiIiIiORiwUBERERERHKxYCAiIiIiIrlYMBARERERkVw6UgcgIiLNuX//PsLDw/Hrr7/i3r17ePToEQwMDFC1alVYWFjA1tYW7du3R+/evWFqavrJ/v7+/rh16xYAYM2aNTAzM1No3LS0NEydOhXJycnQ1tbGwoULUa1aNZV+tuIgKysLERERCA8Px/nz55GQkIDU1FRUqVIFFhYWqFatGlq1agVnZ2fY29sr3G9RzxsRUVHIBEEQpA5BRFQUkZGRcHBwQE5ODmQymdRxiqVXr17B19cXq1evRlZWVoHt7ezscOPGjU/ed3R0xNmzZwEAjx8/hoWFRYF9vX79Gj179sTJkyehpaWFHTt2YMiQIcp/iGIuIiICEyZMwPXr1xVqHxoaisGDB+fbRlXnrazy9PREYmIiwsLCpI5CVKLxCgMRUSl3584ddO3aFffu3QMAVKpUCe7u7mjXrh1q1aqFzMxMPHr0CFFRUdi2bRsePXoEa2trlYz99u1bfPXVV2KxsG3btlJZLMydOxf+/v7i7x06dICrqyvs7OxQoUIFvHz5ElevXsXBgwdx8OBBCIJQ4DGW8rwREb2PBQMRUSl28+ZNtGvXDomJiQCAb7/9FmvXroWRkdEnbXv27Ik5c+Zg06ZNyM7OLvLY6enpcHFxwbFjxyCTyRAUFAQ3N7ci91vcTJw4EStXrgQAWFhYYMeOHejSpcsn7dq2bYtRo0bh8uXL8Pf3R7169eT2KeV5IyL6GAsGIqJSKj09HYMGDRK/dE6ZMgVLlizJdx99fX14enoWeezMzEz0798fhw8fBvDueYcRI0YUud/iZteuXWKxUKVKFZw7dw61a9fOd5/GjRtjz549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" /></p>
+</section>
+<section id="id2">
+<h3>Exemplo 3.3<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Podemos montar uma tabela de distribuição de frequência para a variável
+aleatória X = número de resultados cara (C).</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>X</p></th>
+<th class="head"><p>Frequência (<span class="math notranslate nohighlight">\(n_i\)</span>)</p></th>
+<th class="head"><p>Frequência relativa (<span class="math notranslate nohighlight">\(f_i\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1/4</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>2/4</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1/4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>Assim podemos associar a cada valor de X sua probabilidade
+correspondente, como resultado das frequências relativas.
+<span class="math notranslate nohighlight">\(
+\begin{align*}
+P[X = 0] = 1/4\\
+P[X = 1] = 2/4 = 1/2\\
+P[X = 2] = 1/4
+\end{align*}
+\)</span>$</p>
+</section>
+<section id="id3">
+<h3>Exemplo 3.3<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Dessa forma, a distribuição de probabilidade da variável aleatória X =
+número de resultados cara (C) é a tabela:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>X</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(P[X=x_i]=p(x_i)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1/4</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>2/4</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>1/4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>Repare que as propriedades da função de probabilidade estão satisfeitas:</p>
+<ol class="arabic simple">
+<li><p>As probabilidades <span class="math notranslate nohighlight">\(p(x_i)\)</span> estão entre 0 e 1.</p></li>
+<li><p>A soma de todas as probabilidades <span class="math notranslate nohighlight">\(p(x_i)\)</span> é 1.</p></li>
+</ol>
+</section>
+<section id="exemplo-3-1">
+<h3>Exemplo 3.1<a class="headerlink" href="#exemplo-3-1" title="Link to this heading">#</a></h3>
+<p>Com dados do último censo, a assistente social de um Centro de Saúde constatou que para as famı́lias da região, 20% não tem filhos, 30% tem um filho, 35% tem dois, e as restantes se dividem igualmente entre três, quatro ou cinco filhos. Descreva a função de probabilidade da v.a N definida como número de filhos.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>N</p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>P(N=n)</p></td>
+<td><p>0.2</p></td>
+<td><p>0.3</p></td>
+<td><p>0.35</p></td>
+<td><p>?</p></td>
+<td><p>?</p></td>
+<td><p>?</p></td>
+</tr>
+</tbody>
+</table>
+<p>Porém sabemos que</p>
+<div class="math notranslate nohighlight">
+\[
+P(X = x_i) = 0.20 + 0.30 + 0.35 + x + x + x = 1.
+\]</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>N</p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>P(N=n)</p></td>
+<td><p>0.2</p></td>
+<td><p>0.3</p></td>
+<td><p>0.35</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="funcao-de-distribuicao-de-probabilidade">
+<h3>Função de distribuição de probabilidade<a class="headerlink" href="#funcao-de-distribuicao-de-probabilidade" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Em muitas situações, é útil calcularmos a probabilidade acumulada até um certo valor.</p></li>
+<li><p>Definimos a função de distribuição ou função acumulada de probablidade de uma v.a X pela expressão:</p></li>
+</ul>
+<p>F (x) = P(X ≤ x)</p>
+<p>para qualquer número real x.</p>
+</section>
+<section id="exemplo-3-5">
+<h3>Exemplo 3.5<a class="headerlink" href="#exemplo-3-5" title="Link to this heading">#</a></h3>
+<p>Uma população de 1000 crianças foi analisada num estudo para
+determinar a efetividade de uma vacina contra um tipo de alergia.
+No estudo, as crianças recebiam uma dose da vacina e, após um mês,
+passavam por um novo teste. Caso ainda tivessem tido alguma reação
+alérgica, recebiam outra dose da vacina. Ao fim de 5 doses todas as
+crianças foram consideradas imunizadas.
+Os resultados estão na tabela a seguir.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p> </p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Freq.</p></td>
+<td><p>245</p></td>
+<td><p>288</p></td>
+<td><p>256</p></td>
+<td><p>145</p></td>
+<td><p>66</p></td>
+</tr>
+</tbody>
+</table>
+<p>Para uma criança sorteado ao acaso qual a probabilidade dela ter recebido
+2 doses? E até 2 doses?</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="c1"># Gerato com chatgpt a partir da figura do livro</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># -----------------------------</span>
+<span class="c1"># Dados</span>
+<span class="c1"># -----------------------------</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">ni</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">245</span><span class="p">,</span> <span class="mi">288</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">66</span><span class="p">])</span>
+
+<span class="c1"># -----------------------------</span>
+<span class="c1"># Cálculos</span>
+<span class="c1"># -----------------------------</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">ni</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">fi</span> <span class="o">=</span> <span class="n">ni</span> <span class="o">/</span> <span class="n">total</span>
+<span class="n">fac</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">fi</span><span class="p">)</span>
+
+<span class="c1"># Tabela de frequência</span>
+<span class="n">tabela</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span>
+    <span class="s1">&#39;nᵢ&#39;</span><span class="p">:</span> <span class="n">ni</span><span class="p">,</span>
+    <span class="s1">&#39;fᵢ&#39;</span><span class="p">:</span> <span class="n">fi</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+    <span class="s1">&#39;f_ac&#39;</span><span class="p">:</span> <span class="n">fac</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="c1"># -----------------------------</span>
+<span class="c1"># Plotagem</span>
+<span class="c1"># -----------------------------</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># --- Tabela ---</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Tabela de frequência:&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1"># Criar tabela visual</span>
+<span class="n">col_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;nᵢ&#39;</span><span class="p">,</span> <span class="s1">&#39;fᵢ&#39;</span><span class="p">,</span> <span class="s1">&#39;f_ac&#39;</span><span class="p">]</span>
+<span class="n">table_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">ni</span><span class="p">,</span> <span class="n">fi</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">fac</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)])</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">cellText</span><span class="o">=</span><span class="n">table_data</span><span class="p">,</span> <span class="n">colLabels</span><span class="o">=</span><span class="n">col_labels</span><span class="p">,</span>
+                     <span class="n">rowLabels</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">cellLoc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+<span class="c1"># Ajuste visual</span>
+<span class="n">table</span><span class="o">.</span><span class="n">auto_set_font_size</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">)</span>
+
+<span class="c1"># --- Gráfico de F(X) ---</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fac</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="s1">&#39;post&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fac</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Gráfico de $F(X)$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;F(X)&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># -----------------------------</span>
+<span class="c1"># Exibir tabela no terminal</span>
+<span class="c1"># -----------------------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tabela de frequência:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tabela</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Soma total: n = </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2">, Σfᵢ = </span><span class="si">{</span><span class="n">fi</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/5fbba465a0f74b8d9763ed789a5349f6ff1274dc749d025e450cd6376150aaa7.png" src="../../_images/5fbba465a0f74b8d9763ed789a5349f6ff1274dc749d025e450cd6376150aaa7.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tabela de frequência:
+
+ x  nᵢ    fᵢ  f_ac
+ 1 245 0.245 0.245
+ 2 288 0.288 0.533
+ 3 256 0.256 0.789
+ 4 145 0.145 0.934
+ 5  66 0.066 1.000
+
+Soma total: n = 1000, Σfᵢ = 1.000
+</pre></div>
+</div>
+</div>
+</div>
+<p>Assim,</p>
+<p><span class="math notranslate nohighlight">\(F (2) = P(X ≤ 2) = P(X = 1) + P(X = 2) = 0, 533.\)</span></p>
+<p>Note que podemos escrever</p>
+<p><span class="math notranslate nohighlight">\(F (x) = P(X ≤ x) = 0,533 \quad para\quad 2 ≤ x &lt; 3.\)</span></p>
+<p>Função de distribuição</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F(x) =
+\begin{cases}
+0, &amp; \text{se } x &lt; 1 \\
+0{,}245, &amp; \text{se } 1 \leq x &lt; 2 \\
+0{,}533, &amp; \text{se } 2 \leq x &lt; 3 \\
+0{,}789, &amp; \text{se } 3 \leq x &lt; 4 \\
+0{,}934, &amp; \text{se } 4 \leq x &lt; 5 \\
+1, &amp; \text{se } x \geq 5
+\end{cases}
+\end{split}\]</div>
+</section>
+<section id="modelo-uniforme-discreto">
+<h3>Modelo Uniforme Discreto<a class="headerlink" href="#modelo-uniforme-discreto" title="Link to this heading">#</a></h3>
+<p>Definição: Seja X uma v.a assumindo valores 1, 2, … , k. Dizemos que X segue o modelo Uniforme Discreto se atribui a mesma probabilidade 1/k a cada um desses k valores. Então, sua função de probabilidade é dada por</p>
+<p><span class="math notranslate nohighlight">\(P[X = j] = \frac{1}{k}, j = 1, 2, \ldots , k.\)</span></p>
+<p>Notação: <span class="math notranslate nohighlight">\(X \sim U_D [1, k]\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="c1"># Gerato com chatgpt a partir da figura da apresentação</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Values of k</span>
+<span class="n">k_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+
+<span class="c1"># Create 2x2 subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">k_values</span><span class="p">):</span>
+    <span class="c1"># Define the support of the distribution</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># Each has equal probability 1/k</span>
+    <span class="n">px</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span>
+    
+    <span class="c1"># Plot discrete probabilities</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">px</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;k = </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;P[X = x]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/3e98e734043111ccb211dd5fc36955f33dd411b36a4d09ca0cc34b4e832903c0.png" src="../../_images/3e98e734043111ccb211dd5fc36955f33dd411b36a4d09ca0cc34b4e832903c0.png" />
+</div>
+</div>
+</section>
+<section id="modelo-bernoulli">
+<h3>Modelo Bernoulli<a class="headerlink" href="#modelo-bernoulli" title="Link to this heading">#</a></h3>
+<p>Definição: Uma variável aleatória X segue o modelo Bernoulli se assume apenas os valores 0 (“fracasso”) ou 1 (“sucesso”). Sua função de probabilidade é dada por</p>
+<p><span class="math notranslate nohighlight">\(P[X = x] = p^x (1 − p)^{1−x}, x = 0, 1\)</span></p>
+<p>onde o parâmetro 0 ≤ p ≤ 1 é a probabilidade de sucesso.</p>
+<p>Notação: X ∼ Ber(p)</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="c1"># Gerato com chatgpt a partir da figura da apresentação</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Bernoulli probabilities</span>
+<span class="n">p_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
+
+<span class="c1"># Create 2x2 subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">p_values</span><span class="p">):</span>
+    <span class="c1"># Possible outcomes for a Bernoulli trial</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="c1"># Probabilities for each outcome</span>
+    <span class="n">px</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p</span><span class="p">,</span> <span class="n">p</span><span class="p">])</span>
+    
+    <span class="c1"># Plot the probability mass function</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">px</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p = </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;P[X = x]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/711747b626662f517cde3e9cd393e77cd3a9546af4b413956206506a454a1506.png" src="../../_images/711747b626662f517cde3e9cd393e77cd3a9546af4b413956206506a454a1506.png" />
+</div>
+</div>
+</section>
+<section id="exemplo">
+<h3>Exemplo<a class="headerlink" href="#exemplo" title="Link to this heading">#</a></h3>
+<p>No lançamento de uma moeda, considere cara como o evento de sucesso.
+Qual a probabilidade de sair cara, sendo que p = 1/2?
+$<span class="math notranslate nohighlight">\(
+X =
+\begin{cases}
+1, &amp; cara \\
+0, &amp; coroa
+\end{cases}
+\)</span>$</p>
+<p>Temos que</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>X</p></th>
+<th class="head"><p>P[X = x]</p></th>
+<th class="head"><p>p = 1/2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1−p</p></td>
+<td><p>1/2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>p</p></td>
+<td><p>1/2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="modelo-binomial">
+<h3>Modelo Binomial<a class="headerlink" href="#modelo-binomial" title="Link to this heading">#</a></h3>
+<p><strong>Definição</strong>: Seja um experimento realizado dentro das seguintes condições:</p>
+<ol class="arabic simple">
+<li><p>São realizados n “ensaios” de Bernoulli independentes.</p></li>
+<li><p>Cada ensaio só pode ter dois resultados possı́veis: “sucesso” ou “fracasso”.</p></li>
+<li><p>A probabilidade p de sucesso em cada ensaio é constante.</p></li>
+</ol>
+<p>Vamos associar a v.a X o número de sucessos em n ensaios de Bernoulli. Portanto X poderá assumir os valores 0, 1, … , n.</p>
+<p>Vamos determinar a distribuição de probabilidade de X , através da probabilidade de um número genérico x de sucessos.
+Suponha que ocorram sucessos (1) apenas nas k primeiras provas, e fracassos (0) nas n − k provas restantes</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>1, 1, 1, …, 1,</p></th>
+<th class="head"><p>0, 0, 0, …, 0 .</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>k</p></td>
+<td><p>n−k</p></td>
+</tr>
+</tbody>
+</table>
+<p>Como as provas são independentes, a probabilidade de ocorrência de k sucessos em n tentativas é uma extensão do modelo de Bernoulli para n ensaios, ou seja,</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>p · p · p · · · p ·</p></th>
+<th class="head"><p>(1 − p) · (1 − p) · (1 − p) · · · (1 − p)</p></th>
+<th class="head"><p>= <span class="math notranslate nohighlight">\(p^k(1 − p)^{n−k}\)</span>.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>k</p></td>
+<td><p>n−k</p></td>
+<td><p> </p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h3>Modelo Binomial<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Porém, o evento: ``(k) sucessos em (n) provas’’ pode ocorrer de
+diferentes maneiras (ordens) distintas, todas com a mesma probabilidade.</p>
+<p>Como o número de ordens é o número de combinações de (n) elementos tomados (k) a (k), então a probabilidade de ocorrerem (k) sucessos em (n) provas de Bernoulli será a distribuição binomial, dada por</p>
+<p><span class="math notranslate nohighlight">\(P[X = x] = \binom{n}{k} p^k (1-p)^{n-k}, \quad \quad x = 0, 1, \ldots, n\)</span></p>
+<p>onde
+<span class="math notranslate nohighlight">\(\binom{n}{k} = \frac{n!}{k!(n-k)!}\)</span></p>
+<p>é o <strong>coeficiente binomial</strong>, que dá o número total de combinações possíveis de (n) elementos, com (x) sucessos.</p>
+<p><strong>Notação:</strong> <span class="math notranslate nohighlight">\(X \sim B(n,p)\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="c1"># Gerato com chatgpt a partir da figura da apresentação</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">binom</span>
+
+<span class="c1"># Parameters</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">p_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
+
+<span class="c1"># Create 2x2 subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">p_values</span><span class="p">):</span>
+    <span class="c1"># Support of X</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># Binomial PMF</span>
+    <span class="n">px</span> <span class="o">=</span> <span class="n">binom</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+    
+    <span class="c1"># Plot PMF</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">px</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;n = </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1">, p = </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;P[X = x]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/a3b092f06742735a67466812dcade670e59464d0be31718e8eb64db67aa7e28c.png" src="../../_images/a3b092f06742735a67466812dcade670e59464d0be31718e8eb64db67aa7e28c.png" />
+</div>
+</div>
+</section>
+<section id="modelo-geometrico">
+<h3>Modelo Geométrico<a class="headerlink" href="#modelo-geometrico" title="Link to this heading">#</a></h3>
+<p><strong>Definição</strong>: Considere o número (k) de ensaios Bernoulli <strong>que precedem o primeiro sucesso</strong>. Nesse caso, dizemos que a v.a X tem distribuição Geométrica de parâmetro p, e sua função de probabilidade tem a forma
+<span class="math notranslate nohighlight">\(P(X = k) = p(1 − p)^k\)</span>, k = 0, 1, 2, … .</p>
+<p>onde 0 ≤ p ≤ 1 é a probabilidade de sucesso.</p>
+<p><span class="math notranslate nohighlight">\(Notação\)</span>: X ∼ G(p).</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="c1"># Gerato com chatgpt a partir da figura da apresentação</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">geom</span>
+
+<span class="c1"># Probability values</span>
+<span class="n">p_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
+
+<span class="c1"># Create 2x2 subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">p_values</span><span class="p">):</span>
+    <span class="c1"># Support of X (number of trials until first success)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
+    <span class="c1"># Geometric PMF</span>
+    <span class="n">px</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+    
+    <span class="c1"># Plot</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">px</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p = </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;P[X = x]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/77d74859123b0217185f2a6d647a574d40659691078b82a0aac2bac4bcffef8d.png" src="../../_images/77d74859123b0217185f2a6d647a574d40659691078b82a0aac2bac4bcffef8d.png" />
+</div>
+</div>
+</section>
+<section id="modelo-poisson">
+<h3>Modelo Poisson<a class="headerlink" href="#modelo-poisson" title="Link to this heading">#</a></h3>
+<p><strong>Definição</strong>: Seja um experimento realizado nas seguintes condições:</p>
+<ol class="arabic simple">
+<li><p>As ocorrências são independentes.</p></li>
+<li><p>As ocorrências são aleatórias.</p></li>
+<li><p>A variável aleatória X é o número de ocorrências de um evento <strong>ao longo de algum intervalo</strong> (de tempo ou espaço).</p></li>
+</ol>
+<p>Denominamos esse experimento de <strong>processo de Poisson</strong>.</p>
+<p>Vamos associar a v.a X o número de ocorrências em um intervalo. Portanto X poderá assumir os valores 0, 1, … (sem limite superior).</p>
+<p>Uma v.a (X) segue o modelo de Poisson se surge a partir de um processo
+de Poisson, e sua <strong>função de probabilidade</strong> for dada por</p>
+<p><span class="math notranslate nohighlight">\(P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}, \quad k = 0, 1, 2, \ldots .\)</span></p>
+<p>onde o parâmetro <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span> é a taxa média de ocorrências em um
+intervalo de tempo ou espaço.</p>
+<p>Notação: <span class="math notranslate nohighlight">\(X \sim P(\lambda)\)</span>.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="c1"># Gerato com chatgpt a partir da figura da apresentação</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">poisson</span>
+
+<span class="c1"># λ (lambda) values</span>
+<span class="n">lambda_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+
+<span class="c1"># Create 2x2 subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">lam</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lambda_values</span><span class="p">):</span>
+    <span class="c1"># Support of X</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+    <span class="c1"># Poisson PMF</span>
+    <span class="n">px</span> <span class="o">=</span> <span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lam</span><span class="p">)</span>
+    
+    <span class="c1"># Plot PMF</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">px</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;λ = </span><span class="si">{</span><span class="n">lam</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;P[X = x]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/138745938eec1d67a0a2a6e03386fb4f74c6d2ba13c752bc5a1ceb95f4ada1ea.png" src="../../_images/138745938eec1d67a0a2a6e03386fb4f74c6d2ba13c752bc5a1ceb95f4ada1ea.png" />
+</div>
+</div>
+</section>
+<section id="modelo-hipergeometrico">
+<h3>Modelo hipergeométrico<a class="headerlink" href="#modelo-hipergeometrico" title="Link to this heading">#</a></h3>
+<p><strong>Definição</strong>: Considere um conjunto de n objetos dos quais m são do tipo I e n − m são do tipo II . Para um sorteio de r objetos r &lt; n, feito ao acaso e <strong>sem reposição</strong>, defina X como o número de objetos de tipo I selecionados.</p>
+<p>Diremos que a v.a X segue o modelo Hipergeométrico e sua função de probabilidade é dada por</p>
+<p><span class="math notranslate nohighlight">\(P[X = k] = \frac{\dbinom{m}{k} \dbinom{n-m}{r-k}}{\dbinom{n}{r}}\)</span></p>
+<p>onde <span class="math notranslate nohighlight">\(k = \max{\{0, r - (n-m)\}} \leq k \leq \min{\{r, m\}}\)</span>.</p>
+<p><strong>Notação:</strong> <span class="math notranslate nohighlight">\(X \sim \text{HG}(m, n, r)\)</span>.</p>
+</section>
+</section>
+<section id="pratica-complementar-opcional">
+<h2>Prática complementar OPCIONAL<a class="headerlink" href="#pratica-complementar-opcional" title="Link to this heading">#</a></h2>
+<p>Código python: <a class="reference external" href="http://colab.research.google.com/github/ridasilva/bioestatisca/blob/master/capitulos/chap3/chap3.ipynb"><img alt="Abra com Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Material adicional: <a class="reference external" href="http://colab.research.google.com/github/ridasilva/bioestatisca/blob/master/capitulos/chap3/estudo_dirigido_probabilidades_distribuicoes.ipynb"><img alt="Abra com Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+</section>
+<section id="bibliografia">
+<h2>Bibliografia<a class="headerlink" href="#bibliografia" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id5">
+<div role="list" class="citation-list">
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BM09<span class="fn-bracket">]</span></span>
+<p>Wilton de Oliveira Bussab and Pedro Alberto Morettin. <em>Estatística básica</em>. Saraiva, 2009.</p>
+</div>
+<div class="citation" id="id12" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CW17<span class="fn-bracket">]</span></span>
+<p>Kieth A Carlson and Jennifer R Winquist. <em>An introduction to statistics: An active learning approach</em>. Sage Publications, 2017.</p>
+</div>
+<div class="citation" id="id13" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">MagalhaesdL02</a><span class="fn-bracket">]</span></span>
+<p>Marcos Nascimento Magalhães and Antonio Carlos Pedroso de Lima. <em>Noções de probabilidade e estatística</em>. Volume 5. Editora da Universidade de São Paulo, 2002.</p>
+</div>
+<div class="citation" id="id14" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Mar15<span class="fn-bracket">]</span></span>
+<p>Edson Zangiacomi Martinez. <em>Bioestatística para os cursos de graduação da área da saúde</em>. Blucher São Paulo, 2015.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./capitulos/chap3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../chap2/chap2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">2 - Fundamentos de probabilidades</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chap5/chap5.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5 - A Distribuição Amostral das Médias e z para uma média amostral</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo">Resumo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definicao-e-notacao">Definição e Notação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-dados-espaco-amostral-e-v-a">Tipos de dados, espaço amostral e v.a</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descricao-probabilistica-de-v-a">Descrição probabilı́stica de v.a</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definicao">Definição</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-3">Exemplo 3.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exemplo 3.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exemplo 3.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-1">Exemplo 3.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcao-de-distribuicao-de-probabilidade">Função de distribuição de probabilidade</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-5">Exemplo 3.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-uniforme-discreto">Modelo Uniforme Discreto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-bernoulli">Modelo Bernoulli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo">Exemplo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-binomial">Modelo Binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Modelo Binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-geometrico">Modelo Geométrico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-poisson">Modelo Poisson</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-hipergeometrico">Modelo hipergeométrico</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ricardo R. da Silva
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

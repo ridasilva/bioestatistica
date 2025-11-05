@@ -15,25 +15,31 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import scipy.stats
-
-def mean_confidence_interval(data, confidence=0.95):
-    a = 1.0 * np.array(data)
-    n = len(a)
-    m, se = np.mean(a), scipy.stats.sem(a)
-    h = se * scipy.stats.t.ppf((1 + confidence) / 2., n-1)
-    return m, m-h, m+h
+scipy.mean(data)
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 2[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
-[0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mstats[39;00m
-[1;32m      4[0m [38;5;28;01mdef[39;00m [38;5;21mmean_confidence_interval[39m(data, confidence[38;5;241m=[39m[38;5;241m0.95[39m):
-[1;32m      5[0m     a [38;5;241m=[39m [38;5;241m1.0[39m [38;5;241m*[39m np[38;5;241m.[39marray(data)
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+File [0;32m~/miniconda3/envs/bioestats/lib/python3.9/site-packages/scipy/__init__.py:137[0m, in [0;36m__getattr__[0;34m(name)[0m
+[1;32m    136[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 137[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mglobals[39;49m[43m([49m[43m)[49m[43m[[49m[43mname[49m[43m][49m
+[1;32m    138[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m:
 
-[0;31mModuleNotFoundError[0m: No module named 'scipy'
+[0;31mKeyError[0m: 'mean'
+
+During handling of the above exception, another exception occurred:
+
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+Cell [0;32mIn[3], line 1[0m
+[0;32m----> 1[0m [43mscipy[49m[38;5;241;43m.[39;49m[43mmean[49m(data)
+
+File [0;32m~/miniconda3/envs/bioestats/lib/python3.9/site-packages/scipy/__init__.py:139[0m, in [0;36m__getattr__[0;34m(name)[0m
+[1;32m    137[0m     [38;5;28;01mreturn[39;00m [38;5;28mglobals[39m()[name]
+[1;32m    138[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m:
+[0;32m--> 139[0m     [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m(
+[1;32m    140[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mModule [39m[38;5;124m'[39m[38;5;124mscipy[39m[38;5;124m'[39m[38;5;124m has no attribute [39m[38;5;124m'[39m[38;5;132;01m{[39;00mname[38;5;132;01m}[39;00m[38;5;124m'[39m[38;5;124m"[39m
+[1;32m    141[0m     )
+
+[0;31mAttributeError[0m: Module 'scipy' has no attribute 'mean'
 

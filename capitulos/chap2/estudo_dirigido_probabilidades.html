@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Revisão de conceitos de estatística e exercícios de probabilidades &#8212; Bioestatística</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'capitulos/chap2/estudo_dirigido_probabilidades';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Bioestatística - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Bioestatística - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Bem vindo ao livro complementar da Bioestatística
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap2.html">2 - Fundamentos de probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3/chap3.html">3 - Variáveis Aleatórias Discretas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - ANOVA de um fator para amostras independentes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcapitulos/chap2/estudo_dirigido_probabilidades.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/capitulos/chap2/estudo_dirigido_probabilidades.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Revisão de conceitos de estatística e exercícios de probabilidades</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulas-basicas-da-estatistica">Fórmulas básicas da estatística</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#somatorio">Somatório</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produtorio">Produtório</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutacoes-e-combinacoes">Permutações e combinações</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordens-possiveis">Ordens possíveis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regra-de-multiplicacao">Regra de multiplicação</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permutacoes">Permutações</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combinacoes">Combinações</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perguntas">Perguntas</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="revisao-de-conceitos-de-estatistica-e-exercicios-de-probabilidades">
+<h1>Revisão de conceitos de estatística e exercícios de probabilidades<a class="headerlink" href="#revisao-de-conceitos-de-estatistica-e-exercicios-de-probabilidades" title="Link to this heading">#</a></h1>
+<p>Durante o curso de Bioestatística o conhecimento de alguns conceitos básicos é assumido, e muitas vezes o aprendizado ou revisão desses conceitos facilita o entendimento dos tópicos do curso de Bioestatística.</p>
+<section id="formulas-basicas-da-estatistica">
+<h2>Fórmulas básicas da estatística<a class="headerlink" href="#formulas-basicas-da-estatistica" title="Link to this heading">#</a></h2>
+<section id="somatorio">
+<h3>Somatório<a class="headerlink" href="#somatorio" title="Link to this heading">#</a></h3>
+<p>Em matemática, <a class="reference external" href="https://pt.wikipedia.org/wiki/Somat%C3%B3rio">somatório ou somatória</a> é a adição de uma sequência de quaisquer tipos de números, chamados parcelas ou somando; o resultado é sua soma ou total.</p>
+<p>A notação matemática utiliza um símbolo para representar de forma compacta o somatório de vários termos similares: o símbolo de somatório, <span class="math notranslate nohighlight">\(\Sigma\)</span>, uma forma ampliada da letra grega maiúscula sigma. Ele é definido como</p>
+<p><span class="math notranslate nohighlight">\(\sum_{i=m}^n x_i = x_m+x_{m+1}+x_{m+2}+\ldots+x_{n-1}+x_{n}\)</span></p>
+<p>em que <em>i</em> é o índice do somatório; <span class="math notranslate nohighlight">\(x_i\)</span> é uma variável indexada que representa cada termo do somatório; <em>m</em> é o índice inicial (ou limite inferior), e <em>n</em> é o índice final (ou limite superior). A expressão <em>“i = m”</em> sob o símbolo de somatório significa que o índice <em>i</em> começa igual a <em>m</em>. O índice <em>i</em> é incrementado em uma unidade a cada termo subsequente, terminando quando <em>i = n</em>.</p>
+</section>
+<section id="produtorio">
+<h3>Produtório<a class="headerlink" href="#produtorio" title="Link to this heading">#</a></h3>
+<p>Em matemática, <a class="reference external" href="https://pt.wikipedia.org/wiki/Produt%C3%B3rio">produtório</a> é a multiplicação de uma sequência de objetos matemáticos (números, funções, vetores, matrizes, etc.), chamados fatores, que tem como resultado o seu produto.</p>
+<p>A notação utilizada para representar o produtório de termos similares é o pi maiúsculo <span class="math notranslate nohighlight">\(\Pi\)</span>. Dada uma sequência <span class="math notranslate nohighlight">\(\{ x_k \}_{k \in \mathbb {N}}\)</span>, o produtório é definido como:</p>
+<p><span class="math notranslate nohighlight">\(\prod_{i=m}^n x_i = x_m\times x_{m+1}\times x_{m+2}\times \ldots\times x_{n-1}\times x_{n}\)</span></p>
+<p>Onde <em>i</em> é o índice do produtório; <span class="math notranslate nohighlight">\(x_i\)</span> é uma variável indexada que representa cada termo do produtório; <em>m</em> é o índice inicial (ou limite inferior), e <em>n</em> é o índice final (ou limite superior). O índice <em>i</em> começa igual ao limite inferior <em>m</em> e é acrescido em uma unidade a cada fator iterativo subsequente, até que <em>i</em> atinja o limite superior <em>n</em> (<em>“i = n”</em>). A partir dessa definição, deduz-se que <span class="math notranslate nohighlight">\(i \in [m,n]\)</span>.</p>
+</section>
+</section>
+<section id="permutacoes-e-combinacoes">
+<h2>Permutações e combinações<a class="headerlink" href="#permutacoes-e-combinacoes" title="Link to this heading">#</a></h2>
+<p>Autor(es)
+David M. Lane - Traduzido do <a class="reference external" href="https://onlinestatbook.com/2/probability/permutations.html">OnlineStatBook</a></p>
+<p>Pré-requisitos:
+Nenhum</p>
+<p>Objetivos de aprendizagem</p>
+<ul class="simple">
+<li><p>Calcular a probabilidade de dois eventos independentes ocorrerem</p></li>
+<li><p>Definir permutações e combinações</p></li>
+<li><p>Listar todas as permutações e combinações</p></li>
+<li><p>Aplicar fórmulas para permutações e combinações</p></li>
+</ul>
+<p>Esta seção aborda fórmulas básicas para determinar o número de vários tipos possíveis de resultados. Os tópicos abordados são: (1) contar o número de ordens possíveis, (2) contar usando a regra de multiplicação, (3) contar o número de permutações e (4) contar o número de combinações.</p>
+<section id="ordens-possiveis">
+<h3>Ordens possíveis<a class="headerlink" href="#ordens-possiveis" title="Link to this heading">#</a></h3>
+<p>Suponha que você tenha um prato com três pedaços de doce: um verde, um amarelo e um vermelho. Você vai pegar esses três pedaços um de cada vez. A questão é: em quantas ordens diferentes você consegue pegar os pedaços? A Tabela 1 lista todas as ordens possíveis. Existem duas ordens em que o vermelho é o primeiro: vermelho, amarelo, verde e vermelho, verde, amarelo. Da mesma forma, há duas ordens em que o amarelo é o primeiro e duas ordens em que o verde é o primeiro. Isso faz seis ordens possíveis nas quais as peças podem ser pegas.</p>
+<p>Tabela 1. Seis ordens possíveis.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Número</p></th>
+<th class="head"><p>Primeiro</p></th>
+<th class="head"><p>Segundo</p></th>
+<th class="head"><p>Terceiro</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>vermelho</p></td>
+<td><p>amarelo</p></td>
+<td><p>verde</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>vermelho</p></td>
+<td><p>verde</p></td>
+<td><p>amarelo</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>amarelo</p></td>
+<td><p>vermelho</p></td>
+<td><p>verde</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>amarelo</p></td>
+<td><p>verde</p></td>
+<td><p>vermelho</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>verde</p></td>
+<td><p>vermelho</p></td>
+<td><p>amarelo</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>verde</p></td>
+<td><p>amarelo</p></td>
+<td><p>vermelho</p></td>
+</tr>
+</tbody>
+</table>
+<p>A fórmula para o número de ordens é mostrada abaixo.</p>
+<p>Número de ordens = <span class="math notranslate nohighlight">\(n!\)</span></p>
+<p>onde n é o número de peças a serem pegas. O símbolo “!” significa fatorial. Alguns exemplos são:</p>
+<p><span class="math notranslate nohighlight">\(3! = 3 \times 2 \times 1 = 6\)</span></p>
+<p><span class="math notranslate nohighlight">\(4! = 4 \times 3 \times 2 \times 1 = 24\)</span></p>
+<p><span class="math notranslate nohighlight">\(5! = 5 \times 4 \times 3 \times 2 \times 1 = 120\)</span></p>
+<p>Isso significa que se houvesse 5 doces para serem pegos, eles poderiam ser pegos em qualquer uma das 5! = 120 ordens.</p>
+<p><strong>Obs: 0! = 1</strong></p>
+<section id="regra-de-multiplicacao">
+<h4>Regra de multiplicação<a class="headerlink" href="#regra-de-multiplicacao" title="Link to this heading">#</a></h4>
+<p>Imagine um pequeno restaurante cujo menu tem 3 sopas, 6 pratos principais e 4 sobremesas. Quantas refeições possíveis existem? A resposta é calculada multiplicando os números para obter 3 x 6 x 4 = 72. Você pode pensar nisso como se primeiro houvesse uma escolha entre 3 sopas. Então, para cada uma dessas escolhas, há uma escolha entre 6 pratos principais, resultando em 3 x 6 = 18 possibilidades. Então, para cada uma dessas 18 possibilidades, há 4 sobremesas possíveis, resultando em 18 x 4 = 72 possibilidades totais.</p>
+</section>
+</section>
+<section id="permutacoes">
+<h3>Permutações<a class="headerlink" href="#permutacoes" title="Link to this heading">#</a></h3>
+<p>Suponha que houvesse quatro pedaços de doce (vermelho, amarelo, verde e marrom) e você só fosse pegar exatamente dois pedaços. Quantas maneiras existem de pegar dois pedaços? A Tabela 2 lista todas as possibilidades. A primeira escolha pode ser qualquer uma das quatro cores. Para cada uma dessas 4 primeiras escolhas, há 3 segundas escolhas. Portanto, há 4 x 3 = 12 possibilidades.</p>
+<p>Tabela 2. Doze Ordens Possíveis.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Número</p></th>
+<th class="head"><p>Primeiro</p></th>
+<th class="head"><p>Segundo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>vermelho</p></td>
+<td><p>amarelo</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>vermelho</p></td>
+<td><p>verde</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>vermelho</p></td>
+<td><p>marrom</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>amarelo</p></td>
+<td><p>vermelho</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>amarelo</p></td>
+<td><p>verde</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>amarelo</p></td>
+<td><p>marrom</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>verde</p></td>
+<td><p>vermelho</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>verde</p></td>
+<td><p>amarelo</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>verde</p></td>
+<td><p>marrom</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>marrom</p></td>
+<td><p>vermelho</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>marrom</p></td>
+<td><p>amarelo</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>marrom</p></td>
+<td><p>verde</p></td>
+</tr>
+</tbody>
+</table>
+<p>Mais formalmente, esta questão está pedindo o número de permutações de quatro coisas tomadas duas de cada vez. A fórmula geral é:</p>
+<p><span class="math notranslate nohighlight">\(_{r}^{n}\textrm{P}=\frac{n!}{(n-r)!}\)</span></p>
+<p>onde <span class="math notranslate nohighlight">\(_{r}^{n}\textrm{P}\)</span> é o número de permutações de <em>n</em> coisas tomadas <em>r</em> de cada vez. Em outras palavras, é o número de maneiras pelas quais <em>r</em> coisas podem ser selecionadas de um grupo de <em>n</em> coisas. Neste caso,</p>
+<p><span class="math notranslate nohighlight">\(_{r}^{n}\textrm{P}=\frac{4!}{(4-2)!}= \frac{4\times 3\times 2\times 1}{2\times 1}=12\)</span></p>
+<p>É importante notar que a ordem conta em permutações. Ou seja, escolher vermelho e depois amarelo é contado separadamente de escolher amarelo e depois vermelho. Portanto, permutações referem-se ao número de maneiras de escolher em vez do número de resultados possíveis. Quando a ordem de escolha não é considerada, a fórmula para combinações é usada.</p>
+</section>
+<section id="combinacoes">
+<h3>Combinações<a class="headerlink" href="#combinacoes" title="Link to this heading">#</a></h3>
+<p>Agora, suponha que você não estava preocupado com a forma como os pedaços de doce foram escolhidos, mas apenas com as escolhas finais. Em outras palavras, com quantas combinações diferentes de dois pedaços você poderia acabar? Ao contar combinações, escolher vermelho e depois amarelo é o mesmo que escolher amarelo e depois vermelho porque em ambos os casos você acaba com um pedaço vermelho e um pedaço amarelo. Ao contrário das permutações, a ordem não conta. A Tabela 3 é baseada na Tabela 2, mas é modificada para que combinações repetidas recebam um “x” em vez de um número. Por exemplo, “amarelo e depois vermelho” tem um “x” porque a combinação de vermelho e amarelo já estava incluída como escolha número 1. Como você pode ver, há seis combinações das três cores.</p>
+<p>Tabela 3. Seis combinações.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Número</p></th>
+<th class="head"><p>Primeiro</p></th>
+<th class="head"><p>Segundo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>vermelho</p></td>
+<td><p>amarelo</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>vermelho</p></td>
+<td><p>verde</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>vermelho</p></td>
+<td><p>marrom</p></td>
+</tr>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>amarelo</p></td>
+<td><p>vermelho</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>amarelo</p></td>
+<td><p>verde</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>amarelo</p></td>
+<td><p>marrom</p></td>
+</tr>
+<tr class="row-even"><td><p>x</p></td>
+<td><p>verde</p></td>
+<td><p>vermelho</p></td>
+</tr>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>verde</p></td>
+<td><p>amarelo</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>verde</p></td>
+<td><p>marrom</p></td>
+</tr>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>marrom</p></td>
+<td><p>vermelho</p></td>
+</tr>
+<tr class="row-even"><td><p>x</p></td>
+<td><p>marrom</p></td>
+<td><p>amarelo</p></td>
+</tr>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>marrom</p></td>
+<td><p>verde</p></td>
+</tr>
+</tbody>
+</table>
+<p>A fórmula para o número de combinações é mostrada abaixo, onde <span class="math notranslate nohighlight">\(_{r}^{n}\textrm{C}\)</span> é o número de combinações para <em>n</em> coisas tomadas <em>r</em> de cada vez.</p>
+<p><span class="math notranslate nohighlight">\(_{r}^{n}\textrm{C}=\frac{n!}{(n-r)!r!}\)</span></p>
+<p>Para nosso exemplo,</p>
+<p><span class="math notranslate nohighlight">\(_{r}^{n}\textrm{C}=\frac{4!}{(4-2)!2!}=\frac{4\times 3\times 2\times 1}{(2\times 1)(2\times 1)}=6\)</span></p>
+<p>que é consistente com a Tabela 3.</p>
+<br >
+<br >
+<p>Como um exemplo de aplicação, suponha que houvesse seis tipos de coberturas que alguém poderia pedir para uma pizza. Quantas combinações de exatamente 3 coberturas poderiam ser pedidas? Aqui <em>n = 6</em>, pois há 6 coberturas e <em>r = 3</em>, pois estamos pegando 3 de cada vez. A fórmula é então:</p>
+<p><span class="math notranslate nohighlight">\(_{r}^{n}\textrm{C}=\frac{6!}{(6-3)!3!}=\frac{6\times 5\times 4\times 3\times 2\times 1}{(3\times 2\times 1)(3\times 2\times 1)}=20\)</span></p>
+</section>
+<section id="perguntas">
+<h3>Perguntas<a class="headerlink" href="#perguntas" title="Link to this heading">#</a></h3>
+<p>1 - Dado o conjunto de dados <em>{2, 4, 6, 8, 10}</em>, calcule:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{i=1}^5 2x_i\)</span></p>
+<p>2 - Calcule para <em>n=5</em>:</p>
+<p><span class="math notranslate nohighlight">\(\prod_{i=1}^5 i\)</span></p>
+<p>3 - A ordem é levada em conta em:</p>
+<p>A) Permutações;</p>
+<p>B) Combinações.</p>
+<p>4 - Uma pizzaria tem 5 tipos de coberturas. Você vai escolher 2 coberturas. Quantos <em>conjuntos possíveis</em> de 2 coberturas existem para você escolher?</p>
+<p>5 - Você joga uma moeda e então rola um dado. Qual é a probabilidade de obter cara na moeda e 4 no dado?</p>
+<p>6 - Você vai selecionar os prêmios de primeiro e segundo lugar entre 5 inscrições. Quantos resultados possíveis existem?</p>
+<p>7 - (Questão fictícia) Um estudo feito com 13.060 voluntários, buscou averiguar a eficácia de uma vacina nacional. O delineamento do grupo de participantes desse estudo está representado na tabela abaixo. As colunas, da esquerda para a direita, representam o início do estudo, onde os critérios de inclusão e exclusão foram realizados; em seguida, o número de participantes que foram infectados; o número de infectados que desenvolveram sintomas leves e, por fim, o número de infectados com sintomas moderados a graves.</p>
+<p>Delineamento dos voluntários do estudo</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Grupo</p></th>
+<th class="head"><p>Recrutados (total)</p></th>
+<th class="head"><p>Infectados</p></th>
+<th class="head"><p>Infectados com Sintomas leves</p></th>
+<th class="head"><p>Infectados com Sintomas moderados a graves</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Placebo</p></td>
+<td><p>6530</p></td>
+<td><p>167</p></td>
+<td><p>138</p></td>
+<td><p>37</p></td>
+</tr>
+<tr class="row-odd"><td><p>Intervenção</p></td>
+<td><p>6530</p></td>
+<td><p>87</p></td>
+<td><p>68</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>Total</p></td>
+<td><p>13060</p></td>
+<td><p>254</p></td>
+<td><p>206</p></td>
+<td><p>37</p></td>
+</tr>
+</tbody>
+</table>
+<p>Pede-se:</p>
+<p>a) Qual a probabilidade de um voluntário deste estudo amostrado ao acaso ser infectado?</p>
+<p>b) Qual a probabilidade de desenvolver sintomas graves a moderados sabendo que é do grupo placebo?</p>
+<p>c) Sabendo-se que o voluntário é do grupo intervenção, qual a probabilidade de desenvolver sintomas graves?</p>
+<p>8 - Utilizando diagramas de venn, demonstre:</p>
+<p>a) <span class="math notranslate nohighlight">\((A \cap B)^c = A^c \cup B^c\)</span></p>
+<p>b)  <span class="math notranslate nohighlight">\((A \cup B)^c = A^c \cap B^c\)</span></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./capitulos/chap2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulas-basicas-da-estatistica">Fórmulas básicas da estatística</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#somatorio">Somatório</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produtorio">Produtório</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutacoes-e-combinacoes">Permutações e combinações</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordens-possiveis">Ordens possíveis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regra-de-multiplicacao">Regra de multiplicação</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permutacoes">Permutações</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combinacoes">Combinações</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perguntas">Perguntas</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ricardo R. da Silva
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
