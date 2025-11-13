@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introdução &#8212; Bioestatística</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'capitulos/chap4/chap4_converted';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Bioestatística - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Bioestatística - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Bem vindo ao livro complementar da Bioestatística
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2/chap2.html">2 - Fundamentos de probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3/chap3.html">3 - Variáveis Aleatórias Discretas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap4.html">4 - Medidas Resumo</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - ANOVA de um fator para amostras independentes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcapitulos/chap4/chap4_converted.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/capitulos/chap4/chap4_converted.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introdução</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introdução</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-posicao">Medidas de posição</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-dispersao">Medidas de dispersão</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>}</p>
+<p>}</p>
+<p>{Medidas Resumo}</p>
+<p>{R. ~R. ~da Silva}</p>
+<p>{</p>
+<p>Departamento de Ciências BioMoleculares\
+Faculdade de Ciências Farmacêuticas</p>
+<p>}</p>
+<p>}</p>
+<section id="introducao">
+<h1>Introdução<a class="headerlink" href="#introducao" title="Link to this heading">#</a></h1>
+<p>Características importantes de qualquer conjunto de dados ou de uma
+variável aleatória</p>
+<p>Centro</p>
+<p>Variação</p>
+<p>Distribuição</p>
+<p>Valores atípicos</p>
+<p>Características importantes de qualquer conjunto de dados ou de uma
+variável aleatória</p>
+<p>Centro</p>
+<p>Variação</p>
+<p>Distribuição</p>
+<p>Valores atípicos</p>
+<p>Classificaremos as medidas descritivas em dois grupos</p>
+<p>de posição</p>
+<p>de dispersão</p>
+</section>
+<section id="medidas-de-posicao">
+<h1>Medidas de posição<a class="headerlink" href="#medidas-de-posicao" title="Link to this heading">#</a></h1>
+<p>medidas de posição central</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>úteis para  e  de dados
+
+  Média, Mediana, Moda
+</pre></div>
+</div>
+<p>outras medidas de posição</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>extremos: mínimo, máximo
+
+quantis: 1$$^$$ quartil, 3$$^$$ quartil, percentil 5\%,
+entre outras
+</pre></div>
+</div>
+<p>Valor  em um conjunto de dados</p>
+<p>Dependendo do conjunto de dados, ele pode ser</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> quando nenhum valor se repete
+
+ quando existe apenas um valor repetido com maior
+frequência
+
+ quando existem dois valores com a mesma maior
+frequência
+
+ quando mais de dois valores se repetem com a
+mesma frequência
+</pre></div>
+</div>
+<p>Valor  em um conjunto de dados</p>
+<p>Dependendo do conjunto de dados, ele pode ser</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> quando nenhum valor se repete
+
+ quando existe apenas um valor repetido com maior
+frequência
+
+ quando existem dois valores com a mesma maior
+frequência
+
+ quando mais de dois valores se repetem com a
+mesma frequência
+</pre></div>
+</div>
+<p>Valor com  de ocorrer numa</p>
+<p>Ex.: lançamento de duas moedas</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$$X$$: número de caras, $$X = \{0, 1, 2\}$$
+
+$$P(x)$$ = $$0.25$$, $$0.5$$ e $$0.25$$, respectivamente
+
+moda: 1
+</pre></div>
+</div>
+<p>O  da amostra</p>
+<p>Separa o conjunto de dados em duas partes iguais, 50% abaixo e 50%
+acima</p>
+<p>Observações ordenadas:</p>
+<p>a menor observação por $<span class="math notranslate nohighlight">\(x_{(1)}\)</span><span class="math notranslate nohighlight">\(, a segunda por \)</span><span class="math notranslate nohighlight">\(x_{(2)}\)</span>$, e assim
+por diante: [
+x_{(1)}  x_{(2)}  ,  ,  x_{(n-1)}  x_{(n)}
+]</p>
+<p>As observações odenadas são chamadas de</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}x_{(1)}$$ é o mínimo da amostra\\  $$x_{(n)}$$ é o máximo da amostra\\Divide-se a soma de todos os dados pelo número total deles:\\\[
+_{obs} =  = ^n
+x_i}{n}.
+\]\\Soma dos produtos dos valores pelas respectivas frequências e divide
+pela frequência total\\\[
+_{obs} =  = ^k n_i x_i}{n}.
+\]\\Considere a tabela de frequência abaixo:\\[h]\\\begin{split}       &amp;  &amp;  \\
+      
+      0 &amp; 4 &amp; 0,20 \\
+      1 &amp; 5 &amp; 0,25 \\
+      2 &amp; 7 &amp; 0,35 \\
+      3 &amp; 3 &amp; 0,15 \\
+      5 &amp; 1 &amp; 0,05 \\
+      
+       &amp; 20 &amp; 1 \\\end{split}\\\begin{split}A média é calculada por: 
+_{obs} &amp;= \\
+  &amp;=  \\
+  &amp;= 1,65\end{split}\\Usar  de cada classe e respectivas frequências\\[h]\\\begin{split}       &amp;  &amp;  &amp;
+     \\
+      
+      $[4,8)$ &amp; 6 &amp; 10 &amp; 0,278 \\
+      $[8,12)$ &amp; 10 &amp; 12 &amp; 0,333 \\
+      $[12,16)$ &amp; 14 &amp; 8 &amp; 0,222 \\
+      $[16,20)$ &amp; 18 &amp; 5 &amp; 0,139 \\
+      $[20,24)$ &amp; 22 &amp; 1 &amp; 0,028 \\
+      
+       &amp; 36 &amp; 1 \\\end{split}\\\begin{split}Considerando os  de cada classe, a média é
+calculada por 
+_{obs} &amp;= \\
+  &amp;=  \\
+  &amp;= 11,22\end{split}\\Suponha que parafusos a serem utilizados em tomadas elétricas são
+embalados em caixas rotuladas como contendo $$100$$ unidades. Em uma
+construção, $$10$$ caixas de um lote tiveram o número de parafusos
+contados, fornecendo os valores:\\$$98$$, $$102$$, $$100$$, $$100$$, $$99$$, $$97$$, $$96$$, $$95$$,
+$$99$$ e $$100\end{aligned}\end{align} \]</div>
+<p>Calcular média, mediana e moda.</p>
+<div class="math notranslate nohighlight">
+\[_{obs} = 98.6.\]</div>
+<div class="math notranslate nohighlight">
+\[md_{obs} = 99.\]</div>
+<div class="math notranslate nohighlight">
+\[mo_{obs} = 100.\]</div>
+<p>Notar a influência de valores extremos na média (se ao invés de 95, o
+valor fosse 45):</p>
+<p><span class="math notranslate nohighlight">\(   \)</span>
+<span class="math notranslate nohighlight">\(_{obs} = 98,6\)</span> e <span class="math notranslate nohighlight">\(Md = 99\)</span></p>
+<p><span class="math notranslate nohighlight">\(   \)</span>
+<span class="math notranslate nohighlight">\(_{obs} = 93,6\)</span> e <span class="math notranslate nohighlight">\(Md = 99\)</span></p>
+<p>Devido a esse fato, a mediana é uma medida de posição central
+, ou seja, .</p>
+<p>Um estudante está procurando um estágio para o próximo ano. As
+companhias A e B têm programas de estágios e oferecem uma remuneração
+por $<span class="math notranslate nohighlight">\(20\)</span>$ horas semanais com as seguintes características.</p>
+<p>Companhia   &amp; A     &amp; B  \
+média       &amp; <span class="math notranslate nohighlight">\(2,5\)</span> &amp; <span class="math notranslate nohighlight">\(2,0\)</span> \
+mediana     &amp; <span class="math notranslate nohighlight">\(1,7\)</span> &amp; <span class="math notranslate nohighlight">\(1,9\)</span> \
+moda        &amp; <span class="math notranslate nohighlight">\(1,5\)</span> &amp;  <span class="math notranslate nohighlight">\(1,9\)</span> \</p>
+<p>Qual companhia você escolheria?</p>
+<p>Foram coletadas $<span class="math notranslate nohighlight">\(150\)</span><span class="math notranslate nohighlight">\( observações da variável \)</span><span class="math notranslate nohighlight">\(X\)</span><span class="math notranslate nohighlight">\(, representando o
+número de vestibulares FUVEST (um por ano) que um mesmo estudande
+prestou. Com os dados da tabela abaixo, calcule as medidas de posição de
+\)</span><span class="math notranslate nohighlight">\(X\)</span>$.</p>
+<p>&amp;  \
+1                       &amp; 75                        \
+2                       &amp; 47                        \
+3                       &amp; 21                        \
+4                       &amp; 7                        \</p>
+<p>Suponha ainda que o interesse é estudar o gasto dos alunos associado com
+as despesas do vestibular. Para simplificar, suponha que se atribui para
+cada aluno, uma despesa fixa de R$ $<span class="math notranslate nohighlight">\(1300,00\)</span><span class="math notranslate nohighlight">\( relativa a preparação e
+mais R\$ \)</span><span class="math notranslate nohighlight">\(50\)</span><span class="math notranslate nohighlight">\( para cada vestibular prestado. Calcule as medidas de
+posição central para a variável \)</span><span class="math notranslate nohighlight">\(D\)</span>$ (despesa com vestibular).</p>
+<p>[T]</p>
+<p>&amp;  \
+1                       &amp; 75                        \
+2                       &amp; 47                        \
+3                       &amp; 21                        \
+4                       &amp; 7                        \</p>
+<p>Sabemos que a descrição completa do comportamento de uma VA discreta é
+feita através de sua .</p>
+<p>Assim como fizemos para um conjunto de dados qualquer, podemos obter as
+medidas de posição para qualquer variável aleatória.</p>
+<p>Lembrando que se os possíveis valores de uma VA $<span class="math notranslate nohighlight">\(X\)</span><span class="math notranslate nohighlight">\( são
+\)</span><span class="math notranslate nohighlight">\(x_1, x_2, , x_k\)</span><span class="math notranslate nohighlight">\(, com correspondentes probabilidades
+\)</span><span class="math notranslate nohighlight">\(p_1, p_2, , p_k\)</span>$, então as medidas de posição podem ser
+definidas a seguir.</p>
+<p>A Média é chamada de  ou  [
+E(X) = _{i=1}^k x_i p_i.
+] A Mediana é o valor $<span class="math notranslate nohighlight">\(Md\)</span>$ que satisfaz as seguintes condições [
+P(X  Md)  1/2    P(X  Md)  1/2.
+] A Moda é o valor (ou valores) com maior probabilidade de ocorrência
+[
+P(X = Mo) = {p_1, p_2, …, p_k}.
+]</p>
+<p>Considere a VA $<span class="math notranslate nohighlight">\(X\)</span>$ com a seguinte função discreta de probabilidade:</p>
+<p>$X<span class="math notranslate nohighlight">\(    &amp; -5  &amp; 10  &amp; 15  &amp; 20  \\ 
+\)</span>p_i$ &amp; 0.3 &amp; 0.2 &amp; 0.4 &amp; 0.1 \</p>
+<p>Calcule as medidas de tendência central.</p>
+<p>Considere uma VA $<span class="math notranslate nohighlight">\(X\)</span>$ com função de probabilidade dada por</p>
+<p>X    &amp; 2  &amp; 5  &amp; 8  &amp; 15 &amp; 20  \
+<span class="math notranslate nohighlight">\(p_i\)</span> &amp; 0.1 &amp; 0.3 &amp; 0.2 &amp; 0.2 &amp; 0.2</p>
+<p>Calcule as medidas de posição para a VA $<span class="math notranslate nohighlight">\(Y = 5X - 10\)</span>$.</p>
+</section>
+<section id="medidas-de-dispersao">
+<h1>Medidas de dispersão<a class="headerlink" href="#medidas-de-dispersao" title="Link to this heading">#</a></h1>
+<p>O resumo de um conjunto de dados exclusivamente por uma medida de
+centro,  toda a informação sobre a variabilidade do
+conjunto de observações.</p>
+<p>Não é possível analisar um conjunto de dados apenas através de uma
+medida de tendência central.</p>
+<p>Por isso precisamos de medidas que resumam a  dos
+dados em relação à um valor central.</p>
+<p>Cinco grupos de alunos se submeteram a um teste, obtendo as seguintes
+notas</p>
+<p>[htbp]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>   &amp;  &amp; $$ \\ 
+  A &amp; 3, 4, 5, 6, 7 &amp; 5 \\
+  B &amp; 1, 3, 5, 7, 9 &amp; 5\\
+  C &amp; 5, 5, 5, 5, 5 &amp; 5\\
+  D &amp; 3, 5, 5, 7 &amp; 5\\
+  E &amp; 3, 5, 5, 6, 6 &amp; 5\\
+</pre></div>
+</div>
+<p>O que a média diz a respeito das notas quando comparamos os grupos?</p>
+<p>São medidas estatísticas que caracterizam o quanto um conjunto de dados
+está disperso em torno de sua tendência central.</p>
+<p>Ferramentas para  e  de dados:</p>
+<p>Amplitude</p>
+<p>Desvio-médio (ou mediano)</p>
+<p>Variância</p>
+<p>Desvio-padrão</p>
+<p>Coeficiente de Variação</p>
+<p>A  de um conjunto de dados é a diferença entre o maior
+e o menor valor: [
+=  -  = x_{(n)} - x_{(1)}
+]</p>
+<p>[htbp]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>   &amp;  &amp; $$ \\ 
+  A &amp; 3, 4, 5, 6, 7 &amp; 4 \\
+  B &amp; 1, 3, 5, 7, 9 &amp; 8\\
+  C &amp; 5, 5, 5, 5, 5 &amp; 0\\
+  D &amp; 3, 5, 5, 7 &amp; 4\\
+  E &amp; 3, 5, 5, 6, 6 &amp; 3\\
+</pre></div>
+</div>
+<p>usar máximo e mínimo torna  a valores
+extremos</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Melhor medida de variabilidade: considerar 
+
+ de cada valor em relação à uma medida de posição
+central (média ou mediana)
+</pre></div>
+</div>
+<p>Um  da variabilidade:  dos desvios</p>
+<p>: a  como medida de posição
+central [
+= <em>{i=1}^n | x_i - md</em>{obs}|.
+]</p>
+<p>: a  como medida de posição central
+[
+= _{i=1}^n | x_i - _{obs}|.
+]</p>
+<p>Considere as notas do grupo A do exemplo acima ($<span class="math notranslate nohighlight">\(_{obs} = 5\)</span>$)</p>
+<p>O desvio médio (DM) pode ser calculado da seguinte forma:</p>
+<p>[htbp]</p>
+<p>&amp; <span class="math notranslate nohighlight">\(x_i - \)</span> &amp; <span class="math notranslate nohighlight">\(|x_i - |\)</span> \
+3 &amp; -2 &amp; 2 \
+4 &amp; -1 &amp; 1\
+5 &amp; 0 &amp; 0\
+6 &amp; 1 &amp; 1\
+7 &amp; 2 &amp; 2\</p>
+<p>Soma &amp; 0 &amp; 6\</p>
+<div class="math notranslate nohighlight">
+\[ = _{i=1}^n | x_i - _{obs}| =  = 1,2\]</div>
+<p>O desvio médio é baseado em uma operação
+(módulo), o que torna mais difícil o estudo de suas propriedades.</p>
+<p>Uma alternativa melhor é usar a ,
+que dá origem à  de um conjunto de dados [
+var_{obs} = <em>{i=1}^n (x_i - <em>{obs})^2
+] Para manter a mesma unidade de medida dos dados originais, definimos
+o  como [
+dp</em>{obs} = }
+] Uma expressão alternativa da variância (mais fácil de calcular) é [
+var</em>{obs} = _{i=1}^n x_i^2 - _{obs}^2
+]</p>
+<p>No exemplo anterior</p>
+<p>[htbp]</p>
+<p>&amp; <span class="math notranslate nohighlight">\(x_i - \)</span> &amp; <span class="math notranslate nohighlight">\(|x_i - |\)</span> &amp; <span class="math notranslate nohighlight">\((x_i -
+ )^2\)</span> &amp; <span class="math notranslate nohighlight">\(x_i^2\)</span> \
+3 &amp; -2 &amp; 2 &amp; 4 &amp; 9 \
+4 &amp; -1 &amp; 1 &amp; 1 &amp; 16 \
+5 &amp; 0 &amp; 0 &amp; 0 &amp; 25 \
+6 &amp; 1 &amp; 1 &amp; 1 &amp; 36 \
+7 &amp; 2 &amp; 2 &amp; 4 &amp; 49 \</p>
+<p>Soma &amp; 0 &amp; 6 &amp; 10 &amp; 135 \</p>
+<p>A variância é</p>
+<div class="math notranslate nohighlight">
+\[var_{obs} = _{i=1}^n (x_i - _{obs})^2 =   = 2.\]</div>
+<p>Ou, usando a fórmula alternativa</p>
+<div class="math notranslate nohighlight">
+\[var_{obs} = _{i=1}^n x_i^2 - _{obs}^2 =   - 5^2 = 2.\]</div>
+<p>O  para um conjunto de dados é definido
+por [
+cv_{obs} = }{_{obs}}
+] É uma medida , e geralmente apresentada na forma
+de porcentagem.</p>
+<p>No exemplo anterior:
+$<span class="math notranslate nohighlight">\(dp_{obs} = } =  = 1,414214\)</span>$.</p>
+<p>Portanto: [
+cv_{obs} = }{_{obs}} =  = 0,2828427
+28,3%
+]</p>
+<p>Assim como no caso da média, se tivermos $<span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( observações da variável
+\)</span><span class="math notranslate nohighlight">\(X\)</span><span class="math notranslate nohighlight">\(, das quais \)</span><span class="math notranslate nohighlight">\(n_1\)</span><span class="math notranslate nohighlight">\( são iguais a \)</span><span class="math notranslate nohighlight">\(x_1\)</span><span class="math notranslate nohighlight">\(, \)</span><span class="math notranslate nohighlight">\(n_2\)</span><span class="math notranslate nohighlight">\( são iguais a
+\)</span><span class="math notranslate nohighlight">\(x_2\)</span><span class="math notranslate nohighlight">\(, , \)</span><span class="math notranslate nohighlight">\(n_k\)</span><span class="math notranslate nohighlight">\( são iguais a \)</span><span class="math notranslate nohighlight">\(x_k\)</span>$, então a variância pode
+ser definida por:</p>
+<p>[
+var_{obs}(X) =  _{i=1}^{k} n_i (x_i - _{obs})^2
+]</p>
+<p>Ou, pela fórmula alternativa:</p>
+<p>[
+var_{obs}(X) =  <em>{i=1}^{k} n_i x</em>{i}^{2} -
+_{obs}^2
+]</p>
+<p>Como exemplo, considere a tabela de frequência abaixo
+($<span class="math notranslate nohighlight">\( = 1,65\)</span>$):</p>
+<p>[h]</p>
+<p>&amp;  &amp;
+&amp; <span class="math notranslate nohighlight">\(} &amp; )^2\)</span>} \</p>
+<p>0 &amp; 4 &amp; 0,20 &amp; -1,65 &amp; 2,72 \
+1 &amp; 5 &amp; 0,25 &amp; -0,65 &amp; 0,42 \
+2 &amp; 7 &amp; 0,35 &amp; 0,35 &amp; 0,12 \
+3 &amp; 3 &amp; 0,15 &amp; 1,35 &amp; 1,82 \
+5 &amp; 1 &amp; 0,05 &amp; 3,35 &amp; 11,22 \</p>
+<p>&amp; 20 &amp; 1 &amp; &amp;  \</p>
+<p>A variância pode ser calculada por:
+var_{obs} =&amp;  {4 + 5 + 7 + 3 + 1} \
+=&amp;  \
+=&amp; 1,528</p>
+<p>Considere a seguinte tabela de distribuição de frequência
+($<span class="math notranslate nohighlight">\( = 11,22\)</span>$):</p>
+<p>[h]</p>
+<p>&amp;  &amp;
+&amp;  &amp; <span class="math notranslate nohighlight">\(} &amp; )^2\)</span>} \</p>
+<p>$[4,8)<span class="math notranslate nohighlight">\( &amp; 6 &amp; 10 &amp; 0,278 &amp; -5,222 &amp; 27,272 \\
+ \)</span>[8,12)<span class="math notranslate nohighlight">\( &amp; 10 &amp; 12 &amp; 0,333 &amp; -1,222 &amp; 1,494 \\
+ \)</span>[12,16)<span class="math notranslate nohighlight">\( &amp; 14 &amp; 8 &amp; 0,222 &amp; 2,778 &amp; 7,716 \\
+ \)</span>[16,20)<span class="math notranslate nohighlight">\( &amp; 18 &amp; 5 &amp; 0,139 &amp; 6,778 &amp; 45,938 \\
+ \)</span>[20,24)$ &amp; 22 &amp; 1 &amp; 0,028 &amp; 10, 778 &amp; 116,160 \</p>
+<p>&amp; &amp; 36 &amp; 1 &amp; &amp; \</p>
+<p>Considerando os  de cada classe como os valores
+$<span class="math notranslate nohighlight">\(x_i\)</span>$, a variância pode ser calculada por
+var_{obs} &amp;=  {10 + 12 + 8 + 5 + 1}\
+&amp;=  = 19,395</p>
+<p>No Exemplo $<span class="math notranslate nohighlight">\(4.3\)</span><span class="math notranslate nohighlight">\(, definimos a quantidade \)</span><span class="math notranslate nohighlight">\(D\)</span><span class="math notranslate nohighlight">\(, despesa no vestibular,
+obtida a partir de \)</span><span class="math notranslate nohighlight">\(X\)</span><span class="math notranslate nohighlight">\( pela expressão \)</span><span class="math notranslate nohighlight">\(D = 50X + 1300\)</span><span class="math notranslate nohighlight">\(, com \)</span><span class="math notranslate nohighlight">\(X\)</span>$
+indicando o número de vestibulares prestados.</p>
+<p>&amp;  \
+1                       &amp; 75                        \
+2                       &amp; 47                        \
+3                       &amp; 21                        \
+4                       &amp; 7                        \</p>
+<p>Calcule a variância de $<span class="math notranslate nohighlight">\(D\)</span>$.</p>
+<p>[T]</p>
+<p>&amp;  \
+1                       &amp; 75                        \
+2                       &amp; 47                        \
+3                       &amp; 21                        \
+4                       &amp; 7                        \</p>
+<p>Calcula o valor esperado: $<span class="math notranslate nohighlight">\( = E(X) = _{i=1}^k x_i p_i\)</span>$</p>
+<p>Multiplica o quadrado dos desvios em torno do valor esperado pela
+probabilidade e soma</p>
+<div class="math notranslate nohighlight">
+\[ Var(X) =  _{i=1}^k (x_i - )^2 p_i \]</div>
+<p>Alternativamente, podemos usar</p>
+<div class="math notranslate nohighlight">
+\[ Var(X) = E[(X - )^2] = E(X^2) - E(X)^2 \]</div>
+<p>com $<span class="math notranslate nohighlight">\(E(X^2) = _{i=1}^k x_i^2 p_i\)</span>$</p>
+<p>Ver Tabelas resumo $<span class="math notranslate nohighlight">\(4.2\)</span><span class="math notranslate nohighlight">\( e \)</span><span class="math notranslate nohighlight">\(4.3\)</span>$.</p>
+<p>Conjunto de Dados &amp; Variável aleatório \</p>
+<p>$<span class="math notranslate nohighlight">\(Y = aX+b\)</span><span class="math notranslate nohighlight">\(   &amp; \)</span><span class="math notranslate nohighlight">\(Y = aX+b\)</span>$  \</p>
+<p>$<span class="math notranslate nohighlight">\(_{obs}= a_{obs}+b\)</span><span class="math notranslate nohighlight">\( &amp; \)</span><span class="math notranslate nohighlight">\(E(Y) = aE(X)+b\)</span>$    \</p>
+<p>$<span class="math notranslate nohighlight">\(var_{obs}= a^2var_{obs}(X)\)</span><span class="math notranslate nohighlight">\( &amp; \)</span><span class="math notranslate nohighlight">\(Var(Y) = a^2Var(X)\)</span>$    \</p>
+<p>Uma pequena cirurgia dentária pode ser realizada por três métodos
+diferentes cujos tempos de recuperação (em dias) são modelados pelas
+variáveis $<span class="math notranslate nohighlight">\(X_1\)</span><span class="math notranslate nohighlight">\(, \)</span><span class="math notranslate nohighlight">\(X_2\)</span><span class="math notranslate nohighlight">\( e \)</span><span class="math notranslate nohighlight">\(X_3\)</span>$. Admita suas funções de
+probabilidades são dadas por</p>
+<p><span class="math notranslate nohighlight">\(X_1\)</span> &amp; 0  &amp; 4  &amp; 5  &amp; 6 &amp; 10  \
+<span class="math notranslate nohighlight">\(p_i\)</span> &amp; 0.2 &amp; 0.2 &amp; 0.2 &amp; 0.2 &amp; 0.2</p>
+<p><span class="math notranslate nohighlight">\(X_2\)</span> &amp; 1     &amp; 5     &amp; 9    \
+<span class="math notranslate nohighlight">\(p_i\)</span> &amp; <span class="math notranslate nohighlight">\(1/3\)</span> &amp; <span class="math notranslate nohighlight">\(1/3\)</span> &amp; <span class="math notranslate nohighlight">\(1/3\)</span></p>
+<p><span class="math notranslate nohighlight">\(X_3\)</span> &amp; 4   &amp; 5   &amp; 6   \
+<span class="math notranslate nohighlight">\(p_i\)</span> &amp; 0.3 &amp; 0.4 &amp; 0.3</p>
+<p>Calcule as medidas de posição central e dispersão para cada VA e decida
+sobre o método mais eficiente.</p>
+<p>Exemplo $<span class="math notranslate nohighlight">\(4.14\)</span><span class="math notranslate nohighlight">\(: Seja \)</span><span class="math notranslate nohighlight">\(X\)</span><span class="math notranslate nohighlight">\( com distribuição Bernoulli de parâmetro
+  \)</span><span class="math notranslate nohighlight">\(p\)</span><span class="math notranslate nohighlight">\(. Calcule a esperança e a variância de \)</span><span class="math notranslate nohighlight">\(X\)</span>$.</p>
+<p>Exemplo $<span class="math notranslate nohighlight">\(4.15\)</span><span class="math notranslate nohighlight">\(: Seja \)</span><span class="math notranslate nohighlight">\(X\)</span><span class="math notranslate nohighlight">\( com distribuição Binomial de parâmetros
+  \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( e \)</span><span class="math notranslate nohighlight">\(p\)</span><span class="math notranslate nohighlight">\(. Calcule a esperança e a variância de \)</span><span class="math notranslate nohighlight">\(X\)</span>$.</p>
+<p>Ver resultados da Tabela $<span class="math notranslate nohighlight">\(4.4\)</span>$.</p>
+<p>Variável Discreta &amp; Valor Esperado &amp; Variância \</p>
+<p>$Uniforme(1, k)<span class="math notranslate nohighlight">\( &amp; \)</span><span class="math notranslate nohighlight">\( &amp; \)</span>$ \</p>
+<p>$Benoulli(p)<span class="math notranslate nohighlight">\( &amp; \)</span>p<span class="math notranslate nohighlight">\( &amp; \)</span>p(1-p)$ \</p>
+<p>$Binomial(n, p)<span class="math notranslate nohighlight">\( &amp; \)</span>np<span class="math notranslate nohighlight">\( &amp; \)</span>np(1-p)$ \</p>
+<p>$Geométrica(p)<span class="math notranslate nohighlight">\( &amp; \)</span><span class="math notranslate nohighlight">\( &amp; \)</span>$ \</p>
+<p>$Poisson()<span class="math notranslate nohighlight">\( &amp; \)</span><span class="math notranslate nohighlight">\( &amp; \)</span>$ \</p>
+<p>$Hipergeometrica(n,m,r)<span class="math notranslate nohighlight">\( &amp; \)</span><span class="math notranslate nohighlight">\( &amp; \)</span>$ \</p>
+<p>Seção $<span class="math notranslate nohighlight">\(4.2\)</span><span class="math notranslate nohighlight">\( - \)</span><span class="math notranslate nohighlight">\(2,3,4\)</span><span class="math notranslate nohighlight">\( e \)</span><span class="math notranslate nohighlight">\(6\)</span>$.</p>
+<p>Seção $<span class="math notranslate nohighlight">\(4.3\)</span><span class="math notranslate nohighlight">\( - \)</span><span class="math notranslate nohighlight">\(2,3,4,5\)</span><span class="math notranslate nohighlight">\( e \)</span><span class="math notranslate nohighlight">\(6\)</span>$.</p>
+<p>Extras: Seção 4.4 - 7 e 15.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./capitulos/chap4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introdução</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-posicao">Medidas de posição</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-dispersao">Medidas de dispersão</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ricardo R. da Silva
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

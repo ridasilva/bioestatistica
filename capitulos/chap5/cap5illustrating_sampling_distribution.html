@@ -183,6 +183,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap2/chap2.html">2 - Fundamentos de probabilidades</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap3/chap3.html">3 - Variáveis Aleatórias Discretas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap4/chap4.html">4 - Medidas Resumo</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="chap5.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Testando hipóteses com a variável padrão z</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - Teste t de amostra única</a></li>
@@ -660,12 +662,12 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 68., 129.,   0., 191.,   0., 248., 161.,   0., 145.,  58.]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 51., 143.,   0., 182.,   0., 237., 197.,   0., 121.,  69.]),
  array([2. , 2.6, 3.2, 3.8, 4.4, 5. , 5.6, 6.2, 6.8, 7.4, 8. ]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="../../_images/2741b12c31fa5777afced6aab7b9d4a1f448049b7a91bef2e061518cf320c82c.png" src="../../_images/2741b12c31fa5777afced6aab7b9d4a1f448049b7a91bef2e061518cf320c82c.png" />
+<img alt="../../_images/a13dfd620e288f5a03e376922c2d7f861ec04abf7263a652ac5cdee8d260a058.png" src="../../_images/a13dfd620e288f5a03e376922c2d7f861ec04abf7263a652ac5cdee8d260a058.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -675,12 +677,12 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 75., 110.,   0., 184.,   0., 250., 191.,   0., 130.,  60.]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 64., 122.,   0., 177.,   0., 240., 205.,   0., 135.,  57.]),
  array([2. , 2.6, 3.2, 3.8, 4.4, 5. , 5.6, 6.2, 6.8, 7.4, 8. ]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="../../_images/13183f25eaf07faf1a5b29c8960e5e96f71c8bb5161fbf723f087bd00960dc88.png" src="../../_images/13183f25eaf07faf1a5b29c8960e5e96f71c8bb5161fbf723f087bd00960dc88.png" />
+<img alt="../../_images/fe30b913a205f04ea1a1fec00805dbe308b7f00e25d99f1114b7c0a0925524bf.png" src="../../_images/fe30b913a205f04ea1a1fec00805dbe308b7f00e25d99f1114b7c0a0925524bf.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -852,7 +854,7 @@ class combinations(builtins.object)
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
 </pre></div>
 </div>
-<img alt="../../_images/604edd3d68d79dc445051bcbc750b4b9c7f41d80cde3891a6e7c7c9e7b88b310.png" src="../../_images/604edd3d68d79dc445051bcbc750b4b9c7f41d80cde3891a6e7c7c9e7b88b310.png" />
+<img alt="../../_images/b2b9ab143ad66db273d4d20563d9b8f1a9838a9961a14b09c21005bdaa051c6f.png" src="../../_images/b2b9ab143ad66db273d4d20563d9b8f1a9838a9961a14b09c21005bdaa051c6f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -862,11 +864,11 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[17.70916191168509,
- 15.013825324342214,
- 19.173199277668797,
- 11.438689642023673,
- 13.429916302050078]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[18.094366212058226,
+ 13.375518393801453,
+ 13.164731620682135,
+ 30.94353501999869,
+ 7.781243771172246]
 </pre></div>
 </div>
 </div>
@@ -890,7 +892,7 @@ class combinations(builtins.object)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/aadd9565047d1eff372d1490e222a4f831613b3491d05d2239e640644cac876b.png" src="../../_images/aadd9565047d1eff372d1490e222a4f831613b3491d05d2239e640644cac876b.png" />
+<img alt="../../_images/c396a51d77984e756ecde48f0e50737690c4759eff0d60f184d058c579a7c508.png" src="../../_images/c396a51d77984e756ecde48f0e50737690c4759eff0d60f184d058c579a7c508.png" />
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
