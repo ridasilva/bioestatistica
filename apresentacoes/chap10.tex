@@ -25,7 +25,7 @@ citestyle=authoryear
 }
 \addbibresource{stats.bib}
 \title[Bioestatística II] %optional
-{Teste t de amostras independentes}
+{Teste t de amostras relacionadas}
 
 \subtitle{CGF2046 - Bioestatística II}
 
@@ -71,15 +71,17 @@ citestyle=authoryear
   \\~\\
   \begin{itemize}
   \uncover<1->{\item
-    Explicar quando usar um teste t de amostras independentes;}
+    Identificar quando um teste t de amostras relacionadas deve ser usado;}
   \uncover<2->{\item
-    Explicar a lógica do teste t de amostras independentes;}
+    Explicar as vantagens de usar um desenho de amostras relacionadas em vez de um desenho de amostras independentes;}
    \uncover<3->{\item
-    Escrever hipóteses nulas e de pesquisa usando símbolos e palavras para testes unicaudais e bicaudais;}
+    Explicar a lógica do teste t de amostras relacionadas;}
    \uncover<4->{\item
-    Calcular graus de liberdade e definir uma região crítica para testes unicaudais e bicaudais;}
+    Escrever hipóteses nulas e de pesquisa usando símbolos e palavras para testes unicaudais e bicaudais;}
    \uncover<5->{\item
-    Calcular amostras independentes t usando \textit{software};}
+    Calcular um teste t de amostras relacionado manualmente (usando uma calculadora) e usando \textit{software};}
+   \uncover<6->{\item
+    Determinar se você deve ou não rejeitar a hipótese nula;}
    \uncover<7->{\item
     Calcular e interpretar um tamanho de efeito (d);}
    \uncover<8->{\item
@@ -90,79 +92,61 @@ citestyle=authoryear
 \section{Introdução ao teste t}
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Amostras Independentes}
-Até agora, você aprendeu a usar dois testes t diferentes: 
+\frametitle{Amostras Repetidas/Relacionadas}
+Embora seu cálculo seja semelhante ao teste t para amostra única, esse novo teste t tem vários nomes diferentes, um para cada projeto experimental em que pode ser usado. 
 
+Exemplos:
 \begin{itemize}
-\item \textit{t de amostra única}: usa-se sempre que quiser comparar uma média amostral com uma média populacional;
-\item \textit{teste t de amostras relacionadas}: usa-se ao comparar as médias amostrais dos mesmos indivíduos medidos em dois momentos diferentes ou de pares de pessoas pareadas medidas sob condições diferentes.
+\item \textit{teste t de medidas repetidas}: comparar a média de uma amostra de pessoas antes e depois de receberem um tratamento;
+\item \textit{teste t de amostras relacionadas}: comparar dois grupos de participantes que estão relacionados de alguma forma;
+\item também é às vezes chamado de teste t de amostras pareadas, teste t de amostras combinadas, teste t de amostras dependentes ou teste t dentro dos sujeitos.
 \end{itemize}
-Quando você precisar comparar duas médias amostrais que não estão relacionadas, você deve usar um terceiro teste t: \textit{um teste t de amostras independentes}.
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Amostras Independentes}
-Por exemplo, suponha que você esteja interessado no efeito de um medicamento na perda de peso. Poderíamos pensae em três cenários:
-\begin{itemize}
-\item \textit{t de amostra única}: administrá-lo a uma amostra de pessoas e, depois de tomarem o medicamento por 1 mês, comparar a média de quilos perdidos pela amostra com zero quilos;
-\item \textit{t de amostras relacionado}: medir o peso médio da amostra antes de tomar o medicamento e novamente um mês depois de tomar o medicamento;
-\item \textit{teste t de amostras independentes}: administrar o medicamento a uma amostra de pessoas e um placebo a outra amostra.
-\end{itemize}
-\end{frame}
+\frametitle{Amostras Repetidas/Relacionadas}
+Por exemplo, se os investigadores quisessem testar a eficácia de um novo medicamento destinado a reduzir a ansiedade, poderiam recolher uma amostra de pessoas, medir primeiro a sua ansiedade, depois administrar-lhes o novo medicamento e, finalmente, medir a sua ansiedade depois de o medicamento ter tido tempo de fazer efeito.\\~\\
 
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Fórmula conceitural para t de amostras independentes}
-O teste t de amostras independentes é a razão entre a diferença média observada e a diferença esperada devido ao erro de amostragem:\\~\\
-
-t = Diferença média das amostras - Diferença média esperada das populações se H0 for verdadeira/Diferença média esperada devido ao erro de amostragem\\~\\
-
-O numerador é simplesmente a diferença entre as duas médias amostrais. O termo no denominador representa a quantidade de erro amostral esperado.
-
-\[t = \frac{\bar{x}_1-\bar{x}_2}{SEM_i}\]
+Se for improvável que o desvio entre as duas médias amostrais seja criado por erro amostral, então presume-se que o medicamento tenha alterado o nível de ansiedade da amostra.
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Teste t de Amostras Independentes bicaudal}
+\frametitle{Lógica do Testes t de Amostra Única e Amostras Repetidas/Relacionadas}
+A lógica do teste t de amostras relacionadas é semelhante à do teste t de amostra única.\\~\\
 
-\textbf{Exemplo:} Um pesquisador quer testar como os rótulos verbais influenciam a memória das imagens dos participantes. 
+t Amostra única = $\frac{(\bar{x} - \mu)}{SEM_a}$\\~\\
+
+t Amostra repetidas/relacionadas = $\frac{(\bar{x}_D - \mu_D)}{SEM_D}$\\~\\
+
+O numerador do teste t de amostras relacionadas compara a diferença média entre duas médias amostrais com a diferença média esperada se o nulo for verdadeiro. Se você usar $\mu_D = 0$\\~\\
+
+t Amostra repetidas/relacionadas = $\frac{\bar{x}_D}{SEM_D}$\\~\\
+
+Se o valor t obtido estivesse mais distante de 0 que o valor crítico, a hipótese nula seria rejeitada.
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Teste t unicaudal de amostra única}
+
+\textbf{Exemplo:} Um pesquisador clínico quer determinar se um novo medicamento para tratar a ansiedade tem efeitos colaterais que alteram os níveis de colesterol. 
  
 \begin{itemize}
-\item Mostrar a todos os participantes uma série de 25 desenhos de linhas simples, e pedir-lhes que lembrem dos desenhos 10 minutos depois;
-\item Metade dos participantes viu apenas os desenhos, enquanto a outra metade também viu uma descrição verbal de cada desenho semelhante;
-\item Comparar a memória daqueles que viram os desenhos e as descrições verbais (isto é, o grupo experimental) com a memória daqueles que apenas viram os desenhos (isto é, o grupo de controle).
+\item Os níveis de colesterol são normalmente distribuídos e medidos como uma variável quantitativa;
+\item
+   Seis pares de pessoas são comparadas em relação aos seus níveis de colesterol pré-existentes. Em seguida, uma pessoa de cada par recebe o novo medicamento para ansiedade, enquanto a outra pessoa recebe um placebo;
+\item
+  Dezoito semanas depois, o pesquisador mede os níveis de colesterol.
 \end{itemize}
 
 Optamos por um teste bilateral. Também escolhemos um \(\alpha=0.05\).
 
-Grupo 1: Grupo com descrições verbais:
-21, 22, 20, 20, 18, 20
-
-Grupo 2: Grupo sem descrições verbais:
-19, 20, 19, 18, 16, 20
-
 \end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Rótulos verbais influenciam a memória das imagens?}
-
-\begin{center}\includegraphics[width=0.9\linewidth]{figs/fig10.1} \end{center}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Teste t de Amostras Independentes}
-
-\begin{center}\includegraphics[width=0.9\linewidth]{figs/fig10.2} \end{center}
-
-\end{frame}
-
 
 \setbeamercovered{transparent}
 \begin{frame}
@@ -174,8 +158,7 @@ Os quatro pressupostos básicos são:
 \begin{enumerate}
 \item independência dos dados;
 \item medição apropriada das variáveis para análise;
-\item normalidade das distribuições;
-\item homogeneidade da variância.
+\item normalidade das distribuições.
 \end{enumerate}
 
 \end{frame}
@@ -184,16 +167,13 @@ Os quatro pressupostos básicos são:
 \begin{frame}
 \frametitle{Etapa 1: examinar as pressuposições estatísticas}
 
-Os quatro pressupostos básicos são:
+Os três pressupostos básicos são:
 
 \begin{enumerate}
-\item \textbf{independência dos dados:} Os dados dentro de cada condição são independentes;
-\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) identifica presença ou ausência de descrições verbais, variável dependente (VD) \(\Rightarrow\) número de desenhos de linhas lembrados corretamente, é medido em como uma variável quantitativa;
-\item \textbf{normalidade das distribuições:} as distribuições das pontuações de memória tendem a ter formato normal e, portanto, essa suposição provavelmente é atendida;
-\item \textbf{homogeneidade da variância:} utilizamos a regra geral de que se o desvio padrão numa condição for o dobro do de outra condição, esta suposição pode ser violada.
+\item \textbf{independência dos dados:} A VI neste estudo identifica dois grupos relacionados, designados aleatoriamente para duas condições diferentes;
+\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) identifica as duas condições de medicamento versus placebo, variável dependente (VD) \(\Rightarrow\) nível de colesterol dos participantes, é medido em como uma variável quantitativa;
+\item \textbf{normalidade das distribuições:} população original de diferenças médias é normalmente distribuida.
 \end{enumerate}
-
-Existem duas maneiras de calcular o erro de amostragem para um teste t de amostras independentes. Uma forma pressupõe homogeneidade de variância e a outra não. É possível utilizar testes, como o teste de Levene para determinar a homogeneidade das variância.
 
 \end{frame}
 
@@ -201,17 +181,15 @@ Existem duas maneiras de calcular o erro de amostragem para um teste t de amostr
 \begin{frame}
 \frametitle{Etapa 2: expor as hipóteses nulas e de pesquisa simbolicamente e verbalmente}
 
-O teste t de amostras independentes determina se a diferença das média é significativamente diferente de 0.
+O teste t de amostras relacionadas determina se a média dessas diferenças é significativamente diferente de 0.
 
 \begin{center}
-\begin{tabular}{ m{2cm}|m{3cm}|m{2cm}|m{3cm} } 
+\begin{tabular}{ m{2cm}|m{2cm}|m{3cm}|m{3cm} } 
  \hline
  Tipo de Hipótese & Simbólico & Vebal & Diferença entre médias amostral e populacional\\
   \hline
- Hipótese nula & $H_0:\mu_1=\mu_2;$ ou & Diferença da médias $\approx$ 0 & Erro amostral \\
- & $H_0:\mu_1-\mu_2=0;$ & &\\
- Hipótese de pesquisa & $H_a:\mu_1 \neq \mu_2$ ou & Diferenças médias $\neq$ 0 & Descrição verbal afeta memória  \\ 
-  & $H_a:\mu_1-\mu_2\neq0;$ & &\\
+ Hipótese nula & $\mu_{D}=0;$ & Diferença média $\approx$ 0 & Erro amostral \\ 
+ Hipótese de pesquisa & $\mu_{D} \neq 0.$ & Diferença média $\neq$ 0 & Medicamento tem efeito sobre colesterol  \\ 
  \hline
  \hline
 \end{tabular}
@@ -221,11 +199,8 @@ O teste t de amostras independentes determina se a diferença das média é sign
 
 \begin{frame}
 \frametitle{Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas}
-A fórmula do gl para teste t de amostras independente é $gl = (n_1 - 1) + (n_2 - 1)$, onde $n_1$ e $n_2$ representam os tamanhos amostrais das duas amostras, espectivamente.
-
-Neste caso, o gl é o seguinte:
-
-\[gl = (n_1-1) + (n_2-1) = (6-1) + (6-1) = 10\]
+Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). Para o teste t de amostra única, a fórmula para o gl é \textit{gl = N - 1}. Portanto, neste caso,
+\[gl = 6 - 1 = 5\]
 
 \begin{columns}
 \begin{column}{0.5\textwidth}
@@ -235,9 +210,9 @@ Neste caso, o gl é o seguinte:
 \begin{tabular}{ccc} 
  \hline
 gl & $\alpha = .05$ & $\alpha = .01$\\
-9 &	2.262200 &	3.249800\\
-\boxit{1.7in} 10 &	2.228100 &	3.169300\\
-11 &	2.201000 &	3.105800\\
+4 &	2.776400 & 4.604100\\
+\boxit{1.7in} 5 & 2.570600 & 4.032100\\
+6 & 2.446900 & 3.707400\\
  \hline
 \end{tabular}
 \end{center}   
@@ -254,51 +229,49 @@ gl & $\alpha = .05$ & $\alpha = .01$\\
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
-\textit{4a. Calcule o desvio entre as duas médias amostrais}\\~\\
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
+\textit{4a. Calcule D para cada participante/par correspondente}\\~\\
 
-Existem dois termos no numerador da estatística t. A primeira $(\bar{x}_1 - \bar{x}_2)$ é a diferença entre as duas médias amostrais. O segundo $(\mu_1 - \mu_2)$ é a diferença entre as duas populações, assumindo que a hipótese nula é verdadeira. Assim, o numerador é simplesmente a diferença observada entre as duas médias amostrais:
+A primeira etapa no cálculo da estatística t das amostras relacionadas é calcular o valor da diferença (ou seja, D) para cada par de valores. 
 
-\[(\bar{x}_1 - \bar{x}_2) = ( 20.17 - 18.67) = 1.50\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
-4b. Calcule o erro de amostragem esperado
-\[SQ_1 = \frac{1}{N-1}\sum_{i=1}^n(x_{1i} - \bar{x}_1)^2 = 1.767\]
-\[DP_1 = \sqrt{1.767} = 1.329\]
-\[SQ_2 = \frac{1}{N-1}\sum_{i=1}^n(x_{2i} - \bar{x}_2)^2 = 2.267\]
-\[DP_2 = \sqrt{2.267} = 1.506\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
-4b. Calcule o erro de amostragem esperado\\~\\
-Quando apropriado, agrupar as variações tornará seu teste de significância mais preciso. A fórmula para a variância agrupada é a seguinte:
-
-\[SQ_p = \frac{(n_1-1)SQ_1+(n_2-1)SQ_2}{(n_1-1)+(n_2-1)} = \frac{(6-1)1.767+(6-1)2.267}{(6-1)+(6-1)}=2.02\]
-O método de cálculo do erro amostral que assume a homogeneidade da variância utiliza a variância agrupada para determinar o erro padrão estimado da diferença média ($SEM_i$)
-
-\[SEM_i = \sqrt{\frac{SQ_p}{n_1}+\frac{SQ_p}{n_2}} = \sqrt{\frac{2.02}{6}+\frac{2.02}{6}} = 0.82\]
+\begin{center}
+\begin{tabular}{cccc} 
+ \hline
+Par & Placebo & Medicamento & D (Medicamento - Placebo)\\
+ \hline
+A & 180 & 188 & 8 \\
+B & 200 & 201 & 1 \\
+C & 190 & 197 & 7 \\
+D & 170 & 174 & 4 \\
+E & 210 & 215 & 5 \\
+F & 195 & 194 & -1 \\
+ \hline
+\end{tabular}
+\end{center}   
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
+\begin{itemize}
+\item 4b. Calcule a diferença média observada ($\bar{x}_D$)
 
-\textit{4c. Calcule a estatística do teste (teste t independente)}\\~\\
+\[\bar{x}_D = \frac{\sum_{i=1}^n D_i}{N} = \frac{24}{6} = 4\]
 
-O teste t de amostras independente é a razão entre o desvio observado entre as duas médias amostrais dividido pelo erro padrão estimado da diferença média:
+\item 4c. Calcule a diferença média esperada devido ao erro de amostragem
+\[SQ_D = \frac{1}{N-1}\sum_{i=1}^n(D_i - \bar{x}_D)^2 = 12\]
+\[SEM_D = \frac{DP}{\sqrt{N}} = \frac{3.464}{\sqrt{6}} = 1.414\]
+\item 4d. Calcule a estatística do teste (teste t de amostras relacionadas)
+\[t =  \frac{\bar{x}_D}{SEM_D}  = \frac{4}{1.414} = 2.83\]
+\end{itemize}
+\end{frame}
 
-\[t = \frac{\bar{x}_1-\bar{x}_2}{SEM_i} =  \frac{20.17 - 18.67}{0.82} = 1.83\]
-
-O valor t obtido não é suficientemente grande para rejeitar a hipótese nula e, portanto, você não rejeita a hipótese nula.
-%\begin{center}\includegraphics[width=0.55\linewidth]{figs/regiao_critica_observada_t_rel} \end{center}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
+O valor t obtido de 2.83 está mais distante de 0 do que o valor crítico de +2.5706.
+\begin{center}\includegraphics[width=0.55\linewidth]{figs/regiao_critica_observada_t_rel} \end{center}
 
 \end{frame}
 
@@ -306,11 +279,11 @@ O valor t obtido não é suficientemente grande para rejeitar a hipótese nula e
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
-A fórmula para calcular o tamanho do efeito de um teste t independente é semelhante à de um teste t de amostra única. No entanto, ao calcular d, o denominador é a variância combinada. 
+Um tamanho de efeito é um índice da diferença entre a média da amostra e a média da população. A estatística de tamanho do efeito normalmente usada ao comparar duas médias é d. 
 \begin{align*}
-d = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{SQ_p}} = \frac{20.17-18.67}{\sqrt{2.02}} = 1.06
+d &= \frac{Desvio\quad observado\quad entre\quad as\quad medias}{Desvio\quad padrao}\\
+  &= \frac{\bar{x}_D}{DP_D} = \frac{4}{3.464} = 1.15
 \end{align*}
-Quando a hipótese nula não é rejeitada e ainda assim houve um tamanho de efeito médio ou grande, o tamanho da amostra utilizado no estudo pode ter sido pequeno para que o teste estatístico ou o tamanho do efeito sejam confiáveis. Ao interpretar os resultados de qualquer estudo, também é importante considerar os resultados de outros estudos semelhantes.
 
 \end{frame}
 
@@ -337,33 +310,17 @@ Perto de 0.8 & Grande \\
 \begin{frame}
 \frametitle{Etapa 6: Interpretando os Resultados do Teste de Hipóteses}
 
-O parágrafo a seguir resume os resultados desses testes:\\~\\
-Não houve diferença significativa entre as pontuações de memória daqueles que obtiveram as descrições verbais $(\bar{x}_1 = 20.17, DP_1 = 1.33)$ e daqueles que não obtiveram $(\bar{x}_2 = 18.67, DP_2 = 1.51)$, $t_{(10)} = 1.83$, $p > 0.05$, d = 1.06. No entanto, é importante notar que os tamanhos amostrais eram pequenos, portanto este estudo deve ser repetido com tamanhos amostrais maiores antes de serem tiradas conclusões.
+As frases a seguir resumem os resultados deste teste t de amostras relacionadas. Você precisará calcular as médias para os grupos de medicamento e placebo manualmente ou usando \textit{software} para incluí-los em seu relatório de resultados.\\~\\
+
+As pessoas que tomaram o ansiolítico apresentaram níveis de colesterol substancialmente mais elevados (\(\bar{x}_A = 194.83\), DP = 13.64) do que as pessoas que tomaram o placebo (\(\bar{x}_P = 190.83\), DP = 14.29), \(t_{(5)} = 2.83\), \(p < 0.05\), d = 1.15. A droga aumentou os níveis de colesterol em mais de 1 desvio padrão, sugerindo que a droga tem um efeito prejudicial sobre os níveis de colesterol. No entanto, a amostra incluiu apenas seis pares de pessoas e, portanto, o estudo deve ser replicado com uma amostra maior.
 \end{frame}
 
 \begin{frame}
-\frametitle{Exemplo de teste t de amostras independentes (unicaudal)}
-\textbf{Exemplo:} Os "aprendizes visuais" têm melhor memória para informações visuais do que os "aprendizes verbais"?
-\begin{itemize}
-\item Vinte e nove "aprendizes verbais" e 31 "aprendizes visuais" voluntariaram-se para participar num estudo que investigou esta questão; 
-\item Todos os alunos foram apresentados a desenhos de linhas simples e, em seguida, foram solicitados a recriar tantos desenhos de linhas quanto conseguissem lembrar;
-\item Você usa corretamente um teste t independente unilateral com um nível \(\alpha=0.05\) para determinar se "aprendizes visuais" se lembram mais dos desenhos de linha do que "aprendizes verbais".
-\end{itemize}
-Grupo 1: Grupo de Aprendizes Verbais:\(\bar{x}_1 = 15.00; DP_1 = 1.41, n_1 = 29\)
-\\~\\
-Grupo 2: Grupo de Aprendiz Visual:\(\bar{x}_2 = 15.25; DP_2 = 1.67, n_2 = 31\)
+\frametitle{Exemplo de teste t de amostras relacionadas (unicaudal)}
+\textbf{Exemplo:} Um psiquiatra recruta seis pessoas com altos índices de ansiedade para um estudo de avaliação do novo medicamento. Todos os seis voluntários completam um inventário de ansiedade antes de tomar o medicamento e novamente após tomar o medicamento por 1 mês.\\~\\ 
 
+Espera-se que diminua os índices de ansiedade das pessoas que o tomam.
 \end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Teste t de Amostras Independentes}
-
-\begin{center}\includegraphics[width=0.7\linewidth]{figs/fig10.3} \end{center}
-
-\end{frame}
-
-
 
 \setbeamercovered{transparent}
 \begin{frame}
@@ -375,8 +332,7 @@ Os quatro pressupostos básicos são:
 \begin{enumerate}
 \item independência dos dados;
 \item medição apropriada das variáveis para análise;
-\item normalidade das distribuições;
-\item homogeneidade da variância.
+\item normalidade das distribuições.
 \end{enumerate}
 
 \end{frame}
@@ -385,13 +341,12 @@ Os quatro pressupostos básicos são:
 \begin{frame}
 \frametitle{Etapa 1: examinar as pressuposições estatísticas}
 
-Os quatro pressupostos básicos são:
+Os três pressupostos básicos são:
 
 \begin{enumerate}
-\item \textbf{independência dos dados:} Os dados dentro de cada condição são independentes;
-\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) aprendizes verbais ou visuais, variável dependente (VD) \(\Rightarrow\) número de desenhos de lembrados corretamente, é medido em como uma variável quantitativa;
-\item \textbf{normalidade das distribuições:} as distribuições das pontuações de memória tendem a ter formato normal e, portanto, essa suposição provavelmente é atendida;
-\item \textbf{homogeneidade da variância:} utilizamos a regra geral de que se o desvio padrão numa condição for o dobro do de outra condição, esta suposição pode ser violada.
+\item \textbf{independência dos dados:} A VI neste estudo identifica dois grupos relacionados, ou seja, antes vs. depois de tomar o medicamento;
+\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) identifica as duas condições de medicamento versus placebo, variável dependente (VD) \(\Rightarrow\) nível de ansiedade dos participantes, é medido em como uma variável quantitativa;
+\item \textbf{normalidade das distribuições:} população original de diferenças médias é normalmente distribuida.
 \end{enumerate}
 
 \end{frame}
@@ -400,17 +355,15 @@ Os quatro pressupostos básicos são:
 \begin{frame}
 \frametitle{Etapa 2: expor as hipóteses nulas e de pesquisa simbolicamente e verbalmente}
 
-O teste t de amostras independentes determina se a diferença das média é significativamente diferente de 0.
+O teste t de amostras relacionadas determina se a média dessas diferenças é significativamente menor do que 0.
 
 \begin{center}
-\begin{tabular}{ m{2cm}|m{3cm}|m{2cm}|m{3cm} } 
+\begin{tabular}{ m{2cm}|m{2cm}|m{3cm}|m{3cm} } 
  \hline
  Tipo de Hipótese & Simbólico & Vebal & Diferença entre médias amostral e populacional\\
   \hline
- Hipótese nula & $H_0:\mu_1=\mu_2;$ ou & Diferença da médias $\approx$ 0 & Erro amostral \\
- & $H_0:\mu_1-\mu_2=0;$ & &\\
- Hipótese de pesquisa & $H_a:\mu_1 < \mu_2$ ou & Diferenças médias $<$ 0 & Aprendizes visuais lembram mais  \\ 
-  & $H_a:\mu_1-\mu_2 < 0;$ & &\\
+ Hipótese nula & $\mu_{D}=0;$ & Diferença média $\approx$ 0 & Erro amostral \\ 
+ Hipótese de pesquisa & $\mu_{D} < 0.$ & Diferença média $<$ 0 & Medicamento diminui ansiedade  \\ 
  \hline
  \hline
 \end{tabular}
@@ -420,8 +373,8 @@ O teste t de amostras independentes determina se a diferença das média é sign
 
 \begin{frame}
 \frametitle{Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas}
-Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). A fórmula do gl para teste t de amostras independente é $gl = (n_1 - 1) + (n_2 - 1)$, onde $n_1$ e $n_2$ representam os tamanhos amostrais das duas amostras, espectivamente. Portanto, neste caso,
-\[gl = (n_1-1)+(n_2-1) = (29 - 1)+(31 - 1) = 58\]
+Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). Para o teste t de amostra única, a fórmula para o gl é \textit{gl = N - 1}. Portanto, neste caso,
+\[gl = 6 - 1 = 5\]
 
 \begin{columns}
 \begin{column}{0.5\textwidth}
@@ -431,9 +384,9 @@ Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus g
 \begin{tabular}{ccc} 
  \hline
 gl & $\alpha = .05$ & $\alpha = .01$\\
-57 & 1.672000 &	2.393600\\
-\boxit{1.7in} 58 & 1.671600 & 2.392400\\
-59 & 1.671100 &	2.391200\\
+4 &	2.131800 & 3.746900\\
+\boxit{1.7in} 5 & 2.015000 & 3.364900\\
+6 & 1.943200 & 3.142700\\
  \hline
 \end{tabular}
 \end{center}   
@@ -450,37 +403,51 @@ gl & $\alpha = .05$ & $\alpha = .01$\\
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
-\textit{4a. Calcule o desvio entre as duas médias amostrais}\\~\\
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
+\textit{4a. Calcule D para cada participante/par correspondente}\\~\\
 
-\[(\bar{x}_1 - \bar{x}_2) = (15.00-15) = -0.25\].
+A primeira etapa no cálculo da estatística t das amostras relacionadas é calcular o valor da diferença (ou seja, D) para cada par de valores. 
 
-\textit{4b. Calcule o erro médio de amostra esperado}
+\begin{center}
+\begin{tabular}{cccc} 
+ \hline
+Voluntário & Antes & Depois & D (Depois - Antes)\\
+ \hline
+A & 22 & 19 & -3\\
+B & 22 & 19 & -3\\
+C & 23 & 18 & -5\\
+D & 26 & 25 & -1\\
+E & 23 & 20 & -3\\
+F & 25 & 21 & -4\\
+ \hline
+\end{tabular}
+\end{center}   
 
-\[SQ_p = \frac{((n_1-1)SQ_1+(n_2-1)SQ_2)}{(n_1-1)+(n_2-1)} = 2.402\]
-
-\[SEM_i = \sqrt{\frac{SQ_p}{n_1}+\frac{SQ_p}{n_2}} = 0.4\]
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
-\textit{4c. Calcule a estatística do teste (teste t de amostras independentes)}\\~\\
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
+\begin{itemize}
+\item 4b. Calcule a diferença média observada ($\bar{x}_D$)
 
-Novamente, o cálculo do teste t é idêntico a um teste bicaudal:
+\[\bar{x}_D = \frac{\sum_{i=1}^n D_i}{N} = \frac{-19}{6} = -3.167\]
 
-\[t = \frac{(\bar{x}_1 - \bar{x}_2)}{SEM_i} = \frac{(15 - 15.25)}{0.40} = -0.63\]
-
-O valor t obtido de -0.63 não está mais longe de zero do que o valor crítico de -1.6716. Portanto, você não rejeita a hipótese nula.
+\item 4c. Calcule a diferença média esperada devido ao erro de amostragem
+\[QM_D = \frac{1}{N-1}\sum_{i=1}^n(D_i - \bar{x}_D)^2 = 1.77\]
+\[SEM_D = \frac{DP}{\sqrt{N}} = \frac{1.329}{\sqrt{6}} = 0.543\]
+\item 4d. Calcule a estatística do teste (teste t de amostras relacionadas)
+\[t =  \frac{\bar{x}_D}{SEM_D}  = \frac{-3.167}{0.543} = -5.83\]
+\end{itemize}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
-Novamente, calcular o tamanho do efeito para testes unicaudais e bicaudais é idêntico:
- 
+Um tamanho de efeito é um índice da diferença entre a média da amostra e a média da população. A estatística de tamanho do efeito normalmente usada ao comparar duas médias é d. 
 \begin{align*}
-d = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{SQ_p}} = \frac{15.00-15.25}{\sqrt{2.402}} = -0.16
+d &= \frac{Desvio\quad observado\quad entre\quad as\quad medias}{Desvio\quad padrao}\\
+  &= \frac{\bar{x}_D}{DP_D} = \frac{-3.167}{1.329} =  -2.38
 \end{align*}
 
 \end{frame}
@@ -492,93 +459,32 @@ d = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{SQ_p}} = \frac{15.00-15.25}{\sqrt{2.402}}
 
 As frases a seguir resumem os resultados deste estudo:\\~\\
 
-Ao contrário da previsão da teoria dos estilos de aprendizagem, os alunos visuais $(\bar{x} = 15.25, DP = 1.41)$ não aprenderam significativamente mais informações visuais do que os alunos verbais $(\bar{x} = 15.00, DP = 1.67)$, $t_{(58)} = -0.63$, $p > 0.05$ (unicaudal), d = -0.16. O resultado nulo do estudo é consistente com os resultados nulos encontrados por vários outros pesquisadores que investigam estilos de aprendizagem. Coletivamente, os resultados nulos de vários estudos sobre estilos de aprendizagem sugerem fortemente que há muito pouco, ou nenhum, mérito na teoria da aprendizagem dos estilos de aprendizagem.
+As pessoas apresentaram níveis de ansiedade mais baixos (\(\bar{x}_D = 20.33\), DP = 2.50) depois de tomar o medicamento do que antes de tomar o medicamento (\(\bar{x}_D = 23.50\), DP = 1.64), \(t_{(5)} = -5.83\), \(p < 0.05\) (unicaudal), d = -2.38. A redução nos valores de ansiedade foi bastante grande, mais de 2 desvios padrão. O tamanho da amostra neste estudo foi muito pequeno. Um estudo mais amplo deve ser feito antes de se tirar qualquer conclusão sobre o medicamento.
 
 \end{frame}
 
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Comparação de Duas Médias\footcite{magalhaes2002noccoes}}
-
-\begin{center}\includegraphics[width=1\linewidth]{figs/figure_9_1} \end{center}
-\end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Resumo}
-
-\textbf{Tabela 9.1: Comparação de médias para duas populações}
-
-\begin{table}[h]
-\tiny
-\begin{tabular}{|c|c|}
-\hline
-Situação  & Estimadores  \\
-\hline
-Amostras Pareadas (Caso 1)  & 
-\parbox{1cm}{\begin{align*}
-\bar{D} &= \frac{\sum_i^nD_i}{n} \\
-S^2_D &= \frac{1}{n-1}\sum_{i=1}^n(D_i-\bar{D})^2 \\
-T &= \frac{\bar{D}-\mu_D}{S_D/\sqrt{n}} \sim t_{(n-1)}
-\end{align*}}  \\
-\hline
-Amostras Independentes (Caso 2) Variâncias conhecidas  & 
-\parbox{1cm}{\begin{align*}
-\bar{D} &= \bar{X}-\bar{Y} \\
-Var(\bar{D}) &= \sigma^2_X/n_1 + \sigma^2_Y/n_2 \\
-Z &= \frac{\bar{D}-\mu_D}{\sqrt{\sigma^2_X/n_1 + \sigma^2_Y/n_2}}
-\end{align*}} \\
-\hline
-\end{tabular}
-\end{table}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Resumo}
-\textbf{Tabela 9.1: Comparação de médias para duas populações}
-\begin{table}[h]
-\tiny
-\begin{tabular}{|c|c|}
-\hline
-Situação  & Estimadores  \\
-\hline
-Amostras Independentes (Caso 3A) Variâncias desconhecidas e iguais  &  \parbox{1cm}{\begin{align*}
-\bar{D} &= \bar{X}-\bar{Y} \\
-S^2_c &= \frac{(n_1-1)S^2_X+(n_2-1)S^2_Y}{(n_1-1)+(n_2-1)} \\
-T &= \frac{\bar{D}-\mu_D}{\sqrt{S^2_c(1/n_1 + 1/n_2)}}
-\end{align*}} \\
-\hline
-Amostras Independentes (Caso 3B) Variâncias desconhecidas e diferentes  & \parbox{1cm}{\begin{align*}
-\bar{D} &= \bar{X}-\bar{Y} \\
-\hat{\sigma}_{\bar{D}}^2 &= S^2_X/n_1+S^2_Y/n_2 \\
-T &= \frac{\bar{D}-\mu_D}{\sqrt{S^2_X/n_1+S^2_Y/n_2}}
-\end{align*}}  \\
-\hline
-
-\end{tabular}
-\end{table}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Exemplo 9.7}
-Digitadores são treinados em uma empresa em duas turmas distintas. Na primeira, denominada Turma J, utiliza-se um método japonês de ensino, ao passo que na segunda turma, denominada Turma A, utiliza-se um método alemão. Dezesseis (16) alunos de cada turma foram escolhidos aleatoriamente e uma mesma tarefa foi atribuída a cada uma. Apesar de desconhecida as variâncias populacionais são consideradas iguais com base em estudos anteriores. Os métodos diferem quanto ao tempo de execução da tarefa? 
+\frametitle{Exemplo 9.1}
+Uma distribuidora de combustíveis deseja verificar se um novo tipo de gasolina é eficaz na revitalização de motores velhos. Com esse objetivo, seleciona 12 automóveis de um mesmo modelo com mais de 8 anos de uso e, após regulagem de seus motores, verifica o consumo de combustível. Em seguida o carro é abastecido com o novo tipo de combustível durante 15 semanas, e uma nova aferição do consumo é feita. O novo combustível é eficaz na melhora do rendimento? Conclua com \(\alpha=0.05\).
 
 \begin{table}[h]
 \tiny
 \centering
-\begin{tabular}{ccccccccccccccc}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-Turma &  &  &  &  &  &  & Tempo &  &  &  &  &  &  &   \\
+Autom. & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
 \hline
-J & 10 & 13 & 9 & 10 & 14 & 13 & 10 & 15 & 12 & 10 & 9 & 10 & 13 & 14 \\
+Após (Y) & 11.6 & 8.8 & 9.9 & 9.5 & 11.6 & 9.1 & 10.6 & 10.8 & 13.4 & 10.6 & 10.5 & 11.4 \\
 \hline
-A & 15 & 12 & 18 & 16 & 15 & 17 & 17 & 15 & 16 & 17 & 11 & 17 & 14 & \\
+Antes (X) & 8.1 & 7.9 & 6.8 & 7.8 & 7.6 & 7.9 & 5.7 & 8.4 & 8.0 & 9.5 & 8.0 & 6.8 \\
+\hline
+D = Y-X & 3.5 & 0.9 & 3.1 & 1.7 & 4.0 & 1.2 & 4.9 & 2.4 & 5.4 & 1.1 & 2.5 & 4.6 \\
 \hline
 \end{tabular}
 \end{table}
- 
+
 \end{frame}
 
 \setbeamercovered{transparent}

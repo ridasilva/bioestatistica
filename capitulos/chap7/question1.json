@@ -1,7 +1,16 @@
-[{"question":"1. Uma das diferenças entre a z para um teste de média amostral e um teste t de amostra única é que",
-"type":"multiple_choice",
-"answers":[{"answer": "a. o z para uma média amostral é usado quando você não conhece o desvio padrão da população.",
-            "correct": false, "feedback": "Incorreto! Leio o parágrafo acima novamente."}, 
-            {"answer": "b. o teste t de amostra única usa o desvio padrão da amostra para calcular uma estimativa da quantidade típica de erro amostral.",
-            "correct": true, "feedback": "Correto!"}]
+[{
+    "question": "1 - O uso de estatística inferencial cria quais dos seguintes problemas para pesquisadores?",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. Erro estatístico",
+            "correct": false, "feedback": "Incorreto! Por favor, leia o parágrafo acima novamente."},
+        {"answer": "b. Erro de amostragem",
+         "correct": true, "feedback": "Correto! O uso de estatística inferencial cria problemas de erro de amostragem para pesquisadores."},
+        {"answer": "c. Erro de inferência",
+         "correct": false, "feedback": "Incorreto! Por favor, leia o parágrafo acima novamente."},
+        {"answer": "d. Erro de generalização",
+         "correct": false, "feedback": "Incorreto! Por favor, leia o parágrafo acima novamente."},
+        {"answer": "e. Todos os anteriores",
+         "correct": false, "feedback": "Incorreto! Por favor, leia o parágrafo acima novamente."}
+    ]
 }]

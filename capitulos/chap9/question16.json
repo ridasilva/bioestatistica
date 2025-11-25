@@ -1,6 +1,13 @@
-[{"question": "24. Ao interpretar os resultados estatísticos de qualquer estudo,",
+[{"question":"25. Qual dos seguintes valores alfa cria uma maior probabilidade de erro do Tipo I?",
 "type":"multiple_choice",
-"answers":[{"answer": "a. você deve considerar se uma variável de confusão pode ter afetado o resultados.", "correct": false, "feedback": "Incompleto!"},
-{"answer": "b. você deve reconhecer que o desenho experimental é tão importante para o conclusão científica como os resultados estatísticos.", "correct": false, "feedback": "Incompleto!"},
-{"answer": "c. ambas as opções acima estão corretas.", "correct": true, "feedback": "Correto!"}]
+"answers":[{"answer":"a. 0.01","correct":false, "feedback": "Incorreto. Leia a questão novamente."},
+{"answer":"b. 0.05","correct":true, "feedback": "Correto!"}]},
+{"question":"26. Qual dos seguintes valores alfa cria uma maior probabilidade de erro do Tipo II?",
+"type":"multiple_choice",
+"answers":[{"answer":"a. 0.01","correct":true, "feedback": "Correto!"},
+{"answer":"b. 0.05","correct":false, "feedback": "Incorreto. Leia a questão novamente."}]},
+{"question":"27. Qual dos seguintes valores alfa resulta em mais poder estatístico?",
+"type":"multiple_choice",
+"answers":[{"answer":"a. 0.01","correct":false, "feedback": "Incorreto. Leia a questão novamente."},
+{"answer":"b. 0.05","correct":true, "feedback": "Correto!"}]
 }]

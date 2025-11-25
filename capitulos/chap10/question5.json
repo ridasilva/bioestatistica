@@ -1,18 +1,11 @@
-[
-  {
-	"question": "8. Qual das seguintes alternativas representa a hipótese nula ao realizar um teste independente bicaudal?",
-	"type": "multiple_choice",
-	"answers": [
-	  {"answer": "a. $\mu_1 = \mu_2$", "correct": true, "feedback": "Correto! A hipótese nula assume que as médias são iguais."},
-	  {"answer": "b. $\mu_1 \neq \mu_2$", "correct": false, "feedback": "Incorreto. Essa é a hipótese alternativa."}
-	]
-  },
-  {
-	"question": "9. Qual das alternativas a seguir é o melhor resumo da hipótese de pesquisa bicaudal?",
-	"type": "multiple_choice",
-	"answers": [
-	  {"answer": "a. Pessoas no grupo com descrição verbal terão pontuações de memória mais altas do que pessoas no grupo sem descrição verbal.", "correct": false, "feedback": "Incorreto. Isso descreve uma hipótese unicaudal."},
-	  {"answer": "b. As pessoas no grupo com descrição verbal terão pontuações de memória diferentes das pessoas no grupo sem descrição verbal.", "correct": true, "feedback": "Correto! A hipótese de pesquisa bicaudal prevê diferenças, mas não especifica a direção."}
-	]
-  }
+[{"question":"8. Qual das seguintes opções contribui para o tamanho (isto é, largura) da margem de erro? (Escolha dois.)",
+"type":"many_choice",
+"answers":[{"answer":"a. Média da amostra", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente"},
+{"answer":"b. Tamanho da amostra", "correct": true, "feedback":"Correto!"},
+{"answer":"c. Nível de confiança", "correct": true, "feedback":"Correto!"}]},
+{"question":"9. Em geral, ICs de 99% de confiança são _____________ que ICs de 95%.",
+"type":"multiple_choice",
+"answers":[{"answer": "a. mais amplos", "correct": true, "feedback":"Correto!"},
+{"answer": "b. mais estreitos", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "c. mais precisos", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]}
 ]

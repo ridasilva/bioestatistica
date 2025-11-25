@@ -1,8 +1,0 @@
-[{
-    "question": "16. Quando você realiza um teste t unilateral, a região crítica está sempre do lado da distribuição t que é previsto pela",
-    "type": "multiple_choice",
-    "answers": [
-        {"answer": "a. hipótese nula.", "correct": false, "feedback": "Incorreto. A região crítica não é determinada pela hipótese nula."},
-        {"answer": "b. hipótese de pesquisa.", "correct": true, "feedback": "Correto! A região crítica é determinada pela hipótese de pesquisa."}
-    ]
-}]

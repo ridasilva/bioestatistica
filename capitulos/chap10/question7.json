@@ -1,9 +1,10 @@
-[{
-	"question": "11. O erro padrão estimado da diferença média é",
-    "type": "multiple_choice",
-	"answers": [
-		{"answer": "a. usado para encontrar o valor crítico para o teste t.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-		{"answer": "b. uma estimativa de quão diferentes as duas médias amostrais devem ser devido ao erro amostral.", "correct": true, "feedback": "Correto!"},
-		{"answer": "c. Tanto (a) quanto (b) estão corretas.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}
-	]
-}]
+[{"question": "11. Qual das alternativas a seguir determina o valor correto do $t_{IC}$ para um determinado IC? (Escolha dois.)",
+"type": "many_choice",
+"answers":[{"answer": "a. Nível de confiança (por exemplo, 95% ou 99%)", "correct": true, "feedback": "Correto!"},
+{"answer": "b. Os graus de liberdade", "correct": true, "feedback": "Correto!"},
+{"answer": "c. Erro de amostragem esperado", "correct": false, "feedback": "Incorreto. Leia a definição de IC novamente."}]},
+{"question": "12. No exemplo acima, os limites superiores e inferiores do IC representam",
+"type": "multiple_choice",
+"answers":[{"answer": "a. os valores mais altos e mais baixos do parâmetro populacional considerados plausíveis ou razoáveis considerando o erro amostral.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. o tamanho do efeito do estudo.", "correct": false, "feedback": "Incorreto. Leia a definição de IC novamente."},
+{"answer": "c. a probabilidade de rejeitar a hipótese nula.", "correct": false, "feedback": "Incorreto. Leia a definição de IC novamente."}]}]

@@ -1,7 +1,5 @@
-[{"question":"18. Qual das alternativas a seguir poderia representar a hipótese nula unicaudal para um teste t de amostras relacionadas?",
-"type": "multiple_choice",
-"answers":[{"answer":"a. $\mu_D < 0$", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"b. $\mu_D ≠ 0$", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"c. $\mu_1 = \mu_2$", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"d. $\mu_D = 0$", "correct": true, "feedback":"Correto!"}]
+[{"question":"17. Se o valor t obtido estiver mais distante de zero do que o valor crítico, você deve",
+"type":"multiple_choice",
+"answers":[{"answer":"a. rejeitar a hipótese nula.", "correct":true, "feedback":"Correto!"},
+{"answer":"b. não rejeitar a hipótese nula.", "correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]
 }]

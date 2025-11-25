@@ -1,6 +1,8 @@
-[{"question": "13. Ao calcular um IC para uma diferença média, se zero for considerado um valor plausível (ou seja, estiver entre os limites superior e inferior), um teste de significância bicaudal descobriria que as duas médias são",
-"type": "multiple_choice",
-"answers":[
-    {"answer": "a. não significativamente diferentes.", "correct": true, "feedback": "Correto!"},
-    {"answer": "b. significativamente diferentes.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}
-]}]
+[{"question":"19. Se um valor de z estiver na região crítica, a hipótese nula é provavelmente ________ e a hipótese de pesquisa é provavelmente ___________.",
+"type":"multiple_choice",
+"answers":[{"answer":"a. falsa; verdadeira", "correct": true, "feedback":"Correto!"} ,
+{"answer":"b. verdadeira; falsa", "correct": false, "feedback":"Incorreto!"}]},
+{"question":"20. Se um valor de z estiver além de um valor crítico (mais na cauda da distribuição), o pesquisador deveria",
+"type":"multiple_choice",
+"answers":[{"answer":"a. não rejeitar a hipótese nula.", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. rejeitar a hipótese nula.", "correct": true, "feedback":"Correto!"}]}]

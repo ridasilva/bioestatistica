@@ -1,4 +1,0 @@
-[{"question":"27. Se você não rejeitou a hipótese nula, pode ter certeza de que cometeu um erro do Tipo II.",
-"type":"multiple_choice",
-"answers": [{"answer":"a. Verdadeiro","correct":false, "feedback": "Incorreto. Leia a Tabela 6.3 novamente"},    
-{"answer":"b. Falso","correct":true, "feedback": "Ao não rejeitar a hipótese nula, existe a probabilidade de cometer um erro do tipo II."}]}]

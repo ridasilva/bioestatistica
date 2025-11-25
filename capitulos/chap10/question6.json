@@ -1,9 +1,7 @@
-[{
-	"question": "10. When computing the numerator of the independent samples t test, the population mean difference (i.e., µ1 − µ2) will always be",
-	"type": "multiple_choice",
-	"answers": [
-	  {"answer": "a. 0.", "correct": true, "feedback": "Correto! A hipótese nula assume que a diferença das médias populacionais é zero."},
-	  {"answer": "b. 10.", "correct": false, "feedback": "Incorreto. O valor 10 não é assumido como a diferença das médias populacionais."},
-	  {"answer": "c. the same as the sample mean difference.", "correct": false, "feedback": "Incorreto. A diferença das médias populacionais não é igual à diferença das médias amostrais."}
-	]
-  }]
+[{"question":" 10. Ao criar um IC de 95%, use um valor t crítico da",
+"type":"multiple_choice",
+"answers": [{"answer":"a. tabela t bicaudal de 0.01.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."},
+{"answer":"b. tabela t bicaudal de 0.05.", "correct":true, "feedback": "Correto."},
+{"answer": "c. tabela t unilateral de 0.01.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."},
+{"answer": "d. tabela t unilateral de 0.05.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."}]
+}]

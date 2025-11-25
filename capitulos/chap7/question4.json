@@ -1,26 +1,15 @@
-[{"question": "4. O valor crítico para um teste z unilateral com $\alpha = 0.05$ é sempre",
-"type": "multiple_choice",
-"answers": [
-{"answer": "a. +1,65 ou -1,65.", "correct": true, "feedback": "Correto!"},
-{"answer": "b. 0.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer": "c. +1,96 ou -1,96.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}
-]},
-{"question": "5. O valor crítico para um teste t unilateral com $\alpha = 0.05$",
-"type": "multiple_choice",
-"answers": [
-{"answer": "a. é igual ao valor crítico para um teste z semelhante.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer": "b. muda com base no tamanho da amostra (ou seja, N) que está sendo usada.", "correct": true, "feedback": "Correto!"}
-]},
-{"question": "6. O valor crítico para um teste t será __________ à medida que o tamanho da amostra aumenta.",
-"type": "multiple_choice",
-"answers": [
-{"answer": "a. mais distante de zero.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer": "b. mais próximo de zero.", "correct": true, "feedback": "Correto!"}
-]},
-{"question": "7. À medida que o tamanho da amostra aumenta, a região crítica para um teste t",
-"type": "multiple_choice",
-"answers": [
-{"answer": "a. fica maior (mais de 5% da distribuição).", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer": "b. fica menor (menos de 5% da distribuição).", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer": "c. permanece o mesmo tamanho (igual a 5% da distribuição), mas sua localização muda.", "correct": true, "feedback": "Correto!"}
-]}]
+[{"question":"8 - Ao calcular z para uma média amostral, se o valor de z for próximo de zero, a média amostral",
+"type":"multiple_choice",
+"answers": [{"answer": "a. não é muito diferente da média da população e a diferença ocorre provavelmente devido a erro de amostragem.", 
+            "correct": true, "feedback":"Correto! Quanto mais próximo de zero, menor a diferença esperada para a média populacional."},
+            {"answer":"b. é muito diferente da média da população e a diferença é provavelmente criada por algo diferente de erro de amostragem.",
+            "correct": false, "feedback":"Incorreto! Quanto mais próximo de zero, menor a diferença esperada para a média populacional."}]
+},
+{"question":"9 - Ao calcular z para uma média amostral, se o valor de z estiver longe de zero, a média amostral",
+"type":"multiple_choice",
+"answers":[{"answer":"a. não é muito diferente da média da população e a diferença é provavelmente devido a erro de amostragem.",
+            "correct": false, "feedback":"Incorreto! Quanto mais longe de zero, maior a diferença esperada para a média populacional."},
+           {"answer":"b. é muito diferente da média da população e a diferença é provavelmente criado por algo diferente de erro de amostragem.",
+           "correct": true, "feedback":"Correto! Quanto mais longe de zero, maior a diferença esperada para a média populacional."}]
+
+}]

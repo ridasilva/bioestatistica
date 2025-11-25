@@ -1,11 +1,9 @@
-[{"question":"8. Qual das seguintes opções contribui para o tamanho (isto é, largura) da margem de erro? (Escolha dois.)",
-"type":"many_choice",
-"answers":[{"answer":"a. Média da amostra", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente"},
-{"answer":"b. Tamanho da amostra", "correct": true, "feedback":"Correto!"},
-{"answer":"c. Nível de confiança", "correct": true, "feedback":"Correto!"}]},
-{"question":"9. Em geral, ICs de 99% de confiança são _____________ que ICs de 95%.",
+[{"question":"12. Se você procurar um valor z de 2.2 na tabela de unidades normais, descobrirá que a probabilidade de obter um valor de z de 2.2 ou superior se a hipótese nula for verdadeira é 0.0139. Este é um resultado provável ou improvável se usarmos um ponto de corte de 0.05?",
 "type":"multiple_choice",
-"answers":[{"answer": "a. mais amplos", "correct": true, "feedback":"Correto!"},
-{"answer": "b. mais estreitos", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
-{"answer": "c. mais precisos", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]}
-]
+"answers":[{"answer": "a. Provável", "correct": false, "feedback": "Incorreto, leia o parágrafo acima novamente."},
+{"answer": "b. Improvável", "correct": true, "feedback": "Correto! Se a hipótese nula for verdadeira, a probabilidade de obter um valor de z de 2.2 ou superior é de 0.0139, o que é menor que o ponto de corte de 0.05. Portanto, é improvável que o resultado seja devido ao acaso."}]},
+{"question":"13. Se um pesquisador obtiver um valor de z de 2.2, você pode ter certeza absoluta de que a diferença observada entre a média amostral e a população não se deve a um erro amostral.",
+"type":"multiple_choice",
+"answers":[{"answer": "a. Verdadeiro", "correct": false, "feedback": "Incorreto, leia o parágrafo acima novamente."},
+{"answer": "b. Falso", "correct": true, "feedback": "Correto! Um valor de z de 2.2 indica que a diferença observada entre a média amostral e a população é improvável devido ao acaso, mas não garante que a diferença não seja devido a um erro amostral."}]
+}]

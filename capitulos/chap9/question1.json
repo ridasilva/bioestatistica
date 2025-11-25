@@ -1,10 +1,7 @@
-[{"question":"1. Os pesquisadores usam o teste t de amostras relacionadas para determinar se ________ diferem mais do que seria esperado pelo erro amostral.",
+[{"question":"1. Uma das diferenças entre a z para um teste de média amostral e um teste t de amostra única é que",
 "type":"multiple_choice",
-"answers":[{"answer": "a. duas médias amostrais relacionadas", "correct": true, "feedback": "Correto!"},
-{"answer": "b. uma média amostral e uma média populacional", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]},
-{"question":"2. O teste t de amostras relacionadas pode ser usado para um estudo que está usando",
-"type":"multiple_choice",
-"answers":[{"answer": "a. um projeto de pesquisa correspondente", "correct": false, "feedback": "Correto! Mas incompleto."},
-{"answer": "b. um projeto de pesquisa pré-pós", "correct": false, "feedback": "Correto!! Mas incompleto."},
-{"answer": "c. ambos os projetos de pesquisa", "correct": true, "feedback": "Correto!"}]
+"answers":[{"answer": "a. o z para uma média amostral é usado quando você não conhece o desvio padrão da população.",
+            "correct": false, "feedback": "Incorreto! Leio o parágrafo acima novamente."}, 
+            {"answer": "b. o teste t de amostra única usa o desvio padrão da amostra para calcular uma estimativa da quantidade típica de erro amostral.",
+            "correct": true, "feedback": "Correto!"}]
 }]

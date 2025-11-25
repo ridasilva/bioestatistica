@@ -1,13 +1,9 @@
-[{"question": "3. Uma distinção importante entre o teste t de amostra única e o teste t de amostras relacionadas é que _______ analisa diferenças significativas entre duas amostras.",
-"type": "multiple_choice",
-"answers":[{"answer": "a. o teste t de amostra única", "correct": false, "feedback": "Incorreto. Leia a questão novamente."},
-{"answer": "b. o teste t de amostras relacionadas", "correct": true, "feedback": "Correto!"}]},
-{"question": "4. Os denominadores do teste t de amostra única e do teste t de amostras relacionadas são ambos",
-"type": "multiple_choice",
-"answers":[{"answer": "a. próximos 0 se a hipótese nula for verdadeiro.", "correct": false, "feedback": "Incorreto. Leia a questão novamente."},
-{"answer": "b. a quantidade típica de erro amostral esperado no estudo.", "correct": true, "feedback": "Correto!"}]},
-{"question": "5. Tal como acontece com todos os tipos de testes t (por exemplo, teste t de amostra única e outros), se o valor da hipótese nula é falsa, o teste t de amostras relacionadas espera um valor t obtido que é",
-"type": "multiple_choice",
-"answers":[{"answer": "a. próximo de 0.", "correct": false, "feedback": "Incorreto. Leia a questão novamente."},
-{"answer": "b. distante de 0.", "correct": true, "feedback": "Correto!"}]}
-]
+[{"question":"2. Um pesquisador deseja avaliar o conhecimento das pessoas sobre um tópico usando um teste de verdadeiros/falsos em 10 perguntas. Qual valor poderia ser de interesse teórico para este pesquisador e, portanto, funcionar como um valor de teste de hipótese nula?",
+"type":"multiple_choice",
+"answers":[{"answer":"a. O pesquisador pode comparar a média de acertos com 10, número que representa o desempenho perfeito no teste.",
+           "correct": false, "feedback": "Incompleto. Leia a questão novamente."},
+           {"answer":"b. O pesquisador pode comparar o número médio de respostas corretas com 5, o número médio de respostas corretas que as pessoas obteriam se simplesmente adivinhassem todas as questões do teste.",
+           "correct": false, "feedback": "Incompleto. Leia a questão novamente."},
+           {"answer":"c. O pesquisador poderia usar “10” ou “5” nesta situação porque ambos os valores representam um nível de desempenho que pode ser de interesse teórico para o pesquisador.",
+              "correct": true, "feedback": "Correto. O pesquisador pode usar qualquer valor que represente um nível de desempenho que seja de interesse teórico para ele."}]
+}]

@@ -1,6 +1,8 @@
-[{"question":"14. Qual das alternativas a seguir determina valores plausíveis para parâmetros populacionais?",
+[{"question":"21. Um tamanho de efeito de d = 0,65 é",
 "type":"multiple_choice",
-"answers":[{"answer":"a. Estimativas pontuais","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"b. Tamanhos de efeito","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"c. ICs","correct":true, "feedback":"Correto."}]
+"answers":[{"answer":"a. pequeno.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima."},{"answer":"b. pequeno a médio.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima."},
+{"answer":"c. médio.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima."},{"answer":"d. médio a grande.","correct":true, "feedback":"Correto!"},{"answer":"e. grande.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima."}],
+},{"question":"22. Um tamanho de efeito de 0.3 indica que as médias foram diferentes em",
+"type":"multiple_choice",
+"answers":[{"answer":"a. 0.3 de um desvio padrão.","correct":true, "feedback":"Correto."},{"answer":"b. 0.3%.","correct":false, "feedback":"Incorreto. Leia o parágrafo acima."}]
 }]

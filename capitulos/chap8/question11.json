@@ -1,10 +1,10 @@
-[{"question": "16. Qual das alternativas a seguir não é uma interpretação correta de um IC de 95%?",
+[{"question":"24. Se você rejeitar a hipótese nula, há alguma probabilidade de você ter cometido um",
 "type": "multiple_choice",
-"answers":[{"answer": "a. Uma gama de valores de parâmetros plausíveis", "correct": false, "feedback": "Incorreto. Por favor, leia o parágrafo acima novamente."},
-{"answer": "b. Um IC mais amplo é menos preciso que um IC estreito", "correct": false, "feedback": "Incorreto. Por favor, leia o parágrafo acima novamente."},
-{"answer": "c. Um IC de 95% de [15, 30] significa que 95% das replicações desse estudo irão produzir uma média amostral entre 15 e 30.", "correct": true, "feedback": "Correto! A afirmação correta seria que um IC de 95% de [15, 30] significa que 95% das replicações desse estudo irão produzir intervalos entre 15 e 30 que contêm a média amostral "}]},
-{"question": "17. Se o valor zero não for incluído entre os limites superior e inferior de um IC de 95% para uma diferença entre média, as duas médias usadas para criar a estimativa pontual serão",
+"answers":[{"answer": "a. Erro do tipo I.", "correct":true, "feedback": "Correto."},
+           {"answer":"b. Erro do tipo II.", "correct":false, "feedback": "Incorreto."}]
+},
+{"question":"25. Se você não rejeitar a hipótese nula, há alguma probabilidade de você ter cometido um",
 "type": "multiple_choice",
-"answers":[{"answer": "a. não significativamente diferentes.", "correct": false, "feedback": "Incorreto. Por favor, leia o parágrafo acima novamente."},
-{"answer": "b. significativamente diferentes.", "correct": true, "feedback": "Correto!"}]
+"answers":[{"answer": "a. Erro do tipo I.", "correct":false, "feedback": "Incorreto."},
+           {"answer":"b. Erro do tipo II.", "correct":true, "feedback": "Correto."}]
 }]

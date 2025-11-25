@@ -1,5 +1,5 @@
-[{"question":"19. Ao calcular o gl para um teste t de amostras relacionadas, o N na fórmula é o",
+[{"question":"18. Ao calcular um tamanho de efeito para um teste t de amostra única, o denominador é",
 "type":"multiple_choice",
-"answers":[{"answer":"a. número de valores.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"b. número de pares de valores.", "correct": true, "feedback": "Correto!"}]
+"answers":[{"answer": "a. o desvio padrão da amostra.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leio o parágrafo acima novamente"}]
 }]

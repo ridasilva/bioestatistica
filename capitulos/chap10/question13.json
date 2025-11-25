@@ -1,8 +1,0 @@
-[{
-    "question": "17. Ao calcular o erro padrão da diferença média, a equação exige o uso de",
-    "type": "multiple_choice",
-    "answers": [
-        {"answer": "a. os graus de liberdade de cada grupo.", "correct": false, "feedback": "Incorreto. Os graus de liberdade não são usados diretamente na equação."},
-        {"answer": "b. os tamanhos amostrais de cada grupo.", "correct": true, "feedback": "Correto! Os tamanhos amostrais são usados na equação."}
-    ]
-}]

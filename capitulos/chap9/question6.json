@@ -1,10 +1,15 @@
-[{"question":"13. O teste t de amostras relacionadas analisa ________ em vez de __________.",
+[{"question":"9. Você usa um t de amostra única quando",
+"type":"multiple_choice",
+"answers":[{"answer": "a. a VI define duas amostras independentes e a VD é medida como uma variável quantitativa.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. a VI define duas amostras dependentes e a VD é medida como uma variável quantitativa.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "c. a VI define uma amostra, a VD é medida como uma variável quantitativa e a VD é medido duas vezes na mesma amostra.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "d. a VI define uma amostra e a VD é medida como uma variável quantitativa e você não conhece o desvio padrão da população.", "correct": true, "feedback": "Correto!"},
+{"answer": "e. a VI define uma amostra e a VD é medida como uma variável quantitativa e você conhece o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+},
+{"question": "10. Ao realizar um teste t para amostra única, qual das seguintes suposições é a mais difícil de avaliar?",
 "type": "multiple_choice",
-"answers":[{"answer":"a. desvios de valores; diferenças de valores","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"b. valores brutos; valores de diferenças","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"c. valores de diferenças; valores brutos","correct":true, "feedback": "Correto!"}]},
-{"question":"14. Qual dos seguintes valores é uma medida do erro amostral?",
-"type": "multiple_choice",
-"answers":[{"answer":"a. $SEM_r$","correct":true, "feedback": "Correto!"},
-{"answer":"b. $SS_D$","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer":"c. $SQ_D$","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]}]
+"answers":[{"answer": "a. Independência de dados", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. Medição apropriada de VI e VD", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "c. Normalidade da distribuição das médias amostrais", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "d. Homogeneidade de variância", "correct": true, "feedback": "Correto!"}]
+}]

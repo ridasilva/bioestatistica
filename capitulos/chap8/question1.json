@@ -1,5 +1,25 @@
-[{"question":"1. Os testes de significância (por exemplo, testes t de amostra única) foram concebidos para ajudar os investigadores a determinar se a diferença observada era susceptível de ser criada por",
-"type":"multiple_choice",
-"answers":[{"answer": "a. erro de amostragem.", "correct": true, "feedback": "Correto!"},
-{"answer": "b. fator confundidor (uma variável que influencia tanto a variável dependente, quanto a variável independente).", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
-}]
+[{"question": "1. A suposição de independência significa que",
+"type": "multiple_choice",
+"answers": [{"answer": "a. as variáveis dentro de uma condição são independentes umas das outras.", "correct": true, 
+            "feedback": "Correto! A suposição de independência significa que as variáveis dentro de uma condição são independentes umas das outras."},
+            {"answer": "b. a amostra é independente da população.", "correct": false, "feedback": "Incorreto. Leia a definição de independência novamente."}]
+
+},
+{"question": "2. Para realizar um teste de hipótese usando z para uma média amostral, a variável dependente deve ser uma variável",
+"type": "multiple_choice",
+"answers":[{"answer":"a. qualitativa ordinal.", "correct": false, "feedback": "Incorreto. Leia a definição de variável dependente novamente."},
+            {"answer":"b. quantitativa.", "correct": true, "feedback": "Correto! A variável dependente deve ser quantitativa para realizar um teste de hipótese usando z para uma média amostral."},
+            {"answer":"c. qualitativa nominal ou quantitativa.", "correct": false, "feedback": "Incorreto. Leia a definição de variável dependente novamente."}]
+},
+{"question": "3. Quando você pode ter certeza de que a suposição de normalidade foi atendida?",
+"type": "multiple_choice",
+"answers":[{"answer": "a. Se o tamanho da amostra for maior que 30", "correct": false, "feedback": "Parcialmente correto. Leia a definição de normalidade novamente."},
+            {"answer": "b. Se a população da variável amostrada for normalmente distribuída", "correct": false, "feedback": "Parcialmente correto. Leia a definição de normalidade novamente."},
+            {"answer": "c. Se o tamanho da amostra for superior a 30 ou se a amostra for normalmente distribuída", "correct": true, "feedback": "Correto!"}]
+},
+{"question": "4. Ao realizar um z para uma média amostral, você pode ter bastante certeza de que a suposição de homogeneidade de variância foi atendida pelos dados de um estudo, desde que",
+"type": "multiple_choice",
+"answers":[{"answer": "a. os desvios padrão da amostra e da população são semelhantes (ou seja, um não tem o dobro do tamanho do outro).", "correct": true, "feedback": "Correto!"},
+            {"answer": "b. os desvios padrão da amostra e da população são superiores ao dobro do desvio padrão do outro grupo.", "correct": false, "feedback": "Incorreto."}]
+}
+]

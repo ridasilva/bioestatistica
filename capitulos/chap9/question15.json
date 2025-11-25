@@ -1,5 +1,8 @@
-[{"question":"23. Ao redigir a demonstração de resultados, o valor p é escrito como menor do que 0.05 (ou seja, p < 0.05) porque",
-"type": "multiple_choice",
-"answers":[{"answer":"a. o valor t obtido estava na região crítica.", "correct": true, "feedback": "Correto!"},
-{"answer": "b. a hipótese nula não foi rejeitada.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+[{"question":"24. Para quais das seguintes etapas de teste de hipótese existe uma diferença entre testes unicaudais e bicaudais? (Você deve escolher três das cinco etapas a seguir.)",
+"type":"many_choice",
+"answers":[{"answer":"a. Etapa 1: declaração de hipóteses nula e de pesquisa","correct":true, "feedback":"Correto!"},
+{"answer":"b. Etapa 2: definição da região crítica","correct":true, "feedback":"Correto!"},
+{"answer":"c. Etapa 3: calcular a estatística de teste","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"d. Etapa 4: calcular o tamanho do efeito","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"e. Etapa 5: escrever os resultados","correct":true, "feedback":"Correto!"}]
 }]

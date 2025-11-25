@@ -1,18 +1,10 @@
-[{
-    "question": "4. O teste t para amostras independentes é uma razão entre a diferença entre duas médias amostrais sobre uma estimativa de",
-    "type": "multiple_choice",
-    "answers": [
-        {"answer": "a. erro amostral.", "correct": true, "feedback": "Correto! O teste t independente utiliza o erro amostral para calcular a razão."},
-        {"answer": "b. desvio padrão das amostras.", "correct": false, "feedback": "Incorreto. O desvio padrão das pontuações não é usado diretamente na razão."},
-        {"answer": "c. variabilidade.", "correct": false, "feedback": "Incorreto. A variabilidade é um conceito mais geral e não é a estimativa usada diretamente."}
-    ]
-},
-{
-    "question": "5. O numerador do teste t para amostras independentes é a diferença entre",
-    "type": "multiple_choice",
-    "answers": [
-        {"answer": "a. duas médias amostrais.", "correct": true, "feedback": "Correto! A diferença entre duas médias amostrais é usada no numerador."},
-        {"answer": "b. uma média amostral e uma média populacional.", "correct": false, "feedback": "Incorreto. O teste t independente não utiliza uma média populacional no numerador."},
-        {"answer": "c. uma média amostral e a hipótese nula.", "correct": false, "feedback": "Incorreto. A hipótese nula não é usada diretamente no numerador."}
-    ]
-}]
+[{"question":"4. O objetivo de um intervalo de confiança é",
+"type":"multiple_choice",
+"answers":[{"answer":"a. realizar um teste para diferenças significativas.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. quantificar a eficácia de um tratamento.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"c. ajudar os pesquisadores a estimar um parâmetro populacional com um nível específico de confiança e precisão.","correct":true, "feedback": "Correto!"}]},
+{"question":"5. Os intervalos de confiança fornecem aos pesquisadores",
+"type":"multiple_choice",
+"answers":[{"answer":"a. uma gama de valores plausíveis para um parâmetro populacional.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. informações que ajudam a aplicar resultados de amostras a populações.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"c. ambos mencionados acima.","correct":true, "feedback": "Correto!"}]}]

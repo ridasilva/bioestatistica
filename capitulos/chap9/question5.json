@@ -1,10 +1,7 @@
-[{"question":"11. Os valores das diferenças serão sempre positivas.",
+[{"question":"8. Ao realizar um teste t, aumentar o tamanho da amostra __________ a quantidade de erro de amostragem esperado. Isso significa que o denominador do teste t será __________.",
 "type":"multiple_choice",
-"answers":[{"answer": "a. Verdadeiro", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-{"answer": "b. Falso", "correct": true, "feedback": "Correto!"}]
-},
-{"question":"12. A primeira etapa no cálculo de amostras relacionadas t é calcular os valores das diferenças (Ds)",
-"type":"multiple_choice",
-"answers":[{"answer": "a. Verdadeiro", "correct": true, "feedback": "Correto!"},
-{"answer": "b. Falso", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+"answers":[{"answer":"a. aumenta; menor","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. aumenta; maior","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"c. diminui; menor","correct":true, "feedback": "Correto!"},
+{"answer":"d. diminui; maior","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
 }]

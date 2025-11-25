@@ -1,9 +1,11 @@
-[{
-    "question": "3. Um teste t para amostras independentes t pode ser usado para comparar diferenças entre amostras que",
-    "type": "multiple_choice",
-    "answers": [
-        {"answer": "a. são criadas pelo pesquisador ao diferenciar níveis da VI.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-        {"answer": "b. já ocorrem na população estudada.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-        {"answer": "c. ambas respostas acima.", "correct": true, "feedback": "Correto! O teste t independente é usado para comparar diferenças entre grupos independentes."}
-    ]
+[{"question":"2. Se um teste estatístico levar à rejeição da hipótese nula, a conclusão da pesquisa é sempre importante ou útil.",
+"type":"multiple_choice",
+"answers":[{"answer":"a. Verdadeiro","correct":false, "feedback": "Leia o parágrafo acima novamente."},
+{"answer":"b. Falso", "correct":true, "feedback": "Correto! O tamanho do efeito pode ser demasiado pequeno para ser importante ou útil."}]
+},
+{"question":"3. Um tamanho de efeito pode ajudar um pesquisador a determinar",
+"type":"multiple_choice",
+"answers":[{"answer":"a. se um efeito é grande o suficiente para ser útil.", "correct":true, "feedback": "Correto!"},
+{"answer":"b. se a diferença média ocorre provavelmente devido a erro de amostragem.", "correct":false, "feedback": "Leia o parágrafo acima novamente."},
+{"answer":"c. ambos mencionados acima.", "correct":false, "feedback": "Leia o parágrafo acima novamente."}]
 }]

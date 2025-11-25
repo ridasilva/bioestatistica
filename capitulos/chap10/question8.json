@@ -1,10 +1,6 @@
-[
-{
-		"question": "12. Quando o valor t obtido não estiver distante de zero, então o valor crítico da hipótese nula deve",
-		"type": "multiple_choice",
-		"answers": [
-			{"answer": "a. ser rejeitado.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
-			{"answer": "b. não ser rejeitado.", "correct": true, "feedback": "Correto!"}
-		]
-	}
-]
+[{"question": "13. Ao calcular um IC para uma diferença média, se zero for considerado um valor plausível (ou seja, estiver entre os limites superior e inferior), um teste de significância bicaudal descobriria que as duas médias são",
+"type": "multiple_choice",
+"answers":[
+    {"answer": "a. não significativamente diferentes.", "correct": true, "feedback": "Correto!"},
+    {"answer": "b. significativamente diferentes.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}
+]}]

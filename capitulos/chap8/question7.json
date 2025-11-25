@@ -1,10 +1,15 @@
-[{"question": "11. Qual das alternativas a seguir determina o valor correto do $t_{IC}$ para um determinado IC? (Escolha dois.)",
-"type": "many_choice",
-"answers":[{"answer": "a. Nível de confiança (por exemplo, 95% ou 99%)", "correct": true, "feedback": "Correto!"},
-{"answer": "b. Os graus de liberdade", "correct": true, "feedback": "Correto!"},
-{"answer": "c. Erro de amostragem esperado", "correct": false, "feedback": "Incorreto. Leia a definição de IC novamente."}]},
-{"question": "12. No exemplo acima, os limites superiores e inferiores do IC representam",
+[{"question": "16. O valor crítico define o “ponto de corte” para",
 "type": "multiple_choice",
-"answers":[{"answer": "a. os valores mais altos e mais baixos do parâmetro populacional considerados plausíveis ou razoáveis considerando o erro amostral.", "correct": true, "feedback": "Correto!"},
-{"answer": "b. o tamanho do efeito do estudo.", "correct": false, "feedback": "Incorreto. Leia a definição de IC novamente."},
-{"answer": "c. a probabilidade de rejeitar a hipótese nula.", "correct": false, "feedback": "Incorreto. Leia a definição de IC novamente."}]}]
+"answers": [{"answer": "a. determinar se a hipótese nula deve ser rejeitada ou não.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. determinar se a hipótese de pesquisa deve ser rejeitada ou não.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+},
+{"question": "17. Se z calculado estiver na região crítica, você deve",
+"type": "multiple_choice",
+"answers": [{"answer": "a. rejeitar a hipótese nula.", "correct": true, "feedback": "Correto!"},
+{"answer": "b. não rejeitar a hipótese nula.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+},
+{"question": "18. Se z calculado não estiver na região crítica, você deve",
+"type": "multiple_choice",
+"answers": [{"answer": "a. rejeitar a hipótese nula.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. não rejeitar a hipótese nula.", "correct": true, "feedback": "Correto!"}]
+}]

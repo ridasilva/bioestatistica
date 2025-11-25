@@ -1,5 +1,5 @@
-[{"question":"17. O tamanho do efeito neste estudo indica que o medicamento aumentou os níveis colesterol dos participantes",
+[{"question":"16. Para este exemplo, a diferença observada entre a média amostral e a média populacional foi _______________; a diferença esperada devido ao erro amostral foi _____________.",
 "type":"multiple_choice",
-"answers":[{"answer": "a. em 1.15 desvios padrão, o que é um efeito muito grande.", "correct": true, "feedback": "Correto!"},
-{"answer": "b. 1.15 vezes mais do que seria esperado pelo acaso.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
-}]
+"answers":[{"answer": "a. 268.186; 680", "correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. 680; 268.186", "correct":true, "feedback": "Correto!"}]
+ }]

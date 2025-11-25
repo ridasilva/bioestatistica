@@ -20,7 +20,7 @@ citestyle=authoryear
 
 \addbibresource{stats.bib}
 \title[Bioestatística II] %optional
-{Distribuição Amostral da Média}
+{Variáveis Bidimensionais}
 
 \subtitle{CGF2046 - Bioestatística II}
 
@@ -41,14 +41,6 @@ citestyle=authoryear
 
 \begin{document}
 
-%\begin{frame}
-%\titlepage
-%\end{frame}
-
-%\begin{frame}
-%\tableofcontents
-%\end{frame}
-
 \begin{frame}
 \titlepage
 \end{frame}
@@ -59,447 +51,1448 @@ citestyle=authoryear
 \tableofcontents
 \end{frame}
 
+\section{Introdução}
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Objetivos de Aprendizado\footcite{carlson2017introduction}}
-  Depois de assitir essa aula e fazer as atividades complementares, você será capaz de:
-  \\~\\
-  \begin{itemize}
-  \uncover<1->{\item
-    Explicar como uma distribuição de médias amostrais é criada;}
-  \uncover<2->{\item
-    Explicar como uma amostra aleatória é obtida;}
-  \uncover<3->{\item
-    Determinar a média, o desvio padrão e a forma de uma distribuição de médias amostrais;}
-   \uncover<4->{\item
-    Explicar qual é o erro padrão das medidas médias;}
-   \uncover<5->{\item
-    Explicar o teorema central do limite e por que ele é importante;}
-   \uncover<6->{\item
-    Explicar a lei dos grandes números;}
-   \uncover<7->{\item
-    Calcular a z para uma média amostral;}
-   \uncover<8->{\item Usar z para uma média amostral e uma tabela de probabilidades para distribuição normal para determinar a probabilidade de uma dada média amostral ocorrer;}
-  \end{itemize}
-\end{frame}
-
-\section{Conceitos básicos de inferência}
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Definições}
-  Conceitos fundamentais
-  \\~\\
-  \begin{itemize}
-  \uncover<1->{\item
-    \textbf{População}: Conjunto de todos os elementos sob investigação.}
-  \uncover<2->{\item
-    \textbf{Amostra}: Subconjunto da população.}
-  \uncover<3->{\item
-    \textbf{Variável} de interesse: característica a ser observada em
-    cada indivíduo da amostra.}
-  \end{itemize}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Variável aleatória}
-
-\textbf{Definição}
+\frametitle{Introdução}
 
 \begin{itemize}
 \item
-  \textbf{Variável aleatória} - Descrição numérica do resultado de um
-  fenômeno aleatório.
+  Interesse no comportamento conjunto de várias variáveis.
+\item
+  Construção de tabelas de frequência conjunta ou função de
+  probabilidade conjunta.
+\item
+  O principal objetivo é explorar relações (similaridades) entre as
+  colunas (ou linhas).
+\item
+  Determinar se existe \textbf{associação} entre as variáveis.
+\item
+  Podemos ter três situações:
+
+  \begin{enumerate}
+  \def\labelenumi{\alph{enumi}.}
+  \item
+    Duas variáveis qualitativas
+  \item
+    Duas variáveis quantitativas
+  \item
+    Uma variável qualitativa e outra quantitativa
+  \end{enumerate}
 \end{itemize}
 
-\textbf{Notação}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Introdução}
 
 \begin{itemize}
 \item
-  \(X\) denota a variável aleatória.
+  Em todas as situações o objetivo é encontrar as possíveis
+  \textbf{relações} ou \textbf{associações} entre as duas variáveis
 \item
-  \(x\) denota os valores realizados da v.a.
+  Essas relações podem ser detectadas por meio de \textbf{métodos
+  gráficos} ou \textbf{medidas numéricas}
 \item
-  Probabilidade de \(X\) assumir o valor \(x\) é denotada \(P(X = x)\).
-\end{itemize}
+  Para efeitos práticos: existe associação se existe uma
+  \textbf{mudança} no comportamento de uma variável na presença de outra
+\item
+  Exemplo:
 
-\textbf{Exemplo}
+  \begin{enumerate}
+  \def\labelenumi{\alph{enumi}.}
+  \item
+    Frequência esperada de pessoas com mais de 170 cm de altura
+  \item
+    Frequência esperada de pessoas com mais de 170 cm de altura por sexo
+  \end{enumerate}
+\item
+  Se a resposta for a mesma, dizemos que não há associação
+\end{itemize}
+\end{frame}
+
+\section{Distribuições conjuntas e marginais}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.1}
+
+Uma amostra de \(20\) alunos do primeiro ano de uma faculdade foi
+escolhida. Perguntou-se aos alunos se \emph{trabalhavam}, variável que
+foi representada por \(X\), e o \emph{número de vestibulares prestados},
+variável representada por \(Y\). Os dados obtidos estão na tabela
+abaixo.
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccccccc}
+      \hline
+X & não & sim & não & não & não & sim & sim & não & sim & sim \\
+Y & 1 & 1 & 2 & 1 & 1 & 2 & 3 & 1 & 1 & 1\\
+      \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccccccc}
+      \hline
+X & não & não & sim & não & sim & não & não & não & sim & não\\
+Y & 2 & 2 & 1 & 3 & 2 & 2 & 2 & 1 & 3 & 2\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.1}
+
+Distribuição conjunta
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cc}
+    \hline
+\texttt{(X,Y)} & Freq\\
+      \hline
+não,1 & 5\\
+não,2 & 6\\
+não,3 & 1\\
+sim,1 & 4\\
+sim,2 & 2\\
+sim,3 & 2\\
+Sum & 20\\
+
+      \hline
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.1}
+
+Distribuição conjunta: \textbf{tabela de dupla entrada} (melhor para
+visualizar)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccc}
+    \hline
+X/Y & 1 & 2 & 3 & Sum\\
+    \hline
+não & 5 & 6 & 1 & 12\\
+sim & 4 & 2 & 2 & 8\\
+Sum & 9 & 8 & 3 & 20\\
+
+      \hline
+    \end{tabular}
+\end{table}
+
+Distribuição \textbf{marginal} de \(X\)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccc}
+    \hline
+não & sim & Sum\\
+    \hline
+12 & 8 & 20\\
+      \hline
+    \end{tabular}
+\end{table}
+
+Distribuição \textbf{marginal} de \(Y\)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccc}
+    \hline
+1 & 2 & 3 & Sum\\
+    \hline
+9 & 8 & 3 & 20\\
+      \hline
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.2}
+
+Um estudo envolveu \(345\) pacientes HIV positivos, acompanhados durante
+um ano, pelo setor de doenças infecciosas de um grande hospital público.
+Os dados apresentados contêm as ocorrências relacionadas às variáveis
+\emph{número de internações} \((I)\) e \emph{número de crises com
+infecções oportunistas} \((C)\).
+
+\begin{table}[]
+\centering
+\begin{tabular}{l|lllll} \hline
+I/C & 0  & 1  & 2  & 3  & 4  \\ \hline
+0   & 84 & 21 & 8  & 2  & 0  \\
+1   & 20 & 59 & 35 & 14 & 2  \\
+2   & 6  & 11 & 43 & 28 & 12 \\ \hline
+\end{tabular}
+\end{table}
 
 \begin{itemize}
 \item
-  X: Número de alunos em uma sala de aula.
-\item
-  Uma possível realização \(x = 50\).
+  Obtenha as marginais de \(I\) e \(C\).
 \end{itemize}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Parâmetro e Estimativa}
+\frametitle{Exemplo 5.2}
 
-\textbf{População} \(\rightarrow\) \textbf{censo} \(\rightarrow\)
-\textbf{parâmetro}
-
-\emph{Uma medida numérica que descreve alguma característica da
-\textbf{população}, usualmente representada por letras gregas:
-\(\theta\), \(\mu\), \(\sigma\), \(\ldots\)}
-
-Exemplo: média populacional = \(\mu\)
-
-\vspace{1em}
-\hrule
-\vspace{1em}
-
-\textbf{População} \(\rightarrow\) \textbf{amostra} \(\rightarrow\)
-\textbf{estimativa}
-
-\emph{Uma medida numérica que descreve alguma característica da
-\textbf{amostra}, usualmente denotada pela letra grega do respectivo
-parâmetro com um acento circunflexo: \(\hat\theta\), \(\hat\mu\),
-\(\hat\sigma\), \(\ldots\), ou por letras do alfabeto comum: \(\bar x\),
-\(s\), \(\ldots\)}
-
-Exemplo: média amostral = \(\bar{x}\)
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Estimador}
-
-\textbf{Observação:}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-
+\begin{itemize}
 \item
-  O valor assumido pelo estimador pontual é chamado de
-  \textbf{estimativa
-  pontual},\[\hat{\theta} = T(\mathbf{X}) = T(X_1, \ldots, X_n) = t\] ou
-  seja, o estimador é uma \textbf{função} da amostra, e a estimativa é o
-  \textbf{valor observado} de um estimador (um número) de uma amostra
-  particular.
-\end{enumerate}
+  Marginal de \(I\) (soma das linhas)
+\end{itemize}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccc}
+    \hline
+0 & 1 & 2 & Sum\\
+    \hline
+115 & 130 & 100 & 345\\
+      \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{itemize}
+\item
+  Marginal de \(C\) (soma das colunas)
+\end{itemize}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccccc}
+    \hline
+0 & 1 & 2 & 3 & 4 & Sum\\
+    \hline
+110 & 91 & 86 & 44 & 14 & 345\\
+      \hline
+    \end{tabular}
+\end{table}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Média de dados brutos}
+\frametitle{VAs discretas: função de probabilidade conjunta}
 
-Divide-se a soma de todos os dados pelo número total deles:
+Sejam \(X\) e \(Y\) \textbf{duas VAs discretas} originárias do mesmo
+fenômeno aleatório, com valores atribuídos a partir do mesmo espaço
+amostral.
+
+A \textbf{função de probabilidade conjunta} é definida, para todos os
+possíveis pares de valores \((X,Y)\), da seguinte forma:
+
+\[ p(x,y) = P[(X=x)\cap(Y=y)] = P(X=x,Y=y).\]
+
+Ou seja, \(p(x,y)\) representa a probabilidade de \((X,Y)\) ser igual a
+\((x,y)\).
+
+A função de probabilidade conjunta também pode ser chamada de
+\textbf{distribuição conjunta} ou simplesmente \textbf{conjunta} das
+variáveis.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.4}
+
+Uma empresa atende encomendas de supermercados dividindo os pedidos em
+duas partes de modo a serem atendidos, de forma independente, pelas suas
+duas fábricas. Devido à grande demanda, pode haver atraso no cronograma
+de entrega, sendo que a fábrica \(I\) atrasa com probabilidade \(0.1\) e
+a \(II\) com \(0.2\). Sejam \(A_I\) e \(A_{II}\) os eventos
+correspondentes a ocorrência de atraso nas fábricas \(I\) e \(II\),
+respectivamente.
+
+Para uma entrega, a indústria recebe \(200\) u.m, mas paga \(20\) para
+cada fábrica que atrasar. Considere que o supermercado que recebe a
+encomenda fez um índice relacionado à pontualidade de entrega. Este
+índice, atribuiu \(10\) pontos para cada entrega dentro do cronograma
+previsto. Denote por \(X\) o valor recebido pelo pedido e \(Y\) o índice
+obtido. Obtenha a conjunta de \(Y\) e \(X\) e as marginais de \(Y\) e
+\(X\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.4}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.5}
+
+Uma região foi dividida em \(10\) sub-regiões. Em cada uma delas, foram
+observadas duas variáveis: \emph{número de poços artesianos} \((X)\) e
+\emph{número de riachos ou rios presentes} na sub-região \((Y)\). Os
+resultados são apresentados na tabela a seguir:
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccccccc}
+    \hline
+Sub-região & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+X & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 2 & 2 & 0\\
+Y & 1 & 2 & 1 & 0 & 1 & 0 & 0 & 1 & 2 & 2\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+\item
+  Construa a distribuição conjunta e marginais de \(X\) e \(Y\).
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.5}
+
+Consideramos que cada região tem a mesma probabilidade \(1/10\) de ser
+escolhida. Assim a distribuição conjunta é:
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cc}
+    \hline
+\texttt{(X,Y)} & \texttt{p(x,y)}\\
+    \hline
+0,0 & 0.1\\
+0,1 & 0.2\\
+0,2 & 0.2\\
+1,0 & 0.1\\
+1,1 & 0.1\\
+2,0 & 0.1\\
+2,1 & 0.1\\
+2,2 & 0.1\\
+Sum & 1.0\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.5}
+
+Uma forma mais conveniente é
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccc}
+    \hline
+X/Y & 0 & 1 & 2\\
+    \hline
+0 & 0.1 & 0.2 & 0.2\\
+1 & 0.1 & 0.1 & 0.0\\
+2 & 0.1 & 0.1 & 0.1\\
+      \hline
+    \end{tabular}
+\end{table}
+
+Para obter as marginais, efetuamos a soma nas linhas para obter a
+marginal de \(X\), e nas colunas para obter a marginal de \(Y\). Por
+exemplo, \(P(X = 0)\) é obtida através de: \begin{align*}
+P(X = 0) &= P(X=0,Y=0) + P(X=0,Y=1) + P(X=0,Y=2) \\
+ &= 0.1 + 0.2 + 0.2 = 0.5
+\end{align*}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.5}
+
+Repetindo os cálculos para todos os valores de \(X\) e \(Y\), obtemos as marginais:
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccc}
+    \hline
+X/Y & 0 & 1 & 2 & P(X=x)\\
+    \hline
+0 & 0.1 & 0.2 & 0.2 & 0.5\\
+1 & 0.1 & 0.1 & 0.0 & 0.2\\
+2 & 0.1 & 0.1 & 0.1 & 0.3\\
+P(Y=y) & 0.3 & 0.4 & 0.3 & 1.0\\
+      \hline
+    \end{tabular}
+\end{table}
+
+Marginal de \(X\)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccc}
+    \hline
+0 & 1 & 2 & Sum\\
+    \hline
+0.5 & 0.2 & 0.3 & 1\\
+      \hline
+    \end{tabular}
+\end{table}
+
+Marginal de \(Y\)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccc}
+    \hline
+0 & 1 & 2 & Sum\\
+    \hline
+0.3 & 0.4 & 0.3 & 1\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Funções de probabilidade marginal}
+
+Da função de probabilidade conjunta \(p(x,y)\), é possível então obter
+as \textbf{funções de probabilidade marginais} de \(X\) e \(Y\), através da soma de uma das coordenadas:
 
 \[
-\bar{x}_{obs} = \frac{x_1 + x_2 + \cdots + x_n}{n} = \frac{\sum_{i=1}^n
-x_i}{n}.
+P(X = x) = \sum_{y} p(x,y) \quad \text{e} \quad
+P(Y = y) = \sum_{x} p(x,y)
 \]
-\begin{center}\includegraphics[width=0.8\linewidth]{figs/medidas-crop} \end{center}
+
+com o somatório percorrendo todos os valores de \(X\) ou \(Y\), conforme for o caso.
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Variância e desvio-padrão de um conjunto de dados}
+\frametitle{Exemplo 5.6}
 
-Uma alternativa melhor é usar a \textbf{soma dos quadrados dos desvios},
-que dá origem à \textbf{variância} de um conjunto de dados \[
-var_{obs} = \frac{1}{n}\sum_{i=1}^n (x_i - \bar{x}_{obs})^2
-\] Para manter a mesma unidade de medida dos dados originais, definimos
-o \textbf{desvio padrão} como \[
-dp_{obs} = \sqrt{var_{obs}}
-\] Uma expressão alternativa da variância (mais fácil de calcular) é \[
-var_{obs} = \frac{1}{n}\sum_{i=1}^n x_i^2 - \bar{x}_{obs}^2
-\]
-\end{frame}
+Em uma cidade, admite-se que o \emph{número de anos para competar o
+ensino fundamental} (\(F\)), e o \emph{número de anos para completar o
+ensino médio} (\(M\)) têm função de probabilidade conjunta:
 
+\begin{columns}[T]
+\begin{column}{7cm}
 
-\section{Distribuição Amostral}
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Intuição para distribuições amostrais}
-Uma distribuição de médias amostrais é a população de todas as médias amostrais aleatórias possíveis para um estudo realizado com um determinado tamanho de amostra.\\~\\
-População exemplo de quatro valores: \[10, 12, 14, 16\]
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cc}
+    \hline
+\texttt{(F,M)} & \texttt{p(f,m)}\\
+    \hline
+9,3 & 0.30\\
+9,4 & 0.10\\
+9,5 & 0.10\\
+10,3 & 0.20\\
+10,4 & 0.05\\
+10,5 & 0.10\\
+11,4 & 0.10\\
+11,5 & 0.05\\
+      \hline
+    \end{tabular}
+\end{table}
 
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Exemplo}
-Distribuição de médias amostrais para a população de quatro valores e um tamanho de amostra de 2
-\begin{center}\includegraphics[width=0.5\linewidth]{figs/chap5tab5.2} \end{center}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Parâmetros \textit{vs} Estimativas}
-A média da população é dada por:
-\[\mu=\frac{1}{N}\sum_{i=1}^Nx_i=\frac{52}{4}=13\]
-A média da distribuição das médias amostrais, as 16 médias amostrais na última coluna da tabela anterior é dada por
-\[\bar{X}=\frac{1}{N}\sum_{i=1}^N\bar{x}_i=\frac{208}{16}=13\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição das médias}
-O fato de a média da distribuição das médias amostrais ser sempre igual à média da população original mostra que quando os pesquisadores selecionam aleatoriamente uma amostra para usar em seus estudo, selecionar uma amostra que tenha a mesma média da população, ou uma média próxima a ela, é bastante comum.
-\begin{center}\includegraphics[width=0.6\linewidth]{figs/chap5fig5.1} \end{center}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Desvios padrão populacional e amostral}
-A variância da população pode ser obtida por
-\[\sigma^2 = \frac{1}{N}\sum_{i=1}^N x_i^2 - \mu^2=\frac{1}{4}696-169=5\]
-E o desvio padrão
-\[\sigma= \sqrt{\sigma^2} = 2.24\]
-A variância da distribuição amostral pode ser obtida por
-\[Var(X) = \frac{1}{N}\sum_{i=1}^N \bar{x}_i^2 - \bar{X}^2=\frac{1}{16}2744-169=2.5\]
-E o desvio padrão
-\[DP = \sqrt{Var(X)} = 1.58\]
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Erro padrão da média}
-O erro padrão de um estimador é o desvio padrão de sua distribuição amostral. Para o estimador da média, temos o erro padrão da média
-\[\sigma_{\bar{X}} = SEM = \frac{\sigma}{\sqrt{N}}\]
-onde \(\sigma\) representa o devio padrão populacional e \(N\) o tamanho da amostra.
-Para o nosso exemplo, o erro padrão da média pode ser obtido por
-\[SEM = \frac{\sigma}{\sqrt{N}} = \frac{2.24}{\sqrt{2}}=1.58\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Observações do experimento númerico}
-Observamos empiricamente, que:
-\begin{itemize}
-\item A média da distribuição das médias amostrais é igual a média populacional, \(\mu\);
-\item O desvio padrão é sempre igual ao SEM, \(\sigma/N\);
-\item O gráfico da distribuição amostral tem distribuição aproximadamente normal (ou seja, em forma de sino).
-\end{itemize}
-
-\end{frame}
-
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Outros experimentos númericos}
-\begin{center}\includegraphics[width=0.9\linewidth]{figs/func2}\end{center}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Teorema Central do Limite}
-Coletivamente, esses três fatos são conhecidos como teorema central do limite  (TCL) e nos dizem que a distribuição das médias amostrais com, centro (\(\mu\)) e dispersão (SEM = \(\sigma/N\)) tem forma normal para qualquer estudo.\\~\\ 
-
-Observamos empiricamente, que:
-\begin{enumerate}
-\item sugere que as amostras tendem a ter médias semelhantes às da população da qual foram extraídas;
-\item nos permite calcular a quantidade típica de erro de amostragem que qualquer estudo pode gerar.
-\end{enumerate}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Lei dos Grandes Números}
-Amostras maiores tenderão a ter meios que desviam-se menos da média da população do que amostras menores. Este é um exemplo específico da lei de números grandes: .
- \begin{alertblock}{Lei dos Grandes Números}
-À medida que N aumenta, a estatística amostral (por exemplo, a média amostral) é uma estimativa melhor do parâmetro populacional (por exemplo, a média populacional)
-\end{alertblock}
-
-Porque a distribuição tem forma normal, ela segue a regra 68–95–99, como estudado em capítulos prévios. Portanto, 68\% de todos as possíveis médias amostrais estão entre -1 e +1 erro padrão da média da média da população.
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuições amostrais}
-
-\begin{block}{Distribuições amostrais}
-
-A distribuição de probabilidade de uma estatística
-\(Y = T(x_1, x_2, \ldots, x_n)\) é denominada de \textbf{distribuição
-amostral} de \(Y\). Assim, uma estatística também é uma variável
-aleatória, pois seus valores mudam conforme a amostra aleatória.
-\end{block}
-
-\begin{block}{}
-\textbf{Exemplo}: duas estatísticas comumente utilizadas para o resumo
-de uma amostra aleatória são a \textbf{média amostral} \(\bar{x}\), e a
-\textbf{proporção amostral} \(\hat{p}\). Cada uma delas também possui
-uma distribuição amostral.
-\end{block}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição amostral da média}
-
-Através do estudo da distribuição da média amostral chegamos em um dos
-resultados mais importantes da inferência estatística.
-
-\begin{block}{Distribuição amostral da média}
-
-\begin{itemize}
-\item
-  \(\text{E}(\bar{X}) = \mu_{\bar{X}} = \mu\)
-\item
-  \(\text{Var}(\bar{X}) = \sigma^2_{\bar{X}} = \sigma^2/n\)
-\end{itemize}
-
-Portanto, se \[X \sim \text{N}(\mu, \sigma^2) \quad \text{então} \quad
-\bar{X} \sim \text{N}(\mu_{\bar{X}}, \sigma^2_{\bar{x}})\] mas, como
-\[\mu_{\bar{X}} = \mu \quad \text{e} \quad \sigma^2_{\bar{X}} =
-\sigma^2/n\] então, a \textbf{distribuição amostral} da média amostral
-\(\bar{X}\) é
-\[\bar{X} \sim \text{N}\left(\mu, \frac{\sigma^2}{n} \right)\]
-\end{block}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição amostral da média}
-
-Pode-se mostrar que, para amostras suficientemente grandes, \textbf{a
-média amostral \(\bar{X}\) converge para o verdadeiro valor da média
-populacional \(\mu\)} (é um \textbf{estimador não viesado} de \(\mu\)).
-
-Além disso, a variância das médias amostrais \(\sigma^2_{\bar{X}}\)
-tende a diminuir conforme \(n \rightarrow \infty\) (é um estimador
-\textbf{consistente}).
-
-Estes resultados sugerem que, quando o tamanho da amostra aumenta,
-
-\begin{center}
-\underline{independente do formato da distribuição da população
-original},
-\end{center}
-
-\textbf{a distribuição amostral de \(\bar{X}\) aproxima-se cada vez mais
-de uma distribuição Normal}, um resultado fundamental na teoria de
-probabilidade conhecido como \textbf{Teorema Central do Limite}.
-\end{frame}
-
-
-% adicionar figura 7.15
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição amostral da média}
-
-\begin{block}{Teorema Central do Limite (TCL)}
-
-Para amostras aleatórias simples \((X_1, X_2, \ldots, X_n)\), retiradas
-de uma população com média \(\mu\) e variância \(\sigma^2\), a
-distribuição amostral da média \(\bar{X}\), terá forma dada por \[
-Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}}
-\] no limite quando \(n \to \infty\), onde \(Z \sim \text{N}(0,1)\).
-
-\end{block}
-
-O teorema garante que para \textit{n} grande a distribuição da média amostral, devidamente padronizada, se comporta segundo um modelo Normal com média 0 e variância 1.
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Cálculo da variável Z}
-A fórmula para a z para uma média amostral é muito semelhante à fórmula para a z para uma distribuição normal. 
-\[
-Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}}
-\] 
-Interpretação:
-\begin{itemize}
-\item z for "próximo" de zero, média amostral (\(\bar{X}\)) é "próximo" da média da população (\(\mu\)); 
-\item uma valor z "próximo" de 3 significa que o desvio observado (numerador) é três vezes maior que o desvio esperado pelo erro amostral (denominador);
-\item valores de z grandes geralmente indicam que algo diferente da variabilidade do erro amostral fez com que a média amostral (\(\bar{X}\)) ficasse muito longe do média populacional.
-\end{itemize}
-
-%\begin{center}\includegraphics[width=0.8\linewidth]{../figures/tabela_Z_01} \end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Cálculo da variável Z}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-   A curva normal padrão e os valores de z\\~\\
-   \includegraphics[width=0.6\textwidth]{figs/pdf_norm_84}
-   \begin{itemize}
-   \item Um valor de z = +1 é maior que 84.13\% dos valores de z
-   \begin{itemize}
-   \item 0.8413 é a probabilidade no corpo (\textit{body}) da tabela usada no curso;
-   \item O restante para somar 1 é a probabilidade representada pela cauda (\textit{tail}).
-   \end{itemize}
-   \end{itemize}
 \end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-    \begin{center}
-     \includegraphics[width=0.4\textwidth]{figs/ztab_crop}
-     \end{center}
+\begin{column}{7cm}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccc}
+    \hline
+F/M & 3 & 4 & 5\\
+    \hline
+9 & 0.3 & 0.10 & 0.10\\
+10 & 0.2 & 0.05 & 0.10\\
+11 & 0.0 & 0.10 & 0.05\\
+      \hline
+    \end{tabular}
+\end{table}
+
 \end{column}
 \end{columns}
 
-%\begin{center}\includegraphics[width=0.8\linewidth]{../figures/tabela_Z_01} \end{center}
+O interesse está em estudar o comportamento da variável \emph{número
+total de anos para completar o ensino fundamental e médio}, ou seja,
+\(T = F + M\). Obtenha a distribuição de \(T\).
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.14}
-Suponha que a aceitação de um lote de 1000 peças ocorra apenas, se o comprimento médio de 10 peças, retiradas aleatoriamente do lote, estiver entre 5 e 10 \(cm\). Sabe-se que o comprimento das peças é uma variável aleatória com distribuição Normal de média 7.5 e variância 20 \(cm^2\). Qual é a probabilidade de aceitação de um dado lote?
-\vspace{1in}
-\vspace{1in}
+\frametitle{Exemplo 5.6}
 
+\begin{columns}[T]
+\begin{column}{7cm}
+
+Possíveis valores de \(T = F+M\)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccc}
+    \hline
+\texttt{(F,M)} & \texttt{p(f,m)} & T\\
+    \hline
+9,3 & 0.30 & 12\\
+9,4 & 0.10 & 13\\
+9,5 & 0.10 & 14\\
+10,3 & 0.20 & 13\\
+10,4 & 0.05 & 14\\
+10,5 & 0.10 & 15\\
+11,4 & 0.10 & 15\\
+11,5 & 0.05 & 16\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\end{column}
+\begin{column}{7cm}
+
+Distribuição de \(T=F+M\)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cc}
+    \hline
+T & P(T)\\
+    \hline
+12 & 0.30\\
+13 & 0.30\\
+14 & 0.15\\
+15 & 0.20\\
+16 & 0.05\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\end{column}
+\end{columns}
 \end{frame}
 
+\section{Associação entre variáveis}
+\setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Distribuição Normal}
+\frametitle{Associação entre variáveis}
 
-\begin{center}\includegraphics[width=0.5\linewidth]{figs/ztab_crop2} \end{center}
+\begin{itemize}
+\item
+  Um dos principais objetivos de se construir uma distribuição conjunta
+  de duas variáveis, é descrever a \textbf{associação} entre elas
+\item
+  Queremos conhecer o grau de \textbf{dependência}, para prever melhor o
+  resultado de uma delas quando conhecemos a outra
+\item
+  Veremos algumas formas de medir/avaliar essa dependência:
+
+  \begin{enumerate}
+  \def\labelenumi{\alph{enumi}.}
+  \item
+    Duas variáveis quantitativas
+
+    \begin{itemize}
+    \item
+      Diagramas de dispersão
+    \item
+      Probabilidades condicionais
+    \item
+      Correlação e covariância
+    \end{itemize}
+  \item
+    Duas variáveis qualitativas
+
+    \begin{itemize}
+    \item
+      Verificação de proporções através da distribuição conjunta
+    \item
+      Medida \(Q^2\)
+    \end{itemize}
+  \end{enumerate}
+\end{itemize}
 \end{frame}
-
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.15}
-Uma variável aleatória X assume valores 3, 6 e 8 com, respectivamente, probabilidades 0.4; 0.3 e 0.3. Uma amostra com 40 observações é sorteada. A variável X não tem distribuição Normal e obtemos \(\mu=5.4\) e \(\sigma^2=4.44\). Calcule a probabilidade da média amostral superar o valor 5.
-\vspace{1in}
-\vspace{1in}
+\frametitle{Exemplo 5.7}
 
+\begin{itemize}
+\item
+  Dentre os alunos do \(1^{\circ}\) ano do ensino médio de uma certa
+  escola, selecionou-se os quinze alunos com melhor desempenho, (nota
+  acima de \(7\)) em inglês. Para esses alunos, foi construída a tabela
+  abaixo com as notas de inglês \((I)\), português \((P)\) e matemática
+  \((M)\):
+\end{itemize}
+
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccccccccccccccc}
+    \hline
+I & 7 & 7 & 7 & 7 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 9 & 9 & 9 &
+10\\
+P & 8 & 6 & 8 & 9 & 8 & 6 & 9 & 7 & 7 & 6 & 7 & 8 & 9 & 8 &
+8\\
+M & 5 & 6 & 7 & 5 & 5 & 5 & 6 & 4 & 7 & 6 & 5 & 5 & 6 & 5 &
+5\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+\item
+  Obtenha as distribuições conjuntas e gráficos de dispersão.
+\end{itemize}
 \end{frame}
-
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.16}
-Em uma certa cidade, a duração de conversas telefônicas em minutos, originárias de telefones públicos, segue um modelo Exponencial com parâmetro 1/3. Observando-se uma amostra aleatória de 50 dessas chamadas, qual será a probabilidade de elas, em média, não ultrapassarem 4 minutos? A variável X não tem distribuição Normal e obtemos \(\mu=3\) e \(\sigma^2=9\).
-\begin{enumerate}[A)]
-\item 0.4168
-\item 0.0228
-\item 0.7454
-\item 0.9909
-\item 0.9004
-\end{enumerate}
+\frametitle{Exemplo 5.7 - Distribuições conjuntas}
+
+\begin{columns}[T]
+\begin{column}{7cm}
+
+Inglês e Português:
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccc}
+    \hline
+I/P & 6 & 7 & 8 & 9\\
+   \hline
+7 & 1 & 0 & 2 & 1\\
+8 & 2 & 3 & 1 & 1\\
+9 & 0 & 0 & 2 & 1\\
+10 & 0 & 0 & 1 & 0\\
+    \hline
+    \end{tabular}
+\end{table}
+
+Inglês e Matemática:
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccc}
+    \hline
+I/M & 4 & 5 & 6 & 7\\
+   \hline
+7 & 0 & 2 & 1 & 1\\
+8 & 1 & 3 & 2 & 1\\
+9 & 0 & 2 & 1 & 0\\
+10 & 0 & 1 & 0 & 0\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\end{column}
+\begin{column}{7cm}
+
+Português e Matemática:
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccc}
+    \hline
+P/M & 4 & 5 & 6 & 7\\
+    \hline
+6 & 0 & 1 & 2 & 0\\
+7 & 1 & 1 & 0 & 1\\
+8 & 0 & 5 & 0 & 1\\
+9 & 0 & 1 & 2 & 0\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.7 - Diagramas de dispersão}
+
+\begin{center}\includegraphics[width=1\linewidth]{figs/unnamed-chunk-25-1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Probabilidade condicional para VAs discretas}
+
+\begin{itemize}
+\item
+  A \textbf{probabilidade condicional} de \(X = x\), dado que \(Y = y\)
+  ocorreu, é dada pela expressão: \[
+  P(X = x | Y = y) = \frac{P(X=x,Y=y)}{P(Y=y)},
+  \quad \text{se} \quad P(Y=y) > 0.
+  \]
+\item
+  Duas VAs discretas são \textbf{independentes}, se a ocorrência de
+  qualquer valor de uma delas não altera a probabilidade de valores da
+  outra. Em termos matemáticos \[ P(X = x | Y = y) = P(X = x).\]
+\item
+  Definição alternativa
+  \[ P(X =x, Y = y) = P(X=x)P(Y=y), \quad \forall (x,y).\]
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.8}
+
+O Centro Acadêmico de uma faculdade de administração fez um levantamento
+da \emph{remuneração dos estágios dos alunos}, em salários mínimos
+(\(X\)), com relação ao \emph{ano que estão cursando} (\(Y\)). As
+probabilidades de cada caso são apresentadas na próxima tabela,
+incluindo as distribuições marginais.
+
+\begin{table}
+\centering
+\begin{tabular}{l|llll|l} \hline
+Salario/Ano & 2    & 3    & 4    & 5    & $P(Sal = x)$ \\ \hline
+2             & $2/25$ & $2/25$ & $1/25$ & $0$    & $5/25$       \\
+3             & $2/25$ & $5/25$ & $2/25$ & $2/25$ & $11/25$      \\
+4             & $1/25$ & $2/25$ & $2/25$ & $4/25$ & $9/25$       \\ \hline
+$P(Ano = y)$    & $5/25$ & $9/25$ & $5/25$ & $6/25$ & $1$         \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+\item
+  \(X\) e \(Y\) são independentes?
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.9}
+
+Em uma clínica médica foram coletados dados em 150 pacientes, referentes
+ao último ano. Observou-se a \emph{ocorrência de infecções urinárias}
+(\(U\)) e o \emph{número de parceiros sexuais} (\(N\)).
+
+\begin{table}
+\centering
+\begin{tabular}{l|lll|l} \hline
+U/N & 0  & 1  & 2 + & Total \\ \hline
+Sim   & 12 & 21 & 47  & 80    \\
+Não   & 45 & 18 & 7   & 70    \\ \hline
+Total & 57 & 39 & 54  & 150  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+\item
+  Estude a associação entre \(U\) e \(N\).
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.9}
+
+\begin{itemize}
+\item
+  Ao invés de trabalharmos com as frequências absolutas, podemos
+  construir tabelas com as frequências relativas, mas aqui existem três
+  possibilidades para expressar as proporções:
+
+  \begin{enumerate}
+  \def\labelenumi{\alph{enumi}.}
+  \item
+    em relação ao total geral
+  \item
+    em relação ao total de cada linha
+  \item
+    em relação ao total de cada coluna
+  \end{enumerate}
+\item
+  A escolha depende do objetivo do estudo, mas não altera a conclusão
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.9}
+
+\begin{itemize}
+\item
+  Tabela com porcentagens em relação ao total de coluna.
+\end{itemize}
+
+\begin{table}
+\centering
+\begin{tabular}{l|lll|l} \hline
+U/N & 0  & 1  & 2 + & Total \\ \hline
+Sim   & 21,1\% & 53,8\% & 87,0\%  & 53,3\%    \\
+Não   & 78,9\% & 46,2\% & 13,0\%  & 46,7\%    \\ \hline
+Total & 100\% & 100\% & 100\%  & 100\%  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+\item
+  Independente de \(N\), a porcentagem de pessoas com infecção é 53,3\%
+  (46,7\% sem infecção).
+\item
+  Caso não exista associação de \(U\) com \(N\), deveríamos esperar
+  porcentagens similares em cada valor de \(N\) (independência).
+\item
+  Analisar os percentuais em relação ao total das linhas levaria à mesma
+  conclusão.
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.10}
+
+Os dados abaixo representam uma amostra de 80 famílias de um certo
+bairro, onde \(T\) é o \emph{número de pessoas que trabalham na
+família}, e \(A\) é o \emph{número de adolescentes entre 12 e 18 anos}.
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccc}
+    \hline
+T/A & 0 & 1 & 2 & 3 & 4 & Sum\\
+    \hline
+0 & 5 & 4 & 2 & 3 & 1 & 15\\
+1 & 2 & 8 & 6 & 4 & 1 & 21\\
+2 & 4 & 8 & 8 & 5 & 2 & 27\\
+3 & 4 & 2 & 2 & 5 & 4 & 17\\
+Sum & 15 & 22 & 18 & 17 & 8 & 80\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+\item
+  Verifique a associação entre as duas variáveis.
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.10}
+
+Assim como no exemplo anterior, podemos usar os totais de coluna e
+calcular as frequências relativas
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccc}
+    \hline
+T/A & 0 & 1 & 2 & 3 & 4 & Sum\\
+    \hline
+0 & 0.33 & 0.18 & 0.11 & 0.18 & 0.12 & 0.19\\
+1 & 0.13 & 0.36 & 0.33 & 0.24 & 0.12 & 0.26\\
+2 & 0.27 & 0.36 & 0.44 & 0.29 & 0.25 & 0.34\\
+3 & 0.27 & 0.09 & 0.11 & 0.29 & 0.50 & 0.21\\
+Sum & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+\item
+  Caso houvesse independência, as frequências de cada valor de \(A\)
+  deveriam ser próximas das frequências marginais de \(T\) (última
+  coluna).
+\item
+  Podemos também verificar se as \textbf{frequências absolutas} de cada
+  coluna de \(A\) se distribuem de maneira \textbf{proporcional}.
+\item
+  Dessa forma, calculamos as \textbf{frequências esperadas}, caso
+  houvesse independência.
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.10}
+
+\begin{columns}[T]
+\begin{column}{7cm}
+
+Distribuição marginal de \(T\)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccc}
+    \hline
+T & Freq & Freq. rel.\\
+\hline
+0 & 15 & 0.19\\
+1 & 21 & 0.26\\
+2 & 27 & 0.34\\
+3 & 17 & 0.21\\
+Sum & 80 & 1.00\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{align*}
+\text{Freq. esp.} &= \text{Freq. rel.} \times \text{Total de col.} \\
+2.85 &= 0.19 \times 15 \\
+3.90 &= 0.26 \times 15 \\
+5.10 &= 0.34 \times 15 \\
+3.15 &= 0.21 \times 15
+\end{align*}
+
+\end{column}
+\begin{column}{7cm}
+
+Distribuição de \(T/A=0\)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cc}
+    \hline
+\texttt{T/A=0} & Freq. obs. \\
+    \hline
+0 & 5\\
+1 & 2\\
+2 & 4\\
+3 & 4\\
+Sum & 15\\
+      \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccc}
+    \hline
+\texttt{T/A=0} & Freq. obs. & Freq. esp.\\
+    \hline
+0 & 5 & 2.85\\
+1 & 2 & 3.90\\
+2 & 4 & 5.10\\
+3 & 4 & 3.15\\
+Sum & 15 & 15.00\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.10}
+
+Fazendo o mesmo processo para todas as colunas, obtemos a tabela com as
+\textbf{frequências esperadas}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccc}
+    \hline
+T/A & 0 & 1 & 2 & 3 & 4 & Sum\\
+    \hline
+0 & 2.81 & 4.12 & 3.38 & 3.19 & 1.5 & 15\\
+1 & 3.94 & 5.78 & 4.73 & 4.46 & 2.1 & 21\\
+2 & 5.06 & 7.43 & 6.08 & 5.74 & 2.7 & 27\\
+3 & 3.19 & 4.67 & 3.82 & 3.61 & 1.7 & 17\\
+Sum & 15.00 & 22.00 & 18.00 & 17.00 & 8.0 & 80\\
+      \hline
+    \end{tabular}
+\end{table}
+
+que podemos comparar com a tabela de \textbf{frequências observadas}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccc}
+    \hline
+T/A & 0 & 1 & 2 & 3 & 4 & Sum\\
+    \hline
+0 & 5 & 4 & 2 & 3 & 1 & 15\\
+1 & 2 & 8 & 6 & 4 & 1 & 21\\
+2 & 4 & 8 & 8 & 5 & 2 & 27\\
+3 & 4 & 2 & 2 & 5 & 4 & 17\\
+Sum & 15 & 22 & 18 & 17 & 8 & 80\\
+      \hline
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.10}
+
+Agora podemos quantificar as diferenças entre as \textbf{frequências
+observadas} (\(o_{ij}\)), e as \textbf{frequências esperadas}
+(\(e_{ij}\)) através de \[
+Q^2 = \sum_{i,j} \frac{(o_{ij} - e_{ij})^2}{e_{ij}}
+\] Dessa forma, temos: \[
+Q^2 = \frac{(5 - 2.81)^2}{2.81} + \cdots + \frac{(4 - 1.7)^2}{1.7} = 12.63
+\] Se as frequências esperadas fossem muito próximas das observadas,
+esperaríamos que esse valor fosse próximo de zero.
+
+Como o valor é relativamente alto, há uma indicação de que as duas
+variáveis são dependentes.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Correlação entre variáveis num conjunto de dados}
+
+\begin{itemize}
+\item
+  Considere um conjunto de dados com \(n\) pares de valores para as
+  variáveis \(X\) e \(Y\). O coeficiente de correlação mede a
+  dependência linear entre as variáveis e é calculado por
+  \[ \rho_{XY} = \frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{[\sum_{j=1}^n(x_j - \bar{x})^2][\sum_{j=1}^n(y_j - \bar{y})^2] ]}}.\]
+\item
+  Formula mais conveniente para cálculos
+  \[ \rho_{XY} = \frac{\sum_{i=1}^n x_i y_i - n\bar{x}\bar{y}}{\sqrt{[\sum_{j=1}^n x_j^2 - n \bar{x}^2] [\sum_{j=1}^n y_j^2 - n \bar{y}^2]  }}.\]
+\item
+  Note que \(-1 \leq \rho_{XY} \leq 1\).
+\item
+  Observação: \(\rho_{XY} = 0\) não indica independência.
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.11}
+
+A quantidade de chuva é um fator importante na produtividade agrícola.
+Para medir esse efeito foram anotados, para \(8\) diferentes regiões
+produtoras de soja, o \emph{índice pluviométrico} em milímetros \((X)\)
+e a \emph{produção do último ano} em toneladas \((Y)\).
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccccc}
+    \hline
+X & 120 & 140 & 122 & 150 & 115 & 190 & 130 & 118\\
+Y & 40 & 46 & 45 & 37 & 25 & 54 & 33 & 30\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+\item
+  Determine o coeficiente de correlação.
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.11}
+
+\begin{center}\includegraphics[width=0.6\linewidth]{figs/unnamed-chunk-34-1} \end{center}
+
+
+\[
+\rho_{XY} = \frac{43245 - 8 \times 135.63 \times 38.75}
+  {\sqrt{[151533 - 8 \times 135.63^2] [12640 - 8 \times 38.75^2]}}
+  = 0,73
+\]
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Propriedades de esperança de VAs}
+
+Para podermos definir medidas de dependência entre \textbf{VAs
+discretas}, precisamos das seguintes propriedades de esperança de VAs.
+
+\begin{block}{Valor esperado da soma de VAs}
+Para variáveis aleatórias \(X\) e \(Y\), vale sempre que \[
+E(X + Y) = E(X) + E(Y)
+\]
+\end{block}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Voltando ao exemplo 5.6}
+
+
+\begin{columns}[T]
+\begin{column}{7cm}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccc}
+    \hline
+F/M & 3 & 4 & 5 & Sum\\
+\hline
+9 & 0.3 & 0.10 & 0.10 & 0.50\\
+10 & 0.2 & 0.05 & 0.10 & 0.35\\
+11 & 0.0 & 0.10 & 0.05 & 0.15\\
+Sum & 0.5 & 0.25 & 0.25 & 1.00\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\(E(F) = 9 \times 0.5 + \cdots + 11 \times 0.15 = 9.65\)
+\(E(M) = 3 \times 0.5 + \cdots + 5 \times 0.25 = 3.75\)
+
+
+\end{column}
+\begin{column}{7cm}
+
+Distribuição de \(T=F+M\)
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccccc}
+    \hline
+T & 12.0 & 13.0 & 14.00 & 15.0 & 16.00\\
+P(T) & 0.3 & 0.3 & 0.15 & 0.2 & 0.05\\
+      \hline
+    \end{tabular}
+\end{table}
+
+\end{column}
+\end{columns}
+
+\begin{align*}
+E(F+M) &= 12 \times 0.3 + \cdots + 16 \times 0.05 =
+13.4 \\
+ \text{ou} & \\
+ E(F+M) &= E(F) + E(M) \\
+ &= 9.75 + 3.75 \\
+ &= 13.4
+\end{align*}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Propriedades de esperança de VAs}
+
+\begin{block}{Valor esperado do produto de VAs}
+Para \(X\) e \(Y\) variáveis aleatórias discretas
+\textbf{independentes}, temos \[
+E(XY) = E(X)E(Y)
+\]
+\end{block}
+
+\begin{block}{IMPORTANTE}
+\(X\) e \(Y\) independentes \(\Rightarrow\) \(E(XY) = E(X)E(Y)\)
+\newline
+
+No entanto: \newline
+
+\(E(XY) = E(X)E(Y)\) \(\not\Rightarrow\) \(X\) e \(Y\) independentes
+\end{block}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.13}
+
+Considere as variáveis \(W\) e \(Z\) com a seguinte distribuição:
+
+\begin{columns}[T]
+\begin{column}{7cm}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccc}
+    \hline
+W/Z & 2 & 3 & 4 & Sum\\
+\hline
+-1 & 0.17 & 0.00 & 0.25 & 0.42\\
+0 & 0.00 & 0.08 & 0.08 & 0.17\\
+1 & 0.08 & 0.17 & 0.17 & 0.42\\
+Sum & 0.25 & 0.25 & 0.50 & 1.00\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\end{column}
+\begin{column}{7cm}
+\(E(W) = -1 \times 0.42 + \cdots + 1 \times 0.42 = 0\)
+\(E(Z) = 2 \times 0.25 + \cdots + 4 \times 0.5 = 3.25\)
+
+\end{column}
+\end{columns}
+
+A variável \(WZ\) terá então a distribuição 
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccc}
+    \hline
+WZ & -4.00 & -2.00 & 0.00 & 2.00 & 3.00 & 4.00\\
+pWZ & 0.25 & 0.17 & 0.17 & 0.08 & 0.17 & 0.17\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\(E(WZ) = -4 \times 0.25 + \cdots + 4 \times 0.17  = 0  = E(W)E(Z)\)
+
+\textbf{Mas}, verifique que \(W\) e \(Z\) \textbf{não são independentes}!
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Covariância de duas VAs}
+
+Uma medida de dependência linear entre \(X\) e \(Y\) é a covariância: \[
+Cov(X, Y) = \sigma_{XY} = E[(X-\mu_X)(Y-\mu_y)].
+\] Uma forma alternativa (mais fácil de calcular) é: \[
+Cov(X, Y) = \sigma_{XY} = E(XY) - E(X)E(Y)
+\]
+
+\begin{block}{Variância da soma de duas VAs}
+\[
+Var(X + Y) = Var(X) + Var(Y) + 2 Cov(X,Y)
+\]
+\end{block}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.14}
+
+\begin{itemize}
+\item
+  As variáveis \(U\) e \(V\) têm a seguinte distribuição conjunta.
+\end{itemize}
+
+\begin{table}
+\centering
+\begin{tabular}{l|lllll|l} \hline
+U/V & 2   & 4   & 6   & 8   & 10  & $P(U=u)$   \\
+\hline
+2  & 0.1 & 0   & 0   & 0   & 0   & 0.1 \\
+3  & 0   & 0.2 & 0   & 0.1 & 0   & 0.3 \\
+4  & 0   & 0   & 0.2 & 0   & 0   & 0.2 \\
+5  & 0   & 0.1 & 00  & 0.2 & 0   & 0.3 \\
+6  & 0   & 0   & 0   & 0   & 0.1 & 0.1 \\ \hline
+$P(V=v)$  & 0.1 & 0.3 & 0.2 & 0.3 & 0.1 & 1 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+\item
+  Calcule a covariância entre \(U\) e \(V\).
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.14}
+
+\begin{columns}[T]
+\begin{column}{7cm}
+
+Marginais de \(U\), \(V\), e \(UV\):
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccccc}
+\hline
+U & 2.0 & 3.0 & 4.0 & 5.0 & 6.0\\
+pU & 0.1 & 0.3 & 0.2 & 0.3 & 0.1\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{cccccc}
+\hline
+V & 2.0 & 4.0 & 6.0 & 8.0 & 10.0\\
+pV & 0.1 & 0.3 & 0.2 & 0.3 & 0.1\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccc}
+\hline
+UV & 4.0 & 12.0 & 20.0 & 24.0 & 40.0 & 60.0\\
+pUV & 0.1 & 0.2 & 0.1 & 0.3 & 0.2 & 0.1\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\end{column}
+\begin{column}{7cm}
+Cálculo da covariância:
+
+\(E(U) = 4\)
+
+\(E(V) = 6\)
+
+\(E(UV) = 26\)
+
+\begin{align*}
+Cov(U,V) &= E(UV) - E(U)E(V) \\
+  &= 26 - 24 \\
+  &= 2
+\end{align*}
+\end{column}
+\end{columns}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Correlação de duas VAs}
+
+O \textbf{coeficiente de correlação} entre as VAs discretas \(X\) e
+\(Y\) é calculado por:
+
+\[
+\rho_{XY} = \frac{Cov(X,Y)}{\sigma_X \sigma_Y}
+\]
+
+\begin{itemize}
+\item
+  A divisão pelo produto dos desvios padrão serve para padronizar a
+  medida
+\item
+  Permite comparação entre quaisquer outras variáveis, pois
+  \(-1 \leq \rho_{XY} \leq 1\)
+\item
+  Valores mais próximos de \(\pm 1\) indicam correlação forte
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.15}
+
+\begin{itemize}
+\item
+  Para os dados do exemplo \(5.5\) calcule a covariância e a correlação.
+\end{itemize}
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccccccccc}
+\hline
+Sub-região & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+X & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 2 & 2 & 0\\
+Y & 1 & 2 & 1 & 0 & 1 & 0 & 0 & 1 & 2 & 2\\
+    \hline
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.15}
+
+Anteriormente já obtivemos a conjunta e as marginais de \(X\) e \(Y\):
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccc}
+\hline
+X/Y & 0 & 1 & 2 & P(X=x)\\
+\hline
+0 & 0.1 & 0.2 & 0.2 & 0.5\\
+1 & 0.1 & 0.1 & 0.0 & 0.2\\
+2 & 0.1 & 0.1 & 0.1 & 0.3\\
+P(Y=y) & 0.3 & 0.4 & 0.3 & 1.0\\
+    \hline
+    \end{tabular}
+\end{table}
+
+A marginal de \(XY\) é
+
+\begin{table}[h]
+\centering
+    \small
+    \begin{tabular}{ccccc}
+\hline
+XY & 0.0 & 1.0 & 2.0 & 4.0\\
+pXY & 0.7 & 0.1 & 0.1 & 0.1\\
+    \hline
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 5.15}
+
+Com isso: \[E(X) = 0.8 \quad E(Y) = 1 \quad E(XY) = 0.7\]
+\[Var(X) = \sigma^2_X = 0.76 \quad Var(Y) = \sigma^2_Y = 0.6\]
+
+Assim, a covariância será:
+
+\[Cov(X,Y) = E(XY) - E(X)E(Y) = 0.7 - 0.8 \times 1 = -0.1\]
+
+E a correlação será:
+
+\[\rho_{XY} = \frac{Cov(X,Y)}{\sigma_X \sigma_Y} =
+ \frac{-0.1}{\sqrt{0.76}\sqrt{0.6}} = -0.15\]
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.11.7}
-Em um grande município, o IMC dos indivíduos adultos da população tem uma média \(\mu=25.2kg/m^2\) e \(\sigma=4.5kg/m^2\). Considerando uma amostra de 10 pessoas, qual a probabilidade de obter uma média menor que um IMC 24\(kg/m^2\)?
-\begin{enumerate}[A)]
-\item 0.2005
-\item 0.0228
-\item 0.7454
-\item 0.9972
-\item 0.9544
-\end{enumerate}
+\frametitle{Exercícios}
 
+\begin{itemize}
+\item
+  Seção 5.1 - 1, 2, 3, 4 e 5.
+\item
+  Seção 5.2 - 1, 2, 3, 4, 5 e 6.
+\item
+  Seção 5.3 - 1, 15, 17, e 29.
+\end{itemize}
 \end{frame}
 
 
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Referências bibliográficas}
-\printbibliography
-\end{frame}
 
 \end{document}
