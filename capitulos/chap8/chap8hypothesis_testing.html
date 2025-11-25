@@ -1,0 +1,919 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Este notebook exemplo utiliza markdown para formatação do texto, e LaTeX para criação de fórmulas matemáticas. &#8212; Bioestatística</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'capitulos/chap8/chap8hypothesis_testing';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Bioestatística - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Bioestatística - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Bem vindo ao livro complementar da Bioestatística
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2/chap2.html">2 - Fundamentos de probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3/chap3.html">3 - Variáveis Aleatórias Discretas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap4/chap4.html">4 - Medidas Resumo</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - Variáveis Bidimensionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap8.html">6 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">7 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">8 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">9 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap12/chap12.html">10 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap13/chap13.html">11 - ANOVA de um fator para amostras independentes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcapitulos/chap8/chap8hypothesis_testing.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/capitulos/chap8/chap8hypothesis_testing.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Este notebook exemplo utiliza markdown para formatação do texto, e LaTeX para criação de fórmulas matemáticas.</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Este notebook exemplo utiliza markdown para formatação do texto, e LaTeX para criação de fórmulas matemáticas.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#importante-o-p-valor-muito-provavelmente-nao-e-igual-a-zero-esse-valor-geralemente-e-obtido-quando-a-biblioteca-tem-uma-limitacao-na-aproximacao-de-valores-muito-pequenos-e-comum-em-caso-de-nao-ter-acesso-a-metodos-de-calculo-preciso-reportar-p-valor-0-001-por-exemplo">Importante: o p-valor muito provavelmente não é igual a zero, esse valor geralemente é obtido quando a biblioteca tem uma limitação na aproximação de valores muito pequenos. É comum, em caso de não ter acesso a métodos de cálculo preciso, reportar <span class="math notranslate nohighlight">\(p-valor &lt; 0.001\)</span>, por exemplo.</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="este-notebook-exemplo-utiliza-markdown-para-formatacao-do-texto-e-latex-para-criacao-de-formulas-matematicas">
+<h1>Este notebook exemplo utiliza <a class="reference external" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown</a> para formatação do texto, e <a class="reference external" href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX</a> para criação de fórmulas matemáticas.<a class="headerlink" href="#este-notebook-exemplo-utiliza-markdown-para-formatacao-do-texto-e-latex-para-criacao-de-formulas-matematicas" title="Link to this heading">#</a></h1>
+<p>Suponhamos que uma professora redesenhe seu curso de história para que os alunos façam testes frequentes antes de fazer os exames.</p>
+<ul class="simple">
+<li><p>Nota média histórica para todos os alunos antes de exames frequentes (<span class="math notranslate nohighlight">\(\mu = 75, \sigma = 10\)</span>);</p></li>
+<li><p>Depois de um semestre usando esses questionários, a nota média no exame final dos 25 alunos do seu curso foi <span class="math notranslate nohighlight">\(\bar{x} = 80\)</span>.</p></li>
+</ul>
+<p>Determinar se a amostra de alunos que respondem aos testes frequentes teve pontuação “significativamente” melhor do que a dos alunos anteriores.</p>
+<p><strong>1</strong> - Estabelecer as hipóóteses nula e alternativa:</p>
+<p><span class="math notranslate nohighlight">\(H_0: \mu_{quiz} = 75;\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_a: \mu_{quiz} &gt; 75.\)</span></p>
+<p><strong>2</strong> - Definir a forma da região crítica, com base na hipótese alternativa.</p>
+<p><span class="math notranslate nohighlight">\(RC = \{ z \in R \mid z &gt; z_c\}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">Z</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.63</span><span class="p">,</span> <span class="mf">1.69</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">bodies</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">zs</span><span class="p">]</span>
+<span class="n">tails</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bodies</span><span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">zs</span><span class="p">,</span> <span class="n">bodies</span><span class="p">,</span> <span class="n">tails</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="s1">&#39;Corpo&#39;</span><span class="p">,</span> <span class="s1">&#39;Cauda&#39;</span><span class="p">])</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Cauda</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Cauda&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;background-color: yellow&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">})</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_fed7d_row2_col0, #T_fed7d_row2_col1, #T_fed7d_row2_col2 {
+  background-color: yellow;
+}
+</style>
+<table id="T_fed7d">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_fed7d_level0_col0" class="col_heading level0 col0" >z</th>
+      <th id="T_fed7d_level0_col1" class="col_heading level0 col1" >Corpo</th>
+      <th id="T_fed7d_level0_col2" class="col_heading level0 col2" >Cauda</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_fed7d_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_fed7d_row0_col0" class="data row0 col0" >1.630000</td>
+      <td id="T_fed7d_row0_col1" class="data row0 col1" >0.948400</td>
+      <td id="T_fed7d_row0_col2" class="data row0 col2" >0.051600</td>
+    </tr>
+    <tr>
+      <th id="T_fed7d_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_fed7d_row1_col0" class="data row1 col0" >1.640000</td>
+      <td id="T_fed7d_row1_col1" class="data row1 col1" >0.949500</td>
+      <td id="T_fed7d_row1_col2" class="data row1 col2" >0.050500</td>
+    </tr>
+    <tr>
+      <th id="T_fed7d_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_fed7d_row2_col0" class="data row2 col0" >1.650000</td>
+      <td id="T_fed7d_row2_col1" class="data row2 col1" >0.950500</td>
+      <td id="T_fed7d_row2_col2" class="data row2 col2" >0.049500</td>
+    </tr>
+    <tr>
+      <th id="T_fed7d_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_fed7d_row3_col0" class="data row3 col0" >1.660000</td>
+      <td id="T_fed7d_row3_col1" class="data row3 col1" >0.951500</td>
+      <td id="T_fed7d_row3_col2" class="data row3 col2" >0.048500</td>
+    </tr>
+    <tr>
+      <th id="T_fed7d_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_fed7d_row4_col0" class="data row4 col0" >1.670000</td>
+      <td id="T_fed7d_row4_col1" class="data row4 col1" >0.952500</td>
+      <td id="T_fed7d_row4_col2" class="data row4 col2" >0.047500</td>
+    </tr>
+    <tr>
+      <th id="T_fed7d_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_fed7d_row5_col0" class="data row5 col0" >1.680000</td>
+      <td id="T_fed7d_row5_col1" class="data row5 col1" >0.953500</td>
+      <td id="T_fed7d_row5_col2" class="data row5 col2" >0.046500</td>
+    </tr>
+    <tr>
+      <th id="T_fed7d_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_fed7d_row6_col0" class="data row6 col0" >1.690000</td>
+      <td id="T_fed7d_row6_col1" class="data row6 col1" >0.954500</td>
+      <td id="T_fed7d_row6_col2" class="data row6 col2" >0.045500</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># simular valores dentro da distribuição normal N(0,1)</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Z</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+<span class="n">zc</span> <span class="o">=</span> <span class="mf">1.65</span>
+
+<span class="n">px</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">zc</span><span class="p">,</span><span class="mi">0</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">Z</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">px</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribuição Z com área acima de 1.65 destacada.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribuição Z com área acima de 1.65 destacada.&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/8d39504d65668f8e62e521d67f756fcc15cf53e614ed01eeb880bbef42feb6e0.png" src="../../_images/8d39504d65668f8e62e521d67f756fcc15cf53e614ed01eeb880bbef42feb6e0.png" />
+</div>
+</div>
+<p><strong>3</strong> - Identificar a distribuição do estimador e obter sua estimativa.</p>
+<p><em>a. Calcule o desvio observado entre a média amostral e a média da população</em>
+Encontre o desvio entre a média amostral e a média populacional.</p>
+<p><span class="math notranslate nohighlight">\(\bar{x} - \mu = 80 - 75 = 5\)</span></p>
+<p><em>b. Calcule o desvio esperado devido ao erro de amostragem</em>
+Calcule a quantidade esperada de erro amostral dado o tamanho da amostra.</p>
+<p><span class="math notranslate nohighlight">\(SEM_p = \frac{\sigma}{\sqrt{N}} = \frac{10}{\sqrt{25}} = 2\)</span></p>
+<p>Neste caso, o erro padrão da média é 2. Isso significa que quando N = 25, a distância típica que todas s médias amostrais possíveis estão da média populacional é 2. Esta é a quantidade de desvio que esperamos entre qualquer média amostral e a média da população devido ao erro amostral (ou seja, a diferença esperada pelo acaso).</p>
+<p><em>c. Calcule o z para uma média amostral</em>
+Calcule o escore z obtido associado à média amostral obtida.</p>
+<p><span class="math notranslate nohighlight">\(z = \frac{(\bar{x} - \mu)}{SEM_p} = 2.5\)</span></p>
+<p><strong>4</strong> - Fixar o <span class="math notranslate nohighlight">\(\alpha\)</span> e obter a região críítica.</p>
+<p><span class="math notranslate nohighlight">\(P(Z &gt; z_c) = 0.05\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zc:&quot;</span><span class="p">,</span> <span class="n">Z</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.95</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Zc: 1.6448536269514722
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>5</strong> - Concluir o teste com base na estimativa e na região crítica.</p>
+<p><span class="math notranslate nohighlight">\(z_{obs} \in RC\)</span></p>
+</section>
+<section id="importante-o-p-valor-muito-provavelmente-nao-e-igual-a-zero-esse-valor-geralemente-e-obtido-quando-a-biblioteca-tem-uma-limitacao-na-aproximacao-de-valores-muito-pequenos-e-comum-em-caso-de-nao-ter-acesso-a-metodos-de-calculo-preciso-reportar-p-valor-0-001-por-exemplo">
+<h1>Importante: o p-valor muito provavelmente não é igual a zero, esse valor geralemente é obtido quando a biblioteca tem uma limitação na aproximação de valores muito pequenos. É comum, em caso de não ter acesso a métodos de cálculo preciso, reportar <span class="math notranslate nohighlight">\(p-valor &lt; 0.001\)</span>, por exemplo.<a class="headerlink" href="#importante-o-p-valor-muito-provavelmente-nao-e-igual-a-zero-esse-valor-geralemente-e-obtido-quando-a-biblioteca-tem-uma-limitacao-na-aproximacao-de-valores-muito-pequenos-e-comum-em-caso-de-nao-ter-acesso-a-metodos-de-calculo-preciso-reportar-p-valor-0-001-por-exemplo" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pvalue=&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">Z</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mf">2.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pvalue= 0.006209665325776159
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Reproduzir o gráfico de densidade normal com função normal</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">normal_density</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="n">sigma</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normal_density</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.00443185, 0.00451234, 0.00459414, 0.00467724, 0.00476168,
+       0.00484747, 0.00493462, 0.00502316, 0.0051131 , 0.00520447,
+       0.00529728, 0.00539155, 0.0054873 , 0.00558454, 0.00568331,
+       0.00578361, 0.00588548, 0.00598892, 0.00609396, 0.00620061,
+       0.00630891, 0.00641886, 0.0065305 , 0.00664384, 0.0067589 ,
+       0.00687571, 0.00699428, 0.00711464, 0.00723681, 0.00736082,
+       0.00748668, 0.00761441, 0.00774405, 0.00787561, 0.00800911,
+       0.00814458, 0.00828205, 0.00842153, 0.00856306, 0.00870665,
+       0.00885232, 0.00900011, 0.00915004, 0.00930212, 0.0094564 ,
+       0.00961289, 0.00977161, 0.0099326 , 0.01009587, 0.01026146,
+       0.01042939, 0.01059968, 0.01077237, 0.01094747, 0.01112502,
+       0.01130504, 0.01148756, 0.0116726 , 0.0118602 , 0.01205038,
+       0.01224317, 0.01243859, 0.01263667, 0.01283745, 0.01304095,
+       0.01324719, 0.01345621, 0.01366804, 0.0138827 , 0.01410022,
+       0.01432063, 0.01454397, 0.01477025, 0.01499952, 0.01523179,
+       0.0154671 , 0.01570548, 0.01594696, 0.01619157, 0.01643934,
+       0.0166903 , 0.01694447, 0.0172019 , 0.01746261, 0.01772663,
+       0.01799399, 0.01826473, 0.01853887, 0.01881644, 0.01909749,
+       0.01938203, 0.0196701 , 0.01996174, 0.02025696, 0.02055581,
+       0.02085832, 0.02116452, 0.02147444, 0.02178811, 0.02210556,
+       0.02242683, 0.02275195, 0.02308095, 0.02341386, 0.02375072,
+       0.02409155, 0.02443639, 0.02478528, 0.02513824, 0.02549531,
+       0.02585651, 0.02622189, 0.02659147, 0.02696529, 0.02734337,
+       0.02772576, 0.02811248, 0.02850357, 0.02889905, 0.02929897,
+       0.02970335, 0.03011222, 0.03052562, 0.03094358, 0.03136613,
+       0.0317933 , 0.03222513, 0.03266165, 0.03310288, 0.03354887,
+       0.03399963, 0.03445522, 0.03491564, 0.03538094, 0.03585115,
+       0.0363263 , 0.03680642, 0.03729154, 0.03778169, 0.0382769 ,
+       0.03877721, 0.03928263, 0.03979321, 0.04030897, 0.04082994,
+       0.04135616, 0.04188764, 0.04242443, 0.04296654, 0.04351401,
+       0.04406687, 0.04462514, 0.04518886, 0.04575804, 0.04633272,
+       0.04691293, 0.04749869, 0.04809003, 0.04868697, 0.04928955,
+       0.04989779, 0.0505117 , 0.05113133, 0.05175669, 0.05238781,
+       0.05302472, 0.05366743, 0.05431597, 0.05497036, 0.05563064,
+       0.05629681, 0.0569689 , 0.05764694, 0.05833095, 0.05902094,
+       0.05971694, 0.06041897, 0.06112704, 0.06184119, 0.06256142,
+       0.06328775, 0.06402021, 0.06475881, 0.06550357, 0.0662545 ,
+       0.06701163, 0.06777496, 0.06854451, 0.0693203 , 0.07010235,
+       0.07089065, 0.07168524, 0.07248612, 0.0732933 , 0.0741068 ,
+       0.07492663, 0.07575279, 0.07658529, 0.07742416, 0.07826939,
+       0.07912099, 0.07997897, 0.08084334, 0.08171411, 0.08259127,
+       0.08347484, 0.08436482, 0.08526121, 0.08616402, 0.08707324,
+       0.08798889, 0.08891096, 0.08983945, 0.09077436, 0.09171569,
+       0.09266344, 0.09361761, 0.09457819, 0.09554518, 0.09651858,
+       0.09749837, 0.09848456, 0.09947714, 0.10047609, 0.10148142,
+       0.10249311, 0.10351115, 0.10453553, 0.10556624, 0.10660327,
+       0.1076466 , 0.10869622, 0.10975212, 0.11081428, 0.11188268,
+       0.1129573 , 0.11403814, 0.11512516, 0.11621835, 0.1173177 ,
+       0.11842317, 0.11953474, 0.12065239, 0.12177611, 0.12290585,
+       0.1240416 , 0.12518333, 0.12633102, 0.12748462, 0.12864412,
+       0.12980948, 0.13098068, 0.13215767, 0.13334043, 0.13452893,
+       0.13572312, 0.13692297, 0.13812845, 0.13933951, 0.14055612,
+       0.14177824, 0.14300583, 0.14423884, 0.14547724, 0.14672098,
+       0.14797001, 0.14922429, 0.15048378, 0.15174842, 0.15301817,
+       0.15429298, 0.1555728 , 0.15685757, 0.15814725, 0.15944179,
+       0.16074112, 0.16204519, 0.16335395, 0.16466735, 0.16598531,
+       0.16730779, 0.16863472, 0.16996604, 0.1713017 , 0.17264162,
+       0.17398575, 0.17533402, 0.17668636, 0.17804271, 0.179403  ,
+       0.18076717, 0.18213513, 0.18350683, 0.18488219, 0.18626114,
+       0.18764361, 0.18902951, 0.19041879, 0.19181136, 0.19320714,
+       0.19460606, 0.19600803, 0.19741299, 0.19882084, 0.20023151,
+       0.20164492, 0.20306097, 0.2044796 , 0.20590071, 0.20732422,
+       0.20875004, 0.21017808, 0.21160826, 0.21304048, 0.21447466,
+       0.21591071, 0.21734854, 0.21878804, 0.22022914, 0.22167173,
+       0.22311572, 0.22456102, 0.22600753, 0.22745515, 0.22890379,
+       0.23035334, 0.23180371, 0.2332548 , 0.2347065 , 0.23615873,
+       0.23761136, 0.23906431, 0.24051746, 0.24197072, 0.24342398,
+       0.24487714, 0.24633008, 0.24778271, 0.24923491, 0.25068658,
+       0.25213761, 0.25358789, 0.25503732, 0.25648577, 0.25793315,
+       0.25937934, 0.26082423, 0.26226771, 0.26370966, 0.26514998,
+       0.26658854, 0.26802524, 0.26945997, 0.2708926 , 0.27232303,
+       0.27375114, 0.2751768 , 0.27659992, 0.27802036, 0.27943802,
+       0.28085278, 0.28226452, 0.28367312, 0.28507847, 0.28648045,
+       0.28787893, 0.28927381, 0.29066496, 0.29205227, 0.29343561,
+       0.29481487, 0.29618993, 0.29756067, 0.29892697, 0.30028871,
+       0.30164578, 0.30299804, 0.30434539, 0.3056877 , 0.30702486,
+       0.30835675, 0.30968324, 0.31100422, 0.31231957, 0.31362916,
+       0.31493289, 0.31623063, 0.31752226, 0.31880767, 0.32008674,
+       0.32135934, 0.32262537, 0.3238847 , 0.32513722, 0.32638281,
+       0.32762135, 0.32885273, 0.33007683, 0.33129354, 0.33250274,
+       0.33370431, 0.33489814, 0.33608413, 0.33726214, 0.33843208,
+       0.33959383, 0.34074727, 0.34189229, 0.34302879, 0.34415666,
+       0.34527577, 0.34638604, 0.34748733, 0.34857955, 0.3496626 ,
+       0.35073635, 0.35180072, 0.35285558, 0.35390084, 0.3549364 ,
+       0.35596214, 0.35697797, 0.35798379, 0.35897949, 0.35996497,
+       0.36094014, 0.3619049 , 0.36285915, 0.36380279, 0.36473572,
+       0.36565786, 0.36656911, 0.36746937, 0.36835856, 0.36923658,
+       0.37010334, 0.37095875, 0.37180273, 0.37263518, 0.37345603,
+       0.37426519, 0.37506257, 0.37584809, 0.37662167, 0.37738323,
+       0.37813269, 0.37886997, 0.37959499, 0.38030768, 0.38100797,
+       0.38169578, 0.38237104, 0.38303367, 0.38368361, 0.38432079,
+       0.38494515, 0.38555661, 0.38615511, 0.38674059, 0.38731298,
+       0.38787223, 0.38841828, 0.38895107, 0.38947053, 0.38997663,
+       0.39046929, 0.39094848, 0.39141413, 0.39186621, 0.39230465,
+       0.39272942, 0.39314046, 0.39353774, 0.39392121, 0.39429084,
+       0.39464657, 0.39498838, 0.39531622, 0.39563006, 0.39592987,
+       0.39621561, 0.39648726, 0.39674478, 0.39698815, 0.39721734,
+       0.39743232, 0.39763308, 0.39781959, 0.39799183, 0.39814978,
+       0.39829343, 0.39842276, 0.39853775, 0.39863839, 0.39872468,
+       0.3987966 , 0.39885415, 0.39889731, 0.39892609, 0.39894048,
+       0.39894048, 0.39892609, 0.39889731, 0.39885415, 0.3987966 ,
+       0.39872468, 0.39863839, 0.39853775, 0.39842276, 0.39829343,
+       0.39814978, 0.39799183, 0.39781959, 0.39763308, 0.39743232,
+       0.39721734, 0.39698815, 0.39674478, 0.39648726, 0.39621561,
+       0.39592987, 0.39563006, 0.39531622, 0.39498838, 0.39464657,
+       0.39429084, 0.39392121, 0.39353774, 0.39314046, 0.39272942,
+       0.39230465, 0.39186621, 0.39141413, 0.39094848, 0.39046929,
+       0.38997663, 0.38947053, 0.38895107, 0.38841828, 0.38787223,
+       0.38731298, 0.38674059, 0.38615511, 0.38555661, 0.38494515,
+       0.38432079, 0.38368361, 0.38303367, 0.38237104, 0.38169578,
+       0.38100797, 0.38030768, 0.37959499, 0.37886997, 0.37813269,
+       0.37738323, 0.37662167, 0.37584809, 0.37506257, 0.37426519,
+       0.37345603, 0.37263518, 0.37180273, 0.37095875, 0.37010334,
+       0.36923658, 0.36835856, 0.36746937, 0.36656911, 0.36565786,
+       0.36473572, 0.36380279, 0.36285915, 0.3619049 , 0.36094014,
+       0.35996497, 0.35897949, 0.35798379, 0.35697797, 0.35596214,
+       0.3549364 , 0.35390084, 0.35285558, 0.35180072, 0.35073635,
+       0.3496626 , 0.34857955, 0.34748733, 0.34638604, 0.34527577,
+       0.34415666, 0.34302879, 0.34189229, 0.34074727, 0.33959383,
+       0.33843208, 0.33726214, 0.33608413, 0.33489814, 0.33370431,
+       0.33250274, 0.33129354, 0.33007683, 0.32885273, 0.32762135,
+       0.32638281, 0.32513722, 0.3238847 , 0.32262537, 0.32135934,
+       0.32008674, 0.31880767, 0.31752226, 0.31623063, 0.31493289,
+       0.31362916, 0.31231957, 0.31100422, 0.30968324, 0.30835675,
+       0.30702486, 0.3056877 , 0.30434539, 0.30299804, 0.30164578,
+       0.30028871, 0.29892697, 0.29756067, 0.29618993, 0.29481487,
+       0.29343561, 0.29205227, 0.29066496, 0.28927381, 0.28787893,
+       0.28648045, 0.28507847, 0.28367312, 0.28226452, 0.28085278,
+       0.27943802, 0.27802036, 0.27659992, 0.2751768 , 0.27375114,
+       0.27232303, 0.2708926 , 0.26945997, 0.26802524, 0.26658854,
+       0.26514998, 0.26370966, 0.26226771, 0.26082423, 0.25937934,
+       0.25793315, 0.25648577, 0.25503732, 0.25358789, 0.25213761,
+       0.25068658, 0.24923491, 0.24778271, 0.24633008, 0.24487714,
+       0.24342398, 0.24197072, 0.24051746, 0.23906431, 0.23761136,
+       0.23615873, 0.2347065 , 0.2332548 , 0.23180371, 0.23035334,
+       0.22890379, 0.22745515, 0.22600753, 0.22456102, 0.22311572,
+       0.22167173, 0.22022914, 0.21878804, 0.21734854, 0.21591071,
+       0.21447466, 0.21304048, 0.21160826, 0.21017808, 0.20875004,
+       0.20732422, 0.20590071, 0.2044796 , 0.20306097, 0.20164492,
+       0.20023151, 0.19882084, 0.19741299, 0.19600803, 0.19460606,
+       0.19320714, 0.19181136, 0.19041879, 0.18902951, 0.18764361,
+       0.18626114, 0.18488219, 0.18350683, 0.18213513, 0.18076717,
+       0.179403  , 0.17804271, 0.17668636, 0.17533402, 0.17398575,
+       0.17264162, 0.1713017 , 0.16996604, 0.16863472, 0.16730779,
+       0.16598531, 0.16466735, 0.16335395, 0.16204519, 0.16074112,
+       0.15944179, 0.15814725, 0.15685757, 0.1555728 , 0.15429298,
+       0.15301817, 0.15174842, 0.15048378, 0.14922429, 0.14797001,
+       0.14672098, 0.14547724, 0.14423884, 0.14300583, 0.14177824,
+       0.14055612, 0.13933951, 0.13812845, 0.13692297, 0.13572312,
+       0.13452893, 0.13334043, 0.13215767, 0.13098068, 0.12980948,
+       0.12864412, 0.12748462, 0.12633102, 0.12518333, 0.1240416 ,
+       0.12290585, 0.12177611, 0.12065239, 0.11953474, 0.11842317,
+       0.1173177 , 0.11621835, 0.11512516, 0.11403814, 0.1129573 ,
+       0.11188268, 0.11081428, 0.10975212, 0.10869622, 0.1076466 ,
+       0.10660327, 0.10556624, 0.10453553, 0.10351115, 0.10249311,
+       0.10148142, 0.10047609, 0.09947714, 0.09848456, 0.09749837,
+       0.09651858, 0.09554518, 0.09457819, 0.09361761, 0.09266344,
+       0.09171569, 0.09077436, 0.08983945, 0.08891096, 0.08798889,
+       0.08707324, 0.08616402, 0.08526121, 0.08436482, 0.08347484,
+       0.08259127, 0.08171411, 0.08084334, 0.07997897, 0.07912099,
+       0.07826939, 0.07742416, 0.07658529, 0.07575279, 0.07492663,
+       0.0741068 , 0.0732933 , 0.07248612, 0.07168524, 0.07089065,
+       0.07010235, 0.0693203 , 0.06854451, 0.06777496, 0.06701163,
+       0.0662545 , 0.06550357, 0.06475881, 0.06402021, 0.06328775,
+       0.06256142, 0.06184119, 0.06112704, 0.06041897, 0.05971694,
+       0.05902094, 0.05833095, 0.05764694, 0.0569689 , 0.05629681,
+       0.05563064, 0.05497036, 0.05431597, 0.05366743, 0.05302472,
+       0.05238781, 0.05175669, 0.05113133, 0.0505117 , 0.04989779,
+       0.04928955, 0.04868697, 0.04809003, 0.04749869, 0.04691293,
+       0.04633272, 0.04575804, 0.04518886, 0.04462514, 0.04406687,
+       0.04351401, 0.04296654, 0.04242443, 0.04188764, 0.04135616,
+       0.04082994, 0.04030897, 0.03979321, 0.03928263, 0.03877721,
+       0.0382769 , 0.03778169, 0.03729154, 0.03680642, 0.0363263 ,
+       0.03585115, 0.03538094, 0.03491564, 0.03445522, 0.03399963,
+       0.03354887, 0.03310288, 0.03266165, 0.03222513, 0.0317933 ,
+       0.03136613, 0.03094358, 0.03052562, 0.03011222, 0.02970335,
+       0.02929897, 0.02889905, 0.02850357, 0.02811248, 0.02772576,
+       0.02734337, 0.02696529, 0.02659147, 0.02622189, 0.02585651,
+       0.02549531, 0.02513824, 0.02478528, 0.02443639, 0.02409155,
+       0.02375072, 0.02341386, 0.02308095, 0.02275195, 0.02242683,
+       0.02210556, 0.02178811, 0.02147444, 0.02116452, 0.02085832,
+       0.02055581, 0.02025696, 0.01996174, 0.0196701 , 0.01938203,
+       0.01909749, 0.01881644, 0.01853887, 0.01826473, 0.01799399,
+       0.01772663, 0.01746261, 0.0172019 , 0.01694447, 0.0166903 ,
+       0.01643934, 0.01619157, 0.01594696, 0.01570548, 0.0154671 ,
+       0.01523179, 0.01499952, 0.01477025, 0.01454397, 0.01432063,
+       0.01410022, 0.0138827 , 0.01366804, 0.01345621, 0.01324719,
+       0.01304095, 0.01283745, 0.01263667, 0.01243859, 0.01224317,
+       0.01205038, 0.0118602 , 0.0116726 , 0.01148756, 0.01130504,
+       0.01112502, 0.01094747, 0.01077237, 0.01059968, 0.01042939,
+       0.01026146, 0.01009587, 0.0099326 , 0.00977161, 0.00961289,
+       0.0094564 , 0.00930212, 0.00915004, 0.00900011, 0.00885232,
+       0.00870665, 0.00856306, 0.00842153, 0.00828205, 0.00814458,
+       0.00800911, 0.00787561, 0.00774405, 0.00761441, 0.00748668,
+       0.00736082, 0.00723681, 0.00711464, 0.00699428, 0.00687571,
+       0.0067589 , 0.00664384, 0.0065305 , 0.00641886, 0.00630891,
+       0.00620061, 0.00609396, 0.00598892, 0.00588548, 0.00578361,
+       0.00568331, 0.00558454, 0.0054873 , 0.00539155, 0.00529728,
+       0.00520447, 0.0051131 , 0.00502316, 0.00493462, 0.00484747,
+       0.00476168, 0.00467724, 0.00459414, 0.00451234, 0.00443185])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">normal_density</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x775b43d28f10&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/72a748ab6f598ec5d0202f1b0e7223801f5f6f1769a700b471ef613be32fc546.png" src="../../_images/72a748ab6f598ec5d0202f1b0e7223801f5f6f1769a700b471ef613be32fc546.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./capitulos/chap8"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Este notebook exemplo utiliza markdown para formatação do texto, e LaTeX para criação de fórmulas matemáticas.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#importante-o-p-valor-muito-provavelmente-nao-e-igual-a-zero-esse-valor-geralemente-e-obtido-quando-a-biblioteca-tem-uma-limitacao-na-aproximacao-de-valores-muito-pequenos-e-comum-em-caso-de-nao-ter-acesso-a-metodos-de-calculo-preciso-reportar-p-valor-0-001-por-exemplo">Importante: o p-valor muito provavelmente não é igual a zero, esse valor geralemente é obtido quando a biblioteca tem uma limitação na aproximação de valores muito pequenos. É comum, em caso de não ter acesso a métodos de cálculo preciso, reportar <span class="math notranslate nohighlight">\(p-valor &lt; 0.001\)</span>, por exemplo.</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ricardo R. da Silva
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
