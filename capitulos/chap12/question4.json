@@ -1,0 +1,23 @@
+[
+    {
+        "question": "6. Você usa uma estatística t de amostras independentes quando",
+        "type": "multiple_choice",
+        "answers": [
+            {"answer": "a. a VI define duas amostras independentes e a VD é medido em uma escala de quantitativa.", "correct": true, "feedback": "Correto!"},
+            {"answer": "b. a VI define duas amostras correspondentes e a VD é medido em uma escala de quantitativa.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+            {"answer": "c. a VI define uma amostra, o VD é medido em uma escala de quantitativa e a VD é medido duas vezes na mesma amostra.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+            {"answer": "d. a VI define uma amostra e o VD é medido em uma escala de quantitativa, e você não conhece o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+            {"answer": "e. a VI define uma amostra e o VD é medido em uma escala de quantitativa, e você conhece o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}
+        ]
+    },
+    {
+        "question": "7. O teste de Levene ajudará você a determinar",
+        "type": "multiple_choice",
+        "answers": [
+            {"answer": "a. se as duas médias amostrais são significativamente diferentes entre si.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+            {"answer": "b. se você deve rejeitar o teste nulo ou não rejeitá-lo.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+            {"answer": "c. se as duas condições têm variâncias semelhantes ou variâncias muito diferentes (ou seja, se a suposição de homogeneidade da variância é atendida ou violada).", "correct": true, "feedback": "Correto!"},
+            {"answer": "d. se o tamanho da amostra é suficientemente grande.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}
+        ]
+    }
+]

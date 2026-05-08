@@ -1,0 +1,6 @@
+[{"question":"21. O valor t obtido neste estudo indica que",
+"type":"multiple_choice",
+"answers":[{"answer": "a. o desvio entre as médias amostrais foi 5.83 vezes maior do que o esperado devido ao erro amostral.", "correct": false, "feedback":"Incompleto!"},
+{"answer":"b. a hipótese nula deve ser rejeitada.", "correct": false, "feedback":"Incompleto!"},
+{"answer":"c. tanto a quanto b estão corretos.", "correct": true, "feedback":"Correto!"}]
+}]

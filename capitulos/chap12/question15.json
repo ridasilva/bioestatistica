@@ -1,0 +1,8 @@
+[{
+    "question": "19. Ao determinar se um tamanho de efeito é pequeno, médio ou grande, você deve",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. ignorar o sinal do tamanho de efeito calculado e usar seu valor absoluto.", "correct": true, "feedback": "Correto! O sinal não importa, apenas o valor absoluto."},
+        {"answer": "b. reconhecer que tamanhos de efeito negativos são sempre tamanhos de efeito pequenos.", "correct": false, "feedback": "Incorreto. Tamanhos de efeito negativos podem ser grandes em magnitude."}
+    ]
+}]

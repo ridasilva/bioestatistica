@@ -1,0 +1,10 @@
+[{
+    "question": "15. Qual das seguintes alternativas poderia representar uma hipótese nula ao realizar um teste independente unilateral? Observe que esta questão não se refere ao estudo descrito no texto.",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. µ1 ≥ µ2", "correct": false, "feedback": "Incorreto. Esta não é uma hipótese nula unilateral."},
+        {"answer": "b. µ1 < µ2", "correct": false, "feedback": "Incorreto. Esta não é uma hipótese nula unilateral."},
+        {"answer": "c. µ1 > µ2", "correct": false, "feedback": "Incorreto. Esta não é uma hipótese nula unilateral."},
+        {"answer": "d. µ1 = µ2", "correct": true, "feedback": "Correto! Esta é uma hipótese nula unilateral."}
+    ]
+}]

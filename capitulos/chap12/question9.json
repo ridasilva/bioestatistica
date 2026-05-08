@@ -1,0 +1,10 @@
+
+[{
+    "question": "13. Sempre que você não rejeitar a hipótese nula e, ainda assim, o tamanho do efeito for médio ou grande, você deve concluir",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. que o tratamento realmente funciona.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+        {"answer": "b. que o tratamento realmente não funciona.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+        {"answer": "c. que o tamanho da sua amostra foi muito pequeno e você deve refazer o estudo com uma amostra maior.", "correct": true, "feedback": "Correto!"}
+    ]
+}]

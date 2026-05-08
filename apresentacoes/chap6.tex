@@ -10,6 +10,9 @@ style=alphabetic,
 citestyle=authoryear
 ]{biblatex}
 
+% Reduced font size
+\newcommand\Fontvi{\fontsize{8}{7.2}\selectfont}
+
 % Footnote without number
 \newcommand\blfootnote[1]{%
   \begingroup
@@ -20,9 +23,9 @@ citestyle=authoryear
 
 \addbibresource{stats.bib}
 \title[Bioestatística II] %optional
-{Distribuição Amostral da Média}
+{Variáveis Aleatórias Contínuas}
 
-\subtitle{CGF2046 - Bioestatística II}
+\subtitle{CGF2022 - Bioestatística I}
 
 \author[da Silva, Ricardo] % (optional, for multiple authors)
 {R. ~R. ~da Silva\inst{1}}
@@ -41,14 +44,6 @@ citestyle=authoryear
 
 \begin{document}
 
-%\begin{frame}
-%\titlepage
-%\end{frame}
-
-%\begin{frame}
-%\tableofcontents
-%\end{frame}
-
 \begin{frame}
 \titlepage
 \end{frame}
@@ -59,362 +54,566 @@ citestyle=authoryear
 \tableofcontents
 \end{frame}
 
+\section{Introdução}
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Objetivos de Aprendizado\footcite{carlson2017introduction}}
-  Depois de assitir essa aula e fazer as atividades complementares, você será capaz de:
-  \\~\\
-  \begin{itemize}
-  \uncover<1->{\item
-    Explicar como uma distribuição de médias amostrais é criada;}
-  \uncover<2->{\item
-    Explicar como uma amostra aleatória é obtida;}
-  \uncover<3->{\item
-    Determinar a média, o desvio padrão e a forma de uma distribuição de médias amostrais;}
-   \uncover<4->{\item
-    Explicar qual é o erro padrão das medidas médias;}
-   \uncover<5->{\item
-    Explicar o teorema central do limite e por que ele é importante;}
-   \uncover<6->{\item
-    Explicar a lei dos grandes números;}
-   \uncover<7->{\item
-    Calcular a z para uma média amostral;}
-   \uncover<8->{\item Usar z para uma média amostral e uma tabela de probabilidades para distribuição normal para determinar a probabilidade de uma dada média amostral ocorrer;}
-  \end{itemize}
-\end{frame}
+\frametitle{Variáveis aleatórias}
 
-\section{Conceitos básicos de inferência}
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Definições}
-  Conceitos fundamentais
-  \\~\\
-  \begin{itemize}
-  \uncover<1->{\item
-    \textbf{População}: Conjunto de todos os elementos sob investigação.}
-  \uncover<2->{\item
-    \textbf{Amostra}: Subconjunto da população.}
-  \uncover<3->{\item
-    \textbf{Variável} de interesse: característica a ser observada em
-    cada indivíduo da amostra.}
-  \end{itemize}
+Em probabilidade, uma função \(X\) que associa a cada evento do espaço
+amostral um número real \(X(\omega) \in \mathbb{R}\), é denominada uma
+\textbf{variável aleatória} (VA).
+
+Uma variável aleatória pode ser classificada como \textbf{discreta} ou
+\textbf{contínua}, dependendo do domínio dos valores de \(X\).
+
+Exemplo: o número de alunos em uma sala é uma variável aleatória
+(discreta), denotada por \(X\) (maiúsculo). Uma observação dessa
+variável é denotada pela respectiva letra minúscula, \emph{e.g.},
+\(x = 50\) alunos.
+
+Em geral, denotamos a probabilidade de uma V.A. \(X\) assumir
+determinado valor \(x\) como \[
+P[X] \quad \text{ou} \quad P[X = x]
+\]
+
+
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Variável aleatória}
+\frametitle{Distribuições de probabilidade}
 
-\textbf{Definição}
+Existem diversos \emph{modelos probabilísticos} que procuram descrever
+vários tipos de variáveis aleatórias: são as \textbf{distribuições de
+probabilidade de variáveis aleatórias} (discretas ou contínuas).
 
-\begin{itemize}
-\item
-  \textbf{Variável aleatória} - Descrição numérica do resultado de um
-  fenômeno aleatório.
-\end{itemize}
-
-\textbf{Notação}
-
-\begin{itemize}
-\item
-  \(X\) denota a variável aleatória.
-\item
-  \(x\) denota os valores realizados da v.a.
-\item
-  Probabilidade de \(X\) assumir o valor \(x\) é denotada \(P(X = x)\).
-\end{itemize}
-
-\textbf{Exemplo}
+A distribuição de probabilidades de uma VA \(X\) é, portanto, uma
+descrição das probabilidades associadas com os possíveis valores de
+\(X\). Os valores que \(X\) assume determinam o \textbf{suporte} (S) da
+VA.
 
 \begin{itemize}
 \item
-  X: Número de alunos em uma sala de aula.
+  \textbf{Variáveis discretas} \(\rightarrow\) suporte em um conjunto de
+  valores enumeráveis (finitos ou infinitos)
 \item
-  Uma possível realização \(x = 50\).
+  \textbf{Variáveis contínuas} \(\rightarrow\) suporte em um conjunto
+  não enumerável de valores
 \end{itemize}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Parâmetro e Estimativa}
+\frametitle{Distribuições de probabilidade}
 
-\textbf{População} \(\rightarrow\) \textbf{censo} \(\rightarrow\)
-\textbf{parâmetro}
+Denomina-se de \textbf{distribuição de probabilidade} de alguma variável
+aleatória, a \textbf{regra} geral que define a
 
-\emph{Uma medida numérica que descreve alguma característica da
-\textbf{população}, usualmente representada por letras gregas:
-\(\theta\), \(\mu\), \(\sigma\), \(\ldots\)}
+\begin{itemize}
+\item
+  \textbf{função de probabilidade} (fp) (V.A.s discretas), ou a
+\item
+  \textbf{função densidade de probabilidade} (fdp) (V.A.s contínuas)
+\end{itemize}
 
-Exemplo: média populacional = \(\mu\)
+para a variável de interesse.
 
-\vspace{1em}
-\hrule
-\vspace{1em}
+Existem muitas distribuições de probabilidade, mas algumas merecem
+destaque por sua importância prática.
 
-\textbf{População} \(\rightarrow\) \textbf{amostra} \(\rightarrow\)
-\textbf{estimativa}
+Estas distribuições também são chamadas de \textbf{modelos
+probabilísticos}.
+\end{frame}
 
-\emph{Uma medida numérica que descreve alguma característica da
-\textbf{amostra}, usualmente denotada pela letra grega do respectivo
-parâmetro com um acento circunflexo: \(\hat\theta\), \(\hat\mu\),
-\(\hat\sigma\), \(\ldots\), ou por letras do alfabeto comum: \(\bar x\),
-\(s\), \(\ldots\)}
+\section{Variáveis aleatórias contínuas}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Variáveis aleatórias contínuas}
 
-Exemplo: média amostral = \(\bar{x}\)
+Uma V.A. é classificada como contínua se assume valores em qualquer
+intervalo dos números reais, ou seja, um conjunto de valores não
+enumerável. Dessa forma, não é possível atribuir probabilidades para um
+ponto específico, apenas para intervalos da reta.
+
+Exemplos:
+
+\begin{itemize}
+\item
+  Peso de animais
+\item
+  Tempo de falha de um equipamento eletrônico
+\item
+  Altura da maré em uma hora específica
+\item
+  Salinidade da água do mar
+\item
+  Retorno financeiro de um investimento
+\end{itemize}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.1}
+
+Estudos anteriores revelam a existência de uma grande lençol de água no
+subsolo de uma região. No entanto, sua profundidade ainda não foi
+determinada, sabendo-se apenas que o lençol pode estar situado em
+qualquer ponto entre \(20\) e \(100\) metros.
+
+\begin{itemize}
+\item
+  Determine uma função para representar a variável \(X\) (profundidade
+  do lençol de água).
+\item
+  Calcule a probabilidade de encontar água em uma profundidade pelo
+  menos igual a 25, e menor ou igual a 29 metros.
+\item
+  Qual a probabilidade de encontrar água na profundidade de 60 metros?
+\end{itemize}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Estimador}
+\frametitle{Exemplo 6.1}
+\end{frame}
 
-\textbf{Observação:}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.1}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Área sob uma curva\footcite{stewart2009calculus}}
+Vamos aproximar a \textit{i}-ésima faixa \(S_i\) por um retângulo com largura \(\Delta x\) e altura \(f(x_i)\), que é o valor de \textit{f} na extremidade direita. Então, a área do \textit{i}-ésimo retângulo é \(f(x_i)\Delta x\). O que consideramos intuitivamente como a área de \textit{S} é aproximado pela soma das áreas desses retângulos, que é 
+
+\begin{center}\includegraphics[width=0.35\linewidth]{figs/stewart_5_11_a} \end{center}
+
+\begin{align*}
+A = f(x_1)\Delta x+f(x_2)\Delta x+\ldots+f(x_n)\Delta x
+\end{align*}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Área sob uma curva\footnotemark[1]}
+\Fontvi
+\textbf{Definição de Integral Definida:}  Se \textit{f} é uma função contínua definida em \(a \leq x \leq b\), dividimos o intervalo \([a,b]\) em \textit{n} subintervalos de comprimentos iguais \(\Delta x = (b-a)/n\). Sejam \(x_0 (=a), x_1, x_2, \ldots, x_n (=b)\) as extremidades desses subintervalos, e sejam \(x^*_1,x^*_2, \ldots x^*_n\) \textbf{pontos amostrais arbitrários} nesses subintervalos, de forma que \(x^*_i\) esteaja no \textit{i}-ésimo sibintervalo \([x_{i-1}, x_i]\). Então a \textbf{integral definida de f de a a b} é
+
+
+\begin{align*}
+\int_a^b f(x) \,dx = \lim_{n\to\infty} \sum_{i=1}^n f(x^*_i) \Delta x 
+\end{align*}
+
+
+\begin{center}\includegraphics[width=0.95\linewidth]{figs/stewart_5_11} \end{center}
+\blfootnote{\url{https://pt.wikipedia.org/wiki/Integral}}
+
+\end{frame}
+
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Área sob uma curva\footnotemark[1]}
+\Fontvi
+Pelo \textbf{Teorema Fundamental do Cálculo} temos:
+
+\begin{align*}
+\int_a^b f(x) \,dx = F(b)-F(a)
+\end{align*}
+
+onde \textit{F} é qualquer primitiva de \textit{f}, isto é, uma função tal que \(F'=f\).
+Nesse capítulo iremos utilizar as seguintes integrais indefinidas de funções simples:
+
+\begin{align*}
+\int k \,dx = kx+C \Biggr|_{a}^{b} = (kb+C)-(ka+C)\\
+\int x^n \,dx = \frac{x^{n+1}}{n+1}+C\Biggr|_{a}^{b} = (\frac{b^{n+1}}{n+1}+C)-(\frac{a^{n+1}}{n+1}+C) 
+\end{align*}
+A seguinte propriedade também será explorada:
+\begin{align*}
+\int_a^a f(x) \,dx = 0
+\end{align*}
+
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Função densidade de probabilidade}
+
+Não podemos atribuir probabilidades à valores específicos, pois há uma
+quantidade \textbf{não enumerável} (infinita) de valores em um ponto.
+
+Atribuimos probabilidades à intervalos de valores, por meio de uma
+\textbf{função}. Portanto, as probabilidades são representadas por
+áreas.
+
+
+\begin{center}\includegraphics[width=0.55\linewidth]{figs/dens-1} \end{center}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Função densidade de probabilidade}
+
+A \textbf{função densidade de probabilidade} (fdp) atribui
+probabilidades à intervalos de valores do tipo \([a,b]\), e é definida
+por \[
+P[a < X < b] = \int_{a}^{b} f(x) dx
+\] com as seguintes propriedades:
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-
+\def\labelenumi{\roman{enumi}.}
 \item
-  O valor assumido pelo estimador pontual é chamado de
-  \textbf{estimativa
-  pontual},\[\hat{\theta} = T(\mathbf{X}) = T(X_1, \ldots, X_n) = t\] ou
-  seja, o estimador é uma \textbf{função} da amostra, e a estimativa é o
-  \textbf{valor observado} de um estimador (um número) de uma amostra
-  particular.
+  É uma função não negativa \[f(x) \geq 0\]
+\item
+  A área total sob a curva deve ser igual a 1
+  \[\int_{-\infty}^{+\infty} f(x) dx = 1\]
 \end{enumerate}
 \end{frame}
 
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Média de dados brutos}
-
-Divide-se a soma de todos os dados pelo número total deles:
-
-\[
-\bar{x}_{obs} = \frac{x_1 + x_2 + \cdots + x_n}{n} = \frac{\sum_{i=1}^n
-x_i}{n}.
-\]
-\begin{center}\includegraphics[width=0.8\linewidth]{figs/medidas-crop} \end{center}
-\end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Variância e desvio-padrão de um conjunto de dados}
+\frametitle{Função densidade de probabilidade}
 
-Uma alternativa melhor é usar a \textbf{soma dos quadrados dos desvios},
-que dá origem à \textbf{variância} de um conjunto de dados \[
-var_{obs} = \frac{1}{n}\sum_{i=1}^n (x_i - \bar{x}_{obs})^2
-\] Para manter a mesma unidade de medida dos dados originais, definimos
-o \textbf{desvio padrão} como \[
-dp_{obs} = \sqrt{var_{obs}}
-\] Uma expressão alternativa da variância (mais fácil de calcular) é \[
-var_{obs} = \frac{1}{n}\sum_{i=1}^n x_i^2 - \bar{x}_{obs}^2
-\]
-\end{frame}
+\textbf{Observações:}
 
-
-\section{Distribuição Amostral}
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Intuição para distribuições amostrais}
-Uma distribuição de médias amostrais é a população de todas as médias amostrais aleatórias possíveis para um estudo realizado com um determinado tamanho de amostra.\\~\\
-População exemplo de quatro valores: \[10, 12, 14, 16\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Exemplo}
-Distribuição de médias amostrais para a população de quatro valores e um tamanho de amostra de 2
-\begin{center}\includegraphics[width=0.5\linewidth]{figs/chap5tab5.2} \end{center}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Parâmetros \textit{vs} Estimativas}
-A média da população é dada por:
-\[\mu=\frac{1}{N}\sum_{i=1}^Nx_i=\frac{52}{4}=13\]
-A média da distribuição das médias amostrais, as 16 médias amostrais na última coluna da tabela anterior é dada por
-\[\bar{X}=\frac{1}{N}\sum_{i=1}^N\bar{x}_i=\frac{208}{16}=13\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição das médias}
-O fato de a média da distribuição das médias amostrais ser sempre igual à média da população original mostra que quando os pesquisadores selecionam aleatoriamente uma amostra para usar em seus estudo, selecionar uma amostra que tenha a mesma média da população, ou uma média próxima a ela, é bastante comum.
-\begin{center}\includegraphics[width=0.6\linewidth]{figs/chap5fig5.1} \end{center}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Desvios padrão populacional e amostral}
-A variância da população pode ser obtida por
-\[\sigma^2 = \frac{1}{N}\sum_{i=1}^N x_i^2 - \mu^2=\frac{1}{4}696-169=5\]
-E o desvio padrão
-\[\sigma= \sqrt{\sigma^2} = 2.24\]
-A variância da distribuição amostral pode ser obtida por
-\[Var(X) = \frac{1}{N}\sum_{i=1}^N \bar{x}_i^2 - \bar{X}^2=\frac{1}{16}2744-169=2.5\]
-E o desvio padrão
-\[DP = \sqrt{Var(X)} = 1.58\]
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Erro padrão da média}
-O erro padrão de um estimador é o desvio padrão de sua distribuição amostral. Para o estimador da média, temos o erro padrão da média
-\[\sigma_{\bar{X}} = SEM = \frac{\sigma}{\sqrt{N}}\]
-onde \(\sigma\) representa o devio padrão populacional e \(N\) o tamanho da amostra.
-Para o nosso exemplo, o erro padrão da média pode ser obtido por
-\[SEM = \frac{\sigma}{\sqrt{N}} = \frac{2.24}{\sqrt{2}}=1.58\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Observações do experimento númerico}
-Observamos empiricamente, que:
 \begin{itemize}
-\item A média da distribuição das médias amostrais é igual a média populacional, \(\mu\);
-\item O desvio padrão é sempre igual ao SEM, \(\sigma/N\);
-\item O gráfico da distribuição amostral tem distribuição aproximadamente normal (ou seja, em forma de sino).
+
+\item
+  \(P[X=x] = 0\), portanto: \[P[a \leq X \leq b] = P[a < X \leq b] = P[a
+  \leq X < b] = P[a < X < b]\]
+\item
+  \textbf{Qualquer função} \(f(\cdot)\) que seja não negativa e cuja
+  área total sob a curva seja igual à unidade caracterizará uma VA
+  contínua.
+\item
+  \(f(x)\) \textbf{não} representa a probabilidade de ocorrência de
+  algum evento. \textbf{A área sob a curva entre dois pontos é que
+  fornecerá a probabilidade}.
 \end{itemize}
-
-\end{frame}
-
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Outros experimentos númericos}
-\begin{center}\includegraphics[width=0.9\linewidth]{figs/func2}\end{center}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Teorema Central do Limite}
-Coletivamente, esses três fatos são conhecidos como teorema central do limite  (TCL) e nos dizem que a distribuição das médias amostrais com, centro (\(\mu\)) e dispersão (SEM = \(\sigma/N\)) tem forma normal para qualquer estudo.\\~\\ 
+\frametitle{Exemplo 6.3}
+Num teste educacional com crianças, o tempo para a realização de uma bateria de questões de raciocínio verbal e lógico é medido e anotado para ser comparado com um modelo teórico. Este teste é utilizado para identificar o desenvolvimento de crianças e auxiliar a aplicação de medidas corretivas. O modelo teórico considera \textit{T}, \textit{tempo de teste em minutos}, como uma variável aleatória contínua com função densidade de probabilidade dada por:
 
-Observamos empiricamente, que:
-\begin{enumerate}
-\item sugere que as amostras tendem a ter médias semelhantes às da população da qual foram extraídas;
-\item nos permite calcular a quantidade típica de erro de amostragem que qualquer estudo pode gerar.
-\end{enumerate}
+
+\begin{align*}
+f(t) = \left\{\begin{matrix}
+ \frac{1}{40}(t-4),& se & 8 \leq t < 10;\\ 
+ \frac{3}{20},& se & 10 \leq t \leq 15; \\
+ 0,& caso & \text{contrário}
+\end{matrix}\right.
+\end{align*} 
+
+Calcule \(P(9 < T \leq 12)\).
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Lei dos Grandes Números}
-Amostras maiores tenderão a ter meios que desviam-se menos da média da população do que amostras menores. Este é um exemplo específico da lei de números grandes: .
- \begin{alertblock}{Lei dos Grandes Números}
-À medida que N aumenta, a estatística amostral (por exemplo, a média amostral) é uma estimativa melhor do parâmetro populacional (por exemplo, a média populacional)
-\end{alertblock}
-
-Porque a distribuição tem forma normal, ela segue a regra 68–95–99, como estudado em capítulos prévios. Portanto, 68\% de todos as possíveis médias amostrais estão entre -1 e +1 erro padrão da média da média da população.
-
+\frametitle{Exemplo 6.3}
 \end{frame}
+
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Distribuições amostrais}
-
-\begin{block}{Distribuições amostrais}
-
-A distribuição de probabilidade de uma estatística
-\(Y = T(x_1, x_2, \ldots, x_n)\) é denominada de \textbf{distribuição
-amostral} de \(Y\). Assim, uma estatística também é uma variável
-aleatória, pois seus valores mudam conforme a amostra aleatória.
-\end{block}
-
-\begin{block}{}
-\textbf{Exemplo}: duas estatísticas comumente utilizadas para o resumo
-de uma amostra aleatória são a \textbf{média amostral} \(\bar{x}\), e a
-\textbf{proporção amostral} \(\hat{p}\). Cada uma delas também possui
-uma distribuição amostral.
-\end{block}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição amostral da média}
-
-Através do estudo da distribuição da média amostral chegamos em um dos
-resultados mais importantes da inferência estatística.
-
-\begin{block}{Distribuição amostral da média}
+\frametitle{Medidas de posição para VAs contínuas}
 
 \begin{itemize}
 \item
-  \(\text{E}(\bar{X}) = \mu_{\bar{X}} = \mu\)
+  O valor esperado (ou média) da VA contínua \(X\) com função densidade
+  \(f(x)\), é dado pela expressão:
+  \[E(X) = \mu = \int_{-\infty}^{\infty} x\, f(x) dx.\]
 \item
-  \(\text{Var}(\bar{X}) = \sigma^2_{\bar{X}} = \sigma^2/n\)
+  A mediana é o valor \(Md\) que tem a propriedade de
+  \[P(X \geq Md) \geq 1/2 \quad \text{e} \quad P(X \leq Md) \geq 1/2.\]
+\item
+  A moda é o valor \(Mo\) tal que, \[f(Mo) = \max_{x} f(x).\]
 \end{itemize}
-
-Portanto, se \[X \sim \text{N}(\mu, \sigma^2) \quad \text{então} \quad
-\bar{X} \sim \text{N}(\mu_{\bar{X}}, \sigma^2_{\bar{x}})\] mas, como
-\[\mu_{\bar{X}} = \mu \quad \text{e} \quad \sigma^2_{\bar{X}} =
-\sigma^2/n\] então, a \textbf{distribuição amostral} da média amostral
-\(\bar{X}\) é
-\[\bar{X} \sim \text{N}\left(\mu, \frac{\sigma^2}{n} \right)\]
-\end{block}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Distribuição amostral da média}
+\frametitle{Variância para VAs contínuas}
 
-Pode-se mostrar que, para amostras suficientemente grandes, \textbf{a
-média amostral \(\bar{X}\) converge para o verdadeiro valor da média
-populacional \(\mu\)} (é um \textbf{estimador não viesado} de \(\mu\)).
-
-Além disso, a variância das médias amostrais \(\sigma^2_{\bar{X}}\)
-tende a diminuir conforme \(n \rightarrow \infty\) (é um estimador
-\textbf{consistente}).
-
-Estes resultados sugerem que, quando o tamanho da amostra aumenta,
-
-\begin{center}
-\underline{independente do formato da distribuição da população
-original},
-\end{center}
-
-\textbf{a distribuição amostral de \(\bar{X}\) aproxima-se cada vez mais
-de uma distribuição Normal}, um resultado fundamental na teoria de
-probabilidade conhecido como \textbf{Teorema Central do Limite}.
-\end{frame}
-
-
-% adicionar figura 7.15
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Distribuição amostral da média}
-
-\begin{block}{Teorema Central do Limite (TCL)}
-
-Para amostras aleatórias simples \((X_1, X_2, \ldots, X_n)\), retiradas
-de uma população com média \(\mu\) e variância \(\sigma^2\), a
-distribuição amostral da média \(\bar{X}\), terá forma dada por \[
-Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}}
-\] no limite quando \(n \to \infty\), onde \(Z \sim \text{N}(0,1)\).
-
-\end{block}
-
-O teorema garante que para \textit{n} grande a distribuição da média amostral, devidamente padronizada, se comporta segundo um modelo Normal com média 0 e variância 1.
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Cálculo da variável Z}
-A fórmula para a z para uma média amostral é muito semelhante à fórmula para a z para uma distribuição normal. 
-\[
-Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}}
-\] 
-Interpretação:
 \begin{itemize}
-\item z for "próximo" de zero, média amostral (\(\bar{X}\)) é "próximo" da média da população (\(\mu\)); 
-\item uma valor z "próximo" de 3 significa que o desvio observado (numerador) é três vezes maior que o desvio esperado pelo erro amostral (denominador);
-\item valores de z grandes geralmente indicam que algo diferente da variabilidade do erro amostral fez com que a média amostral (\(\bar{X}\)) ficasse muito longe do média populacional.
+\item
+  Para uma VA \(X\) com densidade \(f(x)\), a variância é dada por
+  \[Var(X) = \sigma^2 = \int_{-\infty}^{\infty} (x - \mu)^2 \, f(x) dx.\]
+\item
+  Expressão alternativa \[Var(X) = \sigma^2 = E(X^2) - E(X)^2.\] onde
+  \[E(X^2) = \int_{-\infty}^{\infty} x^2 \, f(x) dx.\]
 \end{itemize}
+\end{frame}
 
-%\begin{center}\includegraphics[width=0.8\linewidth]{../figures/tabela_Z_01} \end{center}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.4}
+
+Dada a variável \textit{C}, com a seguinte densidade
+
+\[
+f(c)=
+\begin{cases}
+\frac{1}{40}(\frac{c}{10}+1), & \text{se } -1 \leq c \leq 1 \\
+0,              & \text{caso contrário}
+\end{cases}
+\]
+
+Calcule \(E(C)\) e \(Var(C)\).
+\vspace{1in}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.4}
+\end{frame}
+
+
+\section{Principais modelos contínuos}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Uniforme contínuo}
+
+\textbf{Definição:} uma VA \(X\) tem distribuição Uniforme contínua no
+intervalo \([a,b]\), \(a < b\), se sua função densidade de probabilidade
+é dada por \[
+f(x) =
+  \begin{cases}
+  \frac{1}{b-a} & \quad \text{se } a \leq x \leq b \\
+   0  & \quad \text{caso contrário}
+  \end{cases}
+\]
+
+\textbf{Notação:} \(X \sim U[a,b]\)
+
+\textbf{Esperança e variância:} \(E(X) = \frac{a+b}{2}\) e
+\(Var(X) = \frac{(b-a)^2}{12}\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Uniforme contínuo}
+
+\begin{center}\includegraphics[width=0.99\linewidth]{figs/unnamed-chunk_3_1} \end{center}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.5}
+
+Com o objetivo de verificar a resistência à pressão de água, os técnicos
+de qualidade de uma empresa inspecionam os tubos de PVC produzidos.
+
+Os tudos inspecionados têm 6 metros de comprimento e são submetidos a
+grandes pressões até o aparecimento do primeiro vazamento, cuja
+distância a uma das extremidades (fixada à priori) é anotada para fins
+de análise.
+
+Escolhe-se um tubo ao acaso para ser inspecionado. Queremos calcular a
+probabilidade de que o vazamento esteja, a no máximo 1 metro das
+extremidades.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.5}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Exponencial}
+
+\textbf{Definição:} uma VA contínua \(X\) assumindo valores não
+negativos, segue o modelo exponencial com parâmetro \(\alpha > 0\) se
+sua densidade é dada por \[
+f(x) =
+  \begin{cases}
+  \alpha e^{-\alpha x} & \quad \text{se } x \geq 0 \\
+   0  & \quad \text{caso contrário}
+  \end{cases}
+\]
+
+\textbf{Notação:} \(X \sim \text{Exp}(\alpha)\)
+
+\textbf{Esperança e variância:} \(E(X) = \mu = \frac{1}{\alpha}\) e
+\(Var(X) = \frac{1}{\alpha^2}\).
+
+\begin{block}{Propriedade da distribuição Exponencial}
+
+\(P(a < X < b) = \int_{a}^{b} \alpha e^{-\alpha x} \, dx = e^{-\alpha a} - e^{-\alpha b}.\)
+\end{block}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Exponencial}
+
+\begin{center}\includegraphics[width=0.99\linewidth]{figs/unnamed-chunk_4_1} \end{center}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.6}
+
+Uma indústria fabrica lâmpadas especiais que ficam em operação
+continuamente.
+
+A empresa oferece a seus clientes a garantia de reposição, caso a
+lâmpada dure menos de 50 horas. A vida útil dessas lâmpadas é modelada
+através da distribuição Exponencial com parâmetro \(1/8000\).
+
+\begin{itemize}
+\item
+  Qual é a duração média das lâmpadas?
+\item
+  Determine a proporção de troca por defeito de fabricação.
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.6}
+
+Seja \(X \sim \text{Exp}(1/8000)\).
+
+\begin{itemize}
+\item
+  Duração média das lâmpadas:
+  \(E(X) = \frac{1}{\alpha} = \frac{1}{1/8000} = 8000\) horas.
+\item
+  Proporção de troca por defeito: \begin{align*}
+  P(X<50) &= \int_{0}^{50} \alpha e^{-\alpha x} \, dx  & \\
+  &= \int_{0}^{50} \frac{1}{8000} e^{-\frac{1}{8000} x} \, dx &  \\
+  &= e^{-\frac{1}{8000} 0} - e^{-\frac{1}{8000} 50} &
+  \text{(usando a propriedade)}\\
+  &= 1 - 0.994 & \\
+  &= 0.006 &
+  \end{align*}
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Normal}
+
+\textbf{Definição:} Dizemos que uma VA \(X\) segue o modelo normal se
+sua fdp é a seguinte \[
+f(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left[-\frac{1}{2} \left( \frac{x -
+\mu}{\sigma}\right)^2\right], \quad -\infty < x < \infty
+\] onde \(\mu \in \mathbb{R}\) é a média da população,
+\(\sigma \in \mathbb{R}^+\) é o desvio-padrão populacional.
+
+\textbf{Notação:} \(X \sim \text{N}(\mu, \sigma^2)\)
+
+\textbf{Esperança e variância:} \(E(X) = \mu\) e \(Var(X) = \sigma^2\)
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Normal}
+
+\begin{center}\includegraphics[width=0.99\linewidth]{figs/unnamed-chunk_5_1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Normal}
+
+Característcas da curva normal:
+
+\begin{itemize}
+\item
+  É \textbf{simétrica} em relação à \(\mu\)
+\item
+  O ponto máximo (moda) de \(f(x)\) é o ponto \(x=\mu\)
+\item
+  Os pontos de inflexão da função são \(\mu-\sigma\) e \(\mu+\sigma\)
+\item
+  A área total sob a curva é 1 ou 100\%
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Normal}
+
+Para qualquer VA normal \(X\), valem as seguintes relações:
+\begin{align*}
+&P[X > \mu] = P[X < \mu] \\
+&P[\mu - \sigma < X < \mu + \sigma] \approxeq 0,683 \\
+&P[\mu - 2\sigma < X < \mu + 2\sigma] \approxeq 0,954 \\
+&P[\mu - 3\sigma < X < \mu + 3\sigma] \approxeq 0,997
+\end{align*} Portanto, \(6\sigma\) é frequentemente referida como a
+\textbf{largura} de uma distribuição normal.
+
+Métodos mais avançados de integração podem ser utilizados para mostrar
+que a área sob a função densidade de probabilidade normal de
+\(-\infty < x < \infty\) é igual a 1.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Regra empírica para uma distribuição normal}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{figs/empnorm-1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Normal}
+
+Para obter uma probabilidade do modelo normal, devemos calcular a área
+entre os pontos \(a\) e \(b\), ou seja, \[
+P[a < X < b] = \int_a^b \frac{1}{\sqrt{2\pi}\sigma} \exp\left[-\frac{1}{2}
+\left( \frac{x - \mu}{\sigma}\right)^2\right] dx
+\] No entanto, essa função não possui forma fechada, e o cálculo de
+probabilidades pode ser feito apenas por aproximações numéricas.
+
+Para contornar esse problema, os valores de probabilidade são obtidos
+para uma distribuição normal padrão (\(Z\)) com \(\mu = 0\) e
+\(\sigma^2 = 1\), \[
+Z = \frac{X - \mu}{\sigma} \sim \text{N}(0,1)
+\] A vantagem é que podemos fazer uma única tabela com as integrais
+aproximadas de \(Z\), ao invés de uma tabela para cada par
+\((\mu,\sigma^2)\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Normal}
+
+Se \(Z \sim \text{N}(0,1)\), então sua fdp é \[
+f(z) = \frac{1}{\sqrt{2\pi}} \exp\left[-\frac{1}{2} (z)^2 \right]
+\] Para se obter a probabilidade de \(Z\) estar entre \(a\) e \(b\), \[
+P[a < Z < b] = \int_a^b \frac{1}{\sqrt{2\pi}} \exp\left[-\frac{1}{2}
+(z)^2 \right] dz
+\] As integrais (áreas) para valores de \(Z\) entre 0,00 e 3,99 estão na
+tabela. Portanto, para qualquer valor de \(X\) entre \(a\) e \(b\),
+podemos calcular a probabilidade correspondente através da
+transformação, \[
+P[a < X < b] = P\left[\frac{a - \mu}{\sigma} < Z < \frac{b
+- \mu}{\sigma}\right]
+\]
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Modelo Normal}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figs/unnamed-chunk_6_1} \end{center}
 \end{frame}
 
 \begin{frame}
@@ -443,11 +642,34 @@ Interpretação:
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.14}
-Suponha que a aceitação de um lote de 1000 peças ocorra apenas, se o comprimento médio de 10 peças, retiradas aleatoriamente do lote, estiver entre 5 e 10 \(cm\). Sabe-se que o comprimento das peças é uma variável aleatória com distribuição Normal de média 7.5 e variância 20 \(cm^2\). Qual é a probabilidade de aceitação de um dado lote?
-\vspace{1in}
-\vspace{1in}
+\frametitle{Exemplo 6.8}
 
+Doentes sofrendo de certa moléstia são submetidos a um tratamento
+intensivo cujo tempo de cura foi modelado por uma densidade Normal de
+média \(15\) e desvio padrão \(2\) (em dias).
+
+\begin{itemize}
+\item
+  Calcule a proporção de pacientes que demorarão mais de \(17\) dias
+  para se recuperar.
+\item
+  Calcule a probabilidade um paciente selecionado ao acaso demorar menos
+  de \(20\) dias para se recuperar.
+\item
+  Qual o tempo máximo necessário para a recuperação de 25\% dos
+  pacientes?
+
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.8}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.8}
 \end{frame}
 
 \begin{frame}
@@ -459,47 +681,137 @@ Suponha que a aceitação de um lote de 1000 peças ocorra apenas, se o comprime
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.15}
-Uma variável aleatória X assume valores 3, 6 e 8 com, respectivamente, probabilidades 0.4; 0.3 e 0.3. Uma amostra com 40 observações é sorteada. A variável X não tem distribuição Normal e obtemos \(\mu=5.4\) e \(\sigma^2=4.44\). Calcule a probabilidade da média amostral superar o valor 5.
-\vspace{1in}
-\vspace{1in}
+\frametitle{Normal como aproximação da binomial}
 
+\begin{itemize}
+\item
+  A distribuição Normal é uma das mais importantes na Estatística:
+
+  \begin{itemize}
+  \item
+    Muitos fenômenos aleatórios se comportam próximos à essa
+    distribuição
+  \item
+    Pode ser usada como aproximação para outras distribuições
+  \end{itemize}
+\end{itemize}
+
+Se \(X \sim \text{Bin}(n,p)\) então \(E(X) = np\) e
+\(Var(X) = np(1-p)\).
+
+Podemos aproximar a binomial pela normal, usando \[
+Y \sim \text{N}(\mu = np, \sigma^2 = np(1-p)),
+\] em geral, quando \(np \geq 5\) e \(np(1-p) \geq 5\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.11}
+
+Estudo do Sindicato dos Bancários indica que cerca de \(30\%\) dos
+funcionários de banco têm problemas de estresse, provenientes das
+condições de trabalho. Numa amostra de \(200\) bancários, qual seria a
+probabilidade de pelo menos \(50\) com essa doença?
+
+Temos então \(X \sim \text{Bin}(200, 0.3)\), e a probabilidade seria \[
+P(X \geq 50) = \sum_{k=50}^{200} \binom{200}{k} 0.3^k 0.7^{200-k}
+\] que é difícil de calcular sem computador.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.11}
+
+Mas \(E(X) = np = 60\) e \(Var(X) = np(1-p) = 42\). Assim, temos
+\(Y \sim \text{N}(60, 42)\), de modo que \begin{align*}
+P(X \geq 50) \approx P(Y \geq 50-0.5) &= P\left(\frac{Y-60}{\sqrt{42}} \geq
+\frac{49.5-60}{\sqrt{42}}\right) \\
+ &= P(Z \geq -1.62) = 0.9474
+\end{align*}
+
+\begin{itemize}
+\item
+  \textbf{Obs.:} o valor \(-0.5\) é o fator de correção de continuidade.
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exemplo 6.11}
+
+Aproximação de \(X \sim \text{Bin}(200, 0.3)\) com
+\(Y \sim \text{N}(60, 42)\).
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figs/unnamed-chunk_8_1} \end{center}
 \end{frame}
 
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.16}
-Em uma certa cidade, a duração de conversas telefônicas em minutos, originárias de telefones públicos, segue um modelo Exponencial com parâmetro 1/3. Observando-se uma amostra aleatória de 50 dessas chamadas, qual será a probabilidade de elas, em média, não ultrapassarem 4 minutos? A variável X não tem distribuição Normal e obtemos \(\mu=3\) e \(\sigma^2=9\).
-\begin{enumerate}[A)]
-\item 0.4168
-\item 0.0228
-\item 0.7454
-\item 0.9909
-\item 0.9004
-\end{enumerate}
+\frametitle{Combinação linear de Normais independentes}
 
+Se \(X_1, X_2, \ldots, X_n\) fomam uma sequência de variáveis aleatórias
+independentes, onde \(X_i \sim \text{N}(\mu_i, \sigma^2_i)\), e
+\(a_1, a_2, \ldots, a_n\) são constantes quaisquer, então: \[
+W = \sum_{i=1}^n a_i X_i \quad \text{terá distribuição Normal com} \quad
+W \sim \text{N}(\mu_W, \sigma^2_W)
+\] onde: \[
+\mu_W = E(\sum_{i=1}^n a_i X_i) = \sum_{i=1}^n E(a_i X_i) = \sum_{i=1}^n
+a_i E(X_i) = \sum_{i=1}^n a_i \mu_i
+\] \[
+\sigma^2_W = Var(\sum_{i=1}^n a_i X_i) = \sum_{i=1}^n Var(a_i X_i) =
+\sum_{i=1}^n a_i^2 Var(X_i) = \sum_{i=1}^n a_i^2 \sigma^2_i
+\]
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 7.11.7}
-Em um grande município, o IMC dos indivíduos adultos da população tem uma média \(\mu=25.2kg/m^2\) e \(\sigma=4.5kg/m^2\). Considerando uma amostra de 10 pessoas, qual a probabilidade de obter uma média menor que um IMC 24\(kg/m^2\)?
-\begin{enumerate}[A)]
-\item 0.2005
-\item 0.0228
-\item 0.7454
-\item 0.9972
-\item 0.9544
-\end{enumerate}
+\frametitle{Exemplo 6.13}
 
+Uma corretora negocia títulos na Bolsa de Valores e utiliza um modelo
+probabilístico para avaliar seus lucros. Suas aplicações financeiras de
+compra e venda atingem três áreas: agricultura, indústria e comércio.
+Admita que o seguinte modelo representa o comportamento do lucro diário
+da corretora (em milhares): \[
+L = 2 L_A + 5 L_I + 3 L_C
+\] onde \(L_A\), \(L_I\) e \(L_C\) representam, os lucros diários nos
+setores de agricultura, indústria e comércio.
+
+As distribuições de probabilidades dessas variáveis aleatórias são
+\(L_A \sim N(3,4)\), \(L_I \sim N(6,9)\) e \(L_C \sim N(4,16)\). Supondo
+independência entre os três setores, qual será a probabilidade de um
+lucro diário acima de 50 mil.
 \end{frame}
-
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Referências bibliográficas}
-\printbibliography
+\frametitle{Exemplo 6.13}
+
+\(L \sim \text{N}(\mu_L, \sigma^2_L)\), onde: \begin{align*}
+\mu_L &= \sum_{i=1}^3 a_i \mu_i = 2 \times 3 + 5 \times 6 +
+  3 \times 4 = 48 \\
+\sigma^2_L &= \sum_{i=1}^3 a_i^2 \sigma^2_i = 2^2 \times 4 +
+  5^2 \times 9 + 3^2 \times 16 = 385
+\end{align*}
+
+Portanto, \(L \sim \text{N}(48, 385)\), e assim, \begin{align*}
+P(L > 50) &= P\left( Z > \frac{50-48}{\sqrt{385}}\right) \\
+  &= P(Z > 0.10) \\
+  &= 0.4602 \\
+\end{align*}
 \end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Exercícios}
+
+\begin{itemize}
+\item
+  Seção \(6.1\) - \(1,2,3,4\) e \(5\).
+\item
+  Seção \(6.2\) - \(1\) a \(9\).
+\end{itemize}
+\end{frame}
+
 
 \end{document}

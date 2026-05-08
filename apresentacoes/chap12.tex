@@ -25,7 +25,7 @@ citestyle=authoryear
 }
 \addbibresource{stats.bib}
 \title[Bioestatística II] %optional
-{ANOVA de um fator para amostras independentes}
+{Teste t de amostras independentes}
 
 \subtitle{CGF2046 - Bioestatística II}
 
@@ -71,135 +71,98 @@ citestyle=authoryear
   \\~\\
   \begin{itemize}
   \uncover<1->{\item
-    Identificar quando usar uma ANOVA de amostras independentes;}
+    Explicar quando usar um teste t de amostras independentes;}
   \uncover<2->{\item
-    Explicar a lógica da razão F para ANOVA;}
+    Explicar a lógica do teste t de amostras independentes;}
    \uncover<3->{\item
-    Explicar como o erro de medição, as diferenças individuais e os efeitos do tratamento influenciam o numerador e o denominador da razão F;}
+    Escrever hipóteses nulas e de pesquisa usando símbolos e palavras para testes unicaudais e bicaudais;}
    \uncover<4->{\item
-    Escrever hipóteses nulas e de pesquisa usando símbolos e palavras;}
+    Calcular graus de liberdade e definir uma região crítica para testes unicaudais e bicaudais;}
    \uncover<5->{\item
-    Preencha uma tabela de resumo da ANOVA calculando os graus de liberdade, SQs, QMs e razão F;}
+    Calcular amostras independentes t usando \textit{software};}
    \uncover<7->{\item
-    Defina uma região crítica e determine se você deve rejeitar ou não rejeitar a hipótese nula;}
+    Calcular e interpretar um tamanho de efeito (d);}
    \uncover<8->{\item
-    Calcular tamanhos de efeito e descrevê-los;}
-   \uncover<9->{\item
-    Explicar quando e por que os testes \textit{post hoc} são necessários;}
-   \uncover<10->{\item
-    Resumir os resultados de uma ANOVA de amostras independentes;}                           
+    Resumir os resultados da análise.}            
   \end{itemize}
 \end{frame}
 
+\section{Introdução ao teste t}
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Objetivos de Aprendizado\footcite{carlson2017introduction}}
-  Depois de assitir essa aula e fazer as atividades complementares, você será capaz de:
-  \\~\\
-  \begin{itemize}
-   \uncover<1->{\item
-    Usar \textit{software} para calcular uma ANOVA de amostras independentes, incluindo testes \textit{post hoc};}
-   \uncover<2->{\item
-    Interpretar a saída do \textit{software} para uma ANOVA de amostras independente.}                            
-  \end{itemize}
-\end{frame}
+\frametitle{Amostras Independentes}
+Até agora, você aprendeu a usar dois testes t diferentes: 
 
-\section{ANOVA de amostras independentes}
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{ANOVA}
-O teste t de amostras independentes e o teste t de amostras relacionadas comparam duas médias amostrais para determinar se seu desvio é maior do que seria esperado pelo erro amostral. \\~\\
-
-Uma ANOVA é substancialmente mais flexível, pois pode \textbf{comparar duas ou mais médias} amostrais ao mesmo tempo para determinar se o desvio entre qualquer par de médias amostrais é maior do que seria esperado pelo erro amostral.
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Lógica da ANOVA}
-Todos os testes de significância que você aprendeu até agora  compartilham uma lógica comum. \\~\\ 
-
-A ANOVA analisa a variância das observação entre e dentro das condições da VI, numa tentativa de determinar se as diferentes condições de tratamento afetam os valores de forma diferente. Para compreender essa lógica, devemos entender as três fontes que afetam a variância das observações:
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Lógica da ANOVA}
-A ANOVA analisa a variância das observação entre e dentro das condições da VI, numa tentativa de determinar se as diferentes condições de tratamento afetam os valores de forma diferente. Para compreender essa lógica, devemos entender as três fontes que afetam a variância das observações:
-
-\begin{enumerate}
-\item \textbf{Erro de medição}: Sempre haverá variação nas observações entre as unidades amostrais porque as variáveis não podem ser medidas perfeitamente.
-\item \textbf{Diferenças individuais}: Sempre haverá variação nas observações entre as unidades amostrais porque as unidades são naturalmente diferentes entre si.
-\item \textbf{Efeito do tratamento}: Pode haver variação nas observações entre os grupos porque estes experimentaram diferentes condições (VI) ou tratamentos.
-\end{enumerate}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Lógica da ANOVA}
-As duas primeiras fontes de variância nas observações, erro de medição e diferenças individuais, estarão sempre presentes. Essas duas fontes de variação são frequentemente chamadas coletivamente de variação de erro porque ambos são componentes do erro amostral.\\~\\
-
-Os pesquisadores usam a ANOVA para estimar a quantidade de variação das observações criada pelas diferentes condições de tratamento (VI).
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Lógica da ANOVA}
-Duas representações da fórmula conceitual para uma ANOVA independente são mostradas a seguir:
- 
-\[F = \frac{Variabilidade\quad entre\quad condicoes\quad de\quad tratamento}{Variabilidade\quad dentro\quad das\quad condicoes\quad de\quad tratamento}\]
- 
-\[F = \frac{Efeito\quad do\quad tratamento\quad \&\quad diferencas\quad individuais\quad \&\quad erro\quad de\quad medicao}{Diferencas\quad individuais\quad \&\quad Erro\quad de\quad medicao}\]
-
-O numerador da razão F é a variabilidade nas observações que existe entre os diferentes grupos de tratamento (ou seja, condições da VI), que é chamada de variabilidade entre grupos ou variabilidade entre tratamentos.
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Lógica da ANOVA}
-Por exemplo, se uma condição tivesse valores observados altos e outra condição tivesse valores observados baixos, haveria muita variabilidade entre grupos. No entanto, se todas as condições tivessem valores semelhantes, haveria pouca variabilidade entre grupos. \\~\\
-No entanto, alguma da variabilidade entre grupos é sempre causada por diferenças individuais e erros de medição. Assim, o denominador da razão F, consiste em efeitos de diferenças individuais e erro de medição.
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Lógica da ANOVA}
-Imagine uma situação em qual o efeito do tratamento cria variância zero (ou seja, o tratamento não funciona). 
-
-\[F = \frac{0\quad \&\quad diferencas\quad individuais\quad \&\quad erro}{Diferencas\quad individuais\quad \&\quad erro}\]
-
-Portanto, 
 \begin{itemize}
-\item Se o tratamento não criar variabilidade nas observações, espera-se que a ANOVA produza um valor estatístico F próximo de 1;
-\item Por outro lado, se os diferentes tratamentos criarem muita variabilidade nas pontuações, espera-se que o valor F seja substancialmente maior que 1;
-\item Um valor ANOVA F não pode ser negativo porque é a razão de duas variâncias, e as variâncias devem ser positivas. 
+\item \textit{t de amostra única}: usa-se sempre que quiser comparar uma média amostral com uma média populacional;
+\item \textit{teste t de amostras relacionadas}: usa-se ao comparar as médias amostrais dos mesmos indivíduos medidos em dois momentos diferentes ou de pares de pessoas pareadas medidas sob condições diferentes.
 \end{itemize}
-  
+Quando você precisar comparar duas médias amostrais que não estão relacionadas, você deve usar um terceiro teste t: \textit{um teste t de amostras independentes}.
+
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Um exemplo de problema para ANOVA}
-
-\textbf{Exemplo:} Suponha que você queira comparar a terapia cognitivo-comportamental (TCC) e a terapia psicodinâmica (TPD) como tratamentos para a depressão, um terceiro grupo funciona como grupo controle e não recebe tratamento (NT). Você identifica uma amostra de pessoas com depressão grave e as divide aleatoriamente em três grupos diferentes. Os valores de depressão encontrados para cada grupo estão listados na Tabela 11.1. 
-
-\begin{center}
-\begin{tabular}{ ccc } 
- \hline
-TCC & TPD & NT\\
-\hline
- 5 & 16 & 14\\
- 9 & 17 & 19\\
- 11 & 18 & 16\\
- 6 & 13 & 9\\
- 2 & 10 & 15\\
- 15 & 19 & 25\\
- $\bar{x}_1 = 8.00$ & $\bar{x}_2 = 15.50$ & $\bar{x}_3 = 16.333$\\
- $DP_1 = 4.65$ & $DP_2 = 3.39$ & $DP_3 = 5.35$\\
- \hline
-\end{tabular}
-\end{center}
+\frametitle{Amostras Independentes}
+Por exemplo, suponha que você esteja interessado no efeito de um medicamento na perda de peso. Poderíamos pensae em três cenários:
+\begin{itemize}
+\item \textit{t de amostra única}: administrá-lo a uma amostra de pessoas e, depois de tomarem o medicamento por 1 mês, comparar a média de quilos perdidos pela amostra com zero quilos;
+\item \textit{t de amostras relacionado}: medir o peso médio da amostra antes de tomar o medicamento e novamente um mês depois de tomar o medicamento;
+\item \textit{teste t de amostras independentes}: administrar o medicamento a uma amostra de pessoas e um placebo a outra amostra.
+\end{itemize}
 \end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Fórmula conceitural para t de amostras independentes}
+O teste t de amostras independentes é a razão entre a diferença média observada e a diferença esperada devido ao erro de amostragem:\\~\\
+
+t = Diferença média das amostras - Diferença média esperada das populações se H0 for verdadeira/Diferença média esperada devido ao erro de amostragem\\~\\
+
+O numerador é simplesmente a diferença entre as duas médias amostrais. O termo no denominador representa a quantidade de erro amostral esperado.
+
+\[t = \frac{\bar{x}_1-\bar{x}_2}{SEM_i}\]
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Teste t de Amostras Independentes bicaudal}
+
+\textbf{Exemplo:} Um pesquisador quer testar como os rótulos verbais influenciam a memória das imagens dos participantes. 
+ 
+\begin{itemize}
+\item Mostrar a todos os participantes uma série de 25 desenhos de linhas simples, e pedir-lhes que lembrem dos desenhos 10 minutos depois;
+\item Metade dos participantes viu apenas os desenhos, enquanto a outra metade também viu uma descrição verbal de cada desenho semelhante;
+\item Comparar a memória daqueles que viram os desenhos e as descrições verbais (isto é, o grupo experimental) com a memória daqueles que apenas viram os desenhos (isto é, o grupo de controle).
+\end{itemize}
+
+Optamos por um teste bilateral. Também escolhemos um \(\alpha=0.05\).
+
+Grupo 1: Grupo com descrições verbais:
+21, 22, 20, 20, 18, 20
+
+Grupo 2: Grupo sem descrições verbais:
+19, 20, 19, 18, 16, 20
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Rótulos verbais influenciam a memória das imagens?}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{figs/fig10.1} \end{center}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Teste t de Amostras Independentes}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{figs/fig10.2} \end{center}
+
+\end{frame}
+
 
 \setbeamercovered{transparent}
 \begin{frame}
@@ -224,10 +187,211 @@ Os quatro pressupostos básicos são:
 Os quatro pressupostos básicos são:
 
 \begin{enumerate}
-\item \textbf{independência dos dados:} os valores de depressão dos indivíduos devem ser medidos sem que a medição de um participante influencie o de outro;
-\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) identifica como os três tratamentos terapêuticos são diferentes, variável dependente (VD) \(\Rightarrow\) pontuação de depressão, é medida como uma variável quantitativa;
-\item \textbf{normalidade das distribuições:}  para fins didáticos as distribuições tendem a ter formato normal e, portanto, essa suposição provavelmente é atendida;
-\item \textbf{homogeneidade da variância:} utilizamos a regra geral de se nenhuma de suas condições tenha um desvio padrão o dobro de outra.
+\item \textbf{independência dos dados:} Os dados dentro de cada condição são independentes;
+\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) identifica presença ou ausência de descrições verbais, variável dependente (VD) \(\Rightarrow\) número de desenhos de linhas lembrados corretamente, é medido em como uma variável quantitativa;
+\item \textbf{normalidade das distribuições:} as distribuições das pontuações de memória tendem a ter formato normal e, portanto, essa suposição provavelmente é atendida;
+\item \textbf{homogeneidade da variância:} utilizamos a regra geral de que se o desvio padrão numa condição for o dobro do de outra condição, esta suposição pode ser violada.
+\end{enumerate}
+
+Existem duas maneiras de calcular o erro de amostragem para um teste t de amostras independentes. Uma forma pressupõe homogeneidade de variância e a outra não. É possível utilizar testes, como o teste de Levene para determinar a homogeneidade das variância.
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 2: expor as hipóteses nulas e de pesquisa simbolicamente e verbalmente}
+
+O teste t de amostras independentes determina se a diferença das média é significativamente diferente de 0.
+
+\begin{center}
+\begin{tabular}{ m{2cm}|m{3cm}|m{2cm}|m{3cm} } 
+ \hline
+ Tipo de Hipótese & Simbólico & Vebal & Diferença entre médias amostral e populacional\\
+  \hline
+ Hipótese nula & $H_0:\mu_1=\mu_2;$ ou & Diferença da médias $\approx$ 0 & Erro amostral \\
+ & $H_0:\mu_1-\mu_2=0;$ & &\\
+ Hipótese de pesquisa & $H_a:\mu_1 \neq \mu_2$ ou & Diferenças médias $\neq$ 0 & Descrição verbal afeta memória  \\ 
+  & $H_a:\mu_1-\mu_2\neq0;$ & &\\
+ \hline
+ \hline
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas}
+A fórmula do gl para teste t de amostras independente é $gl = (n_1 - 1) + (n_2 - 1)$, onde $n_1$ e $n_2$ representam os tamanhos amostrais das duas amostras, espectivamente.
+
+Neste caso, o gl é o seguinte:
+
+\[gl = (n_1-1) + (n_2-1) = (6-1) + (6-1) = 10\]
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   Excerto da tabela t bilateral\\~\\
+
+\begin{center}
+\begin{tabular}{ccc} 
+ \hline
+gl & $\alpha = .05$ & $\alpha = .01$\\
+9 &	2.262200 &	3.249800\\
+\boxit{1.7in} 10 &	2.228100 &	3.169300\\
+11 &	2.201000 &	3.105800\\
+ \hline
+\end{tabular}
+\end{center}   
+   
+   
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+   \begin{itemize}
+   \item O valor de corte de \(\alpha= .05\) define a região crítica, os valores t são improváveis se o valor nulo for verdadeiro.
+   \end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
+\textit{4a. Calcule o desvio entre as duas médias amostrais}\\~\\
+
+Existem dois termos no numerador da estatística t. A primeira $(\bar{x}_1 - \bar{x}_2)$ é a diferença entre as duas médias amostrais. O segundo $(\mu_1 - \mu_2)$ é a diferença entre as duas populações, assumindo que a hipótese nula é verdadeira. Assim, o numerador é simplesmente a diferença observada entre as duas médias amostrais:
+
+\[(\bar{x}_1 - \bar{x}_2) = ( 20.17 - 18.67) = 1.50\]
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
+4b. Calcule o erro de amostragem esperado
+\[SQ_1 = \frac{1}{N-1}\sum_{i=1}^n(x_{1i} - \bar{x}_1)^2 = 1.767\]
+\[DP_1 = \sqrt{1.767} = 1.329\]
+\[SQ_2 = \frac{1}{N-1}\sum_{i=1}^n(x_{2i} - \bar{x}_2)^2 = 2.267\]
+\[DP_2 = \sqrt{2.267} = 1.506\]
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
+4b. Calcule o erro de amostragem esperado\\~\\
+Quando apropriado, agrupar as variações tornará seu teste de significância mais preciso. A fórmula para a variância agrupada é a seguinte:
+
+\[SQ_p = \frac{(n_1-1)SQ_1+(n_2-1)SQ_2}{(n_1-1)+(n_2-1)} = \frac{(6-1)1.767+(6-1)2.267}{(6-1)+(6-1)}=2.02\]
+O método de cálculo do erro amostral que assume a homogeneidade da variância utiliza a variância agrupada para determinar o erro padrão estimado da diferença média ($SEM_i$)
+
+\[SEM_i = \sqrt{\frac{SQ_p}{n_1}+\frac{SQ_p}{n_2}} = \sqrt{\frac{2.02}{6}+\frac{2.02}{6}} = 0.82\]
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
+
+\textit{4c. Calcule a estatística do teste (teste t independente)}\\~\\
+
+O teste t de amostras independente é a razão entre o desvio observado entre as duas médias amostrais dividido pelo erro padrão estimado da diferença média:
+
+\[t = \frac{\bar{x}_1-\bar{x}_2}{SEM_i} =  \frac{20.17 - 18.67}{0.82} = 1.83\]
+
+O valor t obtido não é suficientemente grande para rejeitar a hipótese nula e, portanto, você não rejeita a hipótese nula.
+%\begin{center}\includegraphics[width=0.55\linewidth]{figs/regiao_critica_observada_t_rel} \end{center}
+
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
+A fórmula para calcular o tamanho do efeito de um teste t independente é semelhante à de um teste t de amostra única. No entanto, ao calcular d, o denominador é a variância combinada. 
+\begin{align*}
+d = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{SQ_p}} = \frac{20.17-18.67}{\sqrt{2.02}} = 1.06
+\end{align*}
+Quando a hipótese nula não é rejeitada e ainda assim houve um tamanho de efeito médio ou grande, o tamanho da amostra utilizado no estudo pode ter sido pequeno para que o teste estatístico ou o tamanho do efeito sejam confiáveis. Ao interpretar os resultados de qualquer estudo, também é importante considerar os resultados de outros estudos semelhantes.
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
+A melhor maneira de interpretar qualquer tamanho de efeito é compará-lo com os tamanhos de efeito produzidos por estudos semelhantes na literatura de pesquisa. Se você não conseguir encontrar estudos semelhantes na literatura para fornecer uma referência, poderá usar as diretrizes gerais sugeridas por Cohen (1992) para interpretar os tamanhos dos efeitos na Tabela 6.2.
+
+\begin{center}
+\begin{tabular}{cc} 
+ \hline
+d  & Tamanho estimado do efeito\\
+ \hline
+Perto de 0.2 & Pequeno \\
+Perto de 0.5 & Médio \\
+Perto de 0.8 & Grande \\
+ \hline
+\end{tabular}
+\end{center}   
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 6: Interpretando os Resultados do Teste de Hipóteses}
+
+O parágrafo a seguir resume os resultados desses testes:\\~\\
+Não houve diferença significativa entre as pontuações de memória daqueles que obtiveram as descrições verbais $(\bar{x}_1 = 20.17, DP_1 = 1.33)$ e daqueles que não obtiveram $(\bar{x}_2 = 18.67, DP_2 = 1.51)$, $t_{(10)} = 1.83$, $p > 0.05$, d = 1.06. No entanto, é importante notar que os tamanhos amostrais eram pequenos, portanto este estudo deve ser repetido com tamanhos amostrais maiores antes de serem tiradas conclusões.
+\end{frame}
+
+\begin{frame}
+\frametitle{Exemplo de teste t de amostras independentes (unicaudal)}
+\textbf{Exemplo:} Os "aprendizes visuais" têm melhor memória para informações visuais do que os "aprendizes verbais"?
+\begin{itemize}
+\item Vinte e nove "aprendizes verbais" e 31 "aprendizes visuais" voluntariaram-se para participar num estudo que investigou esta questão; 
+\item Todos os alunos foram apresentados a desenhos de linhas simples e, em seguida, foram solicitados a recriar tantos desenhos de linhas quanto conseguissem lembrar;
+\item Você usa corretamente um teste t independente unilateral com um nível \(\alpha=0.05\) para determinar se "aprendizes visuais" se lembram mais dos desenhos de linha do que "aprendizes verbais".
+\end{itemize}
+Grupo 1: Grupo de Aprendizes Verbais:\(\bar{x}_1 = 15.00; DP_1 = 1.41, n_1 = 29\)
+\\~\\
+Grupo 2: Grupo de Aprendiz Visual:\(\bar{x}_2 = 15.25; DP_2 = 1.67, n_2 = 31\)
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Teste t de Amostras Independentes}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{figs/fig10.3} \end{center}
+
+\end{frame}
+
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 1: examinar as pressuposições estatísticas}
+
+Todos os testes de hipóteses são baseados em suposições específicas e, se essas suposições forem violadas, esses testes podem produzir resultados enganosos.\\~\\
+Os quatro pressupostos básicos são:
+
+\begin{enumerate}
+\item independência dos dados;
+\item medição apropriada das variáveis para análise;
+\item normalidade das distribuições;
+\item homogeneidade da variância.
+\end{enumerate}
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 1: examinar as pressuposições estatísticas}
+
+Os quatro pressupostos básicos são:
+
+\begin{enumerate}
+\item \textbf{independência dos dados:} Os dados dentro de cada condição são independentes;
+\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) aprendizes verbais ou visuais, variável dependente (VD) \(\Rightarrow\) número de desenhos de lembrados corretamente, é medido em como uma variável quantitativa;
+\item \textbf{normalidade das distribuições:} as distribuições das pontuações de memória tendem a ter formato normal e, portanto, essa suposição provavelmente é atendida;
+\item \textbf{homogeneidade da variância:} utilizamos a regra geral de que se o desvio padrão numa condição for o dobro do de outra condição, esta suposição pode ser violada.
 \end{enumerate}
 
 \end{frame}
@@ -243,8 +407,10 @@ O teste t de amostras independentes determina se a diferença das média é sign
  \hline
  Tipo de Hipótese & Simbólico & Vebal & Diferença entre médias amostral e populacional\\
   \hline
- Hipótese nula & $H_0:\mu_1=\mu_2=...=\mu_K;$ & Médias $\approx$ para todas populações & Erro amostral \\
- Hipótese de pesquisa & $H_a:\mu_i \neq \mu_j.$ & Médias $\neq$ para pelo menos um par & Um ou mais tratamentos têm efeito  \\ 
+ Hipótese nula & $H_0:\mu_1=\mu_2;$ ou & Diferença da médias $\approx$ 0 & Erro amostral \\
+ & $H_0:\mu_1-\mu_2=0;$ & &\\
+ Hipótese de pesquisa & $H_a:\mu_1 < \mu_2$ ou & Diferenças médias $<$ 0 & Aprendizes visuais lembram mais  \\ 
+  & $H_a:\mu_1-\mu_2 < 0;$ & &\\
  \hline
  \hline
 \end{tabular}
@@ -253,25 +419,21 @@ O teste t de amostras independentes determina se a diferença das média é sign
 \end{frame}
 
 \begin{frame}
-\frametitle{Etapa 3: Definir o valor crítico de F}
-Especificamente, você precisará dos graus de liberdade entre tratamentos (\(gl_{entre}\)) e dos graus de liberdade dentro dos tratamentos (\(gl_{dentro(error)}\)) para encontrar o valor F crítico:
-
-\(gl_{entre} = K - 1\), entre onde K representa o número de grupos/condições de tratamento, e
-
-\(gl_{dentro} = N-K\), onde N representa o número de valores em estudo inteiro.
-
-Neste caso, o \(gl_{entre} = 3 - 1 = 2\), e o \(gl_{dentro} = 18 - 3 = 15\).\\~\\
+\frametitle{Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas}
+Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). A fórmula do gl para teste t de amostras independente é $gl = (n_1 - 1) + (n_2 - 1)$, onde $n_1$ e $n_2$ representam os tamanhos amostrais das duas amostras, espectivamente. Portanto, neste caso,
+\[gl = (n_1-1)+(n_2-1) = (29 - 1)+(31 - 1) = 58\]
 
 \begin{columns}
 \begin{column}{0.5\textwidth}
-   Excerto da tabela F
+   Excerto da tabela t unilateral\\~\\
+
 \begin{center}
-\begin{tabular}{cccc} 
+\begin{tabular}{ccc} 
  \hline
-gl & 1 & 2 & 3\\
-14 & 4.600100 &	4.543100 & 4.494000\\
-\boxit{2.5in} 15 &	3.738900 & 3.682300 & 3.633700\\
-16 & 3.343900 & 3.287400 & 3.238900\\
+gl & $\alpha = .05$ & $\alpha = .01$\\
+57 & 1.672000 &	2.393600\\
+\boxit{1.7in} 58 & 1.671600 & 2.392400\\
+59 & 1.671100 &	2.391200\\
  \hline
 \end{tabular}
 \end{center}   
@@ -280,7 +442,7 @@ gl & 1 & 2 & 3\\
 \end{column}
 \begin{column}{0.5\textwidth}  %%<--- here
    \begin{itemize}
-   \item Se o valor F for igual ou maior que o valor F crítico, você rejeita a hipótese nula.
+   \item O valor de corte de \(\alpha= .05\) define a região crítica, os valores t são improváveis se o valor nulo for verdadeiro.
    \end{itemize}
 \end{column}
 \end{columns}
@@ -288,262 +450,136 @@ gl & 1 & 2 & 3\\
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Distribuição de Fisher-Snedecor}
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
+\textit{4a. Calcule o desvio entre as duas médias amostrais}\\~\\
 
-\begin{center}\includegraphics[width=0.9\linewidth]{figs/figura_92b} \end{center}
+\[(\bar{x}_1 - \bar{x}_2) = (15.00-15) = -0.25\].
+
+\textit{4b. Calcule o erro médio de amostra esperado}
+
+\[SQ_p = \frac{((n_1-1)SQ_1+(n_2-1)SQ_2)}{(n_1-1)+(n_2-1)} = 2.402\]
+
+\[SEM_i = \sqrt{\frac{SQ_p}{n_1}+\frac{SQ_p}{n_2}} = 0.4\]
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: Calculando a estatística do teste (ANOVA independente)}
-Você calcula o $SQ_{entre}$ calculando a SQ para as médias dos três grupos e depois multiplicando esse valor $SQ_{medias}$ por \textit{m} (o número de unidades amostrais em cada grupo).
+\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras independentes)}
+\textit{4c. Calcule a estatística do teste (teste t de amostras independentes)}\\~\\
 
-\begin{center}
-\begin{tabular}{ccc} 
- \hline
-Tratamento & Média ($\bar{Y}_i$) & $\bar{Y}_i^2$\\
- \hline
-TCC & 8 & 64 \\
-TPD & 15.5 & 240.25 \\
-TN  & 16.333 & 266.777 \\
- \hline
- & $\bar{Y}=13.6$ & $\sum_{i=1}^K\bar{Y}_i^2 = 571.027$\\
- \hline
-\end{tabular}
-\end{center}   
+Novamente, o cálculo do teste t é idêntico a um teste bicaudal:
+
+\[t = \frac{(\bar{x}_1 - \bar{x}_2)}{SEM_i} = \frac{(15 - 15.25)}{0.40} = -0.63\]
+
+O valor t obtido de -0.63 não está mais longe de zero do que o valor crítico de -1.6716. Portanto, você não rejeita a hipótese nula.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
+Novamente, calcular o tamanho do efeito para testes unicaudais e bicaudais é idêntico:
  
-\[SQE = m \sum_{i=1}^K(\bar{Y}_i-\bar{Y})^2 = m(\sum_{i=1}^K\bar{Y}_i^2-K\bar{Y}^2)\]
-
-\[SQE =  6 \times (571.027- 3\times 13.6^2) = 252.78\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: Calculando a estatística do teste (ANOVA independente)}
-Você encontra o $SQD$ calculando a SQ para cada condição de tratamento separadamente e depois somando-os.
-
-\[SQD = \sum_{i=1}^K\sum_{j=1}^m (Y_{ij}-\bar{Y}_i)^2 = \sum_{i=1}^K\sum_{j=1}^m Y_{ij}^2 -m\sum_{i=1}^K\bar{Y}_i^2\]
-
-\[SQ_{TCC} = \sum_{j=1}^m (Y_{1j}-\bar{Y}_1)^2 = 108\]
-
-\[SQ_{TPD} = \sum_{j=1}^m (Y_{2j}-\bar{Y}_2)^2 = 57.5\]
-
-\[SQ_{TN} = \sum_{j=1}^m (Y_{3j}-\bar{Y}_3)^2 = 143.333\]
-
-\[SQD = 108+57.5+143.333=308.83\]
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: Calculando a estatística do teste (ANOVA independente)}
-Você encontra o $SQD$ calculando a SQ para cada condição de tratamento separadamente e depois somando-os.
-
-\[SQ_{TCC} = \sum_{j=1}^m (Y_{1j}-\bar{Y}_1)^2 = 108\]
-
-\[SQ_{TPD} = \sum_{j=1}^m (Y_{2j}-\bar{Y}_2)^2 = 57.5\]
-
-\[SQ_{TN} = \sum_{j=1}^m (Y_{3j}-\bar{Y}_3)^2 = 143.333\]
-
-\[SQD = 108+57.5+143.333=308.83\]
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: Calculando a estatística do teste (ANOVA independente)}
-Agora você precisa da SQtotal, que representa a variabilidade total em todo o conjunto de dados. Você soma o variabilidade entre condições (isto é, SQE) e a variabilidade dentro das condições (isto é, SQD).
-
 \begin{align*}
-SQT &= \sum_{i=1}^K\sum_{j=1}^m (Y_{ij}-\bar{Y})^2 \\
-    &= \sum_{i=1}^K\sum_{j=1}^m Y_{ij}^2 -mK\bar{Y}^2\\
-    &= SQE + SQD = 252.78 + 308.83 = 561.61
+d = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{SQ_p}} = \frac{15.00-15.25}{\sqrt{2.402}} = -0.16
 \end{align*}
 
-Seu objetivo final é calcular o F obtido, que é a razão entre QMentre e QMerro. Para calcular os QMs, você divide cada valor das SQ por seu próprio valor de gl.
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: Calculando a estatística do teste (ANOVA independente)}
-
-Seu objetivo final é calcular o F obtido, que é a razão entre QMentre e QMerro. Para calcular os QMs, você divide cada valor das SQ por seu próprio valor de gl.
-
-\[QME = \frac{SQE}{K-1}=\frac{252.58}{2} = 126.39\]
-
-\[QMD = \frac{SQD}{N-K}=\frac{252.58}{15} = 20.59\]
-
-Seu F obtido é calculado dividindo o QME pelo QMD:
-
-\[F = \frac{QME}{QMD} = \frac{126.39}{20.59} = 6.138\]
- 
 \end{frame}
 
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: Calculando a estatística do teste (ANOVA independente)}
-A discussão sobre o comportamento dos erros e das somas de quadrados é resumida na \textbf{Tabela de Análise de Variância (ANOVA)}:
+\frametitle{Etapa 6: Interpretando os Resultados do Teste de Hipóteses}
+
+As frases a seguir resumem os resultados deste estudo:\\~\\
+
+Ao contrário da previsão da teoria dos estilos de aprendizagem, os alunos visuais $(\bar{x} = 15.25, DP = 1.41)$ não aprenderam significativamente mais informações visuais do que os alunos verbais $(\bar{x} = 15.00, DP = 1.67)$, $t_{(58)} = -0.63$, $p > 0.05$ (unicaudal), d = -0.16. O resultado nulo do estudo é consistente com os resultados nulos encontrados por vários outros pesquisadores que investigam estilos de aprendizagem. Coletivamente, os resultados nulos de vários estudos sobre estilos de aprendizagem sugerem fortemente que há muito pouco, ou nenhum, mérito na teoria da aprendizagem dos estilos de aprendizagem.
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Comparação de Duas Médias\footcite{magalhaes2002noccoes}}
+
+\begin{center}\includegraphics[width=1\linewidth]{figs/figure_9_1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Resumo}
+
+\textbf{Tabela 9.1: Comparação de médias para duas populações}
 
 \begin{table}[h]
-\centering
-\begin{tabular}{ccccc}
+\tiny
+\begin{tabular}{|c|c|}
 \hline
-Fonte de & Graus de & Soma de & Quadrado & F  \\
-Variação & Liberdade & Quadrados & Médio &   \\
+Situação  & Estimadores  \\
 \hline
-Entre & K-1 & SQE & QME & QME/QMD   \\
-Dentro & N-K & SQD & QMD &   \\
+Amostras Pareadas (Caso 1)  & 
+\parbox{1cm}{\begin{align*}
+\bar{D} &= \frac{\sum_i^nD_i}{n} \\
+S^2_D &= \frac{1}{n-1}\sum_{i=1}^n(D_i-\bar{D})^2 \\
+T &= \frac{\bar{D}-\mu_D}{S_D/\sqrt{n}} \sim t_{(n-1)}
+\end{align*}}  \\
 \hline
-Total & N-1 & SQT &  &   \\
-\hline
-\end{tabular}
-
-\end{table}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: Calculando a estatística do teste (ANOVA independente)}
-A Tabela 11.4 é a tabela fonte da ANOVA para esta análise. Confirme que você entende como cada um os valores SQs, gls, QMs e F foram calculados.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{ccccc}
-\hline
-Fonte de & Graus de & Soma de & Quadrado & F  \\
-Variação & Liberdade & Quadrados & Médio &   \\
-\hline
-Entre & 2 & 258.72 & 126.39 & 6.14   \\
-Dentro & 15 & 308.83 & 20.59 &   \\
-\hline
-Total & 17 & 561.61 &  &   \\
+Amostras Independentes (Caso 2) Variâncias conhecidas  & 
+\parbox{1cm}{\begin{align*}
+\bar{D} &= \bar{X}-\bar{Y} \\
+Var(\bar{D}) &= \sigma^2_X/n_1 + \sigma^2_Y/n_2 \\
+Z &= \frac{\bar{D}-\mu_D}{\sqrt{\sigma^2_X/n_1 + \sigma^2_Y/n_2}}
+\end{align*}} \\
 \hline
 \end{tabular}
 \end{table}
-
-Neste caso, o valor F obtido foi 6.14, que é superior ao valor F crítico de 3.68 (\(\alpha = 0.05\)). Portanto, você rejeita a hipótese nula e conclui que pelo menos uma média amostral é significativamente diferente de uma das outras.
-
-
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{4e. Se necessário, calcule testes \textit{post hoc}}
-A hipótese nula para uma ANOVA é que todas as diferentes médias das condições são iguais. \\~\\
-
-Rejeitar a hipótese nula não indica quais pares de médias são diferentes entre si. Assim, se você rejeitar a hipótese nula e houver três ou mais condições VI no estudo, será necessário realizar testes post hoc de pares para determinar qual par ou pares de médias são diferentes entre si. 
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{\textit{Teste de diferença honestamente significativa (HSD) de Tukey}}
-
-O teste HSD revela quão diferentes devem ser quaisquer duas médias para serem consideradas "improváveis de resultar de erro de amostragem". A fórmula HSD é
-
-\[HSD = q\sqrt{\frac{SQD}{m}}\]
-
-O valor de \textit{q} (chamado de estatística de faixa estudentizada) muda, com base no número de condições de tratamento (ou seja, K), o gl para o termo de erro e o valor alfa. Com base nesses valores, a estatística \textit{q} é 3.67.
-
-Assim, seu valor HSD é
-
-\[HSD = q\sqrt{\frac{SQD}{n}}= 3.67\sqrt{\frac{20.59}{6}}=6.80\]
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{\textit{teste de diferença honestamente significativa (HSD) de Tukey}}
-
-Conforme indicado na tabela, diferenças significativas sugerem que a diferença não foi criada por erro amostral.
-
+\frametitle{Resumo}
+\textbf{Tabela 9.1: Comparação de médias para duas populações}
 \begin{table}[h]
-\centering
-\begin{tabular}{ccc}
+\tiny
+\begin{tabular}{|c|c|}
 \hline
-Comparação & Diferença entre médias & Siginificância\\
+Situação  & Estimadores  \\
 \hline
-TCC vs TFD & $|8-15.5|=7.5$ & $>HSD$ - Significativo\\
-TCC vs NT & $|8-16.33|=8.33$ & $>HSD$ - Significativo\\
-NT vs TFD & $|15.5-16.33|=0.83$ & $<HSD$ - Não Significativo\\
+Amostras Independentes (Caso 3A) Variâncias desconhecidas e iguais  &  \parbox{1cm}{\begin{align*}
+\bar{D} &= \bar{X}-\bar{Y} \\
+S^2_c &= \frac{(n_1-1)S^2_X+(n_2-1)S^2_Y}{(n_1-1)+(n_2-1)} \\
+T &= \frac{\bar{D}-\mu_D}{\sqrt{S^2_c(1/n_1 + 1/n_2)}}
+\end{align*}} \\
 \hline
+Amostras Independentes (Caso 3B) Variâncias desconhecidas e diferentes  & \parbox{1cm}{\begin{align*}
+\bar{D} &= \bar{X}-\bar{Y} \\
+\hat{\sigma}_{\bar{D}}^2 &= S^2_X/n_1+S^2_Y/n_2 \\
+T &= \frac{\bar{D}-\mu_D}{\sqrt{S^2_X/n_1+S^2_Y/n_2}}
+\end{align*}}  \\
+\hline
+
 \end{tabular}
 \end{table}
-
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Etapa 5: calcule o tamanho do efeito e descreva-o}
-Quando você tem dois grupos, usa d como medida do tamanho do efeito. Você não pode usar d como medida do tamanho do efeito para uma ANOVA geral porque geralmente há mais de dois grupos, então você não pode calcular uma diferença média simples. O tamanho do efeito mais comum para ANOVAs é eta parcial quadrado  ($\eta_p^2$). Os cálculos são os seguintes:
-
-\[\eta_p^2 = \frac{SQE}{SQE+SQD}=\frac{252.78}{252.78+308.83}=0.45\]
-
-Para ANOVAs de um fator, você deve interpretar o eta parcial quadrado como a porcentagem da variabilidade VD que a VI "explica". Neste caso, o tipo de tratamento que os participantes recebem "explica" 45\% da variabilidade nos seus valores de depressão. O tamanho do efeito obtido de 0.45 é maior que 0.14 e, portanto, é um efeito grande.
-
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 6: resumir os resultados}
-
-Ao relatar uma ANOVA, as médias, desvios padrão e tamanhos de efeito para as comparações aos pares são relatados em tabelas, portanto não precisam ser repetidos no texto. O que se segue é um exemplo de como a análise acima pode ser resumida.\\~\\
-
-Uma ANOVA independente revelou diferenças significativas entre as três terapias para depressão, F(2, 15) = 6.14, $p < 0.05$, $\eta_p^2 = 0.45$, QME = 20.59. As médias e desvios padrão para cada tratamento estão na Tabela de ANOVA. Os testes \textit{post hoc} do HSD de Tukey revelaram que o grupo da TCC apresentou valores de depressão mais baixos do que o grupo TFD e o grupo sem tratamento. A terapia TFD não foi melhor do que não receber nenhum tratamento. Os testes \textit{post hoc} do HSD e seus tamanhos de efeito foram apresentados anteriormente.
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Uma nota adicional sobre ANOVAs}
-Se você fizer vários testes t, cada teste t terá 5\% de chance de produzir um erro Tipo I. Se você realizar vários testes t, a probabilidade exata de ter cometido pelo menos um erro Tipo I é dada pela seguinte fórmula de erro familiar (\textit{family-wise error rate} - FWER)\\~\\
-
-$FWER = 1-(1-\alpha)^c$, onde c é o número de comparações\\~\\
-
-Se você tiver apenas uma comparação, a taxa de erro Tipo I seria\\~\\
-
-$FWER = 1 - (1-0.05)^1 = 0.05$ ou 5\%.\\~\\
-
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Uma nota adicional sobre ANOVAs}
-No entanto, se você tiver três comparações no mesmo estudo, a probabilidade de ter cometido pelo menos um erro Tipo I é um pouco maior, 0,14 ou 14\%.\\~\\
-
-$FWER = 1 - (1 - 0.05)^3 = 0.14$.\\~\\
-
-Fazer uma única ANOVA em vez de vários testes t mantém a taxa de erro familiar em 0.05 para a ANOVA geral. Se forem necessários testes \textit{post hoc}, há uma variedade de testes para escolher, mas a ideia geral por trás da maioria deles é que eles evitam que a taxa de erro Tipo I aumente.
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Exemplo 9.16}
-A gerência de um depósito que armazena cargas aéreas de pequeno porte está estudando o peso das cargas que chegam ao seu terminal no interior de São Paulo. Usualmente, o terminal recebe 4 tipos de cargas: doméstica (D), administrativa (A), equipamentos industriais (E) e outros tipos (O). Deseja-se verificar se, em média, existem diferenças entre os pesos dos 4 tipos de cargas. Ao longo de 1 mês, cargas foram colhidas aleatoriamente e seus pesos foram aferidos, fornecendo os dados (em kg):
+\frametitle{Exemplo 9.7}
+Digitadores são treinados em uma empresa em duas turmas distintas. Na primeira, denominada Turma J, utiliza-se um método japonês de ensino, ao passo que na segunda turma, denominada Turma A, utiliza-se um método alemão. Dezesseis (16) alunos de cada turma foram escolhidos aleatoriamente e uma mesma tarefa foi atribuída a cada uma. Apesar de desconhecida as variâncias populacionais são consideradas iguais com base em estudos anteriores. Os métodos diferem quanto ao tempo de execução da tarefa? 
 
 \begin{table}[h]
 \tiny
 \centering
-\begin{tabular}{cccc}
+\begin{tabular}{ccccccccccccccc}
 \hline
-& Tipos de Carga & & \\
+Turma &  &  &  &  &  &  & Tempo &  &  &  &  &  &  &   \\
 \hline
-D & A & E & O \\
-24.9 & 27.9 & 38.4 & 23.8 \\
-20.4 & 28.1 & 38.6 & 25.3 \\
-24.2 & 28.4 & 41.2 & 23.5 \\
-22.3 & 25.3 & 43.9 & 27.6 \\
-20.3 & 29.3 & 40.2 & 25.5 \\
-24.0 & 28.5 & 40.2 & 23.9 \\
-23.5 & 27.9 & 37.3 & 22.6 \\
-
+J & 10 & 13 & 9 & 10 & 14 & 13 & 10 & 15 & 12 & 10 & 9 & 10 & 13 & 14 \\
+\hline
+A & 15 & 12 & 18 & 16 & 15 & 17 & 17 & 15 & 16 & 17 & 11 & 17 & 14 & \\
 \hline
 \end{tabular}
 \end{table}
+ 
 \end{frame}
-
 
 \setbeamercovered{transparent}
 \begin{frame}

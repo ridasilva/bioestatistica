@@ -1,0 +1,8 @@
+[{
+    "question": "14. Ao escrever seus resultados, se você não rejeitou a hipótese nula e o tamanho da sua amostra foi pequeno, você deve:",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. apontar isso aos leitores para que seu relatório não os engane.", "correct": true, "feedback": "Correto!"},
+        {"answer": "b. não incluir essas informações no relatório.", "correct": false, "feedback": "Incorreto. Isso pode enganar os leitores."}
+    ]
+}]

@@ -1,0 +1,15 @@
+[{"question":"8. Na maioria das situações de pesquisa em que um teste t de amostras relacionadas é usado, o $\mu_D$ esperado se a hipótese nula for verdadeira é",
+"type": "multiple_choice",
+"answers":[{"answer":"a. 0.", "correct": true, "feedback": "Correto!"},
+{"answer":"b. 1.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"c. $x_D$.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]},
+{"question":"9. Qual das alternativas a seguir melhor representa a hipótese nula para um teste t bicaudal de amostras relacionadas?",
+"type": "multiple_choice",
+"answers":[{"answer":"a. $\mu_D \neq 0$.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. $\mu_D = 0$.", "correct": true, "feedback": "Correto!"},
+{"answer":"c. $\mu_1 = \mu_2$.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]},
+{"question":"10. $\mu_D$ é a notação simbólica para",
+"type": "multiple_choice",
+"answers":[{"answer":"a. a hipótese nula.", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. a média das pontuações de diferença da população.", "correct": true, "feedback": "Correto!"}]}
+]

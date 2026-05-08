@@ -1,0 +1,6 @@
+[{"question":"16. Para calcular o tamanho do efeito, você divide o desvio observado entre as médias pelo",
+"type":"multiple_choice",
+"answers":[{"answer":"a. o erro padrão.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. o desvio padrão dos valores de diferença.", "correct": true, "feedback": "Correto!"},
+{"answer": "c. o desvio padrão médio dos valores.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
+}]

@@ -1,0 +1,21 @@
+[
+  {
+	"question": "1. Qual teste de significância você deve usar para determinar se a diferença entre duas amostras não relacionadas é provavelmente devido a um erro amostral?",
+    "type":"multiple_choice",
+	"answers": [
+	  {"answer": "a. z para uma média amostral", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+      {"answer": "b. Teste t para amostra única", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+      {"answer": "c. Teste t para amostras independentes", "correct": true, "feedback": "Correto! O teste t para amostras independentes é usado para comparar duas médias de amostras não relacionadas."}
+	]
+  },
+  {
+	"question": "2. Se a hipótese nula for verdadeira, o z para a média amostral, o teste t para amostra única, o teste t para amostras relacionadas e o teste t independente esperam um valor obtido próximo de",
+    "type":"multiple_choice",
+	"answers": [
+	  {"answer": "a. +1,65.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+	  {"answer": "b. +1,96.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+	  {"answer": "c. +1,00.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+	  {"answer": "d. 0.", "correct": true, "feedback": "Correto! Quando a hipótese nula é verdadeira, o valor esperado é próximo de 0."}
+	]
+  }
+]

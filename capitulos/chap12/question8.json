@@ -1,0 +1,10 @@
+[
+{
+		"question": "12. Quando o valor t obtido não estiver distante de zero, então o valor crítico da hipótese nula deve",
+		"type": "multiple_choice",
+		"answers": [
+			{"answer": "a. ser rejeitado.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+			{"answer": "b. não ser rejeitado.", "correct": true, "feedback": "Correto!"}
+		]
+	}
+]

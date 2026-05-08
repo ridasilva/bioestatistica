@@ -1,0 +1,18 @@
+[{
+    "question": "4. O teste t para amostras independentes é uma razão entre a diferença entre duas médias amostrais sobre uma estimativa de",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. erro amostral.", "correct": true, "feedback": "Correto! O teste t independente utiliza o erro amostral para calcular a razão."},
+        {"answer": "b. desvio padrão das amostras.", "correct": false, "feedback": "Incorreto. O desvio padrão das pontuações não é usado diretamente na razão."},
+        {"answer": "c. variabilidade.", "correct": false, "feedback": "Incorreto. A variabilidade é um conceito mais geral e não é a estimativa usada diretamente."}
+    ]
+},
+{
+    "question": "5. O numerador do teste t para amostras independentes é a diferença entre",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. duas médias amostrais.", "correct": true, "feedback": "Correto! A diferença entre duas médias amostrais é usada no numerador."},
+        {"answer": "b. uma média amostral e uma média populacional.", "correct": false, "feedback": "Incorreto. O teste t independente não utiliza uma média populacional no numerador."},
+        {"answer": "c. uma média amostral e a hipótese nula.", "correct": false, "feedback": "Incorreto. A hipótese nula não é usada diretamente no numerador."}
+    ]
+}]

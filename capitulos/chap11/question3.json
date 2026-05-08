@@ -1,0 +1,13 @@
+[{"question": "6. Você usa uma estatística t de amostras relacionadas quando (escolha duas)",
+"type": "many_choice",
+"answers": [{"answer": "a. a VI define duas amostras independentes, e a VD é medida como uma variável quantitativa.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. a VI define duas amostras correspondentes e a VD é medida como uma variável quantitativa.", "correct": true, "feedback": "Correto!"},
+{"answer": "c. a VI define uma amostra medida sob duas condições diferentes, e o VD é medida como uma variável quantitativa.", "correct": true, "feedback": "Correto!"},
+{"answer": "d. a VI define uma amostra e o VD é medida como uma variável quantitativa, e você não conhece o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "e. a VI define uma amostra e a VD é medida como uma variável quantitativa, e você conhece o desvio padrão da população.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]},
+{"question": "7. Qual das seguintes suposições estatísticas comuns não é uma suposição do teste t de amostras relacionadas?",
+"type": "multiple_choice",
+"answers": [{"answer": "a. Independência de dados", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "b. Medição apropriada da VI e da VD", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "c. A distribuição das diferenças das médias amostrais deve ter uma forma normal", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer": "d. Homogeneidade de variância", "correct": true, "feedback": "Correto!"}]}]

@@ -1,0 +1,5 @@
+[{"question": "20. Ao calcular um teste t de amostras relacionadas, você deve lembrar que todas as análises são feitas nos",
+"type": "multiple_choice",
+"answers":[{"answer":"a. valores das diferenças entre os valores pareados de cada participante (ou seja, D).", "correct":true, "feedback":"Correto!"},
+{"answer":"b. valores brutos de cada participante.", "correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."}]
+}]

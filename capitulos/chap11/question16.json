@@ -1,0 +1,6 @@
+[{"question": "24. Ao interpretar os resultados estatísticos de qualquer estudo,",
+"type":"multiple_choice",
+"answers":[{"answer": "a. você deve considerar se uma variável de confusão pode ter afetado o resultados.", "correct": false, "feedback": "Incompleto!"},
+{"answer": "b. você deve reconhecer que o desenho experimental é tão importante para o conclusão científica como os resultados estatísticos.", "correct": false, "feedback": "Incompleto!"},
+{"answer": "c. ambas as opções acima estão corretas.", "correct": true, "feedback": "Correto!"}]
+}]

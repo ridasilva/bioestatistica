@@ -1,0 +1,9 @@
+[{
+    "question": "18. Qual dos seguintes valores nunca pode ser negativo?",
+    "type": "multiple_choice",
+    "answers": [
+        {"answer": "a. O numerador de um teste t", "correct": false, "feedback": "Incorreto. O numerador pode ser negativo."},
+        {"answer": "b. O valor t obtido", "correct": false, "feedback": "Incorreto. O valor t pode ser negativo."},
+        {"answer": "c. O erro padrão da diferença média", "correct": true, "feedback": "Correto! O erro padrão nunca pode ser negativo."}
+    ]
+}]

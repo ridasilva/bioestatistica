@@ -1,0 +1,5 @@
+[{"question":"19. Ao calcular o gl para um teste t de amostras relacionadas, o N na fórmula é o",
+"type":"multiple_choice",
+"answers":[{"answer":"a. número de valores.", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
+{"answer":"b. número de pares de valores.", "correct": true, "feedback": "Correto!"}]
+}]

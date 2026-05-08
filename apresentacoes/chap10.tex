@@ -25,7 +25,7 @@ citestyle=authoryear
 }
 \addbibresource{stats.bib}
 \title[Bioestatística II] %optional
-{Teste t de amostras relacionadas}
+{Estimativa com Intervalos de confiança}
 
 \subtitle{CGF2046 - Bioestatística II}
 
@@ -71,421 +71,523 @@ citestyle=authoryear
   \\~\\
   \begin{itemize}
   \uncover<1->{\item
-    Identificar quando um teste t de amostras relacionadas deve ser usado;}
+    Descrever os objetivos distintos dos testes de significância, tamanhos de efeito e intervalos de confiança;}
   \uncover<2->{\item
-    Explicar as vantagens de usar um desenho de amostras relacionadas em vez de um desenho de amostras independentes;}
+    Explicar a lógica dos intervalos de confiança;}
    \uncover<3->{\item
-    Explicar a lógica do teste t de amostras relacionadas;}
+    Calcular um intervalo de confiança para uma média populacional;}
    \uncover<4->{\item
-    Escrever hipóteses nulas e de pesquisa usando símbolos e palavras para testes unicaudais e bicaudais;}
+    Calcular um intervalo de confiança para uma diferença média entre uma média amostral e uma média populacional;}
    \uncover<5->{\item
-    Calcular um teste t de amostras relacionado manualmente (usando uma calculadora) e usando \textit{software};}
+    Relatar intervalos de confiança;}
    \uncover<6->{\item
-    Determinar se você deve ou não rejeitar a hipótese nula;}
-   \uncover<7->{\item
-    Calcular e interpretar um tamanho de efeito (d);}
-   \uncover<8->{\item
-    Resumir os resultados da análise.}            
+    Identificar interpretações corretas e incorretas de intervalos de confiança.}     
   \end{itemize}
 \end{frame}
 
 \section{Introdução ao teste t}
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Amostras Repetidas/Relacionadas}
-Embora seu cálculo seja semelhante ao teste t para amostra única, esse novo teste t tem vários nomes diferentes, um para cada projeto experimental em que pode ser usado. 
-
-Exemplos:
+\frametitle{Contexto}
+No Capítulo 7, você aprendeu como usar o teste t de amostra única para determinar 
 \begin{itemize}
-\item \textit{teste t de medidas repetidas}: comparar a média de uma amostra de pessoas antes e depois de receberem um tratamento;
-\item \textit{teste t de amostras relacionadas}: comparar dois grupos de participantes que estão relacionados de alguma forma;
-\item também é às vezes chamado de teste t de amostras pareadas, teste t de amostras combinadas, teste t de amostras dependentes ou teste t dentro dos sujeitos.
+\item se uma diferença observada entre uma média amostral e uma média populacional tem probabilidade de ser criada por erro amostral ou por uma variável independente (VI; ou seja, o variável de agrupamento); 
+\item e o tamanho do efeito (d) para descrever a magnitude do impacto do VI na variável dependente (VD).
+\end{itemize}
+
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Três procedimentos estatísticos com três finalidades distintas}
+
+\textbf{Exemplo:} O reitor de uma faculdade está considerando adicionar uma aula de "vida saudável" aos requisitos de educação geral para os alunos, mas primeiro pretende determinar se frequentar tal aula aumenta os comportamentos saudáveis,
+
+\begin{itemize}
+\item A reitoria entrevistou toda a população de estudantes e constatou que eles relataram praticar exercícios em média 150 minutos por semana;
+\item Foram recrutados 60 estudantes universitários que frequentaram o novo curso. Depois de concluírem a aula, os participantes usaram um monitor de frequência cardíaca durante 1 mês;
+\item O resultado do teste t para amostra única: \(t_{(59)} = 2.11\), p = 0.04 (o valor p bicaudal tem que ser multiplicado por dois quando calculado), d = 0.27.
 \end{itemize}
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Amostras Repetidas/Relacionadas}
-Por exemplo, se os investigadores quisessem testar a eficácia de um novo medicamento destinado a reduzir a ansiedade, poderiam recolher uma amostra de pessoas, medir primeiro a sua ansiedade, depois administrar-lhes o novo medicamento e, finalmente, medir a sua ansiedade depois de o medicamento ter tido tempo de fazer efeito.\\~\\
+\frametitle{Três procedimentos estatísticos com três finalidades distintas}
 
-Se for improvável que o desvio entre as duas médias amostrais seja criado por erro amostral, então presume-se que o medicamento tenha alterado o nível de ansiedade da amostra.
+A melhor estimativa deste parâmetro é a média da amostra que realizou a aula - ou seja, 155.67 minutos. No entanto, devido ao erro amostral, esta média amostral provavelmente não é perfeitamente precisa.\\~\\
 
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Lógica do Testes t de Amostra Única e Amostras Repetidas/Relacionadas}
-A lógica do teste t de amostras relacionadas é semelhante à do teste t de amostra única.\\~\\
-
-t Amostra única = $\frac{(\bar{x} - \mu)}{SEM_a}$\\~\\
-
-t Amostra repetidas/relacionadas = $\frac{(\bar{x}_D - \mu_D)}{SEM_D}$\\~\\
-
-O numerador do teste t de amostras relacionadas compara a diferença média entre duas médias amostrais com a diferença média esperada se o nulo for verdadeiro. Se você usar $\mu_D = 0$\\~\\
-
-t Amostra repetidas/relacionadas = $\frac{\bar{x}_D}{SEM_D}$\\~\\
-
-Se o valor t obtido estivesse mais distante de 0 que o valor crítico, a hipótese nula seria rejeitada.
+Um intervalo de confiança é um procedimento estatístico que utiliza a mesma fórmula de erro amostral esperado (isto é, \(SEM_a\)) que os testes de hipóteses, mas de uma maneira diferente, para criar um intervalo de valores plausíveis para o parâmetro populacional.
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Teste t unicaudal de amostra única}
+\frametitle{Estimação}
 
-\textbf{Exemplo:} Um pesquisador clínico quer determinar se um novo medicamento para tratar a ansiedade tem efeitos colaterais que alteram os níveis de colesterol. 
- 
+Por serem \textbf{variáveis aleatórias}, os estimadores pontuais possuem
+uma distribuição de probabilidade (distribuições amostrais).
+
+Com isso, podemos apresentar uma estimativa mais informativa para o
+parâmetro de interesse, que inclua uma medida de \textbf{precisão} do
+valor obtido \(\rightarrow\) \textbf{estimativa intervalar} ou
+\textbf{intervalo de confiança}.
+
+Os \textbf{intervalos de confiança} são obtidos a partir da
+\textbf{distribuição amostral} de seus estimadores.
+\end{frame}
+
+\section{Intervalos de confiança: \(\sigma\) conhecido}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Suposições necessárias}
+
 \begin{itemize}
-\item Os níveis de colesterol são normalmente distribuídos e medidos como uma variável quantitativa;
 \item
-   Seis pares de pessoas são comparadas em relação aos seus níveis de colesterol pré-existentes. Em seguida, uma pessoa de cada par recebe o novo medicamento para ansiedade, enquanto a outra pessoa recebe um placebo;
+  A amostra é uma \textbf{amostra aleatória simples}. (Todas as amostras
+  de mesmo tamanho tem a mesma probabilidade de serem selecionadas)
 \item
-  Dezoito semanas depois, o pesquisador mede os níveis de colesterol.
-\end{itemize}
+  O valor do desvio padrão populacional \(\sigma\), é conhecido
+\item
+  Uma ou ambas das seguintes condições são satisfeitas:
 
-Optamos por um teste bilateral. Também escolhemos um \(\alpha=0.05\).
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 1: examinar as pressuposições estatísticas}
-
-Todos os testes de hipóteses são baseados em suposições específicas e, se essas suposições forem violadas, esses testes podem produzir resultados enganosos.\\~\\
-Os quatro pressupostos básicos são:
-
-\begin{enumerate}
-\item independência dos dados;
-\item medição apropriada das variáveis para análise;
-\item normalidade das distribuições.
-\end{enumerate}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 1: examinar as pressuposições estatísticas}
-
-Os três pressupostos básicos são:
-
-\begin{enumerate}
-\item \textbf{independência dos dados:} A VI neste estudo identifica dois grupos relacionados, designados aleatoriamente para duas condições diferentes;
-\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) identifica as duas condições de medicamento versus placebo, variável dependente (VD) \(\Rightarrow\) nível de colesterol dos participantes, é medido em como uma variável quantitativa;
-\item \textbf{normalidade das distribuições:} população original de diferenças médias é normalmente distribuida.
-\end{enumerate}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 2: expor as hipóteses nulas e de pesquisa simbolicamente e verbalmente}
-
-O teste t de amostras relacionadas determina se a média dessas diferenças é significativamente diferente de 0.
-
-\begin{center}
-\begin{tabular}{ m{2cm}|m{2cm}|m{3cm}|m{3cm} } 
- \hline
- Tipo de Hipótese & Simbólico & Vebal & Diferença entre médias amostral e populacional\\
-  \hline
- Hipótese nula & $\mu_{D}=0;$ & Diferença média $\approx$ 0 & Erro amostral \\ 
- Hipótese de pesquisa & $\mu_{D} \neq 0.$ & Diferença média $\neq$ 0 & Medicamento tem efeito sobre colesterol  \\ 
- \hline
- \hline
-\end{tabular}
-\end{center}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas}
-Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). Para o teste t de amostra única, a fórmula para o gl é \textit{gl = N - 1}. Portanto, neste caso,
-\[gl = 6 - 1 = 5\]
-
-\begin{columns}
-\begin{column}{0.5\textwidth}
-   Excerto da tabela t bilateral\\~\\
-
-\begin{center}
-\begin{tabular}{ccc} 
- \hline
-gl & $\alpha = .05$ & $\alpha = .01$\\
-4 &	2.776400 & 4.604100\\
-\boxit{1.7in} 5 & 2.570600 & 4.032100\\
-6 & 2.446900 & 3.707400\\
- \hline
-\end{tabular}
-\end{center}   
-   
-   
-\end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-   \begin{itemize}
-   \item O valor de corte de \(\alpha= .05\) define a região crítica, os valores t são improváveis se o valor nulo for verdadeiro.
-   \end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
-\textit{4a. Calcule D para cada participante/par correspondente}\\~\\
-
-A primeira etapa no cálculo da estatística t das amostras relacionadas é calcular o valor da diferença (ou seja, D) para cada par de valores. 
-
-\begin{center}
-\begin{tabular}{cccc} 
- \hline
-Par & Placebo & Medicamento & D (Medicamento - Placebo)\\
- \hline
-A & 180 & 188 & 8 \\
-B & 200 & 201 & 1 \\
-C & 190 & 197 & 7 \\
-D & 170 & 174 & 4 \\
-E & 210 & 215 & 5 \\
-F & 195 & 194 & -1 \\
- \hline
-\end{tabular}
-\end{center}   
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
-\begin{itemize}
-\item 4b. Calcule a diferença média observada ($\bar{x}_D$)
-
-\[\bar{x}_D = \frac{\sum_{i=1}^n D_i}{N} = \frac{24}{6} = 4\]
-
-\item 4c. Calcule a diferença média esperada devido ao erro de amostragem
-\[SQ_D = \frac{1}{N-1}\sum_{i=1}^n(D_i - \bar{x}_D)^2 = 12\]
-\[SEM_D = \frac{DP}{\sqrt{N}} = \frac{3.464}{\sqrt{6}} = 1.414\]
-\item 4d. Calcule a estatística do teste (teste t de amostras relacionadas)
-\[t =  \frac{\bar{x}_D}{SEM_D}  = \frac{4}{1.414} = 2.83\]
+  \begin{itemize}
+  \item
+    A população é normalmente distribuída
+  \item
+    A amostra possui \(n > 30\)
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
-O valor t obtido de 2.83 está mais distante de 0 do que o valor crítico de +2.5706.
-\begin{center}\includegraphics[width=0.55\linewidth]{figs/regiao_critica_observada_t_rel} \end{center}
+\frametitle{Erro amostral}
 
+Quando coletamos uma \textbf{amostra aleatória} e calculamos uma média,
+sabemos que o valor da média possui um desvio natural, em relação ao
+verdadeiro valor da média populacional (\textbf{erro amostral}), ou seja
+\[
+e = \bar{X} - \mu \quad \Rightarrow \quad \bar{X} = \mu + e
+\]
+
+Sabemos que a \textbf{distribuição amostral da média} é uma distribuição
+normal, com média \(\mu\) e variância \(\sigma^2/n\), \[
+\bar{X} \sim \text{N}\left(\mu, \frac{\sigma^2}{n}\right)
+\]
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Margem de erro}
+
+Usando a transformação \[
+Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}} =
+\frac{e}{\sigma/\sqrt{n}} \, \sim \, \text{N}(0,1)
+\] podemos determinar o \textbf{erro máximo provável} que assumimos para
+a média amostral que estamos calculando.
+
+O \textbf{erro máximo provável} ou \textbf{margem de erro} da média é
+definido por \[
+e = z_{\gamma/2} \cdot \frac{\sigma}{\sqrt{n}}
+\] onde \(z_{\gamma/2}\) é chamado de \textbf{valor crítico}.
 \end{frame}
 
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
-Um tamanho de efeito é um índice da diferença entre a média da amostra e a média da população. A estatística de tamanho do efeito normalmente usada ao comparar duas médias é d. 
+\frametitle{Intervalo de confiança}
+
+Fixando um valor \(\gamma\) tal que \(0 < \gamma < 1\), podemos
+encontrar um valor \(z_{\gamma/2}\) tal que:
+
 \begin{align*}
-d &= \frac{Desvio\quad observado\quad entre\quad as\quad medias}{Desvio\quad padrao}\\
-  &= \frac{\bar{x}_D}{DP_D} = \frac{4}{3.464} = 1.15
+&P[|Z| < z_{\gamma/2}] &= \gamma \\
+&P[-z_{\gamma/2} < Z < z_{\gamma/2}] &= \gamma \\
+&P[-z_{\gamma/2} < \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} <
+z_{\gamma/2}] &= \gamma \\
+&P[\bar{x} - z_{\gamma/2} \cdot
+\left(\frac{\sigma}{\sqrt{n}} \right) < \mu < \bar{x} + z_{\gamma/2}
+\cdot \left(\frac{\sigma}{\sqrt{n}} \right)] &= \gamma \\
+&P[\bar{x} - e < \mu < \bar{x} + e] &= \gamma \\
+\end{align*}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Intervalo de confiança}
+
+O valor crítico \(z_{\gamma/2}\) é o valor de \(\gamma\) dividido por 2,
+uma vez que a ``massa'' \(\gamma\) deve ser distribuída igualmente em
+torno de 0.
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figs/unnamed_chunk_1_1} \end{center}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Coeficiente de confiança \(\gamma\)}
+
+A área \(\gamma\) determina o \textbf{coeficiente de confiança}
+associado ao intervalo de confiança que estamos construindo.
+
+O valor \(z_{\gamma/2}\) pode ser obtido da tabela da Normal padrão,
+localizando o valor de \(\gamma/2\) no corpo da tabela e obtendo o valor
+\(z_{\gamma/2}\) nas margens correspondentes.
+
+Exemplo: \(\gamma = 0,95\):
+
+\begin{itemize}
+\item
+  Temos que \(\gamma/2 = 0,475\) é a área que devemos procurar no corpo
+  da tabela
+\item
+  O valor de \(z_{\gamma/2}\) será determinado pelos valores
+  correspondentes nas margens da tabela. Nesse caso,
+  \(z_{\gamma/2} = 1,96\) é o valor crítico procurado.
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Intervalo de confiança}
+
+Com estas definições, podemos construir um \textbf{intervalo de
+confiança} para \(\mu\), com \textbf{coeficiente de confiança}
+\(\gamma\): \[
+\text{IC}(\mu, \gamma) = \left[ \bar{X} - z_{\gamma/2} \cdot
+  \left(\frac{\sigma}{\sqrt{n}}\right) ; \bar{X} + z_{\gamma/2} \cdot
+  \left(\frac{\sigma}{\sqrt{n}}\right)  \right]
+\]
+
+Outras notações: \[\bar{x} - e < \mu < \bar{x} + e\] \[\bar{x} \pm e\]
+\[[\bar{x} - e; \bar{x} + e]\]
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Procedimentos gerais para a construção de intervalos de confiança}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Verifique se as suposições necessárias estão satisfeitas
+
+  \begin{itemize}
+  \item
+    Temos uma AAS
+  \item
+    \(\sigma\) é conhecido
+  \item
+    A população tem distribuição normal ou \(n>30\)
+  \end{itemize}
+\item
+  Determine o nível de confiança \(\gamma\), e encontre o valor crítico
+  \(z_{\gamma/2}\)
+\item
+  Calcule a margem de erro \(e = z_{\gamma/2} \cdot (\sigma/\sqrt{n})\)
+\item
+  Calcule \(\text{IC}(\mu, \gamma)\)
+\end{enumerate}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Interpretação de um intervalo de confiança}
+
+Suponha que obtivemos um intervalo de 95\% de confiança:
+\(\text{IC}(\mu,95\%) = [52; 58]\)
+
+\begin{block}{Interpretação 1}
+Temos 95\% de confiança de que a verdadeira média populacional $\mu$
+se encontra entre 52 e 58
+\end{block}
+\begin{block}{Interpretação 2}
+Temos 95\% de confiança de que o intervalo entre 52 e 58 realmente
+contém a verdadeira média populacional $\mu$
+\end{block}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Interpretação de um intervalo de confiança}
+
+Suponha que obtivemos um intervalo de 95\% de confiança:
+\(\text{IC}(\mu,95\%) = [52; 58]\)
+
+\begin{alertblock}{Interpretação 1 --- ERRADA}
+Temos 95\% de confiança de que a verdadeira média populacional $\mu$
+se encontra entre 52 e 58
+\end{alertblock}
+\begin{block}{Interpretação 2 --- CERTA}
+Temos 95\% de confiança de que o intervalo entre 52 e 58 realmente
+contém a verdadeira média populacional $\mu$
+\end{block}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Interpretação de um intervalo de confiança}
+
+Como o intervalo de confiança é calculado a partir de uma
+\textbf{amostra aleatória}, este intervalo \textbf{também é aleatório}!
+
+Isso significa que para cada amostra aleatória que tivermos, um
+intervalo \textbf{diferente} será calculado.
+
+Como o valor de \(\mu\) é fixo, é o intervalo que deve conter o valor de
+\(\mu\), e não o contrário.
+
+Isso significa que se pudessemos obter 100 amostras diferentes, e
+calcularmos um intervalo de confiança de 95\% para cada uma das 100
+amostras, esperariamos que 5 destes intervalos \textbf{não} contenham o
+verdadeiro valor da média populacional \(\mu\).
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Interpretação de um intervalo de confiança}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{figs/unnamed_chunk_2_1} \end{center}
+\end{frame}
+
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Amplitude de um intervalo}
+
+A \textbf{amplitude} de um intervalo de confiança é dada pela diferença
+entre o limite superior e inferior, ou seja, \begin{align*}
+\text{AMP}_{IC} &=
+  \left[ \bar{x} + z_{\gamma/2} \cdot
+  \left( \frac{\sigma}{\sqrt{n}} \right) \right] -
+  \left[ \bar{x} - z_{\gamma/2} \cdot
+  \left( \frac{\sigma}{\sqrt{n}} \right) \right] \\
+ &= 2 \times z_{\gamma/2} \cdot (\sigma/\sqrt{n})
+\end{align*}
+
+\begin{itemize}
+\item
+  Note que, claramente, um intervalo de confiança depende conjuntamente
+  de três componentes:
+
+  \begin{itemize}
+  \item
+    Coeficiente de confiança \(\gamma\), expresso pelo valor crítico
+    \(z_{\gamma/2}\)
+  \item
+    Desvio-padrão populacional \(\sigma\)
+  \item
+    Tamanho da amostra \(n\)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Amplitude de um intervalo}
+
+\(z_{\gamma/2} \rightarrow\) Cada vez que aumentamos a confiança
+\(\gamma\), o valor de \(z_{\gamma/2}\) fica maior, e consequentemente a
+amplitude do intervalo aumenta.
+
+\(\sigma \rightarrow\) Um grande desvio padrão indica a possibilidade de
+um considerável distanciamento dos valores amostrais em relação à média
+populacional
+
+\(n \rightarrow\) Quanto maior for o tamanho da amostra, maior será a
+quantidade de informação disponível. Com isso, valores maiores de \(n\)
+produzem intervalos mais informativos
+\end{frame}
+
+
+\section{Intervalos de confiança: \(\sigma\) desconhecido}
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Determinação do tamanho amostral}
+
+Nosso objetivo é coletar dados para estimar a \textbf{média
+populacional} \(\mu\).
+
+A questão é:
+
+\begin{quote}
+\textbf{Quantos elementos (itens, objetos, pessoas, \ldots{}) devemos
+amostrar?}
+\end{quote}
+
+Já vimos que, de maneira (bem) geral, \(n>30\) é um tamanho de amostra
+mínimo para a maioria dos casos.
+
+Será que podemos ter uma estimativa melhor de quantos elementos devem
+ser amostrados para estimarmos a média populacional com uma precisão
+conhecida?
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Determinação do tamanho amostral}
+
+A partir da equação do \textbf{erro máximo provável} \[
+e = 2 z_{\gamma/2} \cdot \frac{\sigma}{\sqrt{n}}
+\] podemos isolar \(n\) e chegar na seguinte equação para a determinação
+do tamanho amostral \[
+n = \left[ \frac{2 z_{\gamma/2} \cdot \sigma}{e} \right]^2
+\]
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Determinação do tamanho amostral}
+
+Note que, em \[
+n = \left[ \frac{2 z_{\gamma/2} \cdot \sigma}{e} \right]^2
+\]
+
+\begin{itemize}
+\item
+  O tamanho amostral \(n\) \textbf{não} depende do tamanho populacional
+  \(N\)
+\item
+  O tamanho amostral depende:
+
+  \begin{itemize}
+  \item
+    do nível de confiança desejado (expresso pelo valor crítico
+    \(z_{\gamma/2}\))
+  \item
+    do erro máximo \textsl{desejado}
+  \item
+    do desvio-padrão \(\sigma\) (embora veremos que não é estritamente
+    necessário)
+  \end{itemize}
+\item
+  Como o tamanho amostral precisa ser um número inteiro, arredondamos
+  sempre o valor para o \textbf{maior} número inteiro mais próximo
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Cálculo do intervalo de confiança}
+
+Com estas definições, podemos construir um \textbf{intervalo de
+confiança} para \(\mu\), com \textbf{coeficiente de confiança}
+\(\gamma\), com variância desconhecida, é dado por: \[
+\text{IC}(\mu, \gamma) = \left[ \bar{X} - t_{\gamma/2} \cdot
+  \left(\frac{S}{\sqrt{n}}\right) ; \bar{X} + t_{\gamma/2} \cdot
+  \left(\frac{S}{\sqrt{n}}\right)  \right]
+\]
+Outras notações:
+\[\text{IC}(\mu, \gamma) = \left[ \bar{X} - t_{IC} \cdot
+  \left(SEM_a\right) ; \bar{X} + t_{IC} \cdot
+  \left(SEM_a\right)  \right]
+\]
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Cálculo do intervalo de confiança}
+
+Agora, o reitor quer aplicar esses resultados da pesquisa à população de seu interesse, calculando um IC de 95\% para estimar esse parâmetro populacional. Comece escrevendo as seguintes fórmulas para os limites superior e inferior do IC.\\~\\
+
+Para o cálculo você precisa dos mesmos três valores: 
+\begin{itemize}
+\item a estimativa pontual ou $\bar{x}$;
+\item o valor t crítico correto para o IC ou $t_{IC}$;
+\item o erro de amostragem esperado ou $SEM_a$.
+\end{itemize}
+
+O valor t crítico vem da tabela t crítica bicaudal 0.05 porque estamos computando um IC de 95\% de confiança. O \textit{gl} é 59 (gl = n - 1 = 60 - 1 = 59), então o \(t_{IC}\) é 2.001. E os \(SEM_a\) é \(DP/\sqrt{N}\) ou 20.85/60 = 2.69.
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Cálculo do intervalo de confiança}
+
+Portanto, o limite superior do IC de 95\% é
+
+\[Limite\quad superior = 155.67 + (2.001)(2.69) = 161.05\]
+
+O limite inferior é
+
+\[Limite\quad inferior = 155.67 - (2.001)(2.69) = 150.29\]
+
+Levando ao intervalo
+
+\[\text{IC}(\mu, 95\%) = [150.29, 161.05]\]
+
+Com base nestes cálculos, deveríamos ter 95\% de confiança de que o intervalo 150.29 e 161.05 minutos por semana, contém o tempo médio real de exercício da população de estudantes universitários, se participassem nas aulas de vida saudável.
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Computação de intervalos de confiança para uma diferença média}
+
+A única diferença entre este IC e o calculado acima é que estamos usando uma diferença entre uma média amostral e uma média populacional como estimativa pontual, em vez da média amostral em si. Os limites superior e inferior são calculados da seguinte forma:
+
+Limite = Estimativa pontual +/- Margem de erro.
+
+\begin{align*}
+Limite\quad superior = (\bar{x}-\mu) + t_{IC}SEM_a\\ 
+Limite\quad superior = (155.67 - 150) + (2.001)(2.69).\\
+Limite\quad superior = 5.67+5.383 = 11.05.\\
+Limite\quad superior = (\bar{x}-\mu) - t_{IC}SEM_a\\
+Limite\quad inferior = (155.67 - 150) - (2.001)(2.69).\\
+Limite\quad inferior = 5.67-5.383 = 0.29.\\
 \end{align*}
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
-A melhor maneira de interpretar qualquer tamanho de efeito é compará-lo com os tamanhos de efeito produzidos por estudos semelhantes na literatura de pesquisa. Se você não conseguir encontrar estudos semelhantes na literatura para fornecer uma referência, poderá usar as diretrizes gerais sugeridas por Cohen (1992) para interpretar os tamanhos dos efeitos na Tabela 6.2.
+\frametitle{Computação de intervalos de confiança para uma diferença média}
 
-\begin{center}
-\begin{tabular}{cc} 
- \hline
-d  & Tamanho estimado do efeito\\
- \hline
-Perto de 0.2 & Pequeno \\
-Perto de 0.5 & Médio \\
-Perto de 0.8 & Grande \\
- \hline
-\end{tabular}
-\end{center}   
+Com base nestes cálculos, deveríamos ter 95\% de confiança de que o tempo de exercício por semana aumentaria entre 0.29 e 11.05 minutos se a população de estudantes universitários frequentasse as aulas de vida saudável. \\~\\
+
+A regra geral é que os valores de IC tornam-se menos plausíveis com o aumento da distância da estimativa pontual.\\~\\
+
+Se uma diferença média de zero não estiver entre os limites superior e inferior do IC de 95\% para a diferença média, a média amostral de 155.67 e a média populacional de 150 são significativamente diferentes uma da outra, se você realizar um teste de significância bicaudal com um valor alfa de 0.05.
 
 \end{frame}
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 6: Interpretando os Resultados do Teste de Hipóteses}
+\frametitle{Relatório de intervalos de confiança}
 
-As frases a seguir resumem os resultados deste teste t de amostras relacionadas. Você precisará calcular as médias para os grupos de medicamento e placebo manualmente ou usando \textit{software} para incluí-los em seu relatório de resultados.\\~\\
+Recomenda se que os pesquisadores calculem e interpretem os ICs em conjunto com testes de significância e tamanhos de efeito ao relatar resultados. 
 
-As pessoas que tomaram o ansiolítico apresentaram níveis de colesterol substancialmente mais elevados (\(\bar{x}_A = 194.83\), DP = 13.64) do que as pessoas que tomaram o placebo (\(\bar{x}_P = 190.83\), DP = 14.29), \(t_{(5)} = 2.83\), \(p < 0.05\), d = 1.15. A droga aumentou os níveis de colesterol em mais de 1 desvio padrão, sugerindo que a droga tem um efeito prejudicial sobre os níveis de colesterol. No entanto, a amostra incluiu apenas seis pares de pessoas e, portanto, o estudo deve ser replicado com uma amostra maior.
-\end{frame}
-
-\begin{frame}
-\frametitle{Exemplo de teste t de amostras relacionadas (unicaudal)}
-\textbf{Exemplo:} Um psiquiatra recruta seis pessoas com altos índices de ansiedade para um estudo de avaliação do novo medicamento. Todos os seis voluntários completam um inventário de ansiedade antes de tomar o medicamento e novamente após tomar o medicamento por 1 mês.\\~\\ 
-
-Espera-se que diminua os índices de ansiedade das pessoas que o tomam.
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 1: examinar as pressuposições estatísticas}
-
-Todos os testes de hipóteses são baseados em suposições específicas e, se essas suposições forem violadas, esses testes podem produzir resultados enganosos.\\~\\
-Os quatro pressupostos básicos são:
-
-\begin{enumerate}
-\item independência dos dados;
-\item medição apropriada das variáveis para análise;
-\item normalidade das distribuições.
-\end{enumerate}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 1: examinar as pressuposições estatísticas}
-
-Os três pressupostos básicos são:
-
-\begin{enumerate}
-\item \textbf{independência dos dados:} A VI neste estudo identifica dois grupos relacionados, ou seja, antes vs. depois de tomar o medicamento;
-\item \textbf{medição apropriada:} variável independente (VI) \(\Rightarrow\) identifica as duas condições de medicamento versus placebo, variável dependente (VD) \(\Rightarrow\) nível de ansiedade dos participantes, é medido em como uma variável quantitativa;
-\item \textbf{normalidade das distribuições:} população original de diferenças médias é normalmente distribuida.
-\end{enumerate}
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 2: expor as hipóteses nulas e de pesquisa simbolicamente e verbalmente}
-
-O teste t de amostras relacionadas determina se a média dessas diferenças é significativamente menor do que 0.
-
-\begin{center}
-\begin{tabular}{ m{2cm}|m{2cm}|m{3cm}|m{3cm} } 
- \hline
- Tipo de Hipótese & Simbólico & Vebal & Diferença entre médias amostral e populacional\\
-  \hline
- Hipótese nula & $\mu_{D}=0;$ & Diferença média $\approx$ 0 & Erro amostral \\ 
- Hipótese de pesquisa & $\mu_{D} < 0.$ & Diferença média $<$ 0 & Medicamento diminui ansiedade  \\ 
- \hline
- \hline
-\end{tabular}
-\end{center}
+Um teste t de amostra única revelou que os alunos que frequentaram o curso de vida saudável se exercitavam mais semanalmente (\(\bar{x} = 155.67\), DP = 2.69), \(IC(\mu, 95\%)= [150,29, 161,05]\), do que os alunos da população ($\mu = 150$), $t_{(59)} = 2.11$, p = 0.04, d = 0.27.
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Etapa 3: Use o tamanho da amostra para calcular os graus de liberdade e defina as regiões críticas}
-Depois de saber o tamanho da amostra de um estudo, você precisa calcular seus graus de liberdade (gl). Para o teste t de amostra única, a fórmula para o gl é \textit{gl = N - 1}. Portanto, neste caso,
-\[gl = 6 - 1 = 5\]
+\frametitle{Distribuição Normal}
 
-\begin{columns}
-\begin{column}{0.5\textwidth}
-   Excerto da tabela t unilateral\\~\\
-
-\begin{center}
-\begin{tabular}{ccc} 
- \hline
-gl & $\alpha = .05$ & $\alpha = .01$\\
-4 &	2.131800 & 3.746900\\
-\boxit{1.7in} 5 & 2.015000 & 3.364900\\
-6 & 1.943200 & 3.142700\\
- \hline
-\end{tabular}
-\end{center}   
-   
-   
-\end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-   \begin{itemize}
-   \item O valor de corte de \(\alpha= .05\) define a região crítica, os valores t são improváveis se o valor nulo for verdadeiro.
-   \end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
-\textit{4a. Calcule D para cada participante/par correspondente}\\~\\
-
-A primeira etapa no cálculo da estatística t das amostras relacionadas é calcular o valor da diferença (ou seja, D) para cada par de valores. 
-
-\begin{center}
-\begin{tabular}{cccc} 
- \hline
-Voluntário & Antes & Depois & D (Depois - Antes)\\
- \hline
-A & 22 & 19 & -3\\
-B & 22 & 19 & -3\\
-C & 23 & 18 & -5\\
-D & 26 & 25 & -1\\
-E & 23 & 20 & -3\\
-F & 25 & 21 & -4\\
- \hline
-\end{tabular}
-\end{center}   
-
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 4: calcular a estatística do teste (teste t de amostras relacionadas)}
-\begin{itemize}
-\item 4b. Calcule a diferença média observada ($\bar{x}_D$)
-
-\[\bar{x}_D = \frac{\sum_{i=1}^n D_i}{N} = \frac{-19}{6} = -3.167\]
-
-\item 4c. Calcule a diferença média esperada devido ao erro de amostragem
-\[QM_D = \frac{1}{N-1}\sum_{i=1}^n(D_i - \bar{x}_D)^2 = 1.77\]
-\[SEM_D = \frac{DP}{\sqrt{N}} = \frac{1.329}{\sqrt{6}} = 0.543\]
-\item 4d. Calcule a estatística do teste (teste t de amostras relacionadas)
-\[t =  \frac{\bar{x}_D}{SEM_D}  = \frac{-3.167}{0.543} = -5.83\]
-\end{itemize}
-\end{frame}
-
-\setbeamercovered{transparent}
-\begin{frame}
-\frametitle{Etapa 5: calcule o tamanho do efeito e descreva se o seu grau}
-Um tamanho de efeito é um índice da diferença entre a média da amostra e a média da população. A estatística de tamanho do efeito normalmente usada ao comparar duas médias é d. 
-\begin{align*}
-d &= \frac{Desvio\quad observado\quad entre\quad as\quad medias}{Desvio\quad padrao}\\
-  &= \frac{\bar{x}_D}{DP_D} = \frac{-3.167}{1.329} =  -2.38
-\end{align*}
-
+\begin{center}\includegraphics[width=0.7\linewidth]{figs/tabela_t} \end{center}
 \end{frame}
 
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Etapa 6: Interpretando os Resultados do Teste de Hipóteses}
-
-As frases a seguir resumem os resultados deste estudo:\\~\\
-
-As pessoas apresentaram níveis de ansiedade mais baixos (\(\bar{x}_D = 20.33\), DP = 2.50) depois de tomar o medicamento do que antes de tomar o medicamento (\(\bar{x}_D = 23.50\), DP = 1.64), \(t_{(5)} = -5.83\), \(p < 0.05\) (unicaudal), d = -2.38. A redução nos valores de ansiedade foi bastante grande, mais de 2 desvios padrão. O tamanho da amostra neste estudo foi muito pequeno. Um estudo mais amplo deve ser feito antes de se tirar qualquer conclusão sobre o medicamento.
+\frametitle{Exemplo 8.6}
+Deseja-se investigar se uma certa moléstia que ataca o rim altera o consumo de oxigênio desse orgão. Foram obtidos \(\bar{x}=13.9\) e \(Var(X)=0.67\). Determine o intervalo de confiança para \(\mu\) com \(\gamma=0.95\).
+\vspace{1in}
+\vspace{1in}
 
 \end{frame}
-
 
 \setbeamercovered{transparent}
 \begin{frame}
-\frametitle{Exemplo 9.1}
-Uma distribuidora de combustíveis deseja verificar se um novo tipo de gasolina é eficaz na revitalização de motores velhos. Com esse objetivo, seleciona 12 automóveis de um mesmo modelo com mais de 8 anos de uso e, após regulagem de seus motores, verifica o consumo de combustível. Em seguida o carro é abastecido com o novo tipo de combustível durante 15 semanas, e uma nova aferição do consumo é feita. O novo combustível é eficaz na melhora do rendimento? Conclua com \(\alpha=0.05\).
-
-\begin{table}[h]
-\tiny
-\centering
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-Autom. & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
-\hline
-Após (Y) & 11.6 & 8.8 & 9.9 & 9.5 & 11.6 & 9.1 & 10.6 & 10.8 & 13.4 & 10.6 & 10.5 & 11.4 \\
-\hline
-Antes (X) & 8.1 & 7.9 & 6.8 & 7.8 & 7.6 & 7.9 & 5.7 & 8.4 & 8.0 & 9.5 & 8.0 & 6.8 \\
-\hline
-D = Y-X & 3.5 & 0.9 & 3.1 & 1.7 & 4.0 & 1.2 & 4.9 & 2.4 & 5.4 & 1.1 & 2.5 & 4.6 \\
-\hline
-\end{tabular}
-\end{table}
+\frametitle{Exemplo 10.5\footcite{martinez2015bioestatistica}}
+Em um estudo sobre a deficiência de zinco em crianças, foi utilizada uma amostra de \(n=35\) crianças. Em amostras de sangue dessas crianças, obtidas por punção venosa, foi encontrada uma média de \(\bar{x}=118.7\ \mu g/dl\) para os níveis séricos de zinco, com desvio padrão amostral de \(DP=23.1 \mu g/dl\). Determine o intervalo de confiança para \(\mu\) com \(\gamma=0.99\).
+\vspace{1in}
+\vspace{1in}
 
 \end{frame}
+
 
 \setbeamercovered{transparent}
 \begin{frame}
