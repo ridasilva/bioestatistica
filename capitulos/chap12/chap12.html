@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>10 - Teste t de amostras independentes &#8212; Bioestatística</title>
+    <title>12 - Teste t de amostras independentes &#8212; Bioestatística</title>
   
   
   
@@ -63,8 +63,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="11 - ANOVA de um fator para amostras independentes" href="../chap13/chap13.html" />
-    <link rel="prev" title="9 - Teste t de amostras relacionadas" href="../chap11/chap11.html" />
+    <link rel="next" title="13 - ANOVA de um fator para amostras independentes" href="../chap13/chap13.html" />
+    <link rel="prev" title="11 - Teste t de amostras relacionadas" href="../chap11/chap11.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,13 +186,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../chap4/chap4.html">4 - Medidas Resumo</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - Variáveis Bidimensionais</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">6 - Testando hipóteses com a variável padrão z</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">7 - Teste t de amostra única</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">8 - Estimativa com Intervalos de confiança</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">9 - Teste t de amostras relacionadas</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">10 - Teste t de amostras independentes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap13/chap13.html">11 - ANOVA de um fator para amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Variáveis Aleatórias Contínuas</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap13/chap13.html">13 - ANOVA de um fator para amostras independentes</a></li>
 </ul>
 
     </div>
@@ -378,7 +382,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>10 - Teste t de amostras independentes</h1>
+    <h1>12 - Teste t de amostras independentes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -422,7 +426,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="teste-t-de-amostras-independentes">
-<h1>10 - Teste t de amostras independentes<a class="headerlink" href="#teste-t-de-amostras-independentes" title="Link to this heading">#</a></h1>
+<h1>12 - Teste t de amostras independentes<a class="headerlink" href="#teste-t-de-amostras-independentes" title="Link to this heading">#</a></h1>
 <p>Este material foi traduzido e adaptado de <span id="id1">[<a class="reference internal" href="../chap9/chap9.html#id12" title="Kieth A Carlson and Jennifer R Winquist. An introduction to statistics: An active learning approach. Sage Publications, 2017.">CW17</a>]</span>.</p>
 <p>OBJETIVOS DE APRENDIZADO</p>
 <p>Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
@@ -458,13 +462,13 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="FsgMfFzHDLWD" data-shufflequestions="False"
+<div class="output text_html"><div id="LeaHVHxcfBTX" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#FsgMfFzHDLWD {
+#LeaHVHxcfBTX {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -634,7 +638,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsFsgMfFzHDLWD=[
+</style></div><script type="application/javascript">var questionsLeaHVHxcfBTX=[
   {
 	"question": "1. Qual teste de significância você deve usar para determinar se a diferença entre duas amostras não relacionadas é provavelmente devido a um erro amostral?",
     "type":"multiple_choice",
@@ -1441,8 +1445,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("FsgMfFzHDLWD")) {
-            show_questions(questionsFsgMfFzHDLWD,  FsgMfFzHDLWD); 
+          if(document.getElementById("LeaHVHxcfBTX")) {
+            show_questions(questionsLeaHVHxcfBTX,  LeaHVHxcfBTX); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1451,8 +1455,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("FsgMfFzHDLWD");
-        // console.log(document.getElementById("FsgMfFzHDLWD"));
+        //console.log("LeaHVHxcfBTX");
+        // console.log(document.getElementById("LeaHVHxcfBTX"));
 
         try_show();
         }
@@ -1496,13 +1500,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="wYVZswNBhlbG" data-shufflequestions="False"
+<div class="output text_html"><div id="jYlEyMjjBRWf" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#wYVZswNBhlbG {
+#jYlEyMjjBRWf {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -1672,7 +1676,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionswYVZswNBhlbG=[{
+</style></div><script type="application/javascript">var questionsjYlEyMjjBRWf=[{
     "question": "3. Um teste t para amostras independentes t pode ser usado para comparar diferenças entre amostras que",
     "type": "multiple_choice",
     "answers": [
@@ -2467,8 +2471,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("wYVZswNBhlbG")) {
-            show_questions(questionswYVZswNBhlbG,  wYVZswNBhlbG); 
+          if(document.getElementById("jYlEyMjjBRWf")) {
+            show_questions(questionsjYlEyMjjBRWf,  jYlEyMjjBRWf); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -2477,8 +2481,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("wYVZswNBhlbG");
-        // console.log(document.getElementById("wYVZswNBhlbG"));
+        //console.log("jYlEyMjjBRWf");
+        // console.log(document.getElementById("jYlEyMjjBRWf"));
 
         try_show();
         }
@@ -2505,13 +2509,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="WrhIwLPovhLK" data-shufflequestions="False"
+<div class="output text_html"><div id="vnNMaUfZotpA" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#WrhIwLPovhLK {
+#vnNMaUfZotpA {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -2681,7 +2685,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsWrhIwLPovhLK=[{
+</style></div><script type="application/javascript">var questionsvnNMaUfZotpA=[{
     "question": "4. O teste t para amostras independentes é uma razão entre a diferença entre duas médias amostrais sobre uma estimativa de",
     "type": "multiple_choice",
     "answers": [
@@ -3485,8 +3489,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("WrhIwLPovhLK")) {
-            show_questions(questionsWrhIwLPovhLK,  WrhIwLPovhLK); 
+          if(document.getElementById("vnNMaUfZotpA")) {
+            show_questions(questionsvnNMaUfZotpA,  vnNMaUfZotpA); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -3495,8 +3499,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("WrhIwLPovhLK");
-        // console.log(document.getElementById("WrhIwLPovhLK"));
+        //console.log("vnNMaUfZotpA");
+        // console.log(document.getElementById("vnNMaUfZotpA"));
 
         try_show();
         }
@@ -3528,13 +3532,13 @@ Felizmente, os programas estatísticos calculam ambos os valores t. Portanto, ao
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="wZuuftfGMxUu" data-shufflequestions="False"
+<div class="output text_html"><div id="TpHDQqpYYlvG" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#wZuuftfGMxUu {
+#TpHDQqpYYlvG {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -3704,7 +3708,7 @@ Felizmente, os programas estatísticos calculam ambos os valores t. Portanto, ao
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionswZuuftfGMxUu=[
+</style></div><script type="application/javascript">var questionsTpHDQqpYYlvG=[
     {
         "question": "6. Você usa uma estatística t de amostras independentes quando",
         "type": "multiple_choice",
@@ -4513,8 +4517,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("wZuuftfGMxUu")) {
-            show_questions(questionswZuuftfGMxUu,  wZuuftfGMxUu); 
+          if(document.getElementById("TpHDQqpYYlvG")) {
+            show_questions(questionsTpHDQqpYYlvG,  TpHDQqpYYlvG); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -4523,8 +4527,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("wZuuftfGMxUu");
-        // console.log(document.getElementById("wZuuftfGMxUu"));
+        //console.log("TpHDQqpYYlvG");
+        // console.log(document.getElementById("TpHDQqpYYlvG"));
 
         try_show();
         }
@@ -4569,13 +4573,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="gvcSORBBLKLY" data-shufflequestions="False"
+<div class="output text_html"><div id="iNjECVAATmJF" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#gvcSORBBLKLY {
+#iNjECVAATmJF {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -4745,7 +4749,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsgvcSORBBLKLY=[
+</style></div><script type="application/javascript">var questionsiNjECVAATmJF=[
   {
 	"question": "8. Qual das seguintes alternativas representa a hipótese nula ao realizar um teste independente bicaudal?",
 	"type": "multiple_choice",
@@ -5549,8 +5553,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("gvcSORBBLKLY")) {
-            show_questions(questionsgvcSORBBLKLY,  gvcSORBBLKLY); 
+          if(document.getElementById("iNjECVAATmJF")) {
+            show_questions(questionsiNjECVAATmJF,  iNjECVAATmJF); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -5559,8 +5563,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("gvcSORBBLKLY");
-        // console.log(document.getElementById("gvcSORBBLKLY"));
+        //console.log("iNjECVAATmJF");
+        // console.log(document.getElementById("iNjECVAATmJF"));
 
         try_show();
         }
@@ -5600,37 +5604,37 @@ if (typeof version == 'undefined') {
 </details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_0c471_row1_col0, #T_0c471_row1_col1, #T_0c471_row1_col2 {
+#T_f5288_row1_col0, #T_f5288_row1_col1, #T_f5288_row1_col2 {
   background-color: yellow;
 }
 </style>
-<table id="T_0c471">
+<table id="T_f5288">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_0c471_level0_col0" class="col_heading level0 col0" >gl</th>
-      <th id="T_0c471_level0_col1" class="col_heading level0 col1" >α=.05</th>
-      <th id="T_0c471_level0_col2" class="col_heading level0 col2" >α=.01</th>
+      <th id="T_f5288_level0_col0" class="col_heading level0 col0" >gl</th>
+      <th id="T_f5288_level0_col1" class="col_heading level0 col1" >α=.05</th>
+      <th id="T_f5288_level0_col2" class="col_heading level0 col2" >α=.01</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_0c471_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_0c471_row0_col0" class="data row0 col0" >9</td>
-      <td id="T_0c471_row0_col1" class="data row0 col1" >2.262200</td>
-      <td id="T_0c471_row0_col2" class="data row0 col2" >3.249800</td>
+      <th id="T_f5288_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_f5288_row0_col0" class="data row0 col0" >9</td>
+      <td id="T_f5288_row0_col1" class="data row0 col1" >2.262200</td>
+      <td id="T_f5288_row0_col2" class="data row0 col2" >3.249800</td>
     </tr>
     <tr>
-      <th id="T_0c471_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_0c471_row1_col0" class="data row1 col0" >10</td>
-      <td id="T_0c471_row1_col1" class="data row1 col1" >2.228100</td>
-      <td id="T_0c471_row1_col2" class="data row1 col2" >3.169300</td>
+      <th id="T_f5288_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_f5288_row1_col0" class="data row1 col0" >10</td>
+      <td id="T_f5288_row1_col1" class="data row1 col1" >2.228100</td>
+      <td id="T_f5288_row1_col2" class="data row1 col2" >3.169300</td>
     </tr>
     <tr>
-      <th id="T_0c471_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_0c471_row2_col0" class="data row2 col0" >11</td>
-      <td id="T_0c471_row2_col1" class="data row2 col1" >2.201000</td>
-      <td id="T_0c471_row2_col2" class="data row2 col2" >3.105800</td>
+      <th id="T_f5288_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_f5288_row2_col0" class="data row2 col0" >11</td>
+      <td id="T_f5288_row2_col1" class="data row2 col1" >2.201000</td>
+      <td id="T_f5288_row2_col2" class="data row2 col2" >3.105800</td>
     </tr>
   </tbody>
 </table>
@@ -5656,13 +5660,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="RTGUoDNNoaje" data-shufflequestions="False"
+<div class="output text_html"><div id="BpUhViVyFaUg" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#RTGUoDNNoaje {
+#BpUhViVyFaUg {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -5832,7 +5836,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsRTGUoDNNoaje=[{
+</style></div><script type="application/javascript">var questionsBpUhViVyFaUg=[{
 	"question": "10. When computing the numerator of the independent samples t test, the population mean difference (i.e., µ1 − µ2) will always be",
 	"type": "multiple_choice",
 	"answers": [
@@ -6627,8 +6631,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("RTGUoDNNoaje")) {
-            show_questions(questionsRTGUoDNNoaje,  RTGUoDNNoaje); 
+          if(document.getElementById("BpUhViVyFaUg")) {
+            show_questions(questionsBpUhViVyFaUg,  BpUhViVyFaUg); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -6637,8 +6641,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("RTGUoDNNoaje");
-        // console.log(document.getElementById("RTGUoDNNoaje"));
+        //console.log("BpUhViVyFaUg");
+        // console.log(document.getElementById("BpUhViVyFaUg"));
 
         try_show();
         }
@@ -6670,13 +6674,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="WiePZOUjDFNs" data-shufflequestions="False"
+<div class="output text_html"><div id="nVQTSOgrgDIo" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#WiePZOUjDFNs {
+#nVQTSOgrgDIo {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -6846,7 +6850,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsWiePZOUjDFNs=[{
+</style></div><script type="application/javascript">var questionsnVQTSOgrgDIo=[{
 	"question": "11. O erro padrão estimado da diferença média é",
     "type": "multiple_choice",
 	"answers": [
@@ -7641,8 +7645,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("WiePZOUjDFNs")) {
-            show_questions(questionsWiePZOUjDFNs,  WiePZOUjDFNs); 
+          if(document.getElementById("nVQTSOgrgDIo")) {
+            show_questions(questionsnVQTSOgrgDIo,  nVQTSOgrgDIo); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -7651,8 +7655,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("WiePZOUjDFNs");
-        // console.log(document.getElementById("WiePZOUjDFNs"));
+        //console.log("nVQTSOgrgDIo");
+        // console.log(document.getElementById("nVQTSOgrgDIo"));
 
         try_show();
         }
@@ -7676,13 +7680,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="haVShGpeNiei" data-shufflequestions="False"
+<div class="output text_html"><div id="yBwtlSRNbRtZ" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#haVShGpeNiei {
+#yBwtlSRNbRtZ {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -7852,7 +7856,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionshaVShGpeNiei=[
+</style></div><script type="application/javascript">var questionsyBwtlSRNbRtZ=[
 {
 		"question": "12. Quando o valor t obtido não estiver distante de zero, então o valor crítico da hipótese nula deve",
 		"type": "multiple_choice",
@@ -8648,8 +8652,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("haVShGpeNiei")) {
-            show_questions(questionshaVShGpeNiei,  haVShGpeNiei); 
+          if(document.getElementById("yBwtlSRNbRtZ")) {
+            show_questions(questionsyBwtlSRNbRtZ,  yBwtlSRNbRtZ); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -8658,8 +8662,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("haVShGpeNiei");
-        // console.log(document.getElementById("haVShGpeNiei"));
+        //console.log("yBwtlSRNbRtZ");
+        // console.log(document.getElementById("yBwtlSRNbRtZ"));
 
         try_show();
         }
@@ -8685,13 +8689,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="vhUyefCBdYWk" data-shufflequestions="False"
+<div class="output text_html"><div id="DauZptJoeEYQ" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#vhUyefCBdYWk {
+#DauZptJoeEYQ {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -8861,7 +8865,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsvhUyefCBdYWk=
+</style></div><script type="application/javascript">var questionsDauZptJoeEYQ=
 [{
     "question": "13. Sempre que você não rejeitar a hipótese nula e, ainda assim, o tamanho do efeito for médio ou grande, você deve concluir",
     "type": "multiple_choice",
@@ -9657,8 +9661,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("vhUyefCBdYWk")) {
-            show_questions(questionsvhUyefCBdYWk,  vhUyefCBdYWk); 
+          if(document.getElementById("DauZptJoeEYQ")) {
+            show_questions(questionsDauZptJoeEYQ,  DauZptJoeEYQ); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -9667,8 +9671,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("vhUyefCBdYWk");
-        // console.log(document.getElementById("vhUyefCBdYWk"));
+        //console.log("DauZptJoeEYQ");
+        // console.log(document.getElementById("DauZptJoeEYQ"));
 
         try_show();
         }
@@ -9691,13 +9695,13 @@ Não houve diferença significativa entre as pontuações de memória daqueles q
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="XWSbTJxrwPfX" data-shufflequestions="False"
+<div class="output text_html"><div id="gFHurFEmfIcG" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#XWSbTJxrwPfX {
+#gFHurFEmfIcG {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -9867,7 +9871,7 @@ Não houve diferença significativa entre as pontuações de memória daqueles q
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsXWSbTJxrwPfX=[{
+</style></div><script type="application/javascript">var questionsgFHurFEmfIcG=[{
     "question": "14. Ao escrever seus resultados, se você não rejeitou a hipótese nula e o tamanho da sua amostra foi pequeno, você deve:",
     "type": "multiple_choice",
     "answers": [
@@ -10661,8 +10665,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("XWSbTJxrwPfX")) {
-            show_questions(questionsXWSbTJxrwPfX,  XWSbTJxrwPfX); 
+          if(document.getElementById("gFHurFEmfIcG")) {
+            show_questions(questionsgFHurFEmfIcG,  gFHurFEmfIcG); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -10671,8 +10675,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("XWSbTJxrwPfX");
-        // console.log(document.getElementById("XWSbTJxrwPfX"));
+        //console.log("gFHurFEmfIcG");
+        // console.log(document.getElementById("gFHurFEmfIcG"));
 
         try_show();
         }
@@ -10730,13 +10734,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="TYZCZqoAeYYx" data-shufflequestions="False"
+<div class="output text_html"><div id="TmtGONOVbnji" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#TYZCZqoAeYYx {
+#TmtGONOVbnji {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -10906,7 +10910,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsTYZCZqoAeYYx=[{
+</style></div><script type="application/javascript">var questionsTmtGONOVbnji=[{
     "question": "15. Qual das seguintes alternativas poderia representar uma hipótese nula ao realizar um teste independente unilateral? Observe que esta questão não se refere ao estudo descrito no texto.",
     "type": "multiple_choice",
     "answers": [
@@ -11702,8 +11706,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("TYZCZqoAeYYx")) {
-            show_questions(questionsTYZCZqoAeYYx,  TYZCZqoAeYYx); 
+          if(document.getElementById("TmtGONOVbnji")) {
+            show_questions(questionsTmtGONOVbnji,  TmtGONOVbnji); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -11712,8 +11716,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("TYZCZqoAeYYx");
-        // console.log(document.getElementById("TYZCZqoAeYYx"));
+        //console.log("TmtGONOVbnji");
+        // console.log(document.getElementById("TmtGONOVbnji"));
 
         try_show();
         }
@@ -11752,37 +11756,37 @@ if (typeof version == 'undefined') {
 </details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_bdfb8_row1_col0, #T_bdfb8_row1_col1, #T_bdfb8_row1_col2 {
+#T_53c9f_row1_col0, #T_53c9f_row1_col1, #T_53c9f_row1_col2 {
   background-color: yellow;
 }
 </style>
-<table id="T_bdfb8">
+<table id="T_53c9f">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_bdfb8_level0_col0" class="col_heading level0 col0" >gl</th>
-      <th id="T_bdfb8_level0_col1" class="col_heading level0 col1" >α=.05</th>
-      <th id="T_bdfb8_level0_col2" class="col_heading level0 col2" >α=.01</th>
+      <th id="T_53c9f_level0_col0" class="col_heading level0 col0" >gl</th>
+      <th id="T_53c9f_level0_col1" class="col_heading level0 col1" >α=.05</th>
+      <th id="T_53c9f_level0_col2" class="col_heading level0 col2" >α=.01</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_bdfb8_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_bdfb8_row0_col0" class="data row0 col0" >57</td>
-      <td id="T_bdfb8_row0_col1" class="data row0 col1" >1.672000</td>
-      <td id="T_bdfb8_row0_col2" class="data row0 col2" >2.393600</td>
+      <th id="T_53c9f_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_53c9f_row0_col0" class="data row0 col0" >57</td>
+      <td id="T_53c9f_row0_col1" class="data row0 col1" >1.672000</td>
+      <td id="T_53c9f_row0_col2" class="data row0 col2" >2.393600</td>
     </tr>
     <tr>
-      <th id="T_bdfb8_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_bdfb8_row1_col0" class="data row1 col0" >58</td>
-      <td id="T_bdfb8_row1_col1" class="data row1 col1" >1.671600</td>
-      <td id="T_bdfb8_row1_col2" class="data row1 col2" >2.392400</td>
+      <th id="T_53c9f_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_53c9f_row1_col0" class="data row1 col0" >58</td>
+      <td id="T_53c9f_row1_col1" class="data row1 col1" >1.671600</td>
+      <td id="T_53c9f_row1_col2" class="data row1 col2" >2.392400</td>
     </tr>
     <tr>
-      <th id="T_bdfb8_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_bdfb8_row2_col0" class="data row2 col0" >59</td>
-      <td id="T_bdfb8_row2_col1" class="data row2 col1" >1.671100</td>
-      <td id="T_bdfb8_row2_col2" class="data row2 col2" >2.391200</td>
+      <th id="T_53c9f_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_53c9f_row2_col0" class="data row2 col0" >59</td>
+      <td id="T_53c9f_row2_col1" class="data row2 col1" >1.671100</td>
+      <td id="T_53c9f_row2_col2" class="data row2 col2" >2.391200</td>
     </tr>
   </tbody>
 </table>
@@ -11802,13 +11806,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="IFKqLdBXRBCU" data-shufflequestions="False"
+<div class="output text_html"><div id="sBjbdPJipPKd" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#IFKqLdBXRBCU {
+#sBjbdPJipPKd {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -11978,7 +11982,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsIFKqLdBXRBCU=[{
+</style></div><script type="application/javascript">var questionssBjbdPJipPKd=[{
     "question": "16. Quando você realiza um teste t unilateral, a região crítica está sempre do lado da distribuição t que é previsto pela",
     "type": "multiple_choice",
     "answers": [
@@ -12772,8 +12776,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("IFKqLdBXRBCU")) {
-            show_questions(questionsIFKqLdBXRBCU,  IFKqLdBXRBCU); 
+          if(document.getElementById("sBjbdPJipPKd")) {
+            show_questions(questionssBjbdPJipPKd,  sBjbdPJipPKd); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -12782,8 +12786,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("IFKqLdBXRBCU");
-        // console.log(document.getElementById("IFKqLdBXRBCU"));
+        //console.log("sBjbdPJipPKd");
+        // console.log(document.getElementById("sBjbdPJipPKd"));
 
         try_show();
         }
@@ -12815,13 +12819,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="yoCuFzcEHMkJ" data-shufflequestions="False"
+<div class="output text_html"><div id="ffdKMscjoIGs" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#yoCuFzcEHMkJ {
+#ffdKMscjoIGs {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -12991,7 +12995,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsyoCuFzcEHMkJ=[{
+</style></div><script type="application/javascript">var questionsffdKMscjoIGs=[{
     "question": "17. Ao calcular o erro padrão da diferença média, a equação exige o uso de",
     "type": "multiple_choice",
     "answers": [
@@ -13785,8 +13789,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("yoCuFzcEHMkJ")) {
-            show_questions(questionsyoCuFzcEHMkJ,  yoCuFzcEHMkJ); 
+          if(document.getElementById("ffdKMscjoIGs")) {
+            show_questions(questionsffdKMscjoIGs,  ffdKMscjoIGs); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -13795,8 +13799,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("yoCuFzcEHMkJ");
-        // console.log(document.getElementById("yoCuFzcEHMkJ"));
+        //console.log("ffdKMscjoIGs");
+        // console.log(document.getElementById("ffdKMscjoIGs"));
 
         try_show();
         }
@@ -13820,13 +13824,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="PGZKwQcsPncS" data-shufflequestions="False"
+<div class="output text_html"><div id="ryfWKubgyNkB" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#PGZKwQcsPncS {
+#ryfWKubgyNkB {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -13996,7 +14000,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsPGZKwQcsPncS=[{
+</style></div><script type="application/javascript">var questionsryfWKubgyNkB=[{
     "question": "18. Qual dos seguintes valores nunca pode ser negativo?",
     "type": "multiple_choice",
     "answers": [
@@ -14791,8 +14795,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("PGZKwQcsPncS")) {
-            show_questions(questionsPGZKwQcsPncS,  PGZKwQcsPncS); 
+          if(document.getElementById("ryfWKubgyNkB")) {
+            show_questions(questionsryfWKubgyNkB,  ryfWKubgyNkB); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -14801,8 +14805,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("PGZKwQcsPncS");
-        // console.log(document.getElementById("PGZKwQcsPncS"));
+        //console.log("ryfWKubgyNkB");
+        // console.log(document.getElementById("ryfWKubgyNkB"));
 
         try_show();
         }
@@ -14828,13 +14832,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="AWGohYzzyTlj" data-shufflequestions="False"
+<div class="output text_html"><div id="PpJRjTOEINOJ" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#AWGohYzzyTlj {
+#PpJRjTOEINOJ {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -15004,7 +15008,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsAWGohYzzyTlj=[{
+</style></div><script type="application/javascript">var questionsPpJRjTOEINOJ=[{
     "question": "19. Ao determinar se um tamanho de efeito é pequeno, médio ou grande, você deve",
     "type": "multiple_choice",
     "answers": [
@@ -15798,8 +15802,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("AWGohYzzyTlj")) {
-            show_questions(questionsAWGohYzzyTlj,  AWGohYzzyTlj); 
+          if(document.getElementById("PpJRjTOEINOJ")) {
+            show_questions(questionsPpJRjTOEINOJ,  PpJRjTOEINOJ); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -15808,8 +15812,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("AWGohYzzyTlj");
-        // console.log(document.getElementById("AWGohYzzyTlj"));
+        //console.log("PpJRjTOEINOJ");
+        // console.log(document.getElementById("PpJRjTOEINOJ"));
 
         try_show();
         }
@@ -15834,13 +15838,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="ZFkYMZHvKXqa" data-shufflequestions="False"
+<div class="output text_html"><div id="KDQdTIqELpGT" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#ZFkYMZHvKXqa {
+#KDQdTIqELpGT {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -16010,7 +16014,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsZFkYMZHvKXqa=[{
+</style></div><script type="application/javascript">var questionsKDQdTIqELpGT=[{
     "question": "20. Os pesquisadores precisam ser muito cautelosos ao interpretar resultados nulos porque",
     "type": "multiple_choice",
     "answers": [
@@ -16804,8 +16808,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("ZFkYMZHvKXqa")) {
-            show_questions(questionsZFkYMZHvKXqa,  ZFkYMZHvKXqa); 
+          if(document.getElementById("KDQdTIqELpGT")) {
+            show_questions(questionsKDQdTIqELpGT,  KDQdTIqELpGT); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -16814,8 +16818,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("ZFkYMZHvKXqa");
-        // console.log(document.getElementById("ZFkYMZHvKXqa"));
+        //console.log("KDQdTIqELpGT");
+        // console.log(document.getElementById("KDQdTIqELpGT"));
 
         try_show();
         }
@@ -16840,13 +16844,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="bxnOjOJbwcfr" data-shufflequestions="False"
+<div class="output text_html"><div id="wRqyqMskxunf" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#bxnOjOJbwcfr {
+#wRqyqMskxunf {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -17016,7 +17020,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsbxnOjOJbwcfr=[{
+</style></div><script type="application/javascript">var questionswRqyqMskxunf=[{
     "question": "21. Qual valor de alfa apresenta menor risco de cometer um erro do Tipo I?",
     "type": "multiple_choice",
     "answers": [
@@ -17818,8 +17822,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("bxnOjOJbwcfr")) {
-            show_questions(questionsbxnOjOJbwcfr,  bxnOjOJbwcfr); 
+          if(document.getElementById("wRqyqMskxunf")) {
+            show_questions(questionswRqyqMskxunf,  wRqyqMskxunf); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -17828,8 +17832,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("bxnOjOJbwcfr");
-        // console.log(document.getElementById("bxnOjOJbwcfr"));
+        //console.log("wRqyqMskxunf");
+        // console.log(document.getElementById("wRqyqMskxunf"));
 
         try_show();
         }
@@ -17838,7 +17842,7 @@ if (typeof version == 'undefined') {
 </section>
 <section id="pratica-complementar-opcional">
 <h2>Prática complementar OPCIONAL<a class="headerlink" href="#pratica-complementar-opcional" title="Link to this heading">#</a></h2>
-<p>Código python: <a class="reference external" href="http://colab.research.google.com/github/ridasilva/bioestatisca/blob/master/capitulos/chap10/chap10amostras_independentes.ipynb"><img alt="Abra com Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Código python: <a class="reference external" href="http://colab.research.google.com/github/ridasilva/bioestatisca/blob/master/capitulos/chap12/chap12amostras_independentes.ipynb"><img alt="Abra com Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
 <p>Google Planilhas: <a class="reference external" href="https://docs.google.com/spreadsheets/d/1TVjJWrYZ7jnKslqKZXkGpvjY8vctVjZ5N3cNL9F0HSU/edit?usp=sharing"><img alt="Abra com Colab" src="capitulos/chap5/fig/google_sheet.png" /></a></p>
 </section>
 <section id="bibliografia">
@@ -17902,7 +17906,7 @@ if (typeof version == 'undefined') {
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">9 - Teste t de amostras relacionadas</p>
+        <p class="prev-next-title">11 - Teste t de amostras relacionadas</p>
       </div>
     </a>
     <a class="right-next"
@@ -17910,7 +17914,7 @@ if (typeof version == 'undefined') {
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">11 - ANOVA de um fator para amostras independentes</p>
+        <p class="prev-next-title">13 - ANOVA de um fator para amostras independentes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

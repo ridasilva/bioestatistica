@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>8 - Estimativa com Intervalos de confiança &#8212; Bioestatística</title>
+    <title>10 - Estimativa com Intervalos de confiança &#8212; Bioestatística</title>
   
   
   
@@ -63,8 +63,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="9 - Teste t de amostras relacionadas" href="../chap11/chap11.html" />
-    <link rel="prev" title="7 - Teste t de amostra única" href="../chap9/chap9.html" />
+    <link rel="next" title="11 - Teste t de amostras relacionadas" href="../chap11/chap11.html" />
+    <link rel="prev" title="9 - Teste t de amostra única" href="../chap9/chap9.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,13 +186,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../chap4/chap4.html">4 - Medidas Resumo</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - Variáveis Bidimensionais</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">5 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">6 - Testando hipóteses com a variável padrão z</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">7 - Teste t de amostra única</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">8 - Estimativa com Intervalos de confiança</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">9 - Teste t de amostras relacionadas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap12/chap12.html">10 - Teste t de amostras independentes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chap13/chap13.html">11 - ANOVA de um fator para amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap6/chap6.html">6 - Variáveis Aleatórias Contínuas</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostra única</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap12/chap12.html">12 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap13/chap13.html">13 - ANOVA de um fator para amostras independentes</a></li>
 </ul>
 
     </div>
@@ -378,7 +382,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>8 - Estimativa com Intervalos de confiança</h1>
+    <h1>10 - Estimativa com Intervalos de confiança</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -408,7 +412,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="estimativa-com-intervalos-de-confianca">
-<h1>8 - Estimativa com Intervalos de confiança<a class="headerlink" href="#estimativa-com-intervalos-de-confianca" title="Link to this heading">#</a></h1>
+<h1>10 - Estimativa com Intervalos de confiança<a class="headerlink" href="#estimativa-com-intervalos-de-confianca" title="Link to this heading">#</a></h1>
 <p>Este material foi traduzido e adaptado de <span id="id1">[<a class="reference internal" href="../chap9/chap9.html#id12" title="Kieth A Carlson and Jennifer R Winquist. An introduction to statistics: An active learning approach. Sage Publications, 2017.">CW17</a>]</span>.</p>
 <p>OBJETIVOS DE APRENDIZADO</p>
 <p>Depois de ler este capítulo, você será capaz de fazer o seguinte:</p>
@@ -439,13 +443,13 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="iMQmipIIldgV" data-shufflequestions="False"
+<div class="output text_html"><div id="jPQIDrrKPaNE" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#iMQmipIIldgV {
+#jPQIDrrKPaNE {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -615,7 +619,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsiMQmipIIldgV=[{"question":"1. Os testes de significância (por exemplo, testes t de amostra única) foram concebidos para ajudar os investigadores a determinar se a diferença observada era susceptível de ser criada por",
+</style></div><script type="application/javascript">var questionsjPQIDrrKPaNE=[{"question":"1. Os testes de significância (por exemplo, testes t de amostra única) foram concebidos para ajudar os investigadores a determinar se a diferença observada era susceptível de ser criada por",
 "type":"multiple_choice",
 "answers":[{"answer": "a. erro de amostragem.", "correct": true, "feedback": "Correto!"},
 {"answer": "b. fator confundidor (uma variável que influencia tanto a variável dependente, quanto a variável independente).", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
@@ -1406,8 +1410,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("iMQmipIIldgV")) {
-            show_questions(questionsiMQmipIIldgV,  iMQmipIIldgV); 
+          if(document.getElementById("jPQIDrrKPaNE")) {
+            show_questions(questionsjPQIDrrKPaNE,  jPQIDrrKPaNE); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1416,8 +1420,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("iMQmipIIldgV");
-        // console.log(document.getElementById("iMQmipIIldgV"));
+        //console.log("jPQIDrrKPaNE");
+        // console.log(document.getElementById("jPQIDrrKPaNE"));
 
         try_show();
         }
@@ -1438,13 +1442,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="PqmorUJxvKLf" data-shufflequestions="False"
+<div class="output text_html"><div id="xToUluQNiUsJ" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#PqmorUJxvKLf {
+#xToUluQNiUsJ {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -1614,7 +1618,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsPqmorUJxvKLf=[{"question":"2. Se um teste estatístico levar à rejeição da hipótese nula, a conclusão da pesquisa é sempre importante ou útil.",
+</style></div><script type="application/javascript">var questionsxToUluQNiUsJ=[{"question":"2. Se um teste estatístico levar à rejeição da hipótese nula, a conclusão da pesquisa é sempre importante ou útil.",
 "type":"multiple_choice",
 "answers":[{"answer":"a. Verdadeiro","correct":false, "feedback": "Leia o parágrafo acima novamente."},
 {"answer":"b. Falso", "correct":true, "feedback": "Correto! O tamanho do efeito pode ser demasiado pequeno para ser importante ou útil."}]
@@ -2411,8 +2415,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("PqmorUJxvKLf")) {
-            show_questions(questionsPqmorUJxvKLf,  PqmorUJxvKLf); 
+          if(document.getElementById("xToUluQNiUsJ")) {
+            show_questions(questionsxToUluQNiUsJ,  xToUluQNiUsJ); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -2421,8 +2425,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("PqmorUJxvKLf");
-        // console.log(document.getElementById("PqmorUJxvKLf"));
+        //console.log("xToUluQNiUsJ");
+        // console.log(document.getElementById("xToUluQNiUsJ"));
 
         try_show();
         }
@@ -2465,13 +2469,13 @@ Como você pode ver, os intervalos de confiança são um procedimento estatísti
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="ZYXTvOgVVzeO" data-shufflequestions="False"
+<div class="output text_html"><div id="dyWKzZYozGON" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#ZYXTvOgVVzeO {
+#dyWKzZYozGON {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -2641,7 +2645,7 @@ Como você pode ver, os intervalos de confiança são um procedimento estatísti
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsZYXTvOgVVzeO=[{"question":"4. O objetivo de um intervalo de confiança é",
+</style></div><script type="application/javascript">var questionsdyWKzZYozGON=[{"question":"4. O objetivo de um intervalo de confiança é",
 "type":"multiple_choice",
 "answers":[{"answer":"a. realizar um teste para diferenças significativas.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. quantificar a eficácia de um tratamento.","correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
@@ -3437,8 +3441,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("ZYXTvOgVVzeO")) {
-            show_questions(questionsZYXTvOgVVzeO,  ZYXTvOgVVzeO); 
+          if(document.getElementById("dyWKzZYozGON")) {
+            show_questions(questionsdyWKzZYozGON,  dyWKzZYozGON); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -3447,8 +3451,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("ZYXTvOgVVzeO");
-        // console.log(document.getElementById("ZYXTvOgVVzeO"));
+        //console.log("dyWKzZYozGON");
+        // console.log(document.getElementById("dyWKzZYozGON"));
 
         try_show();
         }
@@ -3475,13 +3479,13 @@ Embora existam muitos tipos diferentes de ICs, todos eles têm uma lógica semel
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="cxKiYNrKHFGp" data-shufflequestions="False"
+<div class="output text_html"><div id="yGmmWMgqnRJK" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#cxKiYNrKHFGp {
+#yGmmWMgqnRJK {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -3651,7 +3655,7 @@ Embora existam muitos tipos diferentes de ICs, todos eles têm uma lógica semel
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionscxKiYNrKHFGp=[{"question": "6. Qual das alternativas a seguir pode ser usada como estimativa pontual em um IC?",
+</style></div><script type="application/javascript">var questionsyGmmWMgqnRJK=[{"question": "6. Qual das alternativas a seguir pode ser usada como estimativa pontual em um IC?",
 "type": "multiple_choice",
 "answers":[{"answer":"a. Limite superior", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. Limite inferior", "correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
@@ -4448,8 +4452,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("cxKiYNrKHFGp")) {
-            show_questions(questionscxKiYNrKHFGp,  cxKiYNrKHFGp); 
+          if(document.getElementById("yGmmWMgqnRJK")) {
+            show_questions(questionsyGmmWMgqnRJK,  yGmmWMgqnRJK); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -4458,8 +4462,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("cxKiYNrKHFGp");
-        // console.log(document.getElementById("cxKiYNrKHFGp"));
+        //console.log("yGmmWMgqnRJK");
+        // console.log(document.getElementById("yGmmWMgqnRJK"));
 
         try_show();
         }
@@ -4480,13 +4484,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="gOZKzNOFvjrH" data-shufflequestions="False"
+<div class="output text_html"><div id="zwNKNICnFMRg" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#gOZKzNOFvjrH {
+#zwNKNICnFMRg {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -4656,7 +4660,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsgOZKzNOFvjrH=[{"question":"8. Qual das seguintes opções contribui para o tamanho (isto é, largura) da margem de erro? (Escolha dois.)",
+</style></div><script type="application/javascript">var questionszwNKNICnFMRg=[{"question":"8. Qual das seguintes opções contribui para o tamanho (isto é, largura) da margem de erro? (Escolha dois.)",
 "type":"many_choice",
 "answers":[{"answer":"a. Média da amostra", "correct": false, "feedback":"Incorreto. Leia o parágrafo acima novamente"},
 {"answer":"b. Tamanho da amostra", "correct": true, "feedback":"Correto!"},
@@ -5453,8 +5457,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("gOZKzNOFvjrH")) {
-            show_questions(questionsgOZKzNOFvjrH,  gOZKzNOFvjrH); 
+          if(document.getElementById("zwNKNICnFMRg")) {
+            show_questions(questionszwNKNICnFMRg,  zwNKNICnFMRg); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -5463,8 +5467,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("gOZKzNOFvjrH");
-        // console.log(document.getElementById("gOZKzNOFvjrH"));
+        //console.log("zwNKNICnFMRg");
+        // console.log(document.getElementById("zwNKNICnFMRg"));
 
         try_show();
         }
@@ -5488,13 +5492,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="CQivJefMhgXw" data-shufflequestions="False"
+<div class="output text_html"><div id="qEMpfzSJrbHV" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#CQivJefMhgXw {
+#qEMpfzSJrbHV {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -5664,7 +5668,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsCQivJefMhgXw=[{"question":" 10. Ao criar um IC de 95%, use um valor t crítico da",
+</style></div><script type="application/javascript">var questionsqEMpfzSJrbHV=[{"question":" 10. Ao criar um IC de 95%, use um valor t crítico da",
 "type":"multiple_choice",
 "answers": [{"answer":"a. tabela t bicaudal de 0.01.", "correct":false, "feedback": "Incorreto. Leia o parágrafo novamente."},
 {"answer":"b. tabela t bicaudal de 0.05.", "correct":true, "feedback": "Correto."},
@@ -6457,8 +6461,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("CQivJefMhgXw")) {
-            show_questions(questionsCQivJefMhgXw,  CQivJefMhgXw); 
+          if(document.getElementById("qEMpfzSJrbHV")) {
+            show_questions(questionsqEMpfzSJrbHV,  qEMpfzSJrbHV); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -6467,8 +6471,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("CQivJefMhgXw");
-        // console.log(document.getElementById("CQivJefMhgXw"));
+        //console.log("qEMpfzSJrbHV");
+        // console.log(document.getElementById("qEMpfzSJrbHV"));
 
         try_show();
         }
@@ -6496,13 +6500,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="XmvsLxINenSe" data-shufflequestions="False"
+<div class="output text_html"><div id="gOCkpLnyijRD" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#XmvsLxINenSe {
+#gOCkpLnyijRD {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -6672,7 +6676,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsXmvsLxINenSe=[{"question": "11. Qual das alternativas a seguir determina o valor correto do $t_{IC}$ para um determinado IC? (Escolha dois.)",
+</style></div><script type="application/javascript">var questionsgOCkpLnyijRD=[{"question": "11. Qual das alternativas a seguir determina o valor correto do $t_{IC}$ para um determinado IC? (Escolha dois.)",
 "type": "many_choice",
 "answers":[{"answer": "a. Nível de confiança (por exemplo, 95% ou 99%)", "correct": true, "feedback": "Correto!"},
 {"answer": "b. Os graus de liberdade", "correct": true, "feedback": "Correto!"},
@@ -7468,8 +7472,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("XmvsLxINenSe")) {
-            show_questions(questionsXmvsLxINenSe,  XmvsLxINenSe); 
+          if(document.getElementById("gOCkpLnyijRD")) {
+            show_questions(questionsgOCkpLnyijRD,  gOCkpLnyijRD); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -7478,8 +7482,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("XmvsLxINenSe");
-        // console.log(document.getElementById("XmvsLxINenSe"));
+        //console.log("gOCkpLnyijRD");
+        // console.log(document.getElementById("gOCkpLnyijRD"));
 
         try_show();
         }
@@ -7513,13 +7517,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="gzkBfNAhEWxp" data-shufflequestions="False"
+<div class="output text_html"><div id="RuxaWaxgIjWg" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#gzkBfNAhEWxp {
+#RuxaWaxgIjWg {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -7689,7 +7693,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsgzkBfNAhEWxp=[{"question": "13. Ao calcular um IC para uma diferença média, se zero for considerado um valor plausível (ou seja, estiver entre os limites superior e inferior), um teste de significância bicaudal descobriria que as duas médias são",
+</style></div><script type="application/javascript">var questionsRuxaWaxgIjWg=[{"question": "13. Ao calcular um IC para uma diferença média, se zero for considerado um valor plausível (ou seja, estiver entre os limites superior e inferior), um teste de significância bicaudal descobriria que as duas médias são",
 "type": "multiple_choice",
 "answers":[
     {"answer": "a. não significativamente diferentes.", "correct": true, "feedback": "Correto!"},
@@ -8481,8 +8485,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("gzkBfNAhEWxp")) {
-            show_questions(questionsgzkBfNAhEWxp,  gzkBfNAhEWxp); 
+          if(document.getElementById("RuxaWaxgIjWg")) {
+            show_questions(questionsRuxaWaxgIjWg,  RuxaWaxgIjWg); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -8491,8 +8495,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("gzkBfNAhEWxp");
-        // console.log(document.getElementById("gzkBfNAhEWxp"));
+        //console.log("RuxaWaxgIjWg");
+        // console.log(document.getElementById("RuxaWaxgIjWg"));
 
         try_show();
         }
@@ -8513,13 +8517,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="yuqcJSdgICyX" data-shufflequestions="False"
+<div class="output text_html"><div id="WbgowWsJofDt" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#yuqcJSdgICyX {
+#WbgowWsJofDt {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -8689,7 +8693,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsyuqcJSdgICyX=[{"question":"14. Qual das alternativas a seguir determina valores plausíveis para parâmetros populacionais?",
+</style></div><script type="application/javascript">var questionsWbgowWsJofDt=[{"question":"14. Qual das alternativas a seguir determina valores plausíveis para parâmetros populacionais?",
 "type":"multiple_choice",
 "answers":[{"answer":"a. Estimativas pontuais","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. Tamanhos de efeito","correct":false, "feedback":"Incorreto. Leia o parágrafo acima novamente."},
@@ -9481,8 +9485,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("yuqcJSdgICyX")) {
-            show_questions(questionsyuqcJSdgICyX,  yuqcJSdgICyX); 
+          if(document.getElementById("WbgowWsJofDt")) {
+            show_questions(questionsWbgowWsJofDt,  WbgowWsJofDt); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -9491,8 +9495,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("yuqcJSdgICyX");
-        // console.log(document.getElementById("yuqcJSdgICyX"));
+        //console.log("WbgowWsJofDt");
+        // console.log(document.getElementById("WbgowWsJofDt"));
 
         try_show();
         }
@@ -9537,13 +9541,13 @@ if (typeof version == 'undefined') {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="jTpebWRUCmYi" data-shufflequestions="False"
+<div class="output text_html"><div id="TpzvKqbPbeJS" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#jTpebWRUCmYi {
+#TpzvKqbPbeJS {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -9713,7 +9717,7 @@ if (typeof version == 'undefined') {
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsjTpebWRUCmYi=[{"question":"15. O modelo de relatório recomenda que os pesquisadores utilizem",
+</style></div><script type="application/javascript">var questionsTpzvKqbPbeJS=[{"question":"15. O modelo de relatório recomenda que os pesquisadores utilizem",
 "type":"multiple_choice",
 "answers":[{"answer":"a. ICs em vez de testes de significância.","correct": false, "feedback": "Incorreto. Leia o parágrafo acima novamente."},
 {"answer":"b. ICs em conjunto com testes de significância e tamanhos de efeito.","correct":true, "feedback": "Correto!"}]
@@ -10504,8 +10508,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("jTpebWRUCmYi")) {
-            show_questions(questionsjTpebWRUCmYi,  jTpebWRUCmYi); 
+          if(document.getElementById("TpzvKqbPbeJS")) {
+            show_questions(questionsTpzvKqbPbeJS,  TpzvKqbPbeJS); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -10514,8 +10518,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("jTpebWRUCmYi");
-        // console.log(document.getElementById("jTpebWRUCmYi"));
+        //console.log("TpzvKqbPbeJS");
+        // console.log(document.getElementById("TpzvKqbPbeJS"));
 
         try_show();
         }
@@ -10541,13 +10545,13 @@ Em segundo lugar, a largura dos ICs ajuda os pesquisadores a interpretar a preci
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="tamslXgKEhnr" data-shufflequestions="False"
+<div class="output text_html"><div id="RuozbrMFXmdA" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#tamslXgKEhnr {
+#RuozbrMFXmdA {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -10717,7 +10721,7 @@ Em segundo lugar, a largura dos ICs ajuda os pesquisadores a interpretar a preci
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionstamslXgKEhnr=[{"question": "16. Qual das alternativas a seguir não é uma interpretação correta de um IC de 95%?",
+</style></div><script type="application/javascript">var questionsRuozbrMFXmdA=[{"question": "16. Qual das alternativas a seguir não é uma interpretação correta de um IC de 95%?",
 "type": "multiple_choice",
 "answers":[{"answer": "a. Uma gama de valores de parâmetros plausíveis", "correct": false, "feedback": "Incorreto. Por favor, leia o parágrafo acima novamente."},
 {"answer": "b. Um IC mais amplo é menos preciso que um IC estreito", "correct": false, "feedback": "Incorreto. Por favor, leia o parágrafo acima novamente."},
@@ -11513,8 +11517,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("tamslXgKEhnr")) {
-            show_questions(questionstamslXgKEhnr,  tamslXgKEhnr); 
+          if(document.getElementById("RuozbrMFXmdA")) {
+            show_questions(questionsRuozbrMFXmdA,  RuozbrMFXmdA); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -11523,8 +11527,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("tamslXgKEhnr");
-        // console.log(document.getElementById("tamslXgKEhnr"));
+        //console.log("RuozbrMFXmdA");
+        // console.log(document.getElementById("RuozbrMFXmdA"));
 
         try_show();
         }
@@ -11533,7 +11537,7 @@ if (typeof version == 'undefined') {
 </section>
 <section id="pratica-complementar-opcional">
 <h2>Prática complementar OPCIONAL<a class="headerlink" href="#pratica-complementar-opcional" title="Link to this heading">#</a></h2>
-<p>Código python: <a class="reference external" href="http://colab.research.google.com/github/ridasilva/bioestatisca/blob/master/capitulos/chap8/intervalo_confianca.ipynb"><img alt="Abra com Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Código python: <a class="reference external" href="http://colab.research.google.com/github/ridasilva/bioestatisca/blob/master/capitulos/chap10/intervalo_confianca.ipynb"><img alt="Abra com Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
 <p>Google Planilhas: <a class="reference external" href="https://docs.google.com/spreadsheets/d/1DIl3aX9ue6mV9E_9TMTy8qw6usZuLAacNudxMQqYXeg/edit?usp=sharing"><img alt="Abra com Colab" src="capitulos/chap5/fig/google_sheet.png" /></a></p>
 </section>
 <section id="bibliografia">
@@ -11597,7 +11601,7 @@ if (typeof version == 'undefined') {
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">7 - Teste t de amostra única</p>
+        <p class="prev-next-title">9 - Teste t de amostra única</p>
       </div>
     </a>
     <a class="right-next"
@@ -11605,7 +11609,7 @@ if (typeof version == 'undefined') {
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">9 - Teste t de amostras relacionadas</p>
+        <p class="prev-next-title">11 - Teste t de amostras relacionadas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

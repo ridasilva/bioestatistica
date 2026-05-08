@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6 - Variáveis Aleatórias Contínuas &#8212; Bioestatística</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'capitulos/chap6/chap6';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="7 - A Distribuição Amostral das Médias e z para uma média amostral" href="../chap7/chap7.html" />
+    <link rel="prev" title="5 - Variáveis Bidimensionais" href="../chap5/chap5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Bioestatística - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Bioestatística - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Bem vindo ao livro complementar da Bioestatística
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chap1/chap1.html">1 - Análise exploratória de dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2/chap2.html">2 - Fundamentos de probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3/chap3.html">3 - Variáveis Aleatórias Discretas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap4/chap4.html">4 - Medidas Resumo</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - Variáveis Bidimensionais</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6 - Variáveis Aleatórias Contínuas</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Testando hipóteses com a variável padrão z</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostra única</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap10/chap10.html">10 - Estimativa com Intervalos de confiança</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap11/chap11.html">11 - Teste t de amostras relacionadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap12/chap12.html">12 - Teste t de amostras independentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap13/chap13.html">13 - ANOVA de um fator para amostras independentes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcapitulos/chap6/chap6.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/capitulos/chap6/chap6.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6 - Variáveis Aleatórias Contínuas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6 - Variáveis Aleatórias Contínuas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducao">Introdução</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicoes-de-probabilidade">Distribuições de probabilidade</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Distribuições de probabilidade</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Variáveis aleatórias contínuas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Variáveis aleatórias contínuas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-1">Exemplo 6.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-sob-uma-curva-1">Área sob uma curva [1]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-sob-uma-curva-definicao-de-integral-definida-1">Área sob uma curva — Definição de Integral Definida [1]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-fundamental-do-calculo">Teorema Fundamental do Cálculo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcao-densidade-de-probabilidade">Função densidade de probabilidade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcao-densidade-de-probabilidade-definicao">Função densidade de probabilidade — Definição</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observacoes-sobre-fdp">Observações sobre fdp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-3">Exemplo 6.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-posicao-para-vas-continuas">Medidas de posição para VAs contínuas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variancia-para-vas-continuas">Variância para VAs contínuas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-4">Exemplo 6.4</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#principais-modelos-continuos">Principais modelos contínuos</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-uniforme-continuo">Modelo Uniforme contínuo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-5">Exemplo 6.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-exponencial">Modelo Exponencial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-6">Exemplo 6.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-normal">Modelo Normal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristicas-da-curva-normal">Características da curva normal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-na-normal-padrao">Probabilidades na Normal padrão</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-da-variavel-z">Cálculo da variável Z</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-8">Exemplo 6.8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-como-aproximacao-da-binomial">Normal como aproximação da Binomial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-11">Exemplo 6.11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinacao-linear-de-normais-independentes">Combinação linear de Normais independentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-13">Exemplo 6.13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicios">Exercícios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="variaveis-aleatorias-continuas">
+<h1>6 - Variáveis Aleatórias Contínuas<a class="headerlink" href="#variaveis-aleatorias-continuas" title="Link to this heading">#</a></h1>
+<section id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Link to this heading">#</a></h2>
+<p>Em probabilidade, uma função <span class="math notranslate nohighlight">\(X\)</span> que associa a cada evento do espaço amostral um número real <span class="math notranslate nohighlight">\(X(\omega)\in\mathbb{R}\)</span> é denominada uma <strong>variável aleatória</strong> (VA).</p>
+<p>Uma variável aleatória pode ser classificada como <strong>discreta</strong> ou <strong>contínua</strong>, dependendo do domínio dos valores de <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>Exemplo: o número de alunos em uma sala é uma variável aleatória (discreta), denotada por <span class="math notranslate nohighlight">\(X\)</span> (maiúsculo). Uma observação dessa variável é denotada pela respectiva letra minúscula, <em>e.g.</em>, <span class="math notranslate nohighlight">\(x = 50\)</span> alunos.</p>
+<p>Em geral, denotamos a probabilidade de uma V.A. <span class="math notranslate nohighlight">\(X\)</span> assumir determinado valor <span class="math notranslate nohighlight">\(x\)</span> como <span class="math notranslate nohighlight">\(P[X]\)</span> ou <span class="math notranslate nohighlight">\(P[X = x]\)</span>.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="distribuicoes-de-probabilidade">
+<h1>Distribuições de probabilidade<a class="headerlink" href="#distribuicoes-de-probabilidade" title="Link to this heading">#</a></h1>
+<p>Existem diversos <em>modelos probabilísticos</em> que procuram descrever vários tipos de variáveis aleatórias: são as <strong>distribuições de probabilidade de variáveis aleatórias</strong> (discretas ou contínuas).</p>
+<p>A distribuição de probabilidades de uma VA <span class="math notranslate nohighlight">\(X\)</span> é, portanto, uma descrição das probabilidades associadas com os possíveis valores de <span class="math notranslate nohighlight">\(X\)</span>. Os valores que <span class="math notranslate nohighlight">\(X\)</span> assume determinam o <strong>suporte</strong> (S) da VA.</p>
+<ul class="simple">
+<li><p><strong>Variáveis discretas</strong> → suporte em um conjunto de valores enumeráveis (finitos ou infinitos)</p></li>
+<li><p><strong>Variáveis contínuas</strong> → suporte em um conjunto não enumerável de valores</p></li>
+</ul>
+<hr class="docutils" />
+<section id="id1">
+<h2>Distribuições de probabilidade<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Denomina-se de <strong>distribuição de probabilidade</strong> de alguma variável aleatória, a <strong>regra</strong> geral que define a</p>
+<ul class="simple">
+<li><p><strong>função de probabilidade</strong> (fp) (V.A.s discretas), ou a</p></li>
+<li><p><strong>função densidade de probabilidade</strong> (fdp) (V.A.s contínuas)</p></li>
+</ul>
+<p>para a variável de interesse.</p>
+<p>Existem muitas distribuições de probabilidade, mas algumas merecem destaque por sua importância prática. Estas distribuições também são chamadas de <strong>modelos probabilísticos</strong>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Variáveis aleatórias contínuas<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<section id="id3">
+<h2>Variáveis aleatórias contínuas<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Uma V.A. é classificada como contínua se assume valores em qualquer intervalo dos números reais, ou seja, um conjunto de valores não enumerável. Dessa forma, não é possível atribuir probabilidades para um ponto específico, apenas para intervalos da reta.</p>
+<p>Exemplos:</p>
+<ul class="simple">
+<li><p>Peso de animais</p></li>
+<li><p>Tempo de falha de um equipamento eletrônico</p></li>
+<li><p>Altura da maré em uma hora específica</p></li>
+<li><p>Salinidade da água do mar</p></li>
+<li><p>Retorno financeiro de um investimento</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="exemplo-6-1">
+<h2>Exemplo 6.1<a class="headerlink" href="#exemplo-6-1" title="Link to this heading">#</a></h2>
+<p>Estudos anteriores revelam a existência de uma grande lençol de água no subsolo de uma região. No entanto, sua profundidade ainda não foi determinada, sabendo-se apenas que o lençol pode estar situado em qualquer ponto entre <span class="math notranslate nohighlight">\(20\)</span> e <span class="math notranslate nohighlight">\(100\)</span> metros.</p>
+<ul class="simple">
+<li><p>Determine uma função para representar a variável <span class="math notranslate nohighlight">\(X\)</span> (profundidade do lençol de água).</p></li>
+<li><p>Calcule a probabilidade de encontrar água em uma profundidade pelo menos igual a 25, e menor ou igual a 29 metros.</p></li>
+<li><p>Qual a probabilidade de encontrar água na profundidade de 60 metros?</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="area-sob-uma-curva-1">
+<h2>Área sob uma curva [1]<a class="headerlink" href="#area-sob-uma-curva-1" title="Link to this heading">#</a></h2>
+<p>Vamos aproximar a i-ésima faixa <span class="math notranslate nohighlight">\(S_i\)</span> por um retângulo com largura <span class="math notranslate nohighlight">\(\Delta x\)</span> e altura <span class="math notranslate nohighlight">\(f(x_i)\)</span>, que é o valor de <span class="math notranslate nohighlight">\(f\)</span> na extremidade direita. Então, a área do i-ésimo retângulo é <span class="math notranslate nohighlight">\(f(x_i)\Delta x\)</span>. O que consideramos intuitivamente como a área de <span class="math notranslate nohighlight">\(S\)</span> é aproximado pela soma das áreas desses retângulos:</p>
+<p><img alt="stewart illustration" src="capitulos/chap6/figs/stewart_5_11_a" /></p>
+<div class="math notranslate nohighlight">
+\[
+A = f(x_1)\Delta x+f(x_2)\Delta x+\ldots+f(x_n)\Delta x
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="area-sob-uma-curva-definicao-de-integral-definida-1">
+<h2>Área sob uma curva — Definição de Integral Definida [1]<a class="headerlink" href="#area-sob-uma-curva-definicao-de-integral-definida-1" title="Link to this heading">#</a></h2>
+<p>Se <span class="math notranslate nohighlight">\(f\)</span> é uma função contínua definida em <span class="math notranslate nohighlight">\(a \le x \le b\)</span>, dividimos o intervalo <span class="math notranslate nohighlight">\([a,b]\)</span> em <span class="math notranslate nohighlight">\(n\)</span> subintervalos de comprimentos iguais <span class="math notranslate nohighlight">\(\Delta x = (b-a)/n\)</span>. Sejam <span class="math notranslate nohighlight">\(x_0(=a), x_1, \dots, x_n(=b)\)</span> as extremidades desses subintervalos, e sejam <span class="math notranslate nohighlight">\(x^*_1,\dots,x^*_n\)</span> pontos amostrais arbitrários nesses subintervalos, com <span class="math notranslate nohighlight">\(x^*_i \in [x_{i-1},x_i]\)</span>. Então a integral definida de <span class="math notranslate nohighlight">\(f\)</span> de <span class="math notranslate nohighlight">\(a\)</span> a <span class="math notranslate nohighlight">\(b\)</span> é</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(x)\,dx = \lim_{n\to\infty} \sum_{i=1}^n f(x^*_i)\,\Delta x
+\]</div>
+<p><img alt="stewart" src="capitulos/chap6/figs/stewart_5_11" /></p>
+<p>Fonte: <a class="reference external" href="https://pt.wikipedia.org/wiki/Integral">https://pt.wikipedia.org/wiki/Integral</a></p>
+</section>
+<hr class="docutils" />
+<section id="teorema-fundamental-do-calculo">
+<h2>Teorema Fundamental do Cálculo<a class="headerlink" href="#teorema-fundamental-do-calculo" title="Link to this heading">#</a></h2>
+<p>Pelo Teorema Fundamental do Cálculo:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(x)\,dx = F(b)-F(a)
+\]</div>
+<p>onde <span class="math notranslate nohighlight">\(F\)</span> é qualquer primitiva de <span class="math notranslate nohighlight">\(f\)</span>, isto é, <span class="math notranslate nohighlight">\(F' = f\)</span>.</p>
+<p>Integrais comuns:</p>
+<div class="math notranslate nohighlight">
+\[
+\int k \,dx = kx + C, \qquad \int x^n \,dx = \frac{x^{n+1}}{n+1} + C
+\]</div>
+<p>Propriedade útil:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^a f(x)\,dx = 0
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="funcao-densidade-de-probabilidade">
+<h2>Função densidade de probabilidade<a class="headerlink" href="#funcao-densidade-de-probabilidade" title="Link to this heading">#</a></h2>
+<p>Não podemos atribuir probabilidades a valores específicos, pois há uma quantidade <strong>não enumerável</strong> de valores. Atribuímos probabilidades a intervalos por meio de uma função; portanto, as probabilidades são representadas por áreas.</p>
+<p><img alt="densidade" src="capitulos/chap6/figs/dens-1" /></p>
+</section>
+<hr class="docutils" />
+<section id="funcao-densidade-de-probabilidade-definicao">
+<h2>Função densidade de probabilidade — Definição<a class="headerlink" href="#funcao-densidade-de-probabilidade-definicao" title="Link to this heading">#</a></h2>
+<p>A <strong>função densidade de probabilidade</strong> (fdp) atribui probabilidades a intervalos do tipo <span class="math notranslate nohighlight">\([a,b]\)</span> e é definida por</p>
+<div class="math notranslate nohighlight">
+\[
+P[a &lt; X &lt; b] = \int_{a}^{b} f(x)\,dx
+\]</div>
+<p>Propriedades:</p>
+<p>i. É uma função não negativa: <span class="math notranslate nohighlight">\(f(x) \ge 0\)</span><br />
+ii. A área total sob a curva é igual a 1: <span class="math notranslate nohighlight">\(\displaystyle \int_{-\infty}^{+\infty} f(x)\,dx = 1\)</span></p>
+</section>
+<hr class="docutils" />
+<section id="observacoes-sobre-fdp">
+<h2>Observações sobre fdp<a class="headerlink" href="#observacoes-sobre-fdp" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P[X=x] = 0\)</span>, portanto:<br />
+<span class="math notranslate nohighlight">\(P[a \le X \le b] = P[a &lt; X \le b] = P[a \le X &lt; b] = P[a &lt; X &lt; b]\)</span></p></li>
+<li><p>Qualquer função <span class="math notranslate nohighlight">\(f(\cdot)\)</span> não negativa e com área total 1 caracteriza uma VA contínua.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span> <strong>não</strong> representa a probabilidade de ocorrência de um ponto — a área entre dois pontos fornece a probabilidade.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="exemplo-6-3">
+<h2>Exemplo 6.3<a class="headerlink" href="#exemplo-6-3" title="Link to this heading">#</a></h2>
+<p>Num teste educacional com crianças, o tempo para a realização de uma bateria de questões de raciocínio verbal e lógico é modelado por <span class="math notranslate nohighlight">\(T\)</span> (em minutos) com função densidade:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(t) =
+\begin{cases}
+\frac{1}{40}(t-4), &amp; 8 \le t &lt; 10;\\
+\frac{3}{20}, &amp; 10 \le t \le 15;\\
+0, &amp; \text{caso contrário.}
+\end{cases}
+\end{split}\]</div>
+<p>Calcule <span class="math notranslate nohighlight">\(P(9 &lt; T \le 12)\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="medidas-de-posicao-para-vas-continuas">
+<h2>Medidas de posição para VAs contínuas<a class="headerlink" href="#medidas-de-posicao-para-vas-continuas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Valor esperado (média): <span class="math notranslate nohighlight">\(\displaystyle E(X)=\mu=\int_{-\infty}^{\infty} x\,f(x)\,dx.\)</span></p></li>
+<li><p>Mediana <span class="math notranslate nohighlight">\(Md\)</span> tem: <span class="math notranslate nohighlight">\(P(X\ge Md)\ge 1/2\)</span> e <span class="math notranslate nohighlight">\(P(X\le Md)\ge 1/2\)</span>.</p></li>
+<li><p>Moda <span class="math notranslate nohighlight">\(Mo\)</span> é tal que <span class="math notranslate nohighlight">\(f(Mo)=\max_x f(x)\)</span>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="variancia-para-vas-continuas">
+<h2>Variância para VAs contínuas<a class="headerlink" href="#variancia-para-vas-continuas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle Var(X)=\sigma^2=\int_{-\infty}^{\infty} (x-\mu)^2\,f(x)\,dx.\)</span></p></li>
+<li><p>Alternativamente: <span class="math notranslate nohighlight">\(Var(X)=E(X^2)-E(X)^2\)</span>, onde <span class="math notranslate nohighlight">\(\displaystyle E(X^2)=\int_{-\infty}^{\infty} x^2\,f(x)\,dx.\)</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="exemplo-6-4">
+<h2>Exemplo 6.4<a class="headerlink" href="#exemplo-6-4" title="Link to this heading">#</a></h2>
+<p>Dada a variável <span class="math notranslate nohighlight">\(C\)</span> com densidade</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(c)=
+\begin{cases}
+\frac{1}{40}\left(\frac{c}{10}+1\right), &amp; -1 \le c \le 1\\
+0, &amp; \text{caso contrário}
+\end{cases}
+\end{split}\]</div>
+<p>Calcule <span class="math notranslate nohighlight">\(E(C)\)</span> e <span class="math notranslate nohighlight">\(Var(C)\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="principais-modelos-continuos">
+<h1>Principais modelos contínuos<a class="headerlink" href="#principais-modelos-continuos" title="Link to this heading">#</a></h1>
+<section id="modelo-uniforme-continuo">
+<h2>Modelo Uniforme contínuo<a class="headerlink" href="#modelo-uniforme-continuo" title="Link to this heading">#</a></h2>
+<p>Definição: <span class="math notranslate nohighlight">\(X\)</span> tem distribuição uniforme contínua em <span class="math notranslate nohighlight">\([a,b]\)</span> (<span class="math notranslate nohighlight">\(a&lt;b\)</span>) com densidade</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=
+\begin{cases}
+\frac{1}{b-a}, &amp; a \le x \le b\\
+0, &amp; \text{caso contrário}
+\end{cases}
+\end{split}\]</div>
+<p>Notação: <span class="math notranslate nohighlight">\(X\sim U[a,b]\)</span><br />
+Esperança: <span class="math notranslate nohighlight">\(E(X)=\dfrac{a+b}{2}\)</span><br />
+Variância: <span class="math notranslate nohighlight">\(Var(X)=\dfrac{(b-a)^2}{12}\)</span></p>
+<p><img alt="uniforme" src="capitulos/chap6/figs/unnamed-chunk_3_1" /></p>
+</section>
+<hr class="docutils" />
+<section id="exemplo-6-5">
+<h2>Exemplo 6.5<a class="headerlink" href="#exemplo-6-5" title="Link to this heading">#</a></h2>
+<p>Tudos inspecionados têm 6 metros de comprimento e são submetidos a pressão até o aparecimento do primeiro vazamento; a distância à uma extremidade é anotada. Escolhe-se um tubo ao acaso. Qual a probabilidade de que o vazamento esteja a no máximo 1 metro das extremidades?</p>
+</section>
+<hr class="docutils" />
+<section id="modelo-exponencial">
+<h2>Modelo Exponencial<a class="headerlink" href="#modelo-exponencial" title="Link to this heading">#</a></h2>
+<p>Definição: <span class="math notranslate nohighlight">\(X\ge0\)</span> segue Exponencial com parâmetro <span class="math notranslate nohighlight">\(\alpha&gt;0\)</span> se</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=
+\begin{cases}
+\alpha e^{-\alpha x}, &amp; x\ge0\\
+0, &amp; \text{caso contrário}
+\end{cases}
+\end{split}\]</div>
+<p>Notação: <span class="math notranslate nohighlight">\(X\sim\text{Exp}(\alpha)\)</span><br />
+Esperança: <span class="math notranslate nohighlight">\(E(X)=1/\alpha\)</span><br />
+Variância: <span class="math notranslate nohighlight">\(Var(X)=1/\alpha^2\)</span></p>
+<p>Propriedade:</p>
+<div class="math notranslate nohighlight">
+\[
+P(a&lt;X&lt;b)=\int_a^b \alpha e^{-\alpha x}\,dx = e^{-\alpha a}-e^{-\alpha b}.
+\]</div>
+<p><img alt="exponencial" src="capitulos/chap6/figs/unnamed-chunk_4_1" /></p>
+</section>
+<hr class="docutils" />
+<section id="exemplo-6-6">
+<h2>Exemplo 6.6<a class="headerlink" href="#exemplo-6-6" title="Link to this heading">#</a></h2>
+<p>Uma indústria fabrica lâmpadas cuja vida útil segue <span class="math notranslate nohighlight">\(\text{Exp}(1/8000)\)</span>.</p>
+<ul class="simple">
+<li><p>Duração média: <span class="math notranslate nohighlight">\(E(X)=8000\)</span> horas.</p></li>
+<li><p>Proporção de troca (duração &lt; 50):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P(X&lt;50)=\int_0^{50}\frac{1}{8000}e^{-x/8000}\,dx = 1 - e^{-50/8000} \approx 0.006.
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="modelo-normal">
+<h2>Modelo Normal<a class="headerlink" href="#modelo-normal" title="Link to this heading">#</a></h2>
+<p>Definição: <span class="math notranslate nohighlight">\(X\)</span> segue Normal com média <span class="math notranslate nohighlight">\(\mu\)</span> e desvio <span class="math notranslate nohighlight">\(\sigma\)</span> se</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp\!\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right],\quad -\infty&lt;x&lt;\infty.
+\]</div>
+<p>Notação: <span class="math notranslate nohighlight">\(X\sim N(\mu,\sigma^2)\)</span><br />
+<span class="math notranslate nohighlight">\(E(X)=\mu\)</span>, <span class="math notranslate nohighlight">\(Var(X)=\sigma^2\)</span></p>
+<p><img alt="normal" src="capitulos/chap6/figs/unnamed-chunk_5_1" /></p>
+</section>
+<hr class="docutils" />
+<section id="caracteristicas-da-curva-normal">
+<h2>Características da curva normal<a class="headerlink" href="#caracteristicas-da-curva-normal" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Simétrica em relação a <span class="math notranslate nohighlight">\(\mu\)</span>.</p></li>
+<li><p>Moda em <span class="math notranslate nohighlight">\(x=\mu\)</span>.</p></li>
+<li><p>Pontos de inflexão: <span class="math notranslate nohighlight">\(\mu\pm\sigma\)</span>.</p></li>
+<li><p>Área total = 1.</p></li>
+</ul>
+<p>Relações úteis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;P[X&gt;\mu]=P[X&lt;\mu],\\
+&amp;P[\mu-\sigma&lt;X&lt;\mu+\sigma]\approx 0.683,\\
+&amp;P[\mu-2\sigma&lt;X&lt;\mu+2\sigma]\approx 0.954,\\
+&amp;P[\mu-3\sigma&lt;X&lt;\mu+3\sigma]\approx 0.997.
+\end{aligned}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="probabilidades-na-normal-padrao">
+<h2>Probabilidades na Normal padrão<a class="headerlink" href="#probabilidades-na-normal-padrao" title="Link to this heading">#</a></h2>
+<p>Para <span class="math notranslate nohighlight">\(Z\sim N(0,1)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+P[a&lt;Z&lt;b]=\int_a^b \frac{1}{\sqrt{2\pi}}e^{-z^2/2}\,dz.
+\]</div>
+<p>Transformação para qualquer <span class="math notranslate nohighlight">\(X\sim N(\mu,\sigma^2)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+P[a&lt;X&lt;b]=P\!\left(\frac{a-\mu}{\sigma}&lt;Z&lt;\frac{b-\mu}{\sigma}\right).
+\]</div>
+<p><img alt="normal-std" src="capitulos/chap6/figs/unnamed-chunk_6_1" /></p>
+</section>
+<hr class="docutils" />
+<section id="calculo-da-variavel-z">
+<h2>Cálculo da variável Z<a class="headerlink" href="#calculo-da-variavel-z" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Um valor <span class="math notranslate nohighlight">\(z=+1\)</span> é maior que aproximadamente <span class="math notranslate nohighlight">\(84.13\%\)</span> dos valores.</p></li>
+<li><p>Tabela de Zs (exemplo):</p></li>
+</ul>
+<p><img alt="ztab" src="capitulos/chap6/figs/ztab_crop" /></p>
+</section>
+<hr class="docutils" />
+<section id="exemplo-6-8">
+<h2>Exemplo 6.8<a class="headerlink" href="#exemplo-6-8" title="Link to this heading">#</a></h2>
+<p>Tempo de cura modelado por Normal com média 15 e desvio 2 (dias).</p>
+<ul class="simple">
+<li><p>Proporção que demorarão mais de 17 dias?</p></li>
+<li><p>Probabilidade de demorar menos de 20 dias?</p></li>
+<li><p>Tempo máximo para recuperar 25% dos pacientes?</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="normal-como-aproximacao-da-binomial">
+<h2>Normal como aproximação da Binomial<a class="headerlink" href="#normal-como-aproximacao-da-binomial" title="Link to this heading">#</a></h2>
+<p>Se <span class="math notranslate nohighlight">\(X\sim\text{Bin}(n,p)\)</span> então <span class="math notranslate nohighlight">\(E(X)=np\)</span>, <span class="math notranslate nohighlight">\(Var(X)=np(1-p)\)</span>. Aproximação por <span class="math notranslate nohighlight">\(Y\sim N(np,np(1-p))\)</span> quando <span class="math notranslate nohighlight">\(np\ge5\)</span> e <span class="math notranslate nohighlight">\(np(1-p)\ge5\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="exemplo-6-11">
+<h2>Exemplo 6.11<a class="headerlink" href="#exemplo-6-11" title="Link to this heading">#</a></h2>
+<p>Com <span class="math notranslate nohighlight">\(X\sim\text{Bin}(200,0.3)\)</span>, qual <span class="math notranslate nohighlight">\(P(X\ge50)\)</span>? A probabilidade exata é difícil sem computador.</p>
+<p>Aproximando: <span class="math notranslate nohighlight">\(Y\sim N(60,42)\)</span> e usando correção de continuidade,</p>
+<div class="math notranslate nohighlight">
+\[
+P(X\ge50)\approx P\left(Y\ge49.5\right)=P\left(Z\ge\frac{49.5-60}{\sqrt{42}}\right)=P(Z\ge-1.62)\approx0.9474.
+\]</div>
+<p><img alt="bin-approx" src="capitulos/chap6/figs/unnamed-chunk_8_1" /></p>
+</section>
+<hr class="docutils" />
+<section id="combinacao-linear-de-normais-independentes">
+<h2>Combinação linear de Normais independentes<a class="headerlink" href="#combinacao-linear-de-normais-independentes" title="Link to this heading">#</a></h2>
+<p>Se <span class="math notranslate nohighlight">\(X_i\sim N(\mu_i,\sigma_i^2)\)</span> independentes e <span class="math notranslate nohighlight">\(a_i\)</span> constantes, então</p>
+<div class="math notranslate nohighlight">
+\[
+W=\sum_{i=1}^n a_i X_i \sim N\Big(\sum_{i=1}^n a_i\mu_i,\;\sum_{i=1}^n a_i^2\sigma_i^2\Big).
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="exemplo-6-13">
+<h2>Exemplo 6.13<a class="headerlink" href="#exemplo-6-13" title="Link to this heading">#</a></h2>
+<p>Lucro diário (em milhares): <span class="math notranslate nohighlight">\(L=2L_A+5L_I+3L_C\)</span> com <span class="math notranslate nohighlight">\(L_A\sim N(3,4)\)</span>, <span class="math notranslate nohighlight">\(L_I\sim N(6,9)\)</span>, <span class="math notranslate nohighlight">\(L_C\sim N(4,16)\)</span>, independentes. Qual <span class="math notranslate nohighlight">\(P(L&gt;50)\)</span>?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mu_L&amp;=2\cdot3+5\cdot6+3\cdot4=48,\\
+\sigma_L^2&amp;=2^2\cdot4+5^2\cdot9+3^2\cdot16=385.
+\end{aligned}
+\end{split}\]</div>
+<p>Portanto <span class="math notranslate nohighlight">\(L\sim N(48,385)\)</span> e</p>
+<div class="math notranslate nohighlight">
+\[
+P(L&gt;50)=P\!\left(Z&gt;\frac{50-48}{\sqrt{385}}\right)=P(Z&gt;0.10)\approx0.4602.
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Seção 6.1 — 1, 2, 3, 4 e 5.</p></li>
+<li><p>Seção 6.2 — 1 a 9.</p></li>
+</ul>
+<p>[1] Ilustrações baseadas em Stewart, Calculus.</p>
+</section>
+<section id="pratica-complementar-opcional">
+<h2>Prática complementar OPCIONAL<a class="headerlink" href="#pratica-complementar-opcional" title="Link to this heading">#</a></h2>
+<p>Código python: <a class="reference external" href="http://colab.research.google.com/github/ridasilva/bioestatisca/blob/master/capitulos/chap6/chap6.ipynb"><img alt="Abra com Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+</section>
+<section id="bibliografia">
+<h2>Bibliografia<a class="headerlink" href="#bibliografia" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id4">
+<div role="list" class="citation-list">
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BM09<span class="fn-bracket">]</span></span>
+<p>Wilton de Oliveira Bussab and Pedro Alberto Morettin. <em>Estatística básica</em>. Saraiva, 2009.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CW17<span class="fn-bracket">]</span></span>
+<p>Kieth A Carlson and Jennifer R Winquist. <em>An introduction to statistics: An active learning approach</em>. Sage Publications, 2017.</p>
+</div>
+<div class="citation" id="id12" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MagalhaesdL02<span class="fn-bracket">]</span></span>
+<p>Marcos Nascimento Magalhães and Antonio Carlos Pedroso de Lima. <em>Noções de probabilidade e estatística</em>. Volume 5. Editora da Universidade de São Paulo, 2002.</p>
+</div>
+<div class="citation" id="id13" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Mar15<span class="fn-bracket">]</span></span>
+<p>Edson Zangiacomi Martinez. <em>Bioestatística para os cursos de graduação da área da saúde</em>. Blucher São Paulo, 2015.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./capitulos/chap6"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../chap5/chap5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5 - Variáveis Bidimensionais</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chap7/chap7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">7 - A Distribuição Amostral das Médias e z para uma média amostral</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6 - Variáveis Aleatórias Contínuas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducao">Introdução</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicoes-de-probabilidade">Distribuições de probabilidade</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Distribuições de probabilidade</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Variáveis aleatórias contínuas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Variáveis aleatórias contínuas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-1">Exemplo 6.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-sob-uma-curva-1">Área sob uma curva [1]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-sob-uma-curva-definicao-de-integral-definida-1">Área sob uma curva — Definição de Integral Definida [1]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-fundamental-do-calculo">Teorema Fundamental do Cálculo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcao-densidade-de-probabilidade">Função densidade de probabilidade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcao-densidade-de-probabilidade-definicao">Função densidade de probabilidade — Definição</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observacoes-sobre-fdp">Observações sobre fdp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-3">Exemplo 6.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-posicao-para-vas-continuas">Medidas de posição para VAs contínuas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variancia-para-vas-continuas">Variância para VAs contínuas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-4">Exemplo 6.4</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#principais-modelos-continuos">Principais modelos contínuos</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-uniforme-continuo">Modelo Uniforme contínuo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-5">Exemplo 6.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-exponencial">Modelo Exponencial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-6">Exemplo 6.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-normal">Modelo Normal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristicas-da-curva-normal">Características da curva normal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-na-normal-padrao">Probabilidades na Normal padrão</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-da-variavel-z">Cálculo da variável Z</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-8">Exemplo 6.8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-como-aproximacao-da-binomial">Normal como aproximação da Binomial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-11">Exemplo 6.11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinacao-linear-de-normais-independentes">Combinação linear de Normais independentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-13">Exemplo 6.13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicios">Exercícios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ricardo R. da Silva
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
