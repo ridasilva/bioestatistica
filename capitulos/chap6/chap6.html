@@ -187,9 +187,6 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../chap5/chap5.html">5 - Variáveis Bidimensionais</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6 - Variáveis Aleatórias Contínuas</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../chap7/chap7.html">7 - A Distribuição Amostral das Médias e z para uma média amostral</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap8/chap8.html">8 - Testando hipóteses com a variável padrão z</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chap9/chap9.html">9 - Teste t de amostra única</a></li>
@@ -392,16 +389,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6 - Variáveis Aleatórias Contínuas</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducao">Introdução</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicoes-de-probabilidade">Distribuições de probabilidade</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Distribuições de probabilidade</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Variáveis aleatórias contínuas</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Variáveis aleatórias contínuas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicoes-de-probabilidade">Distribuições de probabilidade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Variáveis aleatórias contínuas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-1">Exemplo 6.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-sob-uma-curva-1">Área sob uma curva [1]</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-sob-uma-curva-definicao-de-integral-definida-1">Área sob uma curva — Definição de Integral Definida [1]</a></li>
@@ -413,29 +403,26 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-posicao-para-vas-continuas">Medidas de posição para VAs contínuas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variancia-para-vas-continuas">Variância para VAs contínuas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-4">Exemplo 6.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principais-modelos-continuos">Principais modelos contínuos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-uniforme-continuo">Modelo Uniforme contínuo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-5">Exemplo 6.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-exponencial">Modelo Exponencial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-6">Exemplo 6.6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-normal">Modelo Normal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristicas-da-curva-normal">Características da curva normal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-na-normal-padrao">Probabilidades na Normal padrão</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-da-variavel-z">Cálculo da variável Z</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-8">Exemplo 6.8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-como-aproximacao-da-binomial">Normal como aproximação da Binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-11">Exemplo 6.11</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combinacao-linear-de-normais-independentes">Combinação linear de Normais independentes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-13">Exemplo 6.13</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicios">Exercícios</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#principais-modelos-continuos">Principais modelos contínuos</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-uniforme-continuo">Modelo Uniforme contínuo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-5">Exemplo 6.5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-exponencial">Modelo Exponencial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-6">Exemplo 6.6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-normal">Modelo Normal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristicas-da-curva-normal">Características da curva normal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-na-normal-padrao">Probabilidades na Normal padrão</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-da-variavel-z">Cálculo da variável Z</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-8">Exemplo 6.8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-como-aproximacao-da-binomial">Normal como aproximação da Binomial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-11">Exemplo 6.11</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinacao-linear-de-normais-independentes">Combinação linear de Normais independentes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-13">Exemplo 6.13</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicios">Exercícios</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -455,9 +442,8 @@ document.write(`
 <p>Exemplo: o número de alunos em uma sala é uma variável aleatória (discreta), denotada por <span class="math notranslate nohighlight">\(X\)</span> (maiúsculo). Uma observação dessa variável é denotada pela respectiva letra minúscula, <em>e.g.</em>, <span class="math notranslate nohighlight">\(x = 50\)</span> alunos.</p>
 <p>Em geral, denotamos a probabilidade de uma V.A. <span class="math notranslate nohighlight">\(X\)</span> assumir determinado valor <span class="math notranslate nohighlight">\(x\)</span> como <span class="math notranslate nohighlight">\(P[X]\)</span> ou <span class="math notranslate nohighlight">\(P[X = x]\)</span>.</p>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="distribuicoes-de-probabilidade">
-<h1>Distribuições de probabilidade<a class="headerlink" href="#distribuicoes-de-probabilidade" title="Link to this heading">#</a></h1>
+<section id="distribuicoes-de-probabilidade">
+<h2>Distribuições de probabilidade<a class="headerlink" href="#distribuicoes-de-probabilidade" title="Link to this heading">#</a></h2>
 <p>Existem diversos <em>modelos probabilísticos</em> que procuram descrever vários tipos de variáveis aleatórias: são as <strong>distribuições de probabilidade de variáveis aleatórias</strong> (discretas ou contínuas).</p>
 <p>A distribuição de probabilidades de uma VA <span class="math notranslate nohighlight">\(X\)</span> é, portanto, uma descrição das probabilidades associadas com os possíveis valores de <span class="math notranslate nohighlight">\(X\)</span>. Os valores que <span class="math notranslate nohighlight">\(X\)</span> assume determinam o <strong>suporte</strong> (S) da VA.</p>
 <ul class="simple">
@@ -465,8 +451,6 @@ document.write(`
 <li><p><strong>Variáveis contínuas</strong> → suporte em um conjunto não enumerável de valores</p></li>
 </ul>
 <hr class="docutils" />
-<section id="id1">
-<h2>Distribuições de probabilidade<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>Denomina-se de <strong>distribuição de probabilidade</strong> de alguma variável aleatória, a <strong>regra</strong> geral que define a</p>
 <ul class="simple">
 <li><p><strong>função de probabilidade</strong> (fp) (V.A.s discretas), ou a</p></li>
@@ -475,12 +459,9 @@ document.write(`
 <p>para a variável de interesse.</p>
 <p>Existem muitas distribuições de probabilidade, mas algumas merecem destaque por sua importância prática. Estas distribuições também são chamadas de <strong>modelos probabilísticos</strong>.</p>
 </section>
-</section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="id2">
-<h1>Variáveis aleatórias contínuas<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
-<section id="id3">
-<h2>Variáveis aleatórias contínuas<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h2>Variáveis aleatórias contínuas<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>Uma V.A. é classificada como contínua se assume valores em qualquer intervalo dos números reais, ou seja, um conjunto de valores não enumerável. Dessa forma, não é possível atribuir probabilidades para um ponto específico, apenas para intervalos da reta.</p>
 <p>Exemplos:</p>
 <ul class="simple">
@@ -616,12 +597,11 @@ f(c)=
 \end{split}\]</div>
 <p>Calcule <span class="math notranslate nohighlight">\(E(C)\)</span> e <span class="math notranslate nohighlight">\(Var(C)\)</span>.</p>
 </section>
-</section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="principais-modelos-continuos">
-<h1>Principais modelos contínuos<a class="headerlink" href="#principais-modelos-continuos" title="Link to this heading">#</a></h1>
+<section id="principais-modelos-continuos">
+<h2>Principais modelos contínuos<a class="headerlink" href="#principais-modelos-continuos" title="Link to this heading">#</a></h2>
 <section id="modelo-uniforme-continuo">
-<h2>Modelo Uniforme contínuo<a class="headerlink" href="#modelo-uniforme-continuo" title="Link to this heading">#</a></h2>
+<h3>Modelo Uniforme contínuo<a class="headerlink" href="#modelo-uniforme-continuo" title="Link to this heading">#</a></h3>
 <p>Definição: <span class="math notranslate nohighlight">\(X\)</span> tem distribuição uniforme contínua em <span class="math notranslate nohighlight">\([a,b]\)</span> (<span class="math notranslate nohighlight">\(a&lt;b\)</span>) com densidade</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -638,12 +618,12 @@ Variância: <span class="math notranslate nohighlight">\(Var(X)=\dfrac{(b-a)^2}{
 </section>
 <hr class="docutils" />
 <section id="exemplo-6-5">
-<h2>Exemplo 6.5<a class="headerlink" href="#exemplo-6-5" title="Link to this heading">#</a></h2>
+<h3>Exemplo 6.5<a class="headerlink" href="#exemplo-6-5" title="Link to this heading">#</a></h3>
 <p>Tudos inspecionados têm 6 metros de comprimento e são submetidos a pressão até o aparecimento do primeiro vazamento; a distância à uma extremidade é anotada. Escolhe-se um tubo ao acaso. Qual a probabilidade de que o vazamento esteja a no máximo 1 metro das extremidades?</p>
 </section>
 <hr class="docutils" />
 <section id="modelo-exponencial">
-<h2>Modelo Exponencial<a class="headerlink" href="#modelo-exponencial" title="Link to this heading">#</a></h2>
+<h3>Modelo Exponencial<a class="headerlink" href="#modelo-exponencial" title="Link to this heading">#</a></h3>
 <p>Definição: <span class="math notranslate nohighlight">\(X\ge0\)</span> segue Exponencial com parâmetro <span class="math notranslate nohighlight">\(\alpha&gt;0\)</span> se</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -665,7 +645,7 @@ P(a&lt;X&lt;b)=\int_a^b \alpha e^{-\alpha x}\,dx = e^{-\alpha a}-e^{-\alpha b}.
 </section>
 <hr class="docutils" />
 <section id="exemplo-6-6">
-<h2>Exemplo 6.6<a class="headerlink" href="#exemplo-6-6" title="Link to this heading">#</a></h2>
+<h3>Exemplo 6.6<a class="headerlink" href="#exemplo-6-6" title="Link to this heading">#</a></h3>
 <p>Uma indústria fabrica lâmpadas cuja vida útil segue <span class="math notranslate nohighlight">\(\text{Exp}(1/8000)\)</span>.</p>
 <ul class="simple">
 <li><p>Duração média: <span class="math notranslate nohighlight">\(E(X)=8000\)</span> horas.</p></li>
@@ -678,7 +658,7 @@ P(X&lt;50)=\int_0^{50}\frac{1}{8000}e^{-x/8000}\,dx = 1 - e^{-50/8000} \approx 0
 </section>
 <hr class="docutils" />
 <section id="modelo-normal">
-<h2>Modelo Normal<a class="headerlink" href="#modelo-normal" title="Link to this heading">#</a></h2>
+<h3>Modelo Normal<a class="headerlink" href="#modelo-normal" title="Link to this heading">#</a></h3>
 <p>Definição: <span class="math notranslate nohighlight">\(X\)</span> segue Normal com média <span class="math notranslate nohighlight">\(\mu\)</span> e desvio <span class="math notranslate nohighlight">\(\sigma\)</span> se</p>
 <div class="math notranslate nohighlight">
 \[
@@ -690,7 +670,7 @@ f(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp\!\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigm
 </section>
 <hr class="docutils" />
 <section id="caracteristicas-da-curva-normal">
-<h2>Características da curva normal<a class="headerlink" href="#caracteristicas-da-curva-normal" title="Link to this heading">#</a></h2>
+<h3>Características da curva normal<a class="headerlink" href="#caracteristicas-da-curva-normal" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Simétrica em relação a <span class="math notranslate nohighlight">\(\mu\)</span>.</p></li>
 <li><p>Moda em <span class="math notranslate nohighlight">\(x=\mu\)</span>.</p></li>
@@ -710,7 +690,7 @@ f(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp\!\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigm
 </section>
 <hr class="docutils" />
 <section id="probabilidades-na-normal-padrao">
-<h2>Probabilidades na Normal padrão<a class="headerlink" href="#probabilidades-na-normal-padrao" title="Link to this heading">#</a></h2>
+<h3>Probabilidades na Normal padrão<a class="headerlink" href="#probabilidades-na-normal-padrao" title="Link to this heading">#</a></h3>
 <p>Para <span class="math notranslate nohighlight">\(Z\sim N(0,1)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -725,7 +705,7 @@ P[a&lt;X&lt;b]=P\!\left(\frac{a-\mu}{\sigma}&lt;Z&lt;\frac{b-\mu}{\sigma}\right)
 </section>
 <hr class="docutils" />
 <section id="calculo-da-variavel-z">
-<h2>Cálculo da variável Z<a class="headerlink" href="#calculo-da-variavel-z" title="Link to this heading">#</a></h2>
+<h3>Cálculo da variável Z<a class="headerlink" href="#calculo-da-variavel-z" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Um valor <span class="math notranslate nohighlight">\(z=+1\)</span> é maior que aproximadamente <span class="math notranslate nohighlight">\(84.13\%\)</span> dos valores.</p></li>
 <li><p>Tabela de Zs (exemplo):</p></li>
@@ -734,7 +714,7 @@ P[a&lt;X&lt;b]=P\!\left(\frac{a-\mu}{\sigma}&lt;Z&lt;\frac{b-\mu}{\sigma}\right)
 </section>
 <hr class="docutils" />
 <section id="exemplo-6-8">
-<h2>Exemplo 6.8<a class="headerlink" href="#exemplo-6-8" title="Link to this heading">#</a></h2>
+<h3>Exemplo 6.8<a class="headerlink" href="#exemplo-6-8" title="Link to this heading">#</a></h3>
 <p>Tempo de cura modelado por Normal com média 15 e desvio 2 (dias).</p>
 <ul class="simple">
 <li><p>Proporção que demorarão mais de 17 dias?</p></li>
@@ -744,12 +724,12 @@ P[a&lt;X&lt;b]=P\!\left(\frac{a-\mu}{\sigma}&lt;Z&lt;\frac{b-\mu}{\sigma}\right)
 </section>
 <hr class="docutils" />
 <section id="normal-como-aproximacao-da-binomial">
-<h2>Normal como aproximação da Binomial<a class="headerlink" href="#normal-como-aproximacao-da-binomial" title="Link to this heading">#</a></h2>
+<h3>Normal como aproximação da Binomial<a class="headerlink" href="#normal-como-aproximacao-da-binomial" title="Link to this heading">#</a></h3>
 <p>Se <span class="math notranslate nohighlight">\(X\sim\text{Bin}(n,p)\)</span> então <span class="math notranslate nohighlight">\(E(X)=np\)</span>, <span class="math notranslate nohighlight">\(Var(X)=np(1-p)\)</span>. Aproximação por <span class="math notranslate nohighlight">\(Y\sim N(np,np(1-p))\)</span> quando <span class="math notranslate nohighlight">\(np\ge5\)</span> e <span class="math notranslate nohighlight">\(np(1-p)\ge5\)</span>.</p>
 </section>
 <hr class="docutils" />
 <section id="exemplo-6-11">
-<h2>Exemplo 6.11<a class="headerlink" href="#exemplo-6-11" title="Link to this heading">#</a></h2>
+<h3>Exemplo 6.11<a class="headerlink" href="#exemplo-6-11" title="Link to this heading">#</a></h3>
 <p>Com <span class="math notranslate nohighlight">\(X\sim\text{Bin}(200,0.3)\)</span>, qual <span class="math notranslate nohighlight">\(P(X\ge50)\)</span>? A probabilidade exata é difícil sem computador.</p>
 <p>Aproximando: <span class="math notranslate nohighlight">\(Y\sim N(60,42)\)</span> e usando correção de continuidade,</p>
 <div class="math notranslate nohighlight">
@@ -760,7 +740,7 @@ P(X\ge50)\approx P\left(Y\ge49.5\right)=P\left(Z\ge\frac{49.5-60}{\sqrt{42}}\rig
 </section>
 <hr class="docutils" />
 <section id="combinacao-linear-de-normais-independentes">
-<h2>Combinação linear de Normais independentes<a class="headerlink" href="#combinacao-linear-de-normais-independentes" title="Link to this heading">#</a></h2>
+<h3>Combinação linear de Normais independentes<a class="headerlink" href="#combinacao-linear-de-normais-independentes" title="Link to this heading">#</a></h3>
 <p>Se <span class="math notranslate nohighlight">\(X_i\sim N(\mu_i,\sigma_i^2)\)</span> independentes e <span class="math notranslate nohighlight">\(a_i\)</span> constantes, então</p>
 <div class="math notranslate nohighlight">
 \[
@@ -769,7 +749,7 @@ W=\sum_{i=1}^n a_i X_i \sim N\Big(\sum_{i=1}^n a_i\mu_i,\;\sum_{i=1}^n a_i^2\sig
 </section>
 <hr class="docutils" />
 <section id="exemplo-6-13">
-<h2>Exemplo 6.13<a class="headerlink" href="#exemplo-6-13" title="Link to this heading">#</a></h2>
+<h3>Exemplo 6.13<a class="headerlink" href="#exemplo-6-13" title="Link to this heading">#</a></h3>
 <p>Lucro diário (em milhares): <span class="math notranslate nohighlight">\(L=2L_A+5L_I+3L_C\)</span> com <span class="math notranslate nohighlight">\(L_A\sim N(3,4)\)</span>, <span class="math notranslate nohighlight">\(L_I\sim N(6,9)\)</span>, <span class="math notranslate nohighlight">\(L_C\sim N(4,16)\)</span>, independentes. Qual <span class="math notranslate nohighlight">\(P(L&gt;50)\)</span>?</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -786,12 +766,13 @@ P(L&gt;50)=P\!\left(Z&gt;\frac{50-48}{\sqrt{385}}\right)=P(Z&gt;0.10)\approx0.46
 </section>
 <hr class="docutils" />
 <section id="exercicios">
-<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link to this heading">#</a></h2>
+<h3>Exercícios<a class="headerlink" href="#exercicios" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Seção 6.1 — 1, 2, 3, 4 e 5.</p></li>
 <li><p>Seção 6.2 — 1 a 9.</p></li>
 </ul>
 <p>[1] Ilustrações baseadas em Stewart, Calculus.</p>
+</section>
 </section>
 <section id="pratica-complementar-opcional">
 <h2>Prática complementar OPCIONAL<a class="headerlink" href="#pratica-complementar-opcional" title="Link to this heading">#</a></h2>
@@ -799,21 +780,21 @@ P(L&gt;50)=P\!\left(Z&gt;\frac{50-48}{\sqrt{385}}\right)=P(Z&gt;0.10)\approx0.46
 </section>
 <section id="bibliografia">
 <h2>Bibliografia<a class="headerlink" href="#bibliografia" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id4">
+<div class="docutils container" id="id2">
 <div role="list" class="citation-list">
-<div class="citation" id="id10" role="doc-biblioentry">
+<div class="citation" id="id8" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>BM09<span class="fn-bracket">]</span></span>
 <p>Wilton de Oliveira Bussab and Pedro Alberto Morettin. <em>Estatística básica</em>. Saraiva, 2009.</p>
 </div>
-<div class="citation" id="id11" role="doc-biblioentry">
+<div class="citation" id="id9" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>CW17<span class="fn-bracket">]</span></span>
 <p>Kieth A Carlson and Jennifer R Winquist. <em>An introduction to statistics: An active learning approach</em>. Sage Publications, 2017.</p>
 </div>
-<div class="citation" id="id12" role="doc-biblioentry">
+<div class="citation" id="id10" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>MagalhaesdL02<span class="fn-bracket">]</span></span>
 <p>Marcos Nascimento Magalhães and Antonio Carlos Pedroso de Lima. <em>Noções de probabilidade e estatística</em>. Volume 5. Editora da Universidade de São Paulo, 2002.</p>
 </div>
-<div class="citation" id="id13" role="doc-biblioentry">
+<div class="citation" id="id11" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Mar15<span class="fn-bracket">]</span></span>
 <p>Edson Zangiacomi Martinez. <em>Bioestatística para os cursos de graduação da área da saúde</em>. Blucher São Paulo, 2015.</p>
 </div>
@@ -886,16 +867,9 @@ P(L&gt;50)=P\!\left(Z&gt;\frac{50-48}{\sqrt{385}}\right)=P(Z&gt;0.10)\approx0.46
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6 - Variáveis Aleatórias Contínuas</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducao">Introdução</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicoes-de-probabilidade">Distribuições de probabilidade</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Distribuições de probabilidade</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Variáveis aleatórias contínuas</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Variáveis aleatórias contínuas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicoes-de-probabilidade">Distribuições de probabilidade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Variáveis aleatórias contínuas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-1">Exemplo 6.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-sob-uma-curva-1">Área sob uma curva [1]</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-sob-uma-curva-definicao-de-integral-definida-1">Área sob uma curva — Definição de Integral Definida [1]</a></li>
@@ -907,29 +881,26 @@ P(L&gt;50)=P\!\left(Z&gt;\frac{50-48}{\sqrt{385}}\right)=P(Z&gt;0.10)\approx0.46
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-posicao-para-vas-continuas">Medidas de posição para VAs contínuas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variancia-para-vas-continuas">Variância para VAs contínuas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-4">Exemplo 6.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principais-modelos-continuos">Principais modelos contínuos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-uniforme-continuo">Modelo Uniforme contínuo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-5">Exemplo 6.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-exponencial">Modelo Exponencial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-6">Exemplo 6.6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-normal">Modelo Normal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristicas-da-curva-normal">Características da curva normal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-na-normal-padrao">Probabilidades na Normal padrão</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-da-variavel-z">Cálculo da variável Z</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-8">Exemplo 6.8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-como-aproximacao-da-binomial">Normal como aproximação da Binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-11">Exemplo 6.11</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combinacao-linear-de-normais-independentes">Combinação linear de Normais independentes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-13">Exemplo 6.13</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicios">Exercícios</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#principais-modelos-continuos">Principais modelos contínuos</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-uniforme-continuo">Modelo Uniforme contínuo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-5">Exemplo 6.5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-exponencial">Modelo Exponencial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-6">Exemplo 6.6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-normal">Modelo Normal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristicas-da-curva-normal">Características da curva normal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-na-normal-padrao">Probabilidades na Normal padrão</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-da-variavel-z">Cálculo da variável Z</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-8">Exemplo 6.8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-como-aproximacao-da-binomial">Normal como aproximação da Binomial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-11">Exemplo 6.11</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinacao-linear-de-normais-independentes">Combinação linear de Normais independentes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-13">Exemplo 6.13</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicios">Exercícios</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pratica-complementar-opcional">Prática complementar OPCIONAL</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografia</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
