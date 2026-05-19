@@ -6,7 +6,7 @@
 },
 {"question":"22. Quando você deve realizar um teste unilateral?",
 "type":"multiple_choice",
-"answers":[{"answer":"a. Quando a hipótese de pesquisa prevê que a variável estudada irá aumentar ou se irá diminuir.",
+"answers":[{"answer":"a. Quando a hipótese de pesquisa prevê que a variável estudada irá aumentar ou irá diminuir.",
 "correct":true, "feedback": "Correto!"},
 {"answer":"b. Quando a hipótese de pesquisa não especificar se as variáveis estudadas aumentarão ou diminuirão.", "correct":false, "feedback": "Incorreto. Leia o parágrafo acima novamente."}]
 }]
