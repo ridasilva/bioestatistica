@@ -1,5 +1,5 @@
 [{
-	"question": "10. When computing the numerator of the independent samples t test, the population mean difference (i.e., µ1 − µ2) will always be",
+	"question": "10. Ao calcular o numerador do teste t para amostras independentes, a diferença das médias populacionais (ou seja, µ1 − µ2) será sempre",
 	"type": "multiple_choice",
 	"answers": [
 	  {"answer": "a. 0.", "correct": true, "feedback": "Correto! A hipótese nula assume que a diferença das médias populacionais é zero."},

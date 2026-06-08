@@ -240,8 +240,8 @@ Exemplo: \(\gamma = 0,95\):
 
 \begin{itemize}
 \item
-  Temos que \(\gamma/2 = 0,475\) é a área que devemos procurar no corpo
-  da tabela
+  Temos que como \(\gamma/2 = 0,475\), devemos procurar por \(z_{\gamma/2}\) cuja área do corpo
+  da tabela de 0,975;
 \item
   O valor de \(z_{\gamma/2}\) será determinado pelos valores
   correspondentes nas margens da tabela. Nesse caso,
@@ -494,12 +494,28 @@ Agora, o reitor quer aplicar esses resultados da pesquisa à população de seu 
 
 Para o cálculo você precisa dos mesmos três valores: 
 \begin{itemize}
-\item a estimativa pontual ou $\bar{x}$;
+\item a estimativas pontuais $\bar{x}=155.67$, $S=20.85$ e $n=60$;
 \item o valor t crítico correto para o IC ou $t_{IC}$;
 \item o erro de amostragem esperado ou $SEM_a$.
 \end{itemize}
 
-O valor t crítico vem da tabela t crítica bicaudal 0.05 porque estamos computando um IC de 95\% de confiança. O \textit{gl} é 59 (gl = n - 1 = 60 - 1 = 59), então o \(t_{IC}\) é 2.001. E os \(SEM_a\) é \(DP/\sqrt{N}\) ou 20.85/60 = 2.69.
+
+\end{frame}
+
+\setbeamercovered{transparent}
+\begin{frame}
+\frametitle{Cálculo do intervalo de confiança}
+
+Agora, o reitor quer aplicar esses resultados da pesquisa à população de seu interesse, calculando um IC de 95\% para estimar esse parâmetro populacional. Comece escrevendo as seguintes fórmulas para os limites superior e inferior do IC.\\~\\
+
+Para o cálculo você precisa dos mesmos três valores: 
+\begin{itemize}
+\item a estimativas pontuais $\bar{x}=155.67$, $S=20.85$ e $n=60$;
+\item o valor t crítico correto para o IC ou $t_{IC}$;
+\item o erro de amostragem esperado ou $SEM_a$.
+\end{itemize}
+
+O valor t crítico vem da tabela t crítica bicaudal 0.05 porque estamos computando um IC de 95\% de confiança. O \textit{gl} é 59 (gl = n - 1 = 60 - 1 = 59), então o \(t_{IC}\) é 2.001. E os \(SEM_a\) é \(DP/\sqrt{N}\) ou \(20.85/\sqrt{60}\) = 2.69.
 
 \end{frame}
 
@@ -559,7 +575,7 @@ Se uma diferença média de zero não estiver entre os limites superior e inferi
 
 Recomenda se que os pesquisadores calculem e interpretem os ICs em conjunto com testes de significância e tamanhos de efeito ao relatar resultados. 
 
-Um teste t de amostra única revelou que os alunos que frequentaram o curso de vida saudável se exercitavam mais semanalmente (\(\bar{x} = 155.67\), DP = 2.69), \(IC(\mu, 95\%)= [150,29, 161,05]\), do que os alunos da população ($\mu = 150$), $t_{(59)} = 2.11$, p = 0.04, d = 0.27.
+Um teste t de amostra única revelou que os alunos que frequentaram o curso de vida saudável se exercitavam mais semanalmente (\(\bar{x} = 155.67\), DP = 2.69), \(IC(\mu, 95\%)= [150.29, 161.05]\), do que os alunos da população ($\mu = 150$), $t_{(59)} = 2.11$, p = 0.04, d = 0.27.
 
 \end{frame}
 
@@ -573,7 +589,7 @@ Um teste t de amostra única revelou que os alunos que frequentaram o curso de v
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Exemplo 8.6}
-Deseja-se investigar se uma certa moléstia que ataca o rim altera o consumo de oxigênio desse orgão. Foram obtidos \(\bar{x}=13.9\) e \(Var(X)=0.67\). Determine o intervalo de confiança para \(\mu\) com \(\gamma=0.95\).
+Deseja-se investigar se uma certa moléstia que ataca o rim altera o consumo de oxigênio desse orgão. De uma amostra (\(n=5\)) Foram obtidos \(\bar{x}=13.9\) e \(S^2=0.67\). Determine o intervalo de confiança para \(\mu\) com \(\gamma=0.95\).
 \vspace{1in}
 \vspace{1in}
 
@@ -582,7 +598,7 @@ Deseja-se investigar se uma certa moléstia que ataca o rim altera o consumo de 
 \setbeamercovered{transparent}
 \begin{frame}
 \frametitle{Exemplo 10.5\footcite{martinez2015bioestatistica}}
-Em um estudo sobre a deficiência de zinco em crianças, foi utilizada uma amostra de \(n=35\) crianças. Em amostras de sangue dessas crianças, obtidas por punção venosa, foi encontrada uma média de \(\bar{x}=118.7\ \mu g/dl\) para os níveis séricos de zinco, com desvio padrão amostral de \(DP=23.1 \mu g/dl\). Determine o intervalo de confiança para \(\mu\) com \(\gamma=0.99\).
+Em um estudo sobre a deficiência de zinco em crianças, foi utilizada uma amostra de \(n=35\) crianças. Em amostras de sangue dessas crianças, obtidas por punção venosa, foi encontrada uma média de \(\bar{x}=118.7\ \mu g/dl\) para os níveis séricos de zinco, com desvio padrão amostral de \(S=23.1 \mu g/dl\). Determine o intervalo de confiança para \(\mu\) com \(\gamma=0.99\).
 \vspace{1in}
 \vspace{1in}
 
